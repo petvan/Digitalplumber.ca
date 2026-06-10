@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Plumber — Network Intelligence</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg:        #0a0c10;
+    --surface:   #111318;
+    --border:    #1e2230;
+    --accent:    #00c2ff;
+    --accent2:   #7b5ea7;
+    --text:      #e8eaf0;
+    --muted:     #6b7280;
+    --tag-bg:    #0d1a24;
+    --tag-text:  #00c2ff;
+    --red:       #ff4d6d;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    background: rgba(10,12,16,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon { width: 36px; height: 36px; }
+
+  .logo-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+
+  .logo-text span { color: var(--accent); }
+
+  nav { display: flex; gap: 1.5rem; align-items: center; }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--text); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 5rem 2rem 3rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 em { font-style: normal; color: var(--accent); }
+
+  .hero-sub {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin-bottom: 2rem;
+  }
+
+  /* ── SEARCH BAR ── */
+  .fetch-bar {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 640px;
+    margin-bottom: 3rem;
+  }
+
+  .fetch-bar input {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .fetch-bar input:focus { border-color: var(--accent); }
+  .fetch-bar input::placeholder { color: var(--muted); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.4rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+  .btn-primary:active { transform: scale(0.97); }
+
+  /* ── TOPIC PILLS ── */
+  .topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .topic-pill {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.18s;
+    background: transparent;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .topic-pill:hover, .topic-pill.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--tag-bg);
+  }
+
+  /* ── DIVIDER ── */
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 2rem;
+    max-width: 960px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── NEWS GRID ── */
+  .news-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    border-color: #2e3550;
+    transform: translateY(-2px);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .source-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--tag-text);
+    background: var(--tag-bg);
+    border: 1px solid rgba(0,194,255,0.2);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .card-date { font-size: 0.75rem; color: var(--muted); }
+
+  .card-category {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent2);
+    margin-left: auto;
+  }
+
+  .card h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+
+  .card-summary {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .read-link {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: gap 0.2s;
+  }
+
+  .read-link:hover { gap: 0.55rem; }
+
+  .ai-badge {
+    font-size: 0.68rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .ai-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ── STATUS ── */
+  .status-bar {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* ── NO RESULTS ── */
+  .no-results {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--muted);
+    display: none;
+  }
+
+  .no-results.visible { display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .footer-brand strong { color: var(--accent); }
+  .footer-creds { font-size: 0.75rem; color: var(--muted); }
+
+  @media (max-width: 600px) {
+    header { padding: 0 1rem; }
+    .hero { padding: 3rem 1rem 2rem; }
+    .news-grid, .section-label, .status-bar { padding-left: 1rem; padding-right: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="8" fill="#111318"/>
+      <path d="M8 18h4M24 18h4M14 12l-2 6 2 6M22 12l2 6-2 6" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="18" cy="18" r="3" fill="#00c2ff"/>
+    </svg>
+    <span class="logo-text">digital<span>plumber</span>.ca</span>
+  </a>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="hero-eyebrow">AI Networking Intelligence</p>
+  <h1>The pipes that carry<br><em>tomorrow's networks</em></h1>
+  <p class="hero-sub">AI-summarized news and insights on networking, AI infrastructure, and the companies reshaping how data moves.</p>
+
+  <div class="fetch-bar">
+    <input type="text" id="searchInput" placeholder="Filter articles…" oninput="filterSearch(this.value)" />
+    <button class="btn-primary" onclick="filterSearch(document.getElementById('searchInput').value)">Search</button>
+  </div>
+
+  <div class="topics" id="topicPills">
+    <button class="topic-pill active" onclick="filterTopic(this, 'all')">All Topics</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'AI Networking')">AI Networking</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'Cisco')">Cisco</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'Juniper')">Juniper</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'Arista')">Arista</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'SD-WAN')">SD-WAN</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'Automation')">Automation</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'BGP & Routing')">BGP &amp; Routing</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'Hyperscalers')">Hyperscalers</button>
+  </div>
+</section>
+
+<p class="section-label">Daily Briefing · <!--BUILD_DATE--></p>
+
+<div class="status-bar">
+  <div class="status-dot"></div>
+  <span><!--ARTICLE_COUNT--> articles · AI-curated · Updated <!--BUILD_DATE--></span>
+</div>
+
+<div class="news-grid" id="newsGrid">
+  <!--NEWS_CARDS-->
+</div>
+
+<div class="no-results" id="noResults">
+  <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <strong>digitalplumber.ca</strong> — Network Intelligence
+  </div>
+  <div class="footer-creds">Independent networking &amp; AI industry intelligence</div>
+</footer>
+
+<script>
+  let activeTopic = 'all';
+
+  function setActivePill(el) {
+    document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
+    if (el) el.classList.add('active');
+  }
+
+  function filterTopic(el, topic) {
+    activeTopic = topic;
+    setActivePill(el);
+    document.getElementById('searchInput').value = '';
+    applyFilters();
+  }
+
+  function filterSearch(query) {
+    // Clear topic pill selection when searching
+    if (query.trim()) {
+      document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
+      activeTopic = 'all';
+    }
+    applyFilters(query.trim().toLowerCase());
+  }
+
+  function applyFilters(searchQuery) {
+    const cards = document.querySelectorAll('#newsGrid .card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const matchesTopic = activeTopic === 'all' || card.dataset.topic === activeTopic;
+      const matchesSearch = !searchQuery || card.textContent.toLowerCase().includes(searchQuery);
+      const visible = matchesTopic && matchesSearch;
+      card.style.display = visible ? '' : 'none';
+      if (visible) visibleCount++;
+    });
+
+    const noResults = document.getElementById('noResults');
+    noResults.classList.toggle('visible', visibleCount === 0 && cards.length > 0);
+  }
+
+  function resetFilter() {
+    activeTopic = 'all';
+    document.getElementById('searchInput').value = '';
+    document.querySelectorAll('.topic-pill').forEach((p, i) => {
+      p.classList.toggle('active', i === 0);
+    });
+    applyFilters();
+  }
+</script>
+</body>
+</html>

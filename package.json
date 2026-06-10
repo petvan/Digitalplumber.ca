@@ -1,0 +1,11 @@
+{
+  "name": "digitalplumber-builder",
+  "version": "1.0.0",
+  "description": "Daily news builder for digitalplumber.ca",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
