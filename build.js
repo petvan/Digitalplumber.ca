@@ -15,41 +15,48 @@ const path = require('path');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ── Topics to fetch ──────────────────────────────────────────────────────────
-// Each topic returns up to MAX_PER_TOPIC items. With 8 topics x up to 4 items,
-// we target ~20 articles after deduplication and trimming.
-const MAX_PER_TOPIC = 4;
+// maxItems per topic reflects editorial priority. Total possible ~30, trimmed to 20.
+const DEFAULT_MAX = 3;
 
 const TOPICS = [
   {
+    label: 'AI Ops & Observability',
+    maxItems: 6,
+    query: 'AIOps observability MLOps AI operations LogicMonitor Selector.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow news site:thenewstack.io OR site:mlops.community OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
+  },
+  {
     label: 'Agentic AI & MCP',
+    maxItems: 5,
     query: 'agentic AI MCP Model Context Protocol multi-agent systems news site:thenewstack.io OR site:mlops.community OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
   },
   {
-    label: 'AI Ops & Observability',
-    query: 'AIOps observability MLOps AI operations Selector.ai Honeycomb Last9 Chronosphere news site:thenewstack.io OR site:mlops.community OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
-  },
-  {
     label: 'Network Automation',
-    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG news site:packetpushers.net OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
-  },
-  {
-    label: 'AI Infrastructure',
-    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:openai.com OR site:deepmind.google'
+    maxItems: 5,
+    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news site:packetpushers.net OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
   },
   {
     label: 'Security Automation',
+    maxItems: 3,
     query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
   },
   {
+    label: 'AI Infrastructure',
+    maxItems: 3,
+    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:openai.com OR site:deepmind.google'
+  },
+  {
     label: 'AI Research & Papers',
+    maxItems: 3,
     query: 'AI ML research paper networking operations AIOps MLOps agents site:arxiv.org OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:research.google'
   },
   {
     label: 'MLOps & Platform Engineering',
-    query: 'MLOps platform engineering observability AI deployment production machine learning operations news site:mlops.community OR site:thenewstack.io OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io'
+    maxItems: 3,
+    query: 'MLOps platform engineering observability AI deployment production LogicMonitor news site:mlops.community OR site:thenewstack.io OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io'
   },
   {
     label: 'Industry & Standards',
+    maxItems: 3,
     query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news site:nanog.org OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
   },
 ];
@@ -59,7 +66,7 @@ const SYSTEM_PROMPT = `You are a technical news curator writing for experienced 
 
 Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
 
-RECENCY: Only include articles published within the last 24 hours. If you cannot find ${MAX_PER_TOPIC} articles from the last 24 hours, expand to the last 48 hours before giving up. Do not include articles older than 48 hours.
+RECENCY: Only include articles published within the last 24 hours. If you cannot find the requested number of articles from the last 24 hours, expand to the last 48 hours before giving up. Do not include articles older than 48 hours.
 
 PREFERRED SOURCES — weight these heavily:
 - AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
@@ -81,7 +88,7 @@ WHAT TO AVOID — these are common but low-quality sources for this audience:
 - Any content that reads like it was written to rank in search rather than inform a practitioner
 - Articles older than 48 hours
 
-Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly ${MAX_PER_TOPIC} items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
+Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly the requested number of items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
 - "title": concise, specific headline (avoid vague marketing language)
 - "source": the publication, blog, or outlet (e.g. "arXiv", "Packet Pushers", "The New Stack", "ML Ops Community", "Network World")
 - "date": the article date like "Jun 2026" or "May 2026"
@@ -89,7 +96,7 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
 - "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
 
-Aim for the full ${MAX_PER_TOPIC} items. Search broadly across the preferred sources before concluding there isn't enough news.`;
+Aim for the full requested number of items. Search broadly across the preferred sources before concluding there isn't enough news.`;
 
 // ── HTML helpers ──────────────────────────────────────────────────────────────
 function esc(str) {
@@ -115,12 +122,13 @@ function cardHtml(item) {
 
 // ── Fetch news for a single topic (with retry on 429) ────────────────────────
 async function fetchTopicNews(topic, attempt = 1) {
-  console.log(`  Fetching: ${topic.label}…`);
+  const maxItems = topic.maxItems || DEFAULT_MAX;
+  console.log(`  Fetching: ${topic.label} (target: ${maxItems})…`);
 
   const today = new Date().toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find ${MAX_PER_TOPIC} substantive news articles published in the last 24 hours (expand to 48 hours only if needed) about: ${topic.query}`
+    content: `Today is ${today}. Find ${maxItems} substantive news articles published in the last 24 hours (expand to 48 hours only if needed) about: ${topic.query}`
   }];
 
   try {
@@ -209,8 +217,8 @@ async function main() {
     process.exit(1);
   }
 
-  // Safety cap — keep the feed tight (10-20 articles) even if a topic
-  // returns more than expected.
+    // Cap total — AI Ops (6) + MCP (5) + Automation (5) + others (3 each) = ~30 possible.
+  // Trim to 20 so the feed stays tight.
   const MAX_TOTAL = 20;
   if (allItems.length > MAX_TOTAL) {
     allItems.length = MAX_TOTAL;
