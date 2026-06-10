@@ -164,8 +164,25 @@ async function fetchTopicNews(topic, attempt = 1) {
       });
     }
 
-    const textBlock = response.content.find(b => b.type === 'text');
+    let textBlock = response.content.find(b => b.type === 'text');
     if (!textBlock) throw new Error('No text block in final response');
+
+    // If the model returned prose instead of JSON, send one follow-up to force output
+    if (!textBlock.text.includes('[')) {
+      messages.push({ role: 'assistant', content: response.content });
+      messages.push({
+        role: 'user',
+        content: 'Return ONLY the JSON array now — no prose, no explanation, no markdown fences. Just the raw JSON array of the articles you found, or [] if none qualify.'
+      });
+      const forced = await client.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 2000,
+        system: SYSTEM_PROMPT,
+        messages,
+      });
+      textBlock = forced.content.find(b => b.type === 'text');
+      if (!textBlock) throw new Error('No text block in forced JSON response');
+    }
 
     // Extract the JSON array from the text (model may include stray whitespace)
     const jsonMatch = textBlock.text.match(/\[[\s\S]*\]/);
