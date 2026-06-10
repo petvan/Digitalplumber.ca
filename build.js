@@ -22,42 +22,42 @@ const TOPICS = [
   {
     label: 'AI Ops & Observability',
     maxItems: 6,
-    query: 'AIOps observability MLOps AI operations LogicMonitor Selector.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow news site:thenewstack.io OR site:mlops.community OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
+    query: 'AIOps observability AI operations LogicMonitor Selector.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
   },
   {
     label: 'Agentic AI & MCP',
     maxItems: 5,
-    query: 'agentic AI MCP Model Context Protocol multi-agent systems news site:thenewstack.io OR site:mlops.community OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
+    query: 'agentic AI MCP Model Context Protocol multi-agent systems AI agents networking operations news 2026'
   },
   {
     label: 'Network Automation',
     maxItems: 5,
-    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news site:packetpushers.net OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
+    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news 2026'
   },
   {
     label: 'Security Automation',
     maxItems: 3,
-    query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
+    query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news 2026'
   },
   {
     label: 'AI Infrastructure',
     maxItems: 3,
-    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:openai.com OR site:deepmind.google'
+    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news 2026'
   },
   {
     label: 'AI Research & Papers',
     maxItems: 3,
-    query: 'AI ML research paper networking operations AIOps MLOps agents site:arxiv.org OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:research.google'
+    query: 'AI ML research paper networking operations AIOps MLOps agents arxiv 2026'
   },
   {
     label: 'MLOps & Platform Engineering',
     maxItems: 3,
-    query: 'MLOps platform engineering observability AI deployment production LogicMonitor news site:mlops.community OR site:thenewstack.io OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io'
+    query: 'MLOps platform engineering observability AI deployment production machine learning operations news 2026'
   },
   {
     label: 'Industry & Standards',
     maxItems: 3,
-    query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news site:nanog.org OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
+    query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news 2026'
   },
 ];
 
@@ -66,7 +66,7 @@ const SYSTEM_PROMPT = `You are a technical news curator writing for experienced 
 
 Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
 
-RECENCY: Only include articles published within the last 24 hours. If you cannot find the requested number of articles from the last 24 hours, expand to the last 48 hours before giving up. Do not include articles older than 48 hours.
+RECENCY: Only include articles published within the last 72 hours. Do not include articles older than 72 hours.
 
 PREFERRED SOURCES — weight these heavily:
 - AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
@@ -128,7 +128,7 @@ async function fetchTopicNews(topic, attempt = 1) {
   const today = new Date().toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find ${maxItems} substantive news articles published in the last 24 hours (expand to 48 hours only if needed) about: ${topic.query}`
+    content: `Today is ${today}. Find ${maxItems} substantive news articles published in the last 72 hours about: ${topic.query}`
   }];
 
   try {
