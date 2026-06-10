@@ -102,7 +102,7 @@ async function fetchTopicNews(topic) {
 
   try {
     let response = await client.messages.create({
-      model: 'claude-sonnet-4-5',
+      model: 'claude-sonnet-4-6',
       max_tokens: 2000,
       system: SYSTEM_PROMPT,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
@@ -125,7 +125,7 @@ async function fetchTopicNews(topic) {
       messages.push({ role: 'user', content: toolResults });
 
       response = await client.messages.create({
-        model: 'claude-sonnet-4-5',
+        model: 'claude-sonnet-4-6',
         max_tokens: 2000,
         system: SYSTEM_PROMPT,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
@@ -146,6 +146,9 @@ async function fetchTopicNews(topic) {
 
   } catch (err) {
     console.error(`    ✗ Error for "${topic.label}": ${err.message}`);
+    if (err.status) console.error(`      HTTP status: ${err.status}`);
+    if (err.error) console.error(`      API error body: ${JSON.stringify(err.error)}`);
+    if (err.cause) console.error(`      Cause: ${err.cause.code || ''} ${err.cause.message || err.cause}`);
     return [];
   }
 }
