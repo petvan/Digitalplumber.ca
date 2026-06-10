@@ -113,8 +113,8 @@ function cardHtml(item) {
     </div>`;
 }
 
-// ── Fetch news for a single topic ─────────────────────────────────────────────
-async function fetchTopicNews(topic) {
+// ── Fetch news for a single topic (with retry on 429) ────────────────────────
+async function fetchTopicNews(topic, attempt = 1) {
   console.log(`  Fetching: ${topic.label}…`);
 
   const today = new Date().toISOString().split('T')[0];
@@ -168,6 +168,13 @@ async function fetchTopicNews(topic) {
     return items.map(item => ({ ...item, topicLabel: topic.label }));
 
   } catch (err) {
+    // Retry on rate limit with exponential backoff (max 3 attempts)
+    if (err.status === 429 && attempt < 3) {
+      const wait = attempt * 30000; // 30s, then 60s
+      console.warn(`    ⏳ Rate limited on "${topic.label}", retrying in ${wait / 1000}s…`);
+      await new Promise(r => setTimeout(r, wait));
+      return fetchTopicNews(topic, attempt + 1);
+    }
     console.error(`    ✗ Error for "${topic.label}": ${err.message}`);
     if (err.status) console.error(`      HTTP status: ${err.status}`);
     if (err.error) console.error(`      API error body: ${JSON.stringify(err.error)}`);
@@ -190,11 +197,17 @@ async function main() {
   for (const topic of TOPICS) {
     const items = await fetchTopicNews(topic);
     allItems.push(...items);
-    // Small pause between requests
-    await new Promise(r => setTimeout(r, 500));
+    // Pause between topics to stay under the 30k tokens/min rate limit
+    await new Promise(r => setTimeout(r, 15000));
   }
 
   console.log(`\nTotal articles fetched: ${allItems.length}`);
+
+  // Refuse to publish a blank page — keep yesterday's index.html intact.
+  if (allItems.length === 0) {
+    console.error('No articles fetched. Aborting to preserve existing index.html.');
+    process.exit(1);
+  }
 
   // Safety cap — keep the feed tight (10-20 articles) even if a topic
   // returns more than expected.
