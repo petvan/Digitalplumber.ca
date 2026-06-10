@@ -15,30 +15,42 @@ const path = require('path');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ── Topics to fetch ──────────────────────────────────────────────────────────
-// Each topic returns up to MAX_PER_TOPIC items. With 5 topics x up to 4 items,
-// total output stays in the 10-20 article range the audience wants.
+// Each topic returns up to MAX_PER_TOPIC items. With 8 topics x up to 4 items,
+// we target ~20 articles after deduplication and trimming.
 const MAX_PER_TOPIC = 4;
 
 const TOPICS = [
   {
     label: 'Agentic AI & MCP',
-    query: 'agentic AI networking operations MCP Model Context Protocol multi-agent systems news 2026'
+    query: 'agentic AI networking operations MCP Model Context Protocol multi-agent systems news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:lightreading.com OR site:techcrunch.com'
   },
   {
     label: 'AI Ops & Observability',
-    query: 'AIOps observability Dynatrace Datadog Splunk New Relic ServiceNow Selector.ai Exaforce AI operations news 2026'
+    query: 'AIOps observability Dynatrace Datadog Splunk New Relic ServiceNow Selector.ai Exaforce AI operations news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:lightreading.com'
   },
   {
     label: 'Network Automation',
-    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE automation Packet Pushers John Capobianco news 2026'
+    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE automation Packet Pushers news site:packetpushers.net OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
   },
   {
     label: 'AI Infrastructure',
-    query: 'AI infrastructure networking Cisco Juniper Arista HPE data center AI networking news 2026'
+    query: 'AI infrastructure networking data center GPU fabric Cisco Juniper Arista HPE Nvidia news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:lightreading.com OR site:techcrunch.com'
   },
   {
     label: 'Security Automation',
-    query: 'security operations automation AI Palo Alto Fortinet Versa SASE AI-driven security news 2026'
+    query: 'security operations automation AI SASE Palo Alto Fortinet Versa CrowdStrike AI-driven security news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:darkreading.com OR site:lightreading.com'
+  },
+  {
+    label: 'Cloud & Edge Networking',
+    query: 'cloud networking edge computing SD-WAN SASE AWS Azure Google Cloud networking news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:lightreading.com OR site:techcrunch.com'
+  },
+  {
+    label: 'Open Source & Community',
+    query: 'open source networking automation AI tools community CNCF OpenConfig OpenTelemetry eBPF news site:thenewstack.io OR site:packetpushers.net OR site:theregister.com OR site:networkworld.com OR site:sdxcentral.com'
+  },
+  {
+    label: 'Industry & Market',
+    query: 'networking AI industry news acquisitions funding Cisco Juniper HPE Arista vendors 2026 site:wired.com OR site:networkworld.com OR site:theregister.com OR site:lightreading.com OR site:sdxcentral.com OR site:techcrunch.com'
   },
 ];
 
@@ -47,26 +59,30 @@ const SYSTEM_PROMPT = `You are a technical news curator writing for experienced 
 
 Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
 
+RECENCY: Only include articles published within the last 24 hours. If you cannot find ${MAX_PER_TOPIC} articles from the last 24 hours, expand to the last 48 hours before giving up. Do not include articles older than 48 hours.
+
 WHAT TO PRIORITIZE:
 - Actual news: product releases with real technical detail, research papers, protocol/standards developments, open-source projects, conference talks (e.g. AutoCon, NANOG, Cisco Live), practitioner blog posts, and credible industry analysis.
-- Practitioner and community voices: Packet Pushers, AutoCon, personal/technical blogs (e.g. John Capobianco, other network automation engineers), The New Stack, and similar.
-- Vendors of interest include (but are not limited to): Cisco, Juniper, HPE/Aruba, Arista, Palo Alto Networks, Fortinet, Versa, Itential, ServiceNow, Dynatrace, Datadog, Splunk, New Relic, and emerging AI-ops/agentic-ops vendors like Selector.ai and Exaforce. Adjacent and competing vendors in these same spaces (networking, security, observability, AIOps, automation) are also fair game — the named vendors are anchors, not an exhaustive list.
+- Preferred third-party publications: Wired, Network World, The Register, SDxCentral, Light Reading, The New Stack, TechCrunch (tech/AI coverage), Dark Reading, IEEE Spectrum, ZDNet.
+- Practitioner and community voices: Packet Pushers, AutoCon, personal/technical blogs (e.g. John Capobianco, other network automation engineers), and similar.
+- Vendors of interest include (but are not limited to): Cisco, Juniper, HPE/Aruba, Arista, Palo Alto Networks, Fortinet, Versa, Itential, ServiceNow, Dynatrace, Datadog, Splunk, New Relic, and emerging AI-ops/agentic-ops vendors like Selector.ai and Exaforce. Adjacent and competing vendors in these same spaces are also fair game.
 - Core themes: agentic AI and the agentic ecosystem (including MCP and agent-to-agent protocols), AI/ML applied to networking and IT operations, automation and orchestration (NetDevOps), and AIOps.
 
 WHAT TO AVOID OR DEPRIORITIZE:
 - Generic vendor press releases or marketing copy with no real technical substance ("Company X is excited to announce...").
 - Pure sales/partnership announcements unless they signal a meaningful technical or market shift.
 - Content unrelated to AI/ML, agentic systems, automation, or operations.
+- Articles older than 48 hours.
 
-Return ONLY a JSON array (no markdown, no preamble, no code fences) with up to ${MAX_PER_TOPIC} of the BEST items for this topic — fewer is fine if there isn't enough substantive news. Each item must have:
+Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly ${MAX_PER_TOPIC} items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
 - "title": concise, specific headline (avoid vague marketing language)
-- "source": the publication, blog, or company (e.g. "Packet Pushers", "Cisco Blog", "John Capobianco's Blog", "The New Stack")
+- "source": the publication, blog, or company (e.g. "Wired", "Network World", "Packet Pushers", "The Register")
 - "date": the article date like "Jun 2026" or "May 2026"
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
 - "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
 
-Be selective. Quality and technical substance over quantity.`;
+Aim for the full ${MAX_PER_TOPIC} items. Search broadly across the preferred publications before concluding there isn't enough news.`;
 
 // ── HTML helpers ──────────────────────────────────────────────────────────────
 function esc(str) {
@@ -97,7 +113,7 @@ async function fetchTopicNews(topic) {
   const today = new Date().toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find up to ${MAX_PER_TOPIC} of the most important recent, substantive news items about: ${topic.query}`
+    content: `Today is ${today}. Find ${MAX_PER_TOPIC} substantive news articles published in the last 24 hours (expand to 48 hours only if needed) about: ${topic.query}`
   }];
 
   try {
