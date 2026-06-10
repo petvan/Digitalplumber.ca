@@ -531,77 +531,119 @@
 
 <div class="status-bar">
   <div class="status-dot"></div>
-  <span>5 articles · AI-curated · Updated Jun 10, 2026</span>
+  <span>8 articles · AI-curated · Updated Jun 10, 2026</span>
 </div>
 
 <div class="news-grid" id="newsGrid">
   
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="Network Automation">
       <div class="card-meta">
-        <span class="source-tag">O'Reilly Radar</span>
+        <span class="source-tag">Packet Pushers / Itential (via Cisco Live coverage)</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Opinion</span>
+        <span class="card-category">Product Launch</span>
       </div>
-      <h2>O'Reilly Radar: The AI Agents Stack (2026 Edition) — Six Layers from LLM to Production</h2>
-      <p class="card-summary">O'Reilly's practitioner-focused breakdown redraws the agent infrastructure map from scratch, identifying six distinct layers that didn't exist as categories 14 months ago: orchestration, memory, tools (now standardized by MCP), browser/CUA, evals, and inference. The piece makes a pointed observation that MCP solved agent-to-tool connectivity, but agent-to-agent coordination via ACP/A2A has not yet reached critical mass — meaning multi-agent coordination is still a DIY problem at the framework layer. Critically, guardrails have become a distinct discipline: authorization must be enforced at the tool execution layer, not the output layer — by the time you filter the response, the agent already acted.</p>
+      <h2>Itential FlowAI GA: Governed AI Agents for Network Infrastructure Ops, Debuted at Cisco Live 2026</h2>
+      <p class="card-summary">Itential announced general availability of FlowAI at Cisco Live US 2026 (June 1–4), with GA set for July 1. FlowAI extends the Itential Platform with task-oriented FlowAgents, a FlowAgent Builder for role-based agent configuration, and a FlowMCP Gateway that enforces Itential governance and policy over external MCP tools. The key design principle: governance is baked in at build time — agent permissions, execution controls, and human-in-the-loop checkpoints are defined before an agent ever runs, giving ops teams the auditability required to deploy AI against production infrastructure. Validated across six enterprises in telecom, financial services, and utilities prior to GA.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://packetpushers.net/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="Network Automation">
       <div class="card-meta">
-        <span class="source-tag">Firecrawl Blog</span>
+        <span class="source-tag">Network World</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Opinion</span>
+        <span class="card-category">Product Launch</span>
       </div>
-      <h2>Firecrawl Benchmarks: MCP vs CLI Token Overhead — 35x Cost, 72% Reliability on Complex Tasks</h2>
-      <p class="card-summary">A practitioner benchmark from Firecrawl quantifies a real production pain point: MCP servers consume 35x more tokens than equivalent CLI tools on identical tasks, with task success rate dropping from 100% (CLI) to 72% (MCP) as complexity increases. The analysis traces the overhead to MCP's capability negotiation handshake — every call incurs protocol scaffolding tokens before any actual work happens. The post concludes with a clear architectural heuristic: use CLI for deterministic, token-sensitive pipelines and MCP for anything requiring OAuth, multi-tenancy, or enterprise audit trails — a tradeoff that's now directly influencing how teams architect agentic systems.</p>
+      <h2>Cisco Cloud Control Unveiled: Unified AgenticOps Platform for Networking, Security, and Observability</h2>
+      <p class="card-summary">At Cisco Live 2026, Cisco launched Cloud Control — a unified management plane spanning networking, security, compute, observability, and collaboration, backed by the Splunk-based Cisco Data Fabric. In controlled availability now, it enters a five-stage autonomous remediation loop (sense, diagnose, remediate, validate, deploy) via Meraki in beta. A Digital Twin capability (alpha July 2026) runs emulated replicas using actual software images so agents can test changes before deployment. Cloud Control Studio (late 2026) adds an MCP-native Agent Builder with 50+ third-party connectors and an OpenAI Codex-powered App Builder, all with inherited observability and security controls.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://www.firecrawl.dev/blog/mcp-vs-cli" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://www.networkworld.com/article/4179673/cisco-brings-agentic-ops-platform-and-security-overhaul-to-cisco-live.html" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="Network Automation">
       <div class="card-meta">
-        <span class="source-tag">Anthropic</span>
+        <span class="source-tag">Packet Pushers</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Standards</span>
+        <span class="card-category">Community</span>
       </div>
-      <h2>Anthropic Donates MCP to Linux Foundation, Co-founds Agentic AI Foundation with OpenAI and Block</h2>
-      <p class="card-summary">Anthropic formally transferred the Model Context Protocol to the Agentic AI Foundation (AAIF), a directed fund under the Linux Foundation co-founded with OpenAI, Block, and backed by Google, Microsoft, AWS, Cloudflare, and Bloomberg. At transfer, MCP had eclipsed 10,000 active public servers, 97M+ monthly SDK downloads, and adoption by ChatGPT, Cursor, Gemini, and Microsoft Copilot. Anthropic simultaneously announced Tool Search and Programmatic Tool Calling in its API — a direct response to token-bloat complaints — claiming a 98.7% token reduction for large tool catalogs by allowing agents to discover tools on demand rather than loading all schema upfront.</p>
+      <h2>Packet Pushers TNO064: The Realities of Running SONiC at Scale — Amazon SDE Speaks</h2>
+      <p class="card-summary">Published June 5, this Total Network Operations episode features Brett Lykins, a Senior Systems Development Engineer at Amazon, sharing hands-on experience running SONiC (Software for Open Networking in the Cloud) at hyperscale. This is a rare practitioner-level insider account of production SONiC operations rather than vendor positioning — covering the operational realities, failure modes, and automation patterns that only emerge at Amazon-scale deployments. Directly relevant for any team evaluating disaggregated NOS strategies or open networking for data center environments.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://packetpushers.net/podcasts/total-network-operations/tno064-the-realities-of-running-sonic-at-scale/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="Network Automation">
       <div class="card-meta">
-        <span class="source-tag">OpenAI</span>
+        <span class="source-tag">Network Automation Forum</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Standards</span>
+        <span class="card-category">Community</span>
       </div>
-      <h2>OpenAI Co-founds Agentic AI Foundation: AGENTS.md and MCP-UI Extension Donated to Linux Foundation</h2>
-      <p class="card-summary">OpenAI's AAIF announcement details its two concrete open-source contributions: AGENTS.md, the lightweight Markdown format that gives coding agents project-specific instructions (build steps, conventions, testing requirements), and a collaboration with Anthropic on MCP-UI to extend the Apps SDK to all MCP developers via 'MCP Apps' — enabling agents to return rich interactive UI (dashboards, forms) inside Claude and ChatGPT. OpenAI frames the foundation's purpose bluntly: open standards reduce fragmentation costs as agents move from prototypes into systems handling real enterprise responsibility.</p>
+      <h2>AutoCon 5 Munich (Jun 8–12): Network Automation Forum's First European Edition Underway</h2>
+      <p class="card-summary">AutoCon 5 — the Network Automation Forum's practitioner-driven conference — is live this week in Munich with 700+ engineers across 16 workshops and a dual-track conference program. New for this edition: a Thursday split track covering the NAF Framework (morning) and a leadership/business track on funding and team-building (afternoon). Highlighted sessions include a DE-CIX team presenting production gNMIc config generation driven from Zabbix and NetBox via GitOps, Deutsche Bahn's two-year data groundwork before any automation was possible, and a Nokia gRPC workshop covering gNMI, gNOI, gNSI, and gRIBI for event-driven ops. Itential's Chris Wade closes the conference with the Friday keynote.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://openai.com/index/agentic-ai-foundation/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://networkautomation.forum/autocon5" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="Network Automation">
       <div class="card-meta">
-        <span class="source-tag">arXiv (cs.AI)</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Research</span>
+        <span class="source-tag">Network World</span>
+        <span class="card-date">Feb 2026</span>
+        <span class="card-category">Industry Trend</span>
       </div>
-      <h2>arXiv: DALIA — Declarative Agentic Layer for MCP-Based Multi-Agent Ecosystems to Fix Hallucinated Plans</h2>
-      <p class="card-summary">This paper diagnoses a structural gap in current MCP-based multi-agent deployments: failures aren't caused by weak models, but by the absence of an explicit layer linking goals, declared capabilities, and execution. DALIA proposes four additions to existing MCP infrastructure — a formal semantic capability model with preconditions/postconditions, an Agentic Task Discovery Protocol (ATDP) for declarative goal expression, a federated Agent Directory MCP server, and a deterministic task graph constructor. By constraining agents to a verifiable operational space, DALIA eliminates speculative reasoning and free-form coordination, directly addressing the hallucinated-action and brittle-plan failures production teams are hitting today.</p>
+      <h2>Network World Deep-Dive: NetDevOps Role Emerges as Enterprises Mature Automation Practices</h2>
+      <p class="card-summary">Network World's substantive feature — drawing on EMA, theCUBE Research, and practitioner interviews including Intel's automation lead — documents how the NetDevOps role is crystallizing inside enterprise infrastructure teams. Key data points: more than 60% of enterprises anchor NetDevOps within traditional infrastructure teams (not app or platform engineering); high-performing teams spend 40%+ more time on design, testing, and verification than reactive troubleshooting. The central operational shift: changes originate in a shared data model first, and device configs become a downstream byproduct — 'network config is a byproduct of the data.' Broadcom's prediction: '2026 is the year the shift becomes permanent.'</p>
       <div class="card-footer">
-        <a class="read-link" href="https://arxiv.org/abs/2601.17435" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://www.networkworld.com/article/4123790/network-engineers-take-on-netdevops-roles-to-advance-stalled-automation-efforts.html" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Security Automation">
+      <div class="card-meta">
+        <span class="source-tag">Network World</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Product Launch</span>
+      </div>
+      <h2>Zscaler Launches Zero Trust Platform for Agentic AI at Zenith Live 2026</h2>
+      <p class="card-summary">Zscaler unveiled three new capabilities at Zenith Live 2026: AI Broker (securing MCP and A2A agent-to-agent communications with an integrated Agent Registry for per-agent access controls), Endpoint AI Security (detecting AI threats in browsers, plugins, and local AI tools that traditional EDRs miss), and AI Access Graph (powered by the Symmetry Systems acquisition, mapping identity, app, and data lineage in real time). The move targets a rapidly expanding governance gap — autonomous AI agents create ephemeral identities and call APIs at machine speed, rendering perimeter and human-identity-centric controls blind. Dell'Oro projects the AI systems security market growing from near-zero to $8B by 2030, with ~60 vendors already competing.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://www.networkworld.com/article/4182976/zscaler-launches-zero-trust-platform-for-agentic-ai.html" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Security Automation">
+      <div class="card-meta">
+        <span class="source-tag">SiliconAngle</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Product Launch</span>
+      </div>
+      <h2>Zscaler ZAgent Framework Adds Natural-Language SASE Administration and B2B Zero Trust Connectivity</h2>
+      <p class="card-summary">Also at Zenith Live 2026 (June 10), Zscaler announced ZAgent Framework — an orchestration layer that lets admins manage Zero Trust SASE configuration and troubleshooting via natural-language prompts in the Zscaler Experience Center, replacing legacy management consoles. The platform also adds a Zero Trust B2B connectivity layer (replacing site-to-site VPNs and MPLS between partner orgs), a BYOD/unmanaged-device secure browser (Chromium-based, with Browser Detection &amp; Response), and a Zero Trust Gateway for Google Cloud. Simultaneously, ThreatLabz 2026 data showed 95.2% of phishing now travels inside encrypted traffic and AI tooling generated 413K malicious site instances in the last year.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://siliconangle.com/2026/06/10/zscaler-unveils-zagent-framework-automate-zero-trust-sase-operations/" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Security Automation">
+      <div class="card-meta">
+        <span class="source-tag">Network World</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Product Launch</span>
+      </div>
+      <h2>Netskope Launches AI Command Center to Tackle Enterprise AI Sprawl Inside SASE Platform</h2>
+      <p class="card-summary">Netskope launched AI Command Center, a generally available module in its Netskope One SASE platform that correlates AI application activity against end users, data, and security policies across both sanctioned and shadow AI services. Built on the NewEdge private backbone (120+ data centers), it gives security teams a single pane for discovering, risk-scoring, and auto-remediating AI-related exposure — relevant given Netskope's own research showing 94% of enterprises make AI security decisions with an incomplete inventory. This follows Netskope's May 2026 AgentSkope launch (six SOC/NOC workflow agents) and positions the company with a combined AI governance + agentic automation stack inside a unified SASE architecture.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://www.networkworld.com/article/4180200/netskope-introduces-ai-command-center-to-monitor-and-secure-enterprise-ai-sprawl.html" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
