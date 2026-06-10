@@ -205,8 +205,8 @@ async function main() {
   for (const topic of TOPICS) {
     const items = await fetchTopicNews(topic);
     allItems.push(...items);
-    // Pause between topics to stay under the 30k tokens/min rate limit
-    await new Promise(r => setTimeout(r, 15000));
+    // Pause between topics — Tier 1 allows 100k tokens/min
+    await new Promise(r => setTimeout(r, 5000));
   }
 
   console.log(`\nTotal articles fetched: ${allItems.length}`);
