@@ -22,35 +22,35 @@ const MAX_PER_TOPIC = 4;
 const TOPICS = [
   {
     label: 'Agentic AI & MCP',
-    query: 'agentic AI networking operations MCP Model Context Protocol multi-agent systems news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:lightreading.com OR site:techcrunch.com'
+    query: 'agentic AI MCP Model Context Protocol multi-agent systems news site:thenewstack.io OR site:mlops.community OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
   },
   {
     label: 'AI Ops & Observability',
-    query: 'AIOps observability Dynatrace Datadog Splunk New Relic ServiceNow Selector.ai Exaforce AI operations news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:lightreading.com'
+    query: 'AIOps observability MLOps AI operations Selector.ai Honeycomb Last9 Chronosphere news site:thenewstack.io OR site:mlops.community OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io OR site:networkworld.com OR site:sdxcentral.com OR site:packetpushers.net'
   },
   {
     label: 'Network Automation',
-    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE automation Packet Pushers news site:packetpushers.net OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
+    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG news site:packetpushers.net OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:nanog.org'
   },
   {
     label: 'AI Infrastructure',
-    query: 'AI infrastructure networking data center GPU fabric Cisco Juniper Arista HPE Nvidia news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:lightreading.com OR site:techcrunch.com'
+    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net OR site:openai.com OR site:deepmind.google'
   },
   {
     label: 'Security Automation',
-    query: 'security operations automation AI SASE Palo Alto Fortinet Versa CrowdStrike AI-driven security news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:darkreading.com OR site:lightreading.com'
+    query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
   },
   {
-    label: 'Cloud & Edge Networking',
-    query: 'cloud networking edge computing SD-WAN SASE AWS Azure Google Cloud networking news site:wired.com OR site:networkworld.com OR site:theregister.com OR site:sdxcentral.com OR site:lightreading.com OR site:techcrunch.com'
+    label: 'AI Research & Papers',
+    query: 'AI ML research paper networking operations AIOps MLOps agents site:arxiv.org OR site:anthropic.com OR site:openai.com OR site:deepmind.google OR site:ai.meta.com OR site:research.google'
   },
   {
-    label: 'Open Source & Community',
-    query: 'open source networking automation AI tools community CNCF OpenConfig OpenTelemetry eBPF news site:thenewstack.io OR site:packetpushers.net OR site:theregister.com OR site:networkworld.com OR site:sdxcentral.com'
+    label: 'MLOps & Platform Engineering',
+    query: 'MLOps platform engineering observability AI deployment production machine learning operations news site:mlops.community OR site:thenewstack.io OR site:honeycomb.io OR site:last9.io OR site:chronosphere.io'
   },
   {
-    label: 'Industry & Market',
-    query: 'networking AI industry news acquisitions funding Cisco Juniper HPE Arista vendors 2026 site:wired.com OR site:networkworld.com OR site:theregister.com OR site:lightreading.com OR site:sdxcentral.com OR site:techcrunch.com'
+    label: 'Industry & Standards',
+    query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news site:nanog.org OR site:networkworld.com OR site:sdxcentral.com OR site:thenewstack.io OR site:packetpushers.net'
   },
 ];
 
@@ -61,28 +61,35 @@ Use web search to find real, recent, substantive developments related to the giv
 
 RECENCY: Only include articles published within the last 24 hours. If you cannot find ${MAX_PER_TOPIC} articles from the last 24 hours, expand to the last 48 hours before giving up. Do not include articles older than 48 hours.
 
-WHAT TO PRIORITIZE:
-- Actual news: product releases with real technical detail, research papers, protocol/standards developments, open-source projects, conference talks (e.g. AutoCon, NANOG, Cisco Live), practitioner blog posts, and credible industry analysis.
-- Preferred third-party publications: Wired, Network World, The Register, SDxCentral, Light Reading, The New Stack, TechCrunch (tech/AI coverage), Dark Reading, IEEE Spectrum, ZDNet.
-- Practitioner and community voices: Packet Pushers, AutoCon, personal/technical blogs (e.g. John Capobianco, other network automation engineers), and similar.
-- Vendors of interest include (but are not limited to): Cisco, Juniper, HPE/Aruba, Arista, Palo Alto Networks, Fortinet, Versa, Itential, ServiceNow, Dynatrace, Datadog, Splunk, New Relic, and emerging AI-ops/agentic-ops vendors like Selector.ai and Exaforce. Adjacent and competing vendors in these same spaces are also fair game.
-- Core themes: agentic AI and the agentic ecosystem (including MCP and agent-to-agent protocols), AI/ML applied to networking and IT operations, automation and orchestration (NetDevOps), and AIOps.
+PREFERRED SOURCES — weight these heavily:
+- AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
+- MLOps/AIOps practitioners: ML Ops Community (mlops.community), The New Stack, Honeycomb blog, Last9 blog, Chronosphere blog
+- Networking practitioners: Packet Pushers, Network World, SDxCentral, NANOG presentations/mailing list
+- Standards & open source: IETF working group drafts, OpenTelemetry, OpenConfig, CNCF project blogs
 
-WHAT TO AVOID OR DEPRIORITIZE:
-- Generic vendor press releases or marketing copy with no real technical substance ("Company X is excited to announce...").
-- Pure sales/partnership announcements unless they signal a meaningful technical or market shift.
-- Content unrelated to AI/ML, agentic systems, automation, or operations.
-- Articles older than 48 hours.
+WHAT TO PRIORITIZE:
+- Research papers and technical write-ups with real depth
+- Practitioner posts: hands-on experience, lessons learned, benchmark results, architectural decisions
+- Standards and protocol developments (IETF, NANOG, OpenConfig, OpenTelemetry)
+- Product releases or open-source projects with concrete technical detail
+- Conference talks and write-ups (AutoCon, NANOG, Cisco Live, KubeCon)
+
+WHAT TO AVOID — these are common but low-quality sources for this audience:
+- SEO-optimised vendor blogs written for search rankings, not practitioners ("Top 10 ways AI transforms networking...")
+- Generic press releases with no technical substance ("Company X is excited to announce a partnership...")
+- Pure sales or analyst-summary content that recaps what vendors say about themselves
+- Any content that reads like it was written to rank in search rather than inform a practitioner
+- Articles older than 48 hours
 
 Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly ${MAX_PER_TOPIC} items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
 - "title": concise, specific headline (avoid vague marketing language)
-- "source": the publication, blog, or company (e.g. "Wired", "Network World", "Packet Pushers", "The Register")
+- "source": the publication, blog, or outlet (e.g. "arXiv", "Packet Pushers", "The New Stack", "ML Ops Community", "Network World")
 - "date": the article date like "Jun 2026" or "May 2026"
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
 - "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
 
-Aim for the full ${MAX_PER_TOPIC} items. Search broadly across the preferred publications before concluding there isn't enough news.`;
+Aim for the full ${MAX_PER_TOPIC} items. Search broadly across the preferred sources before concluding there isn't enough news.`;
 
 // ── HTML helpers ──────────────────────────────────────────────────────────────
 function esc(str) {
