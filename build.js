@@ -15,29 +15,58 @@ const path = require('path');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ── Topics to fetch ──────────────────────────────────────────────────────────
+// Each topic returns up to MAX_PER_TOPIC items. With 5 topics x up to 4 items,
+// total output stays in the 10-20 article range the audience wants.
+const MAX_PER_TOPIC = 4;
+
 const TOPICS = [
-  { label: 'AI Networking',  query: 'AI networking infrastructure latest news announcements' },
-  { label: 'Cisco',          query: 'Cisco networking AI products announcements news' },
-  { label: 'Juniper',        query: 'Juniper Networks AI automation Mist news' },
-  { label: 'Arista',         query: 'Arista Networks AI cloud networking news' },
-  { label: 'SD-WAN',         query: 'SD-WAN AI automation SASE news' },
-  { label: 'Automation',     query: 'network automation AI tools DevNet news' },
-  { label: 'BGP & Routing',  query: 'BGP routing AI networking developments news' },
-  { label: 'Hyperscalers',   query: 'hyperscaler data center networking AI AWS Azure Google news' },
+  {
+    label: 'Agentic AI & MCP',
+    query: 'agentic AI networking operations MCP Model Context Protocol multi-agent systems news 2026'
+  },
+  {
+    label: 'AI Ops & Observability',
+    query: 'AIOps observability Dynatrace Datadog Splunk New Relic ServiceNow Selector.ai Exaforce AI operations news 2026'
+  },
+  {
+    label: 'Network Automation',
+    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE automation Packet Pushers John Capobianco news 2026'
+  },
+  {
+    label: 'AI Infrastructure',
+    query: 'AI infrastructure networking Cisco Juniper Arista HPE data center AI networking news 2026'
+  },
+  {
+    label: 'Security Automation',
+    query: 'security operations automation AI Palo Alto Fortinet Versa SASE AI-driven security news 2026'
+  },
 ];
 
 // ── System prompt ─────────────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `You are an industry analyst specializing in networking and AI infrastructure. Use web search to find the latest news about the given topic.
+const SYSTEM_PROMPT = `You are a technical news curator writing for experienced network and IT operations practitioners — senior network engineers, NetDevOps/automation engineers, and AIOps/SRE leads. They are busy and want to cut to the chase.
 
-Return ONLY a JSON array (no markdown, no preamble, no code fences) with 3-4 news items. Each item must have:
-- "title": concise news headline
-- "source": the media outlet or company name (e.g. "Cisco Blog", "Network World", "Light Reading", "The Register")
+Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
+
+WHAT TO PRIORITIZE:
+- Actual news: product releases with real technical detail, research papers, protocol/standards developments, open-source projects, conference talks (e.g. AutoCon, NANOG, Cisco Live), practitioner blog posts, and credible industry analysis.
+- Practitioner and community voices: Packet Pushers, AutoCon, personal/technical blogs (e.g. John Capobianco, other network automation engineers), The New Stack, and similar.
+- Vendors of interest include (but are not limited to): Cisco, Juniper, HPE/Aruba, Arista, Palo Alto Networks, Fortinet, Versa, Itential, ServiceNow, Dynatrace, Datadog, Splunk, New Relic, and emerging AI-ops/agentic-ops vendors like Selector.ai and Exaforce. Adjacent and competing vendors in these same spaces (networking, security, observability, AIOps, automation) are also fair game — the named vendors are anchors, not an exhaustive list.
+- Core themes: agentic AI and the agentic ecosystem (including MCP and agent-to-agent protocols), AI/ML applied to networking and IT operations, automation and orchestration (NetDevOps), and AIOps.
+
+WHAT TO AVOID OR DEPRIORITIZE:
+- Generic vendor press releases or marketing copy with no real technical substance ("Company X is excited to announce...").
+- Pure sales/partnership announcements unless they signal a meaningful technical or market shift.
+- Content unrelated to AI/ML, agentic systems, automation, or operations.
+
+Return ONLY a JSON array (no markdown, no preamble, no code fences) with up to ${MAX_PER_TOPIC} of the BEST items for this topic — fewer is fine if there isn't enough substantive news. Each item must have:
+- "title": concise, specific headline (avoid vague marketing language)
+- "source": the publication, blog, or company (e.g. "Packet Pushers", "Cisco Blog", "John Capobianco's Blog", "The New Stack")
 - "date": the article date like "Jun 2026" or "May 2026"
-- "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion"
-- "summary": 2-3 sentence expert summary from the perspective of a senior network engineer — what it means, the technical implications, why it matters
+- "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
+- "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
 
-Focus on real, recent developments. Be technically precise.`;
+Be selective. Quality and technical substance over quantity.`;
 
 // ── HTML helpers ──────────────────────────────────────────────────────────────
 function esc(str) {
@@ -68,7 +97,7 @@ async function fetchTopicNews(topic) {
   const today = new Date().toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find the 3-4 most important recent news items about: ${topic.query}`
+    content: `Today is ${today}. Find up to ${MAX_PER_TOPIC} of the most important recent, substantive news items about: ${topic.query}`
   }];
 
   try {
@@ -140,6 +169,14 @@ async function main() {
   }
 
   console.log(`\nTotal articles fetched: ${allItems.length}`);
+
+  // Safety cap — keep the feed tight (10-20 articles) even if a topic
+  // returns more than expected.
+  const MAX_TOTAL = 20;
+  if (allItems.length > MAX_TOTAL) {
+    allItems.length = MAX_TOTAL;
+    console.log(`Trimmed to ${MAX_TOTAL} articles`);
+  }
 
   // Generate cards HTML
   const cardsHtml = allItems.length > 0
