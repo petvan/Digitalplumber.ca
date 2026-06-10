@@ -66,7 +66,7 @@ const SYSTEM_PROMPT = `You are a technical news curator writing for experienced 
 
 Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
 
-RECENCY: Only include articles published within the last 72 hours. Do not include articles older than 72 hours.
+RECENCY: This is a strict rule — only include articles published within the last 72 hours. Check the publication date of every article before including it. If an article has no clear date, or if the date is older than 72 hours, exclude it. Return an empty array [] rather than including stale content.
 
 PREFERRED SOURCES — weight these heavily:
 - AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
@@ -126,9 +126,10 @@ async function fetchTopicNews(topic, attempt = 1) {
   console.log(`  Fetching: ${topic.label} (target: ${maxItems})…`);
 
   const today = new Date().toISOString().split('T')[0];
+  const cutoff = new Date(Date.now() - 72 * 60 * 60 * 1000).toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find ${maxItems} substantive news articles published in the last 72 hours about: ${topic.query}`
+    content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last 72 hours) about: ${topic.query} after:${cutoff}`
   }];
 
   try {
