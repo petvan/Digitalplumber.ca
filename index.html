@@ -40,7 +40,7 @@
     justify-content: space-between;
     height: 64px;
     position: sticky;
-    top: 0;
+    top: 36px;
     background: rgba(10,12,16,0.92);
     backdrop-filter: blur(12px);
     z-index: 100;
@@ -392,9 +392,82 @@
     .hero { padding: 3rem 1rem 2rem; }
     .news-grid, .section-label, .status-bar { padding-left: 1rem; padding-right: 1rem; }
   }
+
+  /* ── SCORES BANNER ── */
+  .scores-banner {
+    background: #0d0f14;
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+  }
+
+  .scores-banner-label {
+    color: var(--muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-right: 1.25rem;
+    border-right: 1px solid var(--border);
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .scores-track {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+  }
+
+  .scores-track::-webkit-scrollbar { display: none; }
+
+  .score-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem;
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+    height: 36px;
+  }
+
+  .score-team { color: var(--muted); font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .score-value { color: var(--text); font-weight: 700; font-size: 0.72rem; }
+
+  .score-status {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .score-status.live { background: rgba(255,77,109,0.15); color: var(--red); animation: blink 1.5s ease-in-out infinite; }
+  .score-status.final { background: rgba(107,114,128,0.15); color: var(--muted); }
+  .score-status.upcoming { background: rgba(0,194,255,0.1); color: var(--accent); }
+  .score-status.offseason { background: transparent; color: var(--muted); opacity: 0.6; }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 </style>
 </head>
 <body>
+
+<div class="scores-banner">
+  <div class="scores-banner-label">Toronto</div>
+  <div class="scores-track" id="scoresTrack">
+    <div class="score-item"><span class="score-team">Loading…</span></div>
+  </div>
+</div>
 
 <header>
   <a class="logo" href="#">
@@ -405,15 +478,11 @@
     </svg>
     <span class="logo-text">digital<span>plumber</span>.ca</span>
   </a>
-  <nav>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
 </header>
 
 <section class="hero">
   <p class="hero-eyebrow">AI Networking Intelligence</p>
-  <h1>The pipes that carry<br><em>tomorrow's networks</em></h1>
+  <h1>Plumbing the<br><em>information age</em></h1>
   <p class="hero-sub">AI-summarized news and insights on networking, AI infrastructure, and the companies reshaping how data moves.</p>
 
   <div class="fetch-bar">
@@ -565,6 +634,62 @@
 </footer>
 
 <script>
+  const TORONTO_TEAMS = [
+    { league: 'hockey/nhl',     abbr: 'TOR', name: 'Maple Leafs', emoji: '🍁' },
+    { league: 'baseball/mlb',   abbr: 'TOR', name: 'Blue Jays',   emoji: '🐦' },
+    { league: 'basketball/nba', abbr: 'TOR', name: 'Raptors',     emoji: '🦖' },
+  ];
+
+  async function fetchTeamScore({ league, abbr, name, emoji }) {
+    const url = `https://site.api.espn.com/apis/site/v2/sports/${league}/scoreboard`;
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      const game = (data.events || []).find(e =>
+        e.competitions?.[0]?.competitors?.some(c => c.team?.abbreviation === abbr)
+      );
+      if (!game) return { name, emoji, offseason: true };
+      const comp = game.competitions[0];
+      const tor = comp.competitors.find(c => c.team.abbreviation === abbr);
+      const opp = comp.competitors.find(c => c.team.abbreviation !== abbr);
+      const status = comp.status.type;
+      return {
+        name, emoji, offseason: false,
+        torScore: tor.score, oppScore: opp.score, oppAbbr: opp.team.abbreviation,
+        isHome: tor.homeAway === 'home',
+        statusName: status.name, statusShort: status.shortDetail,
+      };
+    } catch { return { name, emoji, offseason: true }; }
+  }
+
+  function renderScoreItem({ name, emoji, offseason, torScore, oppScore, oppAbbr, isHome, statusName, statusShort }) {
+    const el = document.createElement('div');
+    el.className = 'score-item';
+    if (offseason) {
+      el.innerHTML = `<span class="score-team">${emoji} ${name}</span><span class="score-status offseason">Off Season</span>`;
+      return el;
+    }
+    const isLive = statusName === 'STATUS_IN_PROGRESS';
+    const isFinal = statusName === 'STATUS_FINAL';
+    const statusClass = isLive ? 'live' : isFinal ? 'final' : 'upcoming';
+    const statusLabel = isLive ? 'Live' : isFinal ? 'Final' : statusShort;
+    const matchup = (isLive || isFinal)
+      ? (isHome ? `TOR ${torScore} – ${oppScore} ${oppAbbr}` : `${oppAbbr} ${oppScore} – ${torScore} TOR`)
+      : `vs ${oppAbbr}`;
+    el.innerHTML = `<span class="score-team">${emoji} ${name}</span><span class="score-value">${matchup}</span><span class="score-status ${statusClass}">${statusLabel}</span>`;
+    return el;
+  }
+
+  async function loadScores() {
+    const track = document.getElementById('scoresTrack');
+    const results = await Promise.all(TORONTO_TEAMS.map(fetchTeamScore));
+    track.innerHTML = '';
+    results.forEach(r => track.appendChild(renderScoreItem(r)));
+  }
+
+  loadScores();
+  setInterval(loadScores, 60000);
+
   let activeTopic = 'all';
 
   function setActivePill(el) {
