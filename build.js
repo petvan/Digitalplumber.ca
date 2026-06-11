@@ -353,7 +353,7 @@ async function main() {
     let html = template;
     html = html.replace('<!--NEWS_CARDS-->', cardsHtml);
     html = html.replace(/<!--BUILD_DATE-->/g, buildDate);
-    html = html.replace('<!--ARTICLE_COUNT-->', String(newsItems.length));
+    html = html.replace(/<!--ARTICLE_COUNT-->/g, String(newsItems.length));
     html = html.replace('<!--PODCAST_CARDS-->', podcastHtml);
     html = html.replace('<!--VENDOR_RADAR-->', vendorRadarHtml(newsItems));
     html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
