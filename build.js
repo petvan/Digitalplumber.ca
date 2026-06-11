@@ -134,8 +134,8 @@ async function fetchTopicNews(topic, attempt = 1) {
 
   try {
     let response = await client.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 2000,
+      model: 'claude-haiku-4-5',
+      max_tokens: 1500,
       system: SYSTEM_PROMPT,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       messages,
@@ -144,7 +144,7 @@ async function fetchTopicNews(topic, attempt = 1) {
     // Handle multi-turn: model may call web_search one or more times
     // before producing the final text response.
     let iterations = 0;
-    while (response.stop_reason === 'tool_use' && iterations < 6) {
+    while (response.stop_reason === 'tool_use' && iterations < 3) {
       iterations++;
       messages.push({ role: 'assistant', content: response.content });
 
@@ -157,8 +157,8 @@ async function fetchTopicNews(topic, attempt = 1) {
       messages.push({ role: 'user', content: toolResults });
 
       response = await client.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2000,
+        model: 'claude-haiku-4-5',
+        max_tokens: 1500,
         system: SYSTEM_PROMPT,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         messages,
@@ -176,8 +176,8 @@ async function fetchTopicNews(topic, attempt = 1) {
         content: 'Return ONLY the JSON array now — no prose, no explanation, no markdown fences. Just the raw JSON array of the articles you found, or [] if none qualify.'
       });
       const forced = await client.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 2000,
+        model: 'claude-haiku-4-5',
+        max_tokens: 1500,
         system: SYSTEM_PROMPT,
         messages,
       });
