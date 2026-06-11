@@ -388,6 +388,50 @@
   .footer-brand strong { color: var(--accent); }
   .footer-creds { font-size: 0.75rem; color: var(--muted); }
 
+  /* ── SECTION NAV ── */
+  .section-nav {
+    position: sticky;
+    top: 100px; /* 36px scores + 64px header */
+    z-index: 90;
+    background: rgba(10,12,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+
+  .section-nav-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    margin-bottom: -1px; /* overlap container border */
+  }
+
+  .section-nav-btn:hover { color: var(--text); }
+
+  .section-nav-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .section-nav-btn .nav-count {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    margin-left: 0.4rem;
+  }
+
   /* ── ARCHIVE NOTICE (shown on archive pages) ── */
   .archive-notice {
     background: rgba(123,94,167,0.12);
@@ -752,6 +796,13 @@
   </div>
 </section>
 
+<nav class="section-nav" id="sectionNav">
+  <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Daily Briefing<span class="nav-count"><!--ARTICLE_COUNT--></span></button>
+  <button class="section-nav-btn" onclick="scrollToSection('section-vendors', this)">Vendor Radar<span class="nav-count">15</span></button>
+  <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
+</nav>
+
+<div id="section-news">
 <p class="section-label">Daily Briefing · <!--BUILD_DATE--></p>
 
 <div class="status-bar">
@@ -766,22 +817,27 @@
 <div class="no-results" id="noResults">
   <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
 </div>
+</div><!-- /#section-news -->
 
 <!-- VENDOR RADAR -->
+<div id="section-vendors">
 <p class="section-label">Vendor Radar · <!--BUILD_DATE--></p>
 <div class="vendor-radar">
   <div class="vendor-grid">
     <!--VENDOR_RADAR-->
   </div>
 </div>
+</div><!-- /#section-vendors -->
 
 <!-- PODCASTS & TALKS -->
+<div id="section-podcasts">
 <p class="section-label">Podcasts &amp; Talks · <!--BUILD_DATE--></p>
 <div class="podcast-section">
   <div class="podcast-grid">
     <!--PODCAST_CARDS-->
   </div>
 </div>
+</div><!-- /#section-podcasts -->
 
 <footer>
   <div class="footer-brand">
@@ -869,6 +925,27 @@
 
   loadScores();
   setInterval(loadScores, 60000); // refresh every minute
+
+  // ── SECTION NAV ──
+  function scrollToSection(id, btn) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navOffset = 100 + 41; // scores + header + section-nav height
+    const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  (function () {
+    const sections = ['section-news', 'section-vendors', 'section-podcasts'];
+    const btns = document.querySelectorAll('.section-nav-btn');
+    const setActive = (id) => btns.forEach((b, i) => b.classList.toggle('active', sections[i] === id));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+  })();
 
   // ── ARCHIVES DROPDOWN ──
   (function () {
