@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Plumber — Network Intelligence</title>
+<!--ARCHIVE_LIST_SCRIPT-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -387,10 +388,226 @@
   .footer-brand strong { color: var(--accent); }
   .footer-creds { font-size: 0.75rem; color: var(--muted); }
 
+  /* ── ARCHIVE NOTICE (shown on archive pages) ── */
+  .archive-notice {
+    background: rgba(123,94,167,0.12);
+    border-bottom: 1px solid rgba(123,94,167,0.3);
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .archive-notice a { color: var(--accent); text-decoration: none; }
+  .archive-notice a:hover { text-decoration: underline; }
+
+  /* ── ARCHIVES NAV DROPDOWN ── */
+  .archive-nav { position: relative; }
+
+  .archive-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+
+  .archive-btn:hover { color: var(--text); border-color: var(--accent); }
+
+  .archive-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    min-width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  .archive-menu.open { display: block; }
+
+  .archive-menu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .archive-menu a:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+
+  .archive-menu-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    opacity: 0.7;
+  }
+
+  /* ── VENDOR RADAR ── */
+  .vendor-radar {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+  }
+
+  .vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .vendor-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: border-color 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .vendor-card.vendor-active:hover {
+    border-color: rgba(0,194,255,0.35);
+  }
+
+  .vendor-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+
+  .vendor-card.vendor-quiet .vendor-name { color: var(--muted); opacity: 0.5; }
+
+  .vendor-headline {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .vendor-card.vendor-quiet .vendor-headline { color: var(--muted); font-style: italic; }
+
+  .vendor-source {
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  /* ── PODCASTS & TALKS ── */
+  .podcast-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .podcast-card {
+    background: linear-gradient(135deg, #111318 0%, #14102a 100%);
+    border: 1px solid rgba(123,94,167,0.3);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .podcast-card:hover {
+    border-color: var(--accent2);
+    transform: translateY(-2px);
+  }
+
+  .podcast-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+  }
+
+  .podcast-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .podcast-source-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent2);
+    background: rgba(123,94,167,0.15);
+    border: 1px solid rgba(123,94,167,0.3);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .podcast-date { font-size: 0.72rem; color: var(--muted); }
+
+  .podcast-category {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  .podcast-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .podcast-summary {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .no-podcast {
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-style: italic;
+    padding: 1rem 0;
+  }
+
   @media (max-width: 600px) {
     header { padding: 0 1rem; }
     .hero { padding: 3rem 1rem 2rem; }
-    .news-grid, .section-label, .status-bar { padding-left: 1rem; padding-right: 1rem; }
+    .news-grid, .section-label, .status-bar,
+    .vendor-radar, .podcast-section { padding-left: 1rem; padding-right: 1rem; }
+    .vendor-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
   }
 
   /* ── SCORES BANNER ── */
@@ -488,6 +705,8 @@
 </head>
 <body>
 
+<!--ARCHIVE_NOTICE-->
+
 <!-- SCORES BANNER -->
 <div class="scores-banner">
   <div class="scores-banner-label">Toronto</div>
@@ -497,7 +716,7 @@
 </div>
 
 <header>
-  <a class="logo" href="#">
+  <a class="logo" href="/">
     <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="36" height="36" rx="8" fill="#111318"/>
       <path d="M8 18h4M24 18h4M14 12l-2 6 2 6M22 12l2 6-2 6" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -505,6 +724,12 @@
     </svg>
     <span class="logo-text">digital<span>plumber</span>.ca</span>
   </a>
+  <nav>
+    <div class="archive-nav">
+      <button class="archive-btn" onclick="toggleArchiveMenu(this)">Archives ▾</button>
+      <div class="archive-menu" id="archiveMenu"></div>
+    </div>
+  </nav>
 </header>
 
 <section class="hero">
@@ -540,6 +765,22 @@
 
 <div class="no-results" id="noResults">
   <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
+</div>
+
+<!-- VENDOR RADAR -->
+<p class="section-label">Vendor Radar · <!--BUILD_DATE--></p>
+<div class="vendor-radar">
+  <div class="vendor-grid">
+    <!--VENDOR_RADAR-->
+  </div>
+</div>
+
+<!-- PODCASTS & TALKS -->
+<p class="section-label">Podcasts &amp; Talks · <!--BUILD_DATE--></p>
+<div class="podcast-section">
+  <div class="podcast-grid">
+    <!--PODCAST_CARDS-->
+  </div>
 </div>
 
 <footer>
@@ -628,6 +869,29 @@
 
   loadScores();
   setInterval(loadScores, 60000); // refresh every minute
+
+  // ── ARCHIVES DROPDOWN ──
+  (function () {
+    const archives = window.__archives || [];
+    const menu = document.getElementById('archiveMenu');
+    if (!menu || archives.length === 0) return;
+    archives.forEach(a => {
+      const link = document.createElement('a');
+      link.href = `/archives/${a.date}.html`;
+      link.innerHTML = `${a.label} <span class="archive-menu-count">${a.count} articles</span>`;
+      menu.appendChild(link);
+    });
+  })();
+
+  function toggleArchiveMenu(btn) {
+    const menu = document.getElementById('archiveMenu');
+    const isOpen = menu.classList.toggle('open');
+    btn.textContent = isOpen ? 'Archives ▴' : 'Archives ▾';
+    if (isOpen) {
+      function close(e) { if (!btn.closest('.archive-nav').contains(e.target)) { menu.classList.remove('open'); btn.textContent = 'Archives ▾'; document.removeEventListener('click', close); } }
+      setTimeout(() => document.addEventListener('click', close), 0);
+    }
+  }
 
   // ── FILTER LOGIC ──
   let activeTopic = 'all';

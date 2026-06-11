@@ -59,7 +59,41 @@ const TOPICS = [
     maxItems: 3,
     query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news 2026'
   },
+  {
+    label: 'Podcasts & Talks',
+    maxItems: 4,
+    query: 'Packet Pushers podcast episode networking AutoCon NANOG presentation talk Cisco Live KubeCon network automation AIOps DevOps operations 2026'
+  },
 ];
+
+// ── Vendor Radar ──────────────────────────────────────────────────────────────
+const TRACKED_VENDORS = [
+  'LogicMonitor', 'Honeycomb', 'Last9', 'Chronosphere', 'Selector',
+  'Dynatrace', 'Datadog', 'New Relic', 'Itential', 'CrowdStrike',
+  'Palo Alto', 'Arista', 'Juniper', 'Cisco', 'ServiceNow',
+];
+
+function vendorRadarHtml(articles) {
+  const cards = TRACKED_VENDORS.map(vendor => {
+    const match = articles.find(a =>
+      [a.title, a.summary, a.source].join(' ').toLowerCase().includes(vendor.toLowerCase())
+    );
+    if (match) {
+      return `
+    <a class="vendor-card vendor-active" href="${esc(match.url)}" target="_blank" rel="noopener">
+      <div class="vendor-name">${esc(vendor)}</div>
+      <div class="vendor-headline">${esc(match.title)}</div>
+      <div class="vendor-source">${esc(match.source)} · ${esc(match.date)}</div>
+    </a>`;
+    }
+    return `
+    <div class="vendor-card vendor-quiet">
+      <div class="vendor-name">${esc(vendor)}</div>
+      <div class="vendor-headline">No news today</div>
+    </div>`;
+  });
+  return cards.join('\n');
+}
 
 // ── System prompt ─────────────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `You are a technical news curator writing for experienced network and IT operations practitioners — senior network engineers, NetDevOps/automation engineers, and AIOps/SRE leads. They are busy and want to cut to the chase.
@@ -209,6 +243,21 @@ async function fetchTopicNews(topic, attempt = 1) {
   }
 }
 
+// ── Podcast card HTML ─────────────────────────────────────────────────────────
+function podcastCardHtml(item) {
+  return `
+    <div class="podcast-card">
+      <div class="podcast-card-meta">
+        <span class="podcast-source-tag">${esc(item.source)}</span>
+        <span class="podcast-date">${esc(item.date)}</span>
+        <span class="podcast-category">${esc(item.category)}</span>
+      </div>
+      <h3>${esc(item.title)}</h3>
+      <p class="podcast-summary">${esc(item.summary)}</p>
+      <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Listen / Watch →</a>
+    </div>`;
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY) {
@@ -219,40 +268,41 @@ async function main() {
   console.log('digitalplumber.ca — Daily build starting…\n');
 
   // Fetch all topics (sequentially to avoid rate limits)
-  const allItems = [];
+  const rawItems = [];
   for (const topic of TOPICS) {
     const items = await fetchTopicNews(topic);
-    allItems.push(...items);
-    // Pause between topics — Tier 1 allows 100k tokens/min
+    rawItems.push(...items);
     await new Promise(r => setTimeout(r, 5000));
   }
 
-  console.log(`\nTotal articles fetched: ${allItems.length}`);
+  console.log(`\nTotal articles fetched: ${rawItems.length}`);
 
-  // Refuse to publish a blank page — keep yesterday's index.html intact.
-  if (allItems.length === 0) {
+  if (rawItems.length === 0) {
     console.error('No articles fetched. Aborting to preserve existing index.html.');
     process.exit(1);
   }
 
-    // Cap total — AI Ops (6) + MCP (5) + Automation (5) + others (3 each) = ~30 possible.
-  // Trim to 20 so the feed stays tight.
-  const MAX_TOTAL = 20;
-  if (allItems.length > MAX_TOTAL) {
-    allItems.length = MAX_TOTAL;
-    console.log(`Trimmed to ${MAX_TOTAL} articles`);
-  }
+  // Separate podcasts from main news feed
+  const podcastItems = rawItems.filter(i => i.topicLabel === 'Podcasts & Talks');
+  const newsItems = rawItems.filter(i => i.topicLabel !== 'Podcasts & Talks');
 
-  // Generate cards HTML
-  const cardsHtml = allItems.length > 0
-    ? allItems.map(cardHtml).join('\n')
-    : '<div style="text-align:center;padding:3rem;color:#6b7280"><p>No articles available today. Check back soon.</p></div>';
+  // Cap main feed at 20 articles
+  const MAX_TOTAL = 20;
+  if (newsItems.length > MAX_TOTAL) newsItems.length = MAX_TOTAL;
+  console.log(`News: ${newsItems.length}, Podcasts: ${podcastItems.length}`);
 
   // Build date string
-  const buildDate = new Date().toLocaleDateString('en-CA', {
+  const now = new Date();
+  const buildDate = now.toLocaleDateString('en-CA', {
     month: 'short', day: 'numeric', year: 'numeric',
     timeZone: 'America/Toronto',
   });
+  // YYYY-MM-DD in Toronto time
+  const torDate = new Intl.DateTimeFormat('en-CA', {
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    timeZone: 'America/Toronto',
+  }).format(now);
+  const dateStr = torDate; // en-CA gives YYYY-MM-DD natively
 
   // Read template
   const templatePath = path.join(__dirname, 'template.html');
@@ -261,18 +311,58 @@ async function main() {
     process.exit(1);
   }
 
-  let html = fs.readFileSync(templatePath, 'utf8');
+  // ── Load / update archives.json ────────────────────────────────────────────
+  const archivesDir = path.join(__dirname, 'archives');
+  if (!fs.existsSync(archivesDir)) fs.mkdirSync(archivesDir);
 
-  // Inject content
-  html = html.replace('<!--NEWS_CARDS-->', cardsHtml);
-  html = html.replace(/<!--BUILD_DATE-->/g, buildDate);
-  html = html.replace('<!--ARTICLE_COUNT-->', String(allItems.length));
+  const archivesJsonPath = path.join(archivesDir, 'index.json');
+  let archives = [];
+  if (fs.existsSync(archivesJsonPath)) {
+    try { archives = JSON.parse(fs.readFileSync(archivesJsonPath, 'utf8')); } catch {}
+  }
+  archives = archives.filter(a => a.date !== dateStr);
+  archives.unshift({ date: dateStr, label: buildDate, count: newsItems.length });
+  archives = archives.slice(0, 30);
+  fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
-  // Write output
-  const outPath = path.join(__dirname, 'index.html');
-  fs.writeFileSync(outPath, html, 'utf8');
+  // ── Build the page HTML (shared by index.html and archive) ────────────────
+  function buildHtml(template, { isArchive = false } = {}) {
+    const cardsHtml = newsItems.length > 0
+      ? newsItems.map(cardHtml).join('\n')
+      : '<div style="text-align:center;padding:3rem;color:#6b7280"><p>No articles available today. Check back soon.</p></div>';
 
-  console.log(`\nDone! index.html written (${allItems.length} articles, ${buildDate})`);
+    const podcastHtml = podcastItems.length > 0
+      ? podcastItems.map(podcastCardHtml).join('\n')
+      : '<p class="no-podcast">No podcast or talk summaries today — check back tomorrow.</p>';
+
+    const archiveListScript = `<script>window.__archives=${JSON.stringify(archives)};</script>`;
+    const archiveBanner = isArchive
+      ? `<div class="archive-notice">You're viewing the archive for ${esc(buildDate)}. <a href="/">← Back to today</a></div>`
+      : '';
+
+    let html = template;
+    html = html.replace('<!--NEWS_CARDS-->', cardsHtml);
+    html = html.replace(/<!--BUILD_DATE-->/g, buildDate);
+    html = html.replace('<!--ARTICLE_COUNT-->', String(newsItems.length));
+    html = html.replace('<!--PODCAST_CARDS-->', podcastHtml);
+    html = html.replace('<!--VENDOR_RADAR-->', vendorRadarHtml(newsItems));
+    html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
+    html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
+    return html;
+  }
+
+  const template = fs.readFileSync(templatePath, 'utf8');
+
+  // Write index.html
+  fs.writeFileSync(path.join(__dirname, 'index.html'), buildHtml(template), 'utf8');
+  console.log(`✓ index.html written`);
+
+  // Write dated archive file
+  const archiveHtmlPath = path.join(archivesDir, `${dateStr}.html`);
+  fs.writeFileSync(archiveHtmlPath, buildHtml(template, { isArchive: true }), 'utf8');
+  console.log(`✓ archives/${dateStr}.html written`);
+
+  console.log(`\nDone! ${newsItems.length} articles + ${podcastItems.length} podcasts · ${buildDate}`);
 }
 
 main().catch(err => {
