@@ -133,6 +133,10 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
 Aim for the full requested number of items. Search broadly across the preferred sources before concluding there isn't enough news.`;
 
 // ── HTML helpers ──────────────────────────────────────────────────────────────
+function stripCites(str) {
+  return String(str || '').replace(/<cite[^>]*>|<\/cite>/gi, '').trim();
+}
+
 function esc(str) {
   return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
@@ -225,7 +229,13 @@ async function fetchTopicNews(topic, attempt = 1) {
 
     const items = JSON.parse(jsonMatch[0]);
     console.log(`    ✓ ${items.length} articles`);
-    return items.map(item => ({ ...item, topicLabel: topic.label }));
+    return items.map(item => ({
+      ...item,
+      title:   stripCites(item.title),
+      summary: stripCites(item.summary),
+      source:  stripCites(item.source),
+      topicLabel: topic.label,
+    }));
 
   } catch (err) {
     // Retry on rate limit with exponential backoff (max 3 attempts)
