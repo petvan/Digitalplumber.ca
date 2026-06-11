@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Plumber — Network Intelligence</title>
-<script>window.__archives=[{"date":"2026-06-11","label":"Jun 11, 2026","count":17}];</script>
+<script>window.__archives=[{"date":"2026-06-11","label":"Jun 11, 2026","count":14}];</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -388,6 +388,50 @@
   .footer-brand strong { color: var(--accent); }
   .footer-creds { font-size: 0.75rem; color: var(--muted); }
 
+  /* ── SECTION NAV ── */
+  .section-nav {
+    position: sticky;
+    top: 100px; /* 36px scores + 64px header */
+    z-index: 90;
+    background: rgba(10,12,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+
+  .section-nav-btn {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    margin-bottom: -1px; /* overlap container border */
+  }
+
+  .section-nav-btn:hover { color: var(--text); }
+
+  .section-nav-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .section-nav-btn .nav-count {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    margin-left: 0.4rem;
+  }
+
   /* ── ARCHIVE NOTICE (shown on archive pages) ── */
   .archive-notice {
     background: rgba(123,94,167,0.12);
@@ -752,25 +796,32 @@
   </div>
 </section>
 
+<nav class="section-nav" id="sectionNav">
+  <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Daily Briefing<span class="nav-count">14</span></button>
+  <button class="section-nav-btn" onclick="scrollToSection('section-vendors', this)">Vendor Radar<span class="nav-count">15</span></button>
+  <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
+</nav>
+
+<div id="section-news">
 <p class="section-label">Daily Briefing · Jun 11, 2026</p>
 
 <div class="status-bar">
   <div class="status-dot"></div>
-  <span>17 articles · AI-curated · Updated Jun 11, 2026</span>
+  <span><!--ARTICLE_COUNT--> articles · AI-curated · Updated Jun 11, 2026</span>
 </div>
 
 <div class="news-grid" id="newsGrid">
   
     <div class="card" data-topic="AI Ops &amp; Observability">
       <div class="card-meta">
-        <span class="source-tag">Vitria</span>
+        <span class="source-tag">The New Stack</span>
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Industry Trend</span>
       </div>
-      <h2>Event Intelligence Solutions Move to Slope of Enlightenment in Gartner's 2026 Hype Cycle</h2>
-      <p class="card-summary">Gartner repositioned AIOps platforms as 'Event Intelligence Solutions' on the Slope of Enlightenment, signaling market maturation away from predictive analytics toward agentic AI that learns from operational experience and continuously improves decision-making.</p>
+      <h2>Observability overload is drowning engineers</h2>
+      <p class="card-summary">SREs and DevOps engineers face a paradox: unprecedented observability data without proportional gains in detection or resolution speed. The article explores how teams are drowning in telemetry despite having more visibility than ever, and examines why simply collecting more data without proper context and filtering exacerbates operational challenges rather than solving them.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://vitria.com/blog/the-next-evolution-of-aiops-from-event-intelligence-to-operational-knowledge/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://thenewstack.io/observability-overload-is-drowning-engineers/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
@@ -781,150 +832,94 @@
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Industry Trend</span>
       </div>
-      <h2>AIOps Cost Democratization: Open-Source Tooling Shifts Economics for Mid-Market Teams</h2>
-      <p class="card-summary">While AIOps market projects $2.67B in 2026 growing to $11.8B by 2034, the real shift is cost—AI-native platforms now affordable for small teams without enterprise budgets, reducing MTTR by 60% and alert noise by 85% but requiring clean data and documented fixes to be effective.</p>
+      <h2>How AI Is Automating IT Operations in 2026</h2>
+      <p class="card-summary">AIOps adoption jumped from niche to mainstream, with market projections growing from $2.67B in 2026 to $11.8B by 2034. The article highlights that enterprises combining AIOps with observability grew from under 10% to a projected 40% adoption in three years, and notes that the real democratization is falling tooling costs, not just AI capabilities—enabling smaller teams to access automation previously requiring enterprise budgets.</p>
       <div class="card-footer">
         <a class="read-link" href="https://www.european.express/2026/06/09/how-ai-is-automating-it-operations-in-2026/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Agentic AI &amp; MCP">
+    <div class="card" data-topic="AI Ops &amp; Observability">
       <div class="card-meta">
-        <span class="source-tag">BizTech Magazine</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Product Launch</span>
-      </div>
-      <h2>Cisco Live 2026: Cisco Pushes AgenticOps Vision to Help IT Teams Manage AI-Era Networks</h2>
-      <p class="card-summary">Cisco unveiled AgenticOps, a framework combining AI agents, automation, and human oversight for identifying, diagnosing, and resolving IT issues. The approach introduces an &quot;agentic loop&quot; for sensing, diagnosing, and auto-remediating infrastructure problems, with emphasis on transparency via reasoning logs and predefined workflows to address production environment concerns.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://biztechmagazine.com/article/2026/06/cisco-live-2026-cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Agentic AI &amp; MCP">
-      <div class="card-meta">
-        <span class="source-tag">Anthropic Release Notes</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Product Launch</span>
-      </div>
-      <h2>Claude Adds Managed Agents Support for Self-Hosted Sandboxes and MCP Tunnels</h2>
-      <p class="card-summary">Anthropic released public beta for Claude Managed Agents with self-hosted sandboxes and MCP tunnels in research preview, allowing agents to execute within customer-controlled infrastructure while connecting to private MCP servers. Tool execution moves to customer-configured environments (own infrastructure or managed providers like Cloudflare/Modal) while orchestration stays on Anthropic infrastructure.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Agentic AI &amp; MCP">
-      <div class="card-meta">
-        <span class="source-tag">Telecom Infrastructure Blog</span>
+        <span class="source-tag">Vitria</span>
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Industry Trend</span>
       </div>
-      <h2>The AI Revolution in Telecom: Powering Smarter Networks, Event Resilience, and the Path to Autonomous Operations</h2>
-      <p class="card-summary">T-Mobile unveiled Dynamic CX, an AI-powered network optimization capability for high-density environments, exemplifying operator shift from connectivity providers to intelligent, adaptive platforms. The industry is moving from pilots to production deployments of agentic systems, with AI-RAN sector projected to exceed 28% CAGR through mid-2030s, though ROI at scale and interoperability challenges remain.</p>
+      <h2>The Next Evolution of AIOps: From Event Intelligence to Operational Knowledge</h2>
+      <p class="card-summary">Gartner's June 2, 2026 Hype Cycle positioned Event Intelligence Solutions on the Slope of Enlightenment, signaling a market transition beyond data collection and insight generation. The article argues that autonomous operations and agentic AI adoption require a new architectural layer—the Self-Evolving Knowledge Plane—that continuously learns from operational outcomes rather than just correlating events, addressing the foundation needed for trusted automation at scale.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://telecominfra.wordpress.com/2026/06/09/the-ai-revolution-in-telecom-powering-smarter-networks-event-resilience-and-the-path-to-autonomous-operations/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://vitria.com/blog/the-next-evolution-of-aiops-from-event-intelligence-to-operational-knowledge/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
     <div class="card" data-topic="Agentic AI &amp; MCP">
       <div class="card-meta">
-        <span class="source-tag">Morph LLM</span>
+        <span class="source-tag">Network World</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Research</span>
+        <span class="card-category">Product Launch</span>
       </div>
-      <h2>AI Agent Frameworks 2026 Update: 8 SDKs Compared + Claude Agent SDK Primitive Reference</h2>
-      <p class="card-summary">Comprehensive framework comparison covering Claude Agent SDK (which drew separate monthly credits starting Jun 15), OpenAI Agents SDK, Google ADK (Java/Go 1.0 in early 2026), LangGraph, CrewAI (52.4k stars), and others. Analysis reveals split between provider-native SDKs optimized for single model families versus independent frameworks, with MCP support widespread and A2A interoperability narrower but improving.</p>
+      <h2>Cisco Cloud Control and AgenticOps: Unified Platform for Operating Critical IT Infrastructure</h2>
+      <p class="card-summary">Cisco unveiled Cisco Cloud Control at Cisco Live as a unified platform for humans and AI agents to manage critical IT infrastructure. Key capabilities include Agentic Actions for networking entering beta in June 2026 via Meraki with a five-stage loop (sense, diagnose, remediate, validate, deploy), Deep Reasoning for multi-step root cause analysis, and Digital Twin for emulating production networks. Cloud Control Studio targets late 2026 with an Agent Builder supporting 50+ third-party platforms via MCP.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://www.morphllm.com/ai-agent-framework" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://www.networkworld.com/article/4179673/cisco-brings-agentic-ops-platform-and-security-overhaul-to-cisco-live.html" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
     <div class="card" data-topic="Agentic AI &amp; MCP">
       <div class="card-meta">
-        <span class="source-tag">WorkOS</span>
+        <span class="source-tag">Megaport Blog</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Product Launch</span>
+      </div>
+      <h2>Megaport MCP Server: Enabling Agentic Networking for Infrastructure Management</h2>
+      <p class="card-summary">Megaport released the Megaport MCP Server (Open Beta) enabling AI agents to understand and manage Megaport infrastructure through natural language. The server allows AI coding assistants like Claude, Copilot, and Gemini to query infrastructure directly from development environments and integrates Megaport services into agentic network monitoring platforms. It transforms network engineering workflow from manual hours of documentation review to natural language queries for service status, latency diagnostics, and utilization analysis.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://www.megaport.com/blog/bridging-ai-and-infrastructure-introducing-the-megaport-mcp-server-for-agentic-networking/" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Agentic AI &amp; MCP">
+      <div class="card-meta">
+        <span class="source-tag">SaaS Ultra</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Industry Trend</span>
+      </div>
+      <h2>Agentic AI Moving From Demos Into Real Business Workflows in June 2026</h2>
+      <p class="card-summary">June 2026 marks the inflection point where agentic AI transitions from demos to production workflows. Major cloud providers (AWS, Google Cloud, Microsoft, GitHub, IBM, Databricks) and consulting firms now converge on a shared definition of agents: systems with goals, memory, planning, tool use, and autonomy. Successful products focus on human oversight integration rather than full automation, with enterprises valuing clear controls and visibility into agent decision-making and actions.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://www.saasultra.com/agentic-ai-is-moving-out-of-demos/" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Agentic AI &amp; MCP">
+      <div class="card-meta">
+        <span class="source-tag">Model Context Protocol Blog</span>
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Standards</span>
       </div>
-      <h2>Everything Your Team Needs to Know About MCP in 2026</h2>
-      <p class="card-summary">Technical deep-dive on MCP evolution through 2026, covering latest spec updates: server-side agent spawning (Nov 2025 spec), MCP Apps for interactive UIs (Jan 2026), async task lifecycle, enhanced sampling, and OAuth Resource Server formalization. Details ecosystem maturity with 97M+ monthly SDK downloads, 10,000+ public servers, registry growth to ~2,000 entries, and enterprise readiness as 2026 roadmap priority.</p>
+      <h2>MCP 2026-07-28 Release Candidate: Stateless Protocol Core for Enterprise Scale</h2>
+      <p class="card-summary">The MCP 2026-07-28 release candidate introduces breaking changes including a stateless protocol core enabling deployment on ordinary HTTP infrastructure without sticky sessions. Remote MCP servers can now run behind standard load balancers using Mcp-Method headers for routing. Official extensions include MCP Apps for interactive UIs and Tasks for long-running operations. Final specification ships July 28, 2026 with a ten-week validation window for SDK maintainers.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Network Automation">
+    <div class="card" data-topic="Agentic AI &amp; MCP">
       <div class="card-meta">
-        <span class="source-tag">Infosec Conferences / Network Automation Forum</span>
+        <span class="source-tag">Agentic AI Foundation</span>
         <span class="card-date">Jun 2026</span>
-        <span class="card-category">Industry Trend</span>
+        <span class="card-category">Community</span>
       </div>
-      <h2>AutoCon 5 in Munich Gathers Network Automation Practitioners Around NAF Framework and Real-World Challenges</h2>
-      <p class="card-summary">AutoCon 5 concluded in Munich with a focus on operationalizing network automation at scale, bringing together practitioners, vendors including Cisco, Itential, Arista, and HPE, and thought leaders to address barriers preventing full adoption. The event emphasized the Network Automation Forum's NAF Framework as a practical reference architecture for automation, moving beyond hype to real production challenges.</p>
+      <h2>MCP Dev Summit North America 2026: 1,200 Attendees Signal Production-Readiness Phase</h2>
+      <p class="card-summary">The MCP Dev Summit in New York drew 1,200 attendees (double the previous summit), with Agentic AI Foundation membership reaching 170 organizations in under four months—doubling CNCF's membership at the same lifecycle stage. The summit signaled that MCP has transitioned from experimental protocol to enterprise infrastructure layer. David Soria (MCP co-creator) noted that corporate deployments routinely wire MCPs to systems of record: Salesforce CRM, Jira, internal wikis, and Snowflake warehouses, with production questions now dominating discussion.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://infosec-conferences.com/event/20260608-autcon-5/" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Network Automation">
-      <div class="card-meta">
-        <span class="source-tag">Broadcom Network Observability Blog</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Industry Trend</span>
-      </div>
-      <h2>NetDevOps in 2026: Broadcom Report Confirms Operating Model Shift Is Now Mandatory, Not Optional</h2>
-      <p class="card-summary">NetDevOps is no longer optional in 2026 and represents the operating model modern NetOps teams require, built for modern networks enterprises consume, share, and change constantly. Traditional NetOps structures are no longer aligned with how networks are built and maintained today, representing a structural break.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://networkobservability.broadcom.com/blog/netdevops-in-2026-still-optional-or-operationally-mandatory" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Network Automation">
-      <div class="card-meta">
-        <span class="source-tag">LogicMonitor Blog</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Product Launch</span>
-      </div>
-      <h2>LogicMonitor Launches Autonomous IT Platform with Edwin AI and Catchpoint Integration for End-to-End Observability</h2>
-      <p class="card-summary">LogicMonitor's latest innovations span the entire platform with complete visibility from infrastructure to end user, Edwin AI expanding multi-source reasoning across topology and logs, and closed-loop automation moving from detection to resolution. The platform integrates Catchpoint for synthetic monitoring and internet performance visibility.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Network Automation">
-      <div class="card-meta">
-        <span class="source-tag">NANOG</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Industry Trend</span>
-      </div>
-      <h2>NANOG 97 Emphasizes SRE Practices and Network Reliability as Automation Framework Matures</h2>
-      <p class="card-summary">Network operators increasingly embrace site reliability engineering practices to meet demands of implementing more changes faster while maintaining impeccable reliability, with NANOG 97's content showcasing how operators use SRE tools and methodologies to reduce network and application downtime.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://nanog.org/stories/articles/site-reliability-engineering-focus-of-nanog-97-bellevue/" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Network Automation">
-      <div class="card-meta">
-        <span class="source-tag">Adtran Blog</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Research</span>
-      </div>
-      <h2>Adtran Demonstrates NetDevOps Pipeline for Optical Networks with Git-Based Version Control and CI/CD Automation</h2>
-      <p class="card-summary">Adtran introduced an automated NetDevOps pipeline managing device configurations and end-to-end optical services, integrating Git for version control and open standards, applying NetDevOps principles to optical networks to deliver a scalable framework for modern optical network operations.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://www.blog.adtran.com/en/how-netdevops-is-driving-the-next-wave-of-optical-network-automation" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://aaif.io/blog/mcp-is-now-enterprise-infrastructure-everything-that-happened-at-mcp-dev-summit-north-america-2026/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
@@ -935,38 +930,24 @@
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Product Launch</span>
       </div>
-      <h2>Zscaler Unveils ZAgent Framework for Agentic SASE Administration</h2>
-      <p class="card-summary">Zscaler announced a major Zero Trust SASE platform expansion featuring the ZAgent Framework, which orchestrates platform agents to automate configuration, troubleshooting, and policy work through natural-language prompts. The framework extends zero-trust protection to unmanaged devices, B2B partners, and multicloud workloads, including new zero-trust browser options, GCP gateway support, and Kubernetes microsegmentation—shifting SASE management from legacy consoles to AI-driven operations handling 750+ billion daily transactions.</p>
+      <h2>Zscaler Redefines Zero Trust SASE with ZAgent Framework for Autonomous Administration</h2>
+      <p class="card-summary">Zscaler announced a major SASE platform expansion at Zenith Live 2026 featuring the ZAgent Framework, which orchestrates multiple agents to automate configuration, troubleshooting, and policy management via natural-language prompts. The framework processes 750+ billion daily transactions as training data, and new capabilities include Zero Trust browser extensions for BYOD, GCP gateway support, and Kubernetes microsegmentation—designed to reduce the manual overhead that security teams face managing fragmented tools.</p>
       <div class="card-footer">
         <a class="read-link" href="https://siliconangle.com/2026/06/10/zscaler-unveils-zagent-framework-automate-zero-trust-sase-operations/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
 
-    <div class="card" data-topic="AI Infrastructure">
+    <div class="card" data-topic="Security Automation">
       <div class="card-meta">
-        <span class="source-tag">SiliconANGLE</span>
+        <span class="source-tag">Versa Networks</span>
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Product Launch</span>
       </div>
-      <h2>The AI Supersystem Shift: Why Arista's 1.6T Announcement is an Ethernet Inflection Point</h2>
-      <p class="card-summary">Arista announced its 7060XE7 Series switches based on Broadcom's Tomahawk 6 silicon, delivering 100 terabits per second of switching capacity and 224G SerDes technology. The platform uses linear pluggable optics (LPO) instead of co-packaged optics, claiming 60% reduction in interconnect power consumption. This positions Arista against NVIDIA and others as AI clusters scale to hundreds of thousands of GPUs.</p>
+      <h2>Versa Brings Zero Trust Controls to AI Agent Actions with Patent-Pending MCP Architecture</h2>
+      <p class="card-summary">Versa integrated Zero Trust MCP (Model Control Plane) architecture into Versa Verbo, its AI operations co-pilot, enforcing policy-driven verification and human approval before AI agent execution. Administrators define policies governing which agent actions execute automatically versus requiring approval, with full logging and auditability—addressing the fundamental trust gap where a single user prompt can trigger multiple invisible steps across network and security systems.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://siliconangle.com/2026/06/09/ai-supersystem-shift-aristas-1-6t-announcement-ethernet-inflection-point/" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="AI Infrastructure">
-      <div class="card-meta">
-        <span class="source-tag">NVIDIA Blog</span>
-        <span class="card-date">Jun 2026</span>
-        <span class="card-category">Product Launch</span>
-      </div>
-      <h2>NVIDIA Spectrum-X Ethernet with MRC Open-Source Protocol Achieves Gigascale AI Production</h2>
-      <p class="card-summary">Multipath Reliable Connection (MRC) was proven in production on NVIDIA Spectrum-X Ethernet hardware and released as an open specification through the Open Compute Project. MRC delivers high GPU utilization by load-balancing traffic across multiple paths, sustains bandwidth under congestion through dynamic path avoidance, and enables intelligent retransmission. This represents production maturity of Spectrum-X fabric at gigascale with open standards.</p>
-      <div class="card-footer">
-        <a class="read-link" href="https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://versa-networks.com/news/2026/versa-brings-zero-trust-controls-to-ai-agent-actions/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
@@ -977,10 +958,10 @@
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Product Launch</span>
       </div>
-      <h2>Arista Networks Joins the 1.6T Race with AI-Centric Switch Platform</h2>
-      <p class="card-summary">Arista launched the 7060XE7 portfolio of 1.6Tb/s switches supporting both EOS and open operating systems, built on Broadcom Tomahawk 6 silicon. The platform includes Smart AI software with dynamic cluster load balancing, MRC support, and granular congestion management. Air-cooled 7060XE7-64PS ships Q4 2026, with liquid-cooled and higher-density variants launching early 2027.</p>
+      <h2>AMD, Oriole Networks Deploy Pure Photonic AI Network for ARIA Scaling Inference Lab—Claims 81% Core Power Reduction</h2>
+      <p class="card-summary">Oriole Networks, a UCL spinout, deployed the world's first large-scale pure photonic AI network using nanosecond-scale optical circuit switching instead of electronic packet switches. The PRISM platform paired with AMD Instinct GPUs and EPYC CPUs claims 81% reduction in core network power consumption and GPU idle time dropping from ~60% to &lt;1%. This represents a fundamental shift in AI cluster networking—moving from electrical to photonic switching at the network core.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://www.sdxcentral.com/news/arista-networks-joins-the-16t-race-with-ai-centric-switch-platform/" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://www.sdxcentral.com/news/amd-oriole-networks-partner-on-nanosecond-photonic-networks-for-ai/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
@@ -991,10 +972,38 @@
         <span class="card-date">Jun 2026</span>
         <span class="card-category">Research</span>
       </div>
-      <h2>Autonomous Incident Resolution at Hyperscale: An Agentic AI Architecture for Network Operations</h2>
-      <p class="card-summary">This paper presents an agentic AI architecture for autonomous incident resolution in large-scale network operations, where specialized AI agents collaborate to detect, diagnose, and remediate network incidents without human intervention. The architecture implements hierarchical agent decomposition, skills-based tool invocation via standardized protocols, structured knowledge encoding from operational runbooks, progressive autonomy with safety boundaries, and closed-loop verification. Deployed in production at a major cloud provider, the system demonstrates autonomous resolution rates exceeding 90% for common incident categories while maintaining safety guarantees.</p>
+      <h2>Harnessing the Collective Intelligence of AI Agents in the Wild for New Discoveries</h2>
+      <p class="card-summary">EinsteinArena demonstrates decentralized scientific discovery through autonomous agent-to-agent interaction on open mathematical problems. As of May 2026, agents achieved 12 new state-of-the-art results including improving the kissing number problem in dimension 11 from 593 to 604. Agents leverage public discussion, verifier feedback, and cross-agent idea borrowing—providing practical evidence that autonomous agents can collaborate at scale to solve complex problems without centralized coordination.</p>
       <div class="card-footer">
-        <a class="read-link" href="https://arxiv.org/abs/2606.09122" target="_blank" rel="noopener">Read more →</a>
+        <a class="read-link" href="https://arxiv.org/abs/2606.10402" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="AI Research &amp; Papers">
+      <div class="card-meta">
+        <span class="source-tag">arXiv</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Research</span>
+      </div>
+      <h2>Leveraging AI Agents for Autonomous Networks: A Reference Architecture and Empirical Studies</h2>
+      <p class="card-summary">Reference architecture for autonomous network agents integrating hybrid knowledge representation (Dueling QR-DQN, LSTM prediction, RAG-enhanced retrieval) achieving 4% throughput gain and 85% block error rate reduction while maintaining sub-10ms latency compliance. Proposes evolution from single-agent autonomy toward multi-agent 'Society of Agents' using shared telecom ontologies for intent decomposition across Core Network and RAN domains—directly applicable to 6G network operations.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://arxiv.org/pdf/2509.08312" target="_blank" rel="noopener">Read more →</a>
+        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="AI Research &amp; Papers">
+      <div class="card-meta">
+        <span class="source-tag">O'Reilly</span>
+        <span class="card-date">Jun 2026</span>
+        <span class="card-category">Industry Trend</span>
+      </div>
+      <h2>The AI Agents Stack (2026 Edition)</h2>
+      <p class="card-summary">Updated agent architecture diagram reflecting 2026 production practices: six-layer stack with MCP as tool connectivity standard, reasoning models enabling single-call autonomy, and memory as first-class primitive. Addresses guardrail evolution from output filters to tool execution authorization, deployment patterns (mostly FastAPI + DIY), and how provider SDKs are absorbing memory/tool-calling/eval—essential for teams scaling agents in production environments.</p>
+      <div class="card-footer">
+        <a class="read-link" href="https://www.oreilly.com/radar/the-ai-agents-stack-2026-edition/" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
       </div>
     </div>
@@ -1003,17 +1012,18 @@
 <div class="no-results" id="noResults">
   <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
 </div>
+</div><!-- /#section-news -->
 
 <!-- VENDOR RADAR -->
+<div id="section-vendors">
 <p class="section-label">Vendor Radar · Jun 11, 2026</p>
 <div class="vendor-radar">
   <div class="vendor-grid">
     
-    <a class="vendor-card vendor-active" href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener">
+    <div class="vendor-card vendor-quiet">
       <div class="vendor-name">LogicMonitor</div>
-      <div class="vendor-headline">LogicMonitor Launches Autonomous IT Platform with Edwin AI and Catchpoint Integration for End-to-End Observability</div>
-      <div class="vendor-source">LogicMonitor Blog · Jun 2026</div>
-    </a>
+      <div class="vendor-headline">No news today</div>
+    </div>
 
     <div class="vendor-card vendor-quiet">
       <div class="vendor-name">Honeycomb</div>
@@ -1050,11 +1060,10 @@
       <div class="vendor-headline">No news today</div>
     </div>
 
-    <a class="vendor-card vendor-active" href="https://infosec-conferences.com/event/20260608-autcon-5/" target="_blank" rel="noopener">
+    <div class="vendor-card vendor-quiet">
       <div class="vendor-name">Itential</div>
-      <div class="vendor-headline">AutoCon 5 in Munich Gathers Network Automation Practitioners Around NAF Framework and Real-World Challenges</div>
-      <div class="vendor-source">Infosec Conferences / Network Automation Forum · Jun 2026</div>
-    </a>
+      <div class="vendor-headline">No news today</div>
+    </div>
 
     <div class="vendor-card vendor-quiet">
       <div class="vendor-name">CrowdStrike</div>
@@ -1066,21 +1075,20 @@
       <div class="vendor-headline">No news today</div>
     </div>
 
-    <a class="vendor-card vendor-active" href="https://infosec-conferences.com/event/20260608-autcon-5/" target="_blank" rel="noopener">
+    <div class="vendor-card vendor-quiet">
       <div class="vendor-name">Arista</div>
-      <div class="vendor-headline">AutoCon 5 in Munich Gathers Network Automation Practitioners Around NAF Framework and Real-World Challenges</div>
-      <div class="vendor-source">Infosec Conferences / Network Automation Forum · Jun 2026</div>
-    </a>
+      <div class="vendor-headline">No news today</div>
+    </div>
 
     <div class="vendor-card vendor-quiet">
       <div class="vendor-name">Juniper</div>
       <div class="vendor-headline">No news today</div>
     </div>
 
-    <a class="vendor-card vendor-active" href="https://biztechmagazine.com/article/2026/06/cisco-live-2026-cisco-pushes-agenticops-vision-help-it-teams-manage-ai-era-networks" target="_blank" rel="noopener">
+    <a class="vendor-card vendor-active" href="https://www.networkworld.com/article/4179673/cisco-brings-agentic-ops-platform-and-security-overhaul-to-cisco-live.html" target="_blank" rel="noopener">
       <div class="vendor-name">Cisco</div>
-      <div class="vendor-headline">Cisco Live 2026: Cisco Pushes AgenticOps Vision to Help IT Teams Manage AI-Era Networks</div>
-      <div class="vendor-source">BizTech Magazine · Jun 2026</div>
+      <div class="vendor-headline">Cisco Cloud Control and AgenticOps: Unified Platform for Operating Critical IT Infrastructure</div>
+      <div class="vendor-source">Network World · Jun 2026</div>
     </a>
 
     <div class="vendor-card vendor-quiet">
@@ -1089,8 +1097,10 @@
     </div>
   </div>
 </div>
+</div><!-- /#section-vendors -->
 
 <!-- PODCASTS & TALKS -->
+<div id="section-podcasts">
 <p class="section-label">Podcasts &amp; Talks · Jun 11, 2026</p>
 <div class="podcast-section">
   <div class="podcast-grid">
@@ -1101,45 +1111,46 @@
         <span class="podcast-date">Jun 2026</span>
         <span class="podcast-category">Product Launch</span>
       </div>
-      <h3>Cisco Cloud Control: AgenticOps Platform Unifies Networking, Security, and Operations</h3>
-      <p class="podcast-summary">Cisco unveiled Cisco Cloud Control at Cisco Live US, a unified platform that consolidates networking, security, compute, observability, and collaboration into a single secure environment. The platform enables human operators and autonomous AI agents to collaborate with shared operational context while humans retain control; entering Controlled Availability in June 2026 with global availability planned for July.</p>
+      <h3>Cisco Cloud Control: Unified platform for humans and AI agents in infrastructure operations</h3>
+      <p class="podcast-summary">Cisco Cloud Control, unveiled at Cisco Live on June 2, is a unified platform built for humans and AI agents to manage, monitor and defend critical IT infrastructure. It delivers a single view of Cisco networking, security, compute, observability, and collaboration with people and agents working from a shared data layer. Operators can deploy autonomous agents to identify faults, investigate causes, apply fixes, and test changes before deployment through features like AI Canvas and Cloud Control Studio.</p>
       <a class="read-link" href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m06/cisco-unveils-agentic-platform-for-operating-and-defending-critical-it-infrastructure.html" target="_blank" rel="noopener">Listen / Watch →</a>
     </div>
 
     <div class="podcast-card">
       <div class="podcast-card-meta">
-        <span class="podcast-source-tag">NANOG</span>
-        <span class="podcast-date">Jun 2026</span>
-        <span class="podcast-category">Community</span>
-      </div>
-      <h3>NANOG 97: Network Operations Centered on SRE and AI Infrastructure Reliability</h3>
-      <p class="podcast-summary">NANOG 97 (June 1-3, 2026 in Bellevue, WA) delivered more than 26 hours of network operations presentations, panels, tutorials and hands-on workshops focused on site reliability engineering. The keynote, 'The SRE of AI: Engineering Network Reliability for the Tokenized Era,' explored the intersection of artificial intelligence and network engineering, featuring talks on agentic AI, network automation, and Kubernetes best practices.</p>
-      <a class="read-link" href="https://nanog.org/stories/articles/site-reliability-engineering-focus-of-nanog-97-bellevue/" target="_blank" rel="noopener">Listen / Watch →</a>
-    </div>
-
-    <div class="podcast-card">
-      <div class="podcast-card-meta">
-        <span class="podcast-source-tag">Network World</span>
+        <span class="podcast-source-tag">Network Automation Forum</span>
         <span class="podcast-date">Jun 2026</span>
         <span class="podcast-category">Industry Trend</span>
       </div>
-      <h3>Enterprise Network Teams Falling Behind as AI Raises the Stakes</h3>
-      <p class="podcast-summary">Only 31% of IT professionals surveyed for an EMA benchmarking study said their organization's network operations strategy is completely successful, down from 42% two years ago. Seventy-nine percent rate automating day-two operations as high priority; organizations increasingly demand AI-driven agentic automation, with 55% requiring AI features when evaluating new tools.</p>
-      <a class="read-link" href="https://www.networkworld.com/article/4180943/enterprise-network-teams-are-falling-behind-as-ai-raises-the-stakes.html" target="_blank" rel="noopener">Listen / Watch →</a>
+      <h3>AutoCon 5: Network automation conference in Munich with dual-track sessions and NAF Framework focus</h3>
+      <p class="podcast-summary">AutoCon 5 runs June 8-12 in Munich, bringing network automation practitioners together with hands-on workshops and a multi-day conference program. Thursday features parallel tracks with a NAF Framework track in the morning and leadership/business topics in the afternoon. The event addresses barriers to full network automation adoption through real-world case studies, tooling discussions, and community-driven content.</p>
+      <a class="read-link" href="https://networkautomation.forum/autocon5" target="_blank" rel="noopener">Listen / Watch →</a>
     </div>
 
     <div class="podcast-card">
       <div class="podcast-card-meta">
-        <span class="podcast-source-tag">Futurum Group</span>
+        <span class="podcast-source-tag">Packet Pushers</span>
         <span class="podcast-date">Jun 2026</span>
-        <span class="podcast-category">Analysis</span>
+        <span class="podcast-category">Community</span>
       </div>
-      <h3>Cisco Cloud Control Makes AgenticOps Practical for Enterprise Infrastructure</h3>
-      <p class="podcast-summary">Cisco announced Cisco Cloud Control at Cisco Live US 2026 as a unified platform for humans and AI agents to operate and defend critical IT infrastructure, bringing networking, security, compute, observability, and collaboration into one environment. AI Canvas, Cloud Control Studio, Agent Builder, App Builder, and Cloud Control Marketplace expand support for agentic workflows and customer-built agents.</p>
-      <a class="read-link" href="https://futurumgroup.com/insights/can-cisco-cloud-control-make-agenticops-practical-for-enterprises/" target="_blank" rel="noopener">Listen / Watch →</a>
+      <h3>Packet Pushers Network Break 578: Cisco Cloud Control AI ops platform and infrastructure automation</h3>
+      <p class="podcast-summary">Network Break episode 578 (published June 8) analyzes Cisco Cloud Control, Cisco's ambitious AI ops platform spanning networking, security, compute, observability, and collaboration. The Packet Pushers podcast provides critical analysis for network operations practitioners on how agentic AI changes infrastructure management and the operational implications for teams adopting autonomous agent-driven workflows.</p>
+      <a class="read-link" href="https://packetpushers.net/podcasts/network-break/nb578-cisco-goes-all-in-on-ai-ops-with-cloud-control-china-floats-underwater-data-center/" target="_blank" rel="noopener">Listen / Watch →</a>
+    </div>
+
+    <div class="podcast-card">
+      <div class="podcast-card-meta">
+        <span class="podcast-source-tag">Packet Pushers</span>
+        <span class="podcast-date">Jun 2026</span>
+        <span class="podcast-category">Community</span>
+      </div>
+      <h3>Total Network Operations TNO064: SONiC deployment at scale with production lessons from Amazon</h3>
+      <p class="podcast-summary">Scott Robohn interviews Brett Lykins, Senior Systems Development Engineer at Amazon, on running SONiC (Software for Open Networking in the Cloud) at hyperscale. The episode (published June 5) covers operational realities of software-defined open networking, automation challenges, and production-grade solutions for teams building large-scale network infrastructure with open standards.</p>
+      <a class="read-link" href="https://packetpushers.net/podcasts/total-network-operations/tno064-the-realities-of-running-sonic-at-scale/" target="_blank" rel="noopener">Listen / Watch →</a>
     </div>
   </div>
 </div>
+</div><!-- /#section-podcasts -->
 
 <footer>
   <div class="footer-brand">
@@ -1227,6 +1238,27 @@
 
   loadScores();
   setInterval(loadScores, 60000); // refresh every minute
+
+  // ── SECTION NAV ──
+  function scrollToSection(id, btn) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navOffset = 100 + 41; // scores + header + section-nav height
+    const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  (function () {
+    const sections = ['section-news', 'section-vendors', 'section-podcasts'];
+    const btns = document.querySelectorAll('.section-nav-btn');
+    const setActive = (id) => btns.forEach((b, i) => b.classList.toggle('active', sections[i] === id));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+  })();
 
   // ── ARCHIVES DROPDOWN ──
   (function () {
