@@ -45,19 +45,9 @@ const TOPICS = [
     query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news 2026'
   },
   {
-    label: 'AI Research & Papers',
-    maxItems: 3,
-    query: 'AI ML research paper networking operations AIOps MLOps agents arxiv 2026'
-  },
-  {
-    label: 'MLOps & Platform Engineering',
-    maxItems: 3,
-    query: 'MLOps platform engineering observability AI deployment production machine learning operations news 2026'
-  },
-  {
-    label: 'Industry & Standards',
-    maxItems: 3,
-    query: 'networking AI industry IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding news 2026'
+    label: 'Research, Standards & Industry',
+    maxItems: 6,
+    query: 'AI ML research paper networking AIOps MLOps agents arxiv IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding platform engineering news 2026'
   },
   {
     label: 'Podcasts & Talks',
@@ -173,7 +163,7 @@ async function fetchTopicNews(topic, attempt = 1) {
   try {
     let response = await client.messages.create({
       model: 'claude-haiku-4-5',
-      max_tokens: 1500,
+      max_tokens: 700,
       system: SYSTEM_PROMPT,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       messages,
@@ -182,7 +172,7 @@ async function fetchTopicNews(topic, attempt = 1) {
     // Handle multi-turn: model may call web_search one or more times
     // before producing the final text response.
     let iterations = 0;
-    while (response.stop_reason === 'tool_use' && iterations < 3) {
+    while (response.stop_reason === 'tool_use' && iterations < 2) {
       iterations++;
       messages.push({ role: 'assistant', content: response.content });
 
@@ -196,7 +186,7 @@ async function fetchTopicNews(topic, attempt = 1) {
 
       response = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 1500,
+        max_tokens: 700,
         system: SYSTEM_PROMPT,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         messages,
@@ -215,7 +205,7 @@ async function fetchTopicNews(topic, attempt = 1) {
       });
       const forced = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 1500,
+        max_tokens: 700,
         system: SYSTEM_PROMPT,
         messages,
       });
