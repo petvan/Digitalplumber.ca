@@ -21,17 +21,17 @@ const DEFAULT_MAX = 3;
 const TOPICS = [
   {
     label: 'AI Ops & Observability',
-    maxItems: 6,
+    maxItems: 8,
     query: 'AIOps observability AI operations LogicMonitor Selector.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
   },
   {
     label: 'Agentic AI & MCP',
-    maxItems: 5,
+    maxItems: 7,
     query: 'agentic AI MCP Model Context Protocol multi-agent systems AI agents networking operations news 2026'
   },
   {
     label: 'Network Automation',
-    maxItems: 5,
+    maxItems: 7,
     query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news 2026'
   },
   {
@@ -50,11 +50,90 @@ const TOPICS = [
     query: 'AI ML research paper networking AIOps MLOps agents arxiv IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding platform engineering news 2026'
   },
   {
+    label: 'AI Model Providers',
+    maxItems: 3,
+    query: 'Anthropic Claude OpenAI Google DeepMind Cohere Mistral xAI AI model announcement product launch shutdown 2026'
+  },
+  {
+    label: 'Telco & Cable AI',
+    maxItems: 5,
+    query: 'AT&T Verizon Lumen Singtel Bell Canada Rogers Cogeco Comcast Charter Cox Telus BCE telco cable operator AI artificial intelligence automation network deployment 2026'
+  },
+  {
+    label: 'AI Industry & Policy',
+    maxItems: 5,
+    query: 'artificial intelligence industry news regulation policy enterprise adoption AI governance geopolitics funding acquisitions 2026'
+  },
+  {
     label: 'Podcasts & Talks',
     maxItems: 4,
     query: 'Packet Pushers podcast episode networking AutoCon NANOG presentation talk Cisco Live KubeCon network automation AIOps DevOps operations 2026'
   },
 ];
+
+// ── Intelligence Panel ────────────────────────────────────────────────────────
+const TRENDING_TERMS = [
+  'MCP', 'Agentic AI', 'AIOps', 'Digital Twin', 'RAG', 'LLM',
+  'OpenTelemetry', 'OpenConfig', 'eBPF', 'SASE', 'Zero Trust',
+  'NetDevOps', 'MLOps', 'SRE', 'Kubernetes', 'observability',
+  'GenAI', 'inference', 'fine-tuning', 'automation', 'agent',
+];
+
+function intelligencePanelHtml(articles) {
+  // Today's Topics — count per topicLabel, sorted by count
+  const topicCounts = {};
+  articles.forEach(a => { topicCounts[a.topicLabel] = (topicCounts[a.topicLabel] || 0) + 1; });
+  const topicRows = Object.entries(topicCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) =>
+      `<div class="intel-topic-row" onclick="filterTopic(null,'${label.replace(/'/g, "\\'")}')">` +
+      `<span>${esc(label)}</span><span class="intel-topic-count">${count}</span></div>`
+    ).join('');
+
+  // Top Vendors — count article-level mentions, show top 6 with bar chart
+  const vendorCounts = {};
+  TRACKED_VENDORS.forEach(v => {
+    const n = articles.filter(a =>
+      [a.title, a.summary, a.source].join(' ').toLowerCase().includes(v.toLowerCase())
+    ).length;
+    if (n > 0) vendorCounts[v] = n;
+  });
+  const topVendors = Object.entries(vendorCounts).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  const maxV = topVendors[0]?.[1] || 1;
+  const vendorRows = topVendors.length
+    ? topVendors.map(([v, n]) =>
+        `<div class="intel-vendor-item">` +
+        `<span class="intel-vendor-name">${esc(v)}</span>` +
+        `<div class="intel-vendor-bar-wrap"><div class="intel-vendor-bar" style="width:${Math.round((n/maxV)*100)}%"></div></div>` +
+        `<span class="intel-vendor-count">${n}</span></div>`
+      ).join('')
+    : '<p style="color:var(--muted);font-size:0.8rem;padding:0.25rem 0">No vendor mentions today</p>';
+
+  // Trending Terms — count occurrences across all article text
+  const allText = articles.map(a => [a.title, a.summary].join(' ')).join(' ').toLowerCase();
+  const termCounts = TRENDING_TERMS
+    .map(term => ({ term, count: (allText.match(new RegExp(term.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length }))
+    .filter(t => t.count > 0)
+    .sort((a, b) => b.count - a.count);
+  const maxT = termCounts[0]?.count || 1;
+  const termTags = termCounts.slice(0, 14)
+    .map(({ term, count }) => `<span class="intel-term${count >= maxT * 0.4 ? ' hot' : ''}">${esc(term)}</span>`)
+    .join('') || '<span style="color:var(--muted);font-size:0.8rem">Scanning…</span>';
+
+  return `
+  <div class="intel-widget">
+    <div class="intel-widget-title">Today's Topics</div>
+    ${topicRows}
+  </div>
+  <div class="intel-widget">
+    <div class="intel-widget-title">Top Vendors</div>
+    ${vendorRows}
+  </div>
+  <div class="intel-widget">
+    <div class="intel-widget-title">Trending Terms</div>
+    <div class="intel-term-list">${termTags}</div>
+  </div>`;
+}
 
 // ── Vendor Radar ──────────────────────────────────────────────────────────────
 const TRACKED_VENDORS = [
@@ -97,6 +176,8 @@ PREFERRED SOURCES — weight these heavily:
 - MLOps/AIOps practitioners: ML Ops Community (mlops.community), The New Stack, Honeycomb blog, Last9 blog, Chronosphere blog
 - Networking practitioners: Packet Pushers, Network World, SDxCentral, NANOG presentations/mailing list
 - Standards & open source: IETF working group drafts, OpenTelemetry, OpenConfig, CNCF project blogs
+- AI industry & policy: AI News (artificialintelligence-news.com), VentureBeat AI, MIT Technology Review, The Register, TechCrunch AI
+- Quality engineering blogs: Cloudflare Blog, Stripe Engineering, Netflix Tech Blog, Uber Engineering, AWS News Blog (for technically substantive posts)
 
 WHAT TO PRIORITIZE:
 - Research papers and technical write-ups with real depth
@@ -110,7 +191,9 @@ WHAT TO AVOID — these are common but low-quality sources for this audience:
 - Generic press releases with no technical substance ("Company X is excited to announce a partnership...")
 - Pure sales or analyst-summary content that recaps what vendors say about themselves
 - Any content that reads like it was written to rank in search rather than inform a practitioner
-- Articles older than 48 hours
+- Articles older than 72 hours
+
+NOTE on vendor/engineering blogs: blogs from engineering-led companies (Cloudflare, Stripe, Netflix, Uber, etc.) often publish genuinely substantive technical content — include these if they have real depth. Exclude vendor marketing blogs that only promote their own products without technical substance.
 
 Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly the requested number of items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
 - "title": concise, specific headline (avoid vague marketing language)
@@ -119,6 +202,7 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
 - "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
+- "tags": array of 3–5 short tags pulled directly from the article — company names, product names, or key technology terms (e.g. ["Cisco", "AIOps", "MCP"], ["Anthropic", "Claude", "Agents"])
 
 Aim for the full requested number of items. Search broadly across the preferred sources before concluding there isn't enough news.`;
 
@@ -141,6 +225,7 @@ function cardHtml(item) {
       </div>
       <h2>${esc(item.title)}</h2>
       <p class="card-summary">${esc(item.summary)}</p>
+      ${(item.tags && item.tags.length) ? `<div class="card-tags">${item.tags.map(t => `<span class="card-tag">${esc(t)}</span>`).join('')}</div>` : ''}
       <div class="card-footer">
         <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read more →</a>
         <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
@@ -163,7 +248,7 @@ async function fetchTopicNews(topic, attempt = 1) {
   try {
     let response = await client.messages.create({
       model: 'claude-haiku-4-5',
-      max_tokens: 700,
+      max_tokens: 1000,
       system: SYSTEM_PROMPT,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       messages,
@@ -186,7 +271,7 @@ async function fetchTopicNews(topic, attempt = 1) {
 
       response = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 700,
+        max_tokens: 1000,
         system: SYSTEM_PROMPT,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         messages,
@@ -196,8 +281,12 @@ async function fetchTopicNews(topic, attempt = 1) {
     let textBlock = response.content.find(b => b.type === 'text');
     if (!textBlock) throw new Error('No text block in final response');
 
+    // Strip markdown code fences the model sometimes wraps output in
+    const stripFences = t => t.trim().replace(/^```(?:json)?\s*/m, '').replace(/\s*```\s*$/m, '').trim();
+
     // If the model returned prose instead of JSON, send one follow-up to force output
-    if (!textBlock.text.includes('[')) {
+    const stripped = stripFences(textBlock.text);
+    if (!stripped.startsWith('[')) {
       messages.push({ role: 'assistant', content: response.content });
       messages.push({
         role: 'user',
@@ -205,7 +294,7 @@ async function fetchTopicNews(topic, attempt = 1) {
       });
       const forced = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 700,
+        max_tokens: 1000,
         system: SYSTEM_PROMPT,
         messages,
       });
@@ -213,8 +302,22 @@ async function fetchTopicNews(topic, attempt = 1) {
       if (!textBlock) throw new Error('No text block in forced JSON response');
     }
 
-    // Extract the JSON array from the text (model may include stray whitespace)
-    const jsonMatch = textBlock.text.match(/\[[\s\S]*\]/);
+    // Extract the JSON array, stripping any code fences and recovering truncated output
+    let text = stripFences(textBlock.text);
+    let jsonMatch = text.match(/\[[\s\S]*\]/);
+    if (!jsonMatch) {
+      // Truncated output — close the array after the last complete object
+      const lastClose = text.lastIndexOf('}');
+      if (lastClose !== -1 && text.includes('[')) {
+        try {
+          text = text.slice(0, lastClose + 1) + ']';
+          // Remove trailing comma before the synthetic ]
+          text = text.replace(/,\s*\]$/, ']');
+          jsonMatch = text.match(/\[[\s\S]*/);
+          if (jsonMatch) jsonMatch[0] = text.slice(text.indexOf('['));
+        } catch {}
+      }
+    }
     if (!jsonMatch) throw new Error(`No JSON array found. Raw: ${textBlock.text.slice(0, 200)}`);
 
     const items = JSON.parse(jsonMatch[0]);
@@ -286,8 +389,8 @@ async function main() {
   const podcastItems = rawItems.filter(i => i.topicLabel === 'Podcasts & Talks');
   const newsItems = rawItems.filter(i => i.topicLabel !== 'Podcasts & Talks');
 
-  // Cap main feed at 20 articles
-  const MAX_TOTAL = 20;
+  // Cap main feed at 25 articles
+  const MAX_TOTAL = 35;
   if (newsItems.length > MAX_TOTAL) newsItems.length = MAX_TOTAL;
   console.log(`News: ${newsItems.length}, Podcasts: ${podcastItems.length}`);
 
@@ -341,11 +444,14 @@ async function main() {
       : '';
 
     let html = template;
+    const topicCount = new Set(newsItems.map(i => i.topicLabel)).size;
     html = html.replace('<!--NEWS_CARDS-->', cardsHtml);
     html = html.replace(/<!--BUILD_DATE-->/g, buildDate);
     html = html.replace(/<!--ARTICLE_COUNT-->/g, String(newsItems.length));
+    html = html.replace(/<!--TOPIC_COUNT-->/g, String(topicCount));
     html = html.replace('<!--PODCAST_CARDS-->', podcastHtml);
     html = html.replace('<!--VENDOR_RADAR-->', vendorRadarHtml(newsItems));
+    html = html.replace('<!--INTELLIGENCE_PANEL-->', intelligencePanelHtml(newsItems));
     html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
     html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
     return html;
