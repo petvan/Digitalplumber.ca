@@ -123,10 +123,42 @@
   }
 
   /* ── SEARCH BAR ── */
+  /* ── HERO STATS ── */
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-sep { color: var(--border); }
+
+  .hero-stat-highlight {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .hero-stat-live {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .hero-stat-live-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
   .fetch-bar {
     display: flex;
     gap: 0.75rem;
-    max-width: 640px;
+    max-width: 460px;
     margin-bottom: 1rem;
   }
 
@@ -197,9 +229,7 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
-    padding: 0 2rem;
-    max-width: 960px;
-    margin: 2rem auto 1.25rem;
+    margin: 2rem 0 1.25rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -212,13 +242,41 @@
     background: var(--border);
   }
 
+  /* ── CONTENT LAYOUT (two-column on wide screens) ── */
+  .content-wrap {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .feed-col { min-width: 0; }
+
   /* ── NEWS GRID ── */
   .news-grid {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem 4rem;
     display: grid;
     gap: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  /* ── STATUS ── */
+  .status-bar {
+    padding: 0 0 2rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
   }
 
   /* ── CARD ── */
@@ -292,8 +350,40 @@
     font-size: 0.875rem;
     color: var(--muted);
     line-height: 1.65;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
+
+  /* ── CARD TAGS ── */
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .card-tag {
+    font-size: 0.65rem;
+    font-family: 'Space Mono', monospace;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* ── TOPIC ACCENT BORDERS (left inset shadow per topic) ── */
+  .card[data-topic="AI Ops & Observability"]    { box-shadow: inset 3px 0 0 #00c2ff; }
+  .card[data-topic="Agentic AI & MCP"]          { box-shadow: inset 3px 0 0 #7b5ea7; }
+  .card[data-topic="Network Automation"]        { box-shadow: inset 3px 0 0 #22c55e; }
+  .card[data-topic="Security Automation"]       { box-shadow: inset 3px 0 0 #f97316; }
+  .card[data-topic="AI Infrastructure"]         { box-shadow: inset 3px 0 0 #eab308; }
+  .card[data-topic="Research, Standards & Industry"] { box-shadow: inset 3px 0 0 #14b8a6; }
+  .card[data-topic="AI Model Providers"]        { box-shadow: inset 3px 0 0 #ec4899; }
+  .card[data-topic="AI Industry & Policy"]      { box-shadow: inset 3px 0 0 #3b82f6; }
 
   .card-footer {
     display: flex;
@@ -337,25 +427,6 @@
     50% { opacity: 0.3; }
   }
 
-  /* ── STATUS ── */
-  .status-bar {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem 2rem;
-    font-size: 0.8rem;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
   /* ── NO RESULTS ── */
   .no-results {
     text-align: center;
@@ -391,7 +462,7 @@
   /* ── SECTION NAV ── */
   .section-nav {
     position: sticky;
-    top: 100px; /* 36px scores + 64px header */
+    top: 100px;
     z-index: 90;
     background: rgba(10,12,16,0.92);
     backdrop-filter: blur(12px);
@@ -422,7 +493,7 @@
     cursor: pointer;
     transition: color 0.2s, border-color 0.2s;
     white-space: nowrap;
-    margin-bottom: -1px; /* overlap container border */
+    margin-bottom: -1px;
   }
 
   .section-nav-btn:hover { color: var(--text); }
@@ -438,7 +509,7 @@
     margin-left: 0.4rem;
   }
 
-  /* ── ARCHIVE NOTICE (shown on archive pages) ── */
+  /* ── ARCHIVE NOTICE ── */
   .archive-notice {
     background: rgba(123,94,167,0.12);
     border-bottom: 1px solid rgba(123,94,167,0.3);
@@ -507,68 +578,9 @@
     opacity: 0.7;
   }
 
-  /* ── VENDOR RADAR ── */
-  .vendor-radar {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem 3rem;
-  }
-
-  .vendor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 0.75rem;
-  }
-
-  .vendor-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1rem;
-    transition: border-color 0.2s;
-    text-decoration: none;
-    display: block;
-  }
-
-  .vendor-card.vendor-active:hover {
-    border-color: rgba(0,194,255,0.35);
-  }
-
-  .vendor-name {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.4rem;
-  }
-
-  .vendor-card.vendor-quiet .vendor-name { color: var(--muted); opacity: 0.5; }
-
-  .vendor-headline {
-    font-size: 0.78rem;
-    line-height: 1.4;
-    color: var(--text);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .vendor-card.vendor-quiet .vendor-headline { color: var(--muted); font-style: italic; }
-
-  .vendor-source {
-    font-size: 0.68rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
-  }
-
   /* ── PODCASTS & TALKS ── */
   .podcast-section {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem 4rem;
+    padding-bottom: 4rem;
   }
 
   .podcast-grid {
@@ -652,12 +664,114 @@
     padding: 1rem 0;
   }
 
-  @media (max-width: 600px) {
-    header { padding: 0 1rem; }
-    .hero { padding: 3rem 1rem 2rem; }
-    .news-grid, .section-label, .status-bar,
-    .vendor-radar, .podcast-section { padding-left: 1rem; padding-right: 1rem; }
-    .vendor-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  /* ── INTELLIGENCE PANEL ── */
+  .intel-panel {
+    position: sticky;
+    top: 145px; /* scores(36) + header(64) + section-nav(41) + gap */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .intel-widget {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+
+  .intel-widget-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .intel-topic-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.32rem 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: color 0.15s;
+    text-decoration: none;
+  }
+
+  .intel-topic-row:hover { color: var(--accent); }
+
+  .intel-topic-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    background: var(--tag-bg);
+    border: 1px solid rgba(0,194,255,0.15);
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .intel-vendor-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.32rem 0;
+  }
+
+  .intel-vendor-name {
+    font-size: 0.8rem;
+    color: var(--text);
+    min-width: 80px;
+  }
+
+  .intel-vendor-bar-wrap {
+    flex: 1;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .intel-vendor-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 2px;
+  }
+
+  .intel-vendor-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    min-width: 16px;
+    text-align: right;
+  }
+
+  .intel-term-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .intel-term {
+    font-size: 0.68rem;
+    font-family: 'Space Mono', monospace;
+    padding: 0.22rem 0.55rem;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    cursor: default;
+  }
+
+  .intel-term.hot {
+    background: var(--tag-bg);
+    border-color: rgba(0,194,255,0.3);
+    color: var(--accent);
   }
 
   /* ── SCORES BANNER ── */
@@ -751,6 +865,20 @@
     object-fit: contain;
     opacity: 0.85;
   }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1100px) {
+    .content-wrap {
+      grid-template-columns: 1fr;
+    }
+    .intel-panel { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 0 1rem; }
+    .hero { padding: 3rem 1rem 2rem; }
+    .content-wrap { padding: 0 1rem; }
+  }
 </style>
 </head>
 <body>
@@ -787,6 +915,16 @@
   <h1>Plumbing the<br><em>information age</em></h1>
   <p class="hero-sub">AI-summarized news and insights on networking, AI infrastructure, and the companies reshaping how data moves.</p>
 
+  <div class="hero-stats">
+    <span class="hero-stat-live"><span class="hero-stat-live-dot"></span> Live</span>
+    <span class="hero-stat-sep">·</span>
+    <span><span class="hero-stat-highlight"><!--ARTICLE_COUNT--></span> articles today</span>
+    <span class="hero-stat-sep">·</span>
+    <span><span class="hero-stat-highlight"><!--TOPIC_COUNT--></span> topics</span>
+    <span class="hero-stat-sep">·</span>
+    <span>Updated <!--BUILD_DATE--></span>
+  </div>
+
   <div class="fetch-bar">
     <input type="text" id="searchInput" placeholder="Filter articles…" oninput="filterSearch(this.value)" />
     <button class="btn-primary" onclick="filterSearch(document.getElementById('searchInput').value)">Search</button>
@@ -799,43 +937,59 @@
     <button class="topic-pill" onclick="filterTopic(this, 'Network Automation')">Network Automation</button>
     <button class="topic-pill" onclick="filterTopic(this, 'AI Infrastructure')">AI Infrastructure</button>
     <button class="topic-pill" onclick="filterTopic(this, 'Security Automation')">Security Automation</button>
+    <button class="topic-pill" onclick="filterTopic(this, 'AI Industry & Policy')">AI Industry &amp; Policy</button>
   </div>
 </section>
 
 <nav class="section-nav" id="sectionNav">
   <div class="section-nav-inner">
-    <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Daily Briefing<span class="nav-count"><!--ARTICLE_COUNT--></span></button>
+    <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Today's Briefing<span class="nav-count"><!--ARTICLE_COUNT--> Stories</span></button>
     <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
   </div>
 </nav>
 
-<div id="section-news">
-<p class="section-label">Daily Briefing · <!--BUILD_DATE--></p>
+<div class="content-wrap">
+  <div class="feed-col">
 
-<div class="status-bar">
-  <div class="status-dot"></div>
-  <span><!--ARTICLE_COUNT--> articles · AI-curated · Updated <!--BUILD_DATE--></span>
-</div>
+    <div id="section-news">
+      <p class="section-label">Daily Briefing · <!--BUILD_DATE--></p>
 
-<div class="news-grid" id="newsGrid">
-  <!--NEWS_CARDS-->
-</div>
+      <div class="status-bar">
+        <div class="status-dot"></div>
+        <span><!--ARTICLE_COUNT--> articles · AI-curated · Updated <!--BUILD_DATE--></span>
+      </div>
 
-<div class="no-results" id="noResults">
-  <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
-</div>
-</div><!-- /#section-news -->
+      <div class="news-grid" id="newsGrid">
+        <!--NEWS_CARDS-->
+      </div>
 
+      <div class="no-results" id="noResults">
+        <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
+      </div>
 
-<!-- PODCASTS & TALKS -->
-<div id="section-podcasts">
-<p class="section-label">Podcasts &amp; Talks · <!--BUILD_DATE--></p>
-<div class="podcast-section">
-  <div class="podcast-grid">
-    <!--PODCAST_CARDS-->
-  </div>
-</div>
-</div><!-- /#section-podcasts -->
+      <div id="archiveResults" style="display:none">
+        <p class="section-label" style="margin-top:2rem">From the Archive</p>
+        <div class="news-grid" id="archiveGrid"></div>
+      </div>
+    </div><!-- /#section-news -->
+
+    <!-- PODCASTS & TALKS -->
+    <div id="section-podcasts">
+      <p class="section-label">Podcasts &amp; Talks · <!--BUILD_DATE--></p>
+      <div class="podcast-section">
+        <div class="podcast-grid">
+          <!--PODCAST_CARDS-->
+        </div>
+      </div>
+    </div><!-- /#section-podcasts -->
+
+  </div><!-- /.feed-col -->
+
+  <aside class="intel-panel" id="intelPanel">
+    <!--INTELLIGENCE_PANEL-->
+  </aside>
+
+</div><!-- /.content-wrap -->
 
 <footer>
   <div class="footer-brand">
@@ -877,8 +1031,8 @@
         oppScore: opp.score,
         oppAbbr: opp.team.abbreviation,
         isHome,
-        statusName: status.name,       // 'STATUS_FINAL', 'STATUS_IN_PROGRESS', 'STATUS_SCHEDULED'
-        statusShort: status.shortDetail, // e.g. "Final", "Q3 4:22", "7:00 PM ET"
+        statusName: status.name,
+        statusShort: status.shortDetail,
       };
     } catch {
       return { name, emoji, offseason: true };
@@ -922,13 +1076,13 @@
   }
 
   loadScores();
-  setInterval(loadScores, 60000); // refresh every minute
+  setInterval(loadScores, 60000);
 
   // ── SECTION NAV ──
   function scrollToSection(id, btn) {
     const el = document.getElementById(id);
     if (!el) return;
-    const navOffset = 100 + 41; // scores + header + section-nav height
+    const navOffset = 100 + 41;
     const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
     window.scrollTo({ top, behavior: 'smooth' });
   }
@@ -970,6 +1124,17 @@
 
   // ── FILTER LOGIC ──
   let activeTopic = 'all';
+  let searchIndexCache = null;
+
+  async function loadSearchIndex() {
+    if (searchIndexCache) return searchIndexCache;
+    try {
+      const res = await fetch('/archives/search-index.json');
+      if (!res.ok) return [];
+      searchIndexCache = await res.json();
+    } catch { searchIndexCache = []; }
+    return searchIndexCache;
+  }
 
   function setActivePill(el) {
     document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
@@ -984,7 +1149,6 @@
   }
 
   function filterSearch(query) {
-    // Clear topic pill selection when searching
     if (query.trim()) {
       document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
       activeTopic = 'all';
@@ -1006,6 +1170,46 @@
 
     const noResults = document.getElementById('noResults');
     noResults.classList.toggle('visible', visibleCount === 0 && cards.length > 0);
+
+    // Archive search
+    const archiveSection = document.getElementById('archiveResults');
+    const archiveGrid = document.getElementById('archiveGrid');
+    if (!searchQuery) {
+      archiveSection.style.display = 'none';
+      archiveGrid.innerHTML = '';
+      return;
+    }
+    loadSearchIndex().then(index => {
+      // Exclude today's date (already shown in main grid)
+      const todayDate = window.__buildDate;
+      const hits = index.filter(a => {
+        if (a.date === todayDate) return false;
+        return [a.title, a.summary, a.source].join(' ').toLowerCase().includes(searchQuery);
+      });
+      if (hits.length === 0) {
+        archiveSection.style.display = 'none';
+        archiveGrid.innerHTML = '';
+        return;
+      }
+      archiveGrid.innerHTML = hits.map(a => `
+        <div class="card" data-topic="${escHtml(a.topic)}">
+          <div class="card-meta">
+            <span class="source-tag">${escHtml(a.source)}</span>
+            <span class="card-date">${escHtml(a.dateLabel)}</span>
+            <span class="card-category">${escHtml(a.topic)}</span>
+          </div>
+          <h2>${escHtml(a.title)}</h2>
+          <p class="card-summary">${escHtml(a.summary)}</p>
+          <div class="card-footer">
+            <a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>
+          </div>
+        </div>`).join('');
+      archiveSection.style.display = '';
+    });
+  }
+
+  function escHtml(str) {
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   function resetFilter() {

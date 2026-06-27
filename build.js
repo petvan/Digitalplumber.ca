@@ -428,6 +428,30 @@ async function main() {
   archives = archives.slice(0, 30);
   fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
+  // ── Build / update search index ────────────────────────────────────────────
+  const searchIndexPath = path.join(archivesDir, 'search-index.json');
+  let searchIndex = [];
+  if (fs.existsSync(searchIndexPath)) {
+    try { searchIndex = JSON.parse(fs.readFileSync(searchIndexPath, 'utf8')); } catch {}
+  }
+  searchIndex = searchIndex.filter(a => a.date !== dateStr);
+  const todayEntries = newsItems.map(item => ({
+    date: dateStr,
+    dateLabel: buildDate,
+    title: item.title,
+    summary: item.summary,
+    source: item.source,
+    url: item.url,
+    topic: item.topicLabel,
+    tags: item.tags || [],
+  }));
+  searchIndex = [...todayEntries, ...searchIndex];
+  // Keep 30 days × ~35 articles max
+  const keepDates = new Set(archives.map(a => a.date));
+  searchIndex = searchIndex.filter(a => keepDates.has(a.date));
+  fs.writeFileSync(searchIndexPath, JSON.stringify(searchIndex), 'utf8');
+  console.log(`✓ archives/search-index.json written (${searchIndex.length} total articles)`);
+
   // ── Build the page HTML (shared by index.html and archive) ────────────────
   function buildHtml(template, { isArchive = false } = {}) {
     const cardsHtml = newsItems.length > 0
@@ -438,7 +462,7 @@ async function main() {
       ? podcastItems.map(podcastCardHtml).join('\n')
       : '<p class="no-podcast">No podcast or talk summaries today — check back tomorrow.</p>';
 
-    const archiveListScript = `<script>window.__archives=${JSON.stringify(archives)};</script>`;
+    const archiveListScript = `<script>window.__archives=${JSON.stringify(archives)};window.__buildDate=${JSON.stringify(dateStr)};</script>`;
     const archiveBanner = isArchive
       ? `<div class="archive-notice">You're viewing the archive for ${esc(buildDate)}. <a href="/">← Back to today</a></div>`
       : '';
