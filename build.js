@@ -250,7 +250,7 @@ async function fetchTopicNews(topic, attempt = 1) {
       model: 'claude-haiku-4-5',
       max_tokens: 1000,
       system: SYSTEM_PROMPT,
-      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+      tools: [{ type: 'web_search_20260209', name: 'web_search' }],
       messages,
     });
 
@@ -273,7 +273,7 @@ async function fetchTopicNews(topic, attempt = 1) {
         model: 'claude-haiku-4-5',
         max_tokens: 1000,
         system: SYSTEM_PROMPT,
-        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        tools: [{ type: 'web_search_20260209', name: 'web_search' }],
         messages,
       });
     }
