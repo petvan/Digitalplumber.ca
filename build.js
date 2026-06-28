@@ -342,6 +342,9 @@ async function fetchTopicNews(topic, attempt = 1) {
     if (err.status) console.error(`      HTTP status: ${err.status}`);
     if (err.error) console.error(`      API error body: ${JSON.stringify(err.error)}`);
     if (err.cause) console.error(`      Cause: ${err.cause.code || ''} ${err.cause.message || err.cause}`);
+    // Dump full error object keys for debugging
+    console.error(`      Error keys: ${Object.keys(err).join(', ')}`);
+    try { console.error(`      Full error: ${JSON.stringify(err, Object.getOwnPropertyNames(err))}`); } catch {}
     return [];
   }
 }
