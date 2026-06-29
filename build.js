@@ -245,8 +245,23 @@ async function fetchTopicNews(topic, attempt = 1) {
     content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last 72 hours) about: ${topic.query} after:${cutoff}`
   }];
 
+  const apiCall = async (body) => {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    const json = await res.json();
+    if (!res.ok) throw Object.assign(new Error(json?.error?.message || `HTTP ${res.status}`), { status: res.status, error: json?.error });
+    return json;
+  };
+
   try {
-    let response = await client.messages.create({
+    let response = await apiCall({
       model: 'claude-haiku-4-5',
       max_tokens: 4096,
       system: SYSTEM_PROMPT,
@@ -254,22 +269,17 @@ async function fetchTopicNews(topic, attempt = 1) {
       messages,
     });
 
-    // Handle multi-turn: model may call web_search one or more times
-    // before producing the final text response.
+    // With server-side web_search the API handles tool execution and returns
+    // end_turn directly. The loop is a safety net for unexpected tool_use stops.
     let iterations = 0;
     while (response.stop_reason === 'tool_use' && iterations < 2) {
       iterations++;
       messages.push({ role: 'assistant', content: response.content });
-
-      // Return empty tool_result for each tool_use block (Anthropic executes
-      // web_search server-side; we just need to acknowledge).
       const toolResults = response.content
         .filter(b => b.type === 'tool_use')
         .map(b => ({ type: 'tool_result', tool_use_id: b.id, content: '' }));
-
       messages.push({ role: 'user', content: toolResults });
-
-      response = await client.messages.create({
+      response = await apiCall({
         model: 'claude-haiku-4-5',
         max_tokens: 4096,
         system: SYSTEM_PROMPT,
@@ -292,7 +302,7 @@ async function fetchTopicNews(topic, attempt = 1) {
         role: 'user',
         content: 'Return ONLY the JSON array now — no prose, no explanation, no markdown fences. Just the raw JSON array of the articles you found, or [] if none qualify.'
       });
-      const forced = await client.messages.create({
+      const forced = await apiCall({
         model: 'claude-haiku-4-5',
         max_tokens: 4096,
         system: SYSTEM_PROMPT,
