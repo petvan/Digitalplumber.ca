@@ -373,6 +373,28 @@ async function main() {
 
   console.log('digitalplumber.ca — Daily build starting…\n');
 
+  // Quick raw-fetch diagnostic to see actual API error body
+  try {
+    const diagRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5',
+        max_tokens: 100,
+        messages: [{ role: 'user', content: 'hi' }],
+        tools: [{ type: 'web_search_20260209', name: 'web_search' }],
+      }),
+    });
+    const diagText = await diagRes.text();
+    console.log(`  Diagnostic: HTTP ${diagRes.status} — ${diagText.slice(0, 500)}\n`);
+  } catch (e) {
+    console.log(`  Diagnostic fetch error: ${e.message}\n`);
+  }
+
   // Fetch all topics (sequentially to avoid rate limits)
   const rawItems = [];
   for (const topic of TOPICS) {
