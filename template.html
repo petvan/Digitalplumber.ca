@@ -66,21 +66,38 @@
 
   .logo-text span { color: var(--accent); }
 
-  nav { display: flex; gap: 1.5rem; align-items: center; }
+  nav { display: flex; gap: 0.25rem; align-items: center; }
 
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    transition: color 0.2s;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    margin-right: 0.75rem;
   }
 
-  nav a:hover { color: var(--text); }
+  .nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 0.65rem;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+
+  .nav-link.active {
+    color: var(--accent);
+    background: var(--tag-bg);
+  }
+
+  @media (max-width: 900px) { .nav-links { display: none; } }
 
   /* ── HERO ── */
   .hero {
-    padding: 1.75rem 2rem 1rem;
+    padding: 2.5rem 2rem 1rem;
     max-width: 960px;
     margin: 0 auto;
   }
@@ -155,45 +172,65 @@
     animation: pulse 2s ease-in-out infinite;
   }
 
-  .fetch-bar {
-    display: flex;
-    gap: 0.75rem;
-    max-width: 460px;
-    margin-bottom: 1rem;
+  /* ── PROMINENT SEARCH ── */
+  .search-hero {
+    margin-bottom: 1.5rem;
   }
 
-  .fetch-bar input {
-    flex: 1;
+  .search-hero-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 0 1.1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    max-width: 640px;
+  }
+
+  .search-hero-wrap:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,194,255,0.12);
+  }
+
+  .search-hero-icon {
+    color: var(--muted);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .search-hero-wrap input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 1rem 0;
     color: var(--text);
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s;
+    min-width: 0;
   }
 
-  .fetch-bar input:focus { border-color: var(--accent); }
-  .fetch-bar input::placeholder { color: var(--muted); }
+  .search-hero-wrap input::placeholder { color: var(--muted); }
 
-  .btn-primary {
-    background: var(--accent);
-    color: #000;
-    border: none;
-    border-radius: 8px;
-    padding: 0.75rem 1.4rem;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
+  .search-kbd {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.15rem 0.4rem;
+    flex-shrink: 0;
     white-space: nowrap;
-    transition: opacity 0.2s, transform 0.1s;
   }
 
-  .btn-primary:hover { opacity: 0.88; }
-  .btn-primary:active { transform: scale(0.97); }
+  @media (max-width: 600px) { .search-kbd { display: none; } }
+
+  /* keep old .fetch-bar for archive pages that still use it */
+  .fetch-bar { display: none; }
 
   /* ── TOPIC PILLS ── */
   .topics {
@@ -225,10 +262,11 @@
   /* ── DIVIDER ── */
   .section-label {
     font-family: 'Space Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: var(--text);
+    font-weight: 700;
     margin: 2rem 0 1.25rem;
     display: flex;
     align-items: center;
@@ -328,21 +366,58 @@
     text-transform: uppercase;
   }
 
-  .card-date { font-size: 0.75rem; color: var(--muted); }
-
-  .card-category {
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: var(--accent2);
-    margin-left: auto;
+  .source-favicon {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    object-fit: contain;
   }
 
+  .card-date {
+    font-size: 0.72rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .card-date::before {
+    content: '';
+    display: inline-block;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .card-category {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    margin-left: auto;
+    color: var(--muted);
+  }
+
+  .card-category[data-cat="Research"]       { color: #14b8a6; border-color: rgba(20,184,166,0.3); background: rgba(20,184,166,0.06); }
+  .card-category[data-cat="Product Launch"] { color: #00c2ff; border-color: rgba(0,194,255,0.3);  background: rgba(0,194,255,0.06); }
+  .card-category[data-cat="Industry Trend"] { color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.06); }
+  .card-category[data-cat="Standards"]      { color: #22c55e; border-color: rgba(34,197,94,0.3);  background: rgba(34,197,94,0.06); }
+  .card-category[data-cat="Acquisition"]    { color: #f97316; border-color: rgba(249,115,22,0.3); background: rgba(249,115,22,0.06); }
+  .card-category[data-cat="Opinion"]        { color: #eab308; border-color: rgba(234,179,8,0.3);  background: rgba(234,179,8,0.06); }
+  .card-category[data-cat="Community"]      { color: #ec4899; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.06); }
+
   .card h2 {
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1.4;
-    margin-bottom: 0.6rem;
+    font-size: 1.12rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+    margin-bottom: 0.55rem;
     color: var(--text);
   }
 
@@ -355,6 +430,12 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .card-read-time {
+    font-size: 0.68rem;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
   }
 
   /* ── CARD TAGS ── */
@@ -866,18 +947,87 @@
     opacity: 0.85;
   }
 
+  /* ── ABOUT MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.72);
+    backdrop-filter: blur(6px);
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 2.25rem;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+  }
+
+  .modal-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .modal-body {
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+
+  .modal-body p + p { margin-top: 0.75rem; }
+  .modal-body strong { color: var(--text); }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    line-height: 1;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .modal-close:hover { color: var(--text); border-color: var(--accent); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1100px) {
-    .content-wrap {
-      grid-template-columns: 1fr;
-    }
+    .content-wrap { grid-template-columns: 1fr; }
     .intel-panel { display: none; }
   }
 
   @media (max-width: 600px) {
-    header { padding: 0 1rem; }
-    .hero { padding: 3rem 1rem 2rem; }
+    header { padding: 0 1rem; height: 56px; }
+    .hero { padding: 1.75rem 1rem 1rem; }
     .content-wrap { padding: 0 1rem; }
+    .card { padding: 1.1rem 1rem; }
+    .card h2 { font-size: 1rem; }
+    .card-summary { -webkit-line-clamp: 2; }
+    .topic-pill { padding: 0.5rem 0.9rem; min-height: 40px; }
+    .search-hero-wrap { border-radius: 10px; }
   }
 </style>
 </head>
@@ -903,6 +1053,15 @@
     <span class="logo-text">digital<span>plumber</span>.ca</span>
   </a>
   <nav>
+    <div class="nav-links">
+      <a class="nav-link" href="#" onclick="navFilter(this,'AI Ops & Observability');return false">AI Ops</a>
+      <a class="nav-link" href="#" onclick="navFilter(this,'Network Automation');return false">Networking</a>
+      <a class="nav-link" href="#" onclick="navFilter(this,'Agentic AI & MCP');return false">Agentic AI</a>
+      <a class="nav-link" href="#" onclick="navFilter(this,'Security Automation');return false">Security</a>
+      <a class="nav-link" href="#" onclick="navFilter(this,'Research, Standards & Industry');return false">Research</a>
+      <a class="nav-link" href="#" onclick="navFilter(this,'__vendors');return false">Vendors</a>
+      <a class="nav-link" href="#" onclick="openAbout();return false">About</a>
+    </div>
     <div class="archive-nav">
       <button class="archive-btn" onclick="toggleArchiveMenu(this)">Archives ▾</button>
       <div class="archive-menu" id="archiveMenu"></div>
@@ -910,10 +1069,31 @@
   </nav>
 </header>
 
+<!-- About modal -->
+<div class="modal-overlay" id="aboutModal" onclick="if(event.target===this)closeAbout()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeAbout()">✕</button>
+    <p class="modal-eyebrow">About this site</p>
+    <h2 class="modal-title">Digital Plumber</h2>
+    <div class="modal-body">
+      <p><strong>Digital Plumber</strong> is an independent daily intelligence briefing for network and IT operations practitioners — senior network engineers, NetDevOps leads, AIOps architects, and the teams keeping infrastructure running.</p>
+      <p>Every morning, an AI agent searches the web across dozens of sources and curates the most substantive developments across AI Ops, network automation, agentic AI, security, research, and vendor news. Summaries are written for practitioners, not marketers.</p>
+      <p>Built and maintained by <strong>Peter Van Oene</strong>. Content is AI-curated and AI-summarized — always verify before acting on anything here.</p>
+    </div>
+  </div>
+</div>
+
 <section class="hero">
   <p class="hero-eyebrow">AI Networking Intelligence</p>
   <h1>Plumbing the<br><em>information age</em></h1>
-  <p class="hero-sub">AI-summarized news and insights on networking, AI infrastructure, and the companies reshaping how data moves.</p>
+
+  <div class="search-hero">
+    <div class="search-hero-wrap">
+      <span class="search-hero-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Search AI Ops, networking, vendors, research…" oninput="filterSearch(this.value)" />
+      <span class="search-kbd">⌘K</span>
+    </div>
+  </div>
 
   <div class="hero-stats">
     <span class="hero-stat-live"><span class="hero-stat-live-dot"></span> Live</span>
@@ -923,11 +1103,6 @@
     <span><span class="hero-stat-highlight"><!--TOPIC_COUNT--></span> topics</span>
     <span class="hero-stat-sep">·</span>
     <span>Updated <!--BUILD_DATE--></span>
-  </div>
-
-  <div class="fetch-bar">
-    <input type="text" id="searchInput" placeholder="Filter articles…" oninput="filterSearch(this.value)" />
-    <button class="btn-primary" onclick="filterSearch(document.getElementById('searchInput').value)">Search</button>
   </div>
 
   <div class="topics" id="topicPills">
@@ -1122,6 +1297,42 @@
     }
   }
 
+  // ── ABOUT MODAL ──
+  function openAbout() {
+    document.getElementById('aboutModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAbout() {
+    document.getElementById('aboutModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
+
+  // ── ⌘K / Ctrl+K SEARCH SHORTCUT ──
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      document.getElementById('searchInput').focus();
+      document.getElementById('searchInput').select();
+    }
+  });
+
+  // ── NAV FILTER (header links) ──
+  function navFilter(el, topic) {
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+    if (topic === '__vendors') {
+      // reset topic filter and scroll to Intel Panel
+      el.classList.add('active');
+      filterTopic(null, 'all');
+      const panel = document.getElementById('intelPanel');
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    el.classList.add('active');
+    filterTopic(null, topic);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   // ── FILTER LOGIC ──
   let activeTopic = 'all';
   let searchIndexCache = null;
@@ -1145,12 +1356,19 @@
     activeTopic = topic;
     setActivePill(el);
     document.getElementById('searchInput').value = '';
+    // sync nav link active state
+    document.querySelectorAll('.nav-link').forEach(a => {
+      const t = a.getAttribute('onclick') || '';
+      const match = t.includes(`'${topic}'`) || t.includes(`"${topic}"`);
+      a.classList.toggle('active', match && topic !== 'all');
+    });
     applyFilters();
   }
 
   function filterSearch(query) {
     if (query.trim()) {
       document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
       activeTopic = 'all';
     }
     applyFilters(query.trim().toLowerCase());

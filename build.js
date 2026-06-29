@@ -216,19 +216,23 @@ function esc(str) {
 }
 
 function cardHtml(item) {
+  const domain = (() => { try { return new URL(item.url).hostname.replace(/^www\./, ''); } catch { return ''; } })();
+  const readMins = Math.max(1, Math.round(String(item.summary || '').split(/\s+/).length / 35));
+  const faviconUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=32` : '';
   return `
     <div class="card" data-topic="${esc(item.topicLabel)}">
       <div class="card-meta">
+        ${faviconUrl ? `<img class="source-favicon" src="${faviconUrl}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
         <span class="source-tag">${esc(item.source)}</span>
         <span class="card-date">${esc(item.date)}</span>
-        <span class="card-category">${esc(item.category)}</span>
+        <span class="card-category" data-cat="${esc(item.category)}">${esc(item.category)}</span>
       </div>
       <h2>${esc(item.title)}</h2>
       <p class="card-summary">${esc(item.summary)}</p>
       ${(item.tags && item.tags.length) ? `<div class="card-tags">${item.tags.map(t => `<span class="card-tag">${esc(t)}</span>`).join('')}</div>` : ''}
       <div class="card-footer">
         <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read more →</a>
-        <span class="ai-badge"><span class="ai-dot"></span> AI-summarized</span>
+        <span class="card-read-time">${readMins} min read</span>
       </div>
     </div>`;
 }
