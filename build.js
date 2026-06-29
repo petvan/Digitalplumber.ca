@@ -373,7 +373,7 @@ async function main() {
 
   console.log('digitalplumber.ca — Daily build starting…\n');
 
-  // Quick raw-fetch diagnostic to see actual API error body
+  // Raw-fetch diagnostic that actually triggers web search
   try {
     const diagRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -384,13 +384,13 @@ async function main() {
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5',
-        max_tokens: 100,
-        messages: [{ role: 'user', content: 'hi' }],
+        max_tokens: 4096,
+        messages: [{ role: 'user', content: 'Search the web for latest AI networking news today. Return one sentence.' }],
         tools: [{ type: 'web_search_20250305', name: 'web_search', allowed_callers: ['direct'] }],
       }),
     });
     const diagText = await diagRes.text();
-    console.log(`  Diagnostic: HTTP ${diagRes.status} — ${diagText.slice(0, 500)}\n`);
+    console.log(`  Diagnostic: HTTP ${diagRes.status} — ${diagText.slice(0, 800)}\n`);
   } catch (e) {
     console.log(`  Diagnostic fetch error: ${e.message}\n`);
   }
