@@ -248,9 +248,9 @@ async function fetchTopicNews(topic, attempt = 1) {
   try {
     let response = await client.messages.create({
       model: 'claude-haiku-4-5',
-      max_tokens: 1000,
+      max_tokens: 4096,
       system: SYSTEM_PROMPT,
-      tools: [{ type: 'web_search_20260209', name: 'web_search', allowed_callers: ['direct'] }],
+      tools: [{ type: 'web_search_20250305', name: 'web_search', allowed_callers: ['direct'] }],
       messages,
     });
 
@@ -271,9 +271,9 @@ async function fetchTopicNews(topic, attempt = 1) {
 
       response = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 1000,
+        max_tokens: 4096,
         system: SYSTEM_PROMPT,
-        tools: [{ type: 'web_search_20260209', name: 'web_search', allowed_callers: ['direct'] }],
+        tools: [{ type: 'web_search_20250305', name: 'web_search', allowed_callers: ['direct'] }],
         messages,
       });
     }
@@ -294,7 +294,7 @@ async function fetchTopicNews(topic, attempt = 1) {
       });
       const forced = await client.messages.create({
         model: 'claude-haiku-4-5',
-        max_tokens: 1000,
+        max_tokens: 4096,
         system: SYSTEM_PROMPT,
         messages,
       });
@@ -386,7 +386,7 @@ async function main() {
         model: 'claude-haiku-4-5',
         max_tokens: 100,
         messages: [{ role: 'user', content: 'hi' }],
-        tools: [{ type: 'web_search_20260209', name: 'web_search', allowed_callers: ['direct'] }],
+        tools: [{ type: 'web_search_20250305', name: 'web_search', allowed_callers: ['direct'] }],
       }),
     });
     const diagText = await diagRes.text();
