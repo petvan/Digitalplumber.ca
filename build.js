@@ -506,6 +506,15 @@ async function main() {
       ? `<div class="archive-notice">You're viewing the archive for ${esc(buildDate)}. <a href="/">← Back to today</a></div>`
       : '';
 
+    // Meta description: up to 3 headline fragments, capped at 155 chars
+    const topTitles = newsItems.slice(0, 3).map(i => i.title.replace(/"/g, "'"));
+    let metaDesc = `Daily AI-curated briefing for network engineers. Today: ${topTitles.join(' · ')}`;
+    if (metaDesc.length > 155) metaDesc = metaDesc.slice(0, 152) + '…';
+
+    const canonicalUrl = isArchive
+      ? `https://digitalplumber.ca/archives/${dateStr}.html`
+      : 'https://digitalplumber.ca/';
+
     let html = template;
     const topicCount = new Set(newsItems.map(i => i.topicLabel)).size;
     html = html.replace('<!--NEWS_CARDS-->', cardsHtml);
@@ -517,6 +526,8 @@ async function main() {
     html = html.replace('<!--INTELLIGENCE_PANEL-->', intelligencePanelHtml(newsItems));
     html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
     html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
+    html = html.replace(/<!--META_DESCRIPTION-->/g, metaDesc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'));
+    html = html.replace(/<!--CANONICAL_URL-->/g, canonicalUrl);
     return html;
   }
 
@@ -530,6 +541,28 @@ async function main() {
   const archiveHtmlPath = path.join(archivesDir, `${dateStr}.html`);
   fs.writeFileSync(archiveHtmlPath, buildHtml(template, { isArchive: true }), 'utf8');
   console.log(`✓ archives/${dateStr}.html written`);
+
+  // Write sitemap.xml
+  const sitemapUrls = [
+    { loc: 'https://digitalplumber.ca/', lastmod: dateStr, priority: '1.0', changefreq: 'daily' },
+    ...archives.map(a => ({
+      loc: `https://digitalplumber.ca/archives/${a.date}.html`,
+      lastmod: a.date,
+      priority: '0.6',
+      changefreq: 'never',
+    })),
+  ];
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
+  console.log(`✓ sitemap.xml written (${sitemapUrls.length} URLs)`);
 
   console.log(`\nDone! ${newsItems.length} articles + ${podcastItems.length} podcasts · ${buildDate}`);
 }
