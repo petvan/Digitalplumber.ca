@@ -18,6 +18,11 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 // maxItems per topic reflects editorial priority. Total possible ~30, trimmed to 20.
 const DEFAULT_MAX = 3;
 
+// Hard cutoff for article publication dates — the prompt asks for 72 hours,
+// with one extra day of slack for timezone/date ambiguity. Anything older
+// (or undated, or malformed) is dropped after fetch rather than trusted.
+const MAX_AGE_DAYS = 4;
+
 const TOPICS = [
   {
     label: 'AI Ops & Observability',
@@ -152,7 +157,7 @@ function vendorRadarHtml(articles) {
     <a class="vendor-card vendor-active" href="${esc(match.url)}" target="_blank" rel="noopener">
       <div class="vendor-name">${esc(vendor)}</div>
       <div class="vendor-headline">${esc(match.title)}</div>
-      <div class="vendor-source">${esc(match.source)} · ${esc(match.date)}</div>
+      <div class="vendor-source">${esc(match.source)} · ${esc(displayDate(match.date))}</div>
     </a>`;
     }
     return `
@@ -198,7 +203,7 @@ NOTE on vendor/engineering blogs: blogs from engineering-led companies (Cloudfla
 Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly the requested number of items if they exist — only return fewer if there genuinely are not enough qualifying articles after searching. Each item must have:
 - "title": concise, specific headline (avoid vague marketing language)
 - "source": the publication, blog, or outlet (e.g. "arXiv", "Packet Pushers", "The New Stack", "ML Ops Community", "Network World")
-- "date": the article date like "Jun 2026" or "May 2026"
+- "date": the article's exact publication date in ISO format "YYYY-MM-DD" (e.g. "2026-06-26"). If you cannot determine the exact publication date, exclude the article.
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
 - "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
 - "url": the actual source URL
@@ -215,6 +220,22 @@ function esc(str) {
   return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Valid ISO date, no older than MAX_AGE_DAYS, no more than a day in the future
+function isFreshIsoDate(dateStr) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(dateStr || ''))) return false;
+  const ageDays = (Date.now() - Date.parse(dateStr + 'T00:00:00Z')) / 86400000;
+  return ageDays <= MAX_AGE_DAYS && ageDays >= -1;
+}
+
+// "2026-06-26" → "Jun 26, 2026" for card display
+function displayDate(iso) {
+  const t = Date.parse(iso + 'T12:00:00Z');
+  if (isNaN(t)) return String(iso || '');
+  return new Date(t).toLocaleDateString('en-CA', {
+    month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC',
+  });
+}
+
 function cardHtml(item) {
   const domain = (() => { try { return new URL(item.url).hostname.replace(/^www\./, ''); } catch { return ''; } })();
   const readMins = Math.max(1, Math.round(String(item.summary || '').split(/\s+/).length / 35));
@@ -224,7 +245,7 @@ function cardHtml(item) {
       <div class="card-meta">
         ${faviconUrl ? `<img class="source-favicon" src="${faviconUrl}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
         <span class="source-tag">${esc(item.source)}</span>
-        <span class="card-date">${esc(item.date)}</span>
+        <span class="card-date">${esc(displayDate(item.date))}</span>
         <span class="card-category" data-cat="${esc(item.category)}">${esc(item.category)}</span>
       </div>
       <h2>${esc(item.title)}</h2>
@@ -334,8 +355,13 @@ async function fetchTopicNews(topic, attempt = 1) {
     }
     if (!jsonMatch) throw new Error(`No JSON array found. Raw: ${textBlock.text.slice(0, 200)}`);
 
-    const items = JSON.parse(jsonMatch[0]);
-    console.log(`    ✓ ${items.length} articles`);
+    const parsed = JSON.parse(jsonMatch[0]);
+    const items = parsed.filter(item => {
+      if (isFreshIsoDate(item.date)) return true;
+      console.warn(`    ⤫ Dropped stale/undated ("${item.date || 'no date'}"): ${stripCites(item.title).slice(0, 70)}`);
+      return false;
+    });
+    console.log(`    ✓ ${items.length} articles${parsed.length > items.length ? ` (${parsed.length - items.length} dropped by date filter)` : ''}`);
     return items.map(item => ({
       ...item,
       title:   stripCites(item.title),
@@ -369,7 +395,7 @@ function podcastCardHtml(item) {
     <div class="podcast-card">
       <div class="podcast-card-meta">
         <span class="podcast-source-tag">${esc(item.source)}</span>
-        <span class="podcast-date">${esc(item.date)}</span>
+        <span class="podcast-date">${esc(displayDate(item.date))}</span>
         <span class="podcast-category">${esc(item.category)}</span>
       </div>
       <h3>${esc(item.title)}</h3>
@@ -424,15 +450,6 @@ async function main() {
     process.exit(1);
   }
 
-  // Separate podcasts from main news feed
-  const podcastItems = rawItems.filter(i => i.topicLabel === 'Podcasts & Talks');
-  const newsItems = rawItems.filter(i => i.topicLabel !== 'Podcasts & Talks');
-
-  // Cap main feed at 25 articles
-  const MAX_TOTAL = 35;
-  if (newsItems.length > MAX_TOTAL) newsItems.length = MAX_TOTAL;
-  console.log(`News: ${newsItems.length}, Podcasts: ${podcastItems.length}`);
-
   // Build date string
   const now = new Date();
   const buildDate = now.toLocaleDateString('en-CA', {
@@ -446,6 +463,49 @@ async function main() {
   }).format(now);
   const dateStr = torDate; // en-CA gives YYYY-MM-DD natively
 
+  const archivesDir = path.join(__dirname, 'archives');
+  if (!fs.existsSync(archivesDir)) fs.mkdirSync(archivesDir);
+
+  const searchIndexPath = path.join(archivesDir, 'search-index.json');
+  let searchIndex = [];
+  if (fs.existsSync(searchIndexPath)) {
+    try { searchIndex = JSON.parse(fs.readFileSync(searchIndexPath, 'utf8')); } catch {}
+  }
+
+  // ── Dedupe: drop articles already published on a previous day, and repeats
+  // across topics within this run (re-runs on the same day are not blocked) ──
+  const priorUrls = new Set(searchIndex.filter(a => a.date !== dateStr).map(a => a.url));
+  const seenUrls = new Set();
+  const dedupedItems = rawItems.filter(item => {
+    if (priorUrls.has(item.url)) {
+      console.log(`  ⤫ Already ran on a previous day: ${item.title.slice(0, 70)}`);
+      return false;
+    }
+    if (seenUrls.has(item.url)) {
+      console.log(`  ⤫ Duplicate across topics: ${item.title.slice(0, 70)}`);
+      return false;
+    }
+    seenUrls.add(item.url);
+    return true;
+  });
+  if (dedupedItems.length < rawItems.length) {
+    console.log(`Deduped: ${rawItems.length} → ${dedupedItems.length}`);
+  }
+
+  if (dedupedItems.length === 0) {
+    console.error('All articles were duplicates. Aborting to preserve existing index.html.');
+    process.exit(1);
+  }
+
+  // Separate podcasts from main news feed
+  const podcastItems = dedupedItems.filter(i => i.topicLabel === 'Podcasts & Talks');
+  const newsItems = dedupedItems.filter(i => i.topicLabel !== 'Podcasts & Talks');
+
+  // Cap main feed at 25 articles
+  const MAX_TOTAL = 35;
+  if (newsItems.length > MAX_TOTAL) newsItems.length = MAX_TOTAL;
+  console.log(`News: ${newsItems.length}, Podcasts: ${podcastItems.length}`);
+
   // Read template
   const templatePath = path.join(__dirname, 'template.html');
   if (!fs.existsSync(templatePath)) {
@@ -454,9 +514,6 @@ async function main() {
   }
 
   // ── Load / update archives.json ────────────────────────────────────────────
-  const archivesDir = path.join(__dirname, 'archives');
-  if (!fs.existsSync(archivesDir)) fs.mkdirSync(archivesDir);
-
   const archivesJsonPath = path.join(archivesDir, 'index.json');
   let archives = [];
   if (fs.existsSync(archivesJsonPath)) {
@@ -467,16 +524,12 @@ async function main() {
   archives = archives.slice(0, 30);
   fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
-  // ── Build / update search index ────────────────────────────────────────────
-  const searchIndexPath = path.join(archivesDir, 'search-index.json');
-  let searchIndex = [];
-  if (fs.existsSync(searchIndexPath)) {
-    try { searchIndex = JSON.parse(fs.readFileSync(searchIndexPath, 'utf8')); } catch {}
-  }
+  // ── Build / update search index (loaded earlier, before dedupe) ───────────
   searchIndex = searchIndex.filter(a => a.date !== dateStr);
   const todayEntries = newsItems.map(item => ({
     date: dateStr,
     dateLabel: buildDate,
+    sourceDate: item.date,
     title: item.title,
     summary: item.summary,
     source: item.source,
