@@ -506,6 +506,49 @@
 
   .read-link:hover { gap: 0.55rem; }
 
+  /* ── EXPANDABLE DETAIL ── */
+  .read-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .card-detail {
+    display: none;
+    margin: 0.25rem 0 0.9rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .card-detail.open {
+    display: block;
+    animation: detailFade 0.25s ease;
+  }
+
+  .card-detail p { margin-bottom: 0.7rem; }
+
+  @keyframes detailFade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .source-link {
+    display: inline-block;
+    margin-top: 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .source-link:hover { text-decoration: underline; }
+
   .ai-badge {
     font-size: 0.68rem;
     color: var(--muted);
@@ -1437,8 +1480,14 @@
           </div>
           <h2>${escHtml(a.title)}</h2>
           <p class="card-summary">${escHtml(a.summary)}</p>
+          ${a.detail ? `<div class="card-detail">
+            ${String(a.detail).split(/\n\s*\n/).map(p => `<p>${escHtml(p.trim())}</p>`).join('')}
+            <a class="source-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read full article ↗</a>
+          </div>` : ''}
           <div class="card-footer">
-            <a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>
+            ${a.detail
+              ? `<button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>`
+              : `<a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>`}
           </div>
         </div>`).join('');
       archiveSection.style.display = '';
@@ -1447,6 +1496,16 @@
 
   function escHtml(str) {
     return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // Expand / collapse the in-card detail briefing
+  function toggleDetail(btn) {
+    const card = btn.closest('.card, .podcast-card');
+    const detail = card && card.querySelector('.card-detail');
+    if (!detail) return;
+    const open = detail.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Show less ↑' : 'Read more →';
   }
 
   function resetFilter() {

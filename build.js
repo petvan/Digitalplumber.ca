@@ -205,7 +205,8 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
 - "source": the publication, blog, or outlet (e.g. "arXiv", "Packet Pushers", "The New Stack", "ML Ops Community", "Network World")
 - "date": the article's exact publication date in ISO format "YYYY-MM-DD" (e.g. "2026-06-26"). If you cannot determine the exact publication date, exclude the article.
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
-- "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone.
+- "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone. This is the teaser shown on the card.
+- "detail": a longer 150-250 word briefing that expands on the summary so a reader gets the full gist WITHOUT leaving to read the source. Cover: what happened and the key specifics (numbers, versions, benchmark results, architectural choices), why it matters to a network/AIOps/SRE practitioner, and any notable caveats or context. Write 2-3 tight paragraphs of substance — no marketing tone, no filler, no restating the title. Base it only on what the source actually says; do not invent details.
 - "url": the actual source URL
 - "tags": array of 3–5 short tags pulled directly from the article — company names, product names, or key technology terms (e.g. ["Cisco", "AIOps", "MCP"], ["Anthropic", "Claude", "Agents"])
 
@@ -238,8 +239,13 @@ function displayDate(iso) {
 
 function cardHtml(item) {
   const domain = (() => { try { return new URL(item.url).hostname.replace(/^www\./, ''); } catch { return ''; } })();
-  const readMins = Math.max(1, Math.round(String(item.summary || '').split(/\s+/).length / 35));
+  const detail = stripCites(item.detail || '');
+  const readMins = Math.max(1, Math.round(String(detail || item.summary || '').split(/\s+/).length / 200));
   const faviconUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=32` : '';
+  // Split the detail into paragraphs on blank lines for readable expansion
+  const detailHtml = detail
+    ? detail.split(/\n\s*\n/).map(p => `<p>${esc(p.trim())}</p>`).join('')
+    : '';
   return `
     <div class="card" data-topic="${esc(item.topicLabel)}">
       <div class="card-meta">
@@ -251,8 +257,14 @@ function cardHtml(item) {
       <h2>${esc(item.title)}</h2>
       <p class="card-summary">${esc(item.summary)}</p>
       ${(item.tags && item.tags.length) ? `<div class="card-tags">${item.tags.map(t => `<span class="card-tag">${esc(t)}</span>`).join('')}</div>` : ''}
+      ${detailHtml ? `<div class="card-detail">
+        ${detailHtml}
+        <a class="source-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>` : ''}
       <div class="card-footer">
-        <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read more →</a>
+        ${detailHtml
+          ? `<button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>`
+          : `<a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read more →</a>`}
         <span class="card-read-time">${readMins} min read</span>
       </div>
     </div>`;
@@ -391,6 +403,10 @@ async function fetchTopicNews(topic, attempt = 1) {
 
 // ── Podcast card HTML ─────────────────────────────────────────────────────────
 function podcastCardHtml(item) {
+  const detail = stripCites(item.detail || '');
+  const detailHtml = detail
+    ? detail.split(/\n\s*\n/).map(p => `<p>${esc(p.trim())}</p>`).join('')
+    : '';
   return `
     <div class="podcast-card">
       <div class="podcast-card-meta">
@@ -400,7 +416,11 @@ function podcastCardHtml(item) {
       </div>
       <h3>${esc(item.title)}</h3>
       <p class="podcast-summary">${esc(item.summary)}</p>
-      <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Listen / Watch →</a>
+      ${detailHtml ? `<div class="card-detail">${detailHtml}</div>` : ''}
+      <div class="card-footer">
+        ${detailHtml ? `<button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>` : ''}
+        <a class="read-link" href="${esc(item.url)}" target="_blank" rel="noopener">Listen / Watch →</a>
+      </div>
     </div>`;
 }
 
@@ -532,6 +552,7 @@ async function main() {
     sourceDate: item.date,
     title: item.title,
     summary: item.summary,
+    detail: stripCites(item.detail || ''),
     source: item.source,
     url: item.url,
     topic: item.topicLabel,
@@ -620,7 +641,11 @@ ${sitemapUrls.map(u => `  <url>
   console.log(`\nDone! ${newsItems.length} articles + ${podcastItems.length} podcasts · ${buildDate}`);
 }
 
-main().catch(err => {
-  console.error('Build failed:', err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Build failed:', err);
+    process.exit(1);
+  });
+}
+
+module.exports = { cardHtml, podcastCardHtml };
