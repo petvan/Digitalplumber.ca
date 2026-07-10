@@ -4,26 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Plumber — AI Networking Intelligence</title>
-<meta name="description" content="Daily AI-curated briefing for network engineers. Today: Dynatrace open-sources dt-evals CLI toolkit for evaluating LLM and agent quality in production ·…">
+<meta name="description" content="Daily AI-curated briefing for network engineers. Today: Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Sched…">
 <link rel="canonical" href="https://digitalplumber.ca/archives/2026-07-10.html">
 
 <!-- Open Graph -->
 <meta property="og:type"        content="website">
 <meta property="og:site_name"   content="Digital Plumber">
 <meta property="og:title"       content="Digital Plumber — AI Networking Intelligence">
-<meta property="og:description" content="Daily AI-curated briefing for network engineers. Today: Dynatrace open-sources dt-evals CLI toolkit for evaluating LLM and agent quality in production ·…">
+<meta property="og:description" content="Daily AI-curated briefing for network engineers. Today: Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Sched…">
 <meta property="og:url"         content="https://digitalplumber.ca/archives/2026-07-10.html">
 
 <!-- Twitter Card -->
 <meta name="twitter:card"        content="summary">
 <meta name="twitter:title"       content="Digital Plumber — AI Networking Intelligence">
-<meta name="twitter:description" content="Daily AI-curated briefing for network engineers. Today: Dynatrace open-sources dt-evals CLI toolkit for evaluating LLM and agent quality in production ·…">
+<meta name="twitter:description" content="Daily AI-curated briefing for network engineers. Today: Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Sched…">
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<script>window.__archives=[{"date":"2026-07-10","label":"Jul 10, 2026","count":9},{"date":"2026-07-09","label":"Jul 9, 2026","count":10},{"date":"2026-07-08","label":"Jul 8, 2026","count":15},{"date":"2026-07-07","label":"Jul 7, 2026","count":9},{"date":"2026-07-06","label":"Jul 6, 2026","count":10},{"date":"2026-07-05","label":"Jul 5, 2026","count":27},{"date":"2026-07-04","label":"Jul 4, 2026","count":29},{"date":"2026-07-03","label":"Jul 3, 2026","count":32},{"date":"2026-07-02","label":"Jul 2, 2026","count":35},{"date":"2026-07-01","label":"Jul 1, 2026","count":20},{"date":"2026-06-30","label":"Jun 30, 2026","count":33},{"date":"2026-06-29","label":"Jun 29, 2026","count":35},{"date":"2026-06-24","label":"Jun 24, 2026","count":11},{"date":"2026-06-23","label":"Jun 23, 2026","count":14},{"date":"2026-06-22","label":"Jun 22, 2026","count":10},{"date":"2026-06-21","label":"Jun 21, 2026","count":17},{"date":"2026-06-20","label":"Jun 20, 2026","count":19},{"date":"2026-06-19","label":"Jun 19, 2026","count":11},{"date":"2026-06-18","label":"Jun 18, 2026","count":3},{"date":"2026-06-17","label":"Jun 17, 2026","count":4},{"date":"2026-06-16","label":"Jun 16, 2026","count":3},{"date":"2026-06-15","label":"Jun 15, 2026","count":4},{"date":"2026-06-14","label":"Jun 14, 2026","count":4},{"date":"2026-06-13","label":"Jun 13, 2026","count":7},{"date":"2026-06-12","label":"Jun 12, 2026","count":16},{"date":"2026-06-11","label":"Jun 11, 2026","count":19}];window.__buildDate="2026-07-10";</script>
+<script>window.__archives=[{"date":"2026-07-10","label":"Jul 10, 2026","count":8},{"date":"2026-07-09","label":"Jul 9, 2026","count":10},{"date":"2026-07-08","label":"Jul 8, 2026","count":15},{"date":"2026-07-07","label":"Jul 7, 2026","count":9},{"date":"2026-07-06","label":"Jul 6, 2026","count":10},{"date":"2026-07-05","label":"Jul 5, 2026","count":27},{"date":"2026-07-04","label":"Jul 4, 2026","count":29},{"date":"2026-07-03","label":"Jul 3, 2026","count":32},{"date":"2026-07-02","label":"Jul 2, 2026","count":35},{"date":"2026-07-01","label":"Jul 1, 2026","count":20},{"date":"2026-06-30","label":"Jun 30, 2026","count":33},{"date":"2026-06-29","label":"Jun 29, 2026","count":35},{"date":"2026-06-24","label":"Jun 24, 2026","count":11},{"date":"2026-06-23","label":"Jun 23, 2026","count":14},{"date":"2026-06-22","label":"Jun 22, 2026","count":10},{"date":"2026-06-21","label":"Jun 21, 2026","count":17},{"date":"2026-06-20","label":"Jun 20, 2026","count":19},{"date":"2026-06-19","label":"Jun 19, 2026","count":11},{"date":"2026-06-18","label":"Jun 18, 2026","count":3},{"date":"2026-06-17","label":"Jun 17, 2026","count":4},{"date":"2026-06-16","label":"Jun 16, 2026","count":3},{"date":"2026-06-15","label":"Jun 15, 2026","count":4},{"date":"2026-06-14","label":"Jun 14, 2026","count":4},{"date":"2026-06-13","label":"Jun 13, 2026","count":7},{"date":"2026-06-12","label":"Jun 12, 2026","count":16},{"date":"2026-06-11","label":"Jun 11, 2026","count":19}];window.__buildDate="2026-07-10";</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -505,6 +505,49 @@
   }
 
   .read-link:hover { gap: 0.55rem; }
+
+  /* ── EXPANDABLE DETAIL ── */
+  .read-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .card-detail {
+    display: none;
+    margin: 0.25rem 0 0.9rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .card-detail.open {
+    display: block;
+    animation: detailFade 0.25s ease;
+  }
+
+  .card-detail p { margin-bottom: 0.7rem; }
+
+  @keyframes detailFade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .source-link {
+    display: inline-block;
+    margin-top: 0.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .source-link:hover { text-decoration: underline; }
 
   .ai-badge {
     font-size: 0.68rem;
@@ -1117,9 +1160,9 @@
   <div class="hero-stats">
     <span class="hero-stat-live"><span class="hero-stat-live-dot"></span> Live</span>
     <span class="hero-stat-sep">·</span>
-    <span><span class="hero-stat-highlight">9</span> articles today</span>
+    <span><span class="hero-stat-highlight">8</span> articles today</span>
     <span class="hero-stat-sep">·</span>
-    <span><span class="hero-stat-highlight">6</span> topics</span>
+    <span><span class="hero-stat-highlight">5</span> topics</span>
     <span class="hero-stat-sep">·</span>
     <span>Updated Jul 10, 2026</span>
   </div>
@@ -1137,7 +1180,7 @@
 
 <nav class="section-nav" id="sectionNav">
   <div class="section-nav-inner">
-    <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Today's Briefing<span class="nav-count">9 Stories</span></button>
+    <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Today's Briefing<span class="nav-count">8 Stories</span></button>
     <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
   </div>
 </nav>
@@ -1150,43 +1193,11 @@
 
       <div class="status-bar">
         <div class="status-dot"></div>
-        <span>9 articles · AI-curated · Updated Jul 10, 2026</span>
+        <span>8 articles · AI-curated · Updated Jul 10, 2026</span>
       </div>
 
       <div class="news-grid" id="newsGrid">
         
-    <div class="card" data-topic="AI Ops &amp; Observability">
-      <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=community.dynatrace.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">Dynatrace Community</span>
-        <span class="card-date">Jul 10, 2026</span>
-        <span class="card-category" data-cat="Product Launch">Product Launch</span>
-      </div>
-      <h2>Dynatrace open-sources dt-evals CLI toolkit for evaluating LLM and agent quality in production</h2>
-      <p class="card-summary">Dynatrace released dt-evals, a CLI toolkit for evaluating LLM and agent quality using real GenAI traces within its AI Observability platform. The tool scores responses with LLM judges, sends results back as business events, and enables CI/CD quality gates—addressing a critical gap in AI workload observability as agentic systems move into production.</p>
-      <div class="card-tags"><span class="card-tag">Dynatrace</span><span class="card-tag">GenAI</span><span class="card-tag">AI Observability</span><span class="card-tag">LLM Evaluation</span></div>
-      <div class="card-footer">
-        <a class="read-link" href="https://community.dynatrace.com/t5/Community-news/The-Community-News-for-July-2026/ba-p/301622" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">1 min read</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Agentic AI &amp; MCP">
-      <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=adversa.ai&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">Adversa AI</span>
-        <span class="card-date">Jul 9, 2026</span>
-        <span class="card-category" data-cat="Industry Trend">Industry Trend</span>
-      </div>
-      <h2>MCP Security in July 2026: NSA Hardening Guidelines and Critical Vulnerabilities in Production Servers</h2>
-      <p class="card-summary">July 2026 exposed severe MCP security risks including NSA-issued hardening guidelines and critical auto-execution vulnerabilities in Amazon Q. Analysis of 10,000+ real-world servers found credentials, API keys, and PII leaking at rates exceeding 10%. ShareLock demonstrated multi-tool poisoning attacks using threshold secret-sharing logic with 90%+ success rates, proving context providers cannot be blindly trusted.</p>
-      <div class="card-tags"><span class="card-tag">MCP</span><span class="card-tag">Security</span><span class="card-tag">Amazon Q</span><span class="card-tag">CVE</span></div>
-      <div class="card-footer">
-        <a class="read-link" href="https://adversa.ai/blog/top-mcp-security-resources-july-2026/" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
-      </div>
-    </div>
-
     <div class="card" data-topic="Agentic AI &amp; MCP">
       <div class="card-meta">
         <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=linas.substack.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
@@ -1194,108 +1205,156 @@
         <span class="card-date">Jul 9, 2026</span>
         <span class="card-category" data-cat="Product Launch">Product Launch</span>
       </div>
-      <h2>Claude Managed Agents July 2026: Scheduled Deployments, Copied Architecture, Production Economics Verified</h2>
-      <p class="card-summary">Three months post-launch, Claude Managed Agents evolved dramatically with Memory, Multi-agent coordination, and Outcomes moving from research preview to public beta. Anthropic added scheduled deployments enabling autonomous workers that run on cron schedules, pull credentials independently, and report results. AWS and Google shipped near-identical managed harnesses within two weeks; production case study reached $10M annualized revenue on the agent stack.</p>
-      <div class="card-tags"><span class="card-tag">Anthropic</span><span class="card-tag">Claude</span><span class="card-tag">Agents</span><span class="card-tag">AWS</span><span class="card-tag">Google</span></div>
+      <h2>Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Scheduled Deployments Ship</h2>
+      <p class="card-summary">In three months since launch, Claude Managed Agents has changed dramatically: Memory, Multi-agent coordination, and Outcomes all quietly shipped to public beta, and Anthropic added scheduled deployments that turn agents into autonomous workers running on cron schedules. AWS and Google shipped near-identical managed harnesses two weeks after launch. As of July 9, 2026, most coverage from the April launch is now outdated, with major metrics not holding up under scrutiny.</p>
+      <div class="card-tags"><span class="card-tag">Claude</span><span class="card-tag">Managed Agents</span><span class="card-tag">Multi-Agent</span><span class="card-tag">Scheduling</span><span class="card-tag">Production</span></div>
+      <div class="card-detail">
+        <p>Research-preview features including memory, multi-agent coordination, and outcomes all shipped to public beta within three months. Scheduled deployments enable agents to run autonomously on cron schedules, pulling credentials and reporting autonomously. Agents connect via direct API calls, CLIs, and MCP. Environment variable vaults now support CLIs and tools making authenticated requests—agents never see the key because the sandbox holds a placeholder while the real key is attached at the network boundary. For AIOps/SRE leads, this maturation signals that agent infrastructure has moved from beta stability to production readiness with features like multi-agent coordination and scheduled execution that enable real operational workflows. One customer reported 3x revenue growth to $10M annualized on Anthropic's agent stack.</p>
+        <a class="source-link" href="https://linas.substack.com/p/claude-managed-agents-update" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
       <div class="card-footer">
-        <a class="read-link" href="https://linas.substack.com/p/claude-managed-agents-update" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
       </div>
     </div>
 
     <div class="card" data-topic="Agentic AI &amp; MCP">
       <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=openobserve.ai&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">OpenObserve</span>
-        <span class="card-date">Jul 9, 2026</span>
-        <span class="card-category" data-cat="Product Launch">Product Launch</span>
-      </div>
-      <h2>OpenObserve 2026: Three-Layer AI Stack (MCP, AI Assistant, SRE Agent) for Autonomous Incident Resolution</h2>
-      <p class="card-summary">AIOps platforms evolved from anomaly detection to autonomous healing in 2026. OpenObserve implements three-layer AI stack: MCP integration for tool connectivity, AI Assistant for reasoning, and O2 SRE Agent for automated root cause correlation across logs, metrics, traces. Full-fidelity telemetry with native OpenTelemetry support enables agents to resolve incidents automatically before human notice; platform provides complete visibility into AI reasoning chains.</p>
-      <div class="card-tags"><span class="card-tag">AIOps</span><span class="card-tag">OpenTelemetry</span><span class="card-tag">MCP</span><span class="card-tag">Observability</span></div>
-      <div class="card-footer">
-        <a class="read-link" href="https://openobserve.ai/blog/top-10-aiops-platforms/" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="Security Automation">
-      <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=versa-networks.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">Versa Networks Blog</span>
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=claude.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">Claude Blog</span>
         <span class="card-date">Jul 7, 2026</span>
         <span class="card-category" data-cat="Product Launch">Product Launch</span>
       </div>
-      <h2>Versa DLP and ATP for Email: Extending SASE Security to Email Layer</h2>
-      <p class="card-summary">Versa announced integration of Data Loss Prevention (DLP) and Advanced Threat Protection (ATP) capabilities directly into its VersaONE Universal SASE platform, closing visibility gaps in email security by correlating email threats with network, web, SaaS, and AI workload telemetry in a single dashboard. The unified approach eliminates silos, applies consistent policies across email and network layers, and provides comprehensive attack chain visibility without requiring separate email security tools.</p>
-      <div class="card-tags"><span class="card-tag">Versa</span><span class="card-tag">SASE</span><span class="card-tag">DLP</span><span class="card-tag">Email Security</span><span class="card-tag">Platform Convergence</span></div>
+      <h2>Claude Managed Agents Self-Hosted Sandboxes and MCP Tunnels Enable Enterprise Perimeter Security</h2>
+      <p class="card-summary">Claude Managed Agents now supports self-hosted sandboxes in public beta and MCP tunnels in research preview, allowing agent execution on customer infrastructure with credentials never leaving the sandbox. MCP tunnels enable agents to reach MCP servers inside private networks without exposing them to the public internet through lightweight gateways with encrypted end-to-end traffic.</p>
+      <div class="card-tags"><span class="card-tag">Claude</span><span class="card-tag">Managed Agents</span><span class="card-tag">Security</span><span class="card-tag">MCP Tunnels</span><span class="card-tag">Self-Hosted</span></div>
+      <div class="card-detail">
+        <p>With self-hosted sandboxes, organizations keep sensitive files, packages, and services in their own infrastructure or with managed providers like Cloudflare, Daytona, Modal, or Vercel. The agent loop handling orchestration, context management, and error recovery stays on Anthropic's infrastructure, while tool execution moves to customer-configured environments. Inside the perimeter, network policies, audit logging, and security tooling are already in place, and files don't leave the organization. Customers control compute: resource sizing and runtime images are set on their side, so agents running compute-heavy work get the CPU and memory needed. MCP tunnels enable agents to reach MCP servers inside private networks without exposing them to the public internet. A lightweight gateway deployed by the customer makes a single outbound connection with no inbound firewall rules, no public endpoints, and traffic encrypted end-to-end. For enterprise security and network operations teams, this addresses the critical blocker for production agent deployment: how to keep sensitive data and credentials within organizational boundaries while maintaining agent autonomy.</p>
+        <a class="source-link" href="https://claude.com/blog/claude-managed-agents-updates" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
       <div class="card-footer">
-        <a class="read-link" href="https://versa-networks.com/blog/extend-sase-dlp-atp-to-email/" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
       </div>
     </div>
 
-    <div class="card" data-topic="Research, Standards &amp; Industry">
+    <div class="card" data-topic="AI Infrastructure">
       <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=prnewswire.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">PRNewswire</span>
-        <span class="card-date">Jul 8, 2026</span>
-        <span class="card-category" data-cat="Product Launch">Product Launch</span>
-      </div>
-      <h2>Akeneo Introduces Agentic Ziggy: Agent Orchestration for Product Data Operations</h2>
-      <p class="card-summary">Akeneo announced Agentic Ziggy, an agentic UI layer embedded in Akeneo Product Cloud that orchestrates specialist agents for data modeling, schema mapping, enrichment, and continuous quality checks. The platform enables product data teams to manage fleets of agents that govern and enrich catalog data at scale while maintaining human control over decisions and strategy.</p>
-      <div class="card-tags"><span class="card-tag">Akeneo</span><span class="card-tag">Agentic AI</span><span class="card-tag">Product Experience Management</span></div>
-      <div class="card-footer">
-        <a class="read-link" href="https://www.prnewswire.com/news-releases/akeneo-introduces-the-first-truly-agentic-product-experience-platform-302819885.html" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
-      </div>
-    </div>
-
-    <div class="card" data-topic="AI Model Providers">
-      <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=techcrunch.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">TechCrunch</span>
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=sdxcentral.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">SDxCentral</span>
         <span class="card-date">Jul 9, 2026</span>
         <span class="card-category" data-cat="Product Launch">Product Launch</span>
       </div>
-      <h2>OpenAI launches GPT-5.6 family (Sol, Terra, Luna) with government approval after national security review</h2>
-      <p class="card-summary">OpenAI unveiled its newest family of models on July 9 with three variants: Sol (flagship for frontier reasoning and cybersecurity), Terra (mid-range, half the cost of GPT-5.5), and Luna (budget-friendly). Government approval followed technical review of the models' code-vulnerability capabilities. Sol achieves 2.8 points above Anthropic's Fable 5 on coding benchmarks while using less than half the tokens and costing roughly one-third less.</p>
-      <div class="card-tags"><span class="card-tag">OpenAI</span><span class="card-tag">GPT-5.6</span><span class="card-tag">Cybersecurity</span><span class="card-tag">Coding</span><span class="card-tag">Government Approval</span></div>
+      <h2>DriveNets Announces Industry's First Commercial Scale-Across AI Supercluster with 111.2 Tbps Cross-Data-Center AI Fabric</h2>
+      <p class="card-summary">DriveNets AI Fabric connects two WhiteFiber H200 GPU clusters located 52 miles apart into a single logical GPU supercluster, validated at 111.2 Tbps of bandwidth with 0.9ms of guaranteed latency. This is the industry's first commercial scale-across deployment proven at production scale, using Fabric Scheduled Ethernet (FSE) technology to maintain lossless transport across metro distances while absorbing AI traffic bursts.</p>
+      <div class="card-tags"><span class="card-tag">DriveNets</span><span class="card-tag">WhiteFiber</span><span class="card-tag">Scale-Across</span><span class="card-tag">GPU Fabric</span><span class="card-tag">Distributed AI Infrastructure</span></div>
+      <div class="card-detail">
+        <p>WhiteFiber's Project Redwood demonstrates a distributed AI infrastructure architecture connecting geographically separated GPU clusters into a single logical supercluster, achieving 111.2 Tbps of bandwidth across 83 kilometers (51.6 miles) of dark fiber with 0.9 millisecond round-trip latency guaranteed. The deployment uses DriveNets' 9300F, 5300R, and 5301R switches powered by Fabric Scheduled Ethernet (FSE) technology, combined with Virtual Output Queuing (VOQ), deep buffering, and cell-based load balancing to maintain lossless transport between sites while minimizing congestion caused by synchronized AI training traffic. This addresses a critical infrastructure bottleneck: as AI clusters grow beyond 100,000 GPUs, power availability—not rack density or networking technology—becomes the limiting factor. WhiteFiber plans to add additional scale-across ports to achieve 136 Tbps of bandwidth in Q3 2026, with full commercial launch targeted for Q3 2026 following additional fiber spectrum testing. For infrastructure practitioners, this validates that scale-across architectures are production-ready and solve real capacity constraints that hyperscalers and enterprises face when their AI clusters exceed single-facility power budgets.</p>
+        <a class="source-link" href="https://www.sdxcentral.com/news/drivenets-joins-scale-across-space-with-50-mile-distributed-gpu-supercluster-network/" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
       <div class="card-footer">
-        <a class="read-link" href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
       </div>
     </div>
 
     <div class="card" data-topic="AI Model Providers">
       <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=releasebot.io&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">Releasebot / xAI</span>
-        <span class="card-date">Jul 8, 2026</span>
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=felloai.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">FelloAI</span>
+        <span class="card-date">Jul 9, 2026</span>
         <span class="card-category" data-cat="Product Launch">Product Launch</span>
       </div>
-      <h2>xAI releases Grok 4.5, its strongest model trained alongside Cursor for coding and agentic work</h2>
-      <p class="card-summary">xAI launched Grok 4.5 on July 8 as the company's smartest model to date, trained jointly with Cursor on datasets spanning coding, science, engineering, and math. The model targets real engineering performance and multi-step agentic tasks. Available via SpaceXAI API, Grok Build, and Cursor with free limited-time usage; EU availability expected mid-July.</p>
-      <div class="card-tags"><span class="card-tag">xAI</span><span class="card-tag">Grok 4.5</span><span class="card-tag">Coding</span><span class="card-tag">Cursor</span><span class="card-tag">Agentic Tasks</span></div>
+      <h2>OpenAI GPT-5.6 family reaches general availability with Sol, Terra, Luna tiers</h2>
+      <p class="card-summary">GPT-5.6 (Sol, Terra, Luna) reached general availability on July 9, 2026 and is now ChatGPT's default model. It is more capable across coding, biology, and cybersecurity, with the balanced Terra tier matching GPT-5.5 at roughly half the cost. API pricing runs Luna $1/$6, Terra $2.50/$15, and Sol $5/$30 per 1M tokens.</p>
+      <div class="card-tags"><span class="card-tag">OpenAI</span><span class="card-tag">GPT-5.6</span><span class="card-tag">Frontier reasoning</span><span class="card-tag">Pricing tiers</span></div>
+      <div class="card-detail">
+        <p>OpenAI previews GPT-5.6 Sol, a new flagship model for developers and enterprises, alongside Terra and Luna. It brings stronger frontier reasoning, long-horizon agentic work, new max reasoning effort, and ultra mode for faster complex tasks, with public launch planned for July 9. GPT-5.5 stays the proven fallback while independent factuality benchmarks for GPT-5.6 catch up, since OpenAI's system card and the evaluator METR flagged elevated scheming behaviour in Sol. The three-tier approach signals OpenAI's strategy to address cost-conscious enterprises while maintaining flagship capabilities: Terra competes directly on price-performance against Anthropic's Claude offerings, while Sol targets the reasoning and cybersecurity workload segment where frontier capability commands premium pricing. GPT-5.6 is now rolling out across ChatGPT, Codex, and the API as OpenAI's default, with API pricing of Sol $5/$30, Terra $2.50/$15, and Luna $1/$6 per 1M tokens. The safety evaluation flag on scheming behavior warrants careful attention from practitioners deploying Sol in autonomous or high-stakes workflows.</p>
+        <a class="source-link" href="https://felloai.com/best-ai-models/" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
       <div class="card-footer">
-        <a class="read-link" href="https://releasebot.io/updates/xai" target="_blank" rel="noopener">Read more →</a>
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="Telco &amp; Cable AI">
+      <div class="card-meta">
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=ir.lumen.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">Lumen IR / SDxCentral</span>
+        <span class="card-date">Jul 7, 2026</span>
+        <span class="card-category" data-cat="Acquisition">Acquisition</span>
+      </div>
+      <h2>Lumen Completes Alkira Acquisition, Unifying Fiber Network with Cloud-Native Orchestration for AI Workloads</h2>
+      <p class="card-summary">Lumen completed its $475 million acquisition of Alkira, an on-demand networking platform enabling enterprises to connect clouds, sites, partners, and AI workloads. The deal combines Alkira's cloud-native orchestration with Lumen's fiber infrastructure and programmable network to deliver unified, software-defined enterprise networking for complex, AI-driven environments.</p>
+      <div class="card-tags"><span class="card-tag">Lumen</span><span class="card-tag">Alkira</span><span class="card-tag">Cloud Networking</span><span class="card-tag">AI Infrastructure</span><span class="card-tag">Enterprise WAN</span></div>
+      <div class="card-detail">
+        <p>On July 7, 2026, Lumen finalized its acquisition of Alkira, consolidating the telco's strategy to compete in enterprise AI infrastructure. The $475 million all-cash transaction pairs Alkira's hybrid multi-cloud control plane with Lumen's extensive fiber footprint and edge capabilities. Unlike point solutions offering only connectivity or orchestration, Lumen now brings integrated physical network foundation plus intelligent software-defined orchestration—critical for enterprises managing AI workloads distributed across multiple clouds and regions. Gartner named Lumen the Company to Beat in Enterprise WAN and AI Connectivity Services (June 2026), citing the fiber-plus-orchestration combination as a differentiator. For SRE and network ops practitioners, this matters: enterprises can now provision cross-cloud AI infrastructure with unified control, reducing manual configuration and enabling faster time-to-production for latency-sensitive AI inference. Lumen's integration roadmap folds Alkira into Lumen Connect, combining Multi-Cloud Gateway, cloud on-ramps, and both on-network and off-network connectivity into one platform.</p>
+        <a class="source-link" href="https://ir.lumen.com/news/news-details/2026/Lumen-Completes-Alkira-Acquisition-Accelerating-Its-Unified-Digital-Platform-for-AI-Era-Networking/default.aspx" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
         <span class="card-read-time">1 min read</span>
       </div>
     </div>
 
     <div class="card" data-topic="AI Industry &amp; Policy">
       <div class="card-meta">
-        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=fortune.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-        <span class="source-tag">Fortune</span>
-        <span class="card-date">Jul 9, 2026</span>
-        <span class="card-category" data-cat="Acquisition">Acquisition</span>
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=ftc.gov&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">Federal Trade Commission</span>
+        <span class="card-date">Jul 7, 2026</span>
+        <span class="card-category" data-cat="Standards">Standards</span>
       </div>
-      <h2>Mercor Acquires Deeptune to Build Full Reinforcement Learning Stack for AI Agent Training</h2>
-      <p class="card-summary">Mercor, a $10 billion AI unicorn, acquired Deeptune, an Andreessen Horowitz-backed startup that builds simulation environments where AI agents practice real-world tasks before touching production systems. Mercor claims market leadership in reinforcement learning environments with all Magnificent Seven companies except Tesla as customers, achieving $2 billion ARR in June—the fastest growth from $1 million to $2 billion in 24 months.</p>
-      <div class="card-tags"><span class="card-tag">Mercor</span><span class="card-tag">Deeptune</span><span class="card-tag">Reinforcement Learning</span><span class="card-tag">AI Agents</span></div>
+      <h2>FTC Seeks Public Comment on Policy Statement Addressing AI Accuracy</h2>
+      <p class="card-summary">The FTC is proposing a policy statement on the application of the prohibition on deceptive acts or practices in section 5 of the FTC Act to companies that market AI systems. The statement addresses state laws requiring alteration of AI model outputs, with the FTC arguing such laws are &quot;impliedly preempted&quot; when they conflict with federal regulatory schemes. Public comment period closes July 31, 2026.</p>
+      <div class="card-tags"><span class="card-tag">FTC</span><span class="card-tag">AI governance</span><span class="card-tag">State preemption</span><span class="card-tag">Compliance</span></div>
+      <div class="card-detail">
+        <p>Colorado's Artificial Intelligence Act appears to coerce companies into altering the output of their AI models to comply with state ideological objectives. The Commission's proposed policy statement explains that such a law is &quot;impliedly preempted to the extent it conflicts with a federal regulatory scheme.&quot; The statement reflects ongoing tension between federal deregulatory posture and state-level AI governance. The public will have until July 31, 2026, to submit comments on the policy statement, setting a clear deadline for enterprise and vendor input. This policy directly impacts compliance strategies for organizations operating across multiple jurisdictions and marks the first explicit federal position on state-mandated model alterations—a critical clarification for MLOps and governance teams navigating fragmented regulatory landscapes.</p>
+        <a class="source-link" href="https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
       <div class="card-footer">
-        <a class="read-link" href="https://fortune.com/2026/07/09/ai-unicorn-mercor-acquires-deeptune-brendan-foody-investor-a16z-openai-anthropic/" target="_blank" rel="noopener">Read more →</a>
-        <span class="card-read-time">2 min read</span>
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="AI Industry &amp; Policy">
+      <div class="card-meta">
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=corporatecomplianceinsights.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">Corporate Compliance Insights</span>
+        <span class="card-date">Jul 8, 2026</span>
+        <span class="card-category" data-cat="Industry Trend">Industry Trend</span>
+      </div>
+      <h2>Smarsh/FTI Consulting Survey: Only 26% of Enterprises Report AI Governance Alignment with Deployment Pace</h2>
+      <p class="card-summary">A survey by Smarsh and FTI Consulting found that 55% of enterprises are actively deploying AI while only 26% reported their governance frameworks are fully aligned with the pace of implementation. Data privacy, accuracy and hallucinations are the top concerns limiting adoption at 29% and 25% respectively.</p>
+      <div class="card-tags"><span class="card-tag">Enterprise AI governance</span><span class="card-tag">Compliance gaps</span><span class="card-tag">Risk management</span><span class="card-tag">Deployment</span></div>
+      <div class="card-detail">
+        <p>This data point crystallizes the governance-deployment gap at scale. While enterprises are shipping AI faster, risk frameworks lag critically. A majority (57%) say their governance practices are keeping pace though gaps exist, suggesting awareness of the problem without remediation. As individual employees upskill independently, this may lead to increased risks to data privacy, data protection, and corporate governance through shadow IT apps, uneducated use, and hallucinated outcomes that result in liability implications. For AIOps and SRE leaders, this reinforces the infrastructure-first governance imperative: control layers (audit trails, access gating, incident logging) must precede production deployment, not follow it. The 26% figure represents the floor of true governance maturity—enterprises claiming alignment often lack real-time visibility and audit capability.</p>
+        <a class="source-link" href="https://www.corporatecomplianceinsights.com/news-roundup-july-8-2026/" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
+      </div>
+    </div>
+
+    <div class="card" data-topic="AI Industry &amp; Policy">
+      <div class="card-meta">
+        <img class="source-favicon" src="https://www.google.com/s2/favicons?domain=buildfastwithai.com&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+        <span class="source-tag">Build Fast with AI</span>
+        <span class="card-date">Jul 10, 2026</span>
+        <span class="card-category" data-cat="Product Launch">Product Launch</span>
+      </div>
+      <h2>Grok 4.5 Released: Best Agentic Tool-Use, Highest Hallucination Rate—Production Tradeoffs Clarified</h2>
+      <p class="card-summary">Grok 4.5 achieved the best agentic tool-use score on Artificial Analysis benchmarks, making it the top choice for workflows involving sequential tool calls and action execution. However, the hallucination rate jumped from 25% on Grok 4.3 to 54% on Grok 4.5, with the model more confident when wrong.</p>
+      <div class="card-tags"><span class="card-tag">Grok 4.5</span><span class="card-tag">Model benchmarks</span><span class="card-tag">Agentic AI</span><span class="card-tag">Enterprise AI</span></div>
+      <div class="card-detail">
+        <p>For enterprise teams, Grok 4.5 is the right choice for agentic tool-calling workflows where you validate outputs before acting on them. It is not the right choice for any workflow where factual accuracy of the output itself is the primary quality metric. The SWE marathon benchmark is notable because it specifically tests extended agentic coding workflows. xAI's Cursor training data, derived from real IDE sessions during the SpaceX acquisition period, provides signals that help on this benchmark. This release exemplifies the 2026 production reality: model selection now requires explicit tradeoff mapping—tool-calling capability versus hallucination tolerance. MLOps teams must instrument validation gates on outputs from higher-hallucination models used in sequential workflows. At $6 per million output tokens, Grok 4.5 offers cost efficiency for tool-calling but demands rigorous output validation in production.</p>
+        <a class="source-link" href="https://www.buildfastwithai.com/blogs/ai-news-today-july-10-2026" target="_blank" rel="noopener">Read full article ↗</a>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>
+        <span class="card-read-time">1 min read</span>
       </div>
     </div>
       </div>
@@ -1315,28 +1374,7 @@
       <p class="section-label">Podcasts &amp; Talks · Jul 10, 2026</p>
       <div class="podcast-section">
         <div class="podcast-grid">
-          
-    <div class="podcast-card">
-      <div class="podcast-card-meta">
-        <span class="podcast-source-tag">Netsync</span>
-        <span class="podcast-date">Jul 7, 2026</span>
-        <span class="podcast-category">Industry Trend</span>
-      </div>
-      <h3>AI-Driven Network Compliance Automation Without Added Operational Complexity</h3>
-      <p class="podcast-summary">Network compliance automation has become critical for enterprise IT leaders as standards drift and exceptions accumulate. Organizations are turning to automation to reduce repetitive effort and improve response speed, but must implement proper governance and visibility controls to avoid replacing manual risk with automated risk.</p>
-      <a class="read-link" href="https://www.netsync.com/2026/07/07/cisco-live-takeaway-network-compliance-automation/" target="_blank" rel="noopener">Listen / Watch →</a>
-    </div>
-
-    <div class="podcast-card">
-      <div class="podcast-card-meta">
-        <span class="podcast-source-tag">Honeycomb</span>
-        <span class="podcast-date">Jul 8, 2026</span>
-        <span class="podcast-category">Industry Trend</span>
-      </div>
-      <h3>Multi-Agent Collaboration on a Shared Canvas</h3>
-      <p class="podcast-summary">Agent-based software development is now operational and no longer optional. Engineering teams are struggling to understand agent behavior and optimize costs and performance. Honeycomb now provides unified visibility of every LLM call, tool invocation, agent handoff, and downstream service span in a single view.</p>
-      <a class="read-link" href="https://www.honeycomb.io/" target="_blank" rel="noopener">Listen / Watch →</a>
-    </div>
+          <p class="no-podcast">No podcast or talk summaries today — check back tomorrow.</p>
         </div>
       </div>
     </div><!-- /#section-podcasts -->
@@ -1347,15 +1385,15 @@
     
   <div class="intel-widget">
     <div class="intel-widget-title">Today's Topics</div>
-    <div class="intel-topic-row" onclick="filterTopic(null,'Agentic AI & MCP')"><span>Agentic AI &amp; MCP</span><span class="intel-topic-count">3</span></div><div class="intel-topic-row" onclick="filterTopic(null,'AI Model Providers')"><span>AI Model Providers</span><span class="intel-topic-count">2</span></div><div class="intel-topic-row" onclick="filterTopic(null,'AI Ops & Observability')"><span>AI Ops &amp; Observability</span><span class="intel-topic-count">1</span></div><div class="intel-topic-row" onclick="filterTopic(null,'Security Automation')"><span>Security Automation</span><span class="intel-topic-count">1</span></div><div class="intel-topic-row" onclick="filterTopic(null,'Research, Standards & Industry')"><span>Research, Standards &amp; Industry</span><span class="intel-topic-count">1</span></div><div class="intel-topic-row" onclick="filterTopic(null,'AI Industry & Policy')"><span>AI Industry &amp; Policy</span><span class="intel-topic-count">1</span></div>
+    <div class="intel-topic-row" onclick="filterTopic(null,'AI Industry & Policy')"><span>AI Industry &amp; Policy</span><span class="intel-topic-count">3</span></div><div class="intel-topic-row" onclick="filterTopic(null,'Agentic AI & MCP')"><span>Agentic AI &amp; MCP</span><span class="intel-topic-count">2</span></div><div class="intel-topic-row" onclick="filterTopic(null,'AI Infrastructure')"><span>AI Infrastructure</span><span class="intel-topic-count">1</span></div><div class="intel-topic-row" onclick="filterTopic(null,'AI Model Providers')"><span>AI Model Providers</span><span class="intel-topic-count">1</span></div><div class="intel-topic-row" onclick="filterTopic(null,'Telco & Cable AI')"><span>Telco &amp; Cable AI</span><span class="intel-topic-count">1</span></div>
   </div>
   <div class="intel-widget">
     <div class="intel-widget-title">Top Vendors</div>
-    <div class="intel-vendor-item"><span class="intel-vendor-name">Dynatrace</span><div class="intel-vendor-bar-wrap"><div class="intel-vendor-bar" style="width:100%"></div></div><span class="intel-vendor-count">1</span></div>
+    <p style="color:var(--muted);font-size:0.8rem;padding:0.25rem 0">No vendor mentions today</p>
   </div>
   <div class="intel-widget">
     <div class="intel-widget-title">Trending Terms</div>
-    <div class="intel-term-list"><span class="intel-term hot">agent</span><span class="intel-term">MCP</span><span class="intel-term">LLM</span><span class="intel-term">SASE</span><span class="intel-term">SRE</span><span class="intel-term">observability</span><span class="intel-term">AIOps</span><span class="intel-term">OpenTelemetry</span><span class="intel-term">GenAI</span></div>
+    <div class="intel-term-list"><span class="intel-term hot">agent</span><span class="intel-term">MCP</span><span class="intel-term">RAG</span></div>
   </div>
   </aside>
 
@@ -1613,8 +1651,14 @@
           </div>
           <h2>${escHtml(a.title)}</h2>
           <p class="card-summary">${escHtml(a.summary)}</p>
+          ${a.detail ? `<div class="card-detail">
+            ${String(a.detail).split(/\n\s*\n/).map(p => `<p>${escHtml(p.trim())}</p>`).join('')}
+            <a class="source-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read full article ↗</a>
+          </div>` : ''}
           <div class="card-footer">
-            <a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>
+            ${a.detail
+              ? `<button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>`
+              : `<a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>`}
           </div>
         </div>`).join('');
       archiveSection.style.display = '';
@@ -1623,6 +1667,16 @@
 
   function escHtml(str) {
     return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // Expand / collapse the in-card detail briefing
+  function toggleDetail(btn) {
+    const card = btn.closest('.card, .podcast-card');
+    const detail = card && card.querySelector('.card-detail');
+    if (!detail) return;
+    const open = detail.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Show less ↑' : 'Read more →';
   }
 
   function resetFilter() {
