@@ -145,6 +145,7 @@ const TRACKED_VENDORS = [
   'LogicMonitor', 'Honeycomb', 'Last9', 'Chronosphere', 'Selector',
   'Dynatrace', 'Datadog', 'New Relic', 'Itential', 'CrowdStrike',
   'Palo Alto', 'Arista', 'Juniper', 'Cisco', 'ServiceNow',
+  'net.ai',
 ];
 
 function vendorRadarHtml(articles) {
