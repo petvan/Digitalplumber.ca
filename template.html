@@ -22,6 +22,7 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
 
 <!--ARCHIVE_LIST_SCRIPT-->
 <style>
@@ -620,7 +621,13 @@
     display: flex;
     gap: 0;
     align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
+
+  .section-nav-inner::-webkit-scrollbar { display: none; }
+
+  .section-nav-link { text-decoration: none; margin-left: auto; }
 
   .section-nav-btn {
     font-family: 'Space Mono', monospace;
@@ -864,7 +871,10 @@
     align-items: center;
     gap: 0.55rem;
     padding: 0.32rem 0;
+    cursor: pointer;
   }
+
+  .intel-vendor-item:hover .intel-vendor-name { color: var(--accent); }
 
   .intel-vendor-name {
     font-size: 0.8rem;
@@ -1075,6 +1085,138 @@
 
   .modal-close:hover { color: var(--text); border-color: var(--accent); }
 
+  /* ── VENDOR RADAR ── */
+  .vendor-radar { padding-bottom: 3rem; }
+
+  .vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .vendor-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .vendor-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .vendor-name { font-weight: 700; font-size: 0.95rem; }
+
+  .vendor-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .vendor-headlines {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .vendor-headlines a { color: var(--muted); text-decoration: none; }
+  .vendor-headlines a:hover { color: var(--text); }
+
+  .vendor-history {
+    margin-top: auto;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .vendor-history:hover { text-decoration: underline; }
+
+  .vendor-quiet, .vendor-empty {
+    margin-top: 0.9rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .archive-menu a.archive-menu-week { color: var(--accent); border-bottom: 1px solid var(--border); }
+
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--accent); }
+
+  /* ── WEEK IN REVIEW (week.html) ── */
+  .week-header { top: 0; }
+  .week-header .archive-btn { text-decoration: none; }
+
+  .week-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .week-title-link { color: inherit; text-decoration: none; }
+  .week-title-link:hover { color: var(--accent); }
+
+  .week-why {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text);
+    border-left: 2px solid var(--accent2);
+    padding-left: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .week-why strong { color: var(--accent2); font-weight: 600; }
+
+  .week-rss { color: var(--accent); text-decoration: none; }
+
+  .week-topic { margin-bottom: 2rem; }
+
+  .week-topic h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .week-list {
+    list-style: none;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+
+  .week-list li {
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .week-list li + li { border-top: 1px solid var(--border); }
+
+  .week-list li > a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; line-height: 1.45; }
+  .week-list li > a:hover { color: var(--accent); }
+
+  .week-meta { font-size: 0.72rem; color: var(--muted); font-family: 'Space Mono', monospace; }
+  .week-meta a { color: var(--muted); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1100px) {
     .content-wrap { grid-template-columns: 1fr; }
@@ -1090,6 +1232,9 @@
     .card-summary { -webkit-line-clamp: 2; }
     .topic-pill { padding: 0.5rem 0.9rem; min-height: 40px; }
     .search-hero-wrap { border-radius: 10px; }
+    .section-nav-inner { padding: 0 0.5rem; }
+    .section-nav-btn { padding: 0.75rem 0.8rem; }
+    .week-wrap { padding: 0 1rem 3rem; }
   }
 </style>
 </head>
@@ -1122,6 +1267,7 @@
       <a class="nav-link" href="#" onclick="navFilter(this,'Security Automation');return false">Security</a>
       <a class="nav-link" href="#" onclick="navFilter(this,'Research, Standards & Industry');return false">Research</a>
       <a class="nav-link" href="#" onclick="navFilter(this,'__vendors');return false">Vendors</a>
+      <a class="nav-link" href="/week.html">This Week</a>
       <a class="nav-link" href="#" onclick="openAbout();return false">About</a>
     </div>
     <div class="archive-nav">
@@ -1181,7 +1327,9 @@
 <nav class="section-nav" id="sectionNav">
   <div class="section-nav-inner">
     <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Today's Briefing<span class="nav-count"><!--ARTICLE_COUNT--> Stories</span></button>
+    <button class="section-nav-btn" onclick="scrollToSection('section-vendors', this)">Vendor Radar</button>
     <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
+    <a class="section-nav-btn section-nav-link" href="/week.html">This Week →</a>
   </div>
 </nav>
 
@@ -1205,10 +1353,18 @@
       </div>
 
       <div id="archiveResults" style="display:none">
-        <p class="section-label" style="margin-top:2rem">From the Archive</p>
+        <p class="section-label" style="margin-top:2rem" id="archiveLabel">From the Archive</p>
         <div class="news-grid" id="archiveGrid"></div>
       </div>
     </div><!-- /#section-news -->
+
+    <!-- VENDOR RADAR -->
+    <div id="section-vendors">
+      <p class="section-label">Vendor Radar · <!--BUILD_DATE--></p>
+      <div class="vendor-radar">
+        <!--VENDOR_RADAR-->
+      </div>
+    </div><!-- /#section-vendors -->
 
     <!-- PODCASTS & TALKS -->
     <div id="section-podcasts">
@@ -1232,7 +1388,7 @@
   <div class="footer-brand">
     <strong>digitalplumber.ca</strong> — Network Intelligence
   </div>
-  <div class="footer-creds">Independent networking &amp; AI industry intelligence</div>
+  <div class="footer-creds">Independent networking &amp; AI industry intelligence · <a href="/week.html">This week</a> · <a href="/feed.xml">RSS</a></div>
 </footer>
 
 <script>
@@ -1254,26 +1410,46 @@
         e.competitions?.[0]?.competitors?.some(c => c.team?.abbreviation === abbr)
       );
 
-      if (!game) return { name, emoji, offseason: true };
-
-      const comp = game.competitions[0];
-      const tor = comp.competitors.find(c => c.team.abbreviation === abbr);
-      const opp = comp.competitors.find(c => c.team.abbreviation !== abbr);
-      const status = comp.status.type;
-      const isHome = tor.homeAway === 'home';
-
-      return {
-        name, emoji, offseason: false,
-        torScore: tor.score,
-        oppScore: opp.score,
-        oppAbbr: opp.team.abbreviation,
-        isHome,
-        statusName: status.name,
-        statusShort: status.shortDetail,
-      };
+      if (!game) return await fetchNextGame({ league, abbr, name, emoji });
+      return gameResult(game, { abbr, name, emoji });
     } catch {
       return { name, emoji, offseason: true };
     }
+  }
+
+  // No game on today's scoreboard: show the next scheduled game, checking the
+  // regular season too in case the current schedule (e.g. preseason) is done.
+  async function fetchNextGame({ league, abbr, name, emoji }) {
+    const base = `https://site.api.espn.com/apis/site/v2/sports/${league}/teams/${abbr.toLowerCase()}/schedule`;
+    for (const url of [base, `${base}?seasontype=2`]) {
+      try {
+        const data = await (await fetch(url)).json();
+        const next = (data.events || [])
+          .filter(e => Date.parse(e.date) > Date.now() && !e.competitions?.[0]?.status?.type?.completed)
+          .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
+        if (next) return gameResult(next, { abbr, name, emoji });
+      } catch {}
+    }
+    return { name, emoji, offseason: true };
+  }
+
+  function gameResult(game, { abbr, name, emoji }) {
+    const comp = game.competitions[0];
+    const tor = comp.competitors.find(c => c.team.abbreviation === abbr);
+    const opp = comp.competitors.find(c => c.team.abbreviation !== abbr);
+    const status = comp.status.type;
+    const isHome = tor.homeAway === 'home';
+
+    // Scoreboard scores are strings; schedule scores are { displayValue } objects
+    return {
+      name, emoji, offseason: false,
+      torScore: tor.score?.displayValue ?? tor.score,
+      oppScore: opp.score?.displayValue ?? opp.score,
+      oppAbbr: opp.team.abbreviation,
+      isHome,
+      statusName: status.name,
+      statusShort: status.shortDetail,
+    };
   }
 
   function renderScoreItem({ name, emoji, offseason, torScore, oppScore, oppAbbr, isHome, statusName, statusShort }) {
@@ -1325,7 +1501,7 @@
   }
 
   (function () {
-    const sections = ['section-news', 'section-podcasts'];
+    const sections = ['section-news', 'section-vendors', 'section-podcasts'];
     const btns = document.querySelectorAll('.section-nav-btn');
     const setActive = (id) => btns.forEach((b, i) => b.classList.toggle('active', sections[i] === id));
 
@@ -1341,6 +1517,11 @@
     const archives = window.__archives || [];
     const menu = document.getElementById('archiveMenu');
     if (!menu || archives.length === 0) return;
+    const week = document.createElement('a');
+    week.href = '/week.html';
+    week.className = 'archive-menu-week';
+    week.textContent = 'This week in review →';
+    menu.appendChild(week);
     archives.forEach(a => {
       const link = document.createElement('a');
       link.href = `/archives/${a.date}.html`;
@@ -1383,11 +1564,9 @@
   function navFilter(el, topic) {
     document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
     if (topic === '__vendors') {
-      // reset topic filter and scroll to Intel Panel
       el.classList.add('active');
       filterTopic(null, 'all');
-      const panel = document.getElementById('intelPanel');
-      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      scrollToSection('section-vendors');
       return;
     }
     el.classList.add('active');
@@ -1398,6 +1577,7 @@
   // ── FILTER LOGIC ──
   let activeTopic = 'all';
   let searchIndexCache = null;
+  const ARCHIVE_RESULT_LIMIT = 50;
 
   async function loadSearchIndex() {
     if (searchIndexCache) return searchIndexCache;
@@ -1436,6 +1616,14 @@
     applyFilters(query.trim().toLowerCase());
   }
 
+  // Search today's briefing and the archive for a vendor, e.g. from the radar
+  function searchVendor(name) {
+    const input = document.getElementById('searchInput');
+    input.value = name;
+    filterSearch(name);
+    scrollToSection('section-news');
+  }
+
   function applyFilters(searchQuery) {
     const cards = document.querySelectorAll('#newsGrid .card');
     let visibleCount = 0;
@@ -1450,6 +1638,7 @@
 
     const noResults = document.getElementById('noResults');
     noResults.classList.toggle('visible', visibleCount === 0 && cards.length > 0);
+    const archiveLabel = document.getElementById('archiveLabel');
 
     // Archive search
     const archiveSection = document.getElementById('archiveResults');
@@ -1464,14 +1653,21 @@
       const todayDate = window.__buildDate;
       const hits = index.filter(a => {
         if (a.date === todayDate) return false;
-        return [a.title, a.summary, a.source].join(' ').toLowerCase().includes(searchQuery);
+        return [a.title, a.summary, a.source, a.topic, ...(a.tags || [])].join(' ').toLowerCase().includes(searchQuery);
       });
+      // Ignore results from a search the user has since changed
+      if ((document.getElementById('searchInput').value.trim().toLowerCase()) !== searchQuery) return;
       if (hits.length === 0) {
         archiveSection.style.display = 'none';
         archiveGrid.innerHTML = '';
         return;
       }
-      archiveGrid.innerHTML = hits.map(a => `
+      if (visibleCount === 0) noResults.classList.remove('visible');
+      const shown = hits.slice(0, ARCHIVE_RESULT_LIMIT);
+      archiveLabel.textContent = hits.length > shown.length
+        ? `From the Archive · ${shown.length} of ${hits.length} matches — refine your search to see more`
+        : `From the Archive · ${hits.length} ${hits.length === 1 ? 'match' : 'matches'}`;
+      archiveGrid.innerHTML = shown.map(a => `
         <div class="card" data-topic="${escHtml(a.topic)}">
           <div class="card-meta">
             <span class="source-tag">${escHtml(a.source)}</span>

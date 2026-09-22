@@ -27,7 +27,7 @@ const TOPICS = [
   {
     label: 'AI Ops & Observability',
     maxItems: 8,
-    query: 'AIOps observability AI operations LogicMonitor Selector.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
+    query: 'AIOps observability AI operations LogicMonitor Selector.ai net.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
   },
   {
     label: 'Agentic AI & MCP',
@@ -96,18 +96,11 @@ function intelligencePanelHtml(articles) {
     ).join('');
 
   // Top Vendors — count article-level mentions, show top 6 with bar chart
-  const vendorCounts = {};
-  TRACKED_VENDORS.forEach(v => {
-    const n = articles.filter(a =>
-      [a.title, a.summary, a.source].join(' ').toLowerCase().includes(v.toLowerCase())
-    ).length;
-    if (n > 0) vendorCounts[v] = n;
-  });
-  const topVendors = Object.entries(vendorCounts).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  const topVendors = vendorMentions(articles).slice(0, 6).map(({ vendor, articles: hits }) => [vendor, hits.length]);
   const maxV = topVendors[0]?.[1] || 1;
   const vendorRows = topVendors.length
     ? topVendors.map(([v, n]) =>
-        `<div class="intel-vendor-item">` +
+        `<div class="intel-vendor-item" onclick="searchVendor('${v.replace(/'/g, "\\'")}')">` +
         `<span class="intel-vendor-name">${esc(v)}</span>` +
         `<div class="intel-vendor-bar-wrap"><div class="intel-vendor-bar" style="width:${Math.round((n/maxV)*100)}%"></div></div>` +
         `<span class="intel-vendor-count">${n}</span></div>`
@@ -148,26 +141,46 @@ const TRACKED_VENDORS = [
   'net.ai',
 ];
 
+// Names match as whole words, case-sensitively ("Cisco" must not match "San
+// Francisco", "Selector" must not match a Kubernetes label selector). An
+// all-lowercase entry such as 'net.ai' matches in any case.
+const VENDOR_PATTERNS = TRACKED_VENDORS.map(vendor => ({
+  vendor,
+  re: new RegExp(
+    `(?<![\\w-])${vendor.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`,
+    vendor === vendor.toLowerCase() ? 'i' : ''
+  ),
+}));
+
+// [{ vendor, articles }] for every tracked vendor mentioned today, most-mentioned first
+function vendorMentions(articles) {
+  return VENDOR_PATTERNS
+    .map(({ vendor, re }) => ({
+      vendor,
+      articles: articles.filter(a => re.test([a.title, a.summary, a.source, ...(a.tags || [])].join(' '))),
+    }))
+    .filter(m => m.articles.length > 0)
+    .sort((a, b) => b.articles.length - a.articles.length);
+}
+
 function vendorRadarHtml(articles) {
-  const cards = TRACKED_VENDORS.map(vendor => {
-    const match = articles.find(a =>
-      [a.title, a.summary, a.source].join(' ').toLowerCase().includes(vendor.toLowerCase())
-    );
-    if (match) {
-      return `
-    <a class="vendor-card vendor-active" href="${esc(match.url)}" target="_blank" rel="noopener">
-      <div class="vendor-name">${esc(vendor)}</div>
-      <div class="vendor-headline">${esc(match.title)}</div>
-      <div class="vendor-source">${esc(match.source)} · ${esc(displayDate(match.date))}</div>
-    </a>`;
-    }
-    return `
-    <div class="vendor-card vendor-quiet">
-      <div class="vendor-name">${esc(vendor)}</div>
-      <div class="vendor-headline">No news today</div>
-    </div>`;
-  });
-  return cards.join('\n');
+  const active = vendorMentions(articles);
+  const activeNames = new Set(active.map(m => m.vendor));
+  const quiet = TRACKED_VENDORS.filter(v => !activeNames.has(v));
+  const cards = active.map(({ vendor, articles: hits }) => `
+    <div class="vendor-card">
+      <div class="vendor-card-head">
+        <span class="vendor-name">${esc(vendor)}</span>
+        <span class="vendor-count">${hits.length} ${hits.length === 1 ? 'story' : 'stories'}</span>
+      </div>
+      <ul class="vendor-headlines">
+        ${hits.slice(0, 2).map(a => `<li><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></li>`).join('')}
+      </ul>
+      <button type="button" class="vendor-history" onclick="searchVendor('${esc(vendor).replace(/'/g, "\\'")}')">All ${esc(vendor)} coverage →</button>
+    </div>`).join('');
+  return `
+    ${cards ? `<div class="vendor-grid">${cards}</div>` : `<p class="vendor-empty">None of the ${TRACKED_VENDORS.length} tracked vendors are in today's news.</p>`}
+    ${cards && quiet.length ? `<p class="vendor-quiet">Quiet today: ${quiet.map(esc).join(', ')}</p>` : ''}`;
 }
 
 // ── System prompt ─────────────────────────────────────────────────────────────
@@ -425,6 +438,205 @@ function podcastCardHtml(item) {
     </div>`;
 }
 
+// ── RSS feed ──────────────────────────────────────────────────────────────────
+function rssXml(entries, buildIso) {
+  const items = entries.slice(0, 100).map(a => `
+    <item>
+      <title>${esc(a.title)}</title>
+      <link>${esc(a.url)}</link>
+      <guid isPermaLink="true">${esc(a.url)}</guid>
+      <pubDate>${new Date(`${a.date}T10:00:00Z`).toUTCString()}</pubDate>
+      <category>${esc(a.topic)}</category>
+      <description>${esc(`<p>${esc(a.summary)}</p><p>Source: ${esc(a.source)} · <a href="https://digitalplumber.ca/archives/${a.date}.html">${esc(a.dateLabel)} briefing</a></p>`)}</description>
+    </item>`).join('');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Plumber — AI Networking Intelligence</title>
+    <link>https://digitalplumber.ca/</link>
+    <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
+    <language>en-ca</language>
+    <lastBuildDate>${new Date(buildIso).toUTCString()}</lastBuildDate>${items}
+  </channel>
+</rss>
+`;
+}
+
+// ── Week in review ────────────────────────────────────────────────────────────
+const TOP_STORY_COUNT = 8;
+
+// Asks Claude to pick the week's most important stories; returns [{ entry, why }].
+// Falls back to the newest story from each topic if the call fails.
+async function pickTopStories(entries) {
+  const fallback = () => {
+    const seenTopics = new Set();
+    return entries.filter(a => !seenTopics.has(a.topic) && seenTopics.add(a.topic))
+      .slice(0, TOP_STORY_COUNT).map(entry => ({ entry, why: '' }));
+  };
+  if (entries.length === 0) return [];
+
+  const list = entries.map((a, i) => `${i}. [${a.topic}] ${a.title} (${a.source}, ${a.dateLabel}): ${a.summary}`).join('\n');
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-beta': 'server-side-fallback-2026-07-01',
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'claude-opus-5',
+        fallbacks: 'default',
+        max_tokens: 16000,
+        output_config: {
+          effort: 'low',
+          format: {
+            type: 'json_schema',
+            schema: {
+              type: 'object',
+              properties: {
+                picks: {
+                  type: 'array',
+                  items: {
+                    type: 'object',
+                    properties: { id: { type: 'integer' }, why: { type: 'string' } },
+                    required: ['id', 'why'],
+                    additionalProperties: false,
+                  },
+                },
+              },
+              required: ['picks'],
+              additionalProperties: false,
+            },
+          },
+        },
+        messages: [{
+          role: 'user',
+          content: `You edit Digital Plumber, a daily briefing for senior network engineers, NetDevOps/automation engineers and AIOps/SRE leads. Below are this week's stories, numbered.
+
+Pick the ${TOP_STORY_COUNT} that matter most to that audience, most important first. Favour concrete developments in networking, network automation, AIOps, observability and AI infrastructure over general AI-industry news, and substance over press releases. Never pick two stories about the same event. For each pick, write one sentence (under 30 words) on why it matters to a practitioner.
+
+${list}`,
+        }],
+      }),
+    });
+    const json = await res.json();
+    if (!res.ok) throw new Error(json?.error?.message || `HTTP ${res.status}`);
+    if (json.stop_reason === 'refusal') throw new Error('refused');
+    const text = json.content.find(b => b.type === 'text')?.text;
+    const seen = new Set();
+    const picks = JSON.parse(text).picks
+      .filter(p => Number.isInteger(p.id) && entries[p.id] && !seen.has(p.id) && seen.add(p.id))
+      .slice(0, TOP_STORY_COUNT)
+      .map(p => ({ entry: entries[p.id], why: p.why }));
+    if (picks.length === 0) throw new Error('no valid picks');
+    console.log(`✓ Week in review: ${picks.length} top stories picked`);
+    return picks;
+  } catch (err) {
+    console.warn(`  ⚠ Top-story pick failed (${err.message}); using newest story per topic`);
+    return fallback();
+  }
+}
+
+function weekHtml(template, { entries, picks, rangeLabel, buildDate }) {
+  const style = (template.match(/<style>[\s\S]*?<\/style>/) || [''])[0];
+  const briefingLink = a => `<a href="/archives/${a.date}.html">${esc(a.dateLabel)} briefing</a>`;
+
+  const topCards = picks.map(({ entry: a, why }) => `
+    <div class="card" data-topic="${esc(a.topic)}">
+      <div class="card-meta">
+        <span class="source-tag">${esc(a.source)}</span>
+        <span class="card-date">${esc(a.dateLabel)}</span>
+        ${a.category ? `<span class="card-category" data-cat="${esc(a.category)}">${esc(a.category)}</span>` : ''}
+      </div>
+      <h2><a class="week-title-link" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></h2>
+      <p class="card-summary">${esc(a.summary)}</p>
+      ${why ? `<p class="week-why"><strong>Why it matters:</strong> ${esc(why)}</p>` : ''}
+      <div class="card-footer">
+        <a class="read-link" href="${esc(a.url)}" target="_blank" rel="noopener">Read full article ↗</a>
+        <span class="card-read-time">${esc(a.topic)}</span>
+      </div>
+    </div>`).join('');
+
+  const byTopic = {};
+  entries.forEach(a => { (byTopic[a.topic] = byTopic[a.topic] || []).push(a); });
+  const topicSections = Object.entries(byTopic)
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([topic, items]) => `
+    <div class="week-topic">
+      <h3>${esc(topic)} <span class="intel-topic-count">${items.length}</span></h3>
+      <ul class="week-list">
+        ${items.map(a => `<li>
+          <a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a>
+          <span class="week-meta">${esc(a.source)} · ${briefingLink(a)}</span>
+        </li>`).join('')}
+      </ul>
+    </div>`).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Week — Digital Plumber</title>
+<meta name="description" content="The week's most important AI networking, AIOps and network automation stories, ${esc(rangeLabel)}.">
+<link rel="canonical" href="https://digitalplumber.ca/week.html">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+${style}
+</head>
+<body>
+<header class="week-header">
+  <a class="logo" href="/">
+    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="8" fill="#111318"/>
+      <path d="M8 18h4M24 18h4M14 12l-2 6 2 6M22 12l2 6-2 6" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="18" cy="18" r="3" fill="#00c2ff"/>
+    </svg>
+    <span class="logo-text">digital<span>plumber</span>.ca</span>
+  </a>
+  <nav>
+    <a class="archive-btn" href="/">← Today's briefing</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="hero-eyebrow">Week in review</p>
+  <h1>This week in<br><em>AI networking</em></h1>
+  <div class="hero-stats">
+    <span><span class="hero-stat-highlight">${entries.length}</span> stories</span>
+    <span class="hero-stat-sep">·</span>
+    <span>${esc(rangeLabel)}</span>
+    <span class="hero-stat-sep">·</span>
+    <span>Updated ${esc(buildDate)}</span>
+    <span class="hero-stat-sep">·</span>
+    <a class="week-rss" href="/feed.xml">RSS</a>
+  </div>
+</section>
+
+<div class="week-wrap">
+  <p class="section-label">Top stories</p>
+  <div class="news-grid">${topCards || '<p class="no-podcast">No stories this week yet.</p>'}</div>
+
+  <p class="section-label">Everything this week, by topic</p>
+  ${topicSections}
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <strong>digitalplumber.ca</strong> — Network Intelligence
+  </div>
+  <div class="footer-creds">Top stories picked by AI — always verify before acting · <a href="/feed.xml">RSS</a></div>
+</footer>
+</body>
+</html>
+`;
+}
+
 // ── Main ──────────────────────────────────────────────────────────────────────
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY) {
@@ -542,7 +754,6 @@ async function main() {
   }
   archives = archives.filter(a => a.date !== dateStr);
   archives.unshift({ date: dateStr, label: buildDate, count: newsItems.length });
-  archives = archives.slice(0, 30);
   fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
   // ── Build / update search index (loaded earlier, before dedupe) ───────────
@@ -557,12 +768,21 @@ async function main() {
     source: item.source,
     url: item.url,
     topic: item.topicLabel,
+    category: item.category || '',
     tags: item.tags || [],
   }));
   searchIndex = [...todayEntries, ...searchIndex];
-  // Keep 30 days × ~35 articles max
+  // Every archived day stays searchable; the long-form detail is kept only for
+  // the most recent 30 days so the index the browser downloads stays small.
   const keepDates = new Set(archives.map(a => a.date));
-  searchIndex = searchIndex.filter(a => keepDates.has(a.date));
+  const detailDates = new Set(archives.slice(0, 30).map(a => a.date));
+  searchIndex = searchIndex
+    .filter(a => keepDates.has(a.date))
+    .map(a => {
+      if (detailDates.has(a.date)) return a;
+      const { detail, ...rest } = a;
+      return rest;
+    });
   fs.writeFileSync(searchIndexPath, JSON.stringify(searchIndex), 'utf8');
   console.log(`✓ archives/search-index.json written (${searchIndex.length} total articles)`);
 
@@ -617,9 +837,21 @@ async function main() {
   fs.writeFileSync(archiveHtmlPath, buildHtml(template, { isArchive: true }), 'utf8');
   console.log(`✓ archives/${dateStr}.html written`);
 
+  // ── Week in review + RSS: everything from the last 7 briefing days ────────
+  const weekStart = new Date(Date.parse(`${dateStr}T00:00:00Z`) - 6 * 86400000).toISOString().slice(0, 10);
+  const weekEntries = searchIndex.filter(a => a.date >= weekStart);
+  const rangeLabel = `${displayDate(weekStart)} – ${buildDate}`;
+  const picks = await pickTopStories(weekEntries);
+  fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, rangeLabel, buildDate }), 'utf8');
+  console.log(`✓ week.html written (${weekEntries.length} stories, ${picks.length} top picks)`);
+
+  fs.writeFileSync(path.join(__dirname, 'feed.xml'), rssXml(weekEntries, now.toISOString()), 'utf8');
+  console.log(`✓ feed.xml written (${Math.min(weekEntries.length, 100)} items)`);
+
   // Write sitemap.xml
   const sitemapUrls = [
     { loc: 'https://digitalplumber.ca/', lastmod: dateStr, priority: '1.0', changefreq: 'daily' },
+    { loc: 'https://digitalplumber.ca/week.html', lastmod: dateStr, priority: '0.8', changefreq: 'daily' },
     ...archives.map(a => ({
       loc: `https://digitalplumber.ca/archives/${a.date}.html`,
       lastmod: a.date,
@@ -649,4 +881,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { cardHtml, podcastCardHtml };
+module.exports = { cardHtml, podcastCardHtml, vendorMentions, vendorRadarHtml, rssXml, weekHtml, pickTopStories, main };
