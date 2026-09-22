@@ -84,7 +84,7 @@ const TRENDING_TERMS = [
   'GenAI', 'inference', 'fine-tuning', 'automation', 'agent',
 ];
 
-function intelligencePanelHtml(articles) {
+function intelligencePanelHtml(articles, weekArticles) {
   // Today's Topics — count per topicLabel, sorted by count
   const topicCounts = {};
   articles.forEach(a => { topicCounts[a.topicLabel] = (topicCounts[a.topicLabel] || 0) + 1; });
@@ -95,8 +95,8 @@ function intelligencePanelHtml(articles) {
       `<span>${esc(label)}</span><span class="intel-topic-count">${count}</span></div>`
     ).join('');
 
-  // Top Vendors — count article-level mentions, show top 6 with bar chart
-  const topVendors = vendorMentions(articles).slice(0, 6).map(({ vendor, articles: hits }) => [vendor, hits.length]);
+  // Top Vendors — stories mentioning each vendor over the last 7 days, top 6 with bar chart
+  const topVendors = vendorMentions(weekArticles).slice(0, 6).map(({ vendor, articles: hits }) => [vendor, hits.length]);
   const maxV = topVendors[0]?.[1] || 1;
   const vendorRows = topVendors.length
     ? topVendors.map(([v, n]) =>
@@ -105,7 +105,7 @@ function intelligencePanelHtml(articles) {
         `<div class="intel-vendor-bar-wrap"><div class="intel-vendor-bar" style="width:${Math.round((n/maxV)*100)}%"></div></div>` +
         `<span class="intel-vendor-count">${n}</span></div>`
       ).join('')
-    : '<p style="color:var(--muted);font-size:0.8rem;padding:0.25rem 0">No vendor mentions today</p>';
+    : '<p style="color:var(--muted);font-size:0.8rem;padding:0.25rem 0">No vendor mentions this week</p>';
 
   // Trending Terms — count occurrences across all article text
   const allText = articles.map(a => [a.title, a.summary].join(' ')).join(' ').toLowerCase();
@@ -124,7 +124,7 @@ function intelligencePanelHtml(articles) {
     ${topicRows}
   </div>
   <div class="intel-widget">
-    <div class="intel-widget-title">Top Vendors</div>
+    <div class="intel-widget-title">Top Vendors · 7 days</div>
     ${vendorRows}
   </div>
   <div class="intel-widget">
@@ -152,7 +152,7 @@ const VENDOR_PATTERNS = TRACKED_VENDORS.map(vendor => ({
   ),
 }));
 
-// [{ vendor, articles }] for every tracked vendor mentioned today, most-mentioned first
+// [{ vendor, articles }] for every tracked vendor the articles mention, most-mentioned first
 function vendorMentions(articles) {
   return VENDOR_PATTERNS
     .map(({ vendor, re }) => ({
@@ -786,6 +786,10 @@ async function main() {
   fs.writeFileSync(searchIndexPath, JSON.stringify(searchIndex), 'utf8');
   console.log(`✓ archives/search-index.json written (${searchIndex.length} total articles)`);
 
+  // Everything from the last 7 briefing days (sidebar vendor counts, week page, RSS)
+  const weekStart = new Date(Date.parse(`${dateStr}T00:00:00Z`) - 6 * 86400000).toISOString().slice(0, 10);
+  const weekEntries = searchIndex.filter(a => a.date >= weekStart);
+
   // ── Build the page HTML (shared by index.html and archive) ────────────────
   function buildHtml(template, { isArchive = false } = {}) {
     const cardsHtml = newsItems.length > 0
@@ -818,7 +822,7 @@ async function main() {
     html = html.replace(/<!--TOPIC_COUNT-->/g, String(topicCount));
     html = html.replace('<!--PODCAST_CARDS-->', podcastHtml);
     html = html.replace('<!--VENDOR_RADAR-->', vendorRadarHtml(newsItems));
-    html = html.replace('<!--INTELLIGENCE_PANEL-->', intelligencePanelHtml(newsItems));
+    html = html.replace('<!--INTELLIGENCE_PANEL-->', intelligencePanelHtml(newsItems, weekEntries));
     html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
     html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
     html = html.replace(/<!--META_DESCRIPTION-->/g, metaDesc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'));
@@ -837,9 +841,7 @@ async function main() {
   fs.writeFileSync(archiveHtmlPath, buildHtml(template, { isArchive: true }), 'utf8');
   console.log(`✓ archives/${dateStr}.html written`);
 
-  // ── Week in review + RSS: everything from the last 7 briefing days ────────
-  const weekStart = new Date(Date.parse(`${dateStr}T00:00:00Z`) - 6 * 86400000).toISOString().slice(0, 10);
-  const weekEntries = searchIndex.filter(a => a.date >= weekStart);
+  // ── Week in review + RSS ─────────────────────────────────────────────────
   const rangeLabel = `${displayDate(weekStart)} – ${buildDate}`;
   const picks = await pickTopStories(weekEntries);
   fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, rangeLabel, buildDate }), 'utf8');
