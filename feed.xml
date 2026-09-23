@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 22 Sep 2026 20:59:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 10:07:57 GMT</lastBuildDate>
+    <item>
+      <title>Discord MCP Server: Secure Setup for Claude &amp; AI Agents (2026)</title>
+      <link>https://www.strac.io/blog/discord-mcp-server</link>
+      <guid isPermaLink="true">https://www.strac.io/blog/discord-mcp-server</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;The Discord MCP server lets Claude, Cursor, ChatGPT, and AI agents read and act inside Discord via the Model Context Protocol, with DLP-grade redaction capabilities at the MCP layer. Discord MCP is rapidly becoming how AI agents read into Discord, and running it in 2026 without MCP-layer DLP control is a matter of when—not if—a security incident reaches your team.&lt;/p&gt;&lt;p&gt;Source: Strac · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Multi-Agent AI Systems Driving Supply Chain and Warehouse Execution at Scale</title>
+      <link>https://www.artificialintelligence-news.com/news/multi-agent-ai-systems-supply-chain-execution/</link>
+      <guid isPermaLink="true">https://www.artificialintelligence-news.com/news/multi-agent-ai-systems-supply-chain-execution/</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Lenovo reported operational transition on its global iChain infrastructure, linking an Order Fulfillment Agent and a Risk Management Agent directly to existing transaction platforms across 180 markets, 30+ factories, and 100 logistics centers. MIT and Symbotic demonstrated a 25% throughput increase using multi-robot path coordination in simulated e-commerce distribution facilities.&lt;/p&gt;&lt;p&gt;Source: Artificial Intelligence News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NDT Factory: Synthesizing Verified Network Digital Twins from Semantic Models via Multi-Agent LLM</title>
+      <link>https://arxiv.org/abs/2609.12170</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2609.12170</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Multi-agent LLM approach for automatically generating verified network digital twins from high-level semantic models. Bridges the gap between network intent and executable validation by using coordinated AI agents to synthesize, test, and refine network configurations.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Agents Are Becoming a New Malware Distribution Channel</title>
+      <link>https://www.artificialintelligence-news.com/news/ai-agents-are-becoming-a-new-malware-distribution-channel/</link>
+      <guid isPermaLink="true">https://www.artificialintelligence-news.com/news/ai-agents-are-becoming-a-new-malware-distribution-channel/</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Security analysis of autonomous AI agents as a new attack vector: agents making tool calls, accessing external systems, and downloading payloads without human validation create novel malware delivery paths. Raises operational security requirements for AIOps and agent-based systems.&lt;/p&gt;&lt;p&gt;Source: AI News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What's new for managed service providers: September 2026</title>
+      <link>https://techcommunity.microsoft.com/blog/partnernews/whats-new-for-msps-september-2026/4558733</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/blog/partnernews/whats-new-for-msps-september-2026/4558733</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Microsoft 365 and Azure platform updates targeting MSPs: JIT/PIM role templates without P1/P2 licensing, Graph-rebuilt Message Trace, expanded tenant governance, and new Unattended Remote Help for Windows. Addresses operational complexity for multi-tenant infrastructure management.&lt;/p&gt;&lt;p&gt;Source: Microsoft Tech Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI launches GPT-6 Sol and Luna, boasting lower cost and fewer mistakes</title>
+      <link>https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI expanded its GPT-6 family on September 22 with GPT-6 Sol and GPT-6 Luna. GPT-6 Sol makes about half as many factual errors as its predecessor, reaching Astra-level reliability at much lower cost. Sol is a balanced model for interactive and agentic coding, while Luna is a lightweight, cost-efficient option for smaller, faster tasks.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic Launches Claude Opus 5.5 With Fable-Level Performance at 40% Lower Cost</title>
+      <link>https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/</link>
+      <guid isPermaLink="true">https://www.macrumors.com/2026/09/22/anthropic-claude-opus-5-5/</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic launched Claude Opus 5.5 on September 22, the first model in a new 5.5 family, delivering performance comparable to Claude Fable 5.1 while costing 40% less than Opus 5. Opus 5.5 generates output over 30% faster than Opus 5 and surpasses Fable 5.1 on agentic coding, knowledge work, and multidisciplinary reasoning benchmarks.&lt;/p&gt;&lt;p&gt;Source: MacRumors · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xAI Launches Grok 4.7 With Larger Base Model and New Safeguards at Same Price Point</title>
+      <link>https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</link>
+      <guid isPermaLink="true">https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;xAI released Grok 4.7 on September 21 with a larger base model, longer reasoning runs, and an entirely new safeguard stack, priced identically to Grok 4.6. The model scores 46.3% on CursorBench 4.0 (vs. 40.4% for 4.6) and 71.0% on DeepSWE v1.1, with a 3.3% pass-through rate for risky prompts on internal HackerBench testing.&lt;/p&gt;&lt;p&gt;Source: SQ Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lumen Launches Intelligent Internet With On-Demand Bandwidth Scaling for AI Workloads</title>
+      <link>https://www.lightreading.com/ai-machine-learning/lumen-launches-intelligent-internet-bringing-cloud-like-agility-to-enterprises</link>
+      <guid isPermaLink="true">https://www.lightreading.com/ai-machine-learning/lumen-launches-intelligent-internet-bringing-cloud-like-agility-to-enterprises</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, enabling enterprises to buy connectivity in minutes and scale bandwidth up or down dynamically as AI, cloud, and business needs change. IDC research shows 37% of enterprises saw bandwidth needs grow over 50% year-over-year, while 29% struggled to align networks with AI workloads.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DvSum and Aurora Networks Showcase Agentic AI for Broadband Network Operations at SCTE TechExpo26</title>
+      <link>https://www.financialcontent.com/article/bizwire-2026-9-22-dvsum-to-showcase-the-future-of-ai-powered-telecom-operations-alongside-aurora-networks-at-scte-techexpo26</link>
+      <guid isPermaLink="true">https://www.financialcontent.com/article/bizwire-2026-9-22-dvsum-to-showcase-the-future-of-ai-powered-telecom-operations-alongside-aurora-networks-at-scte-techexpo26</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;DvSum and Aurora Networks will showcase agentic AI innovations for broadband operators at SCTE TechExpo26. ServAssure NXT AI combines Aurora Networks' service assurance platform with DvSum's patented autonomous AI technology and Sovereign Edge Gateway for closed-loop network and customer experience management.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>U.S. and China Establish Dedicated AI Governance Dialogue Ahead of Xi Summit</title>
+      <link>https://casrai.org/news/us-china-ai-talks-trump-xi-summit-2026</link>
+      <guid isPermaLink="true">https://casrai.org/news/us-china-ai-talks-trump-xi-summit-2026</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The United States and China are building a dedicated government-to-government channel on AI — a proposed working-level dialogue on shared AI-safety risks expected around President Xi Jinping's September 24, 2026 visit to Washington. This represents the first formal bilateral discussions devoted exclusively to AI governance between the two superpowers since Trump's second term began.&lt;/p&gt;&lt;p&gt;Source: CASRAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Colorado Releases Revised ADMT and Chatbot Safety Regulations for September 23 Deadline</title>
+      <link>https://vorplabs.com/ai-regulatory-updates/united-states/2026-09/colorado-admt-rules-california-ai-bills-ftc-cmg-order</link>
+      <guid isPermaLink="true">https://vorplabs.com/ai-regulatory-updates/united-states/2026-09/colorado-admt-rules-california-ai-bills-ftc-cmg-order</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Colorado's revised draft ADMT and Chatbot Safety rules are expected by September 23, 2026. The revised regulatory framework replaces Colorado's 2024 AI Act with operationalized rules for automated decision-making technology and conversational AI, with enforcement beginning January 1, 2027. Practitioners have until October 26 to comment.&lt;/p&gt;&lt;p&gt;Source: Vorp Labs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Treasury Secretary Bessent Rejects Frontier AI Legal Immunity Demands Ahead of China Talks</title>
+      <link>https://www.nation.com.pk/22-Sep-2026/us-china-agree-ai-dialogues-ahead-washington-summit</link>
+      <guid isPermaLink="true">https://www.nation.com.pk/22-Sep-2026/us-china-agree-ai-dialogues-ahead-washington-summit</guid>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Treasury Secretary Scott Bessent firmly rejected calls from frontier AI developers seeking federal legal immunity, criticizing labs for claiming catastrophic risks while lobbying for liability exemptions. The statement sets domestic AI governance parameters ahead of the September 24 U.S.-China summit discussions on AI governance.&lt;/p&gt;&lt;p&gt;Source: The Nation · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI</title>
       <link>https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html</link>
@@ -486,134 +590,6 @@
       <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;The central question is no longer whether AI development should be regulated, but whether governments can realistically agree to meaningful limits while competing for technological dominance. A country that slows unilaterally risks falling behind competitors, creating a classic security dilemma where safety measures create strategic vulnerability.&lt;/p&gt;&lt;p&gt;Source: Modern Diplomacy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Exaforce Launches AI Security to Detect and Shut Down Rogue AI Agents in Production</title>
-      <link>https://siliconangle.com/2026/09/15/exaforce-adds-a-kill-switch-for-ai-agents-that-go-rogue/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/15/exaforce-adds-a-kill-switch-for-ai-agents-that-go-rogue/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;Exaforce launched Exaforce AI Security on September 15, enabling security teams to detect and terminate hostile AI agents operating across enterprise environments. The platform correlates disparate signals—agent activity, identity context, endpoint telemetry, and file access—to identify misuse and data exfiltration patterns that individual log entries would miss, addressing a critical gap in SOC operations as AI agents proliferate.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic Publishes September 2026 Threat Report: Multi-Agent Misuse at Scale and Supply Chain Attacks Using Claude</title>
-      <link>https://www.anthropic.com/threat-intelligence-report-september-2026</link>
-      <guid isPermaLink="true">https://www.anthropic.com/threat-intelligence-report-september-2026</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Anthropic's September 2026 report details how AI misuse of Claude models developed in phishing, weapon-building, supply-chain compromises and other cyber-operations, documenting disrupted activity between December 2025 and August 2026. Threat actors increasingly use Claude as an orchestrator across multiple stages of the cyber kill chain, with multi-agent frameworks automating substantial parts of attacks including reconnaissance, exploitation, and data theft.&lt;/p&gt;&lt;p&gt;Source: Anthropic Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Templafy Brings Document Agents to Claude, ChatGPT and Microsoft Copilot through MCP</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/15/3361927/0/en/templafy-brings-document-agents-to-claude-chatgpt-and-microsoft-copilot-through-mcp.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/15/3361927/0/en/templafy-brings-document-agents-to-claude-chatgpt-and-microsoft-copilot-through-mcp.html</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Templafy announced availability as a native connector across Claude, ChatGPT and Microsoft Copilot via MCP on September 15, 2026. The Model Context Protocol integration connects third-party AI assistants directly with Templafy Document Agents, providing a centralized document orchestration layer that enables agents to invoke document formatting and approval workflows as first-class tool calls.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Code Updates: MCP Disconnect Handling, Authentication Errors, and Observability Improvements</title>
-      <link>https://releasebot.io/updates/anthropic/claude-code</link>
-      <guid isPermaLink="true">https://releasebot.io/updates/anthropic/claude-code</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Claude Code shipped improvements to MCP session reliability including better MCP disconnect handling, clearer authentication error messaging when MCP server sign-in expires mid-session, and new gateway hint headers (x-claude-code-request-class, x-claude-code-agent-type, x-claude-code-prev-tool-durations) for LLM gateways. Updates also include improved auto mode, permissions handling, and Code Review reliability.&lt;/p&gt;&lt;p&gt;Source: Releasebot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google Mandiant: Autonomous AI Systems Create New SOC Defense Challenge</title>
-      <link>https://www.helpnetsecurity.com/2026/09/16/google-mandiant-enterprise-ai-security-risks-report/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/09/16/google-mandiant-enterprise-ai-security-risks-report/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Organizations are deploying autonomous AI systems that execute API calls and optimize production configurations, while attacks expand from direct prompts to indirect prompt injection and AI supply chain compromises. Mandiant's AI Risk and Resilience report warns that poisoned data sources, model dependencies, or extension hooks can turn trusted agents into channels for internal reconnaissance, lateral movement, or autonomous escape from sandboxes.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cornelis Networks raises $205M, launches Active Compute Fabric for AI cluster scale-up/scale-out</title>
-      <link>https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;Cornelis Networks announced a new Active Compute Fabric architecture to support scale-up and scale-out networks for AI workloads, alongside a $205 million funding round led by IAG Capital Partners and a strategy collaboration with Qualcomm. The 400 Gbps CN5000 started shipping September 14, with claims of 2x message rate and 35% lower latency compared to other 400 Gbps solutions, and 6x faster collective communications compared to RoCE implementations. The 800 Gbps CN6000 is sampling with customers ahead of Q4 2026 availability, with both products built on open standards: UALink and ESUN for scale-up, Ultra Ethernet for scale-out.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cornelis Networks Raises $205M for GPU-Agnostic AI Cluster Networking</title>
-      <link>https://techcrunch.com/2026/09/15/cornelis-networks-raises-205m-to-challenge-nvidias-ai-networking-grip/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/09/15/cornelis-networks-raises-205m-to-challenge-nvidias-ai-networking-grip/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Intel spinoff Cornelis Networks raised $205 million and introduced Active Compute Fabric, an open, GPU-agnostic networking layer for AI clusters. Its current 400 Gbps CN5000 switch is shipping, with an 800 Gbps CN6000 generation planned next. This addresses vendor lock-in to Nvidia networking solutions in large-scale AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Atria Dawn Preview: 744B Open Agentic Model with 769-Task Human Evaluation</title>
-      <link>https://arxiv.org/abs/2609.13031</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2609.13031</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Shanghai AI Laboratory released Atria Dawn Preview—a 744B parameter mixture-of-experts agentic model evaluated across 16 benchmarks via a 143-author preprint. A study of 769 tasks from 56 human evaluators found that about one-third of AI-assisted tasks were infeasible without AI, with participants retaining final decision authority. Released under MIT license on Hugging Face.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Z.ai Raises ~$5B for GLM Foundation Models; ByteDance Secures $29.6B Syndicated Loan</title>
-      <link>https://blog.buildfastwithai.com/ai-news-today-september-16-2026</link>
-      <guid isPermaLink="true">https://blog.buildfastwithai.com/ai-news-today-september-16-2026</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Z.ai completed a ~$5 billion fundraise (HK$15.68B equity + RMB 20.14B convertible bonds) with 60% allocated to next-generation GLM foundation models and infrastructure. Concurrently, ByteDance secured a $29.6B three-year syndicated loan from 28+ banks, with state-backed institutions providing 64% at subsidized rates. Combined $34.6B+ in Chinese AI infrastructure financing signals geographic compute consolidation.&lt;/p&gt;&lt;p&gt;Source: AI News Today · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Fable 5.1 and GPT-5.6 Tiers Released; Reasoning Models Now Standard at Frontier Labs</title>
-      <link>https://www.swfte.com/ai/leaderboard</link>
-      <guid isPermaLink="true">https://www.swfte.com/ai/leaderboard</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Anthropic shipped Claude Fable 5.1 (September 1) with reasoning enabled by default and half-width prompt-cache minimums (512 tokens). OpenAI released three GPT-5.6 tiers (Sol $5/$30, Terra $2/$12, Luna $0.20/$1.20) with extended thinking standard. Extended reasoning-time computation is now cost-competitive with traditional greedy decoding across frontier labs.&lt;/p&gt;&lt;p&gt;Source: Swfte AI Model Leaderboard · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google opens Claude Opus 5 access to all engineers via Antigravity, breaking internal-only Gemini policy</title>
-      <link>https://www.androidheadlines.com/2026/09/google-is-finally-letting-its-own-engineers-use-anthropics-claude-ai-coding-tools.html</link>
-      <guid isPermaLink="true">https://www.androidheadlines.com/2026/09/google-is-finally-letting-its-own-engineers-use-anthropics-claude-ai-coding-tools.html</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google is officially letting engineers use Anthropic's flagship Claude Opus 5 model for internal coding tasks, reversing years of restrictions on third-party AI tools. Engineers can use Opus 5 inside Antigravity, Google's internal development platform, with usage governed by quotas. Google's delayed Gemini 3.5 Pro and failure of candidate models to demonstrate sufficient advantages over Flash series prompted this shift toward engineering velocity.&lt;/p&gt;&lt;p&gt;Source: Business Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Federated Wireless Wins Most Innovative Telco AI/ML Product or Solution in Light Reading's 2026 Leading Lights Awards</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/14/3361484/0/en/federated-wireless-wins-most-innovative-telco-ai-ml-product-or-solution-in-light-reading-s-2026-leading-lights-awards.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/14/3361484/0/en/federated-wireless-wins-most-innovative-telco-ai-ml-product-or-solution-in-light-reading-s-2026-leading-lights-awards.html</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Federated Wireless' Spectrum AI won Light Reading's 2026 Leading Lights Award for most innovative telco AI/ML solution. The platform applies Physical AI to shared spectrum management, using machine learning on radio propagation, interference, and spectrum coordination at the RF layer to unlock additional network capacity.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI, Anthropic, Google DeepMind Coordinate on AI Safety Measures</title>
-      <link>https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;OpenAI is working with Anthropic and Google DeepMind to address AI safety issues, with Anthropic CEO Dario Amodei calling for leading model makers to voluntarily slow development pace. OpenAI CEO Sam Altman and Google DeepMind chair Demis Hassabis have endorsed this approach, marking rare agreement among rivals on safety constraints.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lawmakers Face Pressure to Act on AI Safeguards as Industry Leaders Call for Slowdown</title>
-      <link>https://www.poynter.org/fact-checking/2026/congress-ai-regulation-safety-bills-proposals/</link>
-      <guid isPermaLink="true">https://www.poynter.org/fact-checking/2026/congress-ai-regulation-safety-bills-proposals/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;With Anthropic CEO Dario Amodei, OpenAI's Sam Altman, Google DeepMind's Demis Hassabis, and Elon Musk all calling for AI development slowdowns, lawmakers face mounting pressure to act on safety. An Anthropic researcher's resignation with warnings that AI could &amp;quot;kill us all by the end of the decade&amp;quot; has pushed AI safety concerns into mainstream political discourse.&lt;/p&gt;&lt;p&gt;Source: Poynter · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EU AI Act Enforcement Phase Begins: Article 50 Compliance Deadline Passed</title>
-      <link>https://decodethefuture.org/en/eu-ai-act-explained/</link>
-      <guid isPermaLink="true">https://decodethefuture.org/en/eu-ai-act-explained/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The EU AI Act entered its active enforcement phase on August 2, 2026, with Article 50 transparency duties now binding. The European AI Office and 24 national authorities launched their first compliance inspection wave in September, targeting automated hiring tools, credit assessment systems, and AI triaging tools in healthcare.&lt;/p&gt;&lt;p&gt;Source: Decode The Future · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI Safety Researcher Resignation Exposes Systemic Risks at Anthropic and OpenAI</title>
-      <link>https://time.com/article/2026/09/15/ai-anthropic-researcher-quits-coxon-slowdown/</link>
-      <guid isPermaLink="true">https://time.com/article/2026/09/15/ai-anthropic-researcher-quits-coxon-slowdown/</guid>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Jacob Coxon's resignation from Anthropic, citing belief that AI could cause human extinction by decade's end, coincided with Dario Amodei's 3,800-word essay on development slowdown. Anthropic disclosed it had blocked multiple attempts to use Claude for bioweapon research, including attempts to increase infectiousness of chikungunya virus from state military sources.&lt;/p&gt;&lt;p&gt;Source: Time · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-16.html&quot;&gt;Sep 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
