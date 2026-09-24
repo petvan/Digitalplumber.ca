@@ -6,134 +6,174 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 24 Sep 2026 13:06:06 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 14:57:12 GMT</lastBuildDate>
+    <item>
+      <title>AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</title>
+      <link>https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/</link>
+      <guid isPermaLink="true">https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Ops &amp; Observability</category>
+      <description>&lt;p&gt;Researchers introduce an LSTM autoencoder-based AI observability framework integrated with Prometheus-Grafana for anomaly detection in Kubernetes microservice environments, addressing the gap where traditional rule-based monitoring is insufficient for modern cloud-native architectures.&lt;/p&gt;&lt;p&gt;Source: IJSRET · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24</title>
+      <link>https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations</link>
+      <guid isPermaLink="true">https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;NetBrain Live takes place September 22-24, 2026 in Boston unveiling full suite of agents built on context platform spanning diagnosis, remediation, change management, validation, and assessment. Represents production-grade agentic NetOps for network operations domain.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</title>
+      <link>https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html</link>
+      <guid isPermaLink="true">https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;51% of large organizations now run agentic systems that execute autonomous modifications in production environments. 75% of organizations have already deployed AI for network operations, with 84% of technology executives anticipating running an agent-directed operational framework within the next twelve months. The study identifies a critical operational bottleneck: the average organization would need roughly 100 IT specialists to clear its daily network alert backlog by hand.&lt;/p&gt;&lt;p&gt;Source: Cisco Newsroom / Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation</title>
+      <link>https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html</link>
+      <guid isPermaLink="true">https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Cisco released an updated Catalyst Center 3.3.1 datasheet (September 22, 2026) featuring new AI and AgenticOps capabilities, including the Cisco AI Assistant, and network automation deployment, configuration management, compliance, and lifecycle management features. The update reflects Cisco's push to embed agentic operations directly into its enterprise network management platform.&lt;/p&gt;&lt;p&gt;Source: Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HPE Reports 36% Networking Orders Growth; Juniper Integration On Track</title>
+      <link>https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115</link>
+      <guid isPermaLink="true">https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Hewlett Packard Enterprise reported networking revenue grew 10% year over year in Q3 FY2026, with networking orders rising 36%, and cloud and AI orders up about 75%. HPE linked the integration to 14-17% networking growth in fiscal 2027. The strong order momentum reflects accelerating demand for AI-native networking infrastructure from the Juniper acquisition.&lt;/p&gt;&lt;p&gt;Source: AD-HOC NEWS / Futuriom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>51% of Large Organizations Run Agentic Systems in Production Networks</title>
+      <link>https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/</link>
+      <guid isPermaLink="true">https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Industry research indicates that 51% of large organizations now run agentic systems that execute autonomous modifications in production environments rather than offering static operational advice. Over 84% of technology executives anticipate running an agent-directed operational framework within the next twelve months.&lt;/p&gt;&lt;p&gt;Source: Telecom Technology News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</title>
       <link>https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</link>
       <guid isPermaLink="true">https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Microsoft moved security information and event management features from Sentinel into Defender with a new Integrated Security Operations Center (ISOC) designed around AI agents. The shift acknowledges that attackers are weaponizing agents, forcing defenders to rebuild operations so agents and humans collaborate instead of operating separately.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Security Automation</category>
+      <description>&lt;p&gt;Microsoft announced the Integrated Security Operations Center (ISOC) in Microsoft Defender, moving security information and event management features from Microsoft Sentinel directly into Defender. The architecture addresses attackers using agents to automate execution at scale, requiring a modern cyber stack with environment-wide visibility so security operations and native protection function as one system. ISOC brings XDR, SIEM, threat intelligence, automation, and AI together in Microsoft Defender.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI Agents in Network Engineering: What Actually Works in 2026</title>
-      <link>https://dev.to/erik_anderson_c41dbafd423/ai-agents-in-network-engineering-what-actually-works-in-2026-23na</link>
-      <guid isPermaLink="true">https://dev.to/erik_anderson_c41dbafd423/ai-agents-in-network-engineering-what-actually-works-in-2026-23na</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;A practitioner post from a network engineer with 30+ production automation projects cuts through AI hype to assess which tools—from GitHub Copilot to Claude Code—actually deliver measurable results in network automation workflows. Claude Code acts as an agent that can read codebases, execute multi-step tasks autonomously, and build entire automation projects from plain-English descriptions.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Operations: AI Trends Focus on Agents Running End-to-End Processes</title>
-      <link>https://completeaitraining.com/blog/operations-ai-trends-to-focus-on-agents-running-end-to-end-processes-2026-09-14/</link>
-      <guid isPermaLink="true">https://completeaitraining.com/blog/operations-ai-trends-to-focus-on-agents-running-end-to-end-processes-2026-09-14/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Operations leaders are now watching AI agents execute entire end-to-end processes—not just answering questions or running isolated tasks. The shift is measurable across grids, warehouses, supply chains, and contact centers. The consistent pattern: simplify the process first, connect agents to governed systems of record, and keep humans on exceptions and final approvals.&lt;/p&gt;&lt;p&gt;Source: Complete AI Training · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>A Wave of New AI Agent Tools Emerging Around Early September 2026</title>
-      <link>https://www.dutchstartup.ai/en/news/a-wave-of-new-ai-agent-tools-is-emerging-around-early-september-2026</link>
-      <guid isPermaLink="true">https://www.dutchstartup.ai/en/news/a-wave-of-new-ai-agent-tools-is-emerging-around-early-september-2026</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Around September 4, 2026, multiple AI agent frameworks and tools shipped simultaneously—GitHub HydraFusion, Creator platforms, and major updates to LangGraph, CrewAI—signaling industry shift from proof-of-concept to production-ready multi-agent deployment. CrewAI reports Agent-to-Agent (A2A) integration is now enterprise-grade for production multi-agent scenarios.&lt;/p&gt;&lt;p&gt;Source: Dutch Startup AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SASE OpsLab Launches Industry-First Lifecycle Management Platform for Hybrid SASE Operations</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</guid>
+      <title>Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</title>
+      <link>https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting</link>
+      <guid isPermaLink="true">https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>Security Automation</category>
-      <description>&lt;p&gt;SASE OpsLab Ltd announced a lifecycle management platform designed to automate long-term SASE infrastructure operations beyond initial deployment. The Enterprise edition delivers vendor-agnostic change management via OpsKits, self-designed auto-remediation scenarios, and continuous infrastructure drift detection with automatic rollback capabilities—addressing the industry's Day-2 operational burden.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Palo Alto Networks pushed deeper into continuous AI-driven vulnerability hunting, creating direct competition with CrowdStrike in the race to automate more of the security workflow. Palo Alto's Unit 42 used its own AI to uncover over 14,000 unknown vulnerabilities, demonstrating practical machine-speed threat discovery. The real contest is moving beyond endpoint protection toward discovering exposures, deciding which threats matter, and fixing them with less human intervention.&lt;/p&gt;&lt;p&gt;Source: GuruFocus · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Agentic Security Shift to Runtime Oversight: LLM Policy Validation, Browser Session Anomaly Detection, and Autonomous Vulnerability Discovery</title>
-      <link>https://agenticsecurity.substack.com/p/the-agentic-security-newsletter-week-6c2</link>
-      <guid isPermaLink="true">https://agenticsecurity.substack.com/p/the-agentic-security-newsletter-week-6c2</guid>
+      <title>Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations</title>
+      <link>https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/</link>
+      <guid isPermaLink="true">https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>Security Automation</category>
-      <description>&lt;p&gt;Security teams are deploying runtime oversight systems that treat autonomous agents as monitored principals, validating LLM-generated configurations against existing policy before deployment. Research shows that grounding LLM network config generation cuts missed security-policy violations by 30%, while tools like Citrix Session Insights and Google's Agent Anomaly Detection flag excessive permissions and runaway loops in real time.&lt;/p&gt;&lt;p&gt;Source: Agentic Security Substack · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Microsoft announced the integrated security operations center (ISOC) in Microsoft Defender on September 23, 2026, a foundation for agentic security that brings SIEM and threat protection together in one system as a shared foundation on which people and agents can see, understand, and act across the environment without running separate systems. Cyberattackers are using agents to automate execution at scale, with work that once required entire teams now requiring a single operator and an agent framework. Out-of-the-box security operations capabilities include case management, workbooks, and playbook generation in natural language.&lt;/p&gt;&lt;p&gt;Source: Unite.AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>NIST Releases SP 800-82r4 Draft: Revised OT Security Guidance with Zero Trust and Cybersecurity Framework 2.0 Alignment</title>
-      <link>https://securityboulevard.com/2026/09/daily-ot-security-news-september-22-2026/</link>
-      <guid isPermaLink="true">https://securityboulevard.com/2026/09/daily-ot-security-news-september-22-2026/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;NIST issued the initial public draft of SP 800-82r4, a revised Guide to Operational Technology (OT) Security, addressing OT systems' distinct performance, reliability, and safety requirements. The draft restructures guidance around Cybersecurity Framework 2.0 and expands advice on risk management, asset management, monitoring and detection, system-management security, and zero-trust principles across sectors including water, transportation, and IIoT. Public comment period runs through November 30, 2026.&lt;/p&gt;&lt;p&gt;Source: Security Boulevard / Viakoo · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WhiteFiber Launches WhiteFiber Continuum: First Commercially Available Distributed GPU Supercluster Network</title>
-      <link>https://www.stocktitan.net/news/WYFI/white-fiber-launches-white-fiber-continuum-the-highest-performing-e4ix9347h0t4.html</link>
-      <guid isPermaLink="true">https://www.stocktitan.net/news/WYFI/white-fiber-launches-white-fiber-continuum-the-highest-performing-e4ix9347h0t4.html</guid>
+      <title>BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</title>
+      <link>https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355</link>
+      <guid isPermaLink="true">https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Infrastructure</category>
-      <description>&lt;p&gt;WhiteFiber announced commercial availability of WhiteFiber Continuum, a cross-data-center networking solution linking geographically separated data centers into a single logical GPU supercluster. Built on DriveNets' Ethernet-based AI fabric and WEKA's NeuralMesh storage layer, delivering 136 Tbps throughput for distributed AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: Investing.com / PRNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;BCE presented its AI infrastructure strategy at the CIBC Eastern Institutional Investor Conference on September 24, 2026, outlining plans centered on better customer experience, steady fiber gains, and a fast-growing AI infrastructure business. Management acknowledged heavy capital demands as the company pushes into data centers, U.S. fiber expansion, and media transformation.&lt;/p&gt;&lt;p&gt;Source: Investing.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>While GPUs Get the Headlines, These 3 Stocks Build the Networks That Actually Move Data</title>
-      <link>https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</link>
-      <guid isPermaLink="true">https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;Analysis of the networking supercycle driven by AI infrastructure scaling. Cisco booked $9.3B in AI infrastructure orders in FY2026, identifying network fabric as the critical constraint—a training cluster is only as fast as its slowest link when tens of thousands of accelerators must synchronize gradients in lockstep across multi-data-center deployments.&lt;/p&gt;&lt;p&gt;Source: 24/7 Wall St. · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Selector Launches Foundry AI Agents into Network Operations Platform</title>
-      <link>https://convergedigest.com/selector-foundry-agentic-ai-network-operations/</link>
-      <guid isPermaLink="true">https://convergedigest.com/selector-foundry-agentic-ai-network-operations/</guid>
+      <title>Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference</title>
+      <link>https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</link>
+      <guid isPermaLink="true">https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Selector Foundry adds a specialized multi-agent layer to the company's observability and AIOps platform for incident investigation, root-cause analysis and governed network operations workflows, with multiple agents backed by telemetry collection, normalization, correlation and machine-learning infrastructure.&lt;/p&gt;&lt;p&gt;Source: Converge Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Anthropic shipped Claude Opus 5.5 on September 22, achieving 40% cost reduction versus Opus 5 and 30% faster output speed while matching Fable 5.1 performance. The model includes 1M token context, always-on adaptive thinking, and inline tool support—built for long-running agentic coding and knowledge work at scale.&lt;/p&gt;&lt;p&gt;Source: Anthropic Blog / GitHub Changelog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Snorkel AI Raises $350M Series E at $3.5B Valuation as Demand for Frontier AI Training Data Surges</title>
-      <link>https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/</guid>
+      <title>OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body</title>
+      <link>https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/</link>
+      <guid isPermaLink="true">https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Snorkel AI announced a $350 million Series E financing at a $3.5 billion valuation on September 22, 2026, with its data-as-a-service offering having grown over 18x since launch nearly a year earlier, crossing a $375 million annualized revenue run rate in the week of the announcement.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenAI confirmed on September 15 that it is in active coordination with Anthropic and Google DeepMind since July 2026 to establish an independent, industry-led standards body for frontier AI model safety. The effort aims to create shared evaluation protocols, external safety assessments, and pre-release checks before public deployment, with a target launch in late 2026 or 2027.&lt;/p&gt;&lt;p&gt;Source: Bloomberg / Crypto Briefing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OpenAI Releases GPT-6 Sol and Luna, Expanding Model Tier with Lower-Cost Variants</title>
+      <title>OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements</title>
       <link>https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</link>
       <guid isPermaLink="true">https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenAI launched GPT-6 Sol and GPT-6 Luna on September 22, 2026, two new models developed using methods similar to Astra's for improvements in professional work, factuality, coding, computer use, and alignment, with GPT-6 Sol designed for everyday work at lower cost than Astra and GPT-6 Luna an even cheaper model optimized for fast responses and high-volume tasks.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI expanded the GPT-6 generation with updated Sol and Luna models that extend Astra's benefits by making that intelligence more efficient and accessible. Both models feature a 50% price cut for developers, with Sol cutting factual error rates in half compared to GPT-5.6 Sol. On AutomationBench and DeepSWE 1.1 benchmarks, GPT-6 Sol matched or approached Anthropic's Fable 5 and Opus 5 models at 80–90% lower task costs.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xAI Releases Grok 4.7 with Stronger Agentic Benchmarks at Flat Pricing</title>
-      <link>https://www.iweaver.ai/blog/grok-4-7/</link>
-      <guid isPermaLink="true">https://www.iweaver.ai/blog/grok-4-7/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;xAI released Grok 4.7 on September 21, 2026, its latest frontier model for coding, agentic tasks, and professional knowledge work, using a new larger base model, longer reinforcement learning on harder multi-hour tasks, and maintaining Grok 4.6's $2/$6 per million token pricing while gaining 111 Elo on agentic benchmarks.&lt;/p&gt;&lt;p&gt;Source: Artificial Analysis · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Opus 5.5 launches with 40% cost reduction and 30% speed gains</title>
-      <link>https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</guid>
+      <title>Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost</title>
+      <link>https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained</link>
+      <guid isPermaLink="true">https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, delivering a 40% cost reduction versus Opus 5 and output speeds increased by over 30%. Pricing is $4/$20 per million tokens (a 20% reduction from predecessor), with cache reads at $0.20 per million tokens, representing a 60% decrease. This release is explicitly framed as the first since Anthropic's CEO called for 'pacing the frontier,' with external evaluators METR, Frontier Design, and the US Center for AI Standards and Innovation testing the model before release.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, less than two months after Opus 5. The headline pitch is simple: it delivers Claude Fable 5.1-class performance while cutting execution costs by roughly 40% compared to Opus 5. Pricing drops 20% on raw tokens to $4 per million input tokens and $20 per million output tokens, while prompt cache reads drop 60% down to $0.20 per million.&lt;/p&gt;&lt;p&gt;Source: Vellum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xAI releases Grok 4.7 with larger base model and longer reasoning at same Grok 4.6 pricing</title>
-      <link>https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</link>
-      <guid isPermaLink="true">https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</guid>
+      <title>Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;xAI released Grok 4.7 on September 21, 2026, with a larger base model, longer reasoning runs, and a new safeguard stack, priced the same as Grok 4.6. The model scored 46.3% on CursorBench 4.0 for longer-running coding tasks (up from 40.4% for Grok 4.6), and posted 71.0% on DeepSWE v1.1 at high effort (up from 65.2%). xAI built an entirely new safeguard stack for the release, citing a 3.3% pass-through rate for risky prompts on its internal HackerBench v0.3 test.&lt;/p&gt;&lt;p&gt;Source: SQ Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Google DeepMind has transitioned its next-generation model, Gemini 4, into the early post-training phase, confirmed by Koray Kavukcuoglu at The Information AI Agenda Live Summit on September 23-24, 2026. Kavukcuoglu signaled an aggressive timeline: intention to roll out an early post-training version as soon as possible, with no specific date but a target much earlier than end of year. This marks a critical pivot for a company whose current frontier offering sits 40 percent behind the market leaders on the standard intelligence benchmark.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI Lab Leaders Call for Global Regulation at UN Security Council Amid US Rejection</title>
-      <link>https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation</link>
-      <guid isPermaLink="true">https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation</guid>
+      <title>T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience</title>
+      <link>https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make</link>
+      <guid isPermaLink="true">https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;T-Mobile is launching new AI-powered AutoPilot capabilities and expanding Dynamic CX nationwide to make its 5G network stronger, smarter and more resilient. Built into T-Mobile's Self-Organizing Network (SON), AutoPilot helps the network make real-time adjustments faster as conditions change, while Dynamic CX uses AI to anticipate demand and optimize performance automatically, with testing showing real-time network adjustments in about half the time. During Winter Storm Fern, SON helped T-Mobile keep sites online for more than 250,000 additional minutes across 30+ states and made 30,000+ antenna adjustments to extend coverage.&lt;/p&gt;&lt;p&gt;Source: T-Mobile Newsroom / TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads</title>
+      <link>https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises</link>
+      <guid isPermaLink="true">https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, giving customers a new digital internet experience that lets them buy connectivity in minutes and scale bandwidth up or down as AI, cloud, and business needs change. IDC research found that 37% of enterprises saw bandwidth needs grow by more than 50% year over year, while 29% struggled to align their networks with AI workloads. The service is available immediately at more than 10 million U.S. business locations and can scale to bandwidth levels of up to 100 Gbps.&lt;/p&gt;&lt;p&gt;Source: Business Wire / Lumen · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom</title>
+      <link>https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/</link>
+      <guid isPermaLink="true">https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Under South Korea's Ministry of Science and ICT's Hyper AI Network initiative, Samsung has been selected as the sole global vendor for KT's project and the main vendor for SK Telecom's, with projects beginning in October 2026 using 5G Standalone private networks at industrial sites to test how AI can be integrated directly into network operations and physical machines. KT will conduct trials at HD Hyundai Samho's Yeongam shipyard where AI-powered robots will be used for welding and painting, with Samsung providing its Network in a Server platform combining virtualized RAN, AI computing and applications at the network edge.&lt;/p&gt;&lt;p&gt;Source: Samsung Electronics / Sammy Fans · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR</title>
+      <link>https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report</link>
+      <guid isPermaLink="true">https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;The artificial intelligence for information technology operations (AIOps) for telecom operations market has grown exponentially, expanding from $1.25 billion in 2025 to $1.83 billion in 2026 at a 46% CAGR, and is expected to reach $6.69 billion in 2030 at a 38.3% CAGR. Growth is attributed to telecom network complexity, increasing adoption of AI in IT operations, cloud computing in telecom, demand for real-time analytics, and need for automated infrastructure management.&lt;/p&gt;&lt;p&gt;Source: The Business Research Company · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI</title>
+      <link>https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/</link>
+      <guid isPermaLink="true">https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/</guid>
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei called for global AI oversight at the UN Security Council, with Amodei warning that poorly managed AI could pose risks to humanity. The Trump administration's representative rejected the push, stating the US &amp;quot;totally rejects&amp;quot; international control of AI governance.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenAI published a position paper advocating for the U.S. to lead an international effort to develop global technical standards for frontier AI, specifically around recursive self-improvement (RSI) capabilities. The company proposes leveraging existing AI safety institutes through a Center for AI Standards and Innovation (CAISI) to facilitate coordinated standard-setting across democratic nations.&lt;/p&gt;&lt;p&gt;Source: PYMNTS.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement</title>
+      <link>https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit</link>
+      <guid isPermaLink="true">https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Google DeepMind founder Demis Hassabis proposed an industry-funded, majority-independent standards body modeled on FINRA answerable to the U.S. government. Anthropic's Dario Amodei calls for binding regulation through a government agency modeled on the FAA with authority to block unsafe model releases, while OpenAI has proposed an IAEA-style body. These competing visions shape policy as frontier labs navigate increased scrutiny.&lt;/p&gt;&lt;p&gt;Source: Center for Strategic and International Studies · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks</title>
