@@ -6,7 +6,135 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 23 Sep 2026 14:57:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 13:06:06 GMT</lastBuildDate>
+    <item>
+      <title>Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</title>
+      <link>https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Microsoft moved security information and event management features from Sentinel into Defender with a new Integrated Security Operations Center (ISOC) designed around AI agents. The shift acknowledges that attackers are weaponizing agents, forcing defenders to rebuild operations so agents and humans collaborate instead of operating separately.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Agents in Network Engineering: What Actually Works in 2026</title>
+      <link>https://dev.to/erik_anderson_c41dbafd423/ai-agents-in-network-engineering-what-actually-works-in-2026-23na</link>
+      <guid isPermaLink="true">https://dev.to/erik_anderson_c41dbafd423/ai-agents-in-network-engineering-what-actually-works-in-2026-23na</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;A practitioner post from a network engineer with 30+ production automation projects cuts through AI hype to assess which tools—from GitHub Copilot to Claude Code—actually deliver measurable results in network automation workflows. Claude Code acts as an agent that can read codebases, execute multi-step tasks autonomously, and build entire automation projects from plain-English descriptions.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Operations: AI Trends Focus on Agents Running End-to-End Processes</title>
+      <link>https://completeaitraining.com/blog/operations-ai-trends-to-focus-on-agents-running-end-to-end-processes-2026-09-14/</link>
+      <guid isPermaLink="true">https://completeaitraining.com/blog/operations-ai-trends-to-focus-on-agents-running-end-to-end-processes-2026-09-14/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Operations leaders are now watching AI agents execute entire end-to-end processes—not just answering questions or running isolated tasks. The shift is measurable across grids, warehouses, supply chains, and contact centers. The consistent pattern: simplify the process first, connect agents to governed systems of record, and keep humans on exceptions and final approvals.&lt;/p&gt;&lt;p&gt;Source: Complete AI Training · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Wave of New AI Agent Tools Emerging Around Early September 2026</title>
+      <link>https://www.dutchstartup.ai/en/news/a-wave-of-new-ai-agent-tools-is-emerging-around-early-september-2026</link>
+      <guid isPermaLink="true">https://www.dutchstartup.ai/en/news/a-wave-of-new-ai-agent-tools-is-emerging-around-early-september-2026</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Around September 4, 2026, multiple AI agent frameworks and tools shipped simultaneously—GitHub HydraFusion, Creator platforms, and major updates to LangGraph, CrewAI—signaling industry shift from proof-of-concept to production-ready multi-agent deployment. CrewAI reports Agent-to-Agent (A2A) integration is now enterprise-grade for production multi-agent scenarios.&lt;/p&gt;&lt;p&gt;Source: Dutch Startup AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SASE OpsLab Launches Industry-First Lifecycle Management Platform for Hybrid SASE Operations</title>
+      <link>https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Security Automation</category>
+      <description>&lt;p&gt;SASE OpsLab Ltd announced a lifecycle management platform designed to automate long-term SASE infrastructure operations beyond initial deployment. The Enterprise edition delivers vendor-agnostic change management via OpsKits, self-designed auto-remediation scenarios, and continuous infrastructure drift detection with automatic rollback capabilities—addressing the industry's Day-2 operational burden.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Agentic Security Shift to Runtime Oversight: LLM Policy Validation, Browser Session Anomaly Detection, and Autonomous Vulnerability Discovery</title>
+      <link>https://agenticsecurity.substack.com/p/the-agentic-security-newsletter-week-6c2</link>
+      <guid isPermaLink="true">https://agenticsecurity.substack.com/p/the-agentic-security-newsletter-week-6c2</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Security Automation</category>
+      <description>&lt;p&gt;Security teams are deploying runtime oversight systems that treat autonomous agents as monitored principals, validating LLM-generated configurations against existing policy before deployment. Research shows that grounding LLM network config generation cuts missed security-policy violations by 30%, while tools like Citrix Session Insights and Google's Agent Anomaly Detection flag excessive permissions and runaway loops in real time.&lt;/p&gt;&lt;p&gt;Source: Agentic Security Substack · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NIST Releases SP 800-82r4 Draft: Revised OT Security Guidance with Zero Trust and Cybersecurity Framework 2.0 Alignment</title>
+      <link>https://securityboulevard.com/2026/09/daily-ot-security-news-september-22-2026/</link>
+      <guid isPermaLink="true">https://securityboulevard.com/2026/09/daily-ot-security-news-september-22-2026/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Security Automation</category>
+      <description>&lt;p&gt;NIST issued the initial public draft of SP 800-82r4, a revised Guide to Operational Technology (OT) Security, addressing OT systems' distinct performance, reliability, and safety requirements. The draft restructures guidance around Cybersecurity Framework 2.0 and expands advice on risk management, asset management, monitoring and detection, system-management security, and zero-trust principles across sectors including water, transportation, and IIoT. Public comment period runs through November 30, 2026.&lt;/p&gt;&lt;p&gt;Source: Security Boulevard / Viakoo · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WhiteFiber Launches WhiteFiber Continuum: First Commercially Available Distributed GPU Supercluster Network</title>
+      <link>https://www.stocktitan.net/news/WYFI/white-fiber-launches-white-fiber-continuum-the-highest-performing-e4ix9347h0t4.html</link>
+      <guid isPermaLink="true">https://www.stocktitan.net/news/WYFI/white-fiber-launches-white-fiber-continuum-the-highest-performing-e4ix9347h0t4.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Infrastructure</category>
+      <description>&lt;p&gt;WhiteFiber announced commercial availability of WhiteFiber Continuum, a cross-data-center networking solution linking geographically separated data centers into a single logical GPU supercluster. Built on DriveNets' Ethernet-based AI fabric and WEKA's NeuralMesh storage layer, delivering 136 Tbps throughput for distributed AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: Investing.com / PRNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>While GPUs Get the Headlines, These 3 Stocks Build the Networks That Actually Move Data</title>
+      <link>https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</link>
+      <guid isPermaLink="true">https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Infrastructure</category>
+      <description>&lt;p&gt;Analysis of the networking supercycle driven by AI infrastructure scaling. Cisco booked $9.3B in AI infrastructure orders in FY2026, identifying network fabric as the critical constraint—a training cluster is only as fast as its slowest link when tens of thousands of accelerators must synchronize gradients in lockstep across multi-data-center deployments.&lt;/p&gt;&lt;p&gt;Source: 24/7 Wall St. · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Selector Launches Foundry AI Agents into Network Operations Platform</title>
+      <link>https://convergedigest.com/selector-foundry-agentic-ai-network-operations/</link>
+      <guid isPermaLink="true">https://convergedigest.com/selector-foundry-agentic-ai-network-operations/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Selector Foundry adds a specialized multi-agent layer to the company's observability and AIOps platform for incident investigation, root-cause analysis and governed network operations workflows, with multiple agents backed by telemetry collection, normalization, correlation and machine-learning infrastructure.&lt;/p&gt;&lt;p&gt;Source: Converge Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Snorkel AI Raises $350M Series E at $3.5B Valuation as Demand for Frontier AI Training Data Surges</title>
+      <link>https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/09/22/snorkel-ai-triples-valuation-to-3-5b-as-demand-for-ai-training-data-booms/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Snorkel AI announced a $350 million Series E financing at a $3.5 billion valuation on September 22, 2026, with its data-as-a-service offering having grown over 18x since launch nearly a year earlier, crossing a $375 million annualized revenue run rate in the week of the announcement.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Releases GPT-6 Sol and Luna, Expanding Model Tier with Lower-Cost Variants</title>
+      <link>https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenAI launched GPT-6 Sol and GPT-6 Luna on September 22, 2026, two new models developed using methods similar to Astra's for improvements in professional work, factuality, coding, computer use, and alignment, with GPT-6 Sol designed for everyday work at lower cost than Astra and GPT-6 Luna an even cheaper model optimized for fast responses and high-volume tasks.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xAI Releases Grok 4.7 with Stronger Agentic Benchmarks at Flat Pricing</title>
+      <link>https://www.iweaver.ai/blog/grok-4-7/</link>
+      <guid isPermaLink="true">https://www.iweaver.ai/blog/grok-4-7/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;xAI released Grok 4.7 on September 21, 2026, its latest frontier model for coding, agentic tasks, and professional knowledge work, using a new larger base model, longer reinforcement learning on harder multi-hour tasks, and maintaining Grok 4.6's $2/$6 per million token pricing while gaining 111 Elo on agentic benchmarks.&lt;/p&gt;&lt;p&gt;Source: Artificial Analysis · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Opus 5.5 launches with 40% cost reduction and 30% speed gains</title>
+      <link>https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, delivering a 40% cost reduction versus Opus 5 and output speeds increased by over 30%. Pricing is $4/$20 per million tokens (a 20% reduction from predecessor), with cache reads at $0.20 per million tokens, representing a 60% decrease. This release is explicitly framed as the first since Anthropic's CEO called for 'pacing the frontier,' with external evaluators METR, Frontier Design, and the US Center for AI Standards and Innovation testing the model before release.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xAI releases Grok 4.7 with larger base model and longer reasoning at same Grok 4.6 pricing</title>
+      <link>https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</link>
+      <guid isPermaLink="true">https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;xAI released Grok 4.7 on September 21, 2026, with a larger base model, longer reasoning runs, and a new safeguard stack, priced the same as Grok 4.6. The model scored 46.3% on CursorBench 4.0 for longer-running coding tasks (up from 40.4% for Grok 4.6), and posted 71.0% on DeepSWE v1.1 at high effort (up from 65.2%). xAI built an entirely new safeguard stack for the release, citing a 3.3% pass-through rate for risky prompts on its internal HackerBench v0.3 test.&lt;/p&gt;&lt;p&gt;Source: SQ Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Lab Leaders Call for Global Regulation at UN Security Council Amid US Rejection</title>
+      <link>https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation</link>
+      <guid isPermaLink="true">https://www.aljazeera.com/news/2026/9/24/ai-corporate-leaders-tell-un-the-industry-needs-global-regulation</guid>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei called for global AI oversight at the UN Security Council, with Amodei warning that poorly managed AI could pose risks to humanity. The Trump administration's representative rejected the push, stating the US &amp;quot;totally rejects&amp;quot; international control of AI governance.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks</title>
       <link>https://www.netscout.com/blog/how-age-ai-changing-network-observability-landscape</link>
@@ -454,126 +582,6 @@
       <pubDate>Fri, 18 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;California's first AI auditor registry is now law, creating a concrete third-party assurance deadline with only registered auditors able to conduct covered audits from January 1, 2029. Gov. Newsom signed SB 1050 requiring disclosure of synthetic performers in video or audio advertisements.&lt;/p&gt;&lt;p&gt;Source: AI Governance Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-18.html&quot;&gt;Sep 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic Releases Commerce Agent Blueprint with Shopping and Merchant Agents</title>
-      <link>https://releasebot.io/updates/anthropic/claude</link>
-      <guid isPermaLink="true">https://releasebot.io/updates/anthropic/claude</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Anthropic released a complete, working implementation of shopping and merchant agents that can be built using the Messages API, Agent SDK, or Claude Managed Agents, with self-guided demos and Claude Code customization available before writing code.&lt;/p&gt;&lt;p&gt;Source: Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nokia accelerates network automation through agentic, unified data foundation with Microsoft</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/17/3363708/0/en/nokia-accelerates-network-automation-through-agentic-unified-data-foundation-with-microsoft.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/17/3363708/0/en/nokia-accelerates-network-automation-through-agentic-unified-data-foundation-with-microsoft.html</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Nokia and Microsoft announced development of an agentic, unified data foundation combining Nokia Data Suite's telco data products with Microsoft Fabric's unified analytics, governance and AI capabilities to enable intelligent, agent-based solutions across the network stack. Operators can now access high-quality, trusted data in minutes instead of weeks, significantly reducing time to insight.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CrowdStrike Launches SafeMind Agentic AI Models for Cybersecurity Defense with NVIDIA</title>
-      <link>https://venturebeat.com/security/nobody-can-compare-the-security-ai-numbers-crowdstrike-google-palo-alto-and-microsoft-published-including-the-cisos-who-are-stuck-with-the-results</link>
-      <guid isPermaLink="true">https://venturebeat.com/security/nobody-can-compare-the-security-ai-numbers-crowdstrike-google-palo-alto-and-microsoft-published-including-the-cisos-who-are-stuck-with-the-results</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;CrowdStrike reported an 89% year-over-year increase in AI-enabled attacks and introduced SafeMind, a family of purpose-built AI security models developed with NVIDIA, designed to find and close attack paths at machine speed. Internal evaluations showed SafeMind delivered 29% higher detection rate, 6x faster remediation, and 99% lower cost compared to leading frontier models.&lt;/p&gt;&lt;p&gt;Source: VentureBeat · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto Cortex Data Security Unified DDR Now GA: Real-Time Detection Across Cloud, SaaS, AI</title>
-      <link>https://www.paloaltonetworks.com/blog/security-operations/cortex-data-security-ga-dlp-ddr/</link>
-      <guid isPermaLink="true">https://www.paloaltonetworks.com/blog/security-operations/cortex-data-security-ga-dlp-ddr/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Palo Alto Networks released Cortex Data Security with unified Data Detection and Response (DDR) enabling near-real-time detection across cloud data stores, SaaS, and AI infrastructure. The platform centralizes anomalous logins, training data poisoning, data exfiltration, and related detections in a single dashboard with contextual enrichment from DSPM and identity data.&lt;/p&gt;&lt;p&gt;Source: Palo Alto Networks Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cornelis Unveils Active Compute Fabric, Secures $205M to Expand Into Scale-Up Networking</title>
-      <link>https://www.sdxcentral.com/news/cornelis-targets-inference-accelerator-utilization-with-205m-expansion-into-scale-up/</link>
-      <guid isPermaLink="true">https://www.sdxcentral.com/news/cornelis-targets-inference-accelerator-utilization-with-205m-expansion-into-scale-up/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;Cornelis Networks launched Active Compute Fabric, an open architecture that brings programmable compute directly into both scale-up and scale-out AI networking fabrics. The fabric combines lossless transport, in-fabric acceleration, and programmable processing to offload collective operations and improve GPU utilization by reducing idle time waiting for data.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cornelis CEO Lisa Spelman Previews Active Compute Fabric and CN6000 Second Generation at AI Infra Summit 2026</title>
-      <link>https://convergedigest.com/cornelis-active-compute-fabric-scale-up-ai-networking/</link>
-      <guid isPermaLink="true">https://convergedigest.com/cornelis-active-compute-fabric-scale-up-ai-networking/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;Cornelis Networks CEO Lisa Spelman unveiled the Active Compute Fabric architecture and announced the upcoming CN6000 second generation product at AI Infra Summit 2026 in Santa Clara. The technology introduces a novel approach integrating programmable compute directly into network fabric to address emerging AI infrastructure challenges across scale-up and scale-out domains.&lt;/p&gt;&lt;p&gt;Source: Converge Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Axiado Demonstrates Autonomous AI Infrastructure Management with Platform Efficiency Controllers at AI Infra Summit 2026</title>
-      <link>https://www.businesswire.com/news/home/20260914499681/en/Axiado-to-Demonstrate-Autonomous-AI-Infrastructure-Management-at-AI-Infra-Summit-2026</link>
-      <guid isPermaLink="true">https://www.businesswire.com/news/home/20260914499681/en/Axiado-to-Demonstrate-Autonomous-AI-Infrastructure-Management-at-AI-Infra-Summit-2026</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Axiado announced AI agents for autonomous infrastructure management at AI Infra Summit, focusing on reducing CPU, GPU, and cooling power consumption by up to 30% more tokens per dollar. The Platform Efficiency Controller uses Dynamic Thermal Management agents to cut air cooling power by 50% through real-time thermal adjustments.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LLMOps vs MLOps vs AgentOps: What Changes When You're Operating Language Models at Scale</title>
-      <link>https://www.analyticsvidhya.com/blog/2026/09/mlops-vs-llmops-vs-agentops/</link>
-      <guid isPermaLink="true">https://www.analyticsvidhya.com/blog/2026/09/mlops-vs-llmops-vs-agentops/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Analytics Vidhya published a practitioner guide comparing MLOps, LLMOps, and AgentOps operational frameworks, clarifying the distinct observability and control requirements as AI systems evolve from static models to autonomous decision-making agents. The article distinguishes when to use each framework and how monitoring obligations change.&lt;/p&gt;&lt;p&gt;Source: Analytics Vidhya · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Monid Open-Source Tool Doubles Agent Transaction Volume to 8M by Mid-September 2026</title>
-      <link>https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-16-2026/</link>
-      <guid isPermaLink="true">https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-16-2026/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Shengkun Ye open-sourced Monid, an MIT-licensed tool functioning as an &amp;quot;OpenRouter for agent tools,&amp;quot; enabling agents to discover, inspect, and invoke 2,000+ endpoints across 70+ providers without per-subscription costs. Usage doubled from 4M transactions on August 31 to 8M by September 15, with support for Deno 2 self-hosting.&lt;/p&gt;&lt;p&gt;Source: The Neuron · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude for Small Business Expands to 43 Workflows, 27 Integrations</title>
-      <link>https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs</link>
-      <guid isPermaLink="true">https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic expanded Claude for Small Business on September 15, 2026, adding 43 workflows and 27 new integrations with tools including Shopify, Salesforce, TikTok, Atlassian, Zoom, Xero, Gusto, Square, Stripe, and Zapier. The plugin has been installed over 900,000 times since May launch. New workflows extend Claude from back-office operations to business growth tasks with free training workshops and partner webinars through November.&lt;/p&gt;&lt;p&gt;Source: Claude by Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DeepMind Institute Launches: Public Forum for AGI Safety, Governance, and Societal Impact Research</title>
-      <link>https://www.axios.com/2026/09/16/google-deepmind-institute-agi</link>
-      <guid isPermaLink="true">https://www.axios.com/2026/09/16/google-deepmind-institute-agi</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google DeepMind launched the DeepMind Institute on September 16, 2026, a public research platform led by Shane Legg, Demis Hassabis, and James Manyika to explore AGI's impacts on society. Inaugural publications cover economic policy for AGI, model reasoning transparency, global access, and human flourishing. Legg stated it is premature to declare AGI has arrived and endorsed considering Anthropic's call to slow frontier releases.&lt;/p&gt;&lt;p&gt;Source: Axios / Google DeepMind · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nokia and Microsoft Unite on Agentic AI for Telco Operations</title>
-      <link>https://www.mobileworldlive.com/ai-cloud/nokia-microsoft-target-ai-automation-boost-for-operators</link>
-      <guid isPermaLink="true">https://www.mobileworldlive.com/ai-cloud/nokia-microsoft-target-ai-automation-boost-for-operators</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Nokia partnered with Microsoft to develop an agentic, unified data foundation supporting faster, more reliable AI-driven operations for telecoms providers. The offering combines Nokia Data Suite's telco products with Microsoft Fabric's unified analytics, governance and AI capabilities, enabling intelligent, agent-based solutions across the network stack and allowing operators to access high-quality, trusted data in minutes instead of weeks.&lt;/p&gt;&lt;p&gt;Source: Mobile World Live · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Verizon Pivots Legacy Central Offices Into Distributed AI Edge Infrastructure</title>
-      <link>https://rcrtech.com/analyst-angle/verizon-legacy-assets-ai-infrastructure/</link>
-      <guid isPermaLink="true">https://rcrtech.com/analyst-angle/verizon-legacy-assets-ai-infrastructure/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;As AI infrastructure demand surges, hyperscalers need high-capacity fiber connecting data centers—a need Verizon is positioned to meet. Verizon sees an opportunity to repurpose thousands of legacy central offices as locations for edge compute as AI shifts from centralized training toward distributed inference.&lt;/p&gt;&lt;p&gt;Source: RCR Tech · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Trump dismisses CEO calls to slow AI development: 'Whoever wins AI wins'</title>
-      <link>https://www.yahoo.com/news/us/article/trump-responds-to-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-ai-wins-182008851.html</link>
-      <guid isPermaLink="true">https://www.yahoo.com/news/us/article/trump-responds-to-call-by-ceos-of-anthropic-openai-and-xai-to-slow-ai-down-whoever-wins-ai-wins-182008851.html</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;President Trump responded to the rare bipartisan call from Anthropic, OpenAI and xAI CEOs to slow AI development by stating the U.S. cannot afford to fall behind China, declaring 'whoever wins AI wins' and signaling national security takes precedence over safety coordination efforts.&lt;/p&gt;&lt;p&gt;Source: Yahoo News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI is too big to slow in a geopolitical race; security dilemmas block meaningful international limits</title>
-      <link>https://moderndiplomacy.eu/2026/09/15/ai-is-too-big-to-slow-in-a-geopolitical-race/</link>
-      <guid isPermaLink="true">https://moderndiplomacy.eu/2026/09/15/ai-is-too-big-to-slow-in-a-geopolitical-race/</guid>
-      <pubDate>Thu, 17 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The central question is no longer whether AI development should be regulated, but whether governments can realistically agree to meaningful limits while competing for technological dominance. A country that slows unilaterally risks falling behind competitors, creating a classic security dilemma where safety measures create strategic vulnerability.&lt;/p&gt;&lt;p&gt;Source: Modern Diplomacy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-17.html&quot;&gt;Sep 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
