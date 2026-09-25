@@ -137,10 +137,21 @@
     top: 0;
     z-index: 50;
     background: var(--paper);
-    border-top: 3px double var(--rule);
+    border-top: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
   .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 46px; }
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-top: 3px double var(--rule);
+    padding: 0.45rem 0;
+  }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
   .mini-nameplate {
     font-family: var(--display);
     font-size: 1.35rem;
@@ -171,7 +182,6 @@
   .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
   .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
 
-  .nav-tools { display: flex; align-items: center; gap: 0.9rem; }
   .search {
     display: flex;
     align-items: center;
@@ -188,7 +198,7 @@
     font-family: var(--serif);
     font-style: italic;
     font-size: 0.92rem;
-    width: 15rem;
+    width: 18rem;
   }
   .search input::placeholder { color: var(--muted); }
   .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
@@ -433,7 +443,7 @@
     .ledger-grid > div:first-child { grid-column: 1 / -1; }
     .ledger-grid > div + div { border-left: none; padding-left: 0; }
     .ledger-grid > div:last-child { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
-    .search input { width: 11rem; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
   }
 
   @media (max-width: 720px) {
@@ -450,13 +460,9 @@
     .front { padding-top: 1.25rem; }
     .lead-head { font-size: 2.1rem; }
     .lead-deck { font-size: 1.08rem; }
-    .sections-inner { flex-wrap: wrap; gap: 0 1rem; padding-bottom: 0.4rem; }
-    .section-links { flex-basis: 100%; order: 2; }
-    .nav-tools { flex: 1; justify-content: space-between; padding-top: 0.5rem; }
     .search { flex: 1; }
     .search input { width: 100%; }
     .search kbd { display: none; }
-    .sections-bar.stuck .mini-nameplate { display: none; }
     .lead-body { columns: 1; }
     .ledger-grid { grid-template-columns: 1fr; gap: 1.25rem; }
     .ledger-grid > div:last-child { border-left: none; padding-left: 0; }
@@ -485,6 +491,19 @@
   <p class="motto">The daily briefing for the people who keep networks running</p>
 </header>
 
+<div class="wrap">
+  <div class="toolbar">
+    <label class="search">
+      <input type="search" id="searchInput" placeholder="Search every edition" oninput="filterSearch(this.value)" aria-label="Search every edition">
+      <kbd>⌘K</kbd>
+    </label>
+    <div class="archive-nav label">
+      <button class="archive-btn label" onclick="toggleArchiveMenu(this)">Past editions ▾</button>
+      <div class="archive-menu" id="archiveMenu"></div>
+    </div>
+  </div>
+</div>
+
 <nav class="sections-bar" id="sectionsBar" aria-label="Sections">
   <div class="wrap sections-inner">
     <a class="mini-nameplate" href="/">Digital Plumber</a>
@@ -499,16 +518,7 @@
       <button class="section-link" data-topic="AI Industry &amp; Policy" onclick="filterTopic(this, this.dataset.topic)">Industry and policy<span class="n">2</span></button>
       <button class="section-link" onclick="goToCompanies(this)">Companies</button>
     </div>
-    <div class="nav-tools">
-      <label class="search">
-        <input type="search" id="searchInput" placeholder="Search every edition" oninput="filterSearch(this.value)" aria-label="Search every edition">
-        <kbd>⌘K</kbd>
-      </label>
-      <div class="archive-nav label">
-        <button class="archive-btn label" onclick="toggleArchiveMenu(this)">Past editions ▾</button>
-        <div class="archive-menu" id="archiveMenu"></div>
-      </div>
-    </div>
+    <button class="bar-search label" onclick="focusSearch()">Search</button>
   </div>
 </nav>
 
@@ -1031,8 +1041,7 @@
   document.addEventListener('keydown', e => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
-      document.getElementById('searchInput').focus();
-      document.getElementById('searchInput').select();
+      focusSearch();
     }
   });
 
@@ -1055,6 +1064,12 @@
     const bar = document.getElementById('sectionsBar');
     const top = bar.getBoundingClientRect().top + window.scrollY;
     if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  function focusSearch() {
+    const input = document.getElementById('searchInput');
+    input.focus();
+    input.select();
   }
 
   function setActiveLink(el) {
