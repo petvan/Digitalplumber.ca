@@ -331,8 +331,17 @@
   }
   .more:hover { text-decoration: underline; }
 
+  .story-grid .story:only-child { grid-column: 1 / -1; }
+
   @media (min-width: 900px) {
     .story-grid .story:first-child { grid-column: span 2; padding-right: 1rem; }
+    .story-grid .story:only-child {
+      grid-column: 1 / -1;
+      padding-right: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+      column-gap: 2.25rem;
+    }
     .story-grid .story:first-child h3 { font-size: 2.15rem; }
     .story-grid .story:first-child .summary { font-size: 1.05rem; }
   }
@@ -431,10 +440,16 @@
     .wrap { padding: 0 1rem; }
     body { font-size: 16px; }
     .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear-links { display: none; }
     .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
     .ear::-webkit-scrollbar { display: none; }
-    .dateline { flex-direction: column; align-items: center; gap: 0; }
-    .motto { font-size: 0.92rem; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.15rem; }
+    .motto { font-size: 0.82rem; margin-bottom: 0.6rem; }
+    .front { padding-top: 1.25rem; }
+    .lead-head { font-size: 2.1rem; }
+    .lead-deck { font-size: 1.08rem; }
     .sections-inner { flex-wrap: wrap; gap: 0 1rem; padding-bottom: 0.4rem; }
     .section-links { flex-basis: 100%; order: 2; }
     .nav-tools { flex: 1; justify-content: space-between; padding-top: 0.5rem; }
@@ -465,7 +480,7 @@
 </div>
 
 <header class="masthead wrap" id="masthead">
-  <div class="dateline label"><span><!--DATELINE--></span><span>No. <!--EDITION_NO--> · Toronto edition · <!--ARTICLE_COUNT--> stories</span></div>
+  <div class="dateline label"><span><!--DATELINE--></span><span>No. <!--EDITION_NO--><span class="dateline-extra"> · Toronto edition · <!--ARTICLE_COUNT--> stories</span></span></div>
   <h1 class="nameplate"><a href="/">Digital Plumber</a></h1>
   <p class="motto">The daily briefing for the people who keep networks running</p>
 </header>
@@ -732,7 +747,7 @@
 
     document.querySelectorAll('.story').forEach(story => {
       const matchesTopic = activeTopic === 'all' || story.dataset.topic === activeTopic;
-      const matchesSearch = !searchQuery || story.textContent.toLowerCase().includes(searchQuery);
+      const matchesSearch = !searchQuery || `${story.textContent} ${story.dataset.title || ''}`.toLowerCase().includes(searchQuery);
       const visible = matchesTopic && matchesSearch;
       story.hidden = !visible;
       if (visible) visibleCount++;
@@ -764,7 +779,7 @@
       const todayDate = window.__buildDate;
       const hits = index.filter(a => {
         if (a.date === todayDate) return false;
-        return [a.title, a.summary, a.source, a.topic, ...(a.tags || [])].join(' ').toLowerCase().includes(searchQuery);
+        return [a.title, a.headline, a.summary, a.source, a.topic, ...(a.tags || [])].join(' ').toLowerCase().includes(searchQuery);
       });
       // Ignore results from a search the user has since changed
       if (document.getElementById('searchInput').value.trim().toLowerCase() !== searchQuery) return;
@@ -783,7 +798,7 @@
           <div class="when">${escHtml(a.dateLabel)}<br><a href="/archives/${escHtml(a.date)}.html">Read that edition</a></div>
           <div>
             <p class="kicker label">${escHtml(a.topic)}</p>
-            <h3><a href="${escHtml(a.url)}" target="_blank" rel="noopener">${escHtml(a.title)}</a></h3>
+            <h3><a href="${escHtml(a.url)}" target="_blank" rel="noopener" title="${escHtml(a.title)}">${escHtml(a.headline || a.title)}</a></h3>
             <p>${escHtml(a.summary)}</p>
             <p class="byline">${escHtml(a.source)}</p>
           </div>

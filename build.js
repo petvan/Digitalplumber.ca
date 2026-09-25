@@ -259,38 +259,44 @@ function storyHtml(item) {
   const paras = detailParas(item);
   const tags = (item.tags || []).slice(0, 5);
   return `
-        <article class="story" data-topic="${esc(item.topicLabel)}" id="${esc(item.id)}">
-          ${item.category ? `<p class="kicker label">${esc(item.category)}</p>` : ''}
-          <h3><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h3>
-          <p class="summary">${esc(item.summary)}</p>
-          <p class="byline"><b>${esc(item.source)}</b> · ${esc(displayDate(item.date))}</p>
-          ${tags.length ? `<p class="tags">${tags.map(esc).join(' · ')}</p>` : ''}
-          ${paras ? `<div class="story-detail">${paras}${sourceLink(item)}</div>
-          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Continue reading</button>` : `
-          ${sourceLink(item)}`}
+        <article class="story" data-topic="${esc(item.topicLabel)}" data-title="${esc(item.title)}" id="${esc(item.id)}">
+          <div class="story-head">
+            ${item.category ? `<p class="kicker label">${esc(item.category)}</p>` : ''}
+            <h3><a href="${esc(item.url)}" target="_blank" rel="noopener" title="${esc(item.title)}">${esc(item.headline || item.title)}</a></h3>
+          </div>
+          <div class="story-body">
+            <p class="summary">${esc(item.summary)}</p>
+            <p class="byline"><b>${esc(item.source)}</b> · ${esc(displayDate(item.date))}</p>
+            ${tags.length ? `<p class="tags">${tags.map(esc).join(' · ')}</p>` : ''}
+            ${paras ? `<div class="story-detail">${paras}${sourceLink(item)}</div>
+            <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Continue reading</button>` : `
+            ${sourceLink(item)}`}
+          </div>
         </article>`;
 }
 
-// The front page: the lead story with its full write-up, and an index of the next picks
+// The front page: the lead story with its full write-up, and an index of the next picks.
+// The lead's standfirst is why it matters; its body is the write-up, or the
+// summary when there is no write-up, so the same facts never appear twice.
 function frontPageHtml(lead, inside) {
   if (!lead) return '<p class="empty-note">No stories today. Check back tomorrow morning.</p>';
   const { item, why } = lead;
-  const paras = detailParas(item);
+  const deck = why || item.summary;
+  const body = detailParas(item) || (why ? `<p>${esc(item.summary)}</p>` : '');
   return `
-    <article class="story lead" data-topic="${esc(item.topicLabel)}" id="${esc(item.id)}">
+    <article class="story lead" data-topic="${esc(item.topicLabel)}" data-title="${esc(item.title)}" id="${esc(item.id)}">
       <p class="kicker label">${esc(topicShort(item.topicLabel))}${item.category ? `<span class="sep">·</span>${esc(item.category)}` : ''}</p>
-      <h2 class="lead-head"><a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a></h2>
-      <p class="lead-deck">${esc(item.summary)}</p>
+      <h2 class="lead-head"><a href="${esc(item.url)}" target="_blank" rel="noopener" title="${esc(item.title)}">${esc(item.headline || item.title)}</a></h2>
+      <p class="lead-deck">${esc(deck)}</p>
       <p class="byline"><b>${esc(item.source)}</b> · ${esc(displayDate(item.date))}</p>
-      ${paras ? `<div class="lead-body">${paras}</div>` : ''}
-      ${why ? `<p class="why"><span class="label">Why it matters</span>${esc(why)}</p>` : ''}
+      ${body ? `<div class="lead-body">${body}</div>` : ''}
       ${sourceLink(item)}
     </article>
     ${inside.length ? `<aside class="inside">
       <h3 class="rail-head label">Inside today</h3>
       <ol>${inside.map(({ item: i, why: w }) => `
         <li><div>
-          <a href="#${esc(i.id)}"><span class="rail-kicker label">${esc(topicShort(i.topicLabel))}</span>${esc(i.title)}</a>
+          <a href="#${esc(i.id)}"><span class="rail-kicker label">${esc(topicShort(i.topicLabel))}</span>${esc(i.headline || i.title)}</a>
           ${w ? `<p>${esc(w)}</p>` : ''}
         </div></li>`).join('')}
       </ol>
@@ -497,21 +503,24 @@ function rssXml(entries, buildIso) {
 `;
 }
 
-// ── Top-story picks (front page and week in review) ──────────────────────────
-// Asks Claude to rank the most important stories; returns [{ entry, why }].
-// Falls back to the newest story from each topic if the call fails.
-async function pickTopStories(entries, { count, scope }) {
+// ── Editor's picks (front page and week in review) ───────────────────────────
+// Asks Claude to rank the most important stories and write short newspaper
+// headlines. Returns { picks: [{ entry, why }], headlines: Map(entry → headline) };
+// headlines cover every story for 'today' and only the picks for 'week'.
+// Falls back to the newest story per topic, and source titles, if the call fails.
+async function editStories(entries, { count, scope }) {
   const fallback = () => {
     const seenTopics = new Set();
-    return entries.filter(a => !seenTopics.has(a.topic) && seenTopics.add(a.topic))
+    const picks = entries.filter(a => !seenTopics.has(a.topic) && seenTopics.add(a.topic))
       .slice(0, count).map(entry => ({ entry, why: '' }));
+    return { picks, headlines: new Map() };
   };
-  if (entries.length === 0) return [];
+  if (entries.length === 0) return { picks: [], headlines: new Map() };
 
   const list = entries.map((a, i) => `${i}. [${a.topic}] ${a.title} (${a.source}, ${a.dateLabel}): ${a.summary}`).join('\n');
   const task = scope === 'today'
-    ? `Below are today's stories, numbered. Pick the ${count} that matter most to that audience, most important first: the first pick leads the front page.`
-    : `Below are this week's stories, numbered. Pick the ${count} that matter most to that audience, most important first.`;
+    ? `Below are today's stories, numbered. Pick the ${count} that matter most to that audience, most important first: the first pick leads the front page. Then write a headline for every story, picked or not.`
+    : `Below are this week's stories, numbered. Pick the ${count} that matter most to that audience, most important first, and write a headline for each pick.`;
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -541,8 +550,17 @@ async function pickTopStories(entries, { count, scope }) {
                     additionalProperties: false,
                   },
                 },
+                headlines: {
+                  type: 'array',
+                  items: {
+                    type: 'object',
+                    properties: { id: { type: 'integer' }, headline: { type: 'string' } },
+                    required: ['id', 'headline'],
+                    additionalProperties: false,
+                  },
+                },
               },
-              required: ['picks'],
+              required: ['picks', 'headlines'],
               additionalProperties: false,
             },
           },
@@ -553,6 +571,8 @@ async function pickTopStories(entries, { count, scope }) {
 
 Favour concrete developments in networking, network automation, AIOps, observability and AI infrastructure over general AI-industry news, and substance over press releases. Never pick two stories about the same event. For each pick, write one sentence (under 30 words) on why it matters to a practitioner.
 
+Headlines are for a newspaper front page: at most 10 words, sentence case, plain and factual, one clause (no colons or semicolons), no clickbait or questions. Keep the company or product name when it is the news. Report the finding, not the report: "Most operators are ready to let AI change the network", not "Cisco and Omdia study reveals AI readiness findings".
+
 ${list}`,
         }],
       }),
@@ -560,29 +580,32 @@ ${list}`,
     const json = await res.json();
     if (!res.ok) throw new Error(json?.error?.message || `HTTP ${res.status}`);
     if (json.stop_reason === 'refusal') throw new Error('refused');
-    const text = json.content.find(b => b.type === 'text')?.text;
+    const result = JSON.parse(json.content.find(b => b.type === 'text')?.text);
     const seen = new Set();
-    const picks = JSON.parse(text).picks
+    const picks = result.picks
       .filter(p => Number.isInteger(p.id) && entries[p.id] && !seen.has(p.id) && seen.add(p.id))
       .slice(0, count)
       .map(p => ({ entry: entries[p.id], why: p.why }));
     if (picks.length === 0) throw new Error('no valid picks');
-    console.log(`✓ ${scope === 'today' ? 'Front page' : 'Week in review'}: ${picks.length} top stories picked`);
-    return picks;
+    const headlines = new Map(result.headlines
+      .filter(h => Number.isInteger(h.id) && entries[h.id] && h.headline.trim())
+      .map(h => [entries[h.id], h.headline.trim()]));
+    console.log(`✓ ${scope === 'today' ? 'Front page' : 'Week in review'}: ${picks.length} picks, ${headlines.size} headlines`);
+    return { picks, headlines };
   } catch (err) {
     console.warn(`  ⚠ Top-story pick (${scope}) failed (${err.message}); using newest story per topic`);
     return fallback();
   }
 }
 
-function weekHtml(template, { entries, picks, rangeLabel, buildDate }) {
+function weekHtml(template, { entries, picks, headlines, rangeLabel, buildDate }) {
   const head = (template.match(/<link rel="preconnect"[\s\S]*?<\/style>/) || [''])[0].replace('<!--ARCHIVE_LIST_SCRIPT-->', '');
   const edition = a => `<a href="/archives/${a.date}.html">${esc(a.dateLabel)} edition</a>`;
 
   const top = picks.map(({ entry: a, why }) => `
       <li><div>
         <p class="kicker label">${esc(topicShort(a.topic))}${a.category ? `<span class="sep">·</span>${esc(a.category)}` : ''}</p>
-        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></h3>
+        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(headlines.get(a) || a.headline || a.title)}</a></h3>
         <p class="summary">${esc(a.summary)}</p>
         ${why ? `<p class="why"><span class="label">Why it matters</span>${esc(why)}</p>` : ''}
         <p class="byline" style="margin-top:0.6rem"><b>${esc(a.source)}</b> · ${edition(a)}</p>
@@ -595,7 +618,7 @@ function weekHtml(template, { entries, picks, rangeLabel, buildDate }) {
     <section class="paper-section">
       <div class="section-head"><h2>${esc(label)}</h2><span class="label">${items.length} ${items.length === 1 ? 'story' : 'stories'}</span></div>
       <ul class="week-list">${items.map(a => `
-        <li><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a><span class="byline">${esc(a.source)} · ${edition(a)}</span></li>`).join('')}
+        <li><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(a.headline || a.title)}</a><span class="byline">${esc(a.source)} · ${edition(a)}</span></li>`).join('')}
       </ul>
     </section>`).join('');
 
@@ -772,6 +795,17 @@ async function main() {
   archives.unshift({ date: dateStr, label: buildDate, count: newsItems.length });
   fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
+  // ── Front page: Claude picks the lead and "Inside today", and writes headlines ──
+  const frontCandidates = newsItems.map(item => ({ ...item, topic: item.topicLabel, dateLabel: displayDate(item.date) }));
+  const frontEdit = await editStories(frontCandidates, { count: 5, scope: 'today' });
+  frontCandidates.forEach((entry, i) => {
+    const headline = frontEdit.headlines.get(entry);
+    if (headline) newsItems[i].headline = headline;
+  });
+  const frontPicks = frontEdit.picks.map(({ entry, why }) => ({ item: newsItems[frontCandidates.indexOf(entry)], why }));
+  const lead = frontPicks[0];
+  const leadId = lead ? lead.item.id : null;
+
   // ── Build / update search index (loaded earlier, before dedupe) ───────────
   searchIndex = searchIndex.filter(a => a.date !== dateStr);
   const todayEntries = newsItems.map(item => ({
@@ -779,6 +813,7 @@ async function main() {
     dateLabel: buildDate,
     sourceDate: item.date,
     title: item.title,
+    ...(item.headline ? { headline: item.headline } : {}),
     summary: item.summary,
     detail: stripCites(item.detail || ''),
     source: item.source,
@@ -806,13 +841,6 @@ async function main() {
   const weekStart = new Date(Date.parse(`${dateStr}T00:00:00Z`) - 6 * 86400000).toISOString().slice(0, 10);
   const weekEntries = searchIndex.filter(a => a.date >= weekStart);
 
-  // ── Front page: Claude picks the lead story and the "Inside today" index ──
-  const frontCandidates = newsItems.map(item => ({ ...item, topic: item.topicLabel, dateLabel: displayDate(item.date) }));
-  const frontPicks = (await pickTopStories(frontCandidates, { count: 5, scope: 'today' }))
-    .map(({ entry, why }) => ({ item: newsItems[frontCandidates.indexOf(entry)], why }));
-  const lead = frontPicks[0];
-  const leadId = lead ? lead.item.id : null;
-
   const dateline = now.toLocaleDateString('en-CA', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto',
   });
@@ -825,7 +853,7 @@ async function main() {
       : '';
 
     // Meta description: up to 3 headline fragments, lead first, capped at 155 chars
-    const topTitles = frontPicks.slice(0, 3).map(p => p.item.title.replace(/"/g, "'"));
+    const topTitles = frontPicks.slice(0, 3).map(p => (p.item.headline || p.item.title).replace(/"/g, "'"));
     let metaDesc = `Daily AI-curated briefing for network engineers. Today: ${topTitles.join(' · ')}`;
     if (metaDesc.length > 155) metaDesc = metaDesc.slice(0, 152) + '…';
 
@@ -863,8 +891,8 @@ async function main() {
 
   // ── Week in review + RSS ─────────────────────────────────────────────────
   const rangeLabel = `${displayDate(weekStart)} – ${buildDate}`;
-  const picks = await pickTopStories(weekEntries, { count: 8, scope: 'week' });
-  fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, rangeLabel, buildDate }), 'utf8');
+  const { picks, headlines } = await editStories(weekEntries, { count: 8, scope: 'week' });
+  fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, headlines, rangeLabel, buildDate }), 'utf8');
   console.log(`✓ week.html written (${weekEntries.length} stories, ${picks.length} top picks)`);
 
   fs.writeFileSync(path.join(__dirname, 'feed.xml'), rssXml(weekEntries, now.toISOString()), 'utf8');
@@ -903,4 +931,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { storyHtml, frontPageHtml, sectionsHtml, podcastsHtml, vendorMentions, vendorRadarHtml, rssXml, weekHtml, pickTopStories, main };
+module.exports = { storyHtml, frontPageHtml, sectionsHtml, podcastsHtml, vendorMentions, vendorRadarHtml, rssXml, weekHtml, editStories, main };
