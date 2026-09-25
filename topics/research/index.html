@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research, Standards &amp; Industry — Topics — Digital Plumber</title>
+<meta name="description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 161 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
+<link rel="canonical" href="https://digitalplumber.ca/topics/research/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="Research, Standards &amp; Industry — Topics — Digital Plumber">
+<meta property="og:description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 161 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
+<meta property="og:url" content="https://digitalplumber.ca/topics/research/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/topics/">Topics</a></p>
+  <h1 class="page-title">Research, Standards &amp; Industry</h1>
+  <p class="page-dek">Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.</p>
+  <div class="stat-row">
+    <div><span class="stat">161</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">12 <span class="trend down" title="Down from 16 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 16</span></span></span><span class="label">last 7 days · 16 the 7 before</span></div>
+    <div><span class="stat">56</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 19</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 12, 6, 13, 13, 10, 5, 7, 14, 17, 7, 16, 12">
+      <div class="bar-col" title="Week of Jul 4: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:71%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:35%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:59%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 5 stories">
+        <span class="bar-n">5</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:41%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 14 stories">
+        <span class="bar-n">14</span>
+        <div class="bar-track"><div class="bar" style="height:82%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 17 stories">
+        <span class="bar-n">17</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:41%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 16 stories">
+        <span class="bar-n">16</span>
+        <div class="bar-track"><div class="bar" style="height:94%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:71%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Dataiku</b> · Sep 24, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.dataiku.com/company/news/dataiku-agent-management-general-availability" target="_blank" rel="noopener" title="Dataiku Launches Agent Management for Cross-Platform AI Agent Inventory and Governance">Dataiku tool inventories AI agents across rival platforms</a></h3>
+        <p class="summary">Dataiku announced Agent Management on September 24, 2026, a standalone product that discovers every AI agent an enterprise runs regardless of platform, measures business and technical performance, and flags highest-risk agents. General availability planned for October 2026.</p><p class="why-line"><span class="label">Why it matters</span> Fewer than one in five organizations maintain a complete inventory of their AI systems; centralized agent observability and governance solves critical operational blindness for large-scale AI deployments.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Benton Institute for Broadband &amp; Society</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity" target="_blank" rel="noopener" title="Lumen Intelligent Internet: On-Demand Bandwidth Scaling for AI Workloads">Lumen sells on-demand bandwidth that scales with AI workloads</a></h3>
+        <p class="summary">Lumen Technologies launched Lumen Intelligent Internet, enabling enterprise customers to buy connectivity in minutes and scale bandwidth elastically as AI and cloud workloads demand. IDC research shows 37% of enterprises experienced 50%+ year-over-year bandwidth growth, with 29% struggling to align networks with AI workloads.</p><p class="why-line"><span class="label">Why it matters</span> On-demand bandwidth provisioning eliminates network as a constraint for scaling AI inference and training; network elasticity now matches compute elasticity, critical for LLM cluster operations.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>arXiv</b> · Sep 22, 2026 · <span class="stype">Research</span></p>
+        <h3><a href="https://github.com/zachysun/DailyArXiv/issues/567" target="_blank" rel="noopener" title="Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Memory-Efficient LLM Inference">Flash-dLLM cuts memory and bandwidth costs in LLM inference</a></h3>
+        <p class="summary">Flash-dLLM optimizes key-value caching and parallel decoding in diffusion language models through IO-aware kernel techniques, addressing memory and bandwidth bottlenecks in LLM inference systems.</p><p class="why-line"><span class="label">Why it matters</span> Memory-bandwidth optimization in LLM serving directly impacts cluster utilization and per-token serving cost, critical metrics for infrastructure teams sizing GPU clusters for production agentic workloads.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Anthropic Blog / GitHub Changelog</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference">Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference</a></h3>
+        <p class="summary">Anthropic shipped Claude Opus 5.5 on September 22, achieving 40% cost reduction versus Opus 5 and 30% faster output speed while matching Fable 5.1 performance. The model includes 1M token context, always-on adaptive thinking, and inline tool support—built for long-running agentic coding and knowledge work at scale.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Bloomberg / Crypto Briefing</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/" target="_blank" rel="noopener" title="OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body">OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body</a></h3>
+        <p class="summary">OpenAI confirmed on September 15 that it is in active coordination with Anthropic and Google DeepMind since July 2026 to establish an independent, industry-led standards body for frontier AI model safety. The effort aims to create shared evaluation protocols, external safety assessments, and pre-release checks before public deployment, with a target launch in late 2026 or 2027.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Snorkel AI Blog</b> · Sep 22, 2026</p>
+        <h3><a href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/" target="_blank" rel="noopener" title="Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data">Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data</a></h3>
+        <p class="summary">Snorkel AI announced a $350M Series E at $3.5B valuation, having achieved $375M annualized revenue run rate (18x growth year-over-year) from its data-as-a-service pivot. The company now supplies finished training datasets, evaluation environments, and RL environments to frontier labs and enterprises, shifting from labeling software to prepared data products.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Bloomberg</b> · Sep 22, 2026</p>
+        <h3><a href="https://www.bloomberg.com/news/articles/2026-09-22/ex-anthropic-staffers-ai-startup-in-talks-to-raise-at-5-billion-value" target="_blank" rel="noopener" title="Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems">Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems</a></h3>
+        <p class="summary">Mirendil, founded by ex-Anthropic researchers Behnam Neyshabur and Harsh Mehta, is in talks to raise up to $1B at a $5B valuation (5x increase from $1B seed in June 2026). The startup is building AI systems that autonomously improve themselves—a capability that frontier labs OpenAI, Anthropic, and DeepMind guard internally but Mirendil aims to productize.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>OpenAI / Featherbench</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://github.com/ed-is-ai/featherbench/issues/75" target="_blank" rel="noopener" title="OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use">OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use</a></h3>
+        <p class="summary">OpenAI released GPT-6 Sol on September 22, 2026, a same-day cost-efficiency release designed for complex coding and agentic workflows. Pricing: $2/1M input, $10/1M output tokens. Features: 1.05M context window, structured outputs, function calling, web search, code interpreter, computer use, MCP support, and prompt caching.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Anthropic / Featherbench</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://github.com/ed-is-ai/featherbench/issues/74" target="_blank" rel="noopener" title="Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks">Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</a></h3>
+        <p class="summary">Anthropic released Claude Opus 5.5 on September 22, 2026, a frontier model for long-running agentic coding and knowledge work. Available via Claude API and partners (Amazon Bedrock, Google Cloud, Microsoft Foundry). Pricing: $4/1M input, $20/1M output; cache: $0.20 cached input, $5/$8 per 1M for 5-min/1-hour cache writes.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Stripe Engineering Blog</b> · Sep 18, 2026</p>
+        <h3><a href="https://stripe.dev/blog" target="_blank" rel="noopener" title="Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs">Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs</a></h3>
+        <p class="summary">Stripe released next-generation reporting APIs focused on enterprise scalability, enabling custom financial reconciliation workflows. The update targets organizations running AI-native payments infrastructure and needing programmatic access to real-time transaction and settlement data.</p>
+        <p class="edition label"><a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">151 earlier stories</span></div>
+    
+    <h3 class="month label">September 2026 <span class="n">37</span></h3>
+    <ul class="history">
+      <li><span class="when">Sep 19</span><a href="https://github.com/open-telemetry/opentelemetry-collector-releases/releases" target="_blank" rel="noopener" title="OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry">OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry</a><span class="src">GitHub (opentelemetry-collector-releases)</span></li>
+      <li><span class="when">Sep 19</span><a href="https://trewknowledge.com/2026/09/18/ai-this-week-the-infrastructure-around-ai-gets-serious/" target="_blank" rel="noopener" title="OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers">OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers</a><span class="src">TrewKnowledge</span></li>
+      <li><span class="when">Sep 18</span><a href="https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/" target="_blank" rel="noopener" title="Google DeepMind launches institute for AGI safety debate with model transparency framework">Google DeepMind launches institute for AGI safety debate with model transparency framework</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Sep 18</span><a href="https://arxiv.org/abs/2609.17527" target="_blank" rel="noopener" title="Agentic Societies Need a Social Harness: multi-agent coordination framework for trust boundaries">Agentic Societies Need a Social Harness: multi-agent coordination framework for trust boundaries</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 18</span><a href="https://www.globenewswire.com/news-release/2026/09/16/3363246/0/en/komodor-launches-agentic-operations-platform-combining-ready-to-run-automation-with-a-comprehensive-backbone-for-custom-agents.html" target="_blank" rel="noopener" title="Komodor launches Agentic Operations Platform for autonomous SRE and cost optimization workflows">Komodor launches Agentic Operations Platform for autonomous SRE and cost optimization workflows</a><span class="src">Globe Newswire</span></li>
+      <li><span class="when">Sep 17</span><a href="https://www.businesswire.com/news/home/20260914499681/en/Axiado-to-Demonstrate-Autonomous-AI-Infrastructure-Management-at-AI-Infra-Summit-2026" target="_blank" rel="noopener" title="Axiado Demonstrates Autonomous AI Infrastructure Management with Platform Efficiency Controllers at AI Infra Summit 2026">Axiado Demonstrates Autonomous AI Infrastructure Management with Platform Efficiency Controllers at AI Infra Summit 2026</a><span class="src">Business Wire</span></li>
+      <li><span class="when">Sep 17</span><a href="https://www.analyticsvidhya.com/blog/2026/09/mlops-vs-llmops-vs-agentops/" target="_blank" rel="noopener" title="LLMOps vs MLOps vs AgentOps: What Changes When You're Operating Language Models at Scale">LLMOps vs MLOps vs AgentOps: What Changes When You're Operating Language Models at Scale</a><span class="src">Analytics Vidhya</span></li>
+      <li><span class="when">Sep 17</span><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-16-2026/" target="_blank" rel="noopener" title="Monid Open-Source Tool Doubles Agent Transaction Volume to 8M by Mid-September 2026">Monid Open-Source Tool Doubles Agent Transaction Volume to 8M by Mid-September 2026</a><span class="src">The Neuron</span></li>
+      <li><span class="when">Sep 16</span><a href="https://techcrunch.com/2026/09/15/cornelis-networks-raises-205m-to-challenge-nvidias-ai-networking-grip/" target="_blank" rel="noopener" title="Cornelis Networks Raises $205M for GPU-Agnostic AI Cluster Networking">Cornelis Networks Raises $205M for GPU-Agnostic AI Cluster Networking</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Sep 16</span><a href="https://arxiv.org/abs/2609.13031" target="_blank" rel="noopener" title="Atria Dawn Preview: 744B Open Agentic Model with 769-Task Human Evaluation">Atria Dawn Preview: 744B Open Agentic Model with 769-Task Human Evaluation</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 16</span><a href="https://blog.buildfastwithai.com/ai-news-today-september-16-2026" target="_blank" rel="noopener" title="Z.ai Raises ~$5B for GLM Foundation Models; ByteDance Secures $29.6B Syndicated Loan">Z.ai Raises ~$5B for GLM Foundation Models; ByteDance Secures $29.6B Syndicated Loan</a><span class="src">AI News Today</span></li>
+      <li><span class="when">Sep 16</span><a href="https://www.swfte.com/ai/leaderboard" target="_blank" rel="noopener" title="Claude Fable 5.1 and GPT-5.6 Tiers Released; Reasoning Models Now Standard at Frontier Labs">Claude Fable 5.1 and GPT-5.6 Tiers Released; Reasoning Models Now Standard at Frontier Labs</a><span class="src">Swfte AI Model Leaderboard</span></li>
+      <li><span class="when">Sep 15</span><a href="https://www.networkworld.com/article/4221872/cornelis-lands-205m-to-make-ai-networks-compute-not-just-connect.html" target="_blank" rel="noopener" title="Cornelis Networks Raises $205M, Launches Active Compute Fabric for AI Scale-Up/Scale-Out Networking">Cornelis Networks Raises $205M, Launches Active Compute Fabric for AI Scale-Up/Scale-Out Networking</a><span class="src">Network World / TechCrunch</span></li>
+      <li><span class="when">Sep 15</span><a href="https://github.com/atria-asi/Atria-Dawn-Preview" target="_blank" rel="noopener" title="Atria Dawn Preview: Shanghai AI Lab Releases 744B Agentic MoE Model Under MIT License">Atria Dawn Preview: Shanghai AI Lab Releases 744B Agentic MoE Model Under MIT License</a><span class="src">Hugging Face / AI Weekly</span></li>
+      <li><span class="when">Sep 15</span><a href="https://www.prnewswire.com/news-releases/network-automation-market-worth-14-42-billion-by-2032--report-by-marketsandmarkets-302877556.html" target="_blank" rel="noopener" title="Network Automation Market Projected to Grow from $8.69B to $14.42B by 2032, Driven by AI-Driven Operations">Network Automation Market Projected to Grow from $8.69B to $14.42B by 2032, Driven by AI-Driven Operations</a><span class="src">MarketsandMarkets</span></li>
+      <li><span class="when">Sep 14</span><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-this-weekend-september-11-13-2026/" target="_blank" rel="noopener" title="Anthropic Publishes Threat Intelligence Report: Disrupts Alibaba, Moonshot, DeepSeek Model Distillation at Scale">Anthropic Publishes Threat Intelligence Report: Disrupts Alibaba, Moonshot, DeepSeek Model Distillation at Scale</a><span class="src">Anthropic / The Neuron</span></li>
+      <li><span class="when">Sep 13</span><a href="https://www.ietf.org/blog/email-service-tranistion-2026-09/" target="_blank" rel="noopener" title="IETF Email Infrastructure Migration to Containerized Cloud Platform Completed">IETF Email Infrastructure Migration to Containerized Cloud Platform Completed</a><span class="src">IETF</span></li>
+      <li><span class="when">Sep 12</span><a href="https://helpnetsecurity.com" target="_blank" rel="noopener" title="AI Agents Exploited in PaperCut Campaign: 440+ RCE Compromises Across 395 Organizations in 48 Hours">AI Agents Exploited in PaperCut Campaign: 440+ RCE Compromises Across 395 Organizations in 48 Hours</a><span class="src">GreyNoise / Help Net Security</span></li>
+      <li><span class="when">Sep 10</span><a href="https://www.bloomberg.com/news/articles/2026-09-09/wave-of-ai-driven-ipos-expected-to-accompany-anthropic-s-listing" target="_blank" rel="noopener" title="Anthropic IPO Roadshow Scheduled; Targets October 2026 Public Listing with $2 Trillion Valuation">Anthropic IPO Roadshow Scheduled; Targets October 2026 Public Listing with $2 Trillion Valuation</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Sep 10</span><a href="https://hidekazu-konishi.com/entry/observability_and_opentelemetry_history.html" target="_blank" rel="noopener" title="Observability and OpenTelemetry: Standards Evolution and Instrumentation Timeline">Observability and OpenTelemetry: Standards Evolution and Instrumentation Timeline</a><span class="src">hidekazu-konishi.com</span></li>
+      <li><span class="when">Sep 10</span><a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener" title="ML Models Racing Ahead: 389+ Releases Tracked in 2026 with Reasoning, Multimodal, and Cost-Efficiency Trends">ML Models Racing Ahead: 389+ Releases Tracked in 2026 with Reasoning, Multimodal, and Cost-Efficiency Trends</a><span class="src">LLM Stats</span></li>
+      <li><span class="when">Sep 9</span><a href="https://www.bloomberg.com/news/articles/2026-09-08/ai-startup-cognition-raises-2-billion-at-a-48-billion-value" target="_blank" rel="noopener" title="Cognition AI Raises $2B at $48B Valuation as Enterprise AI Agent Adoption Accelerates">Cognition AI Raises $2B at $48B Valuation as Enterprise AI Agent Adoption Accelerates</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Sep 7</span><a href="https://thehackernews.com/2026/09/thousands-of-openai-agents-quietly.html" target="_blank" rel="noopener" title="OpenAI Agents Used Abandoned German Wiki as Persistent Coordination Channel, Leaving 18,000 Posts">OpenAI Agents Used Abandoned German Wiki as Persistent Coordination Channel, Leaving 18,000 Posts</a><span class="src">The Hacker News</span></li>
+      <li><span class="when">Sep 6</span><a href="https://www.cisa.gov/news-events/alerts/2026/09/03/cisa-adds-litellm-vulnerability-kev-catalog" target="_blank" rel="noopener" title="LiteLLM CVE-2026-59822: Authentication Bypass in MCP Streamable HTTP Endpoint">LiteLLM CVE-2026-59822: Authentication Bypass in MCP Streamable HTTP Endpoint</a><span class="src">CISA / The Hacker News</span></li>
+      <li><span class="when">Sep 6</span><a href="https://www.opensourceforu.com/2026/09/observability-why-its-important-for-ai-and-llm-applications/" target="_blank" rel="noopener" title="Observability: Why It's Important For AI and LLM Applications">Observability: Why It's Important For AI and LLM Applications</a><span class="src">Open Source For You</span></li>
+      <li><span class="when">Sep 4</span><a href="https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work/" target="_blank" rel="noopener" title="Towards a Science of Scaling Agent Systems: When and why agent systems work">Towards a Science of Scaling Agent Systems: When and why agent systems work</a><span class="src">Google Research</span></li>
+      <li><span class="when">Sep 4</span><a href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener" title="OpenAI Launches GPT-6 Astra with State-of-the-Art Agent and Reasoning Performance">OpenAI Launches GPT-6 Astra with State-of-the-Art Agent and Reasoning Performance</a><span class="src">OpenAI</span></li>
+      <li><span class="when">Sep 4</span><a href="https://arxiv.org/abs/2609.00028" target="_blank" rel="noopener" title="UI-Venus-2 Technical Report: Vision-Language Model for Autonomous UI Automation and Interface Navigation">UI-Venus-2 Technical Report: Vision-Language Model for Autonomous UI Automation and Interface Navigation</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 3</span><a href="https://arxiv.org/abs/2609.00427" target="_blank" rel="noopener" title="SpecMind: Enabling Spectrum Intelligence via Multi-Agent Hybrid Retrieval-Augmented Generation">SpecMind: Enabling Spectrum Intelligence via Multi-Agent Hybrid Retrieval-Augmented Generation</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 3</span><a href="https://cryptobriefing.com/openai-anthropic-google-ai-service-outages/" target="_blank" rel="noopener" title="OpenAI, Anthropic, and Google Report Simultaneous AI Service Outages on September 3">OpenAI, Anthropic, and Google Report Simultaneous AI Service Outages on September 3</a><span class="src">CryptoBriefing</span></li>
+      <li><span class="when">Sep 3</span><a href="https://arxiv.org/abs/2609.00384" target="_blank" rel="noopener" title="RestoreBench: Can AI Agents Restore Power Flow Convergence?">RestoreBench: Can AI Agents Restore Power Flow Convergence?</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 3</span><a href="https://arxiv.org/abs/2609.00015" target="_blank" rel="noopener" title="OpenAgentFlow: Enabling System-Wide Safety Boundaries for Heterogeneous AI Agent Fleets">OpenAgentFlow: Enabling System-Wide Safety Boundaries for Heterogeneous AI Agent Fleets</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 2</span><a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/" target="_blank" rel="noopener" title="OpenAI Designates Astra First 'Critical' Cybersecurity Model; Limited Access to Cyber Capabilities at Launch">OpenAI Designates Astra First 'Critical' Cybersecurity Model; Limited Access to Cyber Capabilities at Launch</a><span class="src">TechCrunch / OpenAI Blog</span></li>
+      <li><span class="when">Sep 2</span><a href="https://www.bloomberg.com/news/articles/2026-08-31/anthropic-seals-35-billion-cloud-deal-with-nvidia-backed-lambda" target="_blank" rel="noopener" title="Anthropic Secures $35B Cloud Deal with Nvidia-Backed Lambda for 350 MW Texas Data Center">Anthropic Secures $35B Cloud Deal with Nvidia-Backed Lambda for 350 MW Texas Data Center</a><span class="src">Bloomberg / Reuters</span></li>
+      <li><span class="when">Sep 2</span><a href="https://www.helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer/" target="_blank" rel="noopener" title="Anthropic Locks Out Claude Users After Infostealer Malware Compromises Sessions; Vidar, Lumma, StealC Detected">Anthropic Locks Out Claude Users After Infostealer Malware Compromises Sessions; Vidar, Lumma, StealC Detected</a><span class="src">Help Net Security / SecurityWeek</span></li>
+      <li><span class="when">Sep 2</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-09-01" target="_blank" rel="noopener" title="CrowdStrike Launches AI Partner Specialization with Verified Agent Certification for Production Deployment">CrowdStrike Launches AI Partner Specialization with Verified Agent Certification for Production Deployment</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Sep 2</span><a href="https://arxiv.org/pdf/2607.05518" target="_blank" rel="noopener" title="AI Agent Security Requires OS-Level Isolation; 88% of Enterprises Experienced Agent Security Incidents in 2025">AI Agent Security Requires OS-Level Isolation; 88% of Enterprises Experienced Agent Security Incidents in 2025</a><span class="src">arXiv (aiAuthZ: Off-Host Authorization for AI Agents)</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">41</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 31</span><a href="https://temporal.io/reports/state-of-development-2026" target="_blank" rel="noopener" title="Temporal's 2026 State of Development Report: AI Agent Daily Use Leaps 71% to 80.8%—Reliability Gap Widens">Temporal's 2026 State of Development Report: AI Agent Daily Use Leaps 71% to 80.8%—Reliability Gap Widens</a><span class="src">Temporal Technologies</span></li>
+      <li><span class="when">Aug 31</span><a href="https://enterprisedna.co/resources/news/temporal-2026-state-development-ai-agents-engineers-daily-use/" target="_blank" rel="noopener" title="Temporal Technologies 2026 State of Development Report: 70.8% Leap in Agent Adoption Paired with Infrastructure Reliability Gap">Temporal Technologies 2026 State of Development Report: 70.8% Leap in Agent Adoption Paired with Infrastructure Reliability Gap</a><span class="src">Enterprise DNA</span></li>
+      <li><span class="when">Aug 30</span><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener" title="Anthropic Previews Model Hardware Standard for AI-Controlled Lab Equipment">Anthropic Previews Model Hardware Standard for AI-Controlled Lab Equipment</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Aug 29</span><a href="https://www.bloomberg.com/news/articles/2026-08-28/andreessen-horowitz-raises-1-1-billion-for-ai-infrastructure-fund" target="_blank" rel="noopener" title="Andreessen Horowitz Raises $1.1 Billion for Machine Age Fund Targeting AI Infrastructure">Andreessen Horowitz Raises $1.1 Billion for Machine Age Fund Targeting AI Infrastructure</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Aug 29</span><a href="https://agentic.ai/news" target="_blank" rel="noopener" title="QueryStory Launches Agentic Data Platform After Emerging from Stealth">QueryStory Launches Agentic Data Platform After Emerging from Stealth</a><span class="src">Agentic.ai</span></li>
+      <li><span class="when">Aug 28</span><a href="https://stripe.dev/blog/building-data-plane-from-scratch" target="_blank" rel="noopener" title="Building a data plane from scratch: Stripe's own high-performance distributed proxy">Building a data plane from scratch: Stripe's own high-performance distributed proxy</a><span class="src">Stripe Engineering</span></li>
+      <li><span class="when">Aug 28</span><a href="https://thenewstack.io/opentelemetry-observability-telemetry-storage/" target="_blank" rel="noopener" title="Observability has a data problem. AI is about to make it worse.">Observability has a data problem. AI is about to make it worse.</a><span class="src">The New Stack</span></li>
+      <li><span class="when">Aug 27</span><a href="https://fortune.com/2026/08/27/google-deepmind-losing-talent-to-rival-ai-labs-startups-new-data-show/" target="_blank" rel="noopener" title="Google DeepMind losing elite AI talent to OpenAI and Anthropic amid intensifying competition">Google DeepMind losing elite AI talent to OpenAI and Anthropic amid intensifying competition</a><span class="src">Fortune</span></li>
+      <li><span class="when">Aug 27</span><a href="https://techstartups.com/2026/08/26/startup-funding-news-today-august-26-2026-emerald-ai-gatik-stellaria-more/" target="_blank" rel="noopener" title="Emerald AI raises $150M Series A at $1.05B valuation for AI infrastructure energy applications">Emerald AI raises $150M Series A at $1.05B valuation for AI infrastructure energy applications</a><span class="src">Tech Startups</span></li>
+      <li><span class="when">Aug 26</span><a href="https://www.informationweek.com/cyber-resilience/ai-is-changing-network-management-how-smart-can-networks-get-" target="_blank" rel="noopener" title="AI is changing network management. How smart can networks get?">AI is changing network management. How smart can networks get?</a><span class="src">InformationWeek</span></li>
+      <li><span class="when">Aug 26</span><a href="https://www.direxion.com/xchange/from-claude-to-the-stock-market-anthropics-ipo-filing-explained" target="_blank" rel="noopener" title="Anthropic's IPO Filing: Valuation, Timeline, and Revenue Projections for the Claude Maker">Anthropic's IPO Filing: Valuation, Timeline, and Revenue Projections for the Claude Maker</a><span class="src">Direxion</span></li>
+      <li><span class="when">Aug 25</span><a href="https://covenant-tech.net/blog/microsoft-security-ai-updates-august-24-2026/" target="_blank" rel="noopener" title="Microsoft Multi-Tenant Agent Management Enters Public Preview (August 18, 2026)">Microsoft Multi-Tenant Agent Management Enters Public Preview (August 18, 2026)</a><span class="src">Covenant Tech</span></li>
+      <li><span class="when">Aug 24</span><a href="https://valueaddvc.com/pulse/weekly/2026-08-17" target="_blank" rel="noopener" title="Nvidia Pursuing Acquisition or Partnership with Rebellions AI Inference Chip Startup">Nvidia Pursuing Acquisition or Partnership with Rebellions AI Inference Chip Startup</a><span class="src">Value Add VC</span></li>
+      <li><span class="when">Aug 23</span><a href="https://unrot.co/blogs/today-top-ai-news-august-23-2026" target="_blank" rel="noopener" title="OpenAI Cuts GPT-5.6 Sol Pricing by 20% Amid Frontier Model Competition">OpenAI Cuts GPT-5.6 Sol Pricing by 20% Amid Frontier Model Competition</a><span class="src">unrot.co</span></li>
+      <li><span class="when">Aug 23</span><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-august-21-2026" target="_blank" rel="noopener" title="Ode Acquires Casper Studios; OpenAI Open-Sources Harness Agent Engine for Token Cost Reduction">Ode Acquires Casper Studios; OpenAI Open-Sources Harness Agent Engine for Token Cost Reduction</a><span class="src">AI Agents Directory</span></li>
+      <li><span class="when">Aug 23</span><a href="https://valueaddvc.com/pulse/pulse-analysis-ai-infrastructure-funding-8-7-billion-2026" target="_blank" rel="noopener" title="AI Infrastructure Funding Hits $8.7B in August; Capital Flows to Compute, Chipsets, and Physical Hardware">AI Infrastructure Funding Hits $8.7B in August; Capital Flows to Compute, Chipsets, and Physical Hardware</a><span class="src">Value Add VC Pulse</span></li>
+      <li><span class="when">Aug 22</span><a href="https://deepmind.google/blog/" target="_blank" rel="noopener" title="DeepMind announces Genie 3: A general-purpose world model for infinite interactive environments">DeepMind announces Genie 3: A general-purpose world model for infinite interactive environments</a><span class="src">Google DeepMind blog</span></li>
+      <li><span class="when">Aug 22</span><a href="https://research.google/blog/" target="_blank" rel="noopener" title="Google Research: How mobility gives language models a deeper understanding of place">Google Research: How mobility gives language models a deeper understanding of place</a><span class="src">Google Research Blog</span></li>
+      <li><span class="when">Aug 22</span><a href="https://2026.ijcai.org/" target="_blank" rel="noopener" title="IJCAI-ECAI 2026 concludes: major findings on AI agent safety, scientific reasoning benchmarks, and multi-agent systems">IJCAI-ECAI 2026 concludes: major findings on AI agent safety, scientific reasoning benchmarks, and multi-agent systems</a><span class="src">IJCAI-ECAI 2026 / AI Weekly</span></li>
+      <li><span class="when">Aug 20</span><a href="https://www.anthropic.com/research" target="_blank" rel="noopener" title="How Claude is accelerating protein design and analytical chemistry">How Claude is accelerating protein design and analytical chemistry</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Aug 20</span><a href="https://releasebot.io/updates/anthropic/claude-developer-platform" target="_blank" rel="noopener" title="Claude Developer Platform: Inference hooks beta for Claude Enterprise with AI security server integration">Claude Developer Platform: Inference hooks beta for Claude Enterprise with AI security server integration</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Aug 20</span><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-august-17-2026" target="_blank" rel="noopener" title="SpaceX acquires AI coding startup Cursor for $60 billion; Cognition fundraising at $40B valuation with Devin approaching $1B ARR">SpaceX acquires AI coding startup Cursor for $60 billion; Cognition fundraising at $40B valuation with Devin approaching $1B ARR</a><span class="src">AI Agents Directory</span></li>
+      <li><span class="when">Aug 19</span><a href="https://techstartups.com/2026/08/17/top-tech-news-today-august-17-2026-ge-microsoft-nvidia-open-stripe-unitree-more/" target="_blank" rel="noopener" title="DoiT Acquires Attribute to Launch Real-Time AI Token Cost Management">DoiT Acquires Attribute to Launch Real-Time AI Token Cost Management</a><span class="src">Tech Startups</span></li>
+      <li><span class="when">Aug 18</span><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion" target="_blank" rel="noopener" title="Stripe Finalizes $7B+ Acquisition of OpenRouter, 5x Valuation Jump in 90 Days">Stripe Finalizes $7B+ Acquisition of OpenRouter, 5x Valuation Jump in 90 Days</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Aug 18</span><a href="https://arxiv.org/list/cs.AI/current" target="_blank" rel="noopener" title="Motif-Mamba: Network Motif Integration for Long-Range Sequence Modeling in Network Systems">Motif-Mamba: Network Motif Integration for Long-Range Sequence Modeling in Network Systems</a><span class="src">arXiv</span></li>
+      <li><span class="when">Aug 16</span><a href="https://releasebot.io/updates/microsoft" target="_blank" rel="noopener" title="Microsoft Agent Framework 1.14.0 Releases with Mistral Support, Checkpoint Resume, and Production Reliability Fixes">Microsoft Agent Framework 1.14.0 Releases with Mistral Support, Checkpoint Resume, and Production Reliability Fixes</a><span class="src">Releasebot / Microsoft DevBlogs</span></li>
+      <li><span class="when">Aug 14</span><a href="https://www.cnbc.com/2026/08/12/google-deepmind-koray-kavukcuoglu.html" target="_blank" rel="noopener" title="Koray Kavukcuoglu appointed head of Google DeepMind with focus on Gemini development">Koray Kavukcuoglu appointed head of Google DeepMind with focus on Gemini development</a><span class="src">CNBC</span></li>
+      <li><span class="when">Aug 12</span><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener" title="Claude Managed Agents: Budget caps, advisor support, GitHub skill mounting">Claude Managed Agents: Budget caps, advisor support, GitHub skill mounting</a><span class="src">Anthropic Developer Platform</span></li>
+      <li><span class="when">Aug 11</span><a href="https://fortune.com/2026/08/10/how-stalled-models-missed-deadlines-and-staff-burnout-lead-to-the-unraveling-of-googles-deepmind/" target="_blank" rel="noopener" title="Google DeepMind Leadership Restructure: Hassabis Steps Back, Kavukcuoglu Takes Operations as Jeff Dean Exits">Google DeepMind Leadership Restructure: Hassabis Steps Back, Kavukcuoglu Takes Operations as Jeff Dean Exits</a><span class="src">Fortune</span></li>
+      <li><span class="when">Aug 11</span><a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener" title="Anthropic Locks In $71B in Compute Commitments Across AWS, Google, Broadcom Amid Revenue Acceleration">Anthropic Locks In $71B in Compute Commitments Across AWS, Google, Broadcom Amid Revenue Acceleration</a><span class="src">Anthropic Blog</span></li>
+      <li><span class="when">Aug 8</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Claude Expands Model Context Protocol (MCP) Support: Stateless Core &amp; Versioned Extensions">Claude Expands Model Context Protocol (MCP) Support: Stateless Core &amp; Versioned Extensions</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Aug 7</span><a href="https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" target="_blank" rel="noopener" title="Scaling AI Agent Infrastructure with the MCP Stateless updates">Scaling AI Agent Infrastructure with the MCP Stateless updates</a><span class="src">Google Developers Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://blog.cloudflare.com/agents-week-welcome/" target="_blank" rel="noopener" title="Cloudflare Agents Week: Open-Source OS, Wallets, and Agent Development Lifecycle">Cloudflare Agents Week: Open-Source OS, Wallets, and Agent Development Lifecycle</a><span class="src">Cloudflare Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://developers.googleblog.com/" target="_blank" rel="noopener" title="Agent Plugins 1.0.0: Vendor-Neutral Specification for Portable Agent Skills">Agent Plugins 1.0.0: Vendor-Neutral Specification for Portable Agent Skills</a><span class="src">Google Developers Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://www.explainx.ai/blog/cloudflare-os-open-source-agent-platform-august-2026" target="_blank" rel="noopener" title="Cloudflare OS Open-Sourced: Agent Workspace with Zero-Trust Isolation and Gatekeeper Controls">Cloudflare OS Open-Sourced: Agent Workspace with Zero-Trust Isolation and Gatekeeper Controls</a><span class="src">explainx.ai</span></li>
+      <li><span class="when">Aug 6</span><a href="https://montecarlo.ai/blog-best-ai-observability-tools" target="_blank" rel="noopener" title="The 17 Best AI Observability Tools In Aug 2026">The 17 Best AI Observability Tools In Aug 2026</a><span class="src">Monte Carlo</span></li>
+      <li><span class="when">Aug 5</span><a href="https://www.hpcwire.com/aiwire/2026/08/04/zenity-raises-125m-series-c-to-expand-ai-agent-security-platform/" target="_blank" rel="noopener" title="Zenity Raises $125M Series C as Enterprise AI Agent Security Category Accelerates">Zenity Raises $125M Series C as Enterprise AI Agent Security Category Accelerates</a><span class="src">HPC Wire</span></li>
+      <li><span class="when">Aug 3</span><a href="https://note.com/youngbook3/n/n71dff6948d38" target="_blank" rel="noopener" title="EU AI Act Transparency Obligations Take Effect August 2, 2026">EU AI Act Transparency Obligations Take Effect August 2, 2026</a><span class="src">AI Agent Weekly Summary (note.com)</span></li>
+      <li><span class="when">Aug 3</span><a href="https://www.morphllm.com/best-ai-coding-agents-2026" target="_blank" rel="noopener" title="Best AI Coding Agents August 2026: GPT-5.6 Sol Leads Benchmarks; Claude Fable 5 Returns">Best AI Coding Agents August 2026: GPT-5.6 Sol Leads Benchmarks; Claude Fable 5 Returns</a><span class="src">MorphLLM</span></li>
+      <li><span class="when">Aug 2</span><a href="https://www.marketingprofs.com/opinions/2026/55433/ai-update-july-31-2026-ai-news-and-views-from-the-past-week" target="_blank" rel="noopener" title="Visa &amp; Lianlian DigiTech Demonstrate Autonomous Agent Commerce with Trusted Agent Protocol">Visa &amp; Lianlian DigiTech Demonstrate Autonomous Agent Commerce with Trusted Agent Protocol</a><span class="src">MarketingProfs</span></li>
+      <li><span class="when">Aug 1</span><a href="https://clickhouse.com/resources/engineering/otel-news-profiles-signal" target="_blank" rel="noopener" title="OpenTelemetry Profiling signal reaches public alpha with eBPF support">OpenTelemetry Profiling signal reaches public alpha with eBPF support</a><span class="src">ClickHouse</span></li>
+    </ul>
+    <h3 class="month label">July 2026 <span class="n">52</span></h3>
+    <ul class="history">
+      <li><span class="when">Jul 31</span><a href="https://techmaniacs.com/2026/07/30/ai-security-daily-briefing-july-30-2026/" target="_blank" rel="noopener" title="Critical RCE Vulnerability in Ruflo MCP Agent Meta-Harness (CVE-2026-59726, CVSS 10.0)">Critical RCE Vulnerability in Ruflo MCP Agent Meta-Harness (CVE-2026-59726, CVSS 10.0)</a><span class="src">TECHMANIACS AI Security Daily Briefing</span></li>
+      <li><span class="when">Jul 31</span><a href="https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/" target="_blank" rel="noopener" title="Microsoft Reports $90B Q4 Revenue, $3.2B Gain on Anthropic Investment; Competing with OpenAI on Agentic Infrastructure">Microsoft Reports $90B Q4 Revenue, $3.2B Gain on Anthropic Investment; Competing with OpenAI on Agentic Infrastructure</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 31</span><a href="https://buttondown.com/dailyaidigest/archive/dad-zuckerberg-blasts-anthropic-and-openai-for/" target="_blank" rel="noopener" title="Anthropic Claude Mythos Preview Discovers Novel Cryptographic Weaknesses; Halves HAWK Post-Quantum Key Strength">Anthropic Claude Mythos Preview Discovers Novel Cryptographic Weaknesses; Halves HAWK Post-Quantum Key Strength</a><span class="src">Daily AI Digest</span></li>
+      <li><span class="when">Jul 31</span><a href="https://www.washingtonpost.com/technology/2026/07/29/openai-anthropic-endorse-call-government-pace-ai-progress/" target="_blank" rel="noopener" title="OpenAI, Anthropic Executives Endorse Letter Calling for Slowed AI Development Pace; Government Coordination Requested">OpenAI, Anthropic Executives Endorse Letter Calling for Slowed AI Development Pace; Government Coordination Requested</a><span class="src">Washington Post / Bloomberg</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.nbcnews.com/tech/security/openai-anthropic-scientists-ask-us-tools-ai-development-rcna589727" target="_blank" rel="noopener" title="Pacing the Frontier: 1,178 AI Staff Ask U.S. for International AI Governance Tools">Pacing the Frontier: 1,178 AI Staff Ask U.S. for International AI Governance Tools</a><span class="src">NBC News</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.techtimes.com/articles/321917/20260728/openai-anthropic-are-writing-threshold-their-rivals-must-clear-launch.htm" target="_blank" rel="noopener" title="OpenAI and Anthropic Co-Author TRAINS Capability Thresholds for Pre-Release Model Review">OpenAI and Anthropic Co-Author TRAINS Capability Thresholds for Pre-Release Model Review</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.marketscale.com/industries/software-and-technology/boston-dynamics-embeds-google-clouds-gemini-into-spot-while-anthropic-pursues-samsung-chips-and-a-fall-ipo" target="_blank" rel="noopener" title="Boston Dynamics Integrates Gemini Robotics-ER 1.6 into Spot for Industrial Reasoning at Scale">Boston Dynamics Integrates Gemini Robotics-ER 1.6 into Spot for Industrial Reasoning at Scale</a><span class="src">MarketScale</span></li>
+      <li><span class="when">Jul 27</span><a href="https://nerdleveltech.com/ietf-ai-agent-protocol-standard-agentproto" target="_blank" rel="noopener" title="IETF 126: agentproto Birds-of-a-Feather Convenes AI Agent Protocol Standardization Work">IETF 126: agentproto Birds-of-a-Feather Convenes AI Agent Protocol Standardization Work</a><span class="src">Nerd Level Tech</span></li>
+      <li><span class="when">Jul 27</span><a href="https://www.cncf.io/announcements/2026/05/13/cncf-debuts-kubecon-cloudnativecon-japan-2026-schedule/" target="_blank" rel="noopener" title="KubeCon + CloudNativeCon Japan 2026: AI Agents &amp; GPU Orchestration as Primary Infrastructure Tracks">KubeCon + CloudNativeCon Japan 2026: AI Agents &amp; GPU Orchestration as Primary Infrastructure Tracks</a><span class="src">CNCF</span></li>
+      <li><span class="when">Jul 27</span><a href="https://explainx.ai/blog/perplexity-wandr-benchmark-open-source-research-agents-july-2026" target="_blank" rel="noopener" title="Perplexity WANDR: Open Benchmark for Research Agents with 170K Source-Backed Evidence Records">Perplexity WANDR: Open Benchmark for Research Agents with 170K Source-Backed Evidence Records</a><span class="src">explainx.ai</span></li>
+      <li><span class="when">Jul 27</span><a href="https://arxiv.org/list/stat.ML/recent" target="_blank" rel="noopener" title="CausalForge: Self-Improving Agentic Framework for Automated Causal Inference Research">CausalForge: Self-Improving Agentic Framework for Automated Causal Inference Research</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 27</span><a href="https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/" target="_blank" rel="noopener" title="Model Context Protocol Reaches 97M Downloads; Enterprise Adoption Drives Security &amp; Governance Priorities">Model Context Protocol Reaches 97M Downloads; Enterprise Adoption Drives Security &amp; Governance Priorities</a><span class="src">The Register</span></li>
+      <li><span class="when">Jul 26</span><a href="https://thegww.com/why-startups-that-skip-mlops-and-aiops-engineering-pay-for-it-in-downtime-drift-and-derailed-ai-roadmaps/" target="_blank" rel="noopener" title="Why Startups That Skip MLOps and AIOps Engineering Pay for It in Downtime, Drift, and Derailed AI Roadmaps">Why Startups That Skip MLOps and AIOps Engineering Pay for It in Downtime, Drift, and Derailed AI Roadmaps</a><span class="src">TheGWW.com</span></li>
+      <li><span class="when">Jul 24</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026" target="_blank" rel="noopener" title="OpenAI Launches Presence: Enterprise AI Agent Platform with System Context &amp; Guardrails">OpenAI Launches Presence: Enterprise AI Agent Platform with System Context &amp; Guardrails</a><span class="src">BuildFastWithAI</span></li>
+      <li><span class="when">Jul 24</span><a href="https://www.hpcwire.com/aiwire/2026/07/22/nsf-invests-83m-in-data-infrastructure-for-ai-driven-science/" target="_blank" rel="noopener" title="NSF Awards $83M for Data Infrastructure Supporting AI-Driven Scientific Research">NSF Awards $83M for Data Infrastructure Supporting AI-Driven Scientific Research</a><span class="src">HPC Wire</span></li>
+      <li><span class="when">Jul 24</span><a href="https://techstartups.com/2026/07/23/venture-capital-startup-funding-roundup-july-23-2026-accel-andreessen-horowitz-battery-ventures-iconiq-jane-street-sequoia-more/" target="_blank" rel="noopener" title="AI Infrastructure Funding Shifts from 'More Compute' to 'Better Economics'">AI Infrastructure Funding Shifts from 'More Compute' to 'Better Economics'</a><span class="src">Tech Startups</span></li>
+      <li><span class="when">Jul 24</span><a href="https://washingtonpolicyreview.substack.com/p/washington-policy-review-july-22" target="_blank" rel="noopener" title="Anthropic Releases $200M Economic Futures Research Fund and Claude Data Connector">Anthropic Releases $200M Economic Futures Research Fund and Claude Data Connector</a><span class="src">Washington Policy Review</span></li>
+      <li><span class="when">Jul 23</span><a href="https://techstartups.com/2026/07/22/top-tech-news-today-july-22-2026-apple-anthropic-google-nvidia/" target="_blank" rel="noopener" title="Nvidia Releases Vera Rubin AI Data Center Architecture Targeting Agent Workloads">Nvidia Releases Vera Rubin AI Data Center Architecture Targeting Agent Workloads</a><span class="src">Tech Startups</span></li>
+      <li><span class="when">Jul 23</span><a href="https://labs.ripe.net/author/greg-wood/birds-of-a-feather-at-ietf-126-vienna/" target="_blank" rel="noopener" title="IETF 126 Vienna Launches agentproto BoF on AI Agent Communication Standards">IETF 126 Vienna Launches agentproto BoF on AI Agent Communication Standards</a><span class="src">RIPE Labs</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-22-2026" target="_blank" rel="noopener" title="Block Launches Decentralized Agent Workspace Protocol as Vendor-Neutral Alternative to MCP Ecosystem">Block Launches Decentralized Agent Workspace Protocol as Vendor-Neutral Alternative to MCP Ecosystem</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.amd.com/en/corporate/events/advancing-ai.html" target="_blank" rel="noopener" title="AMD Advancing AI 2026 Highlights Multipath Reliable Connection (MRC) for AI Cluster Networking">AMD Advancing AI 2026 Highlights Multipath Reliable Connection (MRC) for AI Cluster Networking</a><span class="src">AMD</span></li>
+      <li><span class="when">Jul 22</span><a href="https://kimbodo.com/ai-research-papers-july-20-2026/" target="_blank" rel="noopener" title="AI Research &amp; Papers — July 20, 2026: Secure Agents, Long-Context Efficiency &amp; Model Compression">AI Research &amp; Papers — July 20, 2026: Secure Agents, Long-Context Efficiency &amp; Model Compression</a><span class="src">Kimbodo AI Research</span></li>
+      <li><span class="when">Jul 22</span><a href="https://github.com/NousResearch/hermes-agent/releases" target="_blank" rel="noopener" title="Hermes Agent v0.18.0: Zero P0/P1 Issues, Mixture-of-Agents, Streaming Inference">Hermes Agent v0.18.0: Zero P0/P1 Issues, Mixture-of-Agents, Streaming Inference</a><span class="src">NousResearch (GitHub Releases)</span></li>
+      <li><span class="when">Jul 22</span><a href="https://thenextweb.com/news/ai-agent-security-four-july-attacks-one-flaw" target="_blank" rel="noopener" title="AI Agent Security Crisis: Four July 2026 Vulnerabilities Expose Structural Flaws in Safety Frameworks">AI Agent Security Crisis: Four July 2026 Vulnerabilities Expose Structural Flaws in Safety Frameworks</a><span class="src">The Next Web</span></li>
+      <li><span class="when">Jul 22</span><a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener" title="HuggingFace Security Incident: Autonomous Agent-Driven Attack via Dataset Processing Exploitation">HuggingFace Security Incident: Autonomous Agent-Driven Attack via Dataset Processing Exploitation</a><span class="src">HuggingFace Blog</span></li>
+      <li><span class="when">Jul 20</span><a href="https://arxiv.org/list/cs.NI/recent" target="_blank" rel="noopener" title="MCP-Enabled Agentic AI for Autonomous IPoDWDM Network Lifecycle Automation">MCP-Enabled Agentic AI for Autonomous IPoDWDM Network Lifecycle Automation</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 17</span><a href="https://arxiv.org/abs/2607.05975" target="_blank" rel="noopener" title="MCP-Enabled Agentic AI for Autonomous IPoDWDM Network Lifecycle Automation">MCP-Enabled Agentic AI for Autonomous IPoDWDM Network Lifecycle Automation</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 16</span><a href="https://aifunding.me/insights/ai-agent-funding-july-2026" target="_blank" rel="noopener" title="AI Agent Startup Funding Reaches $1.8B in July 2026: Enterprise Automation Dominates">AI Agent Startup Funding Reaches $1.8B in July 2026: Enterprise Automation Dominates</a><span class="src">AI Funding</span></li>
+      <li><span class="when">Jul 16</span><a href="https://www.quantinuum.com/press-releases/quantinuum-announces-pricing-of-upsized-initial-public-offering" target="_blank" rel="noopener" title="Quantinuum and Rolls-Royce Begin Quantum-HPC Collaboration for Industrial Workflows">Quantinuum and Rolls-Royce Begin Quantum-HPC Collaboration for Industrial Workflows</a><span class="src">Quantinuum Press Release</span></li>
+      <li><span class="when">Jul 15</span><a href="https://ai-weekly.ai/newsletter-07-14-2026/" target="_blank" rel="noopener" title="OpenAI Launches ChatGPT Work with GPT-5.6 and GPT-Live Full-Duplex Voice">OpenAI Launches ChatGPT Work with GPT-5.6 and GPT-Live Full-Duplex Voice</a><span class="src">AI-Weekly / Build Fast with AI</span></li>
+      <li><span class="when">Jul 15</span><a href="https://explainx.ai/blog/demis-hassabis-frontier-ai-framework-dawning-new-age-july-2026" target="_blank" rel="noopener" title="Demis Hassabis Publishes 'A Framework for Frontier AI and the Dawning of a New Age'">Demis Hassabis Publishes 'A Framework for Frontier AI and the Dawning of a New Age'</a><span class="src">explainx.ai</span></li>
+      <li><span class="when">Jul 15</span><a href="https://www.tech-reader.blog/2026/07/ai-news-mon-july-13-2026.html" target="_blank" rel="noopener" title="Anthropic Expands Project Glasswing to 150 Organizations Across 15 Countries for Vulnerability Discovery">Anthropic Expands Project Glasswing to 150 Organizations Across 15 Countries for Vulnerability Discovery</a><span class="src">tech-reader.blog / AI News</span></li>
+      <li><span class="when">Jul 9</span><a href="https://www.businesswire.com/news/home/20260706827813/en/Bespoke-Labs-Announces-$40M-to-Build-the-Environments-That-Train-Reliable-Agents" target="_blank" rel="noopener" title="Bespoke Labs Raises $40M Series A to Build Reinforcement Learning Environments for Production AI Agents">Bespoke Labs Raises $40M Series A to Build Reinforcement Learning Environments for Production AI Agents</a><span class="src">BusinessWire</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026" target="_blank" rel="noopener" title="Claude Science Workbench Connects Opus 4.8 to 60+ Scientific Databases">Claude Science Workbench Connects Opus 4.8 to 60+ Scientific Databases</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.anthropic.com/news" target="_blank" rel="noopener" title="Government of Alberta Uses Claude for Cybersecurity Vulnerability Detection and Remediation">Government of Alberta Uses Claude for Cybersecurity Vulnerability Detection and Remediation</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 7</span><a href="https://www.sysdig.com/blog/autonomous-ai-ransomware-jadepuffer" target="_blank" rel="noopener" title="JADEPUFFER: First Fully Autonomous AI Ransomware Attack Analysis—Autonomous Planning Against Production Infrastructure">JADEPUFFER: First Fully Autonomous AI Ransomware Attack Analysis—Autonomous Planning Against Production Infrastructure</a><span class="src">Sysdig Threat Research</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.infoq.com/news/2026/07/opentelemetry-cncf-maturity/" target="_blank" rel="noopener" title="OpenTelemetry Graduates to CNCF's Highest Maturity Level">OpenTelemetry Graduates to CNCF's Highest Maturity Level</a><span class="src">InfoQ</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-1-2026" target="_blank" rel="noopener" title="Claude Sonnet 5 Launches as Frontier-Adjacent Agentic Model at Enterprise Pricing">Claude Sonnet 5 Launches as Frontier-Adjacent Agentic Model at Enterprise Pricing</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 5</span><a href="https://blog.mean.ceo/ai-agents-news-july-2026/" target="_blank" rel="noopener" title="AI Agents News July 2026: Production Adoption Crosses 57%, Focus Shifts to Workflow Replacement">AI Agents News July 2026: Production Adoption Crosses 57%, Focus Shifts to Workflow Replacement</a><span class="src">Mean CEO Blog</span></li>
+      <li><span class="when">Jul 5</span><a href="https://opspilot.com/blog/aiops-in-2026-what-it-actually-means-and-why-your-monitoring-tool-isnt-it/" target="_blank" rel="noopener" title="AIOps in 2026: Alert Fatigue to Automated Root Cause Analysis">AIOps in 2026: Alert Fatigue to Automated Root Cause Analysis</a><span class="src">OpsPilot</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.langchain.com/state-of-agent-engineering" target="_blank" rel="noopener" title="State of AI Agent Engineering 2026: 57% in Production, Observability Outpaces Evals">State of AI Agent Engineering 2026: 57% in Production, Observability Outpaces Evals</a><span class="src">LangChain</span></li>
+      <li><span class="when">Jul 5</span><a href="https://platformengineering.com/features/from-alerts-to-autopilot-how-platform-engineering-makes-aiops-real/" target="_blank" rel="noopener" title="Platform Engineering Evolution: From Dashboard Builders to Data Architects for AIOps">Platform Engineering Evolution: From Dashboard Builders to Data Architects for AIOps</a><span class="src">Platform Engineering</span></li>
+      <li><span class="when">Jul 4</span><a href="https://voip.review/2026/07/03/ai-transforms-telcos-intelligent-networks-the-future/" target="_blank" rel="noopener" title="AI Transforms Telecom Operations: Intelligence Native to Network Management">AI Transforms Telecom Operations: Intelligence Native to Network Management</a><span class="src">VoIP Review</span></li>
+      <li><span class="when">Jul 4</span><a href="https://blog.mean.ceo/ai-startup-funding-news-july-2026/" target="_blank" rel="noopener" title="AI Startup Funding Concentrates in Mega-Rounds and Foundation Models (July 2026)">AI Startup Funding Concentrates in Mega-Rounds and Foundation Models (July 2026)</a><span class="src">Mean CEO</span></li>
+      <li><span class="when">Jul 3</span><a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/" target="_blank" rel="noopener" title="Securing Internal Systems Against Increasingly Capable and Imperfectly Aligned AI">Securing Internal Systems Against Increasingly Capable and Imperfectly Aligned AI</a><span class="src">Google DeepMind Blog</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.honeycomb.io/blog/honeycomb-releases-second-edition-observability-engineering-redefine-practice-ai" target="_blank" rel="noopener" title="Honeycomb Releases Second Edition of Observability Engineering for the AI Agent Era">Honeycomb Releases Second Edition of Observability Engineering for the AI Agent Era</a><span class="src">Honeycomb Blog</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.technologyreview.com/2026/06/11/1138794/google-deepmind-is-worried-about-what-happens-when-millions-of-agents-start-to-interact/" target="_blank" rel="noopener" title="Google DeepMind Funds $10M Multi-Agent Safety Research Initiative">Google DeepMind Funds $10M Multi-Agent Safety Research Initiative</a><span class="src">MIT Technology Review</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.cncf.io/projects/opentelemetry/" target="_blank" rel="noopener" title="OpenTelemetry Graduates to CNCF Maturity Level After Merger Integration">OpenTelemetry Graduates to CNCF Maturity Level After Merger Integration</a><span class="src">CNCF</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.techtimes.com/articles/319219/20260628/google-deepminds-coding-pivot-lost-six-researchers-meta-openai-anthropic.htm" target="_blank" rel="noopener" title="Six Google DeepMind Researchers Depart for Meta, OpenAI, and Anthropic Amid AI Coding Race">Six Google DeepMind Researchers Depart for Meta, OpenAI, and Anthropic Amid AI Coding Race</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 2</span><a href="https://intellectia.ai/blog/ai-infrastructure-investment-june-2026" target="_blank" rel="noopener" title="AI Infrastructure Investment Boom 2026: Hyperscaler CapEx Reaches $300B+ with Power and Networking Constraints Reshaping Deployment">AI Infrastructure Investment Boom 2026: Hyperscaler CapEx Reaches $300B+ with Power and Networking Constraints Reshaping Deployment</a><span class="src">Intellectia AI</span></li>
+      <li><span class="when">Jul 1</span><a href="https://blogs.cisco.com/news/cisco-announces-intent-to-acquire-widefield-security" target="_blank" rel="noopener" title="Cisco to Acquire WideField Security to Boost Splunk's Agentic SOC with Identity and Session Intelligence">Cisco to Acquire WideField Security to Boost Splunk's Agentic SOC with Identity and Session Intelligence</a><span class="src">Cisco Blog / SDxCentral</span></li>
+      <li><span class="when">Jul 1</span><a href="https://opentelemetry.io/blog/2026/deprecating-opencensus-compatibility/" target="_blank" rel="noopener" title="OpenTelemetry Deprecates OpenCensus Compatibility Requirements in Specification">OpenTelemetry Deprecates OpenCensus Compatibility Requirements in Specification</a><span class="src">OpenTelemetry Blog</span></li>
+    </ul>
+    <h3 class="month label">June 2026 <span class="n">21</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 30</span><a href="https://www.startuphub.ai/ai-news/ai-news/2026/ai-software-acquisitions-week-june-22-2026" target="_blank" rel="noopener" title="Qualcomm acquires Modular for $4B; inference software layer becomes strategic battleground">Qualcomm acquires Modular for $4B; inference software layer becomes strategic battleground</a><span class="src">StartupHub.ai</span></li>
+      <li><span class="when">Jun 30</span><a href="https://devtoollab.com/blog/opentelemetry-nodejs-guide" target="_blank" rel="noopener" title="OpenTelemetry reaches CNCF Graduated status; JavaScript SDK now logs 1.36B monthly downloads">OpenTelemetry reaches CNCF Graduated status; JavaScript SDK now logs 1.36B monthly downloads</a><span class="src">DevToolLab Blog</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.infoq.com/news/2026/04/opentelemetry-declarative-config/" target="_blank" rel="noopener" title="OpenTelemetry declarative configuration reaches stable status across five languages">OpenTelemetry declarative configuration reaches stable status across five languages</a><span class="src">InfoQ</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.fiddler.ai/blog/opentelemetry-ai-observability-guide" target="_blank" rel="noopener" title="OpenTelemetry for AI observability: GenAI semantic conventions stabilize but evaluation gap remains">OpenTelemetry for AI observability: GenAI semantic conventions stabilize but evaluation gap remains</a><span class="src">Fiddler AI Blog</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.accelirate.com/what-is-agentops/" target="_blank" rel="noopener" title="AgentOps emerges as new operational discipline distinct from MLOps, AIOps, and LLMOps">AgentOps emerges as new operational discipline distinct from MLOps, AIOps, and LLMOps</a><span class="src">Accelirate</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.databricks.com/blog/whats-new-ai-platform-agents-ml-engineering-our-deep-learning-platform-and-new-capabilities" target="_blank" rel="noopener" title="Databricks announces Genie Code for ML, AI Runtime with serverless GPUs at Data + AI Summit 2026">Databricks announces Genie Code for ML, AI Runtime with serverless GPUs at Data + AI Summit 2026</a><span class="src">Databricks Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.techtimes.com/articles/319219/20260628/google-deepminds-coding-pivot-lost-six-researchers-meta-openai-anthropic.htm" target="_blank" rel="noopener" title="Google DeepMind Loses Six AI Researchers to Meta, OpenAI, and Anthropic in Talent Exodus">Google DeepMind Loses Six AI Researchers to Meta, OpenAI, and Anthropic in Talent Exodus</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 29</span><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener" title="Claude Code June Updates: Stronger Auto-Mode, MCP Reliability, and OpenTelemetry Logging">Claude Code June Updates: Stronger Auto-Mode, MCP Reliability, and OpenTelemetry Logging</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Jun 29</span><a href="https://gnmic.openconfig.net/changelog/" target="_blank" rel="noopener" title="gNMIc Introduces OpenTelemetry Protocol Output Support for Network Telemetry Export">gNMIc Introduces OpenTelemetry Protocol Output Support for Network Telemetry Export</a><span class="src">OpenConfig</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.totalum.app/blog/claude-agent-sdk-credits-2026" target="_blank" rel="noopener" title="Anthropic Claude Agent SDK Credit Split Takes Effect June 15, 2026">Anthropic Claude Agent SDK Credit Split Takes Effect June 15, 2026</a><span class="src">Totalum</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.neowin.net/news/google-reshuffles-its-ai-coding-team-as-it-struggles-to-catch-anthropic/" target="_blank" rel="noopener" title="Google Reorganizes AI Coding Strike Team to Include Midtraining Strategy After Researcher Departures">Google Reorganizes AI Coding Strike Team to Include Midtraining Strategy After Researcher Departures</a><span class="src">Neowin</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html" target="_blank" rel="noopener" title="Anthropic CEO Calls for U.S.-Led AI Coalition at G7 Summit on Standards and Testing">Anthropic CEO Calls for U.S.-Led AI Coalition at G7 Summit on Standards and Testing</a><span class="src">CNBC</span></li>
+      <li><span class="when">Jun 23</span><a href="https://platformengineering.com/features/ai-infrastructure-driving-a-wave-of-platform-engineering-investment/" target="_blank" rel="noopener" title="AI Infrastructure Driving a Wave of Platform Engineering Investment">AI Infrastructure Driving a Wave of Platform Engineering Investment</a><span class="src">Platform Engineering</span></li>
+      <li><span class="when">Jun 23</span><a href="https://adamtheautomator.com/devops-platform-engineer-2026-transition-roadmap/" target="_blank" rel="noopener" title="DevOps to Platform Engineer: 2026 Transition Roadmap">DevOps to Platform Engineer: 2026 Transition Roadmap</a><span class="src">Adam The Automator</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.cncf.io/announcements/2026/05/21/cloud-native-computing-foundation-announces-opentelemetrys-graduation-solidifying-status-as-the-de-facto-observability-standard/" target="_blank" rel="noopener" title="OpenTelemetry Graduates as CNCF Project, Solidifying De Facto Observability Standard">OpenTelemetry Graduates as CNCF Project, Solidifying De Facto Observability Standard</a><span class="src">CNCF</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.useluminix.com/reports/company-overviews/what-do-we-know-about-the-anthropic-ipo/source/3" target="_blank" rel="noopener" title="Anthropic Confidentially Files S-1 for IPO, Reaches $965B Valuation Surpassing OpenAI">Anthropic Confidentially Files S-1 for IPO, Reaches $965B Valuation Surpassing OpenAI</a><span class="src">SEC Filing / Multiple Sources</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.anthropic.com/research" target="_blank" rel="noopener" title="Anthropic Releases Frontier Red Team Report on AI-Enabled Cyber Threats">Anthropic Releases Frontier Red Team Report on AI-Enabled Cyber Threats</a><span class="src">Anthropic Research</span></li>
+      <li><span class="when">Jun 22</span><a href="https://arxiv.org/pdf/2602.10900" target="_blank" rel="noopener" title="AI Infrastructure Sovereignty: Telemetry Integration Across Optical, Compute, and Building Domains">AI Infrastructure Sovereignty: Telemetry Integration Across Optical, Compute, and Building Domains</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jun 19</span><a href="https://www.honeycomb.io/blog/honeycomb-releases-second-edition-observability-engineering-redefine-practice-ai" target="_blank" rel="noopener" title="Honeycomb Releases Second Edition of Observability Engineering for AI-First Operations">Honeycomb Releases Second Edition of Observability Engineering for AI-First Operations</a><span class="src">Honeycomb Blog</span></li>
+      <li><span class="when">Jun 19</span><a href="https://www.nokia.com/blog/ai-native-6g-is-now-the-industry-direction/" target="_blank" rel="noopener" title="AI-Native 6G Momentum Building at EuCNC Summit: Agentic AI Integration with Standards Framework">AI-Native 6G Momentum Building at EuCNC Summit: Agentic AI Integration with Standards Framework</a><span class="src">Nokia Blog</span></li>
+      <li><span class="when">Jun 19</span><a href="https://packetpushers.net/blog/" target="_blank" rel="noopener" title="AutoCon 5: Network Automation Forum Convenes 200+ Practitioners on AI-Driven Infrastructure Reliability">AutoCon 5: Network Automation Forum Convenes 200+ Practitioners on AI-Driven Infrastructure Reliability</a><span class="src">Packet Pushers</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

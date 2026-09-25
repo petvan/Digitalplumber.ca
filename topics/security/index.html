@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Automation — Topics — Digital Plumber</title>
+<meta name="description" content="Security Automation in Digital Plumber's daily briefings: 118 stories, 7 in the last 7 days. Security operations and automation: SOC tooling, SASE, zero trust, and AI on both sides of attack and defence.">
+<link rel="canonical" href="https://digitalplumber.ca/topics/security/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="Security Automation — Topics — Digital Plumber">
+<meta property="og:description" content="Security Automation in Digital Plumber's daily briefings: 118 stories, 7 in the last 7 days. Security operations and automation: SOC tooling, SASE, zero trust, and AI on both sides of attack and defence.">
+<meta property="og:url" content="https://digitalplumber.ca/topics/security/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/topics/">Topics</a></p>
+  <h1 class="page-title">Security Automation</h1>
+  <p class="page-dek">Security operations and automation: SOC tooling, SASE, zero trust, and AI on both sides of attack and defence.</p>
+  <div class="stat-row">
+    <div><span class="stat">118</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">7 <span class="trend down" title="Down from 9 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 9</span></span></span><span class="label">last 7 days · 9 the 7 before</span></div>
+    <div><span class="stat">30</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 4, 9, 3, 5, 8, 5, 11, 4, 7, 7, 9, 7">
+      <div class="bar-col" title="Week of Jul 4: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:82%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:27%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 5 stories">
+        <span class="bar-n">5</span>
+        <div class="bar-track"><div class="bar" style="height:45%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:73%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 5 stories">
+        <span class="bar-n">5</span>
+        <div class="bar-track"><div class="bar" style="height:45%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 11 stories">
+        <span class="bar-n">11</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:64%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:64%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:82%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:64%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>SiliconANGLE</b> · Sep 23, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/" target="_blank" rel="noopener" title="Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents">Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</a></h3>
+        <p class="summary">Microsoft announced the Integrated Security Operations Center (ISOC) in Microsoft Defender, moving security information and event management features from Microsoft Sentinel directly into Defender. The architecture addresses attackers using agents to automate execution at scale, requiring a modern cyber stack with environment-wide visibility so security operations and native protection function as one system. ISOC brings XDR, SIEM, threat intelligence, automation, and AI together in Microsoft Defender.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>GuruFocus</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting" target="_blank" rel="noopener" title="Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security">Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</a></h3>
+        <p class="summary">Palo Alto Networks pushed deeper into continuous AI-driven vulnerability hunting, creating direct competition with CrowdStrike in the race to automate more of the security workflow. Palo Alto's Unit 42 used its own AI to uncover over 14,000 unknown vulnerabilities, demonstrating practical machine-speed threat discovery. The real contest is moving beyond endpoint protection toward discovering exposures, deciding which threats matter, and fixing them with less human intervention.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Unite.AI</b> · Sep 23, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/" target="_blank" rel="noopener" title="Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations">Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations</a></h3>
+        <p class="summary">Microsoft announced the integrated security operations center (ISOC) in Microsoft Defender on September 23, 2026, a foundation for agentic security that brings SIEM and threat protection together in one system as a shared foundation on which people and agents can see, understand, and act across the environment without running separate systems. Cyberattackers are using agents to automate execution at scale, with work that once required entire teams now requiring a single operator and an agent framework. Out-of-the-box security operations capabilities include case management, workbooks, and playbook generation in natural language.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Palo Alto Networks</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense" target="_blank" rel="noopener" title="Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6">Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6</a></h3>
+        <p class="summary">Palo Alto Networks announced Unit 42 Continuous Frontier AI Defense, an agentic offensive security service leveraging frontier AI models (Anthropic's Claude Mythos and OpenAI's GPT-5.6) to perpetually identify, validate, and remediate enterprise vulnerabilities before attackers exploit them. The service addresses threat actors' new capability to compress breach cycles from weeks to hours.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>24/7 Wall St.</b> · Sep 18, 2026</p>
+        <h3><a href="https://247wallst.com/investing/2026/09/18/crowdstrike-and-palo-alto-networks-are-soaring-but-is-the-rally-already-priced-in/" target="_blank" rel="noopener" title="CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain">CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain</a></h3>
+        <p class="summary">CrowdStrike is up 17.1% over the past week and 14.9% over the past month, trading near a 52-week high of $250.32. CrowdStrike's 51% net new ARR growth is already baked into the price, while Palo Alto's 63% Next-Gen Security ARR still supports its multiple heading into earnings. The rally rests on narrative repricing around AI-driven threats, but upcoming earnings in November and December will determine whether actual bookings validate heightened valuations.</p>
+        <p class="edition label"><a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Help Net Security</b> · Sep 16, 2026</p>
+        <h3><a href="https://www.helpnetsecurity.com/2026/09/16/citrix-session-insights-capability/" target="_blank" rel="noopener" title="Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows">Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows</a></h3>
+        <p class="summary">Citrix announced Session Insights, a new AI-powered capability for SecurAccess that captures, analyzes and understands browser activity from users and autonomous agents, combining visual session evidence, AI-powered risk analysis and recommendations to help organizations investigate incidents faster and establish accountability for AI-driven workflows.</p>
+        <p class="edition label"><a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>HIPTHER</b> · Sep 18, 2026</p>
+        <h3><a href="https://hipther.com/news/2026/09/18/137943/cybersecurity-roundup-partnerships-funding-and-emerging-threats-september-18-2026-crowdstrike-ai-ass" target="_blank" rel="noopener" title="AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration">AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration</a></h3>
+        <p class="summary">Analyst Jim Cramer highlighted CrowdStrike Holdings as a potential beneficiary of growing anxiety about AI-driven cyber risk. New threat data shows the average eCrime breakout time has collapsed to just 29 minutes, with the fastest attack taking only 27 seconds.</p>
+        <p class="edition label"><a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>VentureBeat</b> · Sep 15, 2026</p>
+        <h3><a href="https://venturebeat.com/security/nobody-can-compare-the-security-ai-numbers-crowdstrike-google-palo-alto-and-microsoft-published-including-the-cisos-who-are-stuck-with-the-results" target="_blank" rel="noopener" title="CrowdStrike Launches SafeMind Agentic AI Models for Cybersecurity Defense with NVIDIA">CrowdStrike Launches SafeMind Agentic AI Models for Cybersecurity Defense with NVIDIA</a></h3>
+        <p class="summary">CrowdStrike reported an 89% year-over-year increase in AI-enabled attacks and introduced SafeMind, a family of purpose-built AI security models developed with NVIDIA, designed to find and close attack paths at machine speed. Internal evaluations showed SafeMind delivered 29% higher detection rate, 6x faster remediation, and 99% lower cost compared to leading frontier models.</p>
+        <p class="edition label"><a href="/archives/2026-09-17.html">Sep 17, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Palo Alto Networks Blog</b> · Sep 16, 2026</p>
+        <h3><a href="https://www.paloaltonetworks.com/blog/security-operations/cortex-data-security-ga-dlp-ddr/" target="_blank" rel="noopener" title="Palo Alto Cortex Data Security Unified DDR Now GA: Real-Time Detection Across Cloud, SaaS, AI">Palo Alto Cortex Data Security Unified DDR Now GA: Real-Time Detection Across Cloud, SaaS, AI</a></h3>
+        <p class="summary">Palo Alto Networks released Cortex Data Security with unified Data Detection and Response (DDR) enabling near-real-time detection across cloud data stores, SaaS, and AI infrastructure. The platform centralizes anomalous logins, training data poisoning, data exfiltration, and related detections in a single dashboard with contextual enrichment from DSPM and identity data.</p>
+        <p class="edition label"><a href="/archives/2026-09-17.html">Sep 17, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Help Net Security</b> · Sep 16, 2026</p>
+        <h3><a href="https://www.helpnetsecurity.com/2026/09/16/google-mandiant-enterprise-ai-security-risks-report/" target="_blank" rel="noopener" title="Google Mandiant: Autonomous AI Systems Create New SOC Defense Challenge">Google Mandiant: Autonomous AI Systems Create New SOC Defense Challenge</a></h3>
+        <p class="summary">Organizations are deploying autonomous AI systems that execute API calls and optimize production configurations, while attacks expand from direct prompts to indirect prompt injection and AI supply chain compromises. Mandiant's AI Risk and Resilience report warns that poisoned data sources, model dependencies, or extension hooks can turn trusted agents into channels for internal reconnaissance, lateral movement, or autonomous escape from sandboxes.</p>
+        <p class="edition label"><a href="/archives/2026-09-16.html">Sep 16, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">108 earlier stories</span></div>
+    
+    <h3 class="month label">September 2026 <span class="n">19</span></h3>
+    <ul class="history">
+      <li><span class="when">Sep 15</span><a href="https://www.fortinet.com/blog" target="_blank" rel="noopener" title="FortiSOAR 8.0 introduces native agentic AI framework with 19 pre-built autonomous security agents">FortiSOAR 8.0 introduces native agentic AI framework with 19 pre-built autonomous security agents</a><span class="src">Fortinet Blog</span></li>
+      <li><span class="when">Sep 15</span><a href="https://ua.news/en/finansi/aktsiyi-crowdstrike-i-palo-alto-networks-zrosli-na-tli-zasterezhen-shchodo-shi" target="_blank" rel="noopener" title="CrowdStrike, Palo Alto Networks, Fortinet stocks surge on AI threat recognition and agentic security demand">CrowdStrike, Palo Alto Networks, Fortinet stocks surge on AI threat recognition and agentic security demand</a><span class="src">UA.NEWS</span></li>
+      <li><span class="when">Sep 13</span><a href="https://bellatorcyber.com/blog/ai-adoption-soc-alert-volume-2026" target="_blank" rel="noopener" title="Enterprise-Wide AI Adoption Drives Explosive SOC Alert Growth: 685% Increase in AI-Triggered Alerts Since February">Enterprise-Wide AI Adoption Drives Explosive SOC Alert Growth: 685% Increase in AI-Triggered Alerts Since February</a><span class="src">Bellator Cyber / The Hacker News</span></li>
+      <li><span class="when">Sep 13</span><a href="https://versa-networks.com/news/2026/versa-brings-zero-trust-controls-to-ai-agent-actions/" target="_blank" rel="noopener" title="Versa Extends Zero Trust Controls to AI Agent Actions via Patent-Pending MCP Architecture">Versa Extends Zero Trust Controls to AI Agent Actions via Patent-Pending MCP Architecture</a><span class="src">Versa Networks</span></li>
+      <li><span class="when">Sep 12</span><a href="https://ca.investing.com/news/stock-market-news/wedbush-names-top-cybersecurity-stocks-as-ai-reshapes-sector-93CH-4836289" target="_blank" rel="noopener" title="Wedbush Initiates Cybersecurity Coverage: Platform Consolidation Over Budget Expansion Reshapes Vendor Hierarchy">Wedbush Initiates Cybersecurity Coverage: Platform Consolidation Over Budget Expansion Reshapes Vendor Hierarchy</a><span class="src">Investing.com / Wedbush Securities</span></li>
+      <li><span class="when">Sep 12</span><a href="https://securityboulevard.com/2026/09/your-newest-privileged-identity-is-an-ai-agent/" target="_blank" rel="noopener" title="Your Newest Privileged Identity Is An AI Agent: Identity Governance Gap Blocks Production Deployment">Your Newest Privileged Identity Is An AI Agent: Identity Governance Gap Blocks Production Deployment</a><span class="src">Security Boulevard</span></li>
+      <li><span class="when">Sep 11</span><a href="https://thehackernews.com/" target="_blank" rel="noopener" title="Anthropic Discloses Fourth Incident of AI Model Breaking into Third-Party Systems">Anthropic Discloses Fourth Incident of AI Model Breaking into Third-Party Systems</a><span class="src">The Hacker News</span></li>
+      <li><span class="when">Sep 11</span><a href="https://securityboulevard.com/2026/09/daily-ot-security-news-september-10-2026/" target="_blank" rel="noopener" title="Cisco and CISA Flag Active Exploitation of CVE-2026-20079 in Secure Firewall Management Center">Cisco and CISA Flag Active Exploitation of CVE-2026-20079 in Secure Firewall Management Center</a><span class="src">Security Boulevard</span></li>
+      <li><span class="when">Sep 10</span><a href="https://www.channelinsider.com/security/crowdstrike-falcon-2026-security-integrations/" target="_blank" rel="noopener" title="CrowdStrike Unveils Charlotte Agentic SOAR with Multi-Agent Coordinated Investigations">CrowdStrike Unveils Charlotte Agentic SOAR with Multi-Agent Coordinated Investigations</a><span class="src">Channel Insider</span></li>
+      <li><span class="when">Sep 10</span><a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/" target="_blank" rel="noopener" title="Microsoft September 2026 Patch Tuesday: 973 CVEs Mark Vulnerability Discovery Inflection Point">Microsoft September 2026 Patch Tuesday: 973 CVEs Mark Vulnerability Discovery Inflection Point</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Sep 10</span><a href="https://cvebrief.com/archive/2026/09/10/" target="_blank" rel="noopener" title="CVE Brief September 10: Network Edge and Security Appliance Infrastructure Dominate Active Exploitation">CVE Brief September 10: Network Edge and Security Appliance Infrastructure Dominate Active Exploitation</a><span class="src">CVE Brief</span></li>
+      <li><span class="when">Sep 8</span><a href="https://www.helpnetsecurity.com/2026/09/08/ai-agents-cyberattacks-automation-google-research/" target="_blank" rel="noopener" title="Threat actors are giving AI agents a bigger role in cyberattacks">Threat actors are giving AI agents a bigger role in cyberattacks</a><span class="src">Help Net Security / Google Threat Intelligence Group</span></li>
+      <li><span class="when">Sep 5</span><a href="https://247wallst.com/investing/2026/09/02/palo-alto-sinks-8-despite-34-revenue-growth-crowdstrike-falls-3-fortinet-slips/" target="_blank" rel="noopener" title="Palo Alto Networks FY2027 Guidance: NGS ARR Growth Moderates, Billings Signal Consolidation Momentum Cooling">Palo Alto Networks FY2027 Guidance: NGS ARR Growth Moderates, Billings Signal Consolidation Momentum Cooling</a><span class="src">24/7 Wall St.</span></li>
+      <li><span class="when">Sep 4</span><a href="https://www.helpnetsecurity.com/2026/09/04/new-infosec-products-of-the-week-september-4-2026/" target="_blank" rel="noopener" title="F5 WAF with Agentic Threat Intelligence, Ping Personal Agent Access, Superna 2.15 Released">F5 WAF with Agentic Threat Intelligence, Ping Personal Agent Access, Superna 2.15 Released</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Sep 4</span><a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" target="_blank" rel="noopener" title="Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days">Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days</a><span class="src">The Hacker News</span></li>
+      <li><span class="when">Sep 3</span><a href="https://www.networkworld.com/article/4217170/palo-alto-networks-buys-console-to-boost-agentic-security.html" target="_blank" rel="noopener" title="Palo Alto Networks Acquires Console to Agentify Security">Palo Alto Networks Acquires Console to Agentify Security</a><span class="src">Network World</span></li>
+      <li><span class="when">Sep 2</span><a href="https://crowdstrike.gcs-web.com/news-releases/news-release-details/crowdstrike-unveils-falcon-guardian-secure-ai-agents-where-they" target="_blank" rel="noopener" title="CrowdStrike Unveils Falcon Guardian: AI Detection and Response at the Endpoint">CrowdStrike Unveils Falcon Guardian: AI Detection and Response at the Endpoint</a><span class="src">CrowdStrike Holdings, Inc.</span></li>
+      <li><span class="when">Sep 2</span><a href="https://www.investing.com/news/transcripts/crowdstrike-at-falcon-day-1-ai-defense-moves-to-machine-speed-93CH-4884482" target="_blank" rel="noopener" title="CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances">CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances</a><span class="src">Investing.com</span></li>
+      <li><span class="when">Sep 2</span><a href="https://securityboulevard.com/2026/09/crowdstrike-adds-platform-to-secure-ai-agents-running-on-endpoints/" target="_blank" rel="noopener" title="CrowdStrike Adds Runtime Security Platform for AI Agents at the Endpoint">CrowdStrike Adds Runtime Security Platform for AI Agents at the Endpoint</a><span class="src">Security Boulevard</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">29</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 31</span><a href="https://www.helpnetsecurity.com/2026/08/28/new-infosec-products-of-the-month-august-2026/" target="_blank" rel="noopener" title="ServiceNow Accelerates Autonomous Security Vision with Six Unified Solutions">ServiceNow Accelerates Autonomous Security Vision with Six Unified Solutions</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Aug 23</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrikes-fal-con-2026-unites-cybersecuritys-ecosystem-to-secure-the-ai-revolution/" target="_blank" rel="noopener" title="CrowdStrike Fal.Con 2026 Announces Record 150+ Ecosystem Sponsors, Sold-Out Conference">CrowdStrike Fal.Con 2026 Announces Record 150+ Ecosystem Sponsors, Sold-Out Conference</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Aug 23</span><a href="https://www.helpnetsecurity.com/2026/08/21/new-infosec-products-of-the-week-august-21-2026/" target="_blank" rel="noopener" title="Intezer Launches Native Workflows Automation Platform, Consolidating Alert Triage and Response">Intezer Launches Native Workflows Automation Platform, Consolidating Alert Triage and Response</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Aug 22</span><a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/palo-alto-networks-stock-holds-strong-as-earnings-beat-and-ai-demand-support-outlook/69969433" target="_blank" rel="noopener" title="Palo Alto Networks beats Q3 earnings with 60% NGS ARR growth; flags 25% false-positive rate in AI models as structural challenge">Palo Alto Networks beats Q3 earnings with 60% NGS ARR growth; flags 25% false-positive rate in AI models as structural challenge</a><span class="src">Ad Hoc News / Investing.com</span></li>
+      <li><span class="when">Aug 22</span><a href="https://www.businesswire.com/news/home/20260819577865/en/CrowdStrikes-Fal-Con-2026-Unites-Cybersecuritys-Ecosystem-to-Secure-the-AI-Revolution" target="_blank" rel="noopener" title="CrowdStrike Fal.Con 2026 attracts record 150+ sponsors, 10,000+ attendees as AI-driven security dominates industry agenda">CrowdStrike Fal.Con 2026 attracts record 150+ sponsors, 10,000+ attendees as AI-driven security dominates industry agenda</a><span class="src">Business Wire</span></li>
+      <li><span class="when">Aug 21</span><a href="https://www.businesswire.com/news/home/20260819577865/en/CrowdStrikes-Fal.Con-2026-Unites-Cybersecuritys-Ecosystem-to-Secure-the-AI-Revolution" target="_blank" rel="noopener" title="CrowdStrike's Fal.Con 2026 Unites Cybersecurity's Ecosystem to Secure the AI Revolution">CrowdStrike's Fal.Con 2026 Unites Cybersecurity's Ecosystem to Secure the AI Revolution</a><span class="src">Business Wire</span></li>
+      <li><span class="when">Aug 21</span><a href="https://www.mbtmag.com/cybersecurity/news/22972701/ai-soc-agent-peforms-secure-investigations" target="_blank" rel="noopener" title="Crogl Announces Its Enterprise AI SOC Agent Available as a Free Download">Crogl Announces Its Enterprise AI SOC Agent Available as a Free Download</a><span class="src">Manufacturing Business Technology</span></li>
+      <li><span class="when">Aug 20</span><a href="https://finance.yahoo.com/technology/ai/articles/tufin-advances-multi-vendor-agentic-130500965.html" target="_blank" rel="noopener" title="Tufin Advances Multi-Vendor Agentic Network Security with TOS 5.3 Unified Control Plane">Tufin Advances Multi-Vendor Agentic Network Security with TOS 5.3 Unified Control Plane</a><span class="src">Business Wire</span></li>
+      <li><span class="when">Aug 20</span><a href="https://www.helpnetsecurity.com/2026/08/19/intezer-workflows-automation/" target="_blank" rel="noopener" title="Intezer Launches Workflows: Integrated Response Automation Within AI SOC Platform">Intezer Launches Workflows: Integrated Response Automation Within AI SOC Platform</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Aug 19</span><a href="https://www.theregister.com/security/2026/08/16/stopping-a-cyberattack-while-walking-your-dog-defensive-ai-security-ceo-says-its-not-ruff-to-do/" target="_blank" rel="noopener" title="Corma CEO on defensive AI gap: autonomous agents catching live attacks with human-in-the-loop authorization">Corma CEO on defensive AI gap: autonomous agents catching live attacks with human-in-the-loop authorization</a><span class="src">The Register</span></li>
+      <li><span class="when">Aug 18</span><a href="https://www.globenewswire.com/news-release/2026/08/17/3346144/0/en/fortinet-advances-continuous-ai-protection-with-the-acquisition-of-virtue-ai.html" target="_blank" rel="noopener" title="Fortinet Advances Continuous AI Protection with the Acquisition of Virtue AI">Fortinet Advances Continuous AI Protection with the Acquisition of Virtue AI</a><span class="src">GlobeNewswire / Fortinet</span></li>
+      <li><span class="when">Aug 17</span><a href="https://www.thecodew.com/2026/08/weekly-tech-roundup-ais-next-battle-is.html" target="_blank" rel="noopener" title="Weekly Tech Roundup: AI's Next Battle Is Capital, Trust and Control—Cybersecurity Closes the Loop">Weekly Tech Roundup: AI's Next Battle Is Capital, Trust and Control—Cybersecurity Closes the Loop</a><span class="src">The CODEW</span></li>
+      <li><span class="when">Aug 17</span><a href="https://www.thecodew.com/2026/08/weekly-tech-roundup-ai-hits-physical.html" target="_blank" rel="noopener" title="Weekly Tech Roundup: AI Hits the Physical, Financial and Political Walls—Hyperscaler Capex at $725B, Meta Guidance Triggers Investor Pushback">Weekly Tech Roundup: AI Hits the Physical, Financial and Political Walls—Hyperscaler Capex at $725B, Meta Guidance Triggers Investor Pushback</a><span class="src">The CODEW</span></li>
+      <li><span class="when">Aug 16</span><a href="https://www.helpnetsecurity.com/2026/08/14/new-infosec-products-of-the-week-august-14-2026/" target="_blank" rel="noopener" title="ScienceLogic Releases Skylar AI 2.5 with Enhanced Secure Deployment and AI Performance">ScienceLogic Releases Skylar AI 2.5 with Enhanced Secure Deployment and AI Performance</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Aug 15</span><a href="https://www.news4hackers.com/fortinet-authentication-flaw-patches-fortiweb-fortimanager-security-fixes" target="_blank" rel="noopener" title="Fortinet Releases Critical Authentication Patches for FortiWeb, FortiManager, FortiClient">Fortinet Releases Critical Authentication Patches for FortiWeb, FortiManager, FortiClient</a><span class="src">News4Hackers</span></li>
+      <li><span class="when">Aug 15</span><a href="https://cybernewsweekly.substack.com/p/cybersecurity-news-review-week-33-fb1" target="_blank" rel="noopener" title="Cisco Patches Zero-Day in Secure Firewall ASA/FTD Exploited for Remote Access DoS; CISA Mandates Federal Patch by August 14">Cisco Patches Zero-Day in Secure Firewall ASA/FTD Exploited for Remote Access DoS; CISA Mandates Federal Patch by August 14</a><span class="src">Cybersecurity News Review - Week 33 (2026)</span></li>
+      <li><span class="when">Aug 12</span><a href="https://investor.fortinet.com/news-releases/news-release-details/fortinet-reports-strong-second-quarter-2026-financial-results" target="_blank" rel="noopener" title="Fortinet Q2 2026: SASE Firewall Grows 34%, AI-Driven SecOps Billings Climb 25%">Fortinet Q2 2026: SASE Firewall Grows 34%, AI-Driven SecOps Billings Climb 25%</a><span class="src">Fortinet Investor Relations</span></li>
+      <li><span class="when">Aug 12</span><a href="https://qz.com/crowdstrike-palo-alto-networks-stock-black-hat-ai-security-081026" target="_blank" rel="noopener" title="CrowdStrike, Palo Alto Hit Record Highs After Black Hat; Analysts See AI Agents as New Foremost Attack Vector">CrowdStrike, Palo Alto Hit Record Highs After Black Hat; Analysts See AI Agents as New Foremost Attack Vector</a><span class="src">Quartz</span></li>
+      <li><span class="when">Aug 11</span><a href="https://www.cnbc.com/2026/08/10/crowdstrike-palo-alto-stock-black-hat.html" target="_blank" rel="noopener" title="CrowdStrike, Palo Alto Networks stocks hit new highs after Black Hat—AI agents emerge as foremost attack vector">CrowdStrike, Palo Alto Networks stocks hit new highs after Black Hat—AI agents emerge as foremost attack vector</a><span class="src">CNBC</span></li>
+      <li><span class="when">Aug 9</span><a href="https://versa-networks.com/blog/beyond-integration-unified-branch-platform/" target="_blank" rel="noopener" title="Versa Networks Publishes AI-Native Operations Framework for Unified SASE Deployment">Versa Networks Publishes AI-Native Operations Framework for Unified SASE Deployment</a><span class="src">Versa Networks Blog</span></li>
+      <li><span class="when">Aug 8</span><a href="https://blog.cloudflare.com/cloudflare-sase-sse-gartner-magic-quadrants-2026/" target="_blank" rel="noopener" title="Cloudflare Named Only Vendor as Visionary in 2026 Gartner SASE and SSE Magic Quadrants">Cloudflare Named Only Vendor as Visionary in 2026 Gartner SASE and SSE Magic Quadrants</a><span class="src">Cloudflare Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://www.microsoft.com/en-us/security/blog/2026/08/04/advance-zero-trust-for-ai-new-tools-and-guidance-to-secure-ai-agents-and-devsecops/" target="_blank" rel="noopener" title="Microsoft Extends Zero Trust Assessment with AI, SecOps, and Infrastructure Pillars">Microsoft Extends Zero Trust Assessment with AI, SecOps, and Infrastructure Pillars</a><span class="src">Microsoft Security Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2026/august/crowdstrike-threat-hunting-report-2026/" target="_blank" rel="noopener" title="CrowdStrike 2026 Threat Report: 88% of Public Exploits Weaponized Within 48 Hours">CrowdStrike 2026 Threat Report: 88% of Public Exploits Weaponized Within 48 Hours</a><span class="src">ASIS Online</span></li>
+      <li><span class="when">Aug 7</span><a href="https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/monthly-news-august-2026/4544388" target="_blank" rel="noopener" title="Microsoft Defender Expands with AI Agent Protection and Third-Party Coverage via Sentinel">Microsoft Defender Expands with AI Agent Protection and Third-Party Coverage via Sentinel</a><span class="src">Microsoft Community Hub</span></li>
+      <li><span class="when">Aug 6</span><a href="https://www.fortinet.com/products/sase" target="_blank" rel="noopener" title="Fortinet Launches FortiGate 1200G: Firewall-SASE Convergence with 397 Gbps Throughput">Fortinet Launches FortiGate 1200G: Firewall-SASE Convergence with 397 Gbps Throughput</a><span class="src">Fortinet</span></li>
+      <li><span class="when">Aug 5</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-2026-threat-hunting-report/" target="_blank" rel="noopener" title="CrowdStrike 2026 Threat Hunting Report: AI Operationalized in Adversary Attacks, Exploitation Windows Collapse to 24–48 Hours">CrowdStrike 2026 Threat Hunting Report: AI Operationalized in Adversary Attacks, Exploitation Windows Collapse to 24–48 Hours</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Aug 4</span><a href="https://www.helpnetsecurity.com/2026/08/03/sentinelone-security-operations-automation/" target="_blank" rel="noopener" title="SentinelOne expands security operations automation with governed AI">SentinelOne expands security operations automation with governed AI</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Aug 4</span><a href="https://finance.yahoo.com/technology/ai/articles/versa-recognized-2026-gartner-magic-quadrant-153000534.html" target="_blank" rel="noopener" title="Versa recognized in 2026 Gartner Magic Quadrant for SASE Platforms for fourth consecutive year">Versa recognized in 2026 Gartner Magic Quadrant for SASE Platforms for fourth consecutive year</a><span class="src">Yahoo Finance / Business Wire</span></li>
+      <li><span class="when">Aug 3</span><a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-2026-threat-hunting-report-ai-now-embedded-across" target="_blank" rel="noopener" title="CrowdStrike 2026 Threat Hunting Report: AI is Now Embedded Across Modern Adversary Operations">CrowdStrike 2026 Threat Hunting Report: AI is Now Embedded Across Modern Adversary Operations</a><span class="src">CrowdStrike</span></li>
+    </ul>
+    <h3 class="month label">July 2026 <span class="n">26</span></h3>
+    <ul class="history">
+      <li><span class="when">Jul 31</span><a href="https://www.paloaltonetworks.com/blog/security-operations/whats-new-in-cortex-july-2026/" target="_blank" rel="noopener" title="Cortex XSIAM 3.6 and Cortex AgentiX 1.4: Frontier AI Models and Agentic Response Capabilities">Cortex XSIAM 3.6 and Cortex AgentiX 1.4: Frontier AI Models and Agentic Response Capabilities</a><span class="src">Palo Alto Networks Blog</span></li>
+      <li><span class="when">Jul 30</span><a href="https://www.forbes.com/sites/timkeary/2026/07/29/one-in-four-breaches-are-ai-enabled-and-thats-before-hugging-face/" target="_blank" rel="noopener" title="One In Four Breaches Are AI-Enabled—And That's Before Hugging Face">One In Four Breaches Are AI-Enabled—And That's Before Hugging Face</a><span class="src">Forbes</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.securityweek.com/hush-security-raises-30-million-for-ai-agent-governance/" target="_blank" rel="noopener" title="Hush Security Raises $30M Series A to Govern Enterprise AI Agents with Scoped JIT Access">Hush Security Raises $30M Series A to Govern Enterprise AI Agents with Scoped JIT Access</a><span class="src">SecurityWeek</span></li>
+      <li><span class="when">Jul 29</span><a href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/" target="_blank" rel="noopener" title="NVIDIA Forms 37-Member Open Secure AI Alliance Following Hugging Face Autonomous Agent Incident">NVIDIA Forms 37-Member Open Secure AI Alliance Following Hugging Face Autonomous Agent Incident</a><span class="src">NVIDIA Blog</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-cerebras-power-ai-detection-and-response/" target="_blank" rel="noopener" title="CrowdStrike and Cerebras Partner to Accelerate AI-Driven Threat Detection with High-Speed Inference">CrowdStrike and Cerebras Partner to Accelerate AI-Driven Threat Detection with High-Speed Inference</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Jul 23</span><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-extend-leading-observability-platform" target="_blank" rel="noopener" title="Palo Alto Networks to Acquire Embrace for Real User Monitoring Capabilities in Observability Platform">Palo Alto Networks to Acquire Embrace for Real User Monitoring Capabilities in Observability Platform</a><span class="src">Palo Alto Networks Investor Relations</span></li>
+      <li><span class="when">Jul 23</span><a href="https://unit42.paloaltonetworks.com/ai-insights-incident-response-report/" target="_blank" rel="noopener" title="Unit 42 2026 Global Incident Response Report: AI Acceleration in Attack Chains Demands Automated Defense">Unit 42 2026 Global Incident Response Report: AI Acceleration in Attack Chains Demands Automated Defense</a><span class="src">Palo Alto Networks Unit 42</span></li>
+      <li><span class="when">Jul 21</span><a href="https://www.techtimes.com/articles/320892/20260718/fortisandbox-exploited-wild-patch-sunday-trust-chain-collapses.htm" target="_blank" rel="noopener" title="FortiSandbox vulnerabilities exploited in wild: CISA orders July 19 patch deadline for critical command injection flaws">FortiSandbox vulnerabilities exploited in wild: CISA orders July 19 patch deadline for critical command injection flaws</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 17</span><a href="https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-appoints-aj-shipley-chief-product-officer" target="_blank" rel="noopener" title="CrowdStrike Appoints AJ Shipley as Chief Product Officer to Advance Agentic Era Security">CrowdStrike Appoints AJ Shipley as Chief Product Officer to Advance Agentic Era Security</a><span class="src">CrowdStrike IR / SDxCentral</span></li>
+      <li><span class="when">Jul 17</span><a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/" target="_blank" rel="noopener" title="July 2026 Patch Tuesday: Microsoft Fixes 622 Vulnerabilities with Critical Windows VMSwitch Elevation Flaw">July 2026 Patch Tuesday: Microsoft Fixes 622 Vulnerabilities with Critical Windows VMSwitch Elevation Flaw</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Jul 17</span><a href="https://stockstotrade.com/news/crowdstrike-holdings-inc-crwd-news-2026_07_14/" target="_blank" rel="noopener" title="Benchmark Raises CrowdStrike Price Target to $230 on AI-Driven Security Demand Across Agentic SOC Products">Benchmark Raises CrowdStrike Price Target to $230 on AI-Driven Security Demand Across Agentic SOC Products</a><span class="src">StocksToTrade / BTIG Analyst Research</span></li>
+      <li><span class="when">Jul 16</span><a href="https://www.checkpoint.com/press-releases/check-point-research-ai-has-crossed-from-assistant-to-operator-rewriting-the-rules-of-autonomous-ai-cyber-attack-and-defense/" target="_blank" rel="noopener" title="Check Point AI Security Report 2026: AI Crossed From Assistant to Autonomous Attack Operator">Check Point AI Security Report 2026: AI Crossed From Assistant to Autonomous Attack Operator</a><span class="src">Check Point Research</span></li>
+      <li><span class="when">Jul 16</span><a href="https://www.crowdstrike.com/en-us/blog/aidr-how-crowdstrike-is-defining-next-era-of-cybersecurity/" target="_blank" rel="noopener" title="CrowdStrike Falcon AIDR: Defining the Next Era of Cybersecurity with AI Detection and Response">CrowdStrike Falcon AIDR: Defining the Next Era of Cybersecurity with AI Detection and Response</a><span class="src">CrowdStrike Blog</span></li>
+      <li><span class="when">Jul 16</span><a href="https://releasebot.io/updates/crowdstrike" target="_blank" rel="noopener" title="CrowdStrike Extends Falcon AIDR to Kubernetes Workloads and Integrates Claude Compliance API">CrowdStrike Extends Falcon AIDR to Kubernetes Workloads and Integrates Claude Compliance API</a><span class="src">CrowdStrike Release Notes</span></li>
+      <li><span class="when">Jul 11</span><a href="https://simplywall.st/stocks/us/software/nasdaq-crwd/crowdstrike-holdings/news/how-crowdstrikes-ai-security-surge-and-stock-split-at-crowds" target="_blank" rel="noopener" title="CrowdStrike Expands AI Detection and Response with 5x AIDR Demand, Record ARR Growth, and Identity Security Partnerships">CrowdStrike Expands AI Detection and Response with 5x AIDR Demand, Record ARR Growth, and Identity Security Partnerships</a><span class="src">Simply Wall St / CrowdStrike investor news</span></li>
+      <li><span class="when">Jul 11</span><a href="https://www.hpcwire.com/bigdatawire/this-just-in/coforge-launches-ai-powered-secureedge2cloud-a-zero-trust-offering-built-on-zscaler-platform/" target="_blank" rel="noopener" title="Coforge Launches SecureEdge2Cloud: AI-Powered Zero Trust Security Built on Zscaler Platform">Coforge Launches SecureEdge2Cloud: AI-Powered Zero Trust Security Built on Zscaler Platform</a><span class="src">HPCwire</span></li>
+      <li><span class="when">Jul 11</span><a href="https://www.helpnetsecurity.com/2026/07/10/new-infosec-products-of-the-week-july-10-2026/" target="_blank" rel="noopener" title="Codenotary Releases AgentMon 3: Enterprise AI Security with Adaptive Runtime Policies for Agentic Workloads">Codenotary Releases AgentMon 3: Enterprise AI Security with Adaptive Runtime Policies for Agentic Workloads</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Jul 9</span><a href="https://www.isaca.org/resources/news-and-trends/industry-news/2026/preparing-zero-trust-for-ai-disruption" target="_blank" rel="noopener" title="Preparing Zero Trust for AI Disruption: Machine Identities, LLMs, and Automated Decision-Making">Preparing Zero Trust for AI Disruption: Machine Identities, LLMs, and Automated Decision-Making</a><span class="src">ISACA</span></li>
+      <li><span class="when">Jul 7</span><a href="https://www.vectra.ai/topics/soc-operations" target="_blank" rel="noopener" title="Modernizing SOC Operations with AI-Driven Detection: Agentic AI now handles 30%+ of workflows at large enterprises">Modernizing SOC Operations with AI-Driven Detection: Agentic AI now handles 30%+ of workflows at large enterprises</a><span class="src">Vectra AI</span></li>
+      <li><span class="when">Jul 7</span><a href="https://247wallst.com/investing/2026/07/06/crowdstrike-surges-5-palo-alto-and-okta-gain-4-as-cybersecurity-stocks-rally-on-analyst-upgrades/" target="_blank" rel="noopener" title="CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades">CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades</a><span class="src">24/7 Wall St.</span></li>
+      <li><span class="when">Jul 4</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-advances-ai-and-cloud-security-operations-on-aws/" target="_blank" rel="noopener" title="CrowdStrike Advances AI and Cloud Security Operations on AWS">CrowdStrike Advances AI and Cloud Security Operations on AWS</a><span class="src">CrowdStrike Press Release</span></li>
+      <li><span class="when">Jul 3</span><a href="https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/" target="_blank" rel="noopener" title="FortiBleed: 86,644 Fortinet Firewalls Compromised — Large-Scale Credential Harvest Across 194 Countries">FortiBleed: 86,644 Fortinet Firewalls Compromised — Large-Scale Credential Harvest Across 194 Countries</a><span class="src">SOCRadar Research</span></li>
+      <li><span class="when">Jul 3</span><a href="https://tech-insider.org/fortibleed-fortinet-firewall-breach-2026/" target="_blank" rel="noopener" title="FortiBleed Signals End of Legacy SSL VPN Era; Industry Shift Toward Cloud SASE and Identity-First Zero Trust">FortiBleed Signals End of Legacy SSL VPN Era; Industry Shift Toward Cloud SASE and Identity-First Zero Trust</a><span class="src">Tech Insider</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257/" target="_blank" rel="noopener" title="Rapid7 Confirms Active Exploitation of CVE-2026-0257 PAN-OS GlobalProtect Authentication Bypass; Attackers Gaining Internal Network Access">Rapid7 Confirms Active Exploitation of CVE-2026-0257 PAN-OS GlobalProtect Authentication Bypass; Attackers Gaining Internal Network Access</a><span class="src">Rapid7 Labs</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.cnbc.com/2026/06/30/palo-alto-crowdstrike-stock-ai-mythos.html" target="_blank" rel="noopener" title="Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand">Palo Alto, CrowdStrike both have best quarter ever as AI threats bolster cyber demand</a><span class="src">CNBC</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.paloaltonetworks.com/blog/sase/introducing-secure-agentless-access-saa-a-new-zero-trust-access-method-for-any-user-on-any-device/" target="_blank" rel="noopener" title="Palo Alto Networks Introduces Secure Agentless Access (SAA): Zero Trust for Unmanaged Devices">Palo Alto Networks Introduces Secure Agentless Access (SAA): Zero Trust for Unmanaged Devices</a><span class="src">Palo Alto Networks Blog</span></li>
+    </ul>
+    <h3 class="month label">June 2026 <span class="n">34</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 24</span><a href="https://www.ibm.com/think/x-force/palo-alto-fortinet-secure-remote-access-gateway-vpn-compromise-advisory" target="_blank" rel="noopener" title="IBM X-Force Advisory: Active Exploitation of Fortinet FortiGate &amp; Palo Alto GlobalProtect VPN Compromise">IBM X-Force Advisory: Active Exploitation of Fortinet FortiGate &amp; Palo Alto GlobalProtect VPN Compromise</a><span class="src">IBM Security</span></li>
+      <li><span class="when">Jun 24</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-named-leader-in-2026-idc-marketscape-for-worldwide-siem/" target="_blank" rel="noopener" title="CrowdStrike Named Leader in IDC MarketScape 2026 for Worldwide SIEM—Agentic SOC Emerging Standard">CrowdStrike Named Leader in IDC MarketScape 2026 for Worldwide SIEM—Agentic SOC Emerging Standard</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Jun 24</span><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-advances-ai-and-cloud-security-operations-on-aws/" target="_blank" rel="noopener" title="CrowdStrike Expands Falcon AI Detection &amp; Response (AIDR) on AWS—AI Runtime Security for Bedrock, Kiro, Strands Agents">CrowdStrike Expands Falcon AI Detection &amp; Response (AIDR) on AWS—AI Runtime Security for Bedrock, Kiro, Strands Agents</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.globenewswire.com/news-release/2026/06/10/3309619/0/en/Zscaler-Redefines-Zero-Trust-SASE-for-the-AI-Era.html" target="_blank" rel="noopener" title="Zscaler Redefines Zero Trust SASE for AI Era with ZAgent Framework and Multi-Cloud Extensions">Zscaler Redefines Zero Trust SASE for AI Era with ZAgent Framework and Multi-Cloud Extensions</a><span class="src">Zscaler</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.globenewswire.com/news-release/2026/06/09/3309516/0/en/Zscaler-Expands-AI-Guardian-Uniting-Tech-Giants-to-Secure-Enterprise-AI-at-Scale.html" target="_blank" rel="noopener" title="Zscaler Extends AI Guardian Initiative with AI Broker and Endpoint AI Security">Zscaler Extends AI Guardian Initiative with AI Broker and Endpoint AI Security</a><span class="src">Zscaler</span></li>
+      <li><span class="when">Jun 23</span><a href="https://ir.crowdstrike.com/press-releases" target="_blank" rel="noopener" title="CrowdStrike Advances Continuous, Risk-Aware Identity for Autonomous AI Agents">CrowdStrike Advances Continuous, Risk-Aware Identity for Autonomous AI Agents</a><span class="src">CrowdStrike</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.stocktitan.net/news/ZS/zscaler-unveils-new-product-innovations-to-secure-agentic-68nexl9o8ci4.html" target="_blank" rel="noopener" title="Zscaler Unveils Zero Trust Platform for Agentic AI with AI Broker, Endpoint Security, and Access Graph">Zscaler Unveils Zero Trust Platform for Agentic AI with AI Broker, Endpoint Security, and Access Graph</a><span class="src">Globe Newswire / MarketScreener</span></li>
+      <li><span class="when">Jun 22</span><a href="https://blog.redhub.ai/autonomous-soc-ai-security-operations-2026/" target="_blank" rel="noopener" title="Autonomous SOC: AI Security Operations in 2026 — Alert Automation and Machine-Speed Detection">Autonomous SOC: AI Security Operations in 2026 — Alert Automation and Machine-Speed Detection</a><span class="src">RedHub.ai</span></li>
+      <li><span class="when">Jun 22</span><a href="https://prophetsecurity.ai/blog/top-5-ai-soc-analyst-platforms" target="_blank" rel="noopener" title="Five New AI SOC Analyst Platforms: Shipped Autonomy vs. Announced Autonomy in 2026">Five New AI SOC Analyst Platforms: Shipped Autonomy vs. Announced Autonomy in 2026</a><span class="src">Prophet Security</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.securityweek.com/fortibleed-86000-fortinet-device-credentials-compromised/" target="_blank" rel="noopener" title="FortiBleed: 86,644 Fortinet Firewalls Compromised Across 194 Countries in Large-Scale Credential Theft Campaign">FortiBleed: 86,644 Fortinet Firewalls Compromised Across 194 Countries in Large-Scale Credential Theft Campaign</a><span class="src">SecurityWeek</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.cybersecuritydive.com/news/crowdstrike-palo-alto-networks-ai-cyber-demand/821999/" target="_blank" rel="noopener" title="CrowdStrike Q1 FY2027 Earnings Beat on AI Security Momentum; Record ARR Growth and 4-for-1 Stock Split Announced">CrowdStrike Q1 FY2027 Earnings Beat on AI Security Momentum; Record ARR Growth and 4-for-1 Stock Split Announced</a><span class="src">Cybersecurity Dive</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.bloomberg.com/news/articles/2026-06-02/palo-alto-networks-raises-profit-outlook-citing-ai-demand" target="_blank" rel="noopener" title="Palo Alto Networks Raises FY2026 Profit Guidance on AI-Driven Security Platformization Acceleration">Palo Alto Networks Raises FY2026 Profit Guidance on AI-Driven Security Platformization Acceleration</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.helpnetsecurity.com/2026/06/19/new-infosec-products-of-the-week-june-19-2026/" target="_blank" rel="noopener" title="Fortinet Launches FortiSOC Cloud Platform with Agentic AI for Autonomous Alert Investigation">Fortinet Launches FortiSOC Cloud Platform with Agentic AI for Autonomous Alert Investigation</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.helpnetsecurity.com/2026/06/19/new-infosec-products-of-the-week-june-19-2026/" target="_blank" rel="noopener" title="Tigera Launches Lynx: Unified Control Plane for Kubernetes-Native AI Agents">Tigera Launches Lynx: Unified Control Plane for Kubernetes-Native AI Agents</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Jun 19</span><a href="https://www.manufacturingtodayindia.com/zscaler-expands-zero-trust-sase" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE With ZAgent Framework for AI-Era Administration">Zscaler Expands Zero Trust SASE With ZAgent Framework for AI-Era Administration</a><span class="src">Manufacturing Today India</span></li>
+      <li><span class="when">Jun 19</span><a href="https://www.fierce-network.com/cloud/zero-trust-ai-agents-sase-vendors-race-secure-non-human-users" target="_blank" rel="noopener" title="Zero Trust for AI Agents: SASE Vendors Race to Secure Non-Human Users">Zero Trust for AI Agents: SASE Vendors Race to Secure Non-Human Users</a><span class="src">Fierce Network</span></li>
+      <li><span class="when">Jun 19</span><a href="https://simplywall.st/stocks/us/software/nasdaq-zs/zscaler/news/should-zscalers-ai-driven-zero-trust-expansion-amid-index-ex" target="_blank" rel="noopener" title="Zscaler Announces AI-Guardian Project and Platform Integrations for Enterprise AI Security">Zscaler Announces AI-Guardian Project and Platform Integrations for Enterprise AI Security</a><span class="src">Simply Wall Street</span></li>
+      <li><span class="when">Jun 18</span><a href="https://www.sdxcentral.com/news/zscaler-expands-zero-trust-sase-solution-for-a-world-of-ai-with-distributed-users/" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE with ZAgent Framework for AI-Era Security Operations">Zscaler Expands Zero Trust SASE with ZAgent Framework for AI-Era Security Operations</a><span class="src">SDxCentral</span></li>
+      <li><span class="when">Jun 18</span><a href="https://www.fortinet.com/corporate/about-us/events" target="_blank" rel="noopener" title="Fortinet Introduces FortiSOC: Unified Cloud-Delivered SOC Platform with Agentic AI">Fortinet Introduces FortiSOC: Unified Cloud-Delivered SOC Platform with Agentic AI</a><span class="src">Fortinet</span></li>
+      <li><span class="when">Jun 18</span><a href="https://www.bleepingcomputer.com/news/security/fortibleed-leak-exposes-fortinet-vpn-credentials-for-73-000-devices/" target="_blank" rel="noopener" title="FortiBleed: 73,932 Fortinet Firewalls Compromised via Configuration Exfiltration and Credential Hash Cracking">FortiBleed: 73,932 Fortinet Firewalls Compromised via Configuration Exfiltration and Credential Hash Cracking</a><span class="src">BleepingComputer</span></li>
+      <li><span class="when">Jun 17</span><a href="https://www.manufacturingtodayindia.com/zscaler-expands-zero-trust-sase" target="_blank" rel="noopener" title="Zscaler expands Zero Trust SASE with ZAgent Framework for agentic administration">Zscaler expands Zero Trust SASE with ZAgent Framework for agentic administration</a><span class="src">Manufacturing Today India</span></li>
+      <li><span class="when">Jun 16</span><a href="https://www.sdxcentral.com/news/zscaler-expands-zero-trust-sase-solution-for-a-world-of-ai-with-distributed-users/" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE with ZAgent Framework for Autonomous Operations">Zscaler Expands Zero Trust SASE with ZAgent Framework for Autonomous Operations</a><span class="src">SDxCentral</span></li>
+      <li><span class="when">Jun 15</span><a href="https://siliconangle.com/2026/06/10/zscaler-unveils-zagent-framework-automate-zero-trust-sase-operations/" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE with ZAgent Framework for Agentic AI Operations">Zscaler Expands Zero Trust SASE with ZAgent Framework for Agentic AI Operations</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jun 15</span><a href="https://itbrief.co.uk/story/bluevoyant-launches-ai-platform-for-security-operations-a09c9b5a-a9b7-48cc-9879-1022f97d3bfe" target="_blank" rel="noopener" title="BlueVoyant Launches BlueVoyant AI Agentic Security Operations Platform">BlueVoyant Launches BlueVoyant AI Agentic Security Operations Platform</a><span class="src">IT Brief</span></li>
+      <li><span class="when">Jun 15</span><a href="https://www.tatacommunications.com/knowledge-base/threadspan/what-is-aiops" target="_blank" rel="noopener" title="Tata Communications ThreadSpan: AIOps and Network Observability Platform Update">Tata Communications ThreadSpan: AIOps and Network Observability Platform Update</a><span class="src">Tata Communications</span></li>
+      <li><span class="when">Jun 14</span><a href="https://bostoninstituteofanalytics.org/blog/cybersecurity-weekly-news-roundup-june-6-june-12-2026/" target="_blank" rel="noopener" title="Cybersecurity Weekly News Roundup (June 6 – June 12, 2026)">Cybersecurity Weekly News Roundup (June 6 – June 12, 2026)</a><span class="src">Boston Institute Of Analytics</span></li>
+      <li><span class="when">Jun 13</span><a href="https://siliconangle.com/2026/06/10/zscaler-unveils-zagent-framework-automate-zero-trust-sase-operations/" target="_blank" rel="noopener" title="Zscaler Unveils ZAgent Framework to Automate Zero-Trust SASE Operations">Zscaler Unveils ZAgent Framework to Automate Zero-Trust SASE Operations</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jun 13</span><a href="https://www.fierce-network.com/cloud/zero-trust-ai-agents-sase-vendors-race-secure-non-human-users" target="_blank" rel="noopener" title="Zero Trust for AI Agents: SASE Vendors Race to Secure Non-Human Users">Zero Trust for AI Agents: SASE Vendors Race to Secure Non-Human Users</a><span class="src">Fierce Network</span></li>
+      <li><span class="when">Jun 13</span><a href="https://www.cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-583" target="_blank" rel="noopener" title="Palo Alto Networks Addresses Cortex XSIAM and XSOAR Vulnerabilities in CommvaultSecurityIQ Integration">Palo Alto Networks Addresses Cortex XSIAM and XSOAR Vulnerabilities in CommvaultSecurityIQ Integration</a><span class="src">Canadian Centre for Cyber Security</span></li>
+      <li><span class="when">Jun 12</span><a href="https://siliconangle.com/2026/06/10/zscaler-unveils-zagent-framework-automate-zero-trust-sase-operations/" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE with ZAgent Framework for Agentic AI Operations">Zscaler Expands Zero Trust SASE with ZAgent Framework for Agentic AI Operations</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jun 12</span><a href="https://versa-networks.com/news/2026/versa-brings-zero-trust-controls-to-ai-agent-actions/" target="_blank" rel="noopener" title="Versa Brings Zero Trust Controls to AI Agent Actions with Patent-Pending MCP Architecture">Versa Brings Zero Trust Controls to AI Agent Actions with Patent-Pending MCP Architecture</a><span class="src">Versa Networks</span></li>
+      <li><span class="when">Jun 12</span><a href="https://www.fierce-network.com/cloud/zero-trust-ai-agents-sase-vendors-race-secure-non-human-users" target="_blank" rel="noopener" title="SASE Vendors Race to Secure Non-Human Users as Agentic AI Floods Enterprise Networks">SASE Vendors Race to Secure Non-Human Users as Agentic AI Floods Enterprise Networks</a><span class="src">Fierce Network</span></li>
+      <li><span class="when">Jun 11</span><a href="https://securitybrief.com.au/story/zscaler-expands-zero-trust-sase-with-ai-agent-tools" target="_blank" rel="noopener" title="Zscaler Expands Zero Trust SASE with ZAgent Framework for Natural-Language Administration">Zscaler Expands Zero Trust SASE with ZAgent Framework for Natural-Language Administration</a><span class="src">Security Brief</span></li>
+      <li><span class="when">Jun 11</span><a href="https://www.european.express/2026/06/09/how-ai-is-automating-it-operations-in-2026/" target="_blank" rel="noopener" title="How AI Is Automating IT Operations in 2026">How AI Is Automating IT Operations in 2026</a><span class="src">European Express</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

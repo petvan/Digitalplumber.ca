@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The week in review — Digital Plumber</title>
-<meta name="description" content="The week's most important AI networking, AIOps and network automation stories, Sep 19, 2026 – Sep 25, 2026.">
+<title>The week in network intelligence — Digital Plumber</title>
+<meta name="description" content="The week's most important AI networking, AIOps and network automation developments, Sep 19, 2026 – Sep 25, 2026: top stories, vendor activity, topic momentum and what to watch.">
 <link rel="canonical" href="https://digitalplumber.ca/week.html">
-<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="The week in network intelligence — Digital Plumber">
+<meta property="og:description" content="The week's most important AI networking, AIOps and network automation developments, Sep 19, 2026 – Sep 25, 2026: top stories, vendor activity, topic momentum and what to watch.">
+<meta property="og:url" content="https://digitalplumber.ca/week.html">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +32,8 @@
     --rule:    #1b1814;
     --accent:  #b8321a;
     --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
 
     --display: 'Instrument Serif', 'Times New Roman', serif;
     --serif:   'Source Serif 4', Georgia, serif;
@@ -45,6 +52,8 @@
       --rule:    #ece5d8;
       --accent:  #ef7a5c;
       --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
     }
   }
 
@@ -74,6 +83,17 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
 
   /* ── TOP STRIP (sports ear + links) ── */
   .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
@@ -109,55 +129,39 @@
   .nameplate {
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(3rem, 9vw, 6.4rem);
+    font-size: clamp(3rem, 8vw, 5.6rem);
     line-height: 1;
     letter-spacing: -0.01em;
-    margin: 0.9rem 0 0.35rem;
+    margin: 0.8rem 0 0.25rem;
   }
   .nameplate a { text-decoration: none; }
-  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; margin-bottom: 1rem; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
 
-  /* ── SECTIONS BAR (sticky) ── */
-  .sections-bar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: var(--paper);
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
     border-top: 3px double var(--rule);
     border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
   }
-  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 46px; }
-  .mini-nameplate {
-    font-family: var(--display);
-    font-size: 1.35rem;
-    text-decoration: none;
-    white-space: nowrap;
-    display: none;
-  }
-  .sections-bar.stuck .mini-nameplate { display: block; }
-  .section-links {
-    display: flex;
-    gap: 1.1rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    flex: 1;
-    min-width: 0;
-  }
-  .section-links::-webkit-scrollbar { display: none; }
-  .section-link {
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 0.7rem 0 0.55rem;
-    cursor: pointer;
-    white-space: nowrap;
-    color: var(--ink-2);
-  }
-  .section-link:hover { color: var(--ink); }
-  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
-  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
-
-  .nav-tools { display: flex; align-items: center; gap: 0.9rem; }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
   .search {
     display: flex;
     align-items: center;
@@ -174,163 +178,113 @@
     font-family: var(--serif);
     font-style: italic;
     font-size: 0.92rem;
-    width: 15rem;
+    width: 18rem;
   }
   .search input::placeholder { color: var(--muted); }
   .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
 
-  .archive-nav { position: relative; }
-  .archive-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--ink-2);
-    white-space: nowrap;
-  }
-  .archive-btn:hover { color: var(--accent); }
-  .archive-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 10px);
-    background: var(--paper);
-    border: 1px solid var(--rule);
-    min-width: 250px;
-    max-height: 340px;
-    overflow-y: auto;
-    z-index: 60;
-    padding: 0.35rem 0;
-    box-shadow: 4px 4px 0 var(--hair);
-  }
-  .archive-menu.open { display: block; }
-  .archive-menu a {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.4rem 1rem;
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-  .archive-menu a:hover { background: var(--wash); }
-  .archive-menu .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); }
-  .archive-menu a.archive-menu-week { font-style: italic; color: var(--accent); border-bottom: 1px solid var(--hair); }
-
-  /* ── FRONT PAGE ── */
-  .front {
-    display: grid;
-    grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
-    gap: 2.5rem;
-    padding: 2rem 0 2.25rem;
-    border-bottom: 3px double var(--rule);
-  }
-  .kicker { color: var(--accent); margin-bottom: 0.5rem; }
-  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
-  .lead-head {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
-    line-height: 1.02;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.9rem;
-  }
-  .lead-head a, .story h3 a { text-decoration: none; }
-  .lead-head a:hover, .story h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
-  .lead-deck { font-size: 1.22rem; line-height: 1.45; color: var(--ink-2); margin-bottom: 0.9rem; }
-  .byline { font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
-  .byline b { color: var(--ink); font-weight: 600; }
-  .lead-body {
-    columns: 2 16rem;
-    column-gap: 2rem;
-    column-rule: 1px solid var(--hair);
-    margin-top: 1.1rem;
-    padding-top: 1.1rem;
-    border-top: 1px solid var(--hair);
-    font-size: 1rem;
-    hyphens: auto;
-  }
-  .lead-body p { margin-bottom: 0.8rem; }
-  .lead-body p:first-child::first-letter {
-    font-family: var(--display);
-    float: left;
-    font-size: 3.6em;
-    line-height: 0.82;
-    padding: 0.08em 0.1em 0 0;
-  }
-  .why {
-    margin-top: 0.4rem;
-    padding: 0.8rem 1rem;
-    background: var(--wash);
-    border-left: 3px solid var(--accent);
-    font-size: 0.98rem;
-    break-inside: avoid;
-  }
-  .why .label { display: block; color: var(--accent); margin-bottom: 0.2rem; }
-  .source-link { display: inline-block; margin-top: 0.8rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--accent); text-decoration: none; }
-  .source-link:hover { text-decoration: underline; }
-
-  .inside { border-left: 1px solid var(--rule); padding-left: 1.75rem; }
-  .rail-head { border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; margin-bottom: 0.2rem; }
-  .inside ol { list-style: none; counter-reset: inside; }
-  .inside li { counter-increment: inside; padding: 0.95rem 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); }
-  .inside li:last-child { border-bottom: none; }
-  .inside li::before { content: counter(inside); font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
-  .inside a { text-decoration: none; font-weight: 600; font-size: 1.02rem; line-height: 1.3; display: block; }
-  .inside a:hover { text-decoration: underline; }
-  .inside .rail-kicker { display: block; color: var(--muted); margin-bottom: 0.2rem; }
-  .inside p { font-size: 0.88rem; color: var(--ink-2); margin-top: 0.3rem; line-height: 1.45; }
-
-  /* ── NEWSPAPER SECTIONS ── */
+  /* ── SECTION HEADS ── */
   .paper-section { padding: 2.25rem 0 0.5rem; }
   .section-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    gap: 1rem;
     border-top: 3px solid var(--rule);
     padding-top: 0.45rem;
     margin-bottom: 0.25rem;
   }
   .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
-  .section-head .label { color: var(--muted); }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
 
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
   .story-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
     column-gap: 2.25rem;
   }
-  .story { padding: 1.1rem 0 1.25rem; border-bottom: 1px solid var(--hair); }
-  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; margin-bottom: 0.5rem; }
-  .story .summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.55rem; }
-  .story .tags { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); margin-top: 0.35rem; }
-  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.95rem; }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
   .story-detail.open { display: block; }
   .story-detail p { margin-bottom: 0.7rem; }
   .more {
     background: none;
     border: none;
     padding: 0;
-    margin-top: 0.6rem;
+    margin-top: 0.55rem;
     cursor: pointer;
     font-family: var(--sans);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: var(--accent);
   }
   .more:hover { text-decoration: underline; }
-
-  .story-grid .story:only-child { grid-column: 1 / -1; }
-
-  @media (min-width: 900px) {
-    .story-grid .story:first-child { grid-column: span 2; padding-right: 1rem; }
-    .story-grid .story:only-child {
-      grid-column: 1 / -1;
-      padding-right: 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-      column-gap: 2.25rem;
-    }
-    .story-grid .story:first-child h3 { font-size: 2.15rem; }
-    .story-grid .story:first-child .summary { font-size: 1.05rem; }
-  }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
 
   /* ── SEARCH RESULTS ── */
   .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
@@ -353,321 +307,437 @@
   .listening h3 a { text-decoration: none; }
   .listening p { font-size: 0.92rem; color: var(--ink-2); }
 
-  /* ── LEDGER (companies & signals) ── */
-  .ledger-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2.25rem;
-    padding: 1rem 0 2.5rem;
-  }
-  .ledger-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
-  .ledger h3 { margin-bottom: 0.6rem; color: var(--ink-2); }
-  .company { padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
-  .company:last-of-type { border-bottom: none; }
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
   .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
   .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
-  .company ul { list-style: none; margin: 0.2rem 0; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
   .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
   .company li a { text-decoration: none; color: var(--ink-2); }
   .company li a:hover { text-decoration: underline; color: var(--ink); }
-  .coverage { background: none; border: none; padding: 0; cursor: pointer; font-family: var(--sans); font-size: 0.72rem; font-weight: 600; color: var(--accent); }
-  .coverage:hover { text-decoration: underline; }
-  .quiet { font-size: 0.82rem; font-style: italic; color: var(--muted); margin-top: 0.8rem; }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
 
-  .tally { list-style: none; }
-  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; cursor: pointer; font-size: 0.95rem; }
-  .tally li:hover .tally-name { color: var(--accent); }
-  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
-  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
-  .terms { font-size: 0.98rem; line-height: 1.9; color: var(--ink-2); }
-  .terms .hot { font-style: italic; color: var(--accent); }
-  .empty-note { font-size: 0.88rem; font-style: italic; color: var(--muted); }
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
   .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
   .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
   .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
   .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
   .colophon nav a { text-decoration: none; color: var(--ink-2); }
   .colophon nav a:hover { color: var(--accent); }
 
-  [hidden] { display: none !important; }
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
 
-  /* ── WEEK IN REVIEW (week.html) ── */
-  .week-top { list-style: none; padding: 1.25rem 0 2rem; border-bottom: 3px double var(--rule); counter-reset: top; }
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
   .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
   .week-top li:last-child { border-bottom: none; }
   .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
-  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.2rem 0 0.4rem; }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
   .week-top h3 a { text-decoration: none; }
   .week-top h3 a:hover { text-decoration: underline; }
-  .week-top .summary { font-size: 0.97rem; color: var(--ink-2); }
-  .week-top .why { margin-top: 0.6rem; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
   .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
   .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
-  .week-list a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; }
-  .week-list a:hover { text-decoration: underline; }
-  .week-list .byline { display: block; margin-top: 0.15rem; }
-  .week-list .byline a { font-weight: 500; font-size: inherit; color: var(--accent); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
-    .front { grid-template-columns: 1fr; gap: 1.75rem; }
-    .inside { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1rem; }
-    .ledger-grid { grid-template-columns: 1fr 1fr; }
-    .ledger-grid > div:first-child { grid-column: 1 / -1; }
-    .ledger-grid > div + div { border-left: none; padding-left: 0; }
-    .ledger-grid > div:last-child { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
-    .search input { width: 11rem; }
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
   }
 
   @media (max-width: 720px) {
     .wrap { padding: 0 1rem; }
     body { font-size: 16px; }
     .topstrip-inner { flex-direction: column; gap: 0.2rem; }
-    .ear-links { display: none; }
     .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
     .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
     .masthead { padding-top: 0.6rem; }
     .dateline-extra { display: none; }
-    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.15rem; }
-    .motto { font-size: 0.82rem; margin-bottom: 0.6rem; }
-    .front { padding-top: 1.25rem; }
-    .lead-head { font-size: 2.1rem; }
-    .lead-deck { font-size: 1.08rem; }
-    .sections-inner { flex-wrap: wrap; gap: 0 1rem; padding-bottom: 0.4rem; }
-    .section-links { flex-basis: 100%; order: 2; }
-    .nav-tools { flex: 1; justify-content: space-between; padding-top: 0.5rem; }
-    .search { flex: 1; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
     .search input { width: 100%; }
     .search kbd { display: none; }
-    .sections-bar.stuck .mini-nameplate { display: none; }
-    .lead-body { columns: 1; }
-    .ledger-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-    .ledger-grid > div:last-child { border-left: none; padding-left: 0; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
     .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
     .colophon { grid-template-columns: 1fr; }
     .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
     .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
     .week-top li::before { font-size: 2rem; }
   }
 </style>
 </head>
 <body>
-<div class="topstrip">
-  <div class="wrap topstrip-inner">
-    <div class="ear"><a href="/" style="text-decoration:none">← Today's paper</a></div>
-    <div class="ear-links"><a href="/feed.xml">RSS</a></div>
-  </div>
-</div>
-
-<header class="masthead wrap">
-  <div class="dateline label"><span>The week in review · Sep 19, 2026 – Sep 25, 2026</span><span>84 stories · updated Sep 25, 2026</span></div>
-  <h1 class="nameplate"><a href="/">Digital Plumber</a></h1>
-  <p class="motto">Seven days of network news, and the stories that mattered most</p>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
 </header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html" class="active" aria-current="page">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
 
-<main class="wrap">
-  <div class="section-head" style="border-top-width:3px;border-top-style:double"><h2>The 8 that mattered</h2><span class="label">Picked by the AI editor</span></div>
-  <ol class="week-top">
+  <p class="kicker label">This week · Sep 19, 2026 – Sep 25, 2026</p>
+  <h1 class="page-title">The week in network intelligence</h1>
+  <p class="page-dek">78 stories across 9 topics: the developments that mattered, who was busy, what moved and what to watch next.</p>
+
+  <section class="paper-section">
+    <div class="section-head"><h2>5 developments that mattered</h2><span class="label">Picked by the AI editor</span></div>
+    <ol class="week-top">
       <li><div>
-        <p class="kicker label">Agentic AI<span class="sep">·</span>Industry Trend</p>
-        <h3><a href="https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html" target="_blank" rel="noopener" title="Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months">Half of large enterprises run agentic AI in production networks</a></h3>
-        <p class="summary">Cisco and Omdia's study of 1,000 IT and network operations leaders shows 75% of organizations have already deployed AI for network operations, with more than half running agentic AI systems in production today and 84% expecting an AI-led operating model within 12 months. Over three-quarters are willing to grant agentic AI significant autonomy in NetOps, with 86% saying a single integrated platform is most effective.</p>
-        <p class="why"><span class="label">Why it matters</span>Large-sample data shows agentic AI already making autonomous production network changes, setting expectations NetOps leaders will be measured against.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>Cisco Blogs / PR Newswire</b> · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+        <p class="kicker label">Networking<span class="sep">·</span>Research</p>
+        <h3><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html" target="_blank" rel="noopener" title="Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps">Half of large firms let agents change production networks</a></h3>
+        <p class="summary">51% of large organizations now run agentic systems that execute autonomous modifications in production environments.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Hard data on agentic AI already making autonomous production network changes sets the baseline for trust, guardrails and staffing arguments.</p>
+        <p class="meta" style="margin-top:0.5rem"><b>Cisco Newsroom / Light Reading</b> · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
       </div></li>
       <li><div>
-        <p class="kicker label">Agentic AI<span class="sep">·</span>Product Launch</p>
-        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network" target="_blank" rel="noopener" title="NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents">NetBrain adds governed change and assessment agents to NetOps platform</a></h3>
-        <p class="summary">NetBrain announced a major expansion of the NetBrain Agentic NetOps Platform, adding new Change and Assessment agents governed by an expanded NetOps Harness that enables AI agents and network engineers to work together across troubleshooting, change, assessment and prevention. These new agents join the previously released Diagnosis agent, running on a common governance framework.</p>
-        <p class="why"><span class="label">Why it matters</span>NetBrain's governed change and assessment agents show what production-grade agentic NetOps tooling with guardrails actually looks like.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>NetBrain / Business Wire</b> · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+        <p class="kicker label">Agentic AI<span class="sep">·</span>Vendor release</p>
+        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data" target="_blank" rel="noopener" title="Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation">Selector Foundry tests network agents against past incidents</a></h3>
+        <p class="summary">Selector introduced Selector Foundry, a development and runtime environment enabling network operations teams to build, test, version and govern their own AI agents where telemetry is correlated and stored in Git.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Replaying candidate agents against historical incidents for pass/fail validation is the first credible CI/CD pattern for NetOps agents.</p>
+        <p class="meta" style="margin-top:0.5rem"><b>Selector / Business Wire</b> · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
       </div></li>
       <li><div>
-        <p class="kicker label">Agentic AI<span class="sep">·</span>Product Launch</p>
-        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data" target="_blank" rel="noopener" title="Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation">Selector Foundry validates network agents against past incidents</a></h3>
-        <p class="summary">Selector introduced Selector Foundry, a development and runtime environment enabling network operations teams to build, test, version and govern their own AI agents where telemetry is correlated and stored in Git. Before promotion to production, agents are replayed against historical incident data for pass/fail validation against actual past outcomes.</p>
-        <p class="why"><span class="label">Why it matters</span>Replaying agents against historical incidents for pass/fail validation is a concrete CI-style pattern network teams can copy.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>Selector / Business Wire</b> · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
-      </div></li>
-      <li><div>
-        <p class="kicker label">Security<span class="sep">·</span>Industry Trend</p>
-        <h3><a href="https://blog.buildfastwithai.com/ai-news-today-september-23-2026" target="_blank" rel="noopener" title="Cisco Talos Discloses CLOSEDQUORUM—First Fully Autonomous AI Command-and-Control Malware">Cisco Talos finds first fully autonomous AI malware</a></h3>
-        <p class="summary">Cisco Talos disclosed CLOSEDQUORUM on September 22, 2026, described as the first reported fully autonomous multi-model AI command-and-control implant that operates with no human operator, and released CAIRN, a toolkit for hunting AI-integrated malware. Such malware has moved from optional AI helpers to autonomous command and control within about a year.</p>
-        <p class="why"><span class="label">Why it matters</span>First fully autonomous AI command-and-control implant changes threat models and detection tooling for network defenders.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>AI News Today (buildfastwithai.com)</b> · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
-      </div></li>
-      <li><div>
-        <p class="kicker label">Infrastructure<span class="sep">·</span>Industry Trend</p>
-        <h3><a href="https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/" target="_blank" rel="noopener" title="While GPUs Get Headlines, Networking Sits at Data Center Choke Point: Arista, Cisco, Ciena Lead AI Fabric Build">Networking becomes the choke point in AI data centres</a></h3>
-        <p class="summary">The real bottleneck in AI training clusters is not silicon but the fiber, switches, and optics surrounding it—data cannot move fast enough between chips when the network is constrained. Hyperscalers poured capex into network fabric, with Cisco booking $9.3 billion of AI infrastructure orders in fiscal 2026 while calling the moment a 'networking supercycle.' Arista raised its 2026 revenue outlook to roughly $12.6 billion (40% annual growth), with its AI Fabrics segment on track for at least $3.5 billion in 2026.</p>
-        <p class="why"><span class="label">Why it matters</span>Network fabric, not GPUs, is the AI cluster bottleneck, and vendor order books confirm where budget is going.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>24/7 Wall Street</b> · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
-      </div></li>
-      <li><div>
-        <p class="kicker label">Networking</p>
-        <h3><a href="https://digitalisationworld.com/news/14457-juniper-networks-expands-apstra-software" target="_blank" rel="noopener" title="Juniper Networks Introduces Apstra Freeform for Multivendor Data Center Automation">Juniper Apstra Freeform automates any data centre topology</a></h3>
-        <p class="summary">Juniper Networks expanded its Apstra intent-based networking platform with Freeform capability, enabling enterprises to manage and automate data center operations regardless of topology and protocols. This removes architectural constraints from intent-driven networking, allowing customers to move beyond rigid fabric designs to flexible, multi-topology environments across data centers.</p>
-        <p class="why"><span class="label">Why it matters</span>Apstra Freeform removes topology constraints from intent-based automation, widening multivendor data center automation options.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>Digitalisation World</b> · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></p>
+        <p class="kicker label">Telco<span class="sep">·</span>Industry news</p>
+        <h3><a href="https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing" target="_blank" rel="noopener" title="Orange takes Nokia AI-RAN into live network testing">Orange puts Nokia AI-RAN into live network testing</a></h3>
+        <p class="summary">Orange is preparing to test Nokia's AI-RAN platform in its live network, putting claimed radio-efficiency gains to the commercial test while exploring shared compute for AI workloads.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Orange putting Nokia AI-RAN into a live network moves AI-RAN claims from slideware to measurable energy, TCO and ops data.</p>
+        <p class="meta" style="margin-top:0.5rem"><b>RCR Wireless News</b> · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
       </div></li>
       <li><div>
         <p class="kicker label">Infrastructure<span class="sep">·</span>Research</p>
-        <h3><a href="https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html" target="_blank" rel="noopener" title="Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026">Marvell demonstrates 2nm 1.6T coherent optics at ECOC</a></h3>
-        <p class="summary">Marvell demonstrated 2nm 800G ZR/ZR+ with MACsec and first 2nm 1.6T ZR and coherent-lite O-band optical technologies at ECOC 2026, powered by next-generation DSPs optimized for high-bandwidth connectivity within and between data center facilities and paving the way for 3.2T connectivity. Advanced co-packaged optics (CPO) technology integrates optics directly with AI accelerators and switch silicon as per-lane speeds and multi-rack AI pods push past copper's reach limits.</p>
-        <p class="why"><span class="label">Why it matters</span>2nm 1.6T coherent optics and co-packaged optics define the interconnect roadmap for multi-rack AI pods.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>Marvell Technology</b> · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+        <h3><a href="https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html" target="_blank" rel="noopener" title="Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026">Marvell shows 2nm 1.6T coherent optics at ECOC</a></h3>
+        <p class="summary">Marvell demonstrated 2nm 800G ZR/ZR+ with MACsec and first 2nm 1.6T ZR and coherent-lite O-band optical technologies at ECOC 2026, powered by next-generation DSPs optimized for high-bandwidth connectivity within and between data center facilities and paving the way for 3.2T connectivity.</p>
+        <p class="why-line"><span class="label">Why it matters</span> 2nm 1.6T coherent optics and co-packaged optics determine how far AI pods can scale once copper runs out.</p>
+        <p class="meta" style="margin-top:0.5rem"><b>Marvell Technology</b> · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
       </div></li>
       <li><div>
-        <p class="kicker label">Telco</p>
-        <h3><a href="https://www.telecomstechnews.com/news/nokia-and-microsoft-automate-telecom-networks-ai-agents/" target="_blank" rel="noopener" title="Nokia and Microsoft expand partnership to accelerate agentic AI deployment in telecom networks">Nokia and Microsoft cut telco data prep to minutes</a></h3>
-        <p class="summary">Telecom engineers pairing Nokia Data Suite with Microsoft Fabric can deploy agentic network automation across infrastructure in minutes, delivering a unified data foundation that unites structured network telemetry with cloud-scale analytics. The pairing cuts the time operators need to reach usable network data from multiple weeks down to minutes. Initial use cases include VoNR assurance, RAN optimization and predictive maintenance, with the solution available now.</p>
-        <p class="why"><span class="label">Why it matters</span>Nokia-Microsoft pairing cuts telco network data preparation from weeks to minutes, enabling practical RAN and assurance automation.</p>
-        <p class="byline" style="margin-top:0.6rem"><b>Telecom's Technews</b> · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></p>
+        <p class="kicker label">Security<span class="sep">·</span>Vendor release</p>
+        <h3><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense" target="_blank" rel="noopener" title="Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6">Palo Alto runs frontier models as continuous offensive security</a></h3>
+        <p class="summary">Palo Alto Networks announced Unit 42 Continuous Frontier AI Defense, an agentic offensive security service leveraging frontier AI models (Anthropic's Claude Mythos and OpenAI's GPT-5.6) to perpetually identify, validate, and remediate enterprise vulnerabilities before attackers exploit them.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Continuous agentic offensive security responds directly to breach cycles compressing from weeks to hours, reshaping vulnerability workflows.</p>
+        <p class="meta" style="margin-top:0.5rem"><b>Palo Alto Networks</b> · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
       </div></li>
-  </ol>
+    </ol>
+  </section>
+
+  <section class="paper-section">
+    <div class="section-head"><h2>Who was busy, and what moved</h2><span class="label">Last 7 days vs the 7 before</span></div>
+    <div class="intel-grid three-col">
+      <div>
+        <h3 class="label">Most active vendors</h3>
+        <ul class="tally">
+          <li><a class="tally-name" href="/vendors/cisco/">Cisco</a><span class="dots"></span><span class="n">5</span><span class="trend-slot"><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/crowdstrike/">CrowdStrike</a><span class="dots"></span><span class="n">3</span><span class="trend-slot"></span></li>
+          <li><a class="tally-name" href="/vendors/palo-alto/">Palo Alto</a><span class="dots"></span><span class="n">3</span><span class="trend-slot"></span></li>
+          <li><a class="tally-name" href="/vendors/juniper/">Juniper</a><span class="dots"></span><span class="n">3</span><span class="trend-slot"><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/selector-ai/">Selector</a><span class="dots"></span><span class="n">1</span><span class="trend-slot"><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/servicenow/">ServiceNow</a><span class="dots"></span><span class="n">1</span><span class="trend-slot"><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/datadog/">Datadog</a><span class="dots"></span><span class="n">0</span><span class="trend-slot"><span class="trend down" title="Down from 2 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 2</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/honeycomb/">Honeycomb</a><span class="dots"></span><span class="n">0</span><span class="trend-slot"><span class="trend down" title="Down from 1 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 1</span></span></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="label">Topic momentum</h3>
+        <ul class="tally">
+          <li><a class="tally-name" href="/topics/industry-policy/">Industry and policy</a><span class="dots"></span><span class="n">13</span><span class="trend-slot"><span class="trend down" title="Down from 14 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 14</span></span></span></li>
+          <li><a class="tally-name" href="/topics/research/">Research</a><span class="dots"></span><span class="n">12</span><span class="trend-slot"><span class="trend down" title="Down from 16 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 16</span></span></span></li>
+          <li><a class="tally-name" href="/topics/agentic-ai/">Agentic AI</a><span class="dots"></span><span class="n">12</span><span class="trend-slot"><span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span></span></li>
+          <li><a class="tally-name" href="/topics/ai-models/">Models</a><span class="dots"></span><span class="n">12</span><span class="trend-slot"><span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></span></li>
+          <li><a class="tally-name" href="/topics/telco/">Telco</a><span class="dots"></span><span class="n">9</span><span class="trend-slot"><span class="trend up" title="Up from 8 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 8</span></span></span></li>
+          <li><a class="tally-name" href="/topics/security/">Security</a><span class="dots"></span><span class="n">7</span><span class="trend-slot"><span class="trend down" title="Down from 9 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 9</span></span></span></li>
+          <li><a class="tally-name" href="/topics/network-automation/">Networking</a><span class="dots"></span><span class="n">6</span><span class="trend-slot"><span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span></span></li>
+          <li><a class="tally-name" href="/topics/ai-infrastructure/">Infrastructure</a><span class="dots"></span><span class="n">4</span><span class="trend-slot"></span></li>
+          <li><a class="tally-name" href="/topics/aiops/">AI ops</a><span class="dots"></span><span class="n">3</span><span class="trend-slot"><span class="trend down" title="Down from 5 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 5</span></span></span></li>
+        </ul>
+        <p class="terms"><span class="hot">agent</span> · Agentic AI · RAG · MCP · observability · automation · LLM · inference · AIOps · OpenTelemetry · Kubernetes</p>
+      </div>
+      <div>
+        <h3 class="label">Biggest changes</h3>
+        <ul class="changes">
+          <li><span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span> <a href="/topics/ai-models/">AI Model Providers</a> coverage rose to 12 stories, from 6</li>
+          <li><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span> <a href="/vendors/cisco/">Cisco</a> appeared in 5 stories, after none the week before</li>
+          <li><span class="trend down" title="Down from 16 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 16</span></span> <a href="/topics/research/">Research, Standards &amp; Industry</a> coverage fell to 12 stories, from 16</li>
+          <li><span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span> <a href="/topics/agentic-ai/">Agentic AI &amp; MCP</a> coverage rose to 12 stories, from 9</li>
+          <li><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span> <a href="/vendors/juniper/">Juniper</a> appeared in 3 stories, after none the week before</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-section">
+    <div class="section-head"><h2>What to watch</h2><span class="label">From the AI editor</span></div>
+    <ul class="watch"><li>Whether Orange publishes early AI-RAN results on radio efficiency, energy use and total cost of ownership before deciding to scale.</li><li>Dataiku's Agent Management general availability, slated for October 2026, and how it compares with NetBrain's and Selector's NetOps-specific agent governance.</li><li>Samsung's Hyper AI Network projects with KT and SK Telecom, which begin at industrial sites in October 2026.</li></ul>
+  </section>
+
   
-    <section class="paper-section">
-      <div class="section-head"><h2>AI Ops &amp; Observability</h2><span class="label">6 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://telecomreseller.com/2026/09/25/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise/" target="_blank" rel="noopener" title="Cisco AI Research: AgenticOps Scaling Quickly in the Enterprise">Most enterprises say AIOps tools cannot keep up</a><span class="byline">Telecom Reseller / Cisco Research · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://docs.dynatrace.com/docs/whats-new" target="_blank" rel="noopener" title="Dynatrace Releases Agentic Assist with dtwiz CLI, dt-evals for LLM Quality, and Fleet Management">Dynatrace adds agentic Assist, dtwiz CLI and LLM evals</a><span class="byline">Dynatrace Docs / Product Release Notes · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://last9.io/blog/ai-agent-observability-best-practices/" target="_blank" rel="noopener" title="Last9 AI Agent Observability: What to Trace and What It Catches">Tracing agent tool calls catches failures metrics miss</a><span class="byline">Last9 Blog · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/" target="_blank" rel="noopener" title="AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices">AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</a><span class="byline">IJSRET · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.netscout.com/blog/how-age-ai-changing-network-observability-landscape" target="_blank" rel="noopener" title="NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks">NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks</a><span class="byline">NETSCOUT · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.servicenow.com/community/ai-control-tower-articles/what-s-new-in-ai-control-tower-for-august-amp-september-2026/ta-p/3597749" target="_blank" rel="noopener" title="ServiceNow AI Control Tower August &amp; September 2026 Release: New Observability and Governance Features">ServiceNow AI Control Tower August &amp; September 2026 Release: New Observability and Governance Features</a><span class="byline">ServiceNow Community · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>Agentic AI &amp; MCP</h2><span class="label">14 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://www.happiestminds.com/blogs/multi-agent-orchestration-as-the-new-itops-control-plane/" target="_blank" rel="noopener" title="Multi-Agent Orchestration as the New ITOps Control Plane">Multi-agent orchestration emerges as new ITOps control plane</a><span class="byline">Happiest Minds · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.netbrain.com/news/from-network-automation-to-agentic-netops/" target="_blank" rel="noopener" title="NetBrain Unveils Full Suite of Agentic NetOps Agents at Live Conference">NetBrain launches agentic NetOps agents for diagnosis and remediation</a><span class="byline">NetBrain · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.alizila.com/alibaba-unveils-agentic-computer-ai-wearables-and-more-at-2026-apsara-conference/" target="_blank" rel="noopener" title="Alibaba Unveils Full-Stack Agentic AI Roadmap: Qwen Book, Hardware, and AgentCore at Apsara 2026">Alibaba unveils full-stack agentic AI hardware and software</a><span class="byline">Alizila · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://arxiv.org/pdf/2608.14611" target="_blank" rel="noopener" title="The 2026 Singapore Consensus on Global AI Safety Research Priorities">AI safety consensus flags agentic reliability as adoption barrier</a><span class="byline">arXiv · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://arxiv.org/pdf/2606.20570" target="_blank" rel="noopener" title="Infrastructure for the Agentic Web: Gap Analysis and Architecture from Agentverse Platform">A2A agent protocol passes 150 organisations in first year</a><span class="byline">arXiv · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations" target="_blank" rel="noopener" title="NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24">NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24</a><span class="byline">Business Wire · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html" target="_blank" rel="noopener" title="Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months">Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months</a><span class="byline">Cisco Blogs / PR Newswire · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html" target="_blank" rel="noopener" title="Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI">Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI</a><span class="byline">Aragon Research / PR Newswire · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network" target="_blank" rel="noopener" title="NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents">NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents</a><span class="byline">NetBrain / Business Wire · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data" target="_blank" rel="noopener" title="Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation">Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation</a><span class="byline">Selector / Business Wire · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one" target="_blank" rel="noopener" title="Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation">Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</a><span class="byline">Cisco Blogs · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://lucaberton.com/blog/agntcon-mcpcon-europe-2026-recap-agents-in-production/" target="_blank" rel="noopener" title="AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption">AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption</a><span class="byline">Luca Berton Blog · <a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></span></li>
-        <li><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026" target="_blank" rel="noopener" title="Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM">Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM</a><span class="byline">AI Agents News Brief · <a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></span></li>
-        <li><a href="https://ai-agent-engineering.org/news/the-2026-mcp-roadmap-from-tool-integration-to-agent-to-agent-communication" target="_blank" rel="noopener" title="MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams">MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams</a><span class="byline">AI Agent Engineering · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>Network Automation</h2><span class="label">6 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html" target="_blank" rel="noopener" title="Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps">Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</a><span class="byline">Cisco Newsroom / Light Reading · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html" target="_blank" rel="noopener" title="Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation">Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation</a><span class="byline">Cisco · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115" target="_blank" rel="noopener" title="HPE Reports 36% Networking Orders Growth; Juniper Integration On Track">HPE Reports 36% Networking Orders Growth; Juniper Integration On Track</a><span class="byline">AD-HOC NEWS / Futuriom · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/" target="_blank" rel="noopener" title="51% of Large Organizations Run Agentic Systems in Production Networks">51% of Large Organizations Run Agentic Systems in Production Networks</a><span class="byline">Telecom Technology News · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://blogs.cisco.com/news/netops-is-already-deploying-autonomy-trust-will-decide-how-far-it-goes" target="_blank" rel="noopener" title="NetOps is already deploying agentic autonomy - trust will decide how far it goes">NetOps is already deploying agentic autonomy - trust will decide how far it goes</a><span class="byline">Cisco Blogs · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://digitalisationworld.com/news/14457-juniper-networks-expands-apstra-software" target="_blank" rel="noopener" title="Juniper Networks Introduces Apstra Freeform for Multivendor Data Center Automation">Juniper Networks Introduces Apstra Freeform for Multivendor Data Center Automation</a><span class="byline">Digitalisation World · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>Security Automation</h2><span class="label">10 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html" target="_blank" rel="noopener" title="SASE OpsLab Launches Industry-First Lifecycle Management Platform for Hybrid SASE Infrastructure">SASE OpsLab launches lifecycle platform for hybrid SASE</a><span class="byline">GlobeNewswire · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/" target="_blank" rel="noopener" title="Ping Identity Announces Enterprise Personal Agent Access for AI Agent Security and Governance">Ping Identity adds discovery and runtime control for AI agents</a><span class="byline">Help Net Security · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://blog.buildfastwithai.com/ai-news-today-september-23-2026" target="_blank" rel="noopener" title="Cisco Talos Discloses CLOSEDQUORUM—First Fully Autonomous AI Command-and-Control Malware">Cisco Talos finds first fully autonomous AI malware</a><span class="byline">AI News Today (buildfastwithai.com) · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/" target="_blank" rel="noopener" title="Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents">Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</a><span class="byline">SiliconANGLE · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting" target="_blank" rel="noopener" title="Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security">Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</a><span class="byline">GuruFocus · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/" target="_blank" rel="noopener" title="Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations">Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations</a><span class="byline">Unite.AI · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense" target="_blank" rel="noopener" title="Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6">Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6</a><span class="byline">Palo Alto Networks · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://247wallst.com/investing/2026/09/18/crowdstrike-and-palo-alto-networks-are-soaring-but-is-the-rally-already-priced-in/" target="_blank" rel="noopener" title="CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain">CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain</a><span class="byline">24/7 Wall St. · <a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></span></li>
-        <li><a href="https://www.helpnetsecurity.com/2026/09/16/citrix-session-insights-capability/" target="_blank" rel="noopener" title="Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows">Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows</a><span class="byline">Help Net Security · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-        <li><a href="https://hipther.com/news/2026/09/18/137943/cybersecurity-roundup-partnerships-funding-and-emerging-threats-september-18-2026-crowdstrike-ai-ass" target="_blank" rel="noopener" title="AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration">AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration</a><span class="byline">HIPTHER · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>AI Infrastructure</h2><span class="label">6 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://roboticsandautomationnews.com/2026/09/22/osfp-modules-the-complete-guide-to-400g-800g-and-1-6t-optical-transceivers-for-ai-and-hyperscale-data-centers/104982/" target="_blank" rel="noopener" title="OSFP Modules: 1.6T Optical Transceiver Ecosystem Reaches Customer Validation Phase">1.6T OSFP optics enter customer validation ahead of production</a><span class="byline">Robotics and Automation News · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/" target="_blank" rel="noopener" title="While GPUs Get Headlines, Networking Sits at Data Center Choke Point: Arista, Cisco, Ciena Lead AI Fabric Build">Networking, not GPUs, is the AI data centre bottleneck</a><span class="byline">24/7 Wall Street · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355" target="_blank" rel="noopener" title="BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints">BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</a><span class="byline">Investing.com · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.globenewswire.com/news-release/2026/09/23/3367501/0/en/d-h-distributing-expands-relationship-with-hpe-chosen-as-a-north-american-distributor-of-hpe-networking.html" target="_blank" rel="noopener" title="D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking">D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking</a><span class="byline">Globe Newswire · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html" target="_blank" rel="noopener" title="Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026">Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026</a><span class="byline">Marvell Technology · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.globenewswire.com/news-release/2026/09/22/3366824/0/en/ai-network-fabric-market-accelerates-as-gigascale-ai-clusters-drive-demand-for-high-speed-low-latency-connectivity.html" target="_blank" rel="noopener" title="AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity">AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity</a><span class="byline">Globe Newswire · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>Research, Standards &amp; Industry</h2><span class="label">12 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://www.anthropic.com/claude-opus-5-5" target="_blank" rel="noopener" title="Claude Opus 5.5 Launched: 40% Cost Reduction with Fable-Tier Performance">Anthropic cuts Opus workload costs by 40 percent</a><span class="byline">Anthropic · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener" title="Anthropic's Biolab: Claude Autonomously Discovers Novel CRISPR-Like Enzyme System">Claude agents autonomously discover CRISPR-like enzyme system</a><span class="byline">Anthropic Blog · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://arxiv.org/pdf/2607.16066" target="_blank" rel="noopener" title="LLM-Powered Agentic AI for 5G/6G Networks: Architecture, Protocols, and Standardization">Survey maps agentic AI protocols for 5G and 6G networks</a><span class="byline">arXiv · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference">Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference</a><span class="byline">Anthropic Blog / GitHub Changelog · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/" target="_blank" rel="noopener" title="OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body">OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body</a><span class="byline">Bloomberg / Crypto Briefing · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/" target="_blank" rel="noopener" title="Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data">Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data</a><span class="byline">Snorkel AI Blog · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-09-22/ex-anthropic-staffers-ai-startup-in-talks-to-raise-at-5-billion-value" target="_blank" rel="noopener" title="Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems">Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems</a><span class="byline">Bloomberg · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://github.com/ed-is-ai/featherbench/issues/75" target="_blank" rel="noopener" title="OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use">OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use</a><span class="byline">OpenAI / Featherbench · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://github.com/ed-is-ai/featherbench/issues/74" target="_blank" rel="noopener" title="Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks">Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</a><span class="byline">Anthropic / Featherbench · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://stripe.dev/blog" target="_blank" rel="noopener" title="Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs">Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs</a><span class="byline">Stripe Engineering Blog · <a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></span></li>
-        <li><a href="https://github.com/open-telemetry/opentelemetry-collector-releases/releases" target="_blank" rel="noopener" title="OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry">OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry</a><span class="byline">GitHub (opentelemetry-collector-releases) · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-        <li><a href="https://trewknowledge.com/2026/09/18/ai-this-week-the-infrastructure-around-ai-gets-serious/" target="_blank" rel="noopener" title="OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers">OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers</a><span class="byline">TrewKnowledge · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>AI Model Providers</h2><span class="label">11 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://www.anthropic.com/news/introducing-claude-opus-5-5" target="_blank" rel="noopener" title="Claude Opus 5.5 launches at $4/$20 with 60% cheaper cache reads and medium-effort default">Claude Opus 5.5 ships with 60 percent cheaper cache reads</a><span class="byline">Anthropic · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://openai.com/blog/introducing-gpt-6-sol-and-luna" target="_blank" rel="noopener" title="OpenAI cuts GPT-6 Sol and Luna prices 50%, launching aggressive pricing response same-day as Claude Opus 5.5">OpenAI halves prices with GPT-6 Sol and Luna</a><span class="byline">OpenAI · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" target="_blank" rel="noopener" title="OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements">OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements</a><span class="byline">TechCrunch · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained" target="_blank" rel="noopener" title="Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost">Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost</a><span class="byline">Vellum · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html" target="_blank" rel="noopener" title="Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline">Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline</a><span class="byline">Yahoo Finance · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price" target="_blank" rel="noopener" title="Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents">Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents</a><span class="byline">VentureBeat · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more" target="_blank" rel="noopener" title="OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture">OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture</a><span class="byline">VentureBeat · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://openai.com/index/advisory-group-on-mathematics-and-artificial-intelligence/" target="_blank" rel="noopener" title="OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians">OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians</a><span class="byline">OpenAI Blog / TechCrunch · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing">xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing</a><span class="byline">xAI / GitHub Changelog · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version" target="_blank" rel="noopener" title="Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement">Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement</a><span class="byline">Spectrum Local News · <a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></span></li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development" target="_blank" rel="noopener" title="Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start">Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start</a><span class="byline">Bloomberg · <a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>Telco &amp; Cable AI</h2><span class="label">8 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make" target="_blank" rel="noopener" title="T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience">T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience</a><span class="byline">T-Mobile Newsroom / TelecomLead · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises" target="_blank" rel="noopener" title="Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads">Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads</a><span class="byline">Business Wire / Lumen · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/" target="_blank" rel="noopener" title="Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom">Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom</a><span class="byline">Samsung Electronics / Sammy Fans · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report" target="_blank" rel="noopener" title="AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR">AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR</a><span class="byline">The Business Research Company · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://voip.review/2026/09/22/lumen-launches-flexible-enterprise-internet-ai-workloads/" target="_blank" rel="noopener" title="Lumen launches flexible enterprise internet for AI workloads with on-demand bandwidth controls">Lumen launches flexible enterprise internet for AI workloads with on-demand bandwidth controls</a><span class="byline">VoIP Review · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://www.mobileeurope.co.uk/future-of-telecoms-ai/" target="_blank" rel="noopener" title="The future of telecoms, according to AI">The future of telecoms, according to AI</a><span class="byline">Mobile Europe · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://www.telecomstechnews.com/news/nokia-and-microsoft-automate-telecom-networks-ai-agents/" target="_blank" rel="noopener" title="Nokia and Microsoft expand partnership to accelerate agentic AI deployment in telecom networks">Nokia and Microsoft expand partnership to accelerate agentic AI deployment in telecom networks</a><span class="byline">Telecom's Technews · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-        <li><a href="https://www.globenewswire.com/news-release/2026/09/18/3364521/28124/en/ai-native-telecom-market-poised-for-rapid-growth-through-2032-as-intelligent-networks-automated-infrastructure-and-next-generation-solutions-transform-connectivity.html" target="_blank" rel="noopener" title="AI-Native Telecom Market valued at $8.07 billion in 2026, forecast for robust double-digit growth through 2032">AI-Native Telecom Market valued at $8.07 billion in 2026, forecast for robust double-digit growth through 2032</a><span class="byline">Research and Markets · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
-    <section class="paper-section">
-      <div class="section-head"><h2>AI Industry &amp; Policy</h2><span class="label">11 stories</span></div>
-      <ul class="week-list">
-        <li><a href="https://www.cnn.com/2026/09/23/tech/altman-amodei-ai-safety-un-security-council" target="_blank" rel="noopener" title="AI Lab Executives Brief UN Security Council on Uncontrolled Systems Risk">AI lab chiefs warn UN Security Council on control risks</a><span class="byline">CNN Business · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.yahoo.com/news/politics/articles/google-openai-anthropic-move-closer-154300474.html" target="_blank" rel="noopener" title="Google, OpenAI, Anthropic Planning Independent Frontier AI Standards Body by Late 2026">Google, OpenAI and Anthropic plan self-run AI standards body</a><span class="byline">Yahoo News · <a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></span></li>
-        <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/" target="_blank" rel="noopener" title="OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI">OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI</a><span class="byline">PYMNTS.com · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit" target="_blank" rel="noopener" title="CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement">CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement</a><span class="byline">Center for Strategic and International Studies · <a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></span></li>
-        <li><a href="https://www.manilatimes.net/2026/09/23/tmt-newswire/pr-newswire/three-in-four-organizations-experienced-microsoft-365-governance-incidents-in-the-past-year-as-ai-adoption-outpaces-the-skills-to-govern-it/2431420" target="_blank" rel="noopener" title="ShareGate reports 77% of organizations hit Microsoft 365 governance incidents; AI adoption outpaces controls">ShareGate reports 77% of organizations hit Microsoft 365 governance incidents; AI adoption outpaces controls</a><span class="byline">The Manila Times / PRNewswire · <a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></span></li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-09-19/trump-to-name-ai-czar-while-rejecting-safety-risks-as-a-hoax" target="_blank" rel="noopener" title="Trump announces 'AI Force' and rejects safety concerns as hoax">Trump announces 'AI Force' and rejects safety concerns as hoax</a><span class="byline">Bloomberg · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://news.un.org/en/story/2026/09/1168353" target="_blank" rel="noopener" title="UN Independent AI Panel urges governments to rein in AI agents in first thematic brief">UN Independent AI Panel urges governments to rein in AI agents in first thematic brief</a><span class="byline">UN News · <a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></span></li>
-        <li><a href="https://www.cnbc.com/2026/09/18/anthropic-accenture-ai-safety.html" target="_blank" rel="noopener" title="Anthropic Appoints Accenture as First Embedded Evaluator; $2B Joint Safety Initiative">Anthropic Appoints Accenture as First Embedded Evaluator; $2B Joint Safety Initiative</a><span class="byline">CNBC · <a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></span></li>
-        <li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/18/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself/" target="_blank" rel="noopener" title="Anthropic's Claude now leads 26% of model R&amp;D; 30,000 agents running concurrently with human oversight">Anthropic's Claude now leads 26% of model R&amp;D; 30,000 agents running concurrently with human oversight</a><span class="byline">BNN Bloomberg / Washington Post · <a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></span></li>
-        <li><a href="https://www.transparencycoalition.ai/news/ai-legislative-update-september18-2026" target="_blank" rel="noopener" title="California SB 1050 signed; 85 new AI laws passed across 27 states in 2026; federal preemption stalled">California SB 1050 signed; 85 new AI laws passed across 27 states in 2026; federal preemption stalled</a><span class="byline">Transparency Coalition · <a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></span></li>
-        <li><a href="https://news.bloomberglaw.com/product-liability-and-toxics-law/california-enacts-synthetic-performer-advertising-disclosure-law" target="_blank" rel="noopener" title="California Governor Newsom Signs SB 1050: AI-Generated Performer Disclosure in Advertising">California Governor Newsom Signs SB 1050: AI-Generated Performer Disclosure in Advertising</a><span class="byline">Bloomberg Law · <a href="/archives/2026-09-19.html">Sep 19, 2026 edition</a></span></li>
-      </ul>
-    </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/aiops/">AI Ops &amp; Observability</a></h2><span class="label">3 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/" target="_blank" rel="noopener" title="AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices">AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</a><span class="meta">IJSRET · <span class="stype">Research</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.netscout.com/blog/how-age-ai-changing-network-observability-landscape" target="_blank" rel="noopener" title="NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks">NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks</a><span class="meta">NETSCOUT · <span class="stype">Industry news</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.servicenow.com/community/ai-control-tower-articles/what-s-new-in-ai-control-tower-for-august-amp-september-2026/ta-p/3597749" target="_blank" rel="noopener" title="ServiceNow AI Control Tower August &amp; September 2026 Release: New Observability and Governance Features">ServiceNow AI Control Tower August &amp; September 2026 Release: New Observability and Governance Features</a><span class="meta">ServiceNow Community · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/agentic-ai/">Agentic AI &amp; MCP</a></h2><span class="label">12 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/" target="_blank" rel="noopener" title="Ping Identity, Cohesity, Dataminr ship agent-specific IAM, resilience, and governance controls">Vendors ship identity and backup controls built for AI agents</a><span class="meta">Help Net Security · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://github.com/agentproto/ts/releases/tag/release/2026-09-25" target="_blank" rel="noopener" title="agentproto runtime adds Grok 4.x multi-agent variants and 1M-context Codestral support">agentproto runtime adds Grok 4.x and million-token Codestral models</a><span class="meta">GitHub · <span class="stype">Primary source</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c" target="_blank" rel="noopener" title="Transluce documents autonomous AI agent hacking campaigns; agents breach 27 companies, steal 600K+ credit cards">Autonomous AI agents breached 27 companies and stole card data</a><span class="meta">CISO Platform · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations" target="_blank" rel="noopener" title="NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24">NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24</a><span class="meta">Business Wire · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html" target="_blank" rel="noopener" title="Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months">Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months</a><span class="meta">Cisco Blogs / PR Newswire · <span class="stype">Industry news</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html" target="_blank" rel="noopener" title="Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI">Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI</a><span class="meta">Aragon Research / PR Newswire · <span class="stype">Industry news</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network" target="_blank" rel="noopener" title="NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents">NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents</a><span class="meta">NetBrain / Business Wire · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data" target="_blank" rel="noopener" title="Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation">Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation</a><span class="meta">Selector / Business Wire · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one" target="_blank" rel="noopener" title="Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation">Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</a><span class="meta">Cisco Blogs · <span class="stype">Industry news</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://lucaberton.com/blog/agntcon-mcpcon-europe-2026-recap-agents-in-production/" target="_blank" rel="noopener" title="AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption">AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption</a><span class="meta">Luca Berton Blog · <a href="/archives/2026-09-21.html">Sep 21, 2026</a></span></li>
+      <li><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026" target="_blank" rel="noopener" title="Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM">Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM</a><span class="meta">AI Agents News Brief · <a href="/archives/2026-09-21.html">Sep 21, 2026</a></span></li>
+      <li><a href="https://ai-agent-engineering.org/news/the-2026-mcp-roadmap-from-tool-integration-to-agent-to-agent-communication" target="_blank" rel="noopener" title="MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams">MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams</a><span class="meta">AI Agent Engineering · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/network-automation/">Network Automation</a></h2><span class="label">6 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html" target="_blank" rel="noopener" title="Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps">Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</a><span class="meta">Cisco Newsroom / Light Reading · <span class="stype">Research</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html" target="_blank" rel="noopener" title="Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation">Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation</a><span class="meta">Cisco · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115" target="_blank" rel="noopener" title="HPE Reports 36% Networking Orders Growth; Juniper Integration On Track">HPE Reports 36% Networking Orders Growth; Juniper Integration On Track</a><span class="meta">AD-HOC NEWS / Futuriom · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/" target="_blank" rel="noopener" title="51% of Large Organizations Run Agentic Systems in Production Networks">51% of Large Organizations Run Agentic Systems in Production Networks</a><span class="meta">Telecom Technology News · <span class="stype">Research</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://blogs.cisco.com/news/netops-is-already-deploying-autonomy-trust-will-decide-how-far-it-goes" target="_blank" rel="noopener" title="NetOps is already deploying agentic autonomy - trust will decide how far it goes">NetOps is already deploying agentic autonomy - trust will decide how far it goes</a><span class="meta">Cisco Blogs · <span class="stype">Research</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://digitalisationworld.com/news/14457-juniper-networks-expands-apstra-software" target="_blank" rel="noopener" title="Juniper Networks Introduces Apstra Freeform for Multivendor Data Center Automation">Juniper Networks Introduces Apstra Freeform for Multivendor Data Center Automation</a><span class="meta">Digitalisation World · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/security/">Security Automation</a></h2><span class="label">7 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/" target="_blank" rel="noopener" title="Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents">Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</a><span class="meta">SiliconANGLE · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting" target="_blank" rel="noopener" title="Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security">Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</a><span class="meta">GuruFocus · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/" target="_blank" rel="noopener" title="Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations">Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations</a><span class="meta">Unite.AI · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense" target="_blank" rel="noopener" title="Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6">Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6</a><span class="meta">Palo Alto Networks · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://247wallst.com/investing/2026/09/18/crowdstrike-and-palo-alto-networks-are-soaring-but-is-the-rally-already-priced-in/" target="_blank" rel="noopener" title="CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain">CrowdStrike and Palo Alto Weekly Surge Reflects AI-Driven Security Spending Thesis, But Durability Uncertain</a><span class="meta">24/7 Wall St. · <a href="/archives/2026-09-21.html">Sep 21, 2026</a></span></li>
+      <li><a href="https://www.helpnetsecurity.com/2026/09/16/citrix-session-insights-capability/" target="_blank" rel="noopener" title="Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows">Citrix Session Insights: AI-powered browser activity analysis for user and agent workflows</a><span class="meta">Help Net Security · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+      <li><a href="https://hipther.com/news/2026/09/18/137943/cybersecurity-roundup-partnerships-funding-and-emerging-threats-september-18-2026-crowdstrike-ai-ass" target="_blank" rel="noopener" title="AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration">AI-driven cyber risk dominates market narrative; CrowdStrike positioned as primary beneficiary of AI-era threat acceleration</a><span class="meta">HIPTHER · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/ai-infrastructure/">AI Infrastructure</a></h2><span class="label">4 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355" target="_blank" rel="noopener" title="BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints">BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</a><span class="meta">Investing.com · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/09/23/3367501/0/en/d-h-distributing-expands-relationship-with-hpe-chosen-as-a-north-american-distributor-of-hpe-networking.html" target="_blank" rel="noopener" title="D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking">D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking</a><span class="meta">Globe Newswire · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html" target="_blank" rel="noopener" title="Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026">Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026</a><span class="meta">Marvell Technology · <span class="stype">Research</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/09/22/3366824/0/en/ai-network-fabric-market-accelerates-as-gigascale-ai-clusters-drive-demand-for-high-speed-low-latency-connectivity.html" target="_blank" rel="noopener" title="AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity">AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity</a><span class="meta">Globe Newswire · <span class="stype">Industry news</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/research/">Research, Standards &amp; Industry</a></h2><span class="label">12 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://www.dataiku.com/company/news/dataiku-agent-management-general-availability" target="_blank" rel="noopener" title="Dataiku Launches Agent Management for Cross-Platform AI Agent Inventory and Governance">Dataiku tool inventories AI agents across rival platforms</a><span class="meta">Dataiku · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity" target="_blank" rel="noopener" title="Lumen Intelligent Internet: On-Demand Bandwidth Scaling for AI Workloads">Lumen sells on-demand bandwidth that scales with AI workloads</a><span class="meta">Benton Institute for Broadband &amp; Society · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://github.com/zachysun/DailyArXiv/issues/567" target="_blank" rel="noopener" title="Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Memory-Efficient LLM Inference">Flash-dLLM cuts memory and bandwidth costs in LLM inference</a><span class="meta">arXiv · <span class="stype">Research</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference">Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference</a><span class="meta">Anthropic Blog / GitHub Changelog · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/" target="_blank" rel="noopener" title="OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body">OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body</a><span class="meta">Bloomberg / Crypto Briefing · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/" target="_blank" rel="noopener" title="Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data">Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data</a><span class="meta">Snorkel AI Blog · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-09-22/ex-anthropic-staffers-ai-startup-in-talks-to-raise-at-5-billion-value" target="_blank" rel="noopener" title="Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems">Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems</a><span class="meta">Bloomberg · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://github.com/ed-is-ai/featherbench/issues/75" target="_blank" rel="noopener" title="OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use">OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use</a><span class="meta">OpenAI / Featherbench · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://github.com/ed-is-ai/featherbench/issues/74" target="_blank" rel="noopener" title="Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks">Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</a><span class="meta">Anthropic / Featherbench · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://stripe.dev/blog" target="_blank" rel="noopener" title="Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs">Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs</a><span class="meta">Stripe Engineering Blog · <a href="/archives/2026-09-20.html">Sep 20, 2026</a></span></li>
+      <li><a href="https://github.com/open-telemetry/opentelemetry-collector-releases/releases" target="_blank" rel="noopener" title="OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry">OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry</a><span class="meta">GitHub (opentelemetry-collector-releases) · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+      <li><a href="https://trewknowledge.com/2026/09/18/ai-this-week-the-infrastructure-around-ai-gets-serious/" target="_blank" rel="noopener" title="OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers">OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers</a><span class="meta">TrewKnowledge · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/ai-models/">AI Model Providers</a></h2><span class="label">12 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5.5 and OpenAI counters with two cheaper GPT-6 models">Anthropic and OpenAI cut model prices on the same day</a><span class="meta">SiliconANGLE · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5" target="_blank" rel="noopener" title="OpenAI Launches GPT-6 Sol and Luna Minutes After Anthropic Drops Claude Opus 5.5">OpenAI launches cheaper GPT-6 Sol and Luna models</a><span class="meta">Decrypt · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model" target="_blank" rel="noopener" title="Google's DeepMind Nears Launch of Gemini 4 AI Model">Google DeepMind says Gemini 4 is in post-training</a><span class="meta">GuruFocus · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" target="_blank" rel="noopener" title="OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements">OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements</a><span class="meta">TechCrunch · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained" target="_blank" rel="noopener" title="Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost">Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost</a><span class="meta">Vellum · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html" target="_blank" rel="noopener" title="Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline">Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline</a><span class="meta">Yahoo Finance · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price" target="_blank" rel="noopener" title="Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents">Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents</a><span class="meta">VentureBeat · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more" target="_blank" rel="noopener" title="OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture">OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture</a><span class="meta">VentureBeat · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://openai.com/index/advisory-group-on-mathematics-and-artificial-intelligence/" target="_blank" rel="noopener" title="OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians">OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians</a><span class="meta">OpenAI Blog / TechCrunch · <span class="stype">Research</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing">xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing</a><span class="meta">xAI / GitHub Changelog · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version" target="_blank" rel="noopener" title="Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement">Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement</a><span class="meta">Spectrum Local News · <a href="/archives/2026-09-21.html">Sep 21, 2026</a></span></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development" target="_blank" rel="noopener" title="Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start">Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start</a><span class="meta">Bloomberg · <a href="/archives/2026-09-20.html">Sep 20, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/telco/">Telco &amp; Cable AI</a></h2><span class="label">9 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing" target="_blank" rel="noopener" title="Orange takes Nokia AI-RAN into live network testing">Orange takes Nokia AI-RAN into live network testing</a><span class="meta">RCR Wireless News · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make" target="_blank" rel="noopener" title="T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience">T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience</a><span class="meta">T-Mobile Newsroom / TelecomLead · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises" target="_blank" rel="noopener" title="Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads">Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads</a><span class="meta">Business Wire / Lumen · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/" target="_blank" rel="noopener" title="Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom">Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom</a><span class="meta">Samsung Electronics / Sammy Fans · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report" target="_blank" rel="noopener" title="AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR">AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR</a><span class="meta">The Business Research Company · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://voip.review/2026/09/22/lumen-launches-flexible-enterprise-internet-ai-workloads/" target="_blank" rel="noopener" title="Lumen launches flexible enterprise internet for AI workloads with on-demand bandwidth controls">Lumen launches flexible enterprise internet for AI workloads with on-demand bandwidth controls</a><span class="meta">VoIP Review · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://www.mobileeurope.co.uk/future-of-telecoms-ai/" target="_blank" rel="noopener" title="The future of telecoms, according to AI">The future of telecoms, according to AI</a><span class="meta">Mobile Europe · <span class="stype">Analysis</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://www.telecomstechnews.com/news/nokia-and-microsoft-automate-telecom-networks-ai-agents/" target="_blank" rel="noopener" title="Nokia and Microsoft expand partnership to accelerate agentic AI deployment in telecom networks">Nokia and Microsoft expand partnership to accelerate agentic AI deployment in telecom networks</a><span class="meta">Telecom's Technews · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/09/18/3364521/28124/en/ai-native-telecom-market-poised-for-rapid-growth-through-2032-as-intelligent-networks-automated-infrastructure-and-next-generation-solutions-transform-connectivity.html" target="_blank" rel="noopener" title="AI-Native Telecom Market valued at $8.07 billion in 2026, forecast for robust double-digit growth through 2032">AI-Native Telecom Market valued at $8.07 billion in 2026, forecast for robust double-digit growth through 2032</a><span class="meta">Research and Markets · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2><a href="/topics/industry-policy/">AI Industry &amp; Policy</a></h2><span class="label">13 stories</span></div>
+    <ul class="week-list">
+      <li><a href="https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo" target="_blank" rel="noopener" title="Anthropic Seeks Palantir-Style Voting Control for Seven Co-Founders Ahead of IPO">Anthropic co-founders seek majority voting control before IPO</a><span class="meta">The Information / Reuters · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://siliconangle.com/2026/09/23/ema-raises-77m-in-funding-to-deploy-ai-employees-across-enterprise-hr-it-and-finance-departments/" target="_blank" rel="noopener" title="Ema Raises $77M Series B as Enterprise AI Agents Move Into Production">Ema raises $77 million as enterprises run agent workflows</a><span class="meta">SiliconANGLE · <span class="stype">Vendor release</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://moderndiplomacy.eu/2026/09/23/ai-governance-must-not-become-a-geopolitical-battlefield/" target="_blank" rel="noopener" title="AI Governance Must Not Become a Geopolitical Battlefield">Opinion warns AI safety rhetoric is masking geopolitical containment</a><span class="meta">Modern Diplomacy · <span class="stype">Analysis</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://finance.yahoo.com/technology/ai/articles/enterprise-ai-agent-funding-surges-093104627.html" target="_blank" rel="noopener" title="Enterprise AI Agent Funding Surges to $435M in Five Months—Governance and Security Lead">Most enterprise agent projects never reach production despite funding surge</a><span class="meta">Yahoo Finance · <span class="stype">Industry news</span> · <a href="/archives/2026-09-25.html">Sep 25, 2026</a></span></li>
+      <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/" target="_blank" rel="noopener" title="OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI">OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI</a><span class="meta">PYMNTS.com · <span class="stype">Primary source</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit" target="_blank" rel="noopener" title="CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement">CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement</a><span class="meta">Center for Strategic and International Studies · <span class="stype">Industry news</span> · <a href="/archives/2026-09-24.html">Sep 24, 2026</a></span></li>
+      <li><a href="https://www.manilatimes.net/2026/09/23/tmt-newswire/pr-newswire/three-in-four-organizations-experienced-microsoft-365-governance-incidents-in-the-past-year-as-ai-adoption-outpaces-the-skills-to-govern-it/2431420" target="_blank" rel="noopener" title="ShareGate reports 77% of organizations hit Microsoft 365 governance incidents; AI adoption outpaces controls">ShareGate reports 77% of organizations hit Microsoft 365 governance incidents; AI adoption outpaces controls</a><span class="meta">The Manila Times / PRNewswire · <span class="stype">Industry news</span> · <a href="/archives/2026-09-23.html">Sep 23, 2026</a></span></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-09-19/trump-to-name-ai-czar-while-rejecting-safety-risks-as-a-hoax" target="_blank" rel="noopener" title="Trump announces 'AI Force' and rejects safety concerns as hoax">Trump announces 'AI Force' and rejects safety concerns as hoax</a><span class="meta">Bloomberg · <span class="stype">Industry news</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://news.un.org/en/story/2026/09/1168353" target="_blank" rel="noopener" title="UN Independent AI Panel urges governments to rein in AI agents in first thematic brief">UN Independent AI Panel urges governments to rein in AI agents in first thematic brief</a><span class="meta">UN News · <span class="stype">Primary source</span> · <a href="/archives/2026-09-22.html">Sep 22, 2026</a></span></li>
+      <li><a href="https://www.cnbc.com/2026/09/18/anthropic-accenture-ai-safety.html" target="_blank" rel="noopener" title="Anthropic Appoints Accenture as First Embedded Evaluator; $2B Joint Safety Initiative">Anthropic Appoints Accenture as First Embedded Evaluator; $2B Joint Safety Initiative</a><span class="meta">CNBC · <a href="/archives/2026-09-21.html">Sep 21, 2026</a></span></li>
+      <li><a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/18/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself/" target="_blank" rel="noopener" title="Anthropic's Claude now leads 26% of model R&amp;D; 30,000 agents running concurrently with human oversight">Anthropic's Claude now leads 26% of model R&amp;D; 30,000 agents running concurrently with human oversight</a><span class="meta">BNN Bloomberg / Washington Post · <a href="/archives/2026-09-20.html">Sep 20, 2026</a></span></li>
+      <li><a href="https://www.transparencycoalition.ai/news/ai-legislative-update-september18-2026" target="_blank" rel="noopener" title="California SB 1050 signed; 85 new AI laws passed across 27 states in 2026; federal preemption stalled">California SB 1050 signed; 85 new AI laws passed across 27 states in 2026; federal preemption stalled</a><span class="meta">Transparency Coalition · <a href="/archives/2026-09-20.html">Sep 20, 2026</a></span></li>
+      <li><a href="https://news.bloomberglaw.com/product-liability-and-toxics-law/california-enacts-synthetic-performer-advertising-disclosure-law" target="_blank" rel="noopener" title="California Governor Newsom Signs SB 1050: AI-Generated Performer Disclosure in Advertising">California Governor Newsom Signs SB 1050: AI-Generated Performer Disclosure in Advertising</a><span class="meta">Bloomberg Law · <a href="/archives/2026-09-19.html">Sep 19, 2026</a></span></li>
+    </ul>
+  </section>
+  
+  <section class="cta home-extra" aria-labelledby="cta-head">
+    <div>
+      <h2 id="cta-head">Get the daily briefing</h2>
+      <p>Every edition, as soon as it's published. Add the feed to any RSS reader, or to an RSS-to-email service to get it in your inbox.</p>
+    </div>
+    <a class="cta-button label" href="/feed.xml">Follow the RSS feed</a>
+  </section>
 </main>
 
 <footer class="wrap" id="about">
 <div class="colophon">
   <div>
-    <h2>About this paper</h2>
-    <p>Digital Plumber is an independent daily briefing for network and IT operations practitioners. Stories are AI-curated and AI-summarized, so verify before acting on anything here.</p>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
   </div>
   <nav class="label" aria-label="More">
-    <a href="/">Today's paper</a>
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
     <a href="/feed.xml">RSS feed</a>
   </nav>
 </div>

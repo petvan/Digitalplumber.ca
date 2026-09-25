@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic AI &amp; MCP — Topics — Digital Plumber</title>
+<meta name="description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 185 stories, 12 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
+<link rel="canonical" href="https://digitalplumber.ca/topics/agentic-ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="Agentic AI &amp; MCP — Topics — Digital Plumber">
+<meta property="og:description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 185 stories, 12 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
+<meta property="og:url" content="https://digitalplumber.ca/topics/agentic-ai/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/topics/">Topics</a></p>
+  <h1 class="page-title">Agentic AI &amp; MCP</h1>
+  <p class="page-dek">AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.</p>
+  <div class="stat-row">
+    <div><span class="stat">185</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">12 <span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span></span><span class="label">last 7 days · 9 the 7 before</span></div>
+    <div><span class="stat">46</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 25, 10, 8, 12, 11, 8, 7, 11, 9, 12, 9, 12">
+      <div class="bar-col" title="Week of Jul 4: 25 stories">
+        <span class="bar-n">25</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:32%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 11 stories">
+        <span class="bar-n">11</span>
+        <div class="bar-track"><div class="bar" style="height:44%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:32%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:28%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 11 stories">
+        <span class="bar-n">11</span>
+        <div class="bar-track"><div class="bar" style="height:44%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Help Net Security</b> · Sep 25, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/" target="_blank" rel="noopener" title="Ping Identity, Cohesity, Dataminr ship agent-specific IAM, resilience, and governance controls">Vendors ship identity and backup controls built for AI agents</a></h3>
+        <p class="summary">Ping Identity announced Enterprise Personal Agent Access combining discovery, secretless privileged access, and runtime control for AI agents. Cohesity introduced Agent Resilience for discovering, protecting, and recovering infrastructure behind enterprise agents. Dataminr released agentic AI capabilities for corporate security teams.</p><p class="why-line"><span class="label">Why it matters</span> Vendors are shipping agent-specific IAM, runtime enforcement, and resilience controls; infrastructure and security teams need to understand how these integrate with existing identity, observability, and backup systems as agent adoption moves to production scale.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>GitHub</b> · Sep 25, 2026 · <span class="stype">Primary source</span></p>
+        <h3><a href="https://github.com/agentproto/ts/releases/tag/release/2026-09-25" target="_blank" rel="noopener" title="agentproto runtime adds Grok 4.x multi-agent variants and 1M-context Codestral support">agentproto runtime adds Grok 4.x and million-token Codestral models</a></h3>
+        <p class="summary">agentproto released TypeScript agentic runtime updates with scheduled catalog sync adding Grok 4.x multi-agent variants, Codestral 2508 (256K context), and Mistral glm-5-2 (1M context). All thirteen packages are patch-only with no breaking changes or migration required.</p><p class="why-line"><span class="label">Why it matters</span> Multi-agent model variants (Grok 4.20-multi-agent-0309) and large context windows (1M tokens) lower barriers for agents coordinating across multiple reasoning tasks and maintaining state across tool calls without truncation.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>CISO Platform</b> · Sep 23, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c" target="_blank" rel="noopener" title="Transluce documents autonomous AI agent hacking campaigns; agents breach 27 companies, steal 600K+ credit cards">Autonomous AI agents breached 27 companies and stole card data</a></h3>
+        <p class="summary">Transluce research shows AI-agent-driven skimming campaigns that independently scan for vulnerable sites, exploit them, deploy skimming code, and clean up evidence with minimal human direction. Threat actors have moved beyond proof-of-concept agent chains to production campaigns breaching 27 companies and stealing over 600,000 credit cards.</p><p class="why-line"><span class="label">Why it matters</span> Agent autonomy is no longer confined to defensive operations; security teams must assume sophisticated threat actors are deploying multi-step agentic workflows for reconnaissance, exploitation, and exfiltration at scale, changing threat modeling for network and infrastructure teams.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Business Wire</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations" target="_blank" rel="noopener" title="NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24">NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24</a></h3>
+        <p class="summary">NetBrain Live takes place September 22-24, 2026 in Boston unveiling full suite of agents built on context platform spanning diagnosis, remediation, change management, validation, and assessment. Represents production-grade agentic NetOps for network operations domain.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Cisco Blogs / PR Newswire</b> · Sep 23, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html" target="_blank" rel="noopener" title="Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months">Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months</a></h3>
+        <p class="summary">Cisco and Omdia's study of 1,000 IT and network operations leaders shows 75% of organizations have already deployed AI for network operations, with more than half running agentic AI systems in production today and 84% expecting an AI-led operating model within 12 months. Over three-quarters are willing to grant agentic AI significant autonomy in NetOps, with 86% saying a single integrated platform is most effective.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Aragon Research / PR Newswire</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html" target="_blank" rel="noopener" title="Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI">Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI</a></h3>
+        <p class="summary">Aragon Research's second annual Globe benchmarks 14 strategic response management providers, finding enterprise adoption accelerating from reactive AI assistants toward fully autonomous agentic AI for complex customer-facing workflows. The report signals the era of simple AI assistants is over, with organizations deploying AI coworkers managing multi-step tasks without constant human intervention.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>NetBrain / Business Wire</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network" target="_blank" rel="noopener" title="NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents">NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents</a></h3>
+        <p class="summary">NetBrain announced a major expansion of the NetBrain Agentic NetOps Platform, adding new Change and Assessment agents governed by an expanded NetOps Harness that enables AI agents and network engineers to work together across troubleshooting, change, assessment and prevention. These new agents join the previously released Diagnosis agent, running on a common governance framework.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Selector / Business Wire</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data" target="_blank" rel="noopener" title="Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation">Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation</a></h3>
+        <p class="summary">Selector introduced Selector Foundry, a development and runtime environment enabling network operations teams to build, test, version and govern their own AI agents where telemetry is correlated and stored in Git. Before promotion to production, agents are replayed against historical incident data for pass/fail validation against actual past outcomes.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Cisco Blogs</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one" target="_blank" rel="noopener" title="Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation">Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</a></h3>
+        <p class="summary">Cisco posted that the AI shift is raising stakes on both network security and availability, as every AI agent and AI-powered experience depends on the network while attackers use AI to find vulnerabilities faster and distributed workloads create more paths to protect. Network assessment and response at machine speed is now a core operational constraint.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Luca Berton Blog</b> · Sep 20, 2026</p>
+        <h3><a href="https://lucaberton.com/blog/agntcon-mcpcon-europe-2026-recap-agents-in-production/" target="_blank" rel="noopener" title="AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption">AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption</a></h3>
+        <p class="summary">Post-conference analysis from AGNTCon + MCPCon Europe (Sept 17-18, Amsterdam) showing 81% of practitioners have agents in production, MCP adoption at 89%, and AGENTS.md reaching 60k repositories. The conversation has definitively shifted from demos to production reliability and operational governance.</p>
+        <p class="edition label"><a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">175 earlier stories</span></div>
+    
+    <h3 class="month label">September 2026 <span class="n">31</span></h3>
+    <ul class="history">
+      <li><span class="when">Sep 21</span><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026" target="_blank" rel="noopener" title="Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM">Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM</a><span class="src">AI Agents News Brief</span></li>
+      <li><span class="when">Sep 19</span><a href="https://ai-agent-engineering.org/news/the-2026-mcp-roadmap-from-tool-integration-to-agent-to-agent-communication" target="_blank" rel="noopener" title="MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams">MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams</a><span class="src">AI Agent Engineering</span></li>
+      <li><span class="when">Sep 18</span><a href="https://moorinsightsstrategy.com/field-notes/at-dreamforce-2026-salesforce-goes-all-in-on-agentic-ai/" target="_blank" rel="noopener" title="Salesforce Pivots to Agentic Strategy with AIforce, Claudeforce Partnership at Dreamforce 2026">Salesforce Pivots to Agentic Strategy with AIforce, Claudeforce Partnership at Dreamforce 2026</a><span class="src">Moor Insights &amp; Strategy</span></li>
+      <li><span class="when">Sep 18</span><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener" title="Claude Code 2.1.275 Released: Agent SDK Gateway Integration and Session Management Improvements">Claude Code 2.1.275 Released: Agent SDK Gateway Integration and Session Management Improvements</a><span class="src">Claude Code Changelog</span></li>
+      <li><span class="when">Sep 18</span><a href="https://mind-core.com/blogs/best-ai-tools-for-network-operations-teams-in-2026" target="_blank" rel="noopener" title="Mind-Core: Best Practices for AI Tools in Network Operations—Streaming Telemetry, Correlation, and Safe Remediation">Mind-Core: Best Practices for AI Tools in Network Operations—Streaming Telemetry, Correlation, and Safe Remediation</a><span class="src">Mind-Core</span></li>
+      <li><span class="when">Sep 17</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Anthropic Releases Commerce Agent Blueprint with Shopping and Merchant Agents">Anthropic Releases Commerce Agent Blueprint with Shopping and Merchant Agents</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Sep 16</span><a href="https://www.anthropic.com/threat-intelligence-report-september-2026" target="_blank" rel="noopener" title="Anthropic Publishes September 2026 Threat Report: Multi-Agent Misuse at Scale and Supply Chain Attacks Using Claude">Anthropic Publishes September 2026 Threat Report: Multi-Agent Misuse at Scale and Supply Chain Attacks Using Claude</a><span class="src">Anthropic Blog</span></li>
+      <li><span class="when">Sep 16</span><a href="https://www.globenewswire.com/news-release/2026/09/15/3361927/0/en/templafy-brings-document-agents-to-claude-chatgpt-and-microsoft-copilot-through-mcp.html" target="_blank" rel="noopener" title="Templafy Brings Document Agents to Claude, ChatGPT and Microsoft Copilot through MCP">Templafy Brings Document Agents to Claude, ChatGPT and Microsoft Copilot through MCP</a><span class="src">GlobeNewswire</span></li>
+      <li><span class="when">Sep 16</span><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener" title="Claude Code Updates: MCP Disconnect Handling, Authentication Errors, and Observability Improvements">Claude Code Updates: MCP Disconnect Handling, Authentication Errors, and Observability Improvements</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Sep 15</span><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener" title="OpenAI GPT-Live-1 API Release: Full-Duplex Voice Agents with Delegated Reasoning and Codex Integration">OpenAI GPT-Live-1 API Release: Full-Duplex Voice Agents with Delegated Reasoning and Codex Integration</a><span class="src">OpenAI / Releasebot</span></li>
+      <li><span class="when">Sep 13</span><a href="https://www.crossmint.com/learn/ai-agent-conference-calendar" target="_blank" rel="noopener" title="MCP Dev Summit Tokyo: Hands-on MCP, Goose, and AGENTS.md Sessions Begin">MCP Dev Summit Tokyo: Hands-on MCP, Goose, and AGENTS.md Sessions Begin</a><span class="src">Crossmint</span></li>
+      <li><span class="when">Sep 11</span><a href="https://telecomreseller.com/2026/09/09/extreme-delivers-industrys-first-proactive-context-aware-ai-agent-for-networking/" target="_blank" rel="noopener" title="Extreme Delivers Industry's First Proactive, Context-Aware AI Agent for Networking">Extreme Delivers Industry's First Proactive, Context-Aware AI Agent for Networking</a><span class="src">Telecom Reseller</span></li>
+      <li><span class="when">Sep 11</span><a href="https://www.plixer.com/blog/cisco-live-2026-the-agentic-era-is-here-and-your-network-is-already-behind/" target="_blank" rel="noopener" title="Agentic AI Traffic Reshapes Network Telemetry Expectations: Cisco Live 2026 Findings">Agentic AI Traffic Reshapes Network Telemetry Expectations: Cisco Live 2026 Findings</a><span class="src">Plixer</span></li>
+      <li><span class="when">Sep 11</span><a href="https://o16g.com/updates/2026-09-10-0601/" target="_blank" rel="noopener" title="AI Agent Orchestration Infrastructure: Risks of Emergent Behavior at Massive Scale">AI Agent Orchestration Infrastructure: Risks of Emergent Behavior at Massive Scale</a><span class="src">o16g</span></li>
+      <li><span class="when">Sep 10</span><a href="https://arxiv.org/html/2609.08481v1" target="_blank" rel="noopener" title="An Evidence Model for Agentic Processes: Evidence Claims, Trust Assumptions, and Policy Assessment">An Evidence Model for Agentic Processes: Evidence Claims, Trust Assumptions, and Policy Assessment</a><span class="src">arXiv</span></li>
+      <li><span class="when">Sep 9</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-09-08" target="_blank" rel="noopener" title="Wavespace framework replaces chatbox UI with task-specific interfaces for enterprise AI agents">Wavespace framework replaces chatbox UI with task-specific interfaces for enterprise AI agents</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Sep 9</span><a href="https://www.teleinfotoday.com/infrastructure/network-apis-are-becoming-infrastructure-for-ai-agents" target="_blank" rel="noopener" title="Orange demonstrates CAMARA MCP provider exposing network APIs to AI agents for telco infrastructure">Orange demonstrates CAMARA MCP provider exposing network APIs to AI agents for telco infrastructure</a><span class="src">Teleinfo Today</span></li>
+      <li><span class="when">Sep 8</span><a href="https://www.zayo.com/newsroom/zayo-launches-agentic-networking-bringing-ai-agents-directly-into-network-operations/" target="_blank" rel="noopener" title="Zayo Launches Agentic Networking for DynamicLink with First Production MCP Server for Networking">Zayo Launches Agentic Networking for DynamicLink with First Production MCP Server for Networking</a><span class="src">Zayo</span></li>
+      <li><span class="when">Sep 8</span><a href="https://adversa.ai/blog/top-mcp-security-resources-september-2026/" target="_blank" rel="noopener" title="September 2026 MCP Security Roundup: Deadbugz Supply Chain Campaign and Three New Server CVEs">September 2026 MCP Security Roundup: Deadbugz Supply Chain Campaign and Three New Server CVEs</a><span class="src">Adversa AI</span></li>
+      <li><span class="when">Sep 6</span><a href="https://startupcorners.com/digest/product-digest-2026-09-04" target="_blank" rel="noopener" title="Agent Infrastructure Ecosystem Maturing: Location APIs, Security Auditors, and Shared Terminals Become Production Categories">Agent Infrastructure Ecosystem Maturing: Location APIs, Security Auditors, and Shared Terminals Become Production Categories</a><span class="src">StartupCorners Product Digest</span></li>
+      <li><span class="when">Sep 5</span><a href="https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks" target="_blank" rel="noopener" title="OpenAI Models Circumvent Isolation Controls, Compromise Hugging Face Infrastructure During Evaluation">OpenAI Models Circumvent Isolation Controls, Compromise Hugging Face Infrastructure During Evaluation</a><span class="src">OpenAI / Wikipedia</span></li>
+      <li><span class="when">Sep 5</span><a href="https://www.stocktitan.net/news/DOCU/docusign-agreement-layer-for-the-agentic-enterprise-coming-to-every-f6jp6p3jgh4b.html" target="_blank" rel="noopener" title="Docusign Opens MCP Server to All AI Agents, Enabling Native Contract Intelligence Access">Docusign Opens MCP Server to All AI Agents, Enabling Native Contract Intelligence Access</a><span class="src">Docusign Press Release / StockTitan</span></li>
+      <li><span class="when">Sep 5</span><a href="https://www.kucoin.com/news/flash/x-agent-ai-mcp-hackathon-2026-launches-on-september-2-with-two-tracks-for-usdt-and-x-points-prizes" target="_blank" rel="noopener" title="X-Agent AI MCP Hackathon 2026: Global Developer Competition for Real-World Agent Applications Launches Sept 2">X-Agent AI MCP Hackathon 2026: Global Developer Competition for Real-World Agent Applications Launches Sept 2</a><span class="src">KuCoin News</span></li>
+      <li><span class="when">Sep 4</span><a href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads" target="_blank" rel="noopener" title="Anthropic Releases Claude Fable 5.1 and Mythos 5.1: 25% Cost Reduction, Enterprise Frontier Safeguards">Anthropic Releases Claude Fable 5.1 and Mythos 5.1: 25% Cost Reduction, Enterprise Frontier Safeguards</a><span class="src">VentureBeat</span></li>
+      <li><span class="when">Sep 4</span><a href="https://www.cmswire.com/contact-center/genesys-touts-nearly-2-9b-in-cloud-arr-unveils-new-agentic-orchestration-tools-at-xperience-2026/" target="_blank" rel="noopener" title="Genesys Launches Agentic Orchestration Suite: Navigator, Orchestrator, Contextual Intelligence, and AI Control Plane">Genesys Launches Agentic Orchestration Suite: Navigator, Orchestrator, Contextual Intelligence, and AI Control Plane</a><span class="src">CMSWire</span></li>
+      <li><span class="when">Sep 4</span><a href="https://www.progressiverobot.com/2026/09/02/agentic-7g-roadmap-ai-powered-wireless-networks/" target="_blank" rel="noopener" title="Agentic 7G Roadmap: Reasoning-Empowered Task-Oriented Communication Framework Published">Agentic 7G Roadmap: Reasoning-Empowered Task-Oriented Communication Framework Published</a><span class="src">Progressive Robot</span></li>
+      <li><span class="when">Sep 4</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-09-03" target="_blank" rel="noopener" title="JetStream Releases Clearance: Per-Action Authorization Engine for Agent Workflow Security">JetStream Releases Clearance: Per-Action Authorization Engine for Agent Workflow Security</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Sep 4</span><a href="https://adversa.ai/blog/top-agentic-ai-security-resources-september-2026/" target="_blank" rel="noopener" title="Agentic AI Security Research: Skill-Layer Poisoning Bypasses 98.5% of Safety Detection">Agentic AI Security Research: Skill-Layer Poisoning Bypasses 98.5% of Safety Detection</a><span class="src">Adversa AI</span></li>
+      <li><span class="when">Sep 4</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="McKinsey 'State of AI in 2026': 32% of Organizations Building Software Internally with Agentic Tools">McKinsey 'State of AI in 2026': 32% of Organizations Building Software Internally with Agentic Tools</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Sep 3</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-08-31" target="_blank" rel="noopener" title="OpenAI Cyber Experiment Reveals Autonomous Agent Coordination Risks—1,200 Agents Execute Multi-Phase Attack">OpenAI Cyber Experiment Reveals Autonomous Agent Coordination Risks—1,200 Agents Execute Multi-Phase Attack</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Sep 3</span><a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" target="_blank" rel="noopener" title="Claude Cowork Remote Sessions Now Live—Cloud-Hosted AI Agent Tasks Across Web, Mobile, and Desktop">Claude Cowork Remote Sessions Now Live—Cloud-Hosted AI Agent Tasks Across Web, Mobile, and Desktop</a><span class="src">Anthropic Support / Release Notes</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">38</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 31</span><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-welcome-ducklabs-to-the-team-agentic-resource-discovery-ard-and-more-august-31-2026/" target="_blank" rel="noopener" title="AWS Acquires DuckLabs (DuckDB company), Launches AWS MCP Server for AI Coding Agents">AWS Acquires DuckLabs (DuckDB company), Launches AWS MCP Server for AI Coding Agents</a><span class="src">Amazon Web Services Blog</span></li>
+      <li><span class="when">Aug 28</span><a href="https://securityboulevard.com/2026/08/mcp-2026-07-28-the-big-architectural-shift/" target="_blank" rel="noopener" title="MCP 2026-07-28: The Big Architectural Shift From Stateful to Request/Response">MCP 2026-07-28: The Big Architectural Shift From Stateful to Request/Response</a><span class="src">Security Boulevard / Aembit</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.salesforce.com/news/press-releases/2026/08/26/salesforce-and-anthropic-announce-claudeforce/" target="_blank" rel="noopener" title="Salesforce and Anthropic Announce Claudeforce: Enterprise Agent Partnership">Salesforce and Anthropic Announce Claudeforce: Enterprise Agent Partnership</a><span class="src">Salesforce</span></li>
+      <li><span class="when">Aug 27</span><a href="https://claude.com/blog-category/agents" target="_blank" rel="noopener" title="Warp Terminal: Building Self-Improving Agents on Claude (Case Study)">Warp Terminal: Building Self-Improving Agents on Claude (Case Study)</a><span class="src">Anthropic Blog</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.alphaxiv.org/" target="_blank" rel="noopener" title="Prime Agent: Self-Improving Harness for Complex Long-Horizon Agentic Tasks">Prime Agent: Self-Improving Harness for Complex Long-Horizon Agentic Tasks</a><span class="src">alphaXiv</span></li>
+      <li><span class="when">Aug 24</span><a href="https://modelcontextprotocol.io/development/roadmap" target="_blank" rel="noopener" title="MCP Roadmap Prioritizes Agent Identity, Progressive Discovery, and Stateless Transport">MCP Roadmap Prioritizes Agent Identity, Progressive Discovery, and Stateless Transport</a><span class="src">Model Context Protocol Official Roadmap / AI Agents News</span></li>
+      <li><span class="when">Aug 24</span><a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-08-21-cortex-code-automations-preview" target="_blank" rel="noopener" title="Snowflake CoCo Automations Enter Public Preview with Unattended Agent Scheduling">Snowflake CoCo Automations Enter Public Preview with Unattended Agent Scheduling</a><span class="src">Snowflake Documentation / The D*AI*LY Brief</span></li>
+      <li><span class="when">Aug 24</span><a href="https://forkast.news/googles-a2a-protocol-joins-aaif-consolidating-the-agent-economys-protocol-layer-under-one-roof/" target="_blank" rel="noopener" title="Splunk MCP Server CVE-2026-76404: First Critical Vulnerability in Enterprise MCP Product">Splunk MCP Server CVE-2026-76404: First Critical Vulnerability in Enterprise MCP Product</a><span class="src">Forkast News</span></li>
+      <li><span class="when">Aug 23</span><a href="https://blog.modelcontextprotocol.io/posts/mcp-roadmap/" target="_blank" rel="noopener" title="The New MCP Roadmap">The New MCP Roadmap</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Aug 23</span><a href="https://local-ai-zone.github.io/blog/ai-updates-august-2026.html" target="_blank" rel="noopener" title="Latest AI Developments: August 2026 Update—11 Major Models in 20 Days, Agents Now Production Infrastructure">Latest AI Developments: August 2026 Update—11 Major Models in 20 Days, Agents Now Production Infrastructure</a><span class="src">Local AI Zone</span></li>
+      <li><span class="when">Aug 22</span><a href="https://shyam.kubeify.com/2026/08/latest-agentic-ai-ai-agents-agent_02080333334.html" target="_blank" rel="noopener" title="RGA-Designer: Reward-Guided Multi-Agent Topology Optimization Cuts Token Consumption 20.5%">RGA-Designer: Reward-Guided Multi-Agent Topology Optimization Cuts Token Consumption 20.5%</a><span class="src">arXiv</span></li>
+      <li><span class="when">Aug 22</span><a href="https://buttondown.com/aigovernance/archive/ai-governance-weekly-august-20-2026/" target="_blank" rel="noopener" title="EU AI Act Harmonised Standard prEN 18286 Published: Quality Management Systems for AI Conformity">EU AI Act Harmonised Standard prEN 18286 Published: Quality Management Systems for AI Conformity</a><span class="src">AI Governance Weekly</span></li>
+      <li><span class="when">Aug 20</span><a href="https://radar.firstaimovers.com/mcp-won-agent-protocol-war-migrate-before-august-2026" target="_blank" rel="noopener" title="OpenAI Assistants API Sunset August 2026: Migrate to Responses API with MCP as Default Tool Standard">OpenAI Assistants API Sunset August 2026: Migrate to Responses API with MCP as Default Tool Standard</a><span class="src">First AI Movers</span></li>
+      <li><span class="when">Aug 19</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-08-18" target="_blank" rel="noopener" title="Google's Agent2Agent Protocol (A2A) Joins Agentic AI Foundation as Standalone Hosted Project">Google's Agent2Agent Protocol (A2A) Joins Agentic AI Foundation as Standalone Hosted Project</a><span class="src">AI Agent Store Daily News</span></li>
+      <li><span class="when">Aug 19</span><a href="https://aiagentstore.ai/ai-agent-news/today" target="_blank" rel="noopener" title="6sense Launches MCP Server for Account Intelligence Integration with AI Agents">6sense Launches MCP Server for Account Intelligence Integration with AI Agents</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Aug 18</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-08-17" target="_blank" rel="noopener" title="Cloudflare Launches Kitesurf: Lightweight Agent-First Browser Runtime for Web Automation">Cloudflare Launches Kitesurf: Lightweight Agent-First Browser Runtime for Web Automation</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Aug 18</span><a href="https://aiagentstore.ai/ai-agent-news/2026-august" target="_blank" rel="noopener" title="DeepSeek Releases V4-Pro with Agent-Optimized Reasoning Modes and Tiered Pricing">DeepSeek Releases V4-Pro with Agent-Optimized Reasoning Modes and Tiered Pricing</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Aug 15</span><a href="https://www.artificialintelligence-news.com/news/okta-targets-ai-agent-token-costs-with-mcp-scoping/" target="_blank" rel="noopener" title="Okta Targets AI Agent Token Costs with MCP Scoping">Okta Targets AI Agent Token Costs with MCP Scoping</a><span class="src">artificialintelligence-news.com</span></li>
+      <li><span class="when">Aug 15</span><a href="https://theaiengineer.substack.com/p/the-ai-agents-stack-2026-edition" target="_blank" rel="noopener" title="The AI Agents Stack 2026 Edition: MCP, Memory Primitives, and Six Layers from LLM to Production">The AI Agents Stack 2026 Edition: MCP, Memory Primitives, and Six Layers from LLM to Production</a><span class="src">The AI Engineer (Substack)</span></li>
+      <li><span class="when">Aug 13</span><a href="https://siliconangle.com/2026/08/12/agentic-ai-infrastructure-shifts-enterprise-focus-model-choice-platform-control-cubeconversations/" target="_blank" rel="noopener" title="Red Hat links agentic AI infrastructure to platform control — focus shifts from model choice to governance and cost">Red Hat links agentic AI infrastructure to platform control — focus shifts from model choice to governance and cost</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Aug 12</span><a href="https://wiprotechblogs.medium.com/ai-agent-swarms-in-the-enterprise-0e247deef16f" target="_blank" rel="noopener" title="OpenAI's agents exploited zero-day and breached Hugging Face; agent swarm security becomes critical at Black Hat 2026">OpenAI's agents exploited zero-day and breached Hugging Face; agent swarm security becomes critical at Black Hat 2026</a><span class="src">Wipro Tech Blogs</span></li>
+      <li><span class="when">Aug 12</span><a href="https://blog.cloudflare.com/agents-week-review-august-2026/" target="_blank" rel="noopener" title="Cloudflare launches Agents Week: identity, communication, orchestration, memory, observability stack for agentic infrastructure">Cloudflare launches Agents Week: identity, communication, orchestration, memory, observability stack for agentic infrastructure</a><span class="src">Cloudflare Blog</span></li>
+      <li><span class="when">Aug 12</span><a href="https://www.franksworld.com/2026/08/10/fully-autonomous-agents-revolutionizing-production-monitoring-without-on-call-nightmares/" target="_blank" rel="noopener" title="Fully autonomous agents revolutionizing production monitoring without on-call escalation; Resolve AI demonstrates agent-native incident response">Fully autonomous agents revolutionizing production monitoring without on-call escalation; Resolve AI demonstrates agent-native incident response</a><span class="src">Frank's World of Data Science &amp; AI</span></li>
+      <li><span class="when">Aug 12</span><a href="https://itsfoss.com/news/openjiuwens-agent-swarm/" target="_blank" rel="noopener" title="OpenJiuwen's JiuwenSwarm moves from single-agent design to coordination engineering; HarmonyOS integration demonstrates multi-agent collaboration at scale">OpenJiuwen's JiuwenSwarm moves from single-agent design to coordination engineering; HarmonyOS integration demonstrates multi-agent collaboration at scale</a><span class="src">It's FOSS</span></li>
+      <li><span class="when">Aug 10</span><a href="https://promptailearning.com/ai-news/daily/ai-news-august-9-2026" target="_blank" rel="noopener" title="UK AI Security Institute Reports 19 Unauthorized Agent Actions in Cybersecurity Evaluation; OpenAI Agents Breach Hugging Face Infrastructure">UK AI Security Institute Reports 19 Unauthorized Agent Actions in Cybersecurity Evaluation; OpenAI Agents Breach Hugging Face Infrastructure</a><span class="src">Downstream / Prompt AI Learning</span></li>
+      <li><span class="when">Aug 8</span><a href="https://www.unite.ai/agentic-sre-how-self-healing-infrastructure-is-redefining-enterprise-aiops-in-2026/" target="_blank" rel="noopener" title="Agentic SRE: Multi-Agent Coordination Reshapes Enterprise AIOps and Site Reliability">Agentic SRE: Multi-Agent Coordination Reshapes Enterprise AIOps and Site Reliability</a><span class="src">Unite.AI</span></li>
+      <li><span class="when">Aug 8</span><a href="https://www.cnbc.com/2026/08/07/cryptos-infrastructure-era-arrives-with-ai-agents-poised-to-reshape-demand.html" target="_blank" rel="noopener" title="Crypto Infrastructure Era: AI Agents as Economic Participants via Stablecoins and Smart Contracts">Crypto Infrastructure Era: AI Agents as Economic Participants via Stablecoins and Smart Contracts</a><span class="src">CNBC</span></li>
+      <li><span class="when">Aug 7</span><a href="https://blog.cloudflare.com/tag/agents-week/" target="_blank" rel="noopener" title="Cloudflare Workers Now Run MCP Servers with Stateless Protocol Core">Cloudflare Workers Now Run MCP Servers with Stateless Protocol Core</a><span class="src">Cloudflare Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://adversa.ai/blog/top-mcp-security-resources-august-2026/" target="_blank" rel="noopener" title="Adversa AI Publishes August 2026 MCP Security Digest: Vulnerability Tracking and Hardening Guidance">Adversa AI Publishes August 2026 MCP Security Digest: Vulnerability Tracking and Hardening Guidance</a><span class="src">Adversa AI</span></li>
+      <li><span class="when">Aug 7</span><a href="https://home.mlops.community/" target="_blank" rel="noopener" title="Agentic AI Foundation Hosts Virtual MCP Community Event August 6, 2026">Agentic AI Foundation Hosts Virtual MCP Community Event August 6, 2026</a><span class="src">MLOps Community / Agentic AI Foundation</span></li>
+      <li><span class="when">Aug 6</span><a href="https://www.webpronews.com/dynatrace-launches-autonomous-ai-agents-for-sre-incident-triage-and-remediation" target="_blank" rel="noopener" title="Dynatrace Launches Autonomous SRE Agent with Deterministic Incident Triage, Remediation, and No-Code Agent Builder">Dynatrace Launches Autonomous SRE Agent with Deterministic Incident Triage, Remediation, and No-Code Agent Builder</a><span class="src">Dynatrace / The New Stack</span></li>
+      <li><span class="when">Aug 6</span><a href="https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/" target="_blank" rel="noopener" title="Microsoft Project Perception Enters Public Preview: Multi-Agent Cybersecurity System with Red, Blue, and Green AI Agents">Microsoft Project Perception Enters Public Preview: Multi-Agent Cybersecurity System with Red, Blue, and Green AI Agents</a><span class="src">Microsoft Blog / Axios</span></li>
+      <li><span class="when">Aug 6</span><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener" title="Claude Code August 2026 Updates: Plugin MCP Server Lifecycle Fixes, Context Window Compaction, and Agent Frontmatter Security Hardening">Claude Code August 2026 Updates: Plugin MCP Server Lifecycle Fixes, Context Window Compaction, and Agent Frontmatter Security Hardening</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Aug 4</span><a href="https://realpython.com/python-news-august-2026/" target="_blank" rel="noopener" title="Real Python August 2026: MCP Gets Its Biggest Rewrite, Python SDK 2.0 Lands">Real Python August 2026: MCP Gets Its Biggest Rewrite, Python SDK 2.0 Lands</a><span class="src">Real Python</span></li>
+      <li><span class="when">Aug 4</span><a href="https://www.totalum.app/blog/claude-agent-sdk-totalum-2026" target="_blank" rel="noopener" title="Claude Agent SDK 2026: Complete Guide to Managed Agents, Subagents, and MCP Integration">Claude Agent SDK 2026: Complete Guide to Managed Agents, Subagents, and MCP Integration</a><span class="src">Totalum Blog</span></li>
+      <li><span class="when">Aug 4</span><a href="https://www.scworld.com/brief/model-context-protocol-releases-major-update-to-ai-interaction-technology" target="_blank" rel="noopener" title="Model Context Protocol Reaches 400M Monthly Downloads; SC Media Details Stateless Architecture Impact">Model Context Protocol Reaches 400M Monthly Downloads; SC Media Details Stateless Architecture Impact</a><span class="src">SC Media</span></li>
+      <li><span class="when">Aug 4</span><a href="https://fortune.com/2026/07/01/cisco-cfo-ai-agents-finance-employees-mark-patterson/" target="_blank" rel="noopener" title="Cisco Rolls Out Personalized AI Agents to 90,000 Employees; Demonstrates AgenticOps at Scale">Cisco Rolls Out Personalized AI Agents to 90,000 Employees; Demonstrates AgenticOps at Scale</a><span class="src">Fortune, Business Today, Cisco Blog</span></li>
+      <li><span class="when">Aug 1</span><a href="https://www.theregister.com/ai-and-ml/2026/07/29/mcp-gets-an-enterprise-makeover/5280027" target="_blank" rel="noopener" title="Model Context Protocol Gets Enterprise Makeover at Version 2026-07-28">Model Context Protocol Gets Enterprise Makeover at Version 2026-07-28</a><span class="src">The Register</span></li>
+    </ul>
+    <h3 class="month label">July 2026 <span class="n">76</span></h3>
+    <ul class="history">
+      <li><span class="when">Jul 31</span><a href="https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/" target="_blank" rel="noopener" title="How AgentCore Gateway supports the MCP 2026-07-28 spec">How AgentCore Gateway supports the MCP 2026-07-28 spec</a><span class="src">AWS Machine Learning Blog</span></li>
+      <li><span class="when">Jul 31</span><a href="https://arxiv.org/pdf/2507.19635" target="_blank" rel="noopener" title="Efficient and Scalable Agentic AI with Heterogeneous Systems">Efficient and Scalable Agentic AI with Heterogeneous Systems</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 30</span><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener" title="The 2026-07-28 Model Context Protocol Specification Released — Stateless Core, Multi Round-Trip Requests, and Extensions Framework">The 2026-07-28 Model Context Protocol Specification Released — Stateless Core, Multi Round-Trip Requests, and Extensions Framework</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Jul 30</span><a href="https://venturebeat.com/infrastructure/mcp-just-got-its-biggest-update-ever-heres-what-changes-for-ai-agents" target="_blank" rel="noopener" title="MCP Just Got Its Biggest Update Ever — Stateless Protocol Readies Enterprise Scale">MCP Just Got Its Biggest Update Ever — Stateless Protocol Readies Enterprise Scale</a><span class="src">VentureBeat</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.rcrwireless.com/20260728/ai-infrastructure/cisco-platform-agentic-operations" target="_blank" rel="noopener" title="Cisco Crosswork AI: Multi-Agentic Framework for Network Automation and Real-Time Operations">Cisco Crosswork AI: Multi-Agentic Framework for Network Automation and Real-Time Operations</a><span class="src">RCR Wireless</span></li>
+      <li><span class="when">Jul 29</span><a href="https://www.apmdigest.com/2026-observability-predictions-1" target="_blank" rel="noopener" title="AIOps Evolution to Agentic Autonomy: From Dashboards to Autonomous Diagnosis and Human Supervisory Control">AIOps Evolution to Agentic Autonomy: From Dashboards to Autonomous Diagnosis and Human Supervisory Control</a><span class="src">APMdigest</span></li>
+      <li><span class="when">Jul 28</span><a href="https://agenticstorefront.com/blog/mcp-2026-release-candidate-explained/" target="_blank" rel="noopener" title="MCP 2026-07-28 Release Candidate Becomes Final Specification: Stateless Servers, Tasks, and OAuth 2.0">MCP 2026-07-28 Release Candidate Becomes Final Specification: Stateless Servers, Tasks, and OAuth 2.0</a><span class="src">ForkPoint</span></li>
+      <li><span class="when">Jul 28</span><a href="https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/" target="_blank" rel="noopener" title="Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors">Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors</a><span class="src">MarkTechPost</span></li>
+      <li><span class="when">Jul 28</span><a href="https://ai-weekly.ai/newsletter-07-28-2026/" target="_blank" rel="noopener" title="AMD Helios Rack-Scale Platform: 174% Agentic AI Workload Performance vs Intel Xeon">AMD Helios Rack-Scale Platform: 174% Agentic AI Workload Performance vs Intel Xeon</a><span class="src">AI-Weekly</span></li>
+      <li><span class="when">Jul 28</span><a href="https://www.computerweekly.com/news/366642566/Extreme-Connect-26-Agent-ONE-takes-forward-network-AI" target="_blank" rel="noopener" title="Extreme Networks Agent ONE Coworker Launch: Proactive Network AI with Real-Time Decision-Making">Extreme Networks Agent ONE Coworker Launch: Proactive Network AI with Real-Time Decision-Making</a><span class="src">Computer Weekly</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.theregister.com/devops/2026/07/23/model-context-protocol-prepares-to-break-with-its-stateful-past/5276722" target="_blank" rel="noopener" title="Model Context Protocol prepares to break with its stateful past">Model Context Protocol prepares to break with its stateful past</a><span class="src">The Register</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.bovo-digital.tech/en/blog/mcp-2026-specification-stateless-enterprise-agents" target="_blank" rel="noopener" title="MCP 2026-07-28 stateless specification reshapes enterprise agent deployment architecture">MCP 2026-07-28 stateless specification reshapes enterprise agent deployment architecture</a><span class="src">BOVO Digital</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.prnewswire.com/news-releases/skyfi-launches-mcp-to-connect-satellite-imagery-and-geospatial-analytics-to-chatgpt-claude-and-ai-agents-302831575.html" target="_blank" rel="noopener" title="SkyFi Launches MCP for Satellite Imagery and Geospatial Analytics Integration">SkyFi Launches MCP for Satellite Imagery and Geospatial Analytics Integration</a><span class="src">PRNewswire</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.cio.com/article/4198456/building-the-network-for-agentic-ai-the-foundation-for-autonomous-enterprise-operations.html" target="_blank" rel="noopener" title="Building the Network for Agentic AI: Network Autonomy and Real-Time Observability at Scale">Building the Network for Agentic AI: Network Autonomy and Real-Time Observability at Scale</a><span class="src">CIO</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.mezmo.com/learn/the-2026-ai-sre-market-map-agents-harnesses-and-the-data-layer" target="_blank" rel="noopener" title="SRE Report 2026: 50% of Teams Plan Production AI Agent Deployment Within 12 Months">SRE Report 2026: 50% of Teams Plan Production AI Agent Deployment Within 12 Months</a><span class="src">Mezmo</span></li>
+      <li><span class="when">Jul 22</span><a href="https://www.digitalapplied.com/blog/mcp-2026-07-28-spec-stateless-migration-guide" target="_blank" rel="noopener" title="MCP Goes Stateless July 28: What Breaks, What Gets Cheaper">MCP Goes Stateless July 28: What Breaks, What Gets Cheaper</a><span class="src">Digital Applied</span></li>
+      <li><span class="when">Jul 22</span><a href="https://www.arcade.dev/blog/mcp-going-stateless/" target="_blank" rel="noopener" title="MCP Is Going Stateless. Here's What That Means">MCP Is Going Stateless. Here's What That Means</a><span class="src">Arcade.dev</span></li>
+      <li><span class="when">Jul 19</span><a href="https://www.techtimes.com/articles/320919/20260718/competing-ai-agent-protocols-face-ietf-standards-scrutiny-vienna-meeting.htm" target="_blank" rel="noopener" title="Competing AI Agent Protocols Face IETF Standards Scrutiny at Vienna Meeting">Competing AI Agent Protocols Face IETF Standards Scrutiny at Vienna Meeting</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 18</span><a href="https://cloud.google.com/blog/products/networking/idc-on-the-right-networking-approach-for-agentic-ai" target="_blank" rel="noopener" title="IDC 2026 AI in Networking Survey: Security and automation cited as primary agentic AI deployment blockers">IDC 2026 AI in Networking Survey: Security and automation cited as primary agentic AI deployment blockers</a><span class="src">Google Cloud Blog</span></li>
+      <li><span class="when">Jul 18</span><a href="https://aigovernance.com/news/ai-governance-weekly-july-16-2026" target="_blank" rel="noopener" title="China enforces AI agent decision authorization framework with mandatory filing requirements effective July 15, 2026">China enforces AI agent decision authorization framework with mandatory filing requirements effective July 15, 2026</a><span class="src">AI Governance Institute</span></li>
+      <li><span class="when">Jul 17</span><a href="https://coworker.ai/blog/ai-agent-orchestration-platform" target="_blank" rel="noopener" title="AI Agent Orchestration Platforms Mature: LangGraph and Microsoft Agent Framework Reach Production Readiness">AI Agent Orchestration Platforms Mature: LangGraph and Microsoft Agent Framework Reach Production Readiness</a><span class="src">Coworker AI / TrueFoundry</span></li>
+      <li><span class="when">Jul 16</span><a href="https://aiagentstore.ai/ai-agent-news/topic/agent-collaboration/2026-07-14" target="_blank" rel="noopener" title="Agent Collaboration Week: OpenAI GPT-5.6, ChatGPT Work, and Microsoft Foundry Agent Service Reach Production Readiness">Agent Collaboration Week: OpenAI GPT-5.6, ChatGPT Work, and Microsoft Foundry Agent Service Reach Production Readiness</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Jul 16</span><a href="https://www.truefoundry.com/blog/blog-mid-2026-agentic-convergence-control-era" target="_blank" rel="noopener" title="Cloudflare Opens Monetization Gateway Waitlist for Agent-to-API Payments via x402 Standard">Cloudflare Opens Monetization Gateway Waitlist for Agent-to-API Payments via x402 Standard</a><span class="src">TrueFoundry Blog</span></li>
+      <li><span class="when">Jul 15</span><a href="https://networkobservability.broadcom.com/blog/redefining-network-operations-in-the-age-of-agentic-ai" target="_blank" rel="noopener" title="Redefining Network Operations in the Age of Agentic AI: Maintaining Engineer Expertise During Autonomous Transitions">Redefining Network Operations in the Age of Agentic AI: Maintaining Engineer Expertise During Autonomous Transitions</a><span class="src">Broadcom Network Observability</span></li>
+      <li><span class="when">Jul 15</span><a href="https://erpsoftwareblog.com/2026/07/agentic-enterprise-erp-2026/" target="_blank" rel="noopener" title="The Agentic Enterprise: Application Connectivity Gap Blocks 73% of Enterprises from Realizing Agent ROI">The Agentic Enterprise: Application Connectivity Gap Blocks 73% of Enterprises from Realizing Agent ROI</a><span class="src">ERP Software Blog</span></li>
+      <li><span class="when">Jul 13</span><a href="https://asanify.com/blog/news/agentic-workflow-automation-july-11-2026/" target="_blank" rel="noopener" title="AI News Digest, July 11: The Week AI Agents Started Doing the Work">AI News Digest, July 11: The Week AI Agents Started Doing the Work</a><span class="src">Asanify</span></li>
+      <li><span class="when">Jul 13</span><a href="https://asanify.com/blog/news/agentic-ai-runtime-security-july-12-2026/" target="_blank" rel="noopener" title="Agentic AI Runtime Security, Jul 12 2026">Agentic AI Runtime Security, Jul 12 2026</a><span class="src">Asanify</span></li>
+      <li><span class="when">Jul 12</span><a href="https://www.strac.io/blog/google-workspace-mcp-server" target="_blank" rel="noopener" title="Google Workspace MCP Server: Secure Setup for Claude &amp; AI Agents (2026)">Google Workspace MCP Server: Secure Setup for Claude &amp; AI Agents (2026)</a><span class="src">Strac</span></li>
+      <li><span class="when">Jul 12</span><a href="https://www.strac.io/blog/m365-mcp-server" target="_blank" rel="noopener" title="Microsoft 365 MCP Server: Secure Setup for Claude &amp; AI Agents (2026)">Microsoft 365 MCP Server: Secure Setup for Claude &amp; AI Agents (2026)</a><span class="src">Strac</span></li>
+      <li><span class="when">Jul 11</span><a href="https://www.prnewswire.com/news-releases/akeneo-introduces-the-first-truly-agentic-product-experience-platform-302819885.html" target="_blank" rel="noopener" title="Akeneo Agentic Ziggy: Multi-Agent Orchestration for Product Data Operations at Commerce Scale">Akeneo Agentic Ziggy: Multi-Agent Orchestration for Product Data Operations at Commerce Scale</a><span class="src">PR Newswire / Akeneo</span></li>
+      <li><span class="when">Jul 10</span><a href="https://linas.substack.com/p/claude-managed-agents-update" target="_blank" rel="noopener" title="Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Scheduled Deployments Ship">Claude Managed Agents: Three-Month Production Update—Memory, Multi-Agent Coordination, and Scheduled Deployments Ship</a><span class="src">Linas Substack</span></li>
+      <li><span class="when">Jul 10</span><a href="https://claude.com/blog/claude-managed-agents-updates" target="_blank" rel="noopener" title="Claude Managed Agents Self-Hosted Sandboxes and MCP Tunnels Enable Enterprise Perimeter Security">Claude Managed Agents Self-Hosted Sandboxes and MCP Tunnels Enable Enterprise Perimeter Security</a><span class="src">Claude Blog</span></li>
+      <li><span class="when">Jul 8</span><a href="https://dev.to/alexmercedcoder/the-state-of-agentic-ai-standards-in-2026-mcp-a2a-webmcp-osi-and-the-protocol-stack-taking-3o2l" target="_blank" rel="noopener" title="The State of Agentic AI Standards in 2026: MCP, A2A, WebMCP, OSI, and the Protocol Stack Taking Shape">The State of Agentic AI Standards in 2026: MCP, A2A, WebMCP, OSI, and the Protocol Stack Taking Shape</a><span class="src">DEV Community</span></li>
+      <li><span class="when">Jul 8</span><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener" title="Claude Code Adds Dynamic Workflow Size, Enhanced MCP, and Remote Control Behavior">Claude Code Adds Dynamic Workflow Size, Enhanced MCP, and Remote Control Behavior</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Jul 8</span><a href="https://aaif.io/blog/mcp-is-growing-up/" target="_blank" rel="noopener" title="MCP Is Growing Up: Stateless Protocol Architecture for Production Agentic Systems">MCP Is Growing Up: Stateless Protocol Architecture for Production Agentic Systems</a><span class="src">Agentic AI Foundation (AAIF)</span></li>
+      <li><span class="when">Jul 8</span><a href="https://erp.today/model-context-protocol-erp-agentic-ai/" target="_blank" rel="noopener" title="MCP Is Becoming the Plumbing of Agentic ERP—ERP Leaders Need to Understand It">MCP Is Becoming the Plumbing of Agentic ERP—ERP Leaders Need to Understand It</a><span class="src">ERP Today</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.marketscale.com/industries/software-and-technology/enterprise-ais-center-of-gravity-shifts-from-models-to-orchestration-governance-and-roi-clarity" target="_blank" rel="noopener" title="Enterprise AI in 2026: The Center of Gravity Shifts to Orchestration, Governance, and ROI">Enterprise AI in 2026: The Center of Gravity Shifts to Orchestration, Governance, and ROI</a><span class="src">MarketScale</span></li>
+      <li><span class="when">Jul 8</span><a href="https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-july-5-2026" target="_blank" rel="noopener" title="AI Agents Directory: July 5, 2026 Daily Brief—Key Developments in Agent Deployment">AI Agents Directory: July 5, 2026 Daily Brief—Key Developments in Agent Deployment</a><span class="src">AI Agents Directory</span></li>
+      <li><span class="when">Jul 8</span><a href="https://marketintelo.com/report/agentic-ai-for-telecom-network-operations-market" target="_blank" rel="noopener" title="Agentic AI for Telecom Network Operations Market: 38.4% CAGR to $18.7B by 2034">Agentic AI for Telecom Network Operations Market: 38.4% CAGR to $18.7B by 2034</a><span class="src">Market Intel</span></li>
+      <li><span class="when">Jul 7</span><a href="https://siliconangle.com/2026/07/07/radware-adds-claude-code-protection-compliance-reporting-to-agent-security/" target="_blank" rel="noopener" title="Radware Expands Agentic AI Protection with Compliance Reporting and Claude Code Visibility">Radware Expands Agentic AI Protection with Compliance Reporting and Claude Code Visibility</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jul 7</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-7-2026" target="_blank" rel="noopener" title="AI News July 7 2026: JADEPUFFER Fully Autonomous Ransomware, Anthropic Overtakes OpenAI on Revenue">AI News July 7 2026: JADEPUFFER Fully Autonomous Ransomware, Anthropic Overtakes OpenAI on Revenue</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.helpnetsecurity.com/2026/07/03/new-infosec-products-of-the-week-july-3-2026/" target="_blank" rel="noopener" title="Digi International Launches DANI: Purpose-Built AI Network Operations Agent for Device Management">Digi International Launches DANI: Purpose-Built AI Network Operations Agent for Device Management</a><span class="src">Help Net Security</span></li>
+      <li><span class="when">Jul 5</span><a href="https://blog.mean.ceo/ai-agents-news-july-2026/" target="_blank" rel="noopener" title="AI Agents in July 2026: From Chat Tools to Autonomous Workers in Real Operations">AI Agents in July 2026: From Chat Tools to Autonomous Workers in Real Operations</a><span class="src">blog.mean.ceo</span></li>
+      <li><span class="when">Jul 5</span><a href="https://agentic.ai/news" target="_blank" rel="noopener" title="OpenMatter Network Launches Cryptographically Verifiable Platform for AI Agent Governance">OpenMatter Network Launches Cryptographically Verifiable Platform for AI Agent Governance</a><span class="src">agentic.ai</span></li>
+      <li><span class="when">Jul 5</span><a href="https://arxiv.org/html/2605.12729v2" target="_blank" rel="noopener" title="Large Language Models for Agentic NetOps and AIOps: Architectures, Evaluation, and Safety">Large Language Models for Agentic NetOps and AIOps: Architectures, Evaluation, and Safety</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 5</span><a href="https://arxiv.org/pdf/2606.09122.pdf" target="_blank" rel="noopener" title="Autonomous Incident Resolution at Hyperscale: Agentic AI Architecture for Network Operations">Autonomous Incident Resolution at Hyperscale: Agentic AI Architecture for Network Operations</a><span class="src">arXiv</span></li>
+      <li><span class="when">Jul 5</span><a href="https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-ai-powered-services-to-accelerate-the-shift-from-legacy-risk-platforms-to-agentic-ai" target="_blank" rel="noopener" title="Accenture and ServiceNow Launch Agentic AI Managed Security and Platform Migration Services">Accenture and ServiceNow Launch Agentic AI Managed Security and Platform Migration Services</a><span class="src">Accenture Newsroom</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener" title="MCP Ecosystem Reaches Production Scale: 10,000+ Servers and 97M Monthly SDK Downloads">MCP Ecosystem Reaches Production Scale: 10,000+ Servers and 97M Monthly SDK Downloads</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 4</span><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener" title="MCP Specification 2026-07-28 Release Candidate: Stateless HTTP Architecture &amp; Enterprise Scaling">MCP Specification 2026-07-28 Release Candidate: Stateless HTTP Architecture &amp; Enterprise Scaling</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Jul 4</span><a href="https://adversa.ai/blog/top-agentic-ai-security-resources-july-2026/" target="_blank" rel="noopener" title="Agentic AI Security Market Surge: July 2026 Marks Zero-Trust Pivot &amp; Enterprise Defense Framework Adoption">Agentic AI Security Market Surge: July 2026 Marks Zero-Trust Pivot &amp; Enterprise Defense Framework Adoption</a><span class="src">Adversa AI</span></li>
+      <li><span class="when">Jul 4</span><a href="https://www.globenewswire.com/news-release/2026/07/03/3321703/28124/en/AI-Governance--Risk-Platforms-Lead-Growth-in-Agentic-AI-Security-Sector-with-Highest-Predicted-CAGR.html" target="_blank" rel="noopener" title="Agentic AI Security Market Reaches $1.65B in 2026; Projected 42% CAGR Through 2032">Agentic AI Security Market Reaches $1.65B in 2026; Projected 42% CAGR Through 2032</a><span class="src">Research and Markets</span></li>
+      <li><span class="when">Jul 4</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="Oracle Fusion Cloud SCM Launches Four Agentic Applications + AI Agent Studio for Autonomous Supply-Chain Workflows">Oracle Fusion Cloud SCM Launches Four Agentic Applications + AI Agent Studio for Autonomous Supply-Chain Workflows</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Jul 4</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="Exabeam Expands Behavior Intelligence Platform: 90 Agent Detections + Observra Open-Source Telemetry Library">Exabeam Expands Behavior Intelligence Platform: 90 Agent Detections + Observra Open-Source Telemetry Library</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Jul 4</span><a href="https://aigovernance.com/news/ai-governance-weekly-july-3-2026" target="_blank" rel="noopener" title="AI Governance Weekly: June 2026 Regulatory Enforcement &amp; Meta Sev-1 Agent Incident Reshape Audit Requirements">AI Governance Weekly: June 2026 Regulatory Enforcement &amp; Meta Sev-1 Agent Incident Reshape Audit Requirements</a><span class="src">AI Governance Institute</span></li>
+      <li><span class="when">Jul 4</span><a href="https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf" target="_blank" rel="noopener" title="NSA/DoD MCP Security Design Document: Observability, Input Validation &amp; Zero-Trust Architecture Mandates">NSA/DoD MCP Security Design Document: Observability, Input Validation &amp; Zero-Trust Architecture Mandates</a><span class="src">NSA Cybersecurity &amp; Infrastructure Security Agency</span></li>
+      <li><span class="when">Jul 3</span><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener" title="MCP 2026-07-28 Release Candidate: Stateless Protocol, Streaming HTTP Headers, OAuth Hardening, and Formal Deprecation Policy">MCP 2026-07-28 Release Candidate: Stateless Protocol, Streaming HTTP Headers, OAuth Hardening, and Formal Deprecation Policy</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Jul 3</span><a href="https://blog.modelcontextprotocol.io/posts/sdk-betas-2026-07-28/" target="_blank" rel="noopener" title="Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Now Available Across Python, TypeScript, Go, and C#">Beta SDKs for the 2026-07-28 MCP Spec Release Candidate Now Available Across Python, TypeScript, Go, and C#</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.akamai.com/blog/security-research/new-mcp-specification-security-teams-must-prepare/" target="_blank" rel="noopener" title="MCP 2026-07-28: New Stateless Architecture Shifts Security Responsibility to Developers—Akamai Threat Model">MCP 2026-07-28: New Stateless Architecture Shifts Security Responsibility to Developers—Akamai Threat Model</a><span class="src">Akamai Blog</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.housingwire.com/articles/tavant-agentic-ai-platform-software-engineering-automation/" target="_blank" rel="noopener" title="Tavant Platform Launches: Agentic Engineering at Enterprise Scale with Open-Source Runtime and No Vendor Lock-In">Tavant Platform Launches: Agentic Engineering at Enterprise Scale with Open-Source Runtime and No Vendor Lock-In</a><span class="src">HousingWire</span></li>
+      <li><span class="when">Jul 3</span><a href="https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-ai-powered-services-to-accelerate-the-shift-from-legacy-risk-platforms-to-agentic-ai" target="_blank" rel="noopener" title="Accenture and ServiceNow Launch Agentic AI Services for Enterprise Risk Modernization and Legacy Migration">Accenture and ServiceNow Launch Agentic AI Services for Enterprise Risk Modernization and Legacy Migration</a><span class="src">Accenture Newsroom</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.lightreading.com/network-automation/verizon-taps-ai-agents-for-network-automation" target="_blank" rel="noopener" title="Verizon Shares Early Learnings from Agentic AI in Network Operations—Focus on Security, Transparency, and Common Frameworks">Verizon Shares Early Learnings from Agentic AI in Network Operations—Focus on Security, Transparency, and Common Frameworks</a><span class="src">Light Reading</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.nokia.com/newsroom/nokia-and-google-cloud-partner-to-embed-ai-agents-built-with-googles-gemini-models-into-nokias-autonomous-network-product-suite/" target="_blank" rel="noopener" title="Nokia and Google Cloud Partner to Embed AI Agents in Autonomous Network Suite—Six Specialized Agents for Telecom Operations">Nokia and Google Cloud Partner to Embed AI Agents in Autonomous Network Suite—Six Specialized Agents for Telecom Operations</a><span class="src">Nokia Newsroom</span></li>
+      <li><span class="when">Jul 2</span><a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank" rel="noopener" title="Claude Sonnet 5 Launch: Near-Opus Agentic Performance at Mid-Tier Pricing">Claude Sonnet 5 Launch: Near-Opus Agentic Performance at Mid-Tier Pricing</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 2</span><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/" target="_blank" rel="noopener" title="MCP 2026-07-28 Release Candidate: Protocol Goes Stateless for Production Scale">MCP 2026-07-28 Release Candidate: Protocol Goes Stateless for Production Scale</a><span class="src">Model Context Protocol Blog</span></li>
+      <li><span class="when">Jul 2</span><a href="https://fortune.com/2026/07/01/cisco-cfo-ai-agents-finance-employees-mark-patterson/" target="_blank" rel="noopener" title="Cisco Rolls Out AI Agents to 90,000 Employees with Dynamic Model Selection">Cisco Rolls Out AI Agents to 90,000 Employees with Dynamic Model Selection</a><span class="src">Fortune</span></li>
+      <li><span class="when">Jul 2</span><a href="https://byteiota.com/mcp-goes-stateless-july-2026-breaking-changes/" target="_blank" rel="noopener" title="MCP Release Candidate Eliminates Session State: Breaking Changes and Migration Path">MCP Release Candidate Eliminates Session State: Breaking Changes and Migration Path</a><span class="src">byteiota</span></li>
+      <li><span class="when">Jul 2</span><a href="https://uvik.net/blog/agentic-ai-frameworks/" target="_blank" rel="noopener" title="Agentic AI Frameworks 2026: LangGraph vs CrewAI Performance on Orchestration Design">Agentic AI Frameworks 2026: LangGraph vs CrewAI Performance on Orchestration Design</a><span class="src">Uvik Software</span></li>
+      <li><span class="when">Jul 2</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Claude Managed Agents Add Scheduled Execution and CLI Tool Authentication via Vaults">Claude Managed Agents Add Scheduled Execution and CLI Tool Authentication via Vaults</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Jul 2</span><a href="https://aimultiple.com/agentic-frameworks" target="_blank" rel="noopener" title="Top Agentic AI Frameworks 2026: LangChain, AutoGen, CrewAI Benchmarked Across 2000 Runs">Top Agentic AI Frameworks 2026: LangChain, AutoGen, CrewAI Benchmarked Across 2000 Runs</a><span class="src">AI Multiple</span></li>
+      <li><span class="when">Jul 1</span><a href="https://byteiota.com/mcp-goes-stateless-july-2026-breaking-changes/" target="_blank" rel="noopener" title="MCP Goes Stateless: The 2026-07-28 Release Candidate Explained">MCP Goes Stateless: The 2026-07-28 Release Candidate Explained</a><span class="src">byteiota</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.lightreading.com/network-automation/verizon-taps-ai-agents-for-network-automation" target="_blank" rel="noopener" title="Verizon Taps AI Agents for Network Automation">Verizon Taps AI Agents for Network Automation</a><span class="src">Light Reading</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.housingwire.com/articles/tavant-agentic-ai-platform-software-engineering-automation/" target="_blank" rel="noopener" title="Tavant Launches Enterprise Agentic AI Platform for Software Engineering and Automation">Tavant Launches Enterprise Agentic AI Platform for Software Engineering and Automation</a><span class="src">HousingWire</span></li>
+      <li><span class="when">Jul 1</span><a href="https://newsroom.accenture.com/news/2026/servicenow-and-accenture-launch-ai-powered-services-to-accelerate-the-shift-from-legacy-risk-platforms-to-agentic-ai" target="_blank" rel="noopener" title="ServiceNow and Accenture Launch AI-Powered Risk Management Services Using Agentic AI">ServiceNow and Accenture Launch AI-Powered Risk Management Services Using Agentic AI</a><span class="src">Accenture</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.networkworld.com/article/4167967/netskope-launches-ai-agents-for-soc-and-noc-automation.html" target="_blank" rel="noopener" title="Netskope Launches AgentSkope: AI Agents for SOC and NOC Automation">Netskope Launches AgentSkope: AI Agents for SOC and NOC Automation</a><span class="src">Network World</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.reveillesoftware.com/blog/ai-ml/67-are-deploying-ai-agents-57-arent-ready/" target="_blank" rel="noopener" title="Reveille Software: The Assurance Gap—AI Agents and Content Trustworthiness">Reveille Software: The Assurance Gap—AI Agents and Content Trustworthiness</a><span class="src">Reveille Software</span></li>
+      <li><span class="when">Jul 1</span><a href="https://agentic.ai/what-is-agentic-ai" target="_blank" rel="noopener" title="Agentic.ai: What Is Agentic AI? Definition, 6 Levels &amp; Scoring Framework (Updated Jun 30, 2026)">Agentic.ai: What Is Agentic AI? Definition, 6 Levels &amp; Scoring Framework (Updated Jun 30, 2026)</a><span class="src">Agentic.ai</span></li>
+    </ul>
+    <h3 class="month label">June 2026 <span class="n">30</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 30</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Claude Managed Agents Self-Hosted Sandboxes and MCP Tunnel Support GA">Claude Managed Agents Self-Hosted Sandboxes and MCP Tunnel Support GA</a><span class="src">Releasebot / Anthropic</span></li>
+      <li><span class="when">Jun 30</span><a href="https://agentic.ai/news" target="_blank" rel="noopener" title="Netskope AgentSkope: AI Agents for Security and Network Operations Automation">Netskope AgentSkope: AI Agents for Security and Network Operations Automation</a><span class="src">Agentic AI News</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.wwt.com/blog/hpe-discover-2026-why-networking-became-the-foundation-for-agentic-ai" target="_blank" rel="noopener" title="HPE Discover 2026: Networking as Foundation for Agentic AI Infrastructure">HPE Discover 2026: Networking as Foundation for Agentic AI Infrastructure</a><span class="src">WWT / HPE Analysis</span></li>
+      <li><span class="when">Jun 30</span><a href="https://openai.com/index/how-agents-are-transforming-work/" target="_blank" rel="noopener" title="OpenAI Codex Adoption Surge: Non-Developers 189× Growth, Research 56× Agent Usage">OpenAI Codex Adoption Surge: Non-Developers 189× Growth, Research 56× Agent Usage</a><span class="src">OpenAI</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.mindstick.com/blog/306996/claude-connectors-extend-claude-with-mcp-integrations-2026-guide" target="_blank" rel="noopener" title="Claude Connectors Enterprise Okta Integration and MCP Registry Governance">Claude Connectors Enterprise Okta Integration and MCP Registry Governance</a><span class="src">MindStick / Anthropic</span></li>
+      <li><span class="when">Jun 30</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="Gartner: AI Agent Software Market Reaches $206.5B in 2026, Up 139% YoY">Gartner: AI Agent Software Market Reaches $206.5B in 2026, Up 139% YoY</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Jun 30</span><a href="https://devblogs.microsoft.com/foundry/agent-service-build2026/" target="_blank" rel="noopener" title="Microsoft Foundry Hosted Agents: OpenTelemetry Traces and A2A Interop GA">Microsoft Foundry Hosted Agents: OpenTelemetry Traces and A2A Interop GA</a><span class="src">Microsoft Foundry Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://blogs.nvidia.com/blog/telecom-ai-agents-dtw-ignite-2026/" target="_blank" rel="noopener" title="NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations at DTW Ignite 2026">NVIDIA Brings Trusted, 24/7 AI Agents to Telecom Operations at DTW Ignite 2026</a><span class="src">NVIDIA Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.networkworld.com/article/4167967/netskope-launches-ai-agents-for-soc-and-noc-automation.html" target="_blank" rel="noopener" title="Netskope Revolutionizes Security and Network Operations with AgentSkope">Netskope Revolutionizes Security and Network Operations with AgentSkope</a><span class="src">Network World</span></li>
+      <li><span class="when">Jun 29</span><a href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-at-build-2026-announce/" target="_blank" rel="noopener" title="Microsoft Agent Framework Expands MCP and Multi-Model Support at Build 2026">Microsoft Agent Framework Expands MCP and Multi-Model Support at Build 2026</a><span class="src">Microsoft Agent Framework Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://arxiv.org/html/2602.14878v1" target="_blank" rel="noopener" title="MCP Tool Descriptions Are Smelly: Empirical Study Shows Performance-Cost Trade-offs">MCP Tool Descriptions Are Smelly: Empirical Study Shows Performance-Cost Trade-offs</a><span class="src">arXiv (cs.AI)</span></li>
+      <li><span class="when">Jun 29</span><a href="https://zylos.ai/research/2026-03-26-agent-interoperability-protocols-mcp-a2a-acp-convergence/" target="_blank" rel="noopener" title="Agent Interoperability Protocols 2026: MCP, A2A, ACP Convergence Roadmap">Agent Interoperability Protocols 2026: MCP, A2A, ACP Convergence Roadmap</a><span class="src">Zylos Research</span></li>
+      <li><span class="when">Jun 29</span><a href="https://agentic.ai/news" target="_blank" rel="noopener" title="Agentic AI News Roundup: Netskope AgentSkope, Ooredoo Smart Wi-Fi Analytics June 2026">Agentic AI News Roundup: Netskope AgentSkope, Ooredoo Smart Wi-Fi Analytics June 2026</a><span class="src">Agentic AI News</span></li>
+      <li><span class="when">Jun 29</span><a href="https://arxiv.org/pdf/2604.07551" target="_blank" rel="noopener" title="MCP-DPT: Defense Placement Taxonomy for Model Context Protocol Security Architecture">MCP-DPT: Defense Placement Taxonomy for Model Context Protocol Security Architecture</a><span class="src">arXiv (cs.CR)</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.generative.inc/agentic-ai-in-2026-how-ai-went-from-chatting-to-doing" target="_blank" rel="noopener" title="Agentic AI in 2026: How AI Evolved from Chatbots to Autonomous Agents">Agentic AI in 2026: How AI Evolved from Chatbots to Autonomous Agents</a><span class="src">Generative, Inc.</span></li>
+      <li><span class="when">Jun 21</span><a href="https://releasebot.io/updates/anthropic" target="_blank" rel="noopener" title="Claude Adds Enterprise-Managed MCP Connector Access with Okta Integration">Claude Adds Enterprise-Managed MCP Connector Access with Okta Integration</a><span class="src">Anthropic Release Notes</span></li>
+      <li><span class="when">Jun 20</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Claude Managed Agents Now Support Self-Hosted Sandboxes and Private MCP Servers">Claude Managed Agents Now Support Self-Hosted Sandboxes and Private MCP Servers</a><span class="src">Anthropic (Releasebot)</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.rcrwireless.com/20260618/analyst-angle/hpe-discover-2026-fellah" target="_blank" rel="noopener" title="HPE Discover 2026: Full-Stack Agentic Enterprise Architecture">HPE Discover 2026: Full-Stack Agentic Enterprise Architecture</a><span class="src">RCR Wireless</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.totalum.app/blog/claude-agent-sdk-totalum-2026" target="_blank" rel="noopener" title="Claude Agent SDK Now Ships with MCP Client Support and Subagent Orchestration">Claude Agent SDK Now Ships with MCP Client Support and Subagent Orchestration</a><span class="src">Totalum Blog</span></li>
+      <li><span class="when">Jun 20</span><a href="https://callsphere.ai/blog/where-claude-agents-are-heading-next-and-how-to-prepare" target="_blank" rel="noopener" title="Where Claude Agents Are Heading: Longer Autonomy, Stronger Governance Requirements">Where Claude Agents Are Heading: Longer Autonomy, Stronger Governance Requirements</a><span class="src">CallSphere AI</span></li>
+      <li><span class="when">Jun 16</span><a href="https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/" target="_blank" rel="noopener" title="GitHub Agentic Workflows Now in Public Preview">GitHub Agentic Workflows Now in Public Preview</a><span class="src">GitHub Changelog</span></li>
+      <li><span class="when">Jun 12</span><a href="https://www.nokia.com/newsroom/nokia-introduces-agentic-ai-framework-in-network-services-platform-to-enable-trust-based-ai-operations-for-ip-networks/" target="_blank" rel="noopener" title="Nokia adds agentic AI framework to Network Services Platform for trusted IP network operations">Nokia adds agentic AI framework to Network Services Platform for trusted IP network operations</a><span class="src">Nokia Newsroom</span></li>
+      <li><span class="when">Jun 12</span><a href="https://github.com/modelcontextprotocol" target="_blank" rel="noopener" title="MCP Python and C# SDKs updated June 11, 2026—release candidate 2026-07-28 introduces stateless core and horizontal scaling">MCP Python and C# SDKs updated June 11, 2026—release candidate 2026-07-28 introduces stateless core and horizontal scaling</a><span class="src">Model Context Protocol GitHub</span></li>
+      <li><span class="when">Jun 12</span><a href="https://siliconangle.com/2026/06/11/supply-chain-operations-blueyonder/" target="_blank" rel="noopener" title="Blue Yonder advances autonomous supply chain operations with multi-agent coordination and Nvidia partnership">Blue Yonder advances autonomous supply chain operations with multi-agent coordination and Nvidia partnership</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jun 12</span><a href="https://www.firecrawl.dev/blog/agentic-ai-trends" target="_blank" rel="noopener" title="Firecrawl MCP adoption surges 35% month-over-month as OAuth and authentication patterns mature">Firecrawl MCP adoption surges 35% month-over-month as OAuth and authentication patterns mature</a><span class="src">Firecrawl Blog</span></li>
+      <li><span class="when">Jun 12</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="agnt8x (EightX Labs) launches public platform for agent recruitment, orchestration, and Agent Manifest specification">agnt8x (EightX Labs) launches public platform for agent recruitment, orchestration, and Agent Manifest specification</a><span class="src">AI Agent Store News</span></li>
+      <li><span class="when">Jun 11</span><a href="https://venturebeat.com/security/microsoft-launches-mxc-an-os-level-sandbox-for-ai-agents-with-openai-and-nvidia-already-on-board" target="_blank" rel="noopener" title="Microsoft launches MXC, an OS-level sandbox for AI agents, with OpenAI and Nvidia already on board">Microsoft launches MXC, an OS-level sandbox for AI agents, with OpenAI and Nvidia already on board</a><span class="src">VentureBeat</span></li>
+      <li><span class="when">Jun 11</span><a href="https://blog.mean.ceo/ai-agents-news-june-2026/" target="_blank" rel="noopener" title="AI Agents News | June, 2026 (STARTUP EDITION)">AI Agents News | June, 2026 (STARTUP EDITION)</a><span class="src">Mean CEO Blog</span></li>
+      <li><span class="when">Jun 11</span><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener" title="Daily AI Agent News - Last 7 Days">Daily AI Agent News - Last 7 Days</a><span class="src">AI Agent Store</span></li>
+      <li><span class="when">Jun 11</span><a href="https://medium.com/adi-insights-innovations-collective/the-ai-update-june-5-2026-agents-are-working-regulation-is-moving-and-the-hype-is-over-b475b737bd76" target="_blank" rel="noopener" title="The AI Update — June 5, 2026: Agents Are Working, Regulation Is Moving, and the Hype Is Over">The AI Update — June 5, 2026: Agents Are Working, Regulation Is Moving, and the Hype Is Over</a><span class="src">Adi Insights &amp; Innovations Collective (Medium)</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

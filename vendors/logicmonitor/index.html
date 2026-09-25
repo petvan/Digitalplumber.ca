@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LogicMonitor — Vendor Radar — Digital Plumber</title>
+<meta name="description" content="LogicMonitor in Digital Plumber's daily briefings: 15 stories, 0 in the last 7 days. Hybrid observability platform for infrastructure, network and cloud monitoring, with AI-driven operations features.">
+<link rel="canonical" href="https://digitalplumber.ca/vendors/logicmonitor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="LogicMonitor — Vendor Radar — Digital Plumber">
+<meta property="og:description" content="LogicMonitor in Digital Plumber's daily briefings: 15 stories, 0 in the last 7 days. Hybrid observability platform for infrastructure, network and cloud monitoring, with AI-driven operations features.">
+<meta property="og:url" content="https://digitalplumber.ca/vendors/logicmonitor/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/" class="active" aria-current="page">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/vendors/">Vendor Radar</a></p>
+  <h1 class="page-title">LogicMonitor</h1>
+  <p class="page-dek">Hybrid observability platform for infrastructure, network and cloud monitoring, with AI-driven operations features.</p>
+  <div class="stat-row">
+    <div><span class="stat">15</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">0 </span><span class="label">last 7 days · 0 the 7 before</span></div>
+    <div><span class="stat">1</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 19</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 3, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0">
+      <div class="bar-col" title="Week of Jul 4: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor Blog</b> · Sep 2, 2026</p>
+        <h3><a href="https://www.logicmonitor.com/blog/observability-ai-trends-2026" target="_blank" rel="noopener" title="LogicMonitor Survey: Five Key Observability &amp; AI Trends Drive Shift to Autonomous IT in 2026">LogicMonitor Survey: Five Key Observability &amp; AI Trends Drive Shift to Autonomous IT in 2026</a></h3>
+        <p class="summary">LogicMonitor's survey of 100 VP+ IT leaders identifies five observability trends accelerating autonomous IT adoption: autonomous IT as a new operating model (visibility → correlation → prediction → action), protected observability budgets, tool consolidation as default strategy, accelerated platform switching, and organizational willingness to change vendors within 1-2 years.</p>
+        <p class="edition label"><a href="/archives/2026-09-04.html">Sep 4, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Mezmo</b> · Jul 23, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.mezmo.com/learn/the-2026-ai-sre-market-map-agents-harnesses-and-the-data-layer" target="_blank" rel="noopener" title="SRE Report 2026: 50% of Teams Plan Production AI Agent Deployment Within 12 Months">SRE Report 2026: 50% of Teams Plan Production AI Agent Deployment Within 12 Months</a></h3>
+        <p class="summary">More than half of SRE professionals plan to deploy agentic AI systems in production within the next 12 months according to the SRE Report 2026 from LogicMonitor's survey of 418 practitioners, representing more than double the confidence reported a year earlier. AI inference costs fell 92% in three years, from $30 per million tokens in early 2023 to $0.10–$2.50 by February 2026, making agents cost-competitive at scale.</p>
+        <p class="edition label"><a href="/archives/2026-07-23.html">Jul 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>TipRanks</b> · Jul 5, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.tipranks.com/news/private-companies/logicmonitor-leverages-edwin-ai-and-elevate-2026-to-drive-autonomous-it-and-revenue-growth" target="_blank" rel="noopener" title="LogicMonitor Leverages Edwin AI and Elevate 2026 to Drive Autonomous IT and Revenue Growth">LogicMonitor Leverages Edwin AI and Elevate 2026 to Drive Autonomous IT and Revenue Growth</a></h3>
+        <p class="summary">LogicMonitor launched its Autonomous IT Innovation Program in private preview, embedding Edwin AI deeper into IT operations workflows. The company surpassed $400M ARR with Edwin AI contributing one-third of bookings and growing 200% YoY. New integrations with IBM watsonx and Red Hat Ansible Automation Platform aim to enable self-healing infrastructure at scale.</p>
+        <p class="edition label"><a href="/archives/2026-07-05.html">Jul 5, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor</b> · Jul 5, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action">LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action</a></h3>
+        <p class="summary">LogicMonitor integrated Catchpoint capabilities directly into its platform with Edwin AI–Catchpoint integration feeding synthetic test and Internet Sonar alerts into the correlation engine, and Catchpoint Advisor providing AI-powered copilot for synthetic test configuration. The unified platform delivers complete visibility from infrastructure to digital experience, context-driven AI reasoning across topology and logs, and closed-loop orchestration moving from detection to autonomous response.</p>
+        <p class="edition label"><a href="/archives/2026-07-05.html">Jul 5, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor Blog</b> · Jul 4, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with Catchpoint Integration and Edwin AI Expansion">LogicMonitor Advances Autonomous IT with Catchpoint Integration and Edwin AI Expansion</a></h3>
+        <p class="summary">LogicMonitor integrated Catchpoint capabilities directly into its platform, adding synthetic test integration, Internet Sonar alerts, and an AI-powered Catchpoint Advisor copilot. Edwin AI now correlates synthetic test and Internet performance signals with infrastructure data, enabling closed-loop automation that moves from detection to automated remediation.</p>
+        <p class="edition label"><a href="/archives/2026-07-04.html">Jul 4, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor</b> · Jul 3, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action">LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action</a></h3>
+        <p class="summary">LogicMonitor expanded its platform with AI Investigations 2.0, Catchpoint Advisor (AI copilot for synthetic monitoring), and Edwin AI enhancements that correlate logs, metrics, ITSM records, and knowledge bases. The updates address AIOps initiatives that fail due to lack of context—systems without topology awareness and explainability generate false positives and distrust.</p>
+        <p class="edition label"><a href="/archives/2026-07-03.html">Jul 3, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor</b> · Jul 3, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.logicmonitor.com/deep-dive/observability-vs-monitoring/hybrid-cloud-monitoring" target="_blank" rel="noopener" title="Hybrid Cloud Monitoring: Path Validation Over Device Polling">Hybrid Cloud Monitoring: Path Validation Over Device Polling</a></h3>
+        <p class="summary">LogicMonitor published guidance on hybrid cloud monitoring architectures, emphasizing that traditional tools overlook network boundaries, DNS resolution, CDN performance, and BGP routing—the actual failure sources in hybrid environments. Real User Monitoring, synthetic monitoring, infrastructure telemetry, and internet service monitoring must work together with environment-aware SLOs.</p>
+        <p class="edition label"><a href="/archives/2026-07-03.html">Jul 3, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor</b> · Jul 2, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action">LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action</a></h3>
+        <p class="summary">LogicMonitor expanded its observability platform with Edwin AI agentic investigations, Catchpoint Advisor synthetic test automation, and integrated Real User Monitoring. AI Investigations 2.0 correlates logs, metrics, ITSM records, and knowledge bases to provide explainable root cause; platform emphasizes context-driven reasoning over metrics-only analysis to reduce false positives and build operator trust in AI recommendations.</p>
+        <p class="edition label"><a href="/archives/2026-07-02.html">Jul 2, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>LogicMonitor Blog</b> · Jun 30, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action">LogicMonitor Advances Autonomous IT with No Blind Spots, Trusted AI, and Closed-Loop Action</a></h3>
+        <p class="summary">LogicMonitor released Edwin AI 2.0 with AI Investigations that correlate logs, metrics, ITSM records, and external sources to explain root causes. AI Topology Intelligence applies dependency-aware correlation across services and infrastructure. Expanded MCP ecosystem includes integrations with Dynatrace, Splunk, ServiceNow, and Elastic, positioning Edwin AI as a centralized reasoning layer for autonomous IT operations.</p>
+        <p class="edition label"><a href="/archives/2026-06-30.html">Jun 30, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>BusinessWire</b> · Jun 30, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://secure.businesswire.com/news/home/20260428814587/en/LogicMonitor-Defines-the-Autonomous-IT-Era-with-AI-That-Sees-Reasons-and-Acts" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with Edwin AI and Orchestrated Remediation">LogicMonitor Advances Autonomous IT with Edwin AI and Orchestrated Remediation</a></h3>
+        <p class="summary">LogicMonitor announced a major expansion of its unified platform, strengthening the operational foundation for Autonomous IT. New capabilities include Automated Remediation that executes predefined workflows to reduce MTTR, and Closed-Loop Orchestration extending automated response across solutions such as Ansible, Rundeck, Terraform, and Puppet.</p>
+        <p class="edition label"><a href="/archives/2026-06-30.html">Jun 30, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">5 earlier stories</span></div>
+    
+    <h3 class="month label">June 2026 <span class="n">5</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 30</span><a href="https://www.hpcwire.com/bigdatawire/this-just-in/logicmonitor-collaborates-with-ibm-and-red-hat-to-drive-the-next-era-of-autonomous-data-centers/" target="_blank" rel="noopener" title="LogicMonitor Partners with IBM and Red Hat for Edwin AI Integration with Ansible and watsonx">LogicMonitor Partners with IBM and Red Hat for Edwin AI Integration with Ansible and watsonx</a><span class="src">HPC Wire</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="Autonomous IT 2026: LogicMonitor advances with no blind spots, trusted AI, and closed-loop action">Autonomous IT 2026: LogicMonitor advances with no blind spots, trusted AI, and closed-loop action</a><span class="src">LogicMonitor Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.logicmonitor.com/blog/best-network-monitoring-tools" target="_blank" rel="noopener" title="Network monitoring tools in 2026: How to choose the right platform">Network monitoring tools in 2026: How to choose the right platform</a><span class="src">LogicMonitor Blog</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.logicmonitor.com/blog/autonomous-it-2026-announcement" target="_blank" rel="noopener" title="LogicMonitor Advances Autonomous IT with Edwin AI Integration of Catchpoint and Closed-Loop Automation">LogicMonitor Advances Autonomous IT with Edwin AI Integration of Catchpoint and Closed-Loop Automation</a><span class="src">LogicMonitor Blog</span></li>
+      <li><span class="when">Jun 19</span><a href="https://www.logicmonitor.com/blog/ai-workload-observability-itops-priority" target="_blank" rel="noopener" title="LogicMonitor Publishes AI Workload Observability as Critical ITOps Priority">LogicMonitor Publishes AI Workload Observability as Critical ITOps Priority</a><span class="src">LogicMonitor Blog</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

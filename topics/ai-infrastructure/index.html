@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Infrastructure — Topics — Digital Plumber</title>
+<meta name="description" content="AI Infrastructure in Digital Plumber's daily briefings: 105 stories, 4 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
+<link rel="canonical" href="https://digitalplumber.ca/topics/ai-infrastructure/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="AI Infrastructure — Topics — Digital Plumber">
+<meta property="og:description" content="AI Infrastructure in Digital Plumber's daily briefings: 105 stories, 4 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
+<meta property="og:url" content="https://digitalplumber.ca/topics/ai-infrastructure/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/topics/">Topics</a></p>
+  <h1 class="page-title">AI Infrastructure</h1>
+  <p class="page-dek">The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.</p>
+  <div class="stat-row">
+    <div><span class="stat">105</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">4 </span><span class="label">last 7 days · 4 the 7 before</span></div>
+    <div><span class="stat">24</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 4, 2, 7, 6, 10, 3, 9, 10, 8, 5, 4, 4">
+      <div class="bar-col" title="Week of Jul 4: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 2 stories">
+        <span class="bar-n">2</span>
+        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:70%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:30%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:90%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 5 stories">
+        <span class="bar-n">5</span>
+        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Investing.com</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355" target="_blank" rel="noopener" title="BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints">BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</a></h3>
+        <p class="summary">BCE presented its AI infrastructure strategy at the CIBC Eastern Institutional Investor Conference on September 24, 2026, outlining plans centered on better customer experience, steady fiber gains, and a fast-growing AI infrastructure business. Management acknowledged heavy capital demands as the company pushes into data centers, U.S. fiber expansion, and media transformation.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Globe Newswire</b> · Sep 23, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.globenewswire.com/news-release/2026/09/23/3367501/0/en/d-h-distributing-expands-relationship-with-hpe-chosen-as-a-north-american-distributor-of-hpe-networking.html" target="_blank" rel="noopener" title="D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking">D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking</a></h3>
+        <p class="summary">D&amp;H Distributing extended its distribution partnership with HPE on September 23, 2026, gaining access to the HPE Networking portfolio including HPE Juniper Networking routers and switches, with full availability to partners by end of September 2026. This integration adds HPE Networking to D&amp;H's Advanced Solutions+ ecosystem, giving partners access to HPE's networking, cloud, and AI portfolios along with D&amp;H's training, enablement, and 24/7 support.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Marvell Technology</b> · Sep 22, 2026 · <span class="stype">Research</span></p>
+        <h3><a href="https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html" target="_blank" rel="noopener" title="Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026">Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026</a></h3>
+        <p class="summary">Marvell demonstrated 2nm 800G ZR/ZR+ with MACsec and first 2nm 1.6T ZR and coherent-lite O-band optical technologies at ECOC 2026, powered by next-generation DSPs optimized for high-bandwidth connectivity within and between data center facilities and paving the way for 3.2T connectivity. Advanced co-packaged optics (CPO) technology integrates optics directly with AI accelerators and switch silicon as per-lane speeds and multi-rack AI pods push past copper's reach limits.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Globe Newswire</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.globenewswire.com/news-release/2026/09/22/3366824/0/en/ai-network-fabric-market-accelerates-as-gigascale-ai-clusters-drive-demand-for-high-speed-low-latency-connectivity.html" target="_blank" rel="noopener" title="AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity">AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity</a></h3>
+        <p class="summary">The U.S. AI Network Fabric Market is projected to grow from $5.03 billion in 2025 to $109.65 billion by 2035 at a 36.06% CAGR, driven by GPU-accelerated computing, hyperscale infrastructure, and adoption of Ethernet-based, InfiniBand, NVLink/NVSwitch, and UALink technologies. Network fabrics are now critical infrastructure for AI workloads requiring fast connectivity between GPUs, CPUs, and storage rather than traditional data center networks.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Telecom Reseller</b> · Sep 17, 2026</p>
+        <h3><a href="https://telecomreseller.com/2026/09/17/enterprise-ai-push-puts-renewed-pressure-on-infrastructure/" target="_blank" rel="noopener" title="Enterprise AI Push Drives Infrastructure Bottleneck: 40% of IT Leaders Cite Lack of Specialized Infrastructure">Enterprise AI Push Drives Infrastructure Bottleneck: 40% of IT Leaders Cite Lack of Specialized Infrastructure</a></h3>
+        <p class="summary">Infrastructure constraints have become the primary blocker for enterprise AI initiatives, with 40% of IT decision-makers citing lack of specialized infrastructure as their primary constraint, up from just 9% in 2024. Respondents expect AI spending to increase 32% over the next year, with 79% planning AI deployments in 2026.</p>
+        <p class="edition label"><a href="/archives/2026-09-18.html">Sep 18, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>SDxCentral</b> · Sep 15, 2026</p>
+        <h3><a href="https://www.sdxcentral.com/news/cornelis-targets-inference-accelerator-utilization-with-205m-expansion-into-scale-up/" target="_blank" rel="noopener" title="Cornelis Unveils Active Compute Fabric, Secures $205M to Expand Into Scale-Up Networking">Cornelis Unveils Active Compute Fabric, Secures $205M to Expand Into Scale-Up Networking</a></h3>
+        <p class="summary">Cornelis Networks launched Active Compute Fabric, an open architecture that brings programmable compute directly into both scale-up and scale-out AI networking fabrics. The fabric combines lossless transport, in-fabric acceleration, and programmable processing to offload collective operations and improve GPU utilization by reducing idle time waiting for data.</p>
+        <p class="edition label"><a href="/archives/2026-09-17.html">Sep 17, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Converge Digest</b> · Sep 16, 2026</p>
+        <h3><a href="https://convergedigest.com/cornelis-active-compute-fabric-scale-up-ai-networking/" target="_blank" rel="noopener" title="Cornelis CEO Lisa Spelman Previews Active Compute Fabric and CN6000 Second Generation at AI Infra Summit 2026">Cornelis CEO Lisa Spelman Previews Active Compute Fabric and CN6000 Second Generation at AI Infra Summit 2026</a></h3>
+        <p class="summary">Cornelis Networks CEO Lisa Spelman unveiled the Active Compute Fabric architecture and announced the upcoming CN6000 second generation product at AI Infra Summit 2026 in Santa Clara. The technology introduces a novel approach integrating programmable compute directly into network fabric to address emerging AI infrastructure challenges across scale-up and scale-out domains.</p>
+        <p class="edition label"><a href="/archives/2026-09-17.html">Sep 17, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>SiliconANGLE</b> · Sep 14, 2026</p>
+        <h3><a href="https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/" target="_blank" rel="noopener" title="Cornelis Networks raises $205M, launches Active Compute Fabric for AI cluster scale-up/scale-out">Cornelis Networks raises $205M, launches Active Compute Fabric for AI cluster scale-up/scale-out</a></h3>
+        <p class="summary">Cornelis Networks announced a new Active Compute Fabric architecture to support scale-up and scale-out networks for AI workloads, alongside a $205 million funding round led by IAG Capital Partners and a strategy collaboration with Qualcomm. The 400 Gbps CN5000 started shipping September 14, with claims of 2x message rate and 35% lower latency compared to other 400 Gbps solutions, and 6x faster collective communications compared to RoCE implementations. The 800 Gbps CN6000 is sampling with customers ahead of Q4 2026 availability, with both products built on open standards: UALink and ESUN for scale-up, Ultra Ethernet for scale-out.</p>
+        <p class="edition label"><a href="/archives/2026-09-16.html">Sep 16, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>TechNode</b> · Sep 9, 2026</p>
+        <h3><a href="https://technode.global/2026/09/09/oracle-hpe-juniper-global-ai-data-center-networking/" target="_blank" rel="noopener" title="Oracle Plans HPE Juniper Rollout Across Global AI Data Centers">Oracle Plans HPE Juniper Rollout Across Global AI Data Centers</a></h3>
+        <p class="summary">Oracle plans to extend HPE Juniper networking across its global AI data centers as OCI superclusters scale. The multiyear deployment covers routing, switching equipment, support services and financing. HPE raised its fiscal 2026 revenue growth forecast to 34%-37% after record quarterly sales driven by AI servers and networking demand.</p>
+        <p class="edition label"><a href="/archives/2026-09-10.html">Sep 10, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>NVIDIA Newsroom</b> · Sep 9, 2026</p>
+        <h3><a href="https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference" target="_blank" rel="noopener" title="Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference">Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference</a></h3>
+        <p class="summary">Nvidia announced Rubin CPX, a new GPU class purpose-built for massive-context processing enabling AI systems to handle million-token workloads. The Vera Rubin NVL144 CPX platform delivers 8 exaflops of AI compute with 7.5x more performance than prior GB300 NVL72 systems, plus 100TB of fast memory and 1.7 petabytes per second of memory bandwidth in a single rack.</p>
+        <p class="edition label"><a href="/archives/2026-09-10.html">Sep 10, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">95 earlier stories</span></div>
+    
+    <h3 class="month label">September 2026 <span class="n">8</span></h3>
+    <ul class="history">
+      <li><span class="when">Sep 10</span><a href="https://www.investing.com/news/transcripts/arista-networks-at-goldman-sachs-conference-ai-demand-drives-growth-93CH-4892139" target="_blank" rel="noopener" title="Arista Networks Targets $12.6B 2026 Revenue Amid Record AI Infrastructure Demand">Arista Networks Targets $12.6B 2026 Revenue Amid Record AI Infrastructure Demand</a><span class="src">Investing.com</span></li>
+      <li><span class="when">Sep 6</span><a href="https://convergedigest.com/hpe-juniper-ai-infrastructure-networking/" target="_blank" rel="noopener" title="HPE Reports Juniper Networking Orders up 36% as AI Data Center Switching Demand Surges">HPE Reports Juniper Networking Orders up 36% as AI Data Center Switching Demand Surges</a><span class="src">Converge Digest</span></li>
+      <li><span class="when">Sep 5</span><a href="https://www.networkworld.com/article/4218314/hpes-record-q3-ai-infrastructure-networking-demand-drives-growth-but-supply-constraints-tap-the-brakes.html" target="_blank" rel="noopener" title="HPE's record Q3 AI infrastructure and networking demand surge with $7.6B AI backlog">HPE's record Q3 AI infrastructure and networking demand surge with $7.6B AI backlog</a><span class="src">Network World</span></li>
+      <li><span class="when">Sep 4</span><a href="https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-and-oracle-deepen-networking-collaboration-to-accelerate-gigawatt-scale-ai-infrastructure.html" target="_blank" rel="noopener" title="HPE and Oracle deepen networking collaboration to accelerate gigawatt-scale AI infrastructure">HPE and Oracle deepen networking collaboration to accelerate gigawatt-scale AI infrastructure</a><span class="src">HPE Newsroom</span></li>
+      <li><span class="when">Sep 3</span><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-vmware-ai-factory-enabling-faster-time" target="_blank" rel="noopener" title="Broadcom Launches VMware AI Factory: Bare-Metal to Model in Hours via MetalSoft Integration">Broadcom Launches VMware AI Factory: Bare-Metal to Model in Hours via MetalSoft Integration</a><span class="src">Broadcom / VMware Newsroom</span></li>
+      <li><span class="when">Sep 2</span><a href="https://fundaai.substack.com/p/deepoptics-scale-in-moves-optics" target="_blank" rel="noopener" title="Deep|Optics: Scale-In Moves Optics Inside the Tray, and the Bandwidth Opportunity Could 10x Scale-Up">Deep|Optics: Scale-In Moves Optics Inside the Tray, and the Bandwidth Opportunity Could 10x Scale-Up</a><span class="src">Funda AI</span></li>
+      <li><span class="when">Sep 1</span><a href="https://nvidianews.nvidia.com/news/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms" target="_blank" rel="noopener" title="NVIDIA Invests $3.5B in MediaTek, Expands NVLink Fusion Platform for Custom AI Accelerators">NVIDIA Invests $3.5B in MediaTek, Expands NVLink Fusion Platform for Custom AI Accelerators</a><span class="src">NVIDIA Newsroom</span></li>
+      <li><span class="when">Sep 1</span><a href="https://www.datacenterknowledge.com/energy-power-supply/solid-state-transformers-power-next-gen-ai-data-centers" target="_blank" rel="noopener" title="Solid-State Transformers Emerging as Critical Power Architecture for AI Data Centers">Solid-State Transformers Emerging as Critical Power Architecture for AI Data Centers</a><span class="src">Data Center Knowledge</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">35</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 31</span><a href="https://theartofcto.com/industry-outlook/2026-w36-telecoms-industry-outlook" target="_blank" rel="noopener" title="Industry Outlook: Telecoms &amp; Connectivity — Week of August 31, 2026">Industry Outlook: Telecoms &amp; Connectivity — Week of August 31, 2026</a><span class="src">The Art of CTO</span></li>
+      <li><span class="when">Aug 30</span><a href="https://solutionsreview.com/ai-news-for-the-week-of-august-28-updates-from-cisco-google-cloud-nutanix-more/" target="_blank" rel="noopener" title="Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture">Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture</a><span class="src">Solutions Review</span></li>
+      <li><span class="when">Aug 29</span><a href="https://siliconangle.com/2026/08/26/the-network-becomes-the-computer-as-cisco-and-nvidia-accelerate-ai-factory-rack-scale-cisconvidiaaifactory/" target="_blank" rel="noopener" title="The Network Becomes the Computer: Cisco-NVIDIA Shift Signals Move From GPU Acquisition to AI Production Cycle">The Network Becomes the Computer: Cisco-NVIDIA Shift Signals Move From GPU Acquisition to AI Production Cycle</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Aug 28</span><a href="https://www.datacenterknowledge.com/ai-data-centers/ai-rack-density-s-real-limits-power-cooling-failure-risk" target="_blank" rel="noopener" title="AI Rack Density's Real Limits: Power, Cooling, Failure Risk">AI Rack Density's Real Limits: Power, Cooling, Failure Risk</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.servethehome.com/nvidia-spectrum-x-ethernet-multiplane-network-architecture-at-hot-chips-2026/" target="_blank" rel="noopener" title="NVIDIA Spectrum-X Multiplane Network Architecture Demonstrated at Hot Chips 2026">NVIDIA Spectrum-X Multiplane Network Architecture Demonstrated at Hot Chips 2026</a><span class="src">ServeTheHome</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.networkworld.com/article/4111354/arista-rides-ai-wave-but-battle-for-campus-networks-looms.html" target="_blank" rel="noopener" title="Arista Reports $3.036B Q2 Revenue; AI Networking Forecasted at $3.6B for 2026">Arista Reports $3.036B Q2 Revenue; AI Networking Forecasted at $3.6B for 2026</a><span class="src">Network World</span></li>
+      <li><span class="when">Aug 26</span><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m08/cisco-secure-ai-factory-nvidia-rack-scale.html" target="_blank" rel="noopener" title="Cisco Expands Secure AI Factory with NVIDIA for Rack-Scale Architecture with Supermicro Partnership">Cisco Expands Secure AI Factory with NVIDIA for Rack-Scale Architecture with Supermicro Partnership</a><span class="src">Cisco Newsroom</span></li>
+      <li><span class="when">Aug 26</span><a href="https://siliconangle.com/2026/08/25/democratizing-the-ai-data-center-how-cisco-and-nvidia-are-bringing-rack-scale-power-to-the-enterprise/" target="_blank" rel="noopener" title="Democratizing the AI Data Center: Cisco and NVIDIA Bring Rack-Scale Power to Enterprise">Democratizing the AI Data Center: Cisco and NVIDIA Bring Rack-Scale Power to Enterprise</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Aug 25</span><a href="https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/" target="_blank" rel="noopener" title="NVIDIA Spectrum-X Ethernet with MRC Protocol Released as Open Specification">NVIDIA Spectrum-X Ethernet with MRC Protocol Released as Open Specification</a><span class="src">NVIDIA Blog</span></li>
+      <li><span class="when">Aug 23</span><a href="https://atscaleconference.com/events/networking-2026/" target="_blank" rel="noopener" title="Meta Unveils MetaRoCE Protocol for Gigascale AI Clusters at @Scale: Networking 2026">Meta Unveils MetaRoCE Protocol for Gigascale AI Clusters at @Scale: Networking 2026</a><span class="src">At Scale Conference</span></li>
+      <li><span class="when">Aug 23</span><a href="https://nextgeninfra.io/2026-dcnetwork/" target="_blank" rel="noopener" title="2026 Data Center Networking: Scheduled Ethernet and Multi-Vendor Scale-Out Dominance">2026 Data Center Networking: Scheduled Ethernet and Multi-Vendor Scale-Out Dominance</a><span class="src">NextGenInfra Insights</span></li>
+      <li><span class="when">Aug 22</span><a href="https://convergedigest.com/hot-interconnects-2026-ai-networking-scale-up-scale-out-scale-across/" target="_blank" rel="noopener" title="Hot Interconnects 2026: AI Networking Converges Around Scale Up, Scale Out and Scale Across">Hot Interconnects 2026: AI Networking Converges Around Scale Up, Scale Out and Scale Across</a><span class="src">Converge Digest</span></li>
+      <li><span class="when">Aug 22</span><a href="https://convergedigest.com/cisco-ethernet-shared-multi-tenant-ai-fabrics/" target="_blank" rel="noopener" title="Cisco Pushes Ethernet Toward Multi-Tenant AI Fabrics with Job-Aware Networking at Hot Interconnects">Cisco Pushes Ethernet Toward Multi-Tenant AI Fabrics with Job-Aware Networking at Hot Interconnects</a><span class="src">Converge Digest</span></li>
+      <li><span class="when">Aug 21</span><a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/arista-networks-stock-eases-after-price-target-hike-as-ai-growth-lifts/69970124" target="_blank" rel="noopener" title="Arista Networks Stock Gains After August 18 Price Target Hike Amid Strong AI Momentum">Arista Networks Stock Gains After August 18 Price Target Hike Amid Strong AI Momentum</a><span class="src">Ad-Hoc-News</span></li>
+      <li><span class="when">Aug 20</span><a href="https://www.datacenterknowledge.com/networking/ai-data-center-networking-scaling-up-out-and-across-with-102-4t-ethernet" target="_blank" rel="noopener" title="AI Data Center Networking: Scale Up, Out, and Across with 102.4T Ethernet">AI Data Center Networking: Scale Up, Out, and Across with 102.4T Ethernet</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Aug 20</span><a href="https://www.investing.com/news/transcripts/arista-networks-at-rosenblatt-ai-summit-ai-networking-broadens-93CH-4866209" target="_blank" rel="noopener" title="Arista Networks Broadens AI Networking Story Across Scale-Out, Scale-Across, and Scale-Up Domains">Arista Networks Broadens AI Networking Story Across Scale-Out, Scale-Across, and Scale-Up Domains</a><span class="src">Investing.com</span></li>
+      <li><span class="when">Aug 19</span><a href="https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-august-2026" target="_blank" rel="noopener" title="Data Center Hardware Highlights: August 2026">Data Center Hardware Highlights: August 2026</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Aug 19</span><a href="https://247wallst.com/investing/2026/08/19/3-ai-networking-stocks-quietly-dominating-their-niche-in-august-2/" target="_blank" rel="noopener" title="3 AI Networking Stocks Quietly Dominating Their Niche in August">3 AI Networking Stocks Quietly Dominating Their Niche in August</a><span class="src">24/7 Wall St.</span></li>
+      <li><span class="when">Aug 17</span><a href="https://www.arcweb.com/blog/cisco-closes-record-fiscal-2026-ai-driven-networking-demand-extends-industrial-markets" target="_blank" rel="noopener" title="Cisco Closes Record Fiscal 2026 as AI Infrastructure Demand Spreads Beyond Hyperscalers into Enterprise and Industrial Markets">Cisco Closes Record Fiscal 2026 as AI Infrastructure Demand Spreads Beyond Hyperscalers into Enterprise and Industrial Markets</a><span class="src">ARC Advisory Group</span></li>
+      <li><span class="when">Aug 16</span><a href="https://finance.yahoo.com/technology/ai/articles/arista-networks-anet-5-9-211332057.html" target="_blank" rel="noopener" title="Arista Networks Q2 2026: $3.04B Revenue on AI Networking Acceleration, Q3 Guidance Raised to $3.30B">Arista Networks Q2 2026: $3.04B Revenue on AI Networking Acceleration, Q3 Guidance Raised to $3.30B</a><span class="src">Yahoo Finance / Arista Networks</span></li>
+      <li><span class="when">Aug 15</span><a href="https://www.quiverquant.com/news/Fabric.AI+Expands+Industry+Engagement+for+Neural+I/o+Optical+Interconnect+Platform+with+New+NDAs" target="_blank" rel="noopener" title="Fabric.AI Expands Industry Engagement for Neural I/o MicroLED Optical Interconnect Platform with New NDAs">Fabric.AI Expands Industry Engagement for Neural I/o MicroLED Optical Interconnect Platform with New NDAs</a><span class="src">Globe Newswire</span></li>
+      <li><span class="when">Aug 15</span><a href="https://www.digitimes.com/reports/item.php?id=20260731RS402" target="_blank" rel="noopener" title="AI Infrastructure Enters Multi-Architecture Fabric Competition; Optical-Copper Interconnects Determine System Performance">AI Infrastructure Enters Multi-Architecture Fabric Competition; Optical-Copper Interconnects Determine System Performance</a><span class="src">Digitimes</span></li>
+      <li><span class="when">Aug 14</span><a href="https://www.globenewswire.com/news-release/2026/08/11/3342826/0/en/fabric-ai-and-kopin-confirm-plans-to-give-first-public-demonstration-of-neural-i-o-microled-optical-interconnect-at-ces-2027.html" target="_blank" rel="noopener" title="Fabric.AI and Kopin Confirm Neural I/o MicroLED Optical Interconnect Demo at CES 2027">Fabric.AI and Kopin Confirm Neural I/o MicroLED Optical Interconnect Demo at CES 2027</a><span class="src">Globe Newswire</span></li>
+      <li><span class="when">Aug 11</span><a href="https://www.ai-infra-link.com/gpus-alone-cant-fix-your-ai-infrastructure-what-youre-missing/" target="_blank" rel="noopener" title="Data Architecture, Not GPUs, Is the Real AI Bottleneck in 2026 Infrastructure Builds">Data Architecture, Not GPUs, Is the Real AI Bottleneck in 2026 Infrastructure Builds</a><span class="src">AI-Infra-Link</span></li>
+      <li><span class="when">Aug 8</span><a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-august-2026" target="_blank" rel="noopener" title="New Data Center Developments: August 2026">New Data Center Developments: August 2026</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Aug 7</span><a href="https://www.investing.com/news/company-news/arista-q2-fy2026-slides-first-3b-quarter-40-yy-growth-93CH-4836045" target="_blank" rel="noopener" title="Arista Networks Q2 2026: First $3B Quarter on 37.7% YoY Growth, AI Networking Drives Sustained Momentum">Arista Networks Q2 2026: First $3B Quarter on 37.7% YoY Growth, AI Networking Drives Sustained Momentum</a><span class="src">Investing.com</span></li>
+      <li><span class="when">Aug 5</span><a href="https://convergedigest.com/arista-q2-2026-ai-networking-scale-across-1-6t/" target="_blank" rel="noopener" title="Arista Advances 1.6 Terabit Scale-Across Fabric for Distributed AI Infrastructure">Arista Advances 1.6 Terabit Scale-Across Fabric for Distributed AI Infrastructure</a><span class="src">Converge Digest</span></li>
+      <li><span class="when">Aug 5</span><a href="https://www.sdxcentral.com/news/cisco-urges-congress-to-accelerate-ai-native-network-infrastructure/" target="_blank" rel="noopener" title="Cisco Testifies to Senate on AI-Driven Network Traffic Surge, Quantifies Agent Traffic Impact">Cisco Testifies to Senate on AI-Driven Network Traffic Surge, Quantifies Agent Traffic Impact</a><span class="src">SDxCentral</span></li>
+      <li><span class="when">Aug 5</span><a href="https://www.sdxcentral.com/news/sk-hynix-sandisk-unveil-first-standard-for-high-bandwidth-flash/" target="_blank" rel="noopener" title="SK Hynix and SanDisk Standardize High-Bandwidth Flash as HBM Supply Alternative">SK Hynix and SanDisk Standardize High-Bandwidth Flash as HBM Supply Alternative</a><span class="src">SDxCentral</span></li>
+      <li><span class="when">Aug 4</span><a href="https://cdn.asp.events/CLIENT_Kisaco_R_E0D4AD69_B740_B124_D2ADF5A777880773/sites/AI-Infra-Summit-2026/media/libraries/sponsor-editorial/9372-2026-ngi-data-center-networking-report-rev-a3-1-.pdf" target="_blank" rel="noopener" title="2026 Data Center Networking Report: NVLink Scales Rack-Wide, Ethernet Reaches 100K+ Clusters, Standards Consolidate">2026 Data Center Networking Report: NVLink Scales Rack-Wide, Ethernet Reaches 100K+ Clusters, Standards Consolidate</a><span class="src">Next Gen Infrastructure (NGI) Research Brief</span></li>
+      <li><span class="when">Aug 3</span><a href="https://brics-econ.org/next-gen-ai-hardware-2026-accelerators-hbm4-memory-and-networking-trends" target="_blank" rel="noopener" title="Next-Gen AI Hardware 2026: Accelerators, HBM4 Memory, and Networking Trends">Next-Gen AI Hardware 2026: Accelerators, HBM4 Memory, and Networking Trends</a><span class="src">BRICS Economics</span></li>
+      <li><span class="when">Aug 3</span><a href="https://www.rcrwireless.com/20260803/opinion/telco-diary-ai-isac-arms-race" target="_blank" rel="noopener" title="Telcos in AI and ISAC Arms Race: Infrastructure Opportunities Amid Geopolitical Constraints">Telcos in AI and ISAC Arms Race: Infrastructure Opportunities Amid Geopolitical Constraints</a><span class="src">RCR Wireless</span></li>
+      <li><span class="when">Aug 2</span><a href="https://www.techtimes.com/articles/322389/20260731/black-hat-usa-2026-rowhammer-hits-nvidia-gpus-government-takes-keynote-stage.htm" target="_blank" rel="noopener" title="Black Hat USA 2026: GPUBreach Research Shows Rowhammer Attacks Can Escalate From Nvidia GDDR6 Memory">Black Hat USA 2026: GPUBreach Research Shows Rowhammer Attacks Can Escalate From Nvidia GDDR6 Memory</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Aug 2</span><a href="https://tech-insider.org/amd-advancing-ai-2026/" target="_blank" rel="noopener" title="AMD Advancing AI 2026: Helios Rack Pricing at $5.25M, UALink Adoption as Critical Swing Factor">AMD Advancing AI 2026: Helios Rack Pricing at $5.25M, UALink Adoption as Critical Swing Factor</a><span class="src">Tech Insider</span></li>
+      <li><span class="when">Aug 2</span><a href="https://techstartups.com/2026/07/31/top-tech-news-today-july-31-2026-amazon-anthropic-apple-google-microsoft-reddit-sony-suno-more/" target="_blank" rel="noopener" title="Amazon Invests $220B in AI Infrastructure; MediaTek Budgets $5B for Data Center AI Chips">Amazon Invests $220B in AI Infrastructure; MediaTek Budgets $5B for Data Center AI Chips</a><span class="src">Tech Startups</span></li>
+    </ul>
+    <h3 class="month label">July 2026 <span class="n">24</span></h3>
+    <ul class="history">
+      <li><span class="when">Jul 31</span><a href="https://www.techtimes.com/articles/322303/20260730/korea-ai-cluster-subcontract-moves-hardware-phase-c-lab-issues-gpu-orders.htm" target="_blank" rel="noopener" title="South Korea GPU Procurement Advances: C-Lab Approves Supplier Payments for National AI Cluster">South Korea GPU Procurement Advances: C-Lab Approves Supplier Payments for National AI Cluster</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 31</span><a href="https://www.techtimes.com/articles/322367/20260730/eu-launches-ai-gigafactory-bidding-chips-still-american-cash-still-notional.htm" target="_blank" rel="noopener" title="EU AI Gigafactories Call for Tenders Opens With €30 Billion Framework, Limited Public Funding">EU AI Gigafactories Call for Tenders Opens With €30 Billion Framework, Limited Public Funding</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 27</span><a href="https://www.networkworld.com/article/4200086/nvidia-unveils-spectrum-x-networking-platform-designed-to-connect-millions-of-gpus.html" target="_blank" rel="noopener" title="NVIDIA Unveils Spectrum-X and Quantum-X Photonics Switches—Silicon Photonics Integration Reduces Lasers 4x, Power 3.5x for Multi-Datacenter AI Factories">NVIDIA Unveils Spectrum-X and Quantum-X Photonics Switches—Silicon Photonics Integration Reduces Lasers 4x, Power 3.5x for Multi-Datacenter AI Factories</a><span class="src">Network World</span></li>
+      <li><span class="when">Jul 26</span><a href="https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory" target="_blank" rel="noopener" title="SK Group and NVIDIA Announce $500B+ AI Infrastructure Partnership Spanning 2-Gigawatt Vera Rubin Factory and HBM Memory Codevelopment">SK Group and NVIDIA Announce $500B+ AI Infrastructure Partnership Spanning 2-Gigawatt Vera Rubin Factory and HBM Memory Codevelopment</a><span class="src">NVIDIA Newsroom</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.techtimes.com/articles/321257/20260722/amd-advancing-ai-2026-opens-zen-6-venice-helios-open-ai-rack-bet.htm" target="_blank" rel="noopener" title="AMD Advancing AI 2026: Venice Zen 6 EPYC CPUs and Helios Rack-Scale AI System Launch">AMD Advancing AI 2026: Venice Zen 6 EPYC CPUs and Helios Rack-Scale AI System Launch</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.fierce-network.com/cloud/arista-rides-ai-past-cisco-now-nvidia-looms" target="_blank" rel="noopener" title="Arista Leads Data Center Ethernet Switch Market Amid AI Fabric Competition">Arista Leads Data Center Ethernet Switch Market Amid AI Fabric Competition</a><span class="src">Fierce Network</span></li>
+      <li><span class="when">Jul 24</span><a href="https://www.fierce-network.com/cloud/amds-helios-bets-ai-networking-open-ethernet" target="_blank" rel="noopener" title="AMD Helios AI Rack Launches with 72-GPU Open Ethernet Fabric, Challenges Nvidia Proprietary Stack">AMD Helios AI Rack Launches with 72-GPU Open Ethernet Fabric, Challenges Nvidia Proprietary Stack</a><span class="src">Fierce Network</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.hpcwire.com/off-the-wire/nvidia-unveils-spectrum-6-ethernet-for-gigascale-ai-factories/" target="_blank" rel="noopener" title="NVIDIA Unveils Spectrum-6 Ethernet for Gigascale AI Factories">NVIDIA Unveils Spectrum-6 Ethernet for Gigascale AI Factories</a><span class="src">HPCwire</span></li>
+      <li><span class="when">Jul 23</span><a href="https://blogs.nvidia.com/blog/spectrum-x-ethernet-mrc/" target="_blank" rel="noopener" title="NVIDIA Spectrum-X MRC Open-Sourced: Multipath Reliable Connection Protocol Released for AI Factory Networking">NVIDIA Spectrum-X MRC Open-Sourced: Multipath Reliable Connection Protocol Released for AI Factory Networking</a><span class="src">NVIDIA Blog</span></li>
+      <li><span class="when">Jul 22</span><a href="https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/" target="_blank" rel="noopener" title="Built for Vera Rubin, NVIDIA Spectrum-6 Arrives in Gigascale AI Factories">Built for Vera Rubin, NVIDIA Spectrum-6 Arrives in Gigascale AI Factories</a><span class="src">NVIDIA Blog</span></li>
+      <li><span class="when">Jul 20</span><a href="https://nextgeninfra.io/2026-dcnetwork/" target="_blank" rel="noopener" title="2026 Data Center Networking – NextGenInfra Insights">2026 Data Center Networking – NextGenInfra Insights</a><span class="src">NextGenInfra</span></li>
+      <li><span class="when">Jul 19</span><a href="https://siliconangle.com/2026/07/16/ai-factory-networking-nvidia-analysis-cubeconversations/" target="_blank" rel="noopener" title="Inside Nvidia's Role in AI Factory Networking — Enterprises Rethinking Infrastructure Priorities">Inside Nvidia's Role in AI Factory Networking — Enterprises Rethinking Infrastructure Priorities</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Jul 18</span><a href="https://www.barchart.com/story/news/3286107/what-to-expect-from-arista-networks-q2-2026-earnings-report" target="_blank" rel="noopener" title="Arista Networks Q2 2026 Earnings Alert: Deferred Revenue Jumps $643M as 7060XE7 Supply Ramps">Arista Networks Q2 2026 Earnings Alert: Deferred Revenue Jumps $643M as 7060XE7 Supply Ramps</a><span class="src">Barchart</span></li>
+      <li><span class="when">Jul 17</span><a href="https://news.microsoft.com/source/2026/07/15/3m-and-microsoft-announce-strategic-partnership-to-advance-ai-data-center-infrastructure-and-enterprise-transformation/" target="_blank" rel="noopener" title="3M and Microsoft announce strategic partnership to advance AI data center infrastructure">3M and Microsoft announce strategic partnership to advance AI data center infrastructure</a><span class="src">Microsoft Newsroom / PRNewswire</span></li>
+      <li><span class="when">Jul 13</span><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-showcases-industry-leading-solutions-scaling-ai" target="_blank" rel="noopener" title="Broadcom showcases industry-leading AI infrastructure solutions at OFC 2026">Broadcom showcases industry-leading AI infrastructure solutions at OFC 2026</a><span class="src">Broadcom Inc.</span></li>
+      <li><span class="when">Jul 10</span><a href="https://www.sdxcentral.com/news/drivenets-joins-scale-across-space-with-50-mile-distributed-gpu-supercluster-network/" target="_blank" rel="noopener" title="DriveNets Announces Industry's First Commercial Scale-Across AI Supercluster with 111.2 Tbps Cross-Data-Center AI Fabric">DriveNets Announces Industry's First Commercial Scale-Across AI Supercluster with 111.2 Tbps Cross-Data-Center AI Fabric</a><span class="src">SDxCentral</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.techrepublic.com/article/news-ai-networking-bottleneck/" target="_blank" rel="noopener" title="AI Data Centers Face a Networking Bottleneck as GPU Clusters Grow">AI Data Centers Face a Networking Bottleneck as GPU Clusters Grow</a><span class="src">TechRepublic</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.forrester.com/blogs/hpe-discover-2026-the-juniper-effect-comes-into-focus/" target="_blank" rel="noopener" title="HPE Discover 2026: The Juniper Effect Comes Into Focus">HPE Discover 2026: The Juniper Effect Comes Into Focus</a><span class="src">Forrester</span></li>
+      <li><span class="when">Jul 8</span><a href="https://www.datacenterknowledge.com/networking/enter-the-network-supercycle-preparing-data-center-networks-for-ai-s-next-wave" target="_blank" rel="noopener" title="Preparing Data Center Networks for AI's Next Wave">Preparing Data Center Networks for AI's Next Wave</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Jul 3</span><a href="https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-july-2026" target="_blank" rel="noopener" title="New Data Center Developments: July 2026">New Data Center Developments: July 2026</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Jul 3</span><a href="https://aixia.se/en/when-the-gpus-are-waiting-for-the-network/" target="_blank" rel="noopener" title="When the GPUs are waiting for the network">When the GPUs are waiting for the network</a><span class="src">Aixia</span></li>
+      <li><span class="when">Jul 2</span><a href="https://aixia.se/en/when-the-gpus-are-waiting-for-the-network/" target="_blank" rel="noopener" title="When the GPUs are waiting for the network">When the GPUs are waiting for the network</a><span class="src">Aixia</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.spheron.network/blog/ai-data-center-power-constraints-2026/" target="_blank" rel="noopener" title="Power-Bound, Not GPU-Bound: AI Data Center Power Constraints Are the Real 2026 Bottleneck">Power-Bound, Not GPU-Bound: AI Data Center Power Constraints Are the Real 2026 Bottleneck</a><span class="src">Spheron Blog</span></li>
+      <li><span class="when">Jul 1</span><a href="https://blogs.cisco.com/datacenter/powering-the-future-of-ai-ciscos-breakthroughs-in-secure-ai-networking-with-nvidia" target="_blank" rel="noopener" title="Powering the Future of AI: Cisco's Breakthroughs in Secure AI Networking with NVIDIA">Powering the Future of AI: Cisco's Breakthroughs in Secure AI Networking with NVIDIA</a><span class="src">Cisco Blogs</span></li>
+    </ul>
+    <h3 class="month label">June 2026 <span class="n">28</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 30</span><a href="https://startupfortune.com/nvidia-has-taken-the-top-spot-in-datacenter-ethernet-switching-and-it-now-controls-the-full-ai-stack/" target="_blank" rel="noopener" title="NVIDIA Market Dominance in Datacenter Ethernet: From 4% to 21.5% Share in Two Years">NVIDIA Market Dominance in Datacenter Ethernet: From 4% to 21.5% Share in Two Years</a><span class="src">Startup Fortune</span></li>
+      <li><span class="when">Jun 30</span><a href="https://simplywall.st/stocks/us/tech/nyse-anet/arista-networks/news/aristas-1-6-terabit-ai-ethernet-platforms-could-be-a-game-cha/" target="_blank" rel="noopener" title="Arista 7060XE7 Series: 1.6T Rack-Scale AI Networking Platforms">Arista 7060XE7 Series: 1.6T Rack-Scale AI Networking Platforms</a><span class="src">Simply Wall St</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.datacenterknowledge.com/infrastructure/hpe-puts-networking-at-the-center-of-its-ai-strategy-at-discover-2026" target="_blank" rel="noopener" title="HPE Juniper Integration Elevates Networking to AI Infrastructure Control Plane">HPE Juniper Integration Elevates Networking to AI Infrastructure Control Plane</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Jun 29</span><a href="https://windowsnews.ai/article/nvidia-becomes-largest-data-center-ethernet-switch-vendor-in-q1-2026-idc-says.431907" target="_blank" rel="noopener" title="NVIDIA Becomes Largest Data-Center Ethernet Switch Vendor in Q1 2026, IDC Says">NVIDIA Becomes Largest Data-Center Ethernet Switch Vendor in Q1 2026, IDC Says</a><span class="src">Windows News AI</span></li>
+      <li><span class="when">Jun 29</span><a href="https://futurumgroup.com/insights/hpe-discover-2026-a-coherent-ai-story-that-now-has-to-convert" target="_blank" rel="noopener" title="HPE Expands Self-Driving Networks Across AI Factories With Juniper Integration">HPE Expands Self-Driving Networks Across AI Factories With Juniper Integration</a><span class="src">Futurum Group</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.kavout.com/market-lens/is-arista-networks-q1-2026-performance-a-sign-of-unstoppable-ai-momentum" target="_blank" rel="noopener" title="Arista Q1 2026: 35% Revenue Growth Driven by AI Networking Demand, XPO Optics Announced">Arista Q1 2026: 35% Revenue Growth Driven by AI Networking Demand, XPO Optics Announced</a><span class="src">Kavout</span></li>
+      <li><span class="when">Jun 24</span><a href="https://fortune.com/2026/06/22/nvidia-upscale-ai-next-ciscoand-seligman-ventures-premji/" target="_blank" rel="noopener" title="Upscale AI Raises $190 Million Series A-1 at $2 Billion Valuation, Reaches $500M Total Funding">Upscale AI Raises $190 Million Series A-1 at $2 Billion Valuation, Reaches $500M Total Funding</a><span class="src">Fortune</span></li>
+      <li><span class="when">Jun 24</span><a href="https://www.datacenterknowledge.com/networking/hpe-targets-gpu-utilization-with-new-ai-networking-portfolio" target="_blank" rel="noopener" title="HPE Discover 2026: Juniper Integration Ships AI Networking Stack with Agentic AI Focus">HPE Discover 2026: Juniper Integration Ships AI Networking Stack with Agentic AI Focus</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Jun 24</span><a href="https://newsroom.equinix.com/2026-06-16-Equinix-Collaborates-with-Cisco-and-NVIDIA-to-Deploy-Secure-AI-Factories-Across-Global-Data-Center-Footprint" target="_blank" rel="noopener" title="Equinix Deploys Cisco Secure AI Factory with NVIDIA Globally, Launches P.A.T.H. Lab for AI Infrastructure Validation">Equinix Deploys Cisco Secure AI Factory with NVIDIA Globally, Launches P.A.T.H. Lab for AI Infrastructure Validation</a><span class="src">Equinix Newsroom</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.techtimes.com/articles/318609/20260618/hpe-discover-2026-closes-juniper-integration-ships-ai-networking-stack.htm" target="_blank" rel="noopener" title="HPE Discover 2026 Closes: Juniper Integration Ships Unified AI Networking Stack with UALink Support">HPE Discover 2026 Closes: Juniper Integration Ships Unified AI Networking Stack with UALink Support</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.datacenterknowledge.com/infrastructure/hpe-puts-networking-at-the-center-of-its-ai-strategy-at-discover-2026" target="_blank" rel="noopener" title="HPE Positions Networking as AI's Control Plane at Discover 2026; Extends Marvis Self-Driving Capabilities Across Portfolio">HPE Positions Networking as AI's Control Plane at Discover 2026; Extends Marvis Self-Driving Capabilities Across Portfolio</a><span class="src">Data Center Knowledge</span></li>
+      <li><span class="when">Jun 23</span><a href="https://nand-research.com/hpe-discover-2026-recap/" target="_blank" rel="noopener" title="HPE Discover 2026 Recap: First True Look at HPE + Juniper as Single AI Infrastructure Strategy">HPE Discover 2026 Recap: First True Look at HPE + Juniper as Single AI Infrastructure Strategy</a><span class="src">NAND Research</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.techtimes.com/articles/318609/20260618/hpe-discover-2026-closes-juniper-integration-ships-ai-networking-stack.htm" target="_blank" rel="noopener" title="HPE Discover 2026: Juniper Integration Ships UALink-Native Scale-Up Switch for AMD AI Platforms">HPE Discover 2026: Juniper Integration Ships UALink-Native Scale-Up Switch for AMD AI Platforms</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 22</span><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000051/q1fy27cfocommentary.htm" target="_blank" rel="noopener" title="NVIDIA Data Center Networking Revenue Hits Record $14.8B on Spectrum-X Momentum">NVIDIA Data Center Networking Revenue Hits Record $14.8B on Spectrum-X Momentum</a><span class="src">SEC Filing</span></li>
+      <li><span class="when">Jun 22</span><a href="https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/" target="_blank" rel="noopener" title="FERC Orders Grid Fast-Track for AI Data Center Interconnections Amid Power Supply Constraints">FERC Orders Grid Fast-Track for AI Data Center Interconnections Amid Power Supply Constraints</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.hpcwire.com/off-the-wire/marvell-unveils-102-4-tbps-switch-purpose-built-for-ai-and-cloud-data-center-infrastructure/" target="_blank" rel="noopener" title="Marvell Teralynx T100: Industry's First 102.4 Tbps Switch Purpose-Built for AI Data Centers">Marvell Teralynx T100: Industry's First 102.4 Tbps Switch Purpose-Built for AI Data Centers</a><span class="src">Marvell Technology / HPCwire</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.arista.com/en/company/news/press-release/24102-pr-20260609" target="_blank" rel="noopener" title="Arista 7060XE7 Series: 1.6T Rack-Scale AI Fabric Networking Platforms">Arista 7060XE7 Series: 1.6T Rack-Scale AI Fabric Networking Platforms</a><span class="src">Arista Networks</span></li>
+      <li><span class="when">Jun 21</span><a href="https://www.sdxcentral.com/news/rc-wiley/" target="_blank" rel="noopener" title="Digital Realty ServiceFabric MCP: Programmable AI Infrastructure Control Across 800+ Data Centers">Digital Realty ServiceFabric MCP: Programmable AI Infrastructure Control Across 800+ Data Centers</a><span class="src">Digital Realty / SDxCentral</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.bctechnology.com/news/2026/6/19/Arista-Introduces-Next-Generation-1.6Terabit-Portfolio-for-AI-Fabrics.cfm?id=50542" target="_blank" rel="noopener" title="Arista Introduces 1.6T Terabit Networking Portfolio for Rack-Scale AI Fabrics with Broadcom Tomahawk 6">Arista Introduces 1.6T Terabit Networking Portfolio for Rack-Scale AI Fabrics with Broadcom Tomahawk 6</a><span class="src">T-Net News</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.techtimes.com/articles/318609/20260618/hpe-discover-2026-closes-juniper-integration-ships-ai-networking-stack.htm" target="_blank" rel="noopener" title="HPE Delivers Juniper Integration: Unified AI Networking Stack with UALink-Native QFX Switches">HPE Delivers Juniper Integration: Unified AI Networking Stack with UALink-Native QFX Switches</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 20</span><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m06/the-key-to-agentic-ai-adoption-the-network.html" target="_blank" rel="noopener" title="Cisco Research Quantifies Agentic AI Traffic Surge: 450% More Transactions Than Traditional Tools">Cisco Research Quantifies Agentic AI Traffic Surge: 450% More Transactions Than Traditional Tools</a><span class="src">Cisco Newsroom</span></li>
+      <li><span class="when">Jun 16</span><a href="https://www.arista.com/en/company/news/press-release/24102-pr-20260609" target="_blank" rel="noopener" title="Arista Introduces Next-Generation 1.6Terabit Portfolio for AI Fabrics">Arista Introduces Next-Generation 1.6Terabit Portfolio for AI Fabrics</a><span class="src">Arista Networks</span></li>
+      <li><span class="when">Jun 13</span><a href="https://www.arista.com/en/company/news/press-release/24102-pr-20260609" target="_blank" rel="noopener" title="Arista Introduces 1.6T Networking Portfolio for Rack-Scale AI Infrastructure">Arista Introduces 1.6T Networking Portfolio for Rack-Scale AI Infrastructure</a><span class="src">Arista Networks</span></li>
+      <li><span class="when">Jun 12</span><a href="https://www.arista.com/en/company/news/press-release/24102-pr-20260609" target="_blank" rel="noopener" title="Arista Introduces 1.6T Ethernet Portfolio for Rack-Scale AI Fabrics with Liquid-Cooled Switching">Arista Introduces 1.6T Ethernet Portfolio for Rack-Scale AI Fabrics with Liquid-Cooled Switching</a><span class="src">Arista Networks</span></li>
+      <li><span class="when">Jun 12</span><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000051/q1fy27pr.htm" target="_blank" rel="noopener" title="Nvidia Data Center Networking Revenue Hits Record $14.8B on NVLink and Spectrum-X Ethernet Ramp">Nvidia Data Center Networking Revenue Hits Record $14.8B on NVLink and Spectrum-X Ethernet Ramp</a><span class="src">Nvidia SEC Filing</span></li>
+      <li><span class="when">Jun 11</span><a href="https://www.lightreading.com/6g/nvidia-has-a-radical-new-ai-ran-plan-a-6g-radio-unit-chip" target="_blank" rel="noopener" title="Nvidia has a radical new AI-RAN plan – a 6G radio unit chip">Nvidia has a radical new AI-RAN plan – a 6G radio unit chip</a><span class="src">Light Reading</span></li>
+      <li><span class="when">Jun 11</span><a href="https://techblog.comsoc.org/2026/06/09/analysis-nvidias-rumored-new-6g-ai-ran-likely-features-functions-and-industry-impact/" target="_blank" rel="noopener" title="Analysis: Nvidia's rumored new 6G AI-RAN – likely features/functions and industry impact">Analysis: Nvidia's rumored new 6G AI-RAN – likely features/functions and industry impact</a><span class="src">IEEE ComSoc Technology Blog</span></li>
+      <li><span class="when">Jun 11</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-8-2026" target="_blank" rel="noopener" title="AI News Today - June 8, 2026: 16 Biggest Stories">AI News Today - June 8, 2026: 16 Biggest Stories</a><span class="src">Build Fast with AI</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

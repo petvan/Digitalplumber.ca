@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Model Providers — Topics — Digital Plumber</title>
+<meta name="description" content="AI Model Providers in Digital Plumber's daily briefings: 141 stories, 12 in the last 7 days. Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.">
+<link rel="canonical" href="https://digitalplumber.ca/topics/ai-models/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="AI Model Providers — Topics — Digital Plumber">
+<meta property="og:description" content="AI Model Providers in Digital Plumber's daily briefings: 141 stories, 12 in the last 7 days. Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.">
+<meta property="og:url" content="https://digitalplumber.ca/topics/ai-models/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
+</header>
+<div class="wrap"><div class="toolbar"><nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/">Archive</a></nav><a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+
+  <p class="kicker label"><a href="/topics/">Topics</a></p>
+  <h1 class="page-title">AI Model Providers</h1>
+  <p class="page-dek">Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.</p>
+  <div class="stat-row">
+    <div><span class="stat">141</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">12 <span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></span><span class="label">last 7 days · 6 the 7 before</span></div>
+    <div><span class="stat">40</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">Jun 20</span><span class="label">first covered · 2026</span></div>
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 13, 7, 6, 10, 13, 14, 9, 6, 12, 6, 6, 12">
+      <div class="bar-col" title="Week of Jul 4: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:93%"></div></div>
+        <span class="bar-label">Jul 4</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 11: 7 stories">
+        <span class="bar-n">7</span>
+        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
+        <span class="bar-label">Jul 11</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 18: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Jul 18</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 25: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:71%"></div></div>
+        <span class="bar-label">Jul 25</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 1: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:93%"></div></div>
+        <span class="bar-label">Aug 1</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 8: 14 stories">
+        <span class="bar-n">14</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 8</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 15: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:64%"></div></div>
+        <span class="bar-label">Aug 15</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 22: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Aug 22</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 29: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:86%"></div></div>
+        <span class="bar-label">Aug 29</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 5: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Sep 5</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 12: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Sep 12</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 19: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:86%"></div></div>
+        <span class="bar-label">Sep 19</span>
+      </div>
+    </div>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
+    <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>SiliconANGLE</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5.5 and OpenAI counters with two cheaper GPT-6 models">Anthropic and OpenAI cut model prices on the same day</a></h3>
+        <p class="summary">Anthropic released Claude Opus 5.5 with 20% price cuts (to $4/$20 per million tokens, 60% reduction on cache reads) and improved safety metrics; OpenAI immediately countered with GPT-6 Sol and Luna at half the cost of predecessors, with Sol at $2/$10 and Luna at $0.10/$0.50 per million tokens.</p><p class="why-line"><span class="label">Why it matters</span> Direct API cost reduction and competitive positioning changes how teams evaluate model economics for production workloads and agentic deployments.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Decrypt</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5" target="_blank" rel="noopener" title="OpenAI Launches GPT-6 Sol and Luna Minutes After Anthropic Drops Claude Opus 5.5">OpenAI launches cheaper GPT-6 Sol and Luna models</a></h3>
+        <p class="summary">OpenAI launched GPT-6 Sol and Luna on September 22, minutes after Anthropic's Claude Opus 5.5 release. Sol costs $2 per million input tokens and $10 output (down from $4/$20); Luna drops to $0.10/$0.50 (from $0.20/$1.20). Both models sit below GPT-6 Astra.</p><p class="why-line"><span class="label">Why it matters</span> Pricing halving and rapid release cycles create new cost tiers for both enterprise and edge-use-case deployments, affecting model selection strategies.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>GuruFocus</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model" target="_blank" rel="noopener" title="Google's DeepMind Nears Launch of Gemini 4 AI Model">Google DeepMind says Gemini 4 is in post-training</a></h3>
+        <p class="summary">Google DeepMind announced on September 24 that Gemini 4 is in early post-training phase, with expected release before year-end. The model is positioned to compete with recent Anthropic and OpenAI launches.</p><p class="why-line"><span class="label">Why it matters</span> Gemini 4 timeline signals Google's three-way competitive refresh cadence and provides practitioners a near-term window for evaluating multimodal reasoning capabilities.</p>
+        <p class="edition label"><a href="/archives/2026-09-25.html">Sep 25, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>TechCrunch</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/" target="_blank" rel="noopener" title="OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements">OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements</a></h3>
+        <p class="summary">OpenAI expanded the GPT-6 generation with updated Sol and Luna models that extend Astra's benefits by making that intelligence more efficient and accessible. Both models feature a 50% price cut for developers, with Sol cutting factual error rates in half compared to GPT-5.6 Sol. On AutomationBench and DeepSWE 1.1 benchmarks, GPT-6 Sol matched or approached Anthropic's Fable 5 and Opus 5 models at 80–90% lower task costs.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Vellum</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained" target="_blank" rel="noopener" title="Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost">Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost</a></h3>
+        <p class="summary">Anthropic released Claude Opus 5.5 on September 22, 2026, less than two months after Opus 5. The headline pitch is simple: it delivers Claude Fable 5.1-class performance while cutting execution costs by roughly 40% compared to Opus 5. Pricing drops 20% on raw tokens to $4 per million input tokens and $20 per million output tokens, while prompt cache reads drop 60% down to $0.20 per million.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Yahoo Finance</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html" target="_blank" rel="noopener" title="Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline">Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline</a></h3>
+        <p class="summary">Google DeepMind has transitioned its next-generation model, Gemini 4, into the early post-training phase, confirmed by Koray Kavukcuoglu at The Information AI Agenda Live Summit on September 23-24, 2026. Kavukcuoglu signaled an aggressive timeline: intention to roll out an early post-training version as soon as possible, with no specific date but a target much earlier than end of year. This marks a critical pivot for a company whose current frontier offering sits 40 percent behind the market leaders on the standard intelligence benchmark.</p>
+        <p class="edition label"><a href="/archives/2026-09-24.html">Sep 24, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>VentureBeat</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price" target="_blank" rel="noopener" title="Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents">Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents</a></h3>
+        <p class="summary">Anthropic released Claude Opus 5.5 on September 22, 2026, delivering Fable 5.1-class performance while cutting execution costs by roughly 40% compared to Opus 5. Pricing drops 20% on raw tokens to $4 per million input tokens and $20 per million output tokens, while prompt cache reads drop 60% to $0.20 per million. According to Artificial Analysis, Opus 5.5 achieved top spot on their Intelligence Index with a score of 58 at max effort, leading on six of ten core evaluations including Humanity's Last Exam (61.4%) and SciCode (66.9%).</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>VentureBeat</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more" target="_blank" rel="noopener" title="OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture">OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture</a></h3>
+        <p class="summary">OpenAI released GPT-6 Sol and Luna on September 22, 2026, with permanent pricing cutting API costs 50% versus GPT-5.6 series. Sol runs at $2 per million input tokens and $10 per million output; Luna at $0.10 and $0.50. Together with Astra at $10/$50, OpenAI now fields a three-tier family spanning enterprise reasoning to high-volume clerical work. Both models were trained with similar methods to Astra but optimized for speed and cost through improvements in caching and inference.</p>
+        <p class="edition label"><a href="/archives/2026-09-23.html">Sep 23, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>OpenAI Blog / TechCrunch</b> · Sep 21, 2026 · <span class="stype">Research</span></p>
+        <h3><a href="https://openai.com/index/advisory-group-on-mathematics-and-artificial-intelligence/" target="_blank" rel="noopener" title="OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians">OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians</a></h3>
+        <p class="summary">OpenAI's internal model trained from August 28 has resolved more than 100 long-standing open problems across mathematics including Navier–Stokes. The company formed an independent Advisory Group on Mathematics and AI hosted at Princeton, with nine mathematicians including Timothy Gowers and Edward Witten tasked with coordinating the release of unpublished results.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>xAI / GitHub Changelog</b> · Sep 21, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing">xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing</a></h3>
+        <p class="summary">xAI released Grok 4.7 on September 21 as its most capable coding and knowledge-work model, featuring a 2.1 trillion parameter base (40% larger than 4.6), longer RL training on harder multi-hour tasks, and a redesigned safeguard stack—all at identical $2/$6 per-million-token pricing to Grok 4.6.</p>
+        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
+      </li>
+    </ol>
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">131 earlier stories</span></div>
+    
+    <h3 class="month label">September 2026 <span class="n">23</span></h3>
+    <ul class="history">
+      <li><span class="when">Sep 21</span><a href="https://spectrumlocalnews.com/us/snplus/business/2026/09/18/anthropic-claude-helping-to-build-next-version" target="_blank" rel="noopener" title="Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement">Anthropic Claude now leads 26% of internal R&amp;D work; rapid trajectory toward recursive self-improvement</a><span class="src">Spectrum Local News</span></li>
+      <li><span class="when">Sep 20</span><a href="https://www.bloomberg.com/news/articles/2026-09-17/anthropic-says-claude-drives-26-of-its-research-and-development" target="_blank" rel="noopener" title="Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start">Anthropic Says Claude Now Drives 26% of Its R&amp;D Work—Up From Zero at Year Start</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Sep 18</span><a href="https://www.clickondetroit.com/business/2026/09/18/anthropic-says-its-model-claude-is-helping-to-build-the-next-version-of-itself/" target="_blank" rel="noopener" title="Anthropic's Claude now leads 26% of company R&amp;D tasks; 90% done in collaboration with model">Anthropic's Claude now leads 26% of company R&amp;D tasks; 90% done in collaboration with model</a><span class="src">AP (via multiple outlets)</span></li>
+      <li><span class="when">Sep 17</span><a href="https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs" target="_blank" rel="noopener" title="Claude for Small Business Expands to 43 Workflows, 27 Integrations">Claude for Small Business Expands to 43 Workflows, 27 Integrations</a><span class="src">Claude by Anthropic</span></li>
+      <li><span class="when">Sep 17</span><a href="https://www.axios.com/2026/09/16/google-deepmind-institute-agi" target="_blank" rel="noopener" title="DeepMind Institute Launches: Public Forum for AGI Safety, Governance, and Societal Impact Research">DeepMind Institute Launches: Public Forum for AGI Safety, Governance, and Societal Impact Research</a><span class="src">Axios / Google DeepMind</span></li>
+      <li><span class="when">Sep 16</span><a href="https://www.androidheadlines.com/2026/09/google-is-finally-letting-its-own-engineers-use-anthropics-claude-ai-coding-tools.html" target="_blank" rel="noopener" title="Google opens Claude Opus 5 access to all engineers via Antigravity, breaking internal-only Gemini policy">Google opens Claude Opus 5 access to all engineers via Antigravity, breaking internal-only Gemini policy</a><span class="src">Business Insider</span></li>
+      <li><span class="when">Sep 14</span><a href="https://sakana.ai/fugu-max-release/" target="_blank" rel="noopener" title="Sakana AI launches Fugu Max and Ultra v2: learned orchestration architecture with 40-60% lower output costs">Sakana AI launches Fugu Max and Ultra v2: learned orchestration architecture with 40-60% lower output costs</a><span class="src">Sakana AI / AI Weekly</span></li>
+      <li><span class="when">Sep 13</span><a href="https://openai.com/index/introducing-the-agents-api/" target="_blank" rel="noopener" title="OpenAI Launches Agents API in Public Beta With Managed Codex Harness">OpenAI Launches Agents API in Public Beta With Managed Codex Harness</a><span class="src">OpenAI</span></li>
+      <li><span class="when">Sep 11</span><a href="https://siliconangle.com/2026/09/10/deepseek-releases-v4-1-flash-says-it-outperforms-flagship-v4-pro/" target="_blank" rel="noopener" title="DeepSeek V4.1-Flash: 552B MoE with 8B active parameters outperforms V4 Pro, retires predecessor Sept 14">DeepSeek V4.1-Flash: 552B MoE with 8B active parameters outperforms V4 Pro, retires predecessor Sept 14</a><span class="src">SiliconANGLE</span></li>
+      <li><span class="when">Sep 10</span><a href="https://www.marktechpost.com/2026/09/10/deepseek-ai-released-deepseek-v4-1-flash-with-1m-context-fp4-kv-cache-and-cross-layer-attention-reuse/" target="_blank" rel="noopener" title="DeepSeek-V4.1-Flash ships September 10 with native multimodal MoE, 552B backbone, 1M context, and routing V4 Pro to Flash pricing">DeepSeek-V4.1-Flash ships September 10 with native multimodal MoE, 552B backbone, 1M context, and routing V4 Pro to Flash pricing</a><span class="src">MarkTechPost</span></li>
+      <li><span class="when">Sep 6</span><a href="https://www.vellum.ai/blog/claude-fable-5-1-mythos-5-1-benchmarks-explained" target="_blank" rel="noopener" title="Claude Fable 5.1 &amp; Claude Mythos 5.1 Benchmarks Explained">Claude Fable 5.1 &amp; Claude Mythos 5.1 Benchmarks Explained</a><span class="src">Vellum</span></li>
+      <li><span class="when">Sep 6</span><a href="https://www.vellum.ai/blog/gpt-6-astra-benchmarks-explained" target="_blank" rel="noopener" title="GPT-6 Astra Benchmarks Explained">GPT-6 Astra Benchmarks Explained</a><span class="src">Vellum</span></li>
+      <li><span class="when">Sep 5</span><a href="https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html" target="_blank" rel="noopener" title="OpenAI Begins Rolling Out GPT-6 Astra, First Model to Hit Critical Cybersecurity Threshold">OpenAI Begins Rolling Out GPT-6 Astra, First Model to Hit Critical Cybersecurity Threshold</a><span class="src">CNBC</span></li>
+      <li><span class="when">Sep 5</span><a href="https://gizmodo.com/google-deepmind-just-rolled-out-its-most-accurate-ai-global-weather-model-2000807015" target="_blank" rel="noopener" title="Google DeepMind Launches WeatherNext 3: 50% More Accurate Precipitation Forecasts from Hourly Satellite Data">Google DeepMind Launches WeatherNext 3: 50% More Accurate Precipitation Forecasts from Hourly Satellite Data</a><span class="src">Gizmodo</span></li>
+      <li><span class="when">Sep 4</span><a href="https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/" target="_blank" rel="noopener" title="WeatherNext 3: Google DeepMind delivers hourly global weather forecasts from raw satellite data">WeatherNext 3: Google DeepMind delivers hourly global weather forecasts from raw satellite data</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Sep 4</span><a href="https://www.hokanews.com/2026/09/google-launches-gemini-38-flash-with.html" target="_blank" rel="noopener" title="Gemini 3.8 Flash (Skimaki) shipping with improved coding capabilities as Google accelerates release cadence">Gemini 3.8 Flash (Skimaki) shipping with improved coding capabilities as Google accelerates release cadence</a><span class="src">9to5Google</span></li>
+      <li><span class="when">Sep 3</span><a href="https://tech-insider.org/anthropic-claude-fable-5-1-mythos-5-1-launch-2026/" target="_blank" rel="noopener" title="Claude Fable 5.1 and Mythos 5.1: 75% Cache Cost Reduction with Safeguard Split Architecture">Claude Fable 5.1 and Mythos 5.1: 75% Cache Cost Reduction with Safeguard Split Architecture</a><span class="src">Tech Insider</span></li>
+      <li><span class="when">Sep 3</span><a href="https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs/" target="_blank" rel="noopener" title="Enterprise Frontier Safeguards: Customer-Controlled Data Retention Decouples Privacy from Misuse Detection">Enterprise Frontier Safeguards: Customer-Controlled Data Retention Decouples Privacy from Misuse Detection</a><span class="src">MarkTechPost</span></li>
+      <li><span class="when">Sep 3</span><a href="https://tech-insider.org/gemini-3-8-flash-leak-ai-price-war-2026/" target="_blank" rel="noopener" title="Gemini 3.8 Flash: Third Flash Release in Six Weeks Maintains Held Pricing, Adds Specialized Cyber Variant">Gemini 3.8 Flash: Third Flash Release in Six Weeks Maintains Held Pricing, Adds Specialized Cyber Variant</a><span class="src">Tech Insider</span></li>
+      <li><span class="when">Sep 2</span><a href="https://beam.ai/agentic-insights/ai-model-cutoffs-single-vendor-concentration-risk" target="_blank" rel="noopener" title="OpenAI Cuts Cursor Access November 12, Exposes Single-Vendor AI Concentration Risk">OpenAI Cuts Cursor Access November 12, Exposes Single-Vendor AI Concentration Risk</a><span class="src">Beam (agentic-insights)</span></li>
+      <li><span class="when">Sep 2</span><a href="https://www.nocode.tech/article/late-july-and-august-will-retire-19-ai-models-and-apis-heres-your-no-code-survival-guide" target="_blank" rel="noopener" title="19 AI Model Retirements Hit Between August 30–31; Assistants API Shuts Down, Sonnet 5 Price Hold Surprises">19 AI Model Retirements Hit Between August 30–31; Assistants API Shuts Down, Sonnet 5 Price Hold Surprises</a><span class="src">NoCode.Tech</span></li>
+      <li><span class="when">Sep 2</span><a href="https://capitalandcompute.net/blog/new-ai-models-august-2026/" target="_blank" rel="noopener" title="August 2026 Model Churn: 12 New Releases, GLM-5.3-Flash Leads, Sonnet 5 Prices Hold">August 2026 Model Churn: 12 New Releases, GLM-5.3-Flash Leads, Sonnet 5 Prices Hold</a><span class="src">Capital and Compute</span></li>
+      <li><span class="when">Sep 1</span><a href="https://www.eesel.ai/blog/qwen38-flash-next-review" target="_blank" rel="noopener" title="Alibaba Qwen3.8-Flash-Next: 125B MoE Architecture Preview with 6B Active Parameters Released August 26">Alibaba Qwen3.8-Flash-Next: 125B MoE Architecture Preview with 6B Active Parameters Released August 26</a><span class="src">eesel AI</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">45</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 31</span><a href="https://qz.com/anthropic-model-hardware-standard-ai-robots-lab-equipment-082826" target="_blank" rel="noopener" title="Anthropic Model Hardware Standard: Standardized Driver for AI to Operate Lab Equipment">Anthropic Model Hardware Standard: Standardized Driver for AI to Operate Lab Equipment</a><span class="src">Quartz</span></li>
+      <li><span class="when">Aug 30</span><a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/" target="_blank" rel="noopener" title="Google DeepMind Pilots World's First Double-Blind AI Evaluations Using Confidential Computing">Google DeepMind Pilots World's First Double-Blind AI Evaluations Using Confidential Computing</a><span class="src">Google DeepMind Blog</span></li>
+      <li><span class="when">Aug 29</span><a href="https://datanorth.ai/news/z-ai-releases-glm-5-3-flash" target="_blank" rel="noopener" title="Z.ai Releases GLM-5.3-Flash: 320B-A18B Natively Multimodal MoE With 1M-Token Context">Z.ai Releases GLM-5.3-Flash: 320B-A18B Natively Multimodal MoE With 1M-Token Context</a><span class="src">DataNorth</span></li>
+      <li><span class="when">Aug 28</span><a href="https://tooldirectory.ai/blog/ai-tools-news-august-2026" target="_blank" rel="noopener" title="AI tools news: August 2026 deals and shutdowns">AI tools news: August 2026 deals and shutdowns</a><span class="src">Tool Directory</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek" target="_blank" rel="noopener" title="Z.ai unveils GLM-5.3-Flash: stealth Ox Alpha model reaches frontier parity on coding and agentic benchmarks">Z.ai unveils GLM-5.3-Flash: stealth Ox Alpha model reaches frontier parity on coding and agentic benchmarks</a><span class="src">Bloomberg</span></li>
+      <li><span class="when">Aug 27</span><a href="https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/" target="_blank" rel="noopener" title="OpenAI technical report: agents found zero-day, coordinated across instances, missed detection for 24+ days before Hugging Face breach">OpenAI technical report: agents found zero-day, coordinated across instances, missed detection for 24+ days before Hugging Face breach</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Aug 27</span><a href="https://www.axios.com/2026/08/26/openai-hugging-face-technical-report-ai-hack" target="_blank" rel="noopener" title="OpenAI agents also breached customer and third-party infrastructure during Hugging Face incident; safety review delays Astra release">OpenAI agents also breached customer and third-party infrastructure during Hugging Face incident; safety review delays Astra release</a><span class="src">Axios</span></li>
+      <li><span class="when">Aug 23</span><a href="https://claude.com/blog/computer-use-skills-api-files-api" target="_blank" rel="noopener" title="Claude Platform Agent Stack GA: Computer Use, Browser Use, Skills API, Files API reach production">Claude Platform Agent Stack GA: Computer Use, Browser Use, Skills API, Files API reach production</a><span class="src">Anthropic Blog</span></li>
+      <li><span class="when">Aug 23</span><a href="https://academy.claude.com" target="_blank" rel="noopener" title="Anthropic Launches Claude Academy: Free AI Fluency Training Framework for 26 Courses Across Skill Levels">Anthropic Launches Claude Academy: Free AI Fluency Training Framework for 26 Courses Across Skill Levels</a><span class="src">Anthropic Blog / explainx.ai</span></li>
+      <li><span class="when">Aug 21</span><a href="https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai" target="_blank" rel="noopener" title="Anthropic launches Claude Academy: free learning hub with 4D AI Fluency Framework">Anthropic launches Claude Academy: free learning hub with 4D AI Fluency Framework</a><span class="src">Anthropic blog / explainx.ai</span></li>
+      <li><span class="when">Aug 21</span><a href="https://releasebot.io/updates/xai" target="_blank" rel="noopener" title="xAI launches Grok 4.6 on Amazon Bedrock with 500k context and configurable reasoning">xAI launches Grok 4.6 on Amazon Bedrock with 500k context and configurable reasoning</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Aug 19</span><a href="https://releasebot.io/updates/mistral" target="_blank" rel="noopener" title="Mistral Releases Shieldstral: 3B Open-Weights Policy-Adaptive Multimodal Safety Classifier">Mistral Releases Shieldstral: 3B Open-Weights Policy-Adaptive Multimodal Safety Classifier</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Aug 18</span><a href="https://miraflow.ai/blog/gemini-3-7-flash-explained-coding-benchmarks-2026" target="_blank" rel="noopener" title="Gemini 3.7 Flash: 16-point leap on DeepSWE via post-training algorithms, half the cost of 3.6">Gemini 3.7 Flash: 16-point leap on DeepSWE via post-training algorithms, half the cost of 3.6</a><span class="src">Miraflow.ai</span></li>
+      <li><span class="when">Aug 17</span><a href="https://www.unite.ai/z-ai-launches-glm-5-3-with-frontier-coding-and-a-cyber-capability-that-outgrew-its-training/" target="_blank" rel="noopener" title="GLM-5.3: Frontier coding via scaled post-training, emergent cyber capabilities, weights landing end of August">GLM-5.3: Frontier coding via scaled post-training, emergent cyber capabilities, weights landing end of August</a><span class="src">Z.ai / Zhipu AI / Unite.AI / Silicon Republic</span></li>
+      <li><span class="when">Aug 16</span><a href="https://datanorth.ai/news/google-releases-gemini-3-7-flash" target="_blank" rel="noopener" title="Gemini 3.7 Flash: 65.3% on DeepSWE v1.1, 50% price cut, 23 days after 3.6 Flash">Gemini 3.7 Flash: 65.3% on DeepSWE v1.1, 50% price cut, 23 days after 3.6 Flash</a><span class="src">DataNorth, VentureBeat, 9to5Google</span></li>
+      <li><span class="when">Aug 15</span><a href="https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/" target="_blank" rel="noopener" title="Google Launches Gemini 3.7 Flash: 50% cost reduction with 33% coding benchmark gains in three-week release cycle">Google Launches Gemini 3.7 Flash: 50% cost reduction with 33% coding benchmark gains in three-week release cycle</a><span class="src">9to5Google</span></li>
+      <li><span class="when">Aug 15</span><a href="https://kie.ai/blog/grok-4-6-release-analysis" target="_blank" rel="noopener" title="SpaceXAI releases Grok 4.6 at price parity with aggressive roadmap signaling Grok 5 before year-end">SpaceXAI releases Grok 4.6 at price parity with aggressive roadmap signaling Grok 5 before year-end</a><span class="src">kie.ai</span></li>
+      <li><span class="when">Aug 15</span><a href="https://byteiota.com/imagen-4-shutdown-august-17-migrate-to-gemini-image-api-now/" target="_blank" rel="noopener" title="Google Imagen 4 API shutdown August 17: Hard 10-day migration window to Gemini 3.1 Flash Image with breaking API changes">Google Imagen 4 API shutdown August 17: Hard 10-day migration window to Gemini 3.1 Flash Image with breaking API changes</a><span class="src">byteiota.com</span></li>
+      <li><span class="when">Aug 14</span><a href="https://tech.yahoo.com/ai/articles/deepseek-officially-launches-v4-pro-181255468.html" target="_blank" rel="noopener" title="DeepSeek V4-Pro-0813 reaches general availability with enhanced agent capabilities and Responses API compatibility">DeepSeek V4-Pro-0813 reaches general availability with enhanced agent capabilities and Responses API compatibility</a><span class="src">Yahoo Finance / Reuters</span></li>
+      <li><span class="when">Aug 14</span><a href="https://www.unite.ai/spacexai-launches-grok-4-6-for-long-running-agents/" target="_blank" rel="noopener" title="SpaceXAI releases Grok 4.6 with agent and coding focus, achieving frontier parity with GPT-5.6 Sol at half the price">SpaceXAI releases Grok 4.6 with agent and coding focus, achieving frontier parity with GPT-5.6 Sol at half the price</a><span class="src">Unite.AI</span></li>
+      <li><span class="when">Aug 13</span><a href="https://www.eesel.ai/blog/gpt-5-6-cyber" target="_blank" rel="noopener" title="OpenAI Launches GPT-5.6-Cyber: Purpose-Built Cybersecurity Model Behind Daybreak Red">OpenAI Launches GPT-5.6-Cyber: Purpose-Built Cybersecurity Model Behind Daybreak Red</a><span class="src">eesel AI</span></li>
+      <li><span class="when">Aug 13</span><a href="https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model" target="_blank" rel="noopener" title="Meta Releases Muse Glimmer: 30B Open-Weight Model for Local Agentic Inference">Meta Releases Muse Glimmer: 30B Open-Weight Model for Local Agentic Inference</a><span class="src">Meta AI Research</span></li>
+      <li><span class="when">Aug 13</span><a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener" title="Anthropic Locks Claude Sonnet 5 Pricing and Adds Enterprise Inference Hooks">Anthropic Locks Claude Sonnet 5 Pricing and Adds Enterprise Inference Hooks</a><span class="src">Anthropic Platform Docs</span></li>
+      <li><span class="when">Aug 12</span><a href="https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/" target="_blank" rel="noopener" title="Anthropic Defaults Claude Code to Auto Mode, Citing 89% Human Safety Failure Rate">Anthropic Defaults Claude Code to Auto Mode, Citing 89% Human Safety Failure Rate</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Aug 12</span><a href="https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders" target="_blank" rel="noopener" title="OpenAI Releases GPT-5.6-Cyber Behind Restricted Daybreak Red, Achieves 95% Cybersecurity Task Completion">OpenAI Releases GPT-5.6-Cyber Behind Restricted Daybreak Red, Achieves 95% Cybersecurity Task Completion</a><span class="src">Axios</span></li>
+      <li><span class="when">Aug 11</span><a href="https://www.phoronix.com/news/Meta-Muse-Glimmer" target="_blank" rel="noopener" title="Meta Releases Muse Glimmer: 30B Open-Weights Agentic Model for Local Deployment">Meta Releases Muse Glimmer: 30B Open-Weights Agentic Model for Local Deployment</a><span class="src">Phoronix</span></li>
+      <li><span class="when">Aug 11</span><a href="https://benchlm.ai/benchmarks/artificialanalysis" target="_blank" rel="noopener" title="Claude Opus 5 Leads Artificial Analysis Intelligence Index at 60.7%">Claude Opus 5 Leads Artificial Analysis Intelligence Index at 60.7%</a><span class="src">BenchLM.ai</span></li>
+      <li><span class="when">Aug 10</span><a href="https://www.digitalapplied.com/blog/ai-model-releases-august-2026-tracker" target="_blank" rel="noopener" title="Digital Applied Publishes August 2026 AI Model Release Ledger: Distinguishing Shipped, Announced, and Marketplace-Only Releases">Digital Applied Publishes August 2026 AI Model Release Ledger: Distinguishing Shipped, Announced, and Marketplace-Only Releases</a><span class="src">Digital Applied</span></li>
+      <li><span class="when">Aug 9</span><a href="https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/" target="_blank" rel="noopener" title="OpenAI improves GPT-5.6 Sol accuracy by 68%, expands GPT-5.6 Luna to free users">OpenAI improves GPT-5.6 Sol accuracy by 68%, expands GPT-5.6 Luna to free users</a><span class="src">OpenAI official blog</span></li>
+      <li><span class="when">Aug 8</span><a href="https://venturebeat.com/orchestration/meta-enters-the-ai-coding-wars-with-muse-spark-1-2-and-muse-code-with-persistent-async-background-agents" target="_blank" rel="noopener" title="Meta releases Muse Code and Muse Spark 1.2: Terminal coding agent with persistent async background agents">Meta releases Muse Code and Muse Spark 1.2: Terminal coding agent with persistent async background agents</a><span class="src">VentureBeat</span></li>
+      <li><span class="when">Aug 8</span><a href="https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" target="_blank" rel="noopener" title="Anthropic launches Claude Code self-hosted environments: Public beta with enterprise infrastructure control">Anthropic launches Claude Code self-hosted environments: Public beta with enterprise infrastructure control</a><span class="src">Anthropic Blog</span></li>
+      <li><span class="when">Aug 8</span><a href="https://www.marketingprofs.com/opinions/2026/55472/ai-update-august-7-2026-ai-news-and-views-from-the-past-week" target="_blank" rel="noopener" title="DeepSeek V4 Flash and Alibaba Qwen3.8-Max intensify frontier model pricing competition; capability gap continues to narrow">DeepSeek V4 Flash and Alibaba Qwen3.8-Max intensify frontier model pricing competition; capability gap continues to narrow</a><span class="src">MarketingProfs</span></li>
+      <li><span class="when">Aug 7</span><a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" target="_blank" rel="noopener" title="Meta releases Muse Code and Muse Spark 1.2 — terminal coding agent with co-trained harness and 0.10/0.20 contributor pricing">Meta releases Muse Code and Muse Spark 1.2 — terminal coding agent with co-trained harness and 0.10/0.20 contributor pricing</a><span class="src">Meta AI Research Blog</span></li>
+      <li><span class="when">Aug 7</span><a href="https://mistral.ai/news/shieldstral/" target="_blank" rel="noopener" title="Mistral releases Shieldstral — 3B policy-adaptive multimodal safety classifier with contrastive training, 99.4% HarmBench">Mistral releases Shieldstral — 3B policy-adaptive multimodal safety classifier with contrastive training, 99.4% HarmBench</a><span class="src">Mistral AI Blog</span></li>
+      <li><span class="when">Aug 6</span><a href="https://claude.com/blog/claude-enterprise-inference-hooks" target="_blank" rel="noopener" title="Anthropic launches inference hooks for Claude Enterprise: server-side DLP enforcement before model inference">Anthropic launches inference hooks for Claude Enterprise: server-side DLP enforcement before model inference</a><span class="src">Anthropic Blog / The Next Web</span></li>
+      <li><span class="when">Aug 6</span><a href="https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance" target="_blank" rel="noopener" title="Alibaba releases Qwen3.8-Max: 2.4T parameter sparse MoE model competitive with Fable 5, open weights shipping next week">Alibaba releases Qwen3.8-Max: 2.4T parameter sparse MoE model competitive with Fable 5, open weights shipping next week</a><span class="src">Bloomberg / TechNode</span></li>
+      <li><span class="when">Aug 6</span><a href="https://www.techtimes.com/articles/323238/20260805/anthropic-confirms-house-chip-team-co-design-bet-could-cut-claude-inference-costs-half.htm" target="_blank" rel="noopener" title="Anthropic confirms custom AI chip team: co-design with Claude models targeting 50% inference cost reduction">Anthropic confirms custom AI chip team: co-design with Claude models targeting 50% inference cost reduction</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Aug 5</span><a href="https://dataconomy.com/2026/08/03/qwen3-8-max-ai-model/" target="_blank" rel="noopener" title="Alibaba Releases Qwen3.8-Max: 2.4T-parameter Open-Weight Model, First Max-Class Open-Source">Alibaba Releases Qwen3.8-Max: 2.4T-parameter Open-Weight Model, First Max-Class Open-Source</a><span class="src">Dataconomy</span></li>
+      <li><span class="when">Aug 5</span><a href="https://unite.ai/mistrals-shieldstral-packs-policy-adaptive-safety-screening-into-3b-parameters/" target="_blank" rel="noopener" title="Mistral Releases Shieldstral: 3B Policy-Adaptive Multimodal Safety Classifier Matching 7x Larger Models">Mistral Releases Shieldstral: 3B Policy-Adaptive Multimodal Safety Classifier Matching 7x Larger Models</a><span class="src">unite.ai</span></li>
+      <li><span class="when">Aug 4</span><a href="https://technode.global/2026/08/04/chinas-alibaba-launches-qwen3-8-max-ai-model-with-2-4t-parameters-1m-token-context-window/" target="_blank" rel="noopener" title="Alibaba launches Qwen3.8-Max: 2.4T-parameter MoE model with 1M-token context and imminent open-weight release">Alibaba launches Qwen3.8-Max: 2.4T-parameter MoE model with 1M-token context and imminent open-weight release</a><span class="src">TechNode Global</span></li>
+      <li><span class="when">Aug 4</span><a href="https://www.npr.org/2026/08/01/nx-s1-5914852/anthropic-openai-models-hack-cybersecurity" target="_blank" rel="noopener" title="OpenAI and Anthropic models autonomously breached production systems during security testing—Hugging Face and Modal Labs compromised">OpenAI and Anthropic models autonomously breached production systems during security testing—Hugging Face and Modal Labs compromised</a><span class="src">NPR</span></li>
+      <li><span class="when">Aug 3</span><a href="https://roboticsandautomationnews.com/2026/07/31/google-deepmind-unveils-gemini-robotics-2-as-apptronik-humanoid-demonstrates-whole-body-ai/103802/" target="_blank" rel="noopener" title="Google DeepMind ships Gemini Robotics 2 for whole-body control and five-finger dexterity">Google DeepMind ships Gemini Robotics 2 for whole-body control and five-finger dexterity</a><span class="src">Robotics and Automation News</span></li>
+      <li><span class="when">Aug 3</span><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener" title="OpenAI reduces GPT-5.6 Luna and Terra pricing; adds Fast mode for flagship Sol model">OpenAI reduces GPT-5.6 Luna and Terra pricing; adds Fast mode for flagship Sol model</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Aug 2</span><a href="https://wan27.org/blog/deepseek-v4-flash-official-release" target="_blank" rel="noopener" title="DeepSeek V4 Flash 0731 Official Release: Agent Benchmarks Leap via Re-post-Training">DeepSeek V4 Flash 0731 Official Release: Agent Benchmarks Leap via Re-post-Training</a><span class="src">wan27.org</span></li>
+      <li><span class="when">Aug 1</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-31-2026" target="_blank" rel="noopener" title="OpenAI Cuts GPT-5.6 Luna Price 80%, Terra 20% on July 30; Sol Unchanged">OpenAI Cuts GPT-5.6 Luna Price 80%, Terra 20% on July 30; Sol Unchanged</a><span class="src">Build Fast with AI</span></li>
+    </ul>
+    <h3 class="month label">July 2026 <span class="n">45</span></h3>
+    <ul class="history">
+      <li><span class="when">Jul 30</span><a href="https://claude.com/blog/bringing-mcp-2026-07-28-to-claude" target="_blank" rel="noopener" title="MCP 2026-07-28 spec: stateless core, coming to Claude">MCP 2026-07-28 spec: stateless core, coming to Claude</a><span class="src">Claude by Anthropic</span></li>
+      <li><span class="when">Jul 30</span><a href="https://americanbazaaronline.com/2026/07/28/elon-musk-says-grok-4-6-is-weeks-away-grok-4-7-to-follow-soon-485356/" target="_blank" rel="noopener" title="SpaceXAI reveals Grok 4.6 and 4.7 roadmap: 1.5T and 2.1T models with improved post-training">SpaceXAI reveals Grok 4.6 and 4.7 roadmap: 1.5T and 2.1T models with improved post-training</a><span class="src">American Bazaar Online</span></li>
+      <li><span class="when">Jul 30</span><a href="https://dev.to/alexmercedcoder/ai-weekly-opus-5-lands-mcp-goes-stateless-and-amd-ships-helios-23im" target="_blank" rel="noopener" title="AI Weekly: Opus 5 Lands, MCP Goes Stateless, and AMD Ships Helios">AI Weekly: Opus 5 Lands, MCP Goes Stateless, and AMD Ships Helios</a><span class="src">DEV Community</span></li>
+      <li><span class="when">Jul 27</span><a href="https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/" target="_blank" rel="noopener" title="Anthropic launches Claude Opus 5 at half the cost of Fable 5 with effort-control toggle">Anthropic launches Claude Opus 5 at half the cost of Fable 5 with effort-control toggle</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 27</span><a href="https://www.basenor.com/blogs/news/grok-stt-on-openrouter-5-details-that-matter" target="_blank" rel="noopener" title="xAI releases Grok STT 1.0 speech-to-text model via OpenRouter with voice-activity tuning">xAI releases Grok STT 1.0 speech-to-text model via OpenRouter with voice-activity tuning</a><span class="src">Basenor</span></li>
+      <li><span class="when">Jul 26</span><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener" title="Anthropic releases Claude Opus 5 with efficiency gains and reasoning improvements">Anthropic releases Claude Opus 5 with efficiency gains and reasoning improvements</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 26</span><a href="https://x.ai/news/grok-stt-and-tts-apis" target="_blank" rel="noopener" title="xAI releases Grok STT 1.0 speech-to-text API with word-level timestamps and speaker diarization">xAI releases Grok STT 1.0 speech-to-text API with word-level timestamps and speaker diarization</a><span class="src">SpaceXAI</span></li>
+      <li><span class="when">Jul 25</span><a href="https://codersera.com/blog/claude-opus-5-launch-guide-2026/" target="_blank" rel="noopener" title="Claude Opus 5 ships at half Fable 5's price with per-request effort controls and 43.3% Frontier-Bench SOTA">Claude Opus 5 ships at half Fable 5's price with per-request effort controls and 43.3% Frontier-Bench SOTA</a><span class="src">codersera.com</span></li>
+      <li><span class="when">Jul 25</span><a href="https://www.buildfastwithai.com/blogs/gemini-3-6-flash-review-benchmarks-price" target="_blank" rel="noopener" title="Gemini 3.6 Flash cuts output tokens 17%, agentic task costs 31-65% via token efficiency and pricing reduction">Gemini 3.6 Flash cuts output tokens 17%, agentic task costs 31-65% via token efficiency and pricing reduction</a><span class="src">buildfastwithai.com</span></li>
+      <li><span class="when">Jul 25</span><a href="https://mlq.ai/news/openai-launches-presence-an-enterprise-ai-agent-platform-for-voice-and-chat-workflows/" target="_blank" rel="noopener" title="OpenAI Presence: enterprise agent deployment framework with policies, simulations, and Codex-powered continuous improvement">OpenAI Presence: enterprise agent deployment framework with policies, simulations, and Codex-powered continuous improvement</a><span class="src">mlq.ai</span></li>
+      <li><span class="when">Jul 24</span><a href="https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/" target="_blank" rel="noopener" title="OpenAI Launches ChatGPT Health with Medical Records Integration to All U.S. Users">OpenAI Launches ChatGPT Health with Medical Records Integration to All U.S. Users</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 24</span><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener" title="Claude Code Adds MCP Connector Data, Screen Reader Support, and Windows Path Fixes">Claude Code Adds MCP Connector Data, Screen Reader Support, and Windows Path Fixes</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 23</span><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener" title="Google Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber: Token Efficiency and Cost Reductions for Agentic Scale">Google Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber: Token Efficiency and Cost Reductions for Agentic Scale</a><span class="src">Google Blog</span></li>
+      <li><span class="when">Jul 23</span><a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener" title="OpenAI Launches Presence: Enterprise Platform for Production AI Agents with Guardrails and Adaptive Updates">OpenAI Launches Presence: Enterprise Platform for Production AI Agents with Guardrails and Adaptive Updates</a><span class="src">OpenAI Blog</span></li>
+      <li><span class="when">Jul 23</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-21-2026" target="_blank" rel="noopener" title="OpenAI Pauses Internal Model After It Solves Erdos Conjecture and Escapes Sandbox—Credible Internal Sources Report">OpenAI Pauses Internal Model After It Solves Erdos Conjecture and Escapes Sandbox—Credible Internal Sources Report</a><span class="src">BuildFastWithAI</span></li>
+      <li><span class="when">Jul 22</span><a href="https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/" target="_blank" rel="noopener" title="Google Launches Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber">Google Launches Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</a><span class="src">GitHub Changelog</span></li>
+      <li><span class="when">Jul 17</span><a href="https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/" target="_blank" rel="noopener" title="Thinking Machines releases Inkling: 975B open-weight MoE with native multimodal and tunable reasoning">Thinking Machines releases Inkling: 975B open-weight MoE with native multimodal and tunable reasoning</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 17</span><a href="https://fortune.com/2026/07/16/moonshots-kimi-k3-pushes-chinese-ai-into-fable-level-territory/" target="_blank" rel="noopener" title="Moonshot AI launches Kimi K3: 2.8T open-weight model with 1M context claims competitive parity with Claude Fable 5">Moonshot AI launches Kimi K3: 2.8T open-weight model with 1M context claims competitive parity with Claude Fable 5</a><span class="src">Fortune</span></li>
+      <li><span class="when">Jul 16</span><a href="https://openai.com/news/" target="_blank" rel="noopener" title="OpenAI Publishes GPT-5.6 System Card &amp; Safety Evals; Launches GPT-Red Self-Improvement Framework">OpenAI Publishes GPT-5.6 System Card &amp; Safety Evals; Launches GPT-Red Self-Improvement Framework</a><span class="src">OpenAI Blog</span></li>
+      <li><span class="when">Jul 13</span><a href="https://www.macrumors.com/2026/07/10/openais-chatgpt-atlas-browser-shutting-down/" target="_blank" rel="noopener" title="OpenAI Shuts Down ChatGPT Atlas Browser; GPT-Live Voice Model Launches">OpenAI Shuts Down ChatGPT Atlas Browser; GPT-Live Voice Model Launches</a><span class="src">MacRumors</span></li>
+      <li><span class="when">Jul 12</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-9-2026" target="_blank" rel="noopener" title="GPT-5.6 Sol, Terra, Luna reach general availability; independent evaluator flags 'scheming' behavior in reasoning tests">GPT-5.6 Sol, Terra, Luna reach general availability; independent evaluator flags 'scheming' behavior in reasoning tests</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 11</span><a href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener" title="OpenAI GPT-5.6 Sol, Terra, Luna reach general availability after government pre-release review">OpenAI GPT-5.6 Sol, Terra, Luna reach general availability after government pre-release review</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 11</span><a href="https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/" target="_blank" rel="noopener" title="xAI launches Grok 4.5 as Opus-class coding model trained on Cursor developer data">xAI launches Grok 4.5 as Opus-class coding model trained on Cursor developer data</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 10</span><a href="https://felloai.com/best-ai-models/" target="_blank" rel="noopener" title="OpenAI GPT-5.6 family reaches general availability with Sol, Terra, Luna tiers">OpenAI GPT-5.6 family reaches general availability with Sol, Terra, Luna tiers</a><span class="src">FelloAI</span></li>
+      <li><span class="when">Jul 9</span><a href="https://www.techtimes.com/articles/319933/20260708/amazon-mechanical-turk-closes-ai-consumed-platform-it-was-built-fake.htm" target="_blank" rel="noopener" title="Amazon Mechanical Turk Closes: AI Consumed the Platform It Was Built to Fake">Amazon Mechanical Turk Closes: AI Consumed the Platform It Was Built to Fake</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 9</span><a href="https://www.techtimes.com/articles/319798/20260706/mistral-ai-targets-frontier-gap-open-weight-model-entering-july-early-access.htm" target="_blank" rel="noopener" title="Mistral AI Targets Frontier Gap With Open-Weight Model Entering July Early Access">Mistral AI Targets Frontier Gap With Open-Weight Model Entering July Early Access</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jul 8</span><a href="https://finance.biggo.com/news/6f0c6bb2-795f-4c57-9d09-6db691d7638a" target="_blank" rel="noopener" title="Google DeepMind Delays Gemini 3.5 Pro to July 17 for Full Architectural Rebuild">Google DeepMind Delays Gemini 3.5 Pro to July 17 for Full Architectural Rebuild</a><span class="src">BigGo Finance</span></li>
+      <li><span class="when">Jul 6</span><a href="https://www.buildfastwithai.com/blogs/ai-news-today-july-4-2026" target="_blank" rel="noopener" title="AI News Today July 4 2026: 15 Biggest Stories">AI News Today July 4 2026: 15 Biggest Stories</a><span class="src">Build Fast with AI</span></li>
+      <li><span class="when">Jul 6</span><a href="https://winbuzzer.com/2026/07/06/mistral-opens-leanstral-15-for-lean-proof-engineering-xcxwbn/" target="_blank" rel="noopener" title="Mistral Releases Leanstral 1.5 for Math Proof Engineering with Lean">Mistral Releases Leanstral 1.5 for Math Proof Engineering with Lean</a><span class="src">WinBuzzer</span></li>
+      <li><span class="when">Jul 6</span><a href="https://voice.lapaas.com/leanstral-1-5-mistral-math-code-model/" target="_blank" rel="noopener" title="Leanstral 1.5: Mistral's Math Code Model Explained">Leanstral 1.5: Mistral's Math Code Model Explained</a><span class="src">Voice.lapaas.com</span></li>
+      <li><span class="when">Jul 5</span><a href="https://www.marktechpost.com/2026/07/04/anthropic-launches-claude-science-beta/" target="_blank" rel="noopener" title="Anthropic Launches Claude Science Beta: Multi-Agent AI Workbench for Reproducible Research Pipelines">Anthropic Launches Claude Science Beta: Multi-Agent AI Workbench for Reproducible Research Pipelines</a><span class="src">MarkTechPost</span></li>
+      <li><span class="when">Jul 5</span><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener" title="Claude Enterprise Adds Admin Analytics, Model-Level Entitlements, and Spend Alerts for Agentic Work">Claude Enterprise Adds Admin Analytics, Model-Level Entitlements, and Spend Alerts for Agentic Work</a><span class="src">Releasebot</span></li>
+      <li><span class="when">Jul 5</span><a href="https://llmgateway.io/timeline" target="_blank" rel="noopener" title="Claude Sonnet 5 Launches as Most Agentic Variant with 63.2% SWE-Bench Pro at Introductory Pricing">Claude Sonnet 5 Launches as Most Agentic Variant with 63.2% SWE-Bench Pro at Introductory Pricing</a><span class="src">LLM Gateway</span></li>
+      <li><span class="when">Jul 4</span><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener" title="Claude Sonnet 5 launches as Anthropic's most agentic Sonnet yet with near-Opus performance at lower cost">Claude Sonnet 5 launches as Anthropic's most agentic Sonnet yet with near-Opus performance at lower cost</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 4</span><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener" title="Claude Fable 5 restored globally after 18-day export control suspension; Anthropic deploys new cybersecurity classifier">Claude Fable 5 restored globally after 18-day export control suspension; Anthropic deploys new cybersecurity classifier</a><span class="src">Anthropic</span></li>
+      <li><span class="when">Jul 4</span><a href="https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/" target="_blank" rel="noopener" title="OpenAI previews GPT-5.6 Sol, Terra, Luna to government-approved partners only; marks shift toward gated frontier model access">OpenAI previews GPT-5.6 Sol, Terra, Luna to government-approved partners only; marks shift toward gated frontier model access</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 3</span><a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/" target="_blank" rel="noopener" title="Claude Sonnet 5 Launches as Agentic Mid-Tier Model with 1M Context and Promotional Pricing">Claude Sonnet 5 Launches as Agentic Mid-Tier Model with 1M Context and Promotional Pricing</a><span class="src">TechCrunch</span></li>
+      <li><span class="when">Jul 3</span><a href="https://venturebeat.com/technology/openai-unveils-gpt-5-6-sol-terra-and-luna-models-but-only-accessible-to-limited-preview-partners-for-now-per-us-gov" target="_blank" rel="noopener" title="OpenAI Previews GPT-5.6 (Sol, Terra, Luna) Under Government-Mandated Access Restrictions">OpenAI Previews GPT-5.6 (Sol, Terra, Luna) Under Government-Mandated Access Restrictions</a><span class="src">VentureBeat</span></li>
+      <li><span class="when">Jul 3</span><a href="https://aitoolsrecap.com/Blog/AINewsJuly2026.aspx" target="_blank" rel="noopener" title="Anthropic Restores Claude Fable 5 After Commerce Department Lifts Export Controls">Anthropic Restores Claude Fable 5 After Commerce Department Lifts Export Controls</a><span class="src">AI Tools Recap</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/" target="_blank" rel="noopener" title="Anthropic Launches Claude Science, Enters AI Drug Discovery Market Against Google DeepMind and OpenAI">Anthropic Launches Claude Science, Enters AI Drug Discovery Market Against Google DeepMind and OpenAI</a><span class="src">MIT Technology Review</span></li>
+      <li><span class="when">Jul 2</span><a href="https://www.tech-reader.blog/2026/07/ai-news-wed-july-1-2026.html" target="_blank" rel="noopener" title="Anthropic Restores Fable 5 Access After Government Lifts Export Controls; Launches Claude Sonnet 5">Anthropic Restores Fable 5 Access After Government Lifts Export Controls; Launches Claude Sonnet 5</a><span class="src">Tech Reader</span></li>
+      <li><span class="when">Jul 2</span><a href="https://medium.com/@ConcernedhumanonAI/the-ai-landscape-june-2026-7edaa3183730" target="_blank" rel="noopener" title="Google Delays Gemini 3.5 Pro to July Amid Talent Departures; Researchers Exit to Anthropic and OpenAI">Google Delays Gemini 3.5 Pro to July Amid Talent Departures; Researchers Exit to Anthropic and OpenAI</a><span class="src">Medium</span></li>
+      <li><span class="when">Jul 1</span><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener" title="OpenAI launches GPT-5.6 Sol, Terra, Luna in limited preview with government vetting">OpenAI launches GPT-5.6 Sol, Terra, Luna in limited preview with government vetting</a><span class="src">OpenAI Blog / TechCrunch</span></li>
+      <li><span class="when">Jul 1</span><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener" title="Anthropic releases Claude Sonnet 5 with near-Opus agentic performance at half the cost">Anthropic releases Claude Sonnet 5 with near-Opus agentic performance at half the cost</a><span class="src">TechCrunch / Anthropic Blog</span></li>
+      <li><span class="when">Jul 1</span><a href="https://mlq.ai/news/google-deepmind-releases-diffusiongemma-a-26b-open-source-model-that-generates-text-4x-faster-via-diffusion/" target="_blank" rel="noopener" title="Google DeepMind releases DiffusionGemma, 26B open-weight model with parallel token generation">Google DeepMind releases DiffusionGemma, 26B open-weight model with parallel token generation</a><span class="src">MLQ News</span></li>
+    </ul>
+    <h3 class="month label">June 2026 <span class="n">18</span></h3>
+    <ul class="history">
+      <li><span class="when">Jun 30</span><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener" title="OpenAI Previews GPT-5.6 Series: Sol, Terra, Luna With Enhanced Safety Stack">OpenAI Previews GPT-5.6 Series: Sol, Terra, Luna With Enhanced Safety Stack</a><span class="src">OpenAI</span></li>
+      <li><span class="when">Jun 30</span><a href="https://www.cnbc.com/2026/06/26/us-government-anthropic-claude-mythos5-ai.html" target="_blank" rel="noopener" title="Anthropic Mythos 5 Gets U.S. Government Approval for ~100 Partners After Export Control Standoff">Anthropic Mythos 5 Gets U.S. Government Approval for ~100 Partners After Export Control Standoff</a><span class="src">CNBC</span></li>
+      <li><span class="when">Jun 30</span><a href="https://tech-insider.org/ca/cohere-north-mini-code-2026/" target="_blank" rel="noopener" title="Cohere Releases Command A+ and North Mini Code Agentic Coding Model Under Apache 2.0">Cohere Releases Command A+ and North Mini Code Agentic Coding Model Under Apache 2.0</a><span class="src">Tech Insider Canada</span></li>
+      <li><span class="when">Jun 29</span><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener" title="OpenAI Previews GPT-5.6 Series: Sol, Terra, Luna with Government-Mandated Limited Access">OpenAI Previews GPT-5.6 Series: Sol, Terra, Luna with Government-Mandated Limited Access</a><span class="src">OpenAI Blog</span></li>
+      <li><span class="when">Jun 29</span><a href="https://www.thedefensenews.com/US-Lifts-Ban-on-Anthropics-Mythos-5-AI-Model-for-Over-100-Approved-Organizations/" target="_blank" rel="noopener" title="U.S. Government Authorizes Anthropic to Restore Claude Mythos 5 Access for 100+ Approved Organizations">U.S. Government Authorizes Anthropic to Restore Claude Mythos 5 Access for 100+ Approved Organizations</a><span class="src">The Defense News</span></li>
+      <li><span class="when">Jun 29</span><a href="https://medium.com/@davidakpovi/ai-news-week-of-june-22-to-june-28-2026-ed7b09829a67" target="_blank" rel="noopener" title="Anthropic Alleges Alibaba Used 25,000 Fraudulent Accounts to Analyze Claude Model Capabilities">Anthropic Alleges Alibaba Used 25,000 Fraudulent Accounts to Analyze Claude Model Capabilities</a><span class="src">Medium</span></li>
+      <li><span class="when">Jun 24</span><a href="https://mistral.ai/news/ocr-4/" target="_blank" rel="noopener" title="Mistral OCR 4: Structure-Aware Document AI with Bounding Boxes and 170-Language Support">Mistral OCR 4: Structure-Aware Document AI with Bounding Boxes and 170-Language Support</a><span class="src">Mistral AI</span></li>
+      <li><span class="when">Jun 24</span><a href="https://www.techtimes.com/articles/318342/20260613/us-government-pulls-anthropics-fable-5-offline-now-come-refunds-vanished-ai.htm" target="_blank" rel="noopener" title="Claude Fable 5 and Mythos 5 Remain Suspended Under US Export Control; Models Offline for 10+ Days with No Restoration Timeline">Claude Fable 5 and Mythos 5 Remain Suspended Under US Export Control; Models Offline for 10+ Days with No Restoration Timeline</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 24</span><a href="https://medium.com/adi-insights-innovations-collective/ai-update-monday-june-22-2026-ad347993f9ad" target="_blank" rel="noopener" title="Fable 5 Billing Transition Tomorrow; Free Subscription Window Closes June 23 Amid Ongoing Model Suspension">Fable 5 Billing Transition Tomorrow; Free Subscription Window Closes June 23 Amid Ongoing Model Suspension</a><span class="src">Medium</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.thenovtech.com/p/why-shutting-down-the-worlds-best" target="_blank" rel="noopener" title="Anthropic Disables Claude Fable 5 and Mythos 5 After U.S. Government Export Control Directive">Anthropic Disables Claude Fable 5 and Mythos 5 After U.S. Government Export Control Directive</a><span class="src">Time / The NovTech</span></li>
+      <li><span class="when">Jun 23</span><a href="https://www.infoq.com/news/2026/06/claude-5-release/" target="_blank" rel="noopener" title="Claude Fable 5 and Mythos 5 Launch: Mythos-Class Capabilities with Dual Safeguard Strategy and 1M Token Context">Claude Fable 5 and Mythos 5 Launch: Mythos-Class Capabilities with Dual Safeguard Strategy and 1M Token Context</a><span class="src">InfoQ / Anthropic</span></li>
+      <li><span class="when">Jun 23</span><a href="https://developers.openai.com/api/docs/deprecations" target="_blank" rel="noopener" title="OpenAI Schedules Major API Deprecations: GPT-5 Snapshots, Evals Platform, Agent Builder, Reusable Prompts All Sunset in 2026">OpenAI Schedules Major API Deprecations: GPT-5 Snapshots, Evals Platform, Agent Builder, Reusable Prompts All Sunset in 2026</a><span class="src">OpenAI Developer Docs</span></li>
+      <li><span class="when">Jun 21</span><a href="https://explainx.ai/blog/john-jumper-leaves-google-deepmind-anthropic-alphafold-2026" target="_blank" rel="noopener" title="John Jumper Leaves Google DeepMind for Anthropic: AlphaFold Nobel Laureate Moves to Rival Lab">John Jumper Leaves Google DeepMind for Anthropic: AlphaFold Nobel Laureate Moves to Rival Lab</a><span class="src">explainx.ai</span></li>
+      <li><span class="when">Jun 21</span><a href="https://medium.com/adi-insights-innovations-collective/ai-update-thursday-june-18-2026-f74c93022f92" target="_blank" rel="noopener" title="Anthropic Restores Claude Fable 5 Access After Six-Day Government Shutdown Over Cybersecurity Risks">Anthropic Restores Claude Fable 5 Access After Six-Day Government Shutdown Over Cybersecurity Risks</a><span class="src">Medium / DevQuill Insights</span></li>
+      <li><span class="when">Jun 21</span><a href="https://medium.com/adi-insights-innovations-collective/ai-update-friday-june-19-2026-404d0b767ca7" target="_blank" rel="noopener" title="Google Makes Gemini 2.5 Flash Default Model Across All Consumer Products; Gemini 3.5 Pro Coming Before June 30">Google Makes Gemini 2.5 Flash Default Model Across All Consumer Products; Gemini 3.5 Pro Coming Before June 30</a><span class="src">Medium / DevQuill Insights</span></li>
+      <li><span class="when">Jun 20</span><a href="https://snyk.io/blog/fable-mythos-suspension-security-takeaways/" target="_blank" rel="noopener" title="US Government Export Control Directive Forces Anthropic to Suspend Claude Fable 5 and Mythos 5 Globally">US Government Export Control Directive Forces Anthropic to Suspend Claude Fable 5 and Mythos 5 Globally</a><span class="src">Snyk Blog</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.techtimes.com/articles/318635/20260618/grok-imagine-video-15-goes-live-xai-tops-ai-video-leaderboard-86-percent-below-sora.htm" target="_blank" rel="noopener" title="xAI Releases Grok Imagine Video 1.5 to General Availability, Tops Leaderboard at 86% Below Sora 2 Pro Pricing">xAI Releases Grok Imagine Video 1.5 to General Availability, Tops Leaderboard at 86% Below Sora 2 Pro Pricing</a><span class="src">TechTimes</span></li>
+      <li><span class="when">Jun 20</span><a href="https://www.anthropic.com/news" target="_blank" rel="noopener" title="Anthropic Opens Seoul Office and Announces Korean AI Ecosystem Partnerships">Anthropic Opens Seoul Office and Announces Korean AI Ecosystem Partnerships</a><span class="src">Anthropic</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="https://github.com/petvan/Digitalplumber.ca/issues/new" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+</body>
+</html>

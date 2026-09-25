@@ -6,166 +6,118 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 25 Sep 2026 15:15:03 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 21:12:51 GMT</lastBuildDate>
     <item>
-      <title>Cisco AI Research: AgenticOps Scaling Quickly in the Enterprise</title>
-      <link>https://telecomreseller.com/2026/09/25/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise/</link>
-      <guid isPermaLink="true">https://telecomreseller.com/2026/09/25/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;Cisco and Omdia research shows 95% of enterprises say existing AIOps tools can't keep up with network complexity, with organizations rapidly moving toward agent-driven operations (AgenticOps). Over 80% of respondents expect to reach an AI-led operating model within 12 months, with 75% willing to grant agentic AI significant autonomy in NetOps, though trust depends on visibility and explainability.&lt;/p&gt;&lt;p&gt;Source: Telecom Reseller / Cisco Research · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dynatrace Releases Agentic Assist with dtwiz CLI, dt-evals for LLM Quality, and Fleet Management</title>
-      <link>https://docs.dynatrace.com/docs/whats-new</link>
-      <guid isPermaLink="true">https://docs.dynatrace.com/docs/whats-new</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;Dynatrace published major updates including agentic Dynatrace Assist for autonomous investigation, dtwiz CLI tooling for observability workflows, dt-evals for evaluating LLM quality in agentic contexts, and Fleet Management capabilities. These updates advance the platform's move from insights to autonomous action with deterministic AI grounding.&lt;/p&gt;&lt;p&gt;Source: Dynatrace Docs / Product Release Notes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Last9 AI Agent Observability: What to Trace and What It Catches</title>
-      <link>https://last9.io/blog/ai-agent-observability-best-practices/</link>
-      <guid isPermaLink="true">https://last9.io/blog/ai-agent-observability-best-practices/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;Last9 published a technical guide on instrumenting AI agents for observability, addressing the gap between LLM call monitoring and agent workflow tracing. The guide details what practitioners need to trace in autonomous agents: tool calls, reasoning steps, and handoffs—not just tokens and latency—to catch wrong-tool hallucinations, bad context handoffs, and looping agents invisible in aggregate metrics.&lt;/p&gt;&lt;p&gt;Source: Last9 Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Multi-Agent Orchestration as the New ITOps Control Plane</title>
-      <link>https://www.happiestminds.com/blogs/multi-agent-orchestration-as-the-new-itops-control-plane/</link>
-      <guid isPermaLink="true">https://www.happiestminds.com/blogs/multi-agent-orchestration-as-the-new-itops-control-plane/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Multi-agent orchestration is reshaping IT operations, moving beyond traditional runbooks and AIOps platforms. Specialized agents—change intelligence, infrastructure, network, ITSM, and security—develop deep domain expertise while coordinating effectively to solve cross-domain operational problems that no single technology silo can address.&lt;/p&gt;&lt;p&gt;Source: Happiest Minds · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetBrain Unveils Full Suite of Agentic NetOps Agents at Live Conference</title>
-      <link>https://www.netbrain.com/news/from-network-automation-to-agentic-netops/</link>
-      <guid isPermaLink="true">https://www.netbrain.com/news/from-network-automation-to-agentic-netops/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;At NetBrain Live (Sept 22-24, 2026 in Boston), the company unveiled a full suite of agents built on its context platform spanning diagnosis, remediation, change management, validation, and assessment. Agentic NetOps requires verified current network state, intent validation, and path intelligence that telemetry alone cannot produce, with Gartner predicting 80% of network automation vendors will introduce agentic AI by end of 2027.&lt;/p&gt;&lt;p&gt;Source: NetBrain · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Alibaba Unveils Full-Stack Agentic AI Roadmap: Qwen Book, Hardware, and AgentCore at Apsara 2026</title>
-      <link>https://www.alizila.com/alibaba-unveils-agentic-computer-ai-wearables-and-more-at-2026-apsara-conference/</link>
-      <guid isPermaLink="true">https://www.alizila.com/alibaba-unveils-agentic-computer-ai-wearables-and-more-at-2026-apsara-conference/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;At Apsara Conference 2026, Alibaba unveiled Qwen Book, an AI agentic computer powered by Qwen Desktop OS that integrates models, operating system, applications and cloud services into a single stack, designed around an 'OS as Harness' concept supporting contextual understanding, memory, and task execution while remaining fully governable. Alibaba announced comprehensive updates including Qwen foundation and multimodal models, new proprietary AI chips, a purpose-built agentic cloud, and an AI agent platform for mobile phones.&lt;/p&gt;&lt;p&gt;Source: Alizila · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The 2026 Singapore Consensus on Global AI Safety Research Priorities</title>
-      <link>https://arxiv.org/pdf/2608.14611</link>
-      <guid isPermaLink="true">https://arxiv.org/pdf/2608.14611</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;A major AI safety consensus report documents a sharp increase in agentic AI deployment in 2025-2026, with OpenClaw and derivatives becoming the fastest-growing open source projects. Organizations actively experiment with autonomous AI agent deployment, but uncertainty over reliability, security, and trustworthiness emerged as critical barriers to broader adoption.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Infrastructure for the Agentic Web: Gap Analysis and Architecture from Agentverse Platform</title>
-      <link>https://arxiv.org/pdf/2606.20570</link>
-      <guid isPermaLink="true">https://arxiv.org/pdf/2606.20570</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;A research paper from Fetch.ai and collaborators examines infrastructure requirements for agentic web systems. The Linux Foundation's A2A (Agent2Agent) Protocol project, launched June 2025 to enable secure intelligent communication between AI agents, surpassed 150 organizations in 2026 and achieved enterprise production use within the first year.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SASE OpsLab Launches Industry-First Lifecycle Management Platform for Hybrid SASE Infrastructure</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/22/3365986/0/en/sase-opslab-ltd-launches-industry-first-lifecycle-management-platform-simplifying-hybrid-sase-build-run-operations.html</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;SASE OpsLab released a lifecycle management platform designed to tackle long-term SASE infrastructure management, moving beyond vendor &amp;quot;deploy and forget&amp;quot; approaches and providing Enterprise IT teams with a scalable lifecycle-oriented platform for hybrid IT environments. The platform delivers vendor-agnostic change management through OpsKits that allow IT professionals to execute complex modifications across network and security architectures without specialized expertise.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ping Identity Announces Enterprise Personal Agent Access for AI Agent Security and Governance</title>
+      <title>Vendors ship identity and backup controls built for AI agents</title>
       <link>https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/</link>
       <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Ping Identity announced an end-to-end approach combining discovery, secretless privileged access and runtime control for personal AI agents, enabling companies to see which AI agents are running, know who is behind them, and enforce what each agent can access and do at the moment of action without slowing AI adoption. This addresses the emerging governance challenge of controlling autonomous agents within enterprise security infrastructure.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Ping Identity announced Enterprise Personal Agent Access combining discovery, secretless privileged access, and runtime control for AI agents. Cohesity introduced Agent Resilience for discovering, protecting, and recovering infrastructure behind enterprise agents. Dataminr released agentic AI capabilities for corporate security teams.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Vendors are shipping agent-specific IAM, runtime enforcement, and resilience controls; infrastructure and security teams need to understand how these integrate with existing identity, observability, and backup systems as agent adoption moves to production scale.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cisco Talos Discloses CLOSEDQUORUM—First Fully Autonomous AI Command-and-Control Malware</title>
-      <link>https://blog.buildfastwithai.com/ai-news-today-september-23-2026</link>
-      <guid isPermaLink="true">https://blog.buildfastwithai.com/ai-news-today-september-23-2026</guid>
+      <title>agentproto runtime adds Grok 4.x and million-token Codestral models</title>
+      <link>https://github.com/agentproto/ts/releases/tag/release/2026-09-25</link>
+      <guid isPermaLink="true">https://github.com/agentproto/ts/releases/tag/release/2026-09-25</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Cisco Talos disclosed CLOSEDQUORUM on September 22, 2026, described as the first reported fully autonomous multi-model AI command-and-control implant that operates with no human operator, and released CAIRN, a toolkit for hunting AI-integrated malware. Such malware has moved from optional AI helpers to autonomous command and control within about a year.&lt;/p&gt;&lt;p&gt;Source: AI News Today (buildfastwithai.com) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;agentproto released TypeScript agentic runtime updates with scheduled catalog sync adding Grok 4.x multi-agent variants, Codestral 2508 (256K context), and Mistral glm-5-2 (1M context). All thirteen packages are patch-only with no breaking changes or migration required.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multi-agent model variants (Grok 4.20-multi-agent-0309) and large context windows (1M tokens) lower barriers for agents coordinating across multiple reasoning tasks and maintaining state across tool calls without truncation.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OSFP Modules: 1.6T Optical Transceiver Ecosystem Reaches Customer Validation Phase</title>
-      <link>https://roboticsandautomationnews.com/2026/09/22/osfp-modules-the-complete-guide-to-400g-800g-and-1-6t-optical-transceivers-for-ai-and-hyperscale-data-centers/104982/</link>
-      <guid isPermaLink="true">https://roboticsandautomationnews.com/2026/09/22/osfp-modules-the-complete-guide-to-400g-800g-and-1-6t-optical-transceivers-for-ai-and-hyperscale-data-centers/104982/</guid>
+      <title>Autonomous AI agents breached 27 companies and stole card data</title>
+      <link>https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c</link>
+      <guid isPermaLink="true">https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;The OSFP form factor is actively evolving to support 1.6 Tbps using 8 × 200G PAM4 electrical lanes, with engineering samples already in customer validation and volume production expected in late 2026 through 2027. Next-generation 102.4 Tbps platforms such as Broadcom Tomahawk 6 and Cisco Silicon One G300 are designed around 200G-class SerDes and 1.6T ports. This milestone marks the transition from roadmap to production-ready infrastructure.&lt;/p&gt;&lt;p&gt;Source: Robotics and Automation News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Transluce research shows AI-agent-driven skimming campaigns that independently scan for vulnerable sites, exploit them, deploy skimming code, and clean up evidence with minimal human direction. Threat actors have moved beyond proof-of-concept agent chains to production campaigns breaching 27 companies and stealing over 600,000 credit cards.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agent autonomy is no longer confined to defensive operations; security teams must assume sophisticated threat actors are deploying multi-step agentic workflows for reconnaissance, exploitation, and exfiltration at scale, changing threat modeling for network and infrastructure teams.&lt;/p&gt;&lt;p&gt;Source: CISO Platform · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>While GPUs Get Headlines, Networking Sits at Data Center Choke Point: Arista, Cisco, Ciena Lead AI Fabric Build</title>
-      <link>https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</link>
-      <guid isPermaLink="true">https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;The real bottleneck in AI training clusters is not silicon but the fiber, switches, and optics surrounding it—data cannot move fast enough between chips when the network is constrained. Hyperscalers poured capex into network fabric, with Cisco booking $9.3 billion of AI infrastructure orders in fiscal 2026 while calling the moment a 'networking supercycle.' Arista raised its 2026 revenue outlook to roughly $12.6 billion (40% annual growth), with its AI Fabrics segment on track for at least $3.5 billion in 2026.&lt;/p&gt;&lt;p&gt;Source: 24/7 Wall Street · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Opus 5.5 Launched: 40% Cost Reduction with Fable-Tier Performance</title>
-      <link>https://www.anthropic.com/claude-opus-5-5</link>
-      <guid isPermaLink="true">https://www.anthropic.com/claude-opus-5-5</guid>
+      <title>Dataiku tool inventories AI agents across rival platforms</title>
+      <link>https://www.dataiku.com/company/news/dataiku-agent-management-general-availability</link>
+      <guid isPermaLink="true">https://www.dataiku.com/company/news/dataiku-agent-management-general-availability</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, delivering a 40% reduction in typical workload costs compared to Opus 5 and output speeds increased by over 30%. Pricing is $4/$20 per MTok—a 20% reduction from its predecessor—and cache reads at $0.20 per MTok, representing a 60% decrease. For ops teams evaluating agentic workload costs, this fundamentally shifts the economics of Claude-powered automation.&lt;/p&gt;&lt;p&gt;Source: Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Dataiku announced Agent Management on September 24, 2026, a standalone product that discovers every AI agent an enterprise runs regardless of platform, measures business and technical performance, and flags highest-risk agents. General availability planned for October 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fewer than one in five organizations maintain a complete inventory of their AI systems; centralized agent observability and governance solves critical operational blindness for large-scale AI deployments.&lt;/p&gt;&lt;p&gt;Source: Dataiku · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Anthropic's Biolab: Claude Autonomously Discovers Novel CRISPR-Like Enzyme System</title>
-      <link>https://www.anthropic.com/news/claude-discovers-novel-enzyme-system</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/claude-discovers-novel-enzyme-system</guid>
+      <title>Lumen sells on-demand bandwidth that scales with AI workloads</title>
+      <link>https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity</link>
+      <guid isPermaLink="true">https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Anthropic launched a new life sciences research group and disclosed its first result: Claude autonomously flagged a previously uncharacterized bacteriophage enzyme system called array-associated reverse transcriptases (ART), whose structure resembles CRISPR arrays. Roughly 950 agents ran for 21 hours and used 210M tokens to scan 200,000 RTs and narrow 3,500 candidates down to 20 systems. This demonstrates agentic AI scaling for scientific discovery workflows.&lt;/p&gt;&lt;p&gt;Source: Anthropic Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, enabling enterprise customers to buy connectivity in minutes and scale bandwidth elastically as AI and cloud workloads demand. IDC research shows 37% of enterprises experienced 50%+ year-over-year bandwidth growth, with 29% struggling to align networks with AI workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; On-demand bandwidth provisioning eliminates network as a constraint for scaling AI inference and training; network elasticity now matches compute elasticity, critical for LLM cluster operations.&lt;/p&gt;&lt;p&gt;Source: Benton Institute for Broadband &amp;amp; Society · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>LLM-Powered Agentic AI for 5G/6G Networks: Architecture, Protocols, and Standardization</title>
-      <link>https://arxiv.org/pdf/2607.16066</link>
-      <guid isPermaLink="true">https://arxiv.org/pdf/2607.16066</guid>
+      <title>Flash-dLLM cuts memory and bandwidth costs in LLM inference</title>
+      <link>https://github.com/zachysun/DailyArXiv/issues/567</link>
+      <guid isPermaLink="true">https://github.com/zachysun/DailyArXiv/issues/567</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;A comprehensive tutorial and survey on LLM-powered agentic AI for 5G/6G networks examining architectures, protocols, and standardization approaches. The paper details emerging agent communication standards including Model Context Protocol (MCP), Agent Communication Protocol (ACP), and Agent Network Protocol (ANP), showing how autonomous agents will orchestrate intent-based network management and RAN automation. Essential reference for network engineers designing autonomous infrastructure.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Flash-dLLM optimizes key-value caching and parallel decoding in diffusion language models through IO-aware kernel techniques, addressing memory and bandwidth bottlenecks in LLM inference systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Memory-bandwidth optimization in LLM serving directly impacts cluster utilization and per-token serving cost, critical metrics for infrastructure teams sizing GPU clusters for production agentic workloads.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Claude Opus 5.5 launches at $4/$20 with 60% cheaper cache reads and medium-effort default</title>
-      <link>https://www.anthropic.com/news/introducing-claude-opus-5-5</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/introducing-claude-opus-5-5</guid>
+      <title>Anthropic and OpenAI cut model prices on the same day</title>
+      <link>https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22 as the first model in its new 5.5 family, matching Claude Fable 5.1 performance while costing 40% less to run than Opus 5. Pricing is $4/$20 per million input/output tokens—20% lower than Opus 5—with cache reads cut from $0.50 to $0.20 (60% reduction). The full 1M context window bills at standard rate with no long-context premium.&lt;/p&gt;&lt;p&gt;Source: Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 with 20% price cuts (to $4/$20 per million tokens, 60% reduction on cache reads) and improved safety metrics; OpenAI immediately countered with GPT-6 Sol and Luna at half the cost of predecessors, with Sol at $2/$10 and Luna at $0.10/$0.50 per million tokens.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Direct API cost reduction and competitive positioning changes how teams evaluate model economics for production workloads and agentic deployments.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OpenAI cuts GPT-6 Sol and Luna prices 50%, launching aggressive pricing response same-day as Claude Opus 5.5</title>
-      <link>https://openai.com/blog/introducing-gpt-6-sol-and-luna</link>
-      <guid isPermaLink="true">https://openai.com/blog/introducing-gpt-6-sol-and-luna</guid>
+      <title>OpenAI launches cheaper GPT-6 Sol and Luna models</title>
+      <link>https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5</link>
+      <guid isPermaLink="true">https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;On September 22, OpenAI launched GPT-6 Sol and GPT-6 Luna as faster, more affordable siblings to GPT-6 Astra, with Sol at $2/$10 and Luna at $0.10/$0.50 per million tokens—50% reductions from GPT-5.6 pricing. Both models have 1.05M-token context windows and are roughly half the price of the GPT-5.6 models they replace, with improvements in caching and inference efficiency enabling the cuts.&lt;/p&gt;&lt;p&gt;Source: OpenAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenAI launched GPT-6 Sol and Luna on September 22, minutes after Anthropic's Claude Opus 5.5 release. Sol costs $2 per million input tokens and $10 output (down from $4/$20); Luna drops to $0.10/$0.50 (from $0.20/$1.20). Both models sit below GPT-6 Astra.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Pricing halving and rapid release cycles create new cost tiers for both enterprise and edge-use-case deployments, affecting model selection strategies.&lt;/p&gt;&lt;p&gt;Source: Decrypt · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI Lab Executives Brief UN Security Council on Uncontrolled Systems Risk</title>
-      <link>https://www.cnn.com/2026/09/23/tech/altman-amodei-ai-safety-un-security-council</link>
-      <guid isPermaLink="true">https://www.cnn.com/2026/09/23/tech/altman-amodei-ai-safety-un-security-council</guid>
+      <title>Google DeepMind says Gemini 4 is in post-training</title>
+      <link>https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model</link>
+      <guid isPermaLink="true">https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, and Hugging Face co-founder Clément Delangue briefed the UN Security Council on warnings that increasingly powerful AI systems could improve themselves, slip beyond human control, and pose threats to international security. The executives agreed the industry needs international standards and cooperation or risks global security.&lt;/p&gt;&lt;p&gt;Source: CNN Business · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Google DeepMind announced on September 24 that Gemini 4 is in early post-training phase, with expected release before year-end. The model is positioned to compete with recent Anthropic and OpenAI launches.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gemini 4 timeline signals Google's three-way competitive refresh cadence and provides practitioners a near-term window for evaluating multimodal reasoning capabilities.&lt;/p&gt;&lt;p&gt;Source: GuruFocus · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Google, OpenAI, Anthropic Planning Independent Frontier AI Standards Body by Late 2026</title>
-      <link>https://www.yahoo.com/news/politics/articles/google-openai-anthropic-move-closer-154300474.html</link>
-      <guid isPermaLink="true">https://www.yahoo.com/news/politics/articles/google-openai-anthropic-move-closer-154300474.html</guid>
+      <title>Orange takes Nokia AI-RAN into live network testing</title>
+      <link>https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing</link>
+      <guid isPermaLink="true">https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing</guid>
+      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Orange is preparing to test Nokia's AI-RAN platform in its live network, putting claimed radio-efficiency gains to the commercial test while exploring shared compute for AI workloads. Orange will start small, testing performance, energy efficiency, operational impact and total cost of ownership before scaling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Validates whether AI-RAN can work under production conditions with live traffic and customer obligations—moving beyond lab trials to operator validation on network operations and revenue impact.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic co-founders seek majority voting control before IPO</title>
+      <link>https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo</link>
+      <guid isPermaLink="true">https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo</guid>
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Google, OpenAI, and Anthropic are launching an independent standards organization tentatively named the Standards Authority for Frontier AI (SAFA), to be established by end of 2026 or early 2027. The self-regulated body will operate without government oversight to fill gaps in frontier AI governance.&lt;/p&gt;&lt;p&gt;Source: Yahoo News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Anthropic is requesting shareholder approval for a special share class granting CEO Dario Amodei and six co-founders collective 50.1% voting control in most corporate matters ahead of an anticipated IPO near $2 trillion valuation. The structure mimics Palantir's founder-control framework and requires at least three of seven co-founders to retain minimum share thresholds.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Founder supershares structurally decouple governance from dilution risk—critical for long-term R&amp;amp;D focus in frontier AI labs but constrains minority shareholder influence post-IPO.&lt;/p&gt;&lt;p&gt;Source: The Information / Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ema raises $77 million as enterprises run agent workflows</title>
+      <link>https://siliconangle.com/2026/09/23/ema-raises-77m-in-funding-to-deploy-ai-employees-across-enterprise-hr-it-and-finance-departments/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/09/23/ema-raises-77m-in-funding-to-deploy-ai-employees-across-enterprise-hr-it-and-finance-departments/</guid>
+      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Ema closed a $77 million Series B round led by Creaegis, bringing total funding to $140 million and more than quadrupling valuation from its previous round. The company reports customers running HR, IT and Finance operations on AI Employees at a scale of millions of interactions per year, with one $50B conglomerate moving from concept to production in four weeks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates enterprise agentic AI moving past pilots into sustained production with measurable ROI—resolving the deployment bottleneck that has stalled 88% of agent projects.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Opinion warns AI safety rhetoric is masking geopolitical containment</title>
+      <link>https://moderndiplomacy.eu/2026/09/23/ai-governance-must-not-become-a-geopolitical-battlefield/</link>
+      <guid isPermaLink="true">https://moderndiplomacy.eu/2026/09/23/ai-governance-must-not-become-a-geopolitical-battlefield/</guid>
+      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Opinion piece warns that blending legitimate AI safety concerns with geopolitical containment rhetoric distorts governance debates, as Western tech leaders and policymakers frame AI competition as military/economic contest requiring technological blockades and decoupling strategies rather than coordinated safety baselines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Identifies policy fragmentation risk: if AI governance becomes weaponized along US-China lines, enterprises face multiplied compliance regimes and fragmented standards bodies unable to coordinate safety baselines.&lt;/p&gt;&lt;p&gt;Source: Modern Diplomacy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Most enterprise agent projects never reach production despite funding surge</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/enterprise-ai-agent-funding-surges-093104627.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/enterprise-ai-agent-funding-surges-093104627.html</guid>
+      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Between April and September 2026, venture capital investors poured $435 million into 12 financings for enterprise AI agent security and governance companies, with nine rounds focused on making AI agents safe enough to run inside businesses. 88% of enterprises with agent initiatives never ship to production, and Gartner predicts 40% of agentic AI projects will be canceled by end of 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Capital concentration in governance infrastructure reveals market bottleneck: enterprises recognize agents require enterprise-grade risk controls before scaling—shifting investment from models to guardrails.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</title>
