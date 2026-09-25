@@ -26,54 +26,72 @@ const MAX_AGE_DAYS = 4;
 const TOPICS = [
   {
     label: 'AI Ops & Observability',
+    slug: 'aiops',
+    about: 'AIOps, observability and AI-assisted operations: monitoring, event correlation, incident response and the platforms behind them.',
     short: 'AI ops',
     maxItems: 8,
     query: 'AIOps observability AI operations LogicMonitor Selector.ai net.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
   },
   {
     label: 'Agentic AI & MCP',
+    slug: 'agentic-ai',
+    about: 'AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.',
     short: 'Agentic AI',
     maxItems: 7,
     query: 'agentic AI MCP Model Context Protocol multi-agent systems AI agents networking operations news 2026'
   },
   {
     label: 'Network Automation',
+    slug: 'network-automation',
+    about: 'NetDevOps, intent-based networking, orchestration and the tools that automate network change.',
     short: 'Networking',
     maxItems: 7,
     query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news 2026'
   },
   {
     label: 'Security Automation',
+    slug: 'security',
+    about: 'Security operations and automation: SOC tooling, SASE, zero trust, and AI on both sides of attack and defence.',
     short: 'Security',
     maxItems: 3,
     query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news 2026'
   },
   {
     label: 'AI Infrastructure',
+    slug: 'ai-infrastructure',
+    about: 'The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.',
     short: 'Infrastructure',
     maxItems: 3,
     query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news 2026'
   },
   {
     label: 'Research, Standards & Industry',
+    slug: 'research',
+    about: 'Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.',
     short: 'Research',
     maxItems: 6,
     query: 'AI ML research paper networking AIOps MLOps agents arxiv IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding platform engineering news 2026'
   },
   {
     label: 'AI Model Providers',
+    slug: 'ai-models',
+    about: 'Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.',
     short: 'Models',
     maxItems: 3,
     query: 'Anthropic Claude OpenAI Google DeepMind Cohere Mistral xAI AI model announcement product launch shutdown 2026'
   },
   {
     label: 'Telco & Cable AI',
+    slug: 'telco',
+    about: 'How telecom and cable operators are applying AI and automation to their networks.',
     short: 'Telco',
     maxItems: 5,
     query: 'AT&T Verizon Lumen Singtel Bell Canada Rogers Cogeco Comcast Charter Cox Telus BCE telco cable operator AI artificial intelligence automation network deployment 2026'
   },
   {
     label: 'AI Industry & Policy',
+    slug: 'industry-policy',
+    about: 'AI regulation, policy, funding and enterprise adoption.',
     short: 'Industry and policy',
     maxItems: 5,
     query: 'artificial intelligence industry news regulation policy enterprise adoption AI governance geopolitics funding acquisitions 2026'
@@ -86,7 +104,7 @@ const TOPICS = [
   },
 ];
 
-// ── Ledger: companies and signals ─────────────────────────────────────────────
+// ── Vendors ───────────────────────────────────────────────────────────────────
 const TRENDING_TERMS = [
   'MCP', 'Agentic AI', 'AIOps', 'Digital Twin', 'RAG', 'LLM',
   'OpenTelemetry', 'OpenConfig', 'eBPF', 'SASE', 'Zero Trust',
@@ -94,82 +112,51 @@ const TRENDING_TERMS = [
   'GenAI', 'inference', 'fine-tuning', 'automation', 'agent',
 ];
 
-// The ledger's two right-hand columns: vendor mentions over 7 days, and today's terms
-function intelligencePanelHtml(articles, weekArticles) {
-  const topVendors = vendorMentions(weekArticles).slice(0, 8);
-  const tally = topVendors.length
-    ? `<ul class="tally">${topVendors.map(({ vendor, articles: hits }) => `
-        <li onclick="searchVendor('${esc(vendor).replace(/'/g, "\\'")}')"><span class="tally-name">${esc(vendor)}</span><span class="dots"></span><span class="n">${hits.length}</span></li>`).join('')}
-      </ul>`
-    : '<p class="empty-note">No tracked vendors in the news this week.</p>';
-
-  const allText = articles.map(a => [a.title, a.summary].join(' ')).join(' ').toLowerCase();
-  const termCounts = TRENDING_TERMS
-    .map(term => ({ term, count: (allText.match(new RegExp(term.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length }))
-    .filter(t => t.count > 0)
-    .sort((a, b) => b.count - a.count);
-  const maxT = termCounts[0]?.count || 1;
-  const terms = termCounts.slice(0, 14)
-    .map(({ term, count }) => count >= maxT * 0.4 ? `<span class="hot">${esc(term)}</span>` : esc(term))
-    .join(' · ');
-
-  return `
-      <div>
-        <h3 class="label">Most mentioned · 7 days</h3>
-        ${tally}
-      </div>
-      <div>
-        <h3 class="label">In the pipes today</h3>
-        ${terms ? `<p class="terms">${terms}</p>` : '<p class="empty-note">Nothing trending yet.</p>'}
-      </div>`;
-}
-
-// ── Vendor Radar ──────────────────────────────────────────────────────────────
-const TRACKED_VENDORS = [
-  'LogicMonitor', 'Honeycomb', 'Last9', 'Chronosphere', 'Selector',
-  'Dynatrace', 'Datadog', 'New Relic', 'Itential', 'CrowdStrike',
-  'Palo Alto', 'Arista', 'Juniper', 'Cisco', 'ServiceNow',
-  'net.ai',
+// Tracked vendors: the name as it appears in stories, the /vendors/ URL slug,
+// and a one-line description for the vendor page.
+const VENDORS = [
+  { name: 'LogicMonitor', slug: 'logicmonitor', about: 'Hybrid observability platform for infrastructure, network and cloud monitoring, with AI-driven operations features.' },
+  { name: 'Honeycomb', slug: 'honeycomb', about: 'Observability platform built around high-cardinality event data and distributed tracing.' },
+  { name: 'Last9', slug: 'last9', about: 'Observability platform focused on high-cardinality metrics, logs and traces at scale.' },
+  { name: 'Chronosphere', slug: 'chronosphere', about: 'Cloud-native observability platform for metrics, traces and logs, built on Prometheus-compatible tooling.' },
+  { name: 'Selector', slug: 'selector-ai', about: 'Selector AI builds an AIOps and network observability platform that uses AI to correlate events across network and IT infrastructure.' },
+  { name: 'Dynatrace', slug: 'dynatrace', about: 'Observability and application security platform with AI-assisted root-cause analysis.' },
+  { name: 'Datadog', slug: 'datadog', about: 'Cloud monitoring, observability and security platform for infrastructure, applications and logs.' },
+  { name: 'New Relic', slug: 'new-relic', about: 'Observability platform covering application performance, infrastructure and logs.' },
+  { name: 'Itential', slug: 'itential', about: 'Network automation and orchestration platform for multi-vendor and hybrid infrastructure.' },
+  { name: 'CrowdStrike', slug: 'crowdstrike', about: 'Endpoint, cloud and identity security company, best known for its Falcon platform.' },
+  { name: 'Palo Alto', slug: 'palo-alto', about: 'Palo Alto Networks: network security, SASE and security operations platforms.' },
+  { name: 'Arista', slug: 'arista', about: 'Arista Networks: data center, campus and AI networking switches and the EOS operating system.' },
+  { name: 'Juniper', slug: 'juniper', about: 'Juniper Networks, now part of HPE: routing, switching and AI-driven networking including Mist and Apstra.' },
+  { name: 'Cisco', slug: 'cisco', about: 'Networking, security and observability company, including Splunk and ThousandEyes.' },
+  { name: 'ServiceNow', slug: 'servicenow', about: 'IT service and operations management platform, with AI agents for IT workflows.' },
+  { name: 'net.ai', slug: 'net-ai', about: 'Coverage of net.ai in Digital Plumber briefings.' },
 ];
+const TRACKED_VENDORS = VENDORS.map(v => v.name);
 
 // Names match as whole words, case-sensitively ("Cisco" must not match "San
 // Francisco", "Selector" must not match a Kubernetes label selector). An
 // all-lowercase entry such as 'net.ai' matches in any case.
-const VENDOR_PATTERNS = TRACKED_VENDORS.map(vendor => ({
-  vendor,
+const VENDOR_PATTERNS = VENDORS.map(v => ({
+  ...v,
+  vendor: v.name,
   re: new RegExp(
-    `(?<![\\w-])${vendor.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`,
-    vendor === vendor.toLowerCase() ? 'i' : ''
+    `(?<![\\w-])${v.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`,
+    v.name === v.name.toLowerCase() ? 'i' : ''
   ),
 }));
+
+// The text a story is matched against for vendor mentions
+function mentionText(a) {
+  return [a.title, a.headline, a.summary, a.source, ...(a.tags || [])].join(' ');
+}
 
 // [{ vendor, articles }] for every tracked vendor the articles mention, most-mentioned first
 function vendorMentions(articles) {
   return VENDOR_PATTERNS
-    .map(({ vendor, re }) => ({
-      vendor,
-      articles: articles.filter(a => re.test([a.title, a.summary, a.source, ...(a.tags || [])].join(' '))),
-    }))
+    .map(({ vendor, re }) => ({ vendor, articles: articles.filter(a => re.test(mentionText(a))) }))
     .filter(m => m.articles.length > 0)
     .sort((a, b) => b.articles.length - a.articles.length);
-}
-
-// Tracked companies in today's paper, each linking to its stories on the page
-function vendorRadarHtml(articles) {
-  const active = vendorMentions(articles);
-  const activeNames = new Set(active.map(m => m.vendor));
-  const quiet = TRACKED_VENDORS.filter(v => !activeNames.has(v));
-  if (active.length === 0) {
-    return `<p class="empty-note">None of the ${TRACKED_VENDORS.length} tracked companies made today's paper.</p>`;
-  }
-  return active.map(({ vendor, articles: hits }) => `
-        <div class="company">
-          <div class="company-name">${esc(vendor)}<span class="n">${hits.length} ${hits.length === 1 ? 'story' : 'stories'}</span></div>
-          <ul>${hits.slice(0, 3).map(a => `<li><a href="#${esc(a.id)}">${esc(a.title)}</a></li>`).join('')}</ul>
-          <button type="button" class="coverage" onclick="searchVendor('${esc(vendor).replace(/'/g, "\\'")}')">All ${esc(vendor)} coverage →</button>
-        </div>`).join('') +
-    (quiet.length ? `
-        <p class="quiet">Quiet today: ${quiet.map(esc).join(', ')}</p>` : '');
 }
 
 // ── System prompt ─────────────────────────────────────────────────────────────
@@ -208,7 +195,14 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
 - "source": the publication, blog, or outlet (e.g. "arXiv", "Packet Pushers", "The New Stack", "ML Ops Community", "Network World")
 - "date": the article's exact publication date in ISO format "YYYY-MM-DD" (e.g. "2026-06-26"). If you cannot determine the exact publication date, exclude the article.
 - "category": one of: "Product Launch", "Research", "Industry Trend", "Standards", "Acquisition", "Opinion", "Community"
-- "summary": 2-3 sentences written for a peer practitioner — what actually happened, the technical detail that matters, and why it's worth their attention. No fluff, no marketing tone. This is the teaser shown on the card.
+- "source_type": what kind of source this is, one of:
+    "Primary source" (the originator explaining its own work in substance: standards documents, project release notes, engineering blogs, official documentation, government publications),
+    "Research" (academic or industry papers, surveys and studies),
+    "Vendor release" (a company's press release or product announcement),
+    "Industry news" (reporting by a news publication),
+    "Analysis" (commentary, opinion or analysis by an analyst, practitioner or publication)
+- "summary": what happened, in two short sentences (under 50 words) for a peer practitioner: the facts and the one technical detail that matters most. No fluff, no marketing tone, and no significance — that goes in why_it_matters. The detail field carries everything else.
+- "why_it_matters": one sentence, under 30 words, on what this means specifically for network, infrastructure, NetDevOps or IT operations practitioners. Concrete ("changes how you size X", "a new option for Y"), not generic hype.
 - "detail": a longer 150-250 word briefing that expands on the summary so a reader gets the full gist WITHOUT leaving to read the source. Cover: what happened and the key specifics (numbers, versions, benchmark results, architectural choices), why it matters to a network/AIOps/SRE practitioner, and any notable caveats or context. Write 2-3 tight paragraphs of substance — no marketing tone, no filler, no restating the title. Base it only on what the source actually says; do not invent details.
 - "url": the actual source URL
 - "tags": array of 3–5 short tags pulled directly from the article — company names, product names, or key technology terms (e.g. ["Cisco", "AIOps", "MCP"], ["Anthropic", "Claude", "Agents"])
@@ -254,73 +248,99 @@ function sourceLink(item) {
   return `<a class="source-link" href="${esc(item.url)}" target="_blank" rel="noopener">Read the original${domain ? ` at ${esc(domain)}` : ''} ↗</a>`;
 }
 
-// A story inside a newspaper section
-function storyHtml(item) {
-  const paras = detailParas(item);
-  const tags = (item.tags || []).slice(0, 5);
-  return `
-        <article class="story" data-topic="${esc(item.topicLabel)}" data-title="${esc(item.title)}" id="${esc(item.id)}">
-          <div class="story-head">
-            ${item.category ? `<p class="kicker label">${esc(item.category)}</p>` : ''}
-            <h3><a href="${esc(item.url)}" target="_blank" rel="noopener" title="${esc(item.title)}">${esc(item.headline || item.title)}</a></h3>
-          </div>
-          <div class="story-body">
-            <p class="summary">${esc(item.summary)}</p>
-            <p class="byline"><b>${esc(item.source)}</b> · ${esc(displayDate(item.date))}</p>
-            ${tags.length ? `<p class="tags">${tags.map(esc).join(' · ')}</p>` : ''}
-            ${paras ? `<div class="story-detail">${paras}${sourceLink(item)}</div>
-            <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Continue reading</button>` : `
-            ${sourceLink(item)}`}
-          </div>
-        </article>`;
-}
+// ── Story labels ──────────────────────────────────────────────────────────────
+const SOURCE_TYPES = ['Primary source', 'Research', 'Vendor release', 'Industry news', 'Analysis'];
+const CATEGORY_SOURCE_TYPES = {
+  'Research': 'Research', 'Standards': 'Primary source', 'Product Launch': 'Vendor release',
+  'Industry Trend': 'Industry news', 'Acquisition': 'Industry news', 'Opinion': 'Analysis', 'Community': 'Analysis',
+};
 
-// The front page: the lead story with its full write-up, and an index of the next picks.
-// The lead's standfirst is why it matters; its body is the write-up, or the
-// summary when there is no write-up, so the same facts never appear twice.
-function frontPageHtml(lead, inside) {
-  if (!lead) return '<p class="empty-note">No stories today. Check back tomorrow morning.</p>';
-  const { item, why } = lead;
-  const deck = why || item.summary;
-  const body = detailParas(item) || (why ? `<p>${esc(item.summary)}</p>` : '');
-  return `
-    <article class="story lead" data-topic="${esc(item.topicLabel)}" data-title="${esc(item.title)}" id="${esc(item.id)}">
-      <p class="kicker label">${esc(topicShort(item.topicLabel))}${item.category ? `<span class="sep">·</span>${esc(item.category)}` : ''}</p>
-      <h2 class="lead-head"><a href="${esc(item.url)}" target="_blank" rel="noopener" title="${esc(item.title)}">${esc(item.headline || item.title)}</a></h2>
-      <p class="lead-deck">${esc(deck)}</p>
-      <p class="byline"><b>${esc(item.source)}</b> · ${esc(displayDate(item.date))}</p>
-      ${body ? `<div class="lead-body">${body}</div>` : ''}
-      ${sourceLink(item)}
-    </article>
-    ${inside.length ? `<aside class="inside">
-      <h3 class="rail-head label">Inside today</h3>
-      <ol>${inside.map(({ item: i, why: w }) => `
-        <li><div>
-          <a href="#${esc(i.id)}"><span class="rail-kicker label">${esc(topicShort(i.topicLabel))}</span>${esc(i.headline || i.title)}</a>
-          ${w ? `<p>${esc(w)}</p>` : ''}
-        </div></li>`).join('')}
-      </ol>
-    </aside>` : ''}`;
+// The source type the curator gave, or one inferred from the category for older stories
+function sourceTypeOf(a) {
+  const given = SOURCE_TYPES.find(t => t.toLowerCase() === String(a.sourceType || '').trim().toLowerCase());
+  return given || CATEGORY_SOURCE_TYPES[a.category] || '';
 }
 
 function topicShort(label) {
   return (TOPICS.find(t => t.label === label) || {}).short || label;
 }
 
-// Every story except the lead, grouped into sections in TOPICS order
-function sectionsHtml(items, leadId) {
+function topicHref(label) {
+  const slug = (TOPICS.find(t => t.label === label) || {}).slug;
+  return slug ? `/topics/${slug}/` : '';
+}
+
+// Whole sentences from the start of a summary, up to about `maxChars` (always at least one)
+function leadSentences(text, maxChars = 200) {
+  const sentences = String(text || '').split(/(?<=[.!?])\s+(?=[A-Z0-9"“‘(])/);
+  let out = sentences[0] || '';
+  for (const s of sentences.slice(1)) {
+    if (out.length + s.length + 1 > maxChars) break;
+    out += ` ${s}`;
+  }
+  return out;
+}
+
+function metaLine(a, date) {
+  const type = sourceTypeOf(a);
+  return `<p class="meta"><b>${esc(a.source)}</b> · ${esc(date)}${type ? ` · <span class="stype">${esc(type)}</span>` : ''}</p>`;
+}
+
+function whyLine(why) {
+  return why ? `<p class="why-line"><span class="label">Why it matters</span> ${esc(why)}</p>` : '';
+}
+
+// ── Daily briefing ────────────────────────────────────────────────────────────
+// A compact card: headline, source line, what happened, why it matters
+function storyHtml(item) {
+  const paras = detailParas(item);
+  return `
+        <article class="story" data-topic="${esc(item.topicLabel)}" data-title="${esc(item.title)}" id="${esc(item.id)}">
+          <h3><a href="${esc(item.url)}" target="_blank" rel="noopener" title="${esc(item.title)}">${esc(item.headline || item.title)}</a></h3>
+          ${metaLine(item, displayDate(item.date))}
+          <p class="summary">${esc(item.summary)}</p>
+          ${whyLine(item.why)}
+          ${paras ? `<div class="story-detail">${paras}${sourceLink(item)}</div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>` : sourceLink(item)}
+        </article>`;
+}
+
+// Today's 3 things that matter: short headline, one or two sentences, why it matters, links
+function threeThingsHtml(picks) {
+  if (picks.length === 0) return '';
+  const heading = picks.length === 1 ? "Today's one thing that matters" : `Today's ${picks.length} things that matter`;
+  return `
+  <section class="three home-extra" aria-labelledby="three-head">
+    <div class="section-head"><h2 id="three-head">${heading}</h2><span class="label">Picked by the AI editor</span></div>
+    <ol class="three-list">${picks.map(({ item, why }) => {
+      const type = sourceTypeOf(item);
+      return `
+      <li>
+        <p class="kicker label">${esc(topicShort(item.topicLabel))}${type ? `<span class="sep">·</span>${esc(type)}` : ''}</p>
+        <h3><a href="#${esc(item.id)}">${esc(item.headline || item.title)}</a></h3>
+        <p class="three-summary">${esc(leadSentences(item.summary))}</p>
+        ${whyLine(item.why || why)}
+        <p class="three-links"><a href="#${esc(item.id)}">Full item ↓</a><a href="${esc(item.url)}" target="_blank" rel="noopener">Read at ${esc(item.source)} ↗</a></p>
+      </li>`;
+    }).join('')}
+    </ol>
+  </section>`;
+}
+
+// Every story, grouped into topic sections in TOPICS order
+function sectionsHtml(items) {
   return TOPICS
-    .map(topic => ({ topic, stories: items.filter(i => i.topicLabel === topic.label && i.id !== leadId) }))
+    .map(topic => ({ topic, stories: items.filter(i => i.topicLabel === topic.label) }))
     .filter(({ stories }) => stories.length > 0)
     .map(({ topic, stories }) => `
     <section class="paper-section" data-topic="${esc(topic.label)}">
-      <div class="section-head"><h2>${esc(topic.label)}</h2><span class="label">${stories.length} ${stories.length === 1 ? 'story' : 'stories'}</span></div>
+      <div class="section-head"><h2>${topic.slug ? `<a href="/topics/${topic.slug}/">${esc(topic.label)}</a>` : esc(topic.label)}</h2><span class="label">${stories.length} ${stories.length === 1 ? 'story' : 'stories'}</span></div>
       <div class="story-grid">${stories.map(storyHtml).join('')}
       </div>
     </section>`).join('');
 }
 
-// Section bar links for the topics in today's paper
+// Topic filter links for the topics in today's briefing
 function sectionLinksHtml(items) {
   return TOPICS
     .map(topic => ({ topic, n: items.filter(i => i.topicLabel === topic.label).length }))
@@ -328,6 +348,142 @@ function sectionLinksHtml(items) {
     .map(({ topic, n }) =>
       `<button class="section-link" data-topic="${esc(topic.label)}" onclick="filterTopic(this, this.dataset.topic)">${esc(topic.short)}<span class="n">${n}</span></button>`)
     .join('\n      ');
+}
+
+// Tracked companies in today's briefing, each linking to its stories on the page
+function vendorsTodayHtml(articles) {
+  const active = vendorMentions(articles);
+  if (active.length === 0) {
+    return `<p class="empty-note">None of the ${TRACKED_VENDORS.length} tracked companies are in today's briefing.</p>`;
+  }
+  return active.map(({ vendor, articles: hits }) => {
+    const v = VENDORS.find(x => x.name === vendor);
+    return `
+        <div class="company">
+          <div class="company-name"><a href="/vendors/${v.slug}/">${esc(vendor)}</a><span class="n">${hits.length} ${hits.length === 1 ? 'story' : 'stories'}</span></div>
+          <ul>${hits.slice(0, 3).map(a => `<li><a href="#${esc(a.id)}">${esc(a.headline || a.title)}</a></li>`).join('')}</ul>
+        </div>`;
+  }).join('');
+}
+
+// ── Trends ────────────────────────────────────────────────────────────────────
+function addDays(dateStr, n) {
+  return new Date(Date.parse(`${dateStr}T00:00:00Z`) + n * 86400000).toISOString().slice(0, 10);
+}
+
+// "2026-09-25" → "Sep 25"
+function shortDate(iso) {
+  return new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-CA', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+// Story counts for the 7 days to `today`, the 7 days before that, and the last 30 days
+function periodCounts(all, today) {
+  const count = (from, to) => all.filter(a => a.date >= from && a.date <= to).length;
+  return {
+    cur: count(addDays(today, -6), today),
+    prev: count(addDays(today, -13), addDays(today, -7)),
+    d30: count(addDays(today, -29), today),
+  };
+}
+
+// Per-vendor coverage across the whole archive; `all` is newest first
+function vendorStats(index, today) {
+  return VENDOR_PATTERNS.map(v => {
+    const all = index.filter(a => v.re.test(mentionText(a)));
+    return { kind: 'vendor', label: v.name, about: v.about, href: `/vendors/${v.slug}/`, all, ...periodCounts(all, today) };
+  });
+}
+
+// Per-topic coverage across the whole archive; `all` is newest first
+function topicStats(index, today) {
+  return TOPICS.filter(t => t.slug).map(t => {
+    const all = index.filter(a => a.topic === t.label);
+    return { kind: 'topic', label: t.label, short: t.short, about: t.about, href: `/topics/${t.slug}/`, all, ...periodCounts(all, today) };
+  });
+}
+
+function trendHtml({ cur, prev }) {
+  if (cur > prev) return `<span class="trend up" title="Up from ${prev} the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from ${prev}</span></span>`;
+  if (cur < prev) return `<span class="trend down" title="Down from ${prev} the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from ${prev}</span></span>`;
+  return '';
+}
+
+// A dotted-leader tally of 7-day counts with trend arrows, busiest first
+function tallyHtml(stats, limit, empty) {
+  const rows = stats.filter(s => s.cur > 0 || s.prev > 0)
+    .sort((a, b) => b.cur - a.cur || b.prev - a.prev)
+    .slice(0, limit);
+  if (rows.length === 0) return `<p class="empty-note">${esc(empty)}</p>`;
+  return `<ul class="tally">${rows.map(s => `
+          <li><a class="tally-name" href="${s.href}">${esc(s.short || s.label)}</a><span class="dots"></span><span class="n">${s.cur}</span><span class="trend-slot">${trendHtml(s)}</span></li>`).join('')}
+        </ul>`;
+}
+
+// The biggest week-over-week changes in coverage, as sentences
+function changesHtml(stats, limit) {
+  const stories = n => `${n} ${n === 1 ? 'story' : 'stories'}`;
+  const moved = stats.filter(s => Math.abs(s.cur - s.prev) >= 2)
+    .sort((a, b) => Math.abs(b.cur - b.prev) - Math.abs(a.cur - a.prev) || b.cur - a.cur)
+    .slice(0, limit);
+  if (moved.length === 0) return '<p class="empty-note">Coverage was steady compared with the previous 7 days.</p>';
+  return `<ul class="changes">${moved.map(s => {
+    const name = `<a href="${s.href}">${esc(s.label)}</a>${s.kind === 'topic' ? ' coverage' : ''}`;
+    const text = s.prev === 0
+      ? `${name} appeared in ${stories(s.cur)}, after none the week before`
+      : `${name} ${s.cur > s.prev ? 'rose' : 'fell'} to ${stories(s.cur)}, from ${s.prev}`;
+    return `
+          <li>${trendHtml(s)} ${text}</li>`;
+  }).join('')}
+        </ul>`;
+}
+
+// The most-used trending terms across a set of stories
+function termsHtml(articles) {
+  const allText = articles.map(a => [a.title, a.summary].join(' ')).join(' ').toLowerCase();
+  const termCounts = TRENDING_TERMS
+    .map(term => ({ term, count: (allText.match(new RegExp(term.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length }))
+    .filter(t => t.count > 0)
+    .sort((a, b) => b.count - a.count);
+  const maxT = termCounts[0]?.count || 1;
+  const terms = termCounts.slice(0, 12)
+    .map(({ term, count }) => count >= maxT * 0.4 ? `<span class="hot">${esc(term)}</span>` : esc(term))
+    .join(' · ');
+  return terms ? `<p class="terms">${terms}</p>` : '';
+}
+
+// Homepage: Vendor Radar, then what changed this week and trending topics
+function homeIntelHtml(newsItems, vStats, tStats, weekEntries) {
+  return `
+  <section class="paper-section home-extra" id="vendor-radar">
+    <div class="section-head"><h2><a href="/vendors/">Vendor Radar</a></h2><span class="label">Last 7 days · arrows compare with the 7 before</span></div>
+    <div class="intel-grid">
+      <div>
+        <h3 class="label">Most active</h3>
+        ${tallyHtml(vStats, 10, 'No tracked vendors in the news in the last two weeks.')}
+        <p class="more-link label"><a href="/vendors/">Every tracked vendor →</a></p>
+      </div>
+      <div>
+        <h3 class="label">In today's briefing</h3>
+        ${vendorsTodayHtml(newsItems)}
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-section home-extra" id="what-changed">
+    <div class="section-head"><h2><a href="/week.html">What changed this week</a></h2><span class="label">Last 7 days vs the 7 before</span></div>
+    <div class="intel-grid">
+      <div>
+        <h3 class="label">Biggest moves</h3>
+        ${changesHtml([...tStats, ...vStats], 5)}
+        <p class="more-link label"><a href="/week.html">The week in network intelligence →</a></p>
+      </div>
+      <div>
+        <h3 class="label">Trending topics</h3>
+        ${tallyHtml(tStats, 9, 'No stories in the last two weeks.')}
+        ${termsHtml(weekEntries)}
+      </div>
+    </div>
+  </section>`;
 }
 
 // ── Fetch news for a single topic (with retry on 429) ────────────────────────
@@ -439,6 +595,8 @@ async function fetchTopicNews(topic, attempt = 1) {
       title:   stripCites(item.title),
       summary: stripCites(item.summary),
       source:  stripCites(item.source),
+      why:     stripCites(item.why_it_matters || ''),
+      sourceType: stripCites(item.source_type || ''),
       topicLabel: topic.label,
     }));
 
@@ -482,12 +640,12 @@ function podcastsHtml(items) {
 function rssXml(entries, buildIso) {
   const items = entries.slice(0, 100).map(a => `
     <item>
-      <title>${esc(a.title)}</title>
+      <title>${esc(a.headline || a.title)}</title>
       <link>${esc(a.url)}</link>
       <guid isPermaLink="true">${esc(a.url)}</guid>
       <pubDate>${new Date(`${a.date}T10:00:00Z`).toUTCString()}</pubDate>
       <category>${esc(a.topic)}</category>
-      <description>${esc(`<p>${esc(a.summary)}</p><p>Source: ${esc(a.source)} · <a href="https://digitalplumber.ca/archives/${a.date}.html">${esc(a.dateLabel)} briefing</a></p>`)}</description>
+      <description>${esc(`<p>${esc(a.summary)}</p>${a.why ? `<p><strong>Why it matters:</strong> ${esc(a.why)}</p>` : ''}<p>Source: ${esc(a.source)} · <a href="https://digitalplumber.ca/archives/${a.date}.html">${esc(a.dateLabel)} briefing</a></p>`)}</description>
     </item>`).join('');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -503,24 +661,46 @@ function rssXml(entries, buildIso) {
 `;
 }
 
-// ── Editor's picks (front page and week in review) ───────────────────────────
+// ── Editor's picks (daily briefing and week in review) ───────────────────────
 // Asks Claude to rank the most important stories and write short newspaper
-// headlines. Returns { picks: [{ entry, why }], headlines: Map(entry → headline) };
-// headlines cover every story for 'today' and only the picks for 'week'.
+// headlines. Returns { picks: [{ entry, why }], headlines: Map(entry → headline), watch };
+// headlines cover every story for 'today' and only the picks for 'week', and
+// `watch` (things to watch next) is only asked for on 'week'.
 // Falls back to the newest story per topic, and source titles, if the call fails.
 async function editStories(entries, { count, scope }) {
   const fallback = () => {
     const seenTopics = new Set();
     const picks = entries.filter(a => !seenTopics.has(a.topic) && seenTopics.add(a.topic))
       .slice(0, count).map(entry => ({ entry, why: '' }));
-    return { picks, headlines: new Map() };
+    return { picks, headlines: new Map(), watch: [] };
   };
-  if (entries.length === 0) return { picks: [], headlines: new Map() };
+  if (entries.length === 0) return { picks: [], headlines: new Map(), watch: [] };
 
   const list = entries.map((a, i) => `${i}. [${a.topic}] ${a.title} (${a.source}, ${a.dateLabel}): ${a.summary}`).join('\n');
   const task = scope === 'today'
-    ? `Below are today's stories, numbered. Pick the ${count} that matter most to that audience, most important first: the first pick leads the front page. Then write a headline for every story, picked or not.`
-    : `Below are this week's stories, numbered. Pick the ${count} that matter most to that audience, most important first, and write a headline for each pick.`;
+    ? `Below are today's stories, numbered. Pick the ${count} that matter most to that audience, most important first. Then write a headline for every story, picked or not.`
+    : `Below are this week's stories, numbered. Pick the ${count} that matter most to that audience, most important first, and write a headline for each pick. Finally, list 3 things to watch in the coming week: specific follow-ups, decisions, launches or events these stories point to, one sentence each. Ground each in the stories and don't invent dates.`;
+  const properties = {
+    picks: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { id: { type: 'integer' }, why: { type: 'string' } },
+        required: ['id', 'why'],
+        additionalProperties: false,
+      },
+    },
+    headlines: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: { id: { type: 'integer' }, headline: { type: 'string' } },
+        required: ['id', 'headline'],
+        additionalProperties: false,
+      },
+    },
+    ...(scope === 'week' ? { watch: { type: 'array', items: { type: 'string' } } } : {}),
+  };
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -540,27 +720,8 @@ async function editStories(entries, { count, scope }) {
             type: 'json_schema',
             schema: {
               type: 'object',
-              properties: {
-                picks: {
-                  type: 'array',
-                  items: {
-                    type: 'object',
-                    properties: { id: { type: 'integer' }, why: { type: 'string' } },
-                    required: ['id', 'why'],
-                    additionalProperties: false,
-                  },
-                },
-                headlines: {
-                  type: 'array',
-                  items: {
-                    type: 'object',
-                    properties: { id: { type: 'integer' }, headline: { type: 'string' } },
-                    required: ['id', 'headline'],
-                    additionalProperties: false,
-                  },
-                },
-              },
-              required: ['picks', 'headlines'],
+              properties,
+              required: Object.keys(properties),
               additionalProperties: false,
             },
           },
@@ -590,89 +751,355 @@ ${list}`,
     const headlines = new Map(result.headlines
       .filter(h => Number.isInteger(h.id) && entries[h.id] && h.headline.trim())
       .map(h => [entries[h.id], h.headline.trim()]));
-    console.log(`✓ ${scope === 'today' ? 'Front page' : 'Week in review'}: ${picks.length} picks, ${headlines.size} headlines`);
-    return { picks, headlines };
+    const watch = (result.watch || []).map(w => String(w).trim()).filter(Boolean).slice(0, 3);
+    console.log(`✓ ${scope === 'today' ? 'Daily briefing' : 'Week in review'}: ${picks.length} picks, ${headlines.size} headlines${scope === 'week' ? `, ${watch.length} to watch` : ''}`);
+    return { picks, headlines, watch };
   } catch (err) {
     console.warn(`  ⚠ Top-story pick (${scope}) failed (${err.message}); using newest story per topic`);
     return fallback();
   }
 }
 
-function weekHtml(template, { entries, picks, headlines, rangeLabel, buildDate }) {
+// ── Site pages ────────────────────────────────────────────────────────────────
+const SITE = 'https://digitalplumber.ca';
+const CORRECTIONS_URL = 'https://github.com/petvan/Digitalplumber.ca/issues/new';
+const NAV = [
+  ['briefing', 'Daily briefing', '/'],
+  ['radar', 'Vendor Radar', '/vendors/'],
+  ['week', 'This week', '/week.html'],
+  ['archive', 'Archive', '/archive/'],
+];
+
+function primaryNavHtml(active) {
+  return `<nav class="primary-nav label" aria-label="Primary">${NAV.map(([key, label, href]) =>
+    `<a href="${href}"${key === active ? ' class="active" aria-current="page"' : ''}>${label}</a>`).join('')}</nav>`;
+}
+
+function ctaHtml() {
+  return `
+  <section class="cta home-extra" aria-labelledby="cta-head">
+    <div>
+      <h2 id="cta-head">Get the daily briefing</h2>
+      <p>Every edition, as soon as it's published. Add the feed to any RSS reader, or to an RSS-to-email service to get it in your inbox.</p>
+    </div>
+    <a class="cta-button label" href="/feed.xml">Follow the RSS feed</a>
+  </section>`;
+}
+
+function footerHtml() {
+  return `
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="${CORRECTIONS_URL}" target="_blank" rel="noopener">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>`;
+}
+
+// Every page except the daily briefing: the briefing's styles, a compact masthead and the primary nav
+function pageShell(template, { title, description, pagePath, active, body }) {
   const head = (template.match(/<link rel="preconnect"[\s\S]*?<\/style>/) || [''])[0].replace('<!--ARCHIVE_LIST_SCRIPT-->', '');
-  const edition = a => `<a href="/archives/${a.date}.html">${esc(a.dateLabel)} edition</a>`;
-
-  const top = picks.map(({ entry: a, why }) => `
-      <li><div>
-        <p class="kicker label">${esc(topicShort(a.topic))}${a.category ? `<span class="sep">·</span>${esc(a.category)}` : ''}</p>
-        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(headlines.get(a) || a.headline || a.title)}</a></h3>
-        <p class="summary">${esc(a.summary)}</p>
-        ${why ? `<p class="why"><span class="label">Why it matters</span>${esc(why)}</p>` : ''}
-        <p class="byline" style="margin-top:0.6rem"><b>${esc(a.source)}</b> · ${edition(a)}</p>
-      </div></li>`).join('');
-
-  const byTopic = TOPICS
-    .map(t => ({ label: t.label, items: entries.filter(a => a.topic === t.label) }))
-    .filter(t => t.items.length > 0);
-  const sections = byTopic.map(({ label, items }) => `
-    <section class="paper-section">
-      <div class="section-head"><h2>${esc(label)}</h2><span class="label">${items.length} ${items.length === 1 ? 'story' : 'stories'}</span></div>
-      <ul class="week-list">${items.map(a => `
-        <li><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(a.headline || a.title)}</a><span class="byline">${esc(a.source)} · ${edition(a)}</span></li>`).join('')}
-      </ul>
-    </section>`).join('');
-
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The week in review — Digital Plumber</title>
-<meta name="description" content="The week's most important AI networking, AIOps and network automation stories, ${esc(rangeLabel)}.">
-<link rel="canonical" href="https://digitalplumber.ca/week.html">
-<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(description)}">
+<link rel="canonical" href="${SITE}${pagePath}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Plumber">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:url" content="${SITE}${pagePath}">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
 <meta name="color-scheme" content="light dark">
 ${head}
 </head>
 <body>
-<div class="topstrip">
-  <div class="wrap topstrip-inner">
-    <div class="ear"><a href="/" style="text-decoration:none">← Today's paper</a></div>
-    <div class="ear-links"><a href="/feed.xml">RSS</a></div>
-  </div>
-</div>
-
-<header class="masthead wrap">
-  <div class="dateline label"><span>The week in review · ${esc(rangeLabel)}</span><span>${entries.length} stories · updated ${esc(buildDate)}</span></div>
-  <h1 class="nameplate"><a href="/">Digital Plumber</a></h1>
-  <p class="motto">Seven days of network news, and the stories that mattered most</p>
+<header class="wrap page-masthead">
+  <a class="page-nameplate" href="/">Digital Plumber</a>
+  <span class="motto">Plumbing the information age</span>
 </header>
-
-<main class="wrap">
-  <div class="section-head" style="border-top-width:3px;border-top-style:double"><h2>The ${picks.length} that mattered</h2><span class="label">Picked by the AI editor</span></div>
-  <ol class="week-top">${top || '<li><p class="empty-note">No stories this week yet.</p></li>'}
-  </ol>
-  ${sections}
+<div class="wrap"><div class="toolbar">${primaryNavHtml(active)}<a class="label rss-link" href="/feed.xml">RSS</a></div></div>
+<main class="wrap page">
+${body}
 </main>
-
-<footer class="wrap" id="about">
-<div class="colophon">
-  <div>
-    <h2>About this paper</h2>
-    <p>Digital Plumber is an independent daily briefing for network and IT operations practitioners. Stories are AI-curated and AI-summarized, so verify before acting on anything here.</p>
-  </div>
-  <nav class="label" aria-label="More">
-    <a href="/">Today's paper</a>
-    <a href="/feed.xml">RSS feed</a>
-  </nav>
-</div>
-</footer>
+${footerHtml()}
 </body>
 </html>
 `;
+}
+
+// A story in a list on the vendor, topic and week pages
+function entryHtml(a, { full = false } = {}) {
+  return `
+      <li class="entry">
+        ${metaLine(a, displayDate(a.sourceDate || a.date))}
+        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(a.headline || a.title)}</a></h3>
+        ${full ? `<p class="summary">${esc(a.summary)}</p>${whyLine(a.why)}` : ''}
+        <p class="edition label"><a href="/archives/${esc(a.date)}.html">${esc(a.dateLabel)} edition</a></p>
+      </li>`;
+}
+
+function monthLabel(yyyymm) {
+  return new Date(`${yyyymm}-15T12:00:00Z`).toLocaleDateString('en-CA', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+}
+
+// Older stories as compact rows, grouped by month
+function historyHtml(entries) {
+  const byMonth = new Map();
+  entries.forEach(a => {
+    const m = a.date.slice(0, 7);
+    if (!byMonth.has(m)) byMonth.set(m, []);
+    byMonth.get(m).push(a);
+  });
+  return [...byMonth].map(([m, list]) => `
+    <h3 class="month label">${esc(monthLabel(m))} <span class="n">${list.length}</span></h3>
+    <ul class="history">${list.map(a => `
+      <li><span class="when">${esc(shortDate(a.date))}</span><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(a.headline || a.title)}</a><span class="src">${esc(a.source)}</span></li>`).join('')}
+    </ul>`).join('');
+}
+
+// Stories per week for the 12 weeks to `today`, as a bar chart
+function activityHtml(all, today) {
+  const weeks = Array.from({ length: 12 }, (_, i) => {
+    const to = addDays(today, -7 * (11 - i));
+    const from = addDays(to, -6);
+    return { from, n: all.filter(a => a.date >= from && a.date <= to).length };
+  });
+  const max = Math.max(1, ...weeks.map(w => w.n));
+  return `
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: ${weeks.map(w => w.n).join(', ')}">${weeks.map(w => `
+      <div class="bar-col" title="Week of ${esc(shortDate(w.from))}: ${w.n} ${w.n === 1 ? 'story' : 'stories'}">
+        <span class="bar-n">${w.n || ''}</span>
+        <div class="bar-track"><div class="bar" style="height:${Math.round((w.n / max) * 100)}%"></div></div>
+        <span class="bar-label">${esc(shortDate(w.from))}</span>
+      </div>`).join('')}
+    </div>`;
+}
+
+// A vendor or topic page: description, counts, weekly activity, latest stories, history
+function subjectPageHtml(template, subject, today) {
+  const { kind, label, about, href, all, cur, prev, d30 } = subject;
+  const latest = all.slice(0, 10);
+  const older = all.slice(10);
+  const first = all[all.length - 1];
+  const section = kind === 'vendor' ? ['Vendor Radar', '/vendors/'] : ['Topics', '/topics/'];
+  const body = `
+  <p class="kicker label"><a href="${section[1]}">${section[0]}</a></p>
+  <h1 class="page-title">${esc(label)}</h1>
+  <p class="page-dek">${esc(about)}</p>
+  <div class="stat-row">
+    <div><span class="stat">${all.length}</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">${cur} ${trendHtml(subject)}</span><span class="label">last 7 days · ${prev} the 7 before</span></div>
+    <div><span class="stat">${d30}</span><span class="label">last 30 days</span></div>
+    ${first ? `<div><span class="stat">${esc(shortDate(first.date))}</span><span class="label">first covered · ${esc(first.date.slice(0, 4))}</span></div>` : ''}
+  </div>
+  <section class="paper-section">
+    <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
+    ${activityHtml(all, today)}
+  </section>
+  <section class="paper-section">
+    <div class="section-head"><h2>Latest stories</h2><span class="label">${latest.length} most recent</span></div>
+    ${latest.length ? `<ol class="entry-list">${latest.map(a => entryHtml(a, { full: true })).join('')}
+    </ol>` : `<p class="empty-note">No coverage yet. Stories will appear here as they're published.</p>`}
+  </section>
+  ${older.length ? `<section class="paper-section">
+    <div class="section-head"><h2>Coverage history</h2><span class="label">${older.length} earlier ${older.length === 1 ? 'story' : 'stories'}</span></div>
+    ${historyHtml(older)}
+  </section>` : ''}`;
+  return pageShell(template, {
+    title: `${label} — ${section[0]} — Digital Plumber`,
+    description: `${label} in Digital Plumber's daily briefings: ${all.length} stories, ${cur} in the last 7 days. ${about}`,
+    pagePath: href,
+    active: kind === 'vendor' ? 'radar' : '',
+    body,
+  });
+}
+
+// The Vendor Radar and topic index pages: every subject with its counts and trend
+function subjectIndexHtml(template, stats, kind) {
+  const rows = [...stats].sort((a, b) => b.cur - a.cur || b.d30 - a.d30 || b.all.length - a.all.length);
+  const isVendor = kind === 'vendor';
+  const body = `
+  <p class="kicker label">${isVendor ? 'Tracked companies' : 'Coverage areas'}</p>
+  <h1 class="page-title">${isVendor ? 'Vendor Radar' : 'Topics'}</h1>
+  <p class="page-dek">${isVendor
+    ? `How often each tracked company appears in Digital Plumber's daily briefings. Arrows compare the last 7 days with the 7 before. Select a vendor for its full coverage history.`
+    : `The areas Digital Plumber covers each day, and how much each is moving. Arrows compare the last 7 days with the 7 before.`}</p>
+  <table class="data-table">
+    <thead><tr><th scope="col">${isVendor ? 'Vendor' : 'Topic'}</th><th scope="col" class="num">7 days</th><th scope="col" class="num">30 days</th><th scope="col" class="num col-all">All time</th><th scope="col" class="col-latest">Latest</th></tr></thead>
+    <tbody>${rows.map(s => `
+      <tr>
+        <th scope="row"><a href="${s.href}">${esc(s.label)}</a></th>
+        <td class="num">${s.cur} ${trendHtml(s)}</td>
+        <td class="num">${s.d30}</td>
+        <td class="num col-all">${s.all.length}</td>
+        <td class="col-latest">${s.all[0] ? `<a href="${esc(s.all[0].url)}" target="_blank" rel="noopener">${esc(s.all[0].headline || s.all[0].title)}</a> <span class="when">${esc(shortDate(s.all[0].date))}</span>` : '<span class="when">No coverage yet</span>'}</td>
+      </tr>`).join('')}
+    </tbody>
+  </table>
+  ${isVendor ? '<p class="more-link label"><a href="/topics/">Coverage by topic →</a></p>' : '<p class="more-link label"><a href="/vendors/">Coverage by vendor →</a></p>'}`;
+  return pageShell(template, {
+    title: `${isVendor ? 'Vendor Radar' : 'Topics'} — Digital Plumber`,
+    description: isVendor
+      ? 'Which networking, observability and security vendors are in the news, with 7-day trends and full coverage history.'
+      : 'Coverage trends across AIOps, agentic AI, network automation, security, AI infrastructure and more.',
+    pagePath: isVendor ? '/vendors/' : '/topics/',
+    active: isVendor ? 'radar' : '',
+    body,
+  });
+}
+
+// Every edition, newest first, grouped by month
+function archiveIndexHtml(template, archives) {
+  const byMonth = new Map();
+  archives.forEach((a, i) => {
+    const m = a.date.slice(0, 7);
+    if (!byMonth.has(m)) byMonth.set(m, []);
+    byMonth.get(m).push({ ...a, no: archives.length - i });
+  });
+  const body = `
+  <p class="kicker label">Past editions</p>
+  <h1 class="page-title">Archive</h1>
+  <p class="page-dek">Every daily briefing since ${esc(archives.length ? displayDate(archives[archives.length - 1].date) : 'launch')}, ${archives.length} editions in all. To find a story, search every edition from the <a href="/">daily briefing</a>.</p>
+  ${[...byMonth].map(([m, list]) => `
+  <section class="paper-section">
+    <div class="section-head"><h2>${esc(monthLabel(m))}</h2><span class="label">${list.length} editions</span></div>
+    <ul class="editions">${list.map(a => `
+      <li><a href="/archives/${a.date}.html">${esc(new Date(`${a.date}T12:00:00Z`).toLocaleDateString('en-CA', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }))}</a><span class="label">No. ${a.no} · ${a.count} stories</span></li>`).join('')}
+    </ul>
+  </section>`).join('')}`;
+  return pageShell(template, {
+    title: 'Archive — Digital Plumber',
+    description: `Every Digital Plumber daily briefing, ${archives.length} editions of AI networking, AIOps and network automation news.`,
+    pagePath: '/archive/',
+    active: 'archive',
+    body,
+  });
+}
+
+function aboutHtml(template) {
+  const body = `
+  <p class="kicker label">Methodology</p>
+  <h1 class="page-title">How Digital Plumber works</h1>
+  <p class="page-dek">Digital Plumber is an AI-curated daily intelligence briefing for the people who run networks: network engineers, NetDevOps and automation engineers, and AIOps and SRE leads. This page explains where stories come from and how they're chosen.</p>
+  <div class="prose">
+    <h2>What we monitor</h2>
+    <p>Each morning the build searches the web across about ten coverage areas: AIOps and observability, agentic AI and MCP, network automation, security automation, AI infrastructure, research and standards, AI model providers, telco and cable, and AI industry and policy. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
+
+    <h2>How stories are selected</h2>
+    <p>Only stories published in the last 72 hours qualify, and anything older or undated is dropped automatically. The editor favours concrete developments and technical substance over marketing, and skips search-engine filler and pure sales content. An AI editor then ranks the day's stories to pick the three that matter most, and writes the short headlines.</p>
+
+    <h2>How duplicates are handled</h2>
+    <p>A story that already appeared in an earlier edition is dropped, and so is the same link turning up under two topics on the same day. Duplicates are matched by link, so the same event reported by two different outlets can occasionally appear twice.</p>
+
+    <h2>How vendor announcements are treated</h2>
+    <p>Vendor news is included when it has technical substance, and labelled <strong>Vendor release</strong> so you can weigh it accordingly. Press releases without technical detail are deprioritized. Vendor Radar counts every story that names a tracked vendor, whoever published it.</p>
+
+    <h2>Source labels</h2>
+    <p>Each story carries a source type: <strong>Primary source</strong> (the originator explaining its own work: standards, release notes, engineering blogs, official documentation), <strong>Research</strong> (papers, surveys and studies), <strong>Vendor release</strong> (a company's own announcement), <strong>Industry news</strong> (reporting by a publication) or <strong>Analysis</strong> (commentary and opinion). Older stories are labelled from their original category.</p>
+
+    <h2>How AI is used</h2>
+    <p>Anthropic's Claude models run every step: searching and reading sources, writing each story's summary of what happened, its "why it matters" line and the longer briefing, then picking the day's top stories and the week's highlights. Summaries are based on what the source says; they can still contain mistakes.</p>
+
+    <h2>Human review</h2>
+    <p>There is none before publishing. The briefing is fully automated and published each morning as the AI produced it, so check the original source before acting on anything here.</p>
+
+    <h2>Corrections</h2>
+    <p>If something is wrong, <a href="${CORRECTIONS_URL}" target="_blank" rel="noopener">open an issue on GitHub</a> with a link to the story and what needs fixing.</p>
+  </div>`;
+  return pageShell(template, {
+    title: 'How Digital Plumber works — Methodology',
+    description: 'How Digital Plumber selects, summarizes and labels its daily AI networking intelligence briefing, and how to report corrections.',
+    pagePath: '/about.html',
+    active: '',
+    body,
+  });
+}
+
+// The week in network intelligence
+function weekHtml(template, { entries, picks, headlines, watch, vStats, tStats, rangeLabel }) {
+  const topicCount = new Set(entries.map(a => a.topic)).size;
+  const top = picks.map(({ entry: a, why }) => `
+      <li><div>
+        <p class="kicker label">${esc(topicShort(a.topic))}${sourceTypeOf(a) ? `<span class="sep">·</span>${esc(sourceTypeOf(a))}` : ''}</p>
+        <h3><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(headlines.get(a) || a.headline || a.title)}</a></h3>
+        <p class="summary">${esc(leadSentences(a.summary, 260))}</p>
+        ${whyLine(why || a.why)}
+        <p class="meta" style="margin-top:0.5rem"><b>${esc(a.source)}</b> · <a href="/archives/${a.date}.html">${esc(a.dateLabel)} edition</a></p>
+      </div></li>`).join('');
+
+  const byTopic = TOPICS
+    .map(t => ({ t, items: entries.filter(a => a.topic === t.label) }))
+    .filter(({ items }) => items.length > 0);
+
+  const body = `
+  <p class="kicker label">This week · ${esc(rangeLabel)}</p>
+  <h1 class="page-title">The week in network intelligence</h1>
+  <p class="page-dek">${entries.length} stories across ${topicCount} topics: the developments that mattered, who was busy, what moved and what to watch next.</p>
+
+  <section class="paper-section">
+    <div class="section-head"><h2>${picks.length} developments that mattered</h2><span class="label">Picked by the AI editor</span></div>
+    <ol class="week-top">${top || '<li><p class="empty-note">No stories this week yet.</p></li>'}
+    </ol>
+  </section>
+
+  <section class="paper-section">
+    <div class="section-head"><h2>Who was busy, and what moved</h2><span class="label">Last 7 days vs the 7 before</span></div>
+    <div class="intel-grid three-col">
+      <div>
+        <h3 class="label">Most active vendors</h3>
+        ${tallyHtml(vStats, 8, 'No tracked vendors in the news this week.')}
+      </div>
+      <div>
+        <h3 class="label">Topic momentum</h3>
+        ${tallyHtml(tStats, 9, 'No stories this week.')}
+        ${termsHtml(entries)}
+      </div>
+      <div>
+        <h3 class="label">Biggest changes</h3>
+        ${changesHtml([...tStats, ...vStats], 5)}
+      </div>
+    </div>
+  </section>
+
+  ${watch.length ? `<section class="paper-section">
+    <div class="section-head"><h2>What to watch</h2><span class="label">From the AI editor</span></div>
+    <ul class="watch">${watch.map(w => `<li>${esc(w)}</li>`).join('')}</ul>
+  </section>` : ''}
+
+  ${byTopic.map(({ t, items }) => `
+  <section class="paper-section">
+    <div class="section-head"><h2>${t.slug ? `<a href="/topics/${t.slug}/">${esc(t.label)}</a>` : esc(t.label)}</h2><span class="label">${items.length} ${items.length === 1 ? 'story' : 'stories'}</span></div>
+    <ul class="week-list">${items.map(a => `
+      <li><a href="${esc(a.url)}" target="_blank" rel="noopener" title="${esc(a.title)}">${esc(a.headline || a.title)}</a><span class="meta">${esc(a.source)}${sourceTypeOf(a) ? ` · <span class="stype">${esc(sourceTypeOf(a))}</span>` : ''} · <a href="/archives/${a.date}.html">${esc(a.dateLabel)}</a></span></li>`).join('')}
+    </ul>
+  </section>`).join('')}
+  ${ctaHtml()}`;
+
+  return pageShell(template, {
+    title: 'The week in network intelligence — Digital Plumber',
+    description: `The week's most important AI networking, AIOps and network automation developments, ${rangeLabel}: top stories, vendor activity, topic momentum and what to watch.`,
+    pagePath: '/week.html',
+    active: 'week',
+    body,
+  });
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -795,16 +1222,14 @@ async function main() {
   archives.unshift({ date: dateStr, label: buildDate, count: newsItems.length });
   fs.writeFileSync(archivesJsonPath, JSON.stringify(archives, null, 2), 'utf8');
 
-  // ── Front page: Claude picks the lead and "Inside today", and writes headlines ──
-  const frontCandidates = newsItems.map(item => ({ ...item, topic: item.topicLabel, dateLabel: displayDate(item.date) }));
-  const frontEdit = await editStories(frontCandidates, { count: 5, scope: 'today' });
-  frontCandidates.forEach((entry, i) => {
-    const headline = frontEdit.headlines.get(entry);
+  // ── Daily briefing: Claude picks today's 3 things that matter and writes headlines ──
+  const candidates = newsItems.map(item => ({ ...item, topic: item.topicLabel, dateLabel: displayDate(item.date) }));
+  const dailyEdit = await editStories(candidates, { count: 3, scope: 'today' });
+  candidates.forEach((entry, i) => {
+    const headline = dailyEdit.headlines.get(entry);
     if (headline) newsItems[i].headline = headline;
   });
-  const frontPicks = frontEdit.picks.map(({ entry, why }) => ({ item: newsItems[frontCandidates.indexOf(entry)], why }));
-  const lead = frontPicks[0];
-  const leadId = lead ? lead.item.id : null;
+  const topPicks = dailyEdit.picks.map(({ entry, why }) => ({ item: newsItems[candidates.indexOf(entry)], why }));
 
   // ── Build / update search index (loaded earlier, before dedupe) ───────────
   searchIndex = searchIndex.filter(a => a.date !== dateStr);
@@ -815,11 +1240,13 @@ async function main() {
     title: item.title,
     ...(item.headline ? { headline: item.headline } : {}),
     summary: item.summary,
+    ...(item.why ? { why: item.why } : {}),
     detail: stripCites(item.detail || ''),
     source: item.source,
     url: item.url,
     topic: item.topicLabel,
     category: item.category || '',
+    ...(sourceTypeOf(item) ? { sourceType: sourceTypeOf(item) } : {}),
     tags: item.tags || [],
   }));
   searchIndex = [...todayEntries, ...searchIndex];
@@ -837,24 +1264,29 @@ async function main() {
   fs.writeFileSync(searchIndexPath, JSON.stringify(searchIndex), 'utf8');
   console.log(`✓ archives/search-index.json written (${searchIndex.length} total articles)`);
 
-  // Everything from the last 7 briefing days (sidebar vendor counts, week page, RSS)
-  const weekStart = new Date(Date.parse(`${dateStr}T00:00:00Z`) - 6 * 86400000).toISOString().slice(0, 10);
+  // ── Coverage trends across the archive ─────────────────────────────────────
+  const weekStart = addDays(dateStr, -6);
   const weekEntries = searchIndex.filter(a => a.date >= weekStart);
+  const vStats = vendorStats(searchIndex, dateStr);
+  const tStats = topicStats(searchIndex, dateStr);
 
   const dateline = now.toLocaleDateString('en-CA', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto',
   });
+  const updatedAt = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Toronto' });
+  const topicCount = new Set(newsItems.map(i => i.topicLabel)).size;
+  const statusLine = `${newsItems.length} ${newsItems.length === 1 ? 'story' : 'stories'} · ${topicCount} ${topicCount === 1 ? 'topic' : 'topics'} · Updated ${updatedAt} ET`;
 
   // ── Build the page HTML (shared by index.html and archive) ────────────────
   function buildHtml(template, { isArchive = false } = {}) {
-    const archiveListScript = `<script>window.__archives=${JSON.stringify(archives)};window.__buildDate=${JSON.stringify(dateStr)};</script>`;
+    const buildDateScript = `<script>window.__buildDate=${JSON.stringify(dateStr)};</script>`;
     const archiveBanner = isArchive
-      ? `<div class="archive-notice">You're reading the ${esc(dateline)} edition. <a href="/">Today's paper →</a></div>`
+      ? `<div class="archive-notice">You're reading the ${esc(dateline)} edition. <a href="/">Today's briefing →</a></div>`
       : '';
 
-    // Meta description: up to 3 headline fragments, lead first, capped at 155 chars
-    const topTitles = frontPicks.slice(0, 3).map(p => (p.item.headline || p.item.title).replace(/"/g, "'"));
-    let metaDesc = `Daily AI-curated briefing for network engineers. Today: ${topTitles.join(' · ')}`;
+    // Meta description: the top headlines, capped at 155 chars
+    const topTitles = topPicks.map(p => (p.item.headline || p.item.title).replace(/"/g, "'"));
+    let metaDesc = `AI-curated intelligence for people who run networks. Today: ${topTitles.join(' · ')}`;
     if (metaDesc.length > 155) metaDesc = metaDesc.slice(0, 152) + '…';
 
     const canonicalUrl = isArchive
@@ -862,18 +1294,20 @@ async function main() {
       : 'https://digitalplumber.ca/';
 
     let html = template;
-    html = html.replace('<!--FRONT_PAGE-->', frontPageHtml(lead, frontPicks.slice(1)));
-    html = html.replace('<!--SECTIONS-->', sectionsHtml(newsItems, leadId));
+    html = html.replace('<!--PRIMARY_NAV-->', primaryNavHtml(isArchive ? 'archive' : 'briefing'));
+    html = html.replace('<!--THREE_THINGS-->', threeThingsHtml(topPicks));
+    html = html.replace('<!--STATUS_LINE-->', esc(statusLine));
     html = html.replace('<!--SECTION_LINKS-->', sectionLinksHtml(newsItems));
+    html = html.replace('<!--SECTIONS-->', sectionsHtml(newsItems));
     html = html.replace('<!--PODCASTS-->', podcastsHtml(podcastItems));
+    html = html.replace('<!--HOME_INTEL-->', homeIntelHtml(newsItems, vStats, tStats, weekEntries));
+    html = html.replace('<!--CTA-->', ctaHtml());
+    html = html.replace('<!--FOOTER-->', footerHtml());
     html = html.replace(/<!--DATELINE-->/g, esc(dateline));
     html = html.replace(/<!--EDITION_NO-->/g, String(archives.length));
-    html = html.replace(/<!--ARTICLE_COUNT-->/g, String(newsItems.length));
-    html = html.replace('<!--VENDOR_RADAR-->', vendorRadarHtml(newsItems));
-    html = html.replace('<!--INTELLIGENCE_PANEL-->', intelligencePanelHtml(newsItems, weekEntries));
-    html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', archiveListScript);
+    html = html.replace('<!--ARCHIVE_LIST_SCRIPT-->', buildDateScript);
     html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
-    html = html.replace(/<!--META_DESCRIPTION-->/g, metaDesc.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'));
+    html = html.replace(/<!--META_DESCRIPTION-->/g, esc(metaDesc));
     html = html.replace(/<!--CANONICAL_URL-->/g, canonicalUrl);
     return html;
   }
@@ -889,21 +1323,42 @@ async function main() {
   fs.writeFileSync(archiveHtmlPath, buildHtml(template, { isArchive: true }), 'utf8');
   console.log(`✓ archives/${dateStr}.html written`);
 
-  // ── Week in review + RSS ─────────────────────────────────────────────────
+  // ── Week in network intelligence + RSS ───────────────────────────────────
   const rangeLabel = `${displayDate(weekStart)} – ${buildDate}`;
-  const { picks, headlines } = await editStories(weekEntries, { count: 8, scope: 'week' });
-  fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, headlines, rangeLabel, buildDate }), 'utf8');
-  console.log(`✓ week.html written (${weekEntries.length} stories, ${picks.length} top picks)`);
+  const { picks, headlines, watch } = await editStories(weekEntries, { count: 5, scope: 'week' });
+  fs.writeFileSync(path.join(__dirname, 'week.html'), weekHtml(template, { entries: weekEntries, picks, headlines, watch, vStats, tStats, rangeLabel }), 'utf8');
+  console.log(`✓ week.html written (${weekEntries.length} stories, ${picks.length} top picks, ${watch.length} to watch)`);
 
   fs.writeFileSync(path.join(__dirname, 'feed.xml'), rssXml(weekEntries, now.toISOString()), 'utf8');
   console.log(`✓ feed.xml written (${Math.min(weekEntries.length, 100)} items)`);
 
+  // ── Vendor, topic, archive and methodology pages ─────────────────────────
+  const writePage = (relPath, html) => {
+    const file = path.join(__dirname, relPath);
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.writeFileSync(file, html, 'utf8');
+  };
+  writePage('vendors/index.html', subjectIndexHtml(template, vStats, 'vendor'));
+  vStats.forEach(v => writePage(`${v.href.slice(1)}index.html`, subjectPageHtml(template, v, dateStr)));
+  writePage('topics/index.html', subjectIndexHtml(template, tStats, 'topic'));
+  tStats.forEach(t => writePage(`${t.href.slice(1)}index.html`, subjectPageHtml(template, t, dateStr)));
+  writePage('archive/index.html', archiveIndexHtml(template, archives));
+  writePage('about.html', aboutHtml(template));
+  console.log(`✓ ${vStats.length} vendor pages, ${tStats.length} topic pages, archive and methodology written`);
+
   // Write sitemap.xml
+  const page = (loc, priority, changefreq) => ({ loc: `${SITE}${loc}`, lastmod: dateStr, priority, changefreq });
   const sitemapUrls = [
-    { loc: 'https://digitalplumber.ca/', lastmod: dateStr, priority: '1.0', changefreq: 'daily' },
-    { loc: 'https://digitalplumber.ca/week.html', lastmod: dateStr, priority: '0.8', changefreq: 'daily' },
+    page('/', '1.0', 'daily'),
+    page('/week.html', '0.8', 'daily'),
+    page('/vendors/', '0.8', 'daily'),
+    page('/topics/', '0.7', 'daily'),
+    ...vStats.map(v => page(v.href, '0.7', 'daily')),
+    ...tStats.map(t => page(t.href, '0.7', 'daily')),
+    page('/archive/', '0.6', 'daily'),
+    page('/about.html', '0.4', 'monthly'),
     ...archives.map(a => ({
-      loc: `https://digitalplumber.ca/archives/${a.date}.html`,
+      loc: `${SITE}/archives/${a.date}.html`,
       lastmod: a.date,
       priority: '0.6',
       changefreq: 'never',
@@ -931,4 +1386,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { storyHtml, frontPageHtml, sectionsHtml, podcastsHtml, vendorMentions, vendorRadarHtml, rssXml, weekHtml, editStories, main };
+module.exports = { storyHtml, sectionsHtml, vendorMentions, vendorStats, topicStats, rssXml, weekHtml, editStories, main };
