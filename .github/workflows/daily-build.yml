@@ -31,6 +31,9 @@ jobs:
       - name: Run news build
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          BUTTONDOWN_USERNAME: ${{ vars.BUTTONDOWN_USERNAME }}
+          BUTTONDOWN_MODE: ${{ vars.BUTTONDOWN_MODE }}
         run: node build.js
 
       - name: Commit and push updated index.html

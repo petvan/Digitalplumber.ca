@@ -775,8 +775,34 @@ function primaryNavHtml(active) {
     `<a href="${href}"${key === active ? ' class="active" aria-current="page"' : ''}>${label}</a>`).join('')}</nav>`;
 }
 
-function ctaHtml() {
+// ── Email subscription (Buttondown) ──────────────────────────────────────────
+// Set BUTTONDOWN_USERNAME to show sign-up forms; set BUTTONDOWN_API_KEY to create
+// each day's email, as a draft unless BUTTONDOWN_MODE is 'send'.
+const BUTTONDOWN_USERNAME = (process.env.BUTTONDOWN_USERNAME || '').trim();
+
+function signupFormHtml(id) {
+  if (!BUTTONDOWN_USERNAME) return '';
+  return `<form class="signup" action="https://buttondown.com/api/emails/embed-subscribe/${encodeURIComponent(BUTTONDOWN_USERNAME)}" method="post" target="_blank">
+        <label class="sr-only" for="${id}">Email address</label>
+        <input type="email" name="email" id="${id}" placeholder="you@example.com" required autocomplete="email">
+        <input type="hidden" name="embed" value="1">
+        <button type="submit" class="label">Subscribe</button>
+      </form>`;
+}
+
+// The short sign-up line under the homepage masthead
+function mastheadSignupHtml() {
+  if (!BUTTONDOWN_USERNAME) return '';
   return `
+  <div class="masthead-signup">
+    <span class="label">Get the daily briefing by email</span>
+    ${signupFormHtml('signup-top')}
+  </div>`;
+}
+
+function ctaHtml() {
+  if (!BUTTONDOWN_USERNAME) {
+    return `
   <section class="cta home-extra" aria-labelledby="cta-head">
     <div>
       <h2 id="cta-head">Get the daily briefing</h2>
@@ -784,6 +810,82 @@ function ctaHtml() {
     </div>
     <a class="cta-button label" href="/feed.xml">Follow the RSS feed</a>
   </section>`;
+  }
+  return `
+  <section class="cta home-extra" aria-labelledby="cta-head">
+    <div>
+      <h2 id="cta-head">Get the daily briefing</h2>
+      <p>Today's 3 things that matter and every story with why it matters, in your inbox each morning. Free, and you can unsubscribe at any time. Prefer a reader? <a href="/feed.xml">Follow the RSS feed</a>.</p>
+    </div>
+    ${signupFormHtml('signup-cta')}
+  </section>`;
+}
+
+// The day's edition as an email: the 3 things that matter, then every story by topic
+function emailEditionHtml({ dateline, editionNo, dateStr, topPicks, newsItems }) {
+  const muted = 'color:#6f675c;font-size:13px';
+  const link = (href, text) => `<a href="${esc(href)}">${esc(text)}</a>`;
+  const three = topPicks.map(({ item, why }) => `
+<li style="margin-bottom:18px">
+  <p style="margin:0 0 4px"><strong>${link(item.url, item.headline || item.title)}</strong><br><span style="${muted}">${esc(item.source)}${sourceTypeOf(item) ? ` · ${esc(sourceTypeOf(item))}` : ''}</span></p>
+  <p style="margin:0 0 4px">${esc(leadSentences(item.summary))}</p>
+  ${(item.why || why) ? `<p style="margin:0"><em>Why it matters:</em> ${esc(item.why || why)}</p>` : ''}
+</li>`).join('');
+  const sections = TOPICS
+    .map(t => ({ t, items: newsItems.filter(i => i.topicLabel === t.label) }))
+    .filter(({ items }) => items.length > 0)
+    .map(({ t, items }) => `
+<h3>${esc(t.label)}</h3>
+<ul>${items.map(i => `
+  <li style="margin-bottom:10px">${link(i.url, i.headline || i.title)} <span style="${muted}">${esc(i.source)}</span>${i.why ? `<br><span style="font-size:14px">${esc(i.why)}</span>` : ''}</li>`).join('')}
+</ul>`).join('');
+  return `<!-- buttondown-editor-mode: fancy -->
+<p style="${muted};text-transform:uppercase;letter-spacing:0.08em">${esc(dateline)} · No. ${editionNo} · ${newsItems.length} stories</p>
+<h2>Today's ${topPicks.length} things that matter</h2>
+<ol>${three}
+</ol>
+<h2>Today's briefing</h2>${sections}
+<hr>
+<p>${link(`${SITE}/archives/${dateStr}.html`, 'Read this edition on the web')} · ${link(`${SITE}/week.html`, 'The week in network intelligence')} · ${link(`${SITE}/vendors/`, 'Vendor Radar')}</p>
+<p style="${muted}">Digital Plumber is AI-curated and AI-summarized, with no human review before publishing. Verify before acting on anything here. ${link(`${SITE}/about.html`, 'How it works')}.</p>`;
+}
+
+// Creates the day's email in Buttondown, at most once per edition date.
+// Never fails the build: the website matters more than the email.
+async function sendEmailEdition({ subject, body, dateStr, logPath }) {
+  const key = process.env.BUTTONDOWN_API_KEY;
+  if (!key) {
+    console.log('  Email: BUTTONDOWN_API_KEY not set, skipping');
+    return;
+  }
+  let log = {};
+  try { log = JSON.parse(fs.readFileSync(logPath, 'utf8')); } catch {}
+  if (log[dateStr]) {
+    console.log(`  Email: the ${dateStr} edition was already created (${log[dateStr].mode}), skipping`);
+    return;
+  }
+  const mode = process.env.BUTTONDOWN_MODE === 'send' ? 'send' : 'draft';
+  try {
+    const res = await fetch('https://api.buttondown.com/v1/emails', {
+      method: 'POST',
+      headers: { 'Authorization': `Token ${key}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        subject,
+        body,
+        // Scheduled a few minutes out rather than sent instantly, so a bad send can still be cancelled
+        ...(mode === 'send'
+          ? { status: 'scheduled', publish_date: new Date(Date.now() + 10 * 60000).toISOString() }
+          : { status: 'draft' }),
+      }),
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(json?.detail || JSON.stringify(json).slice(0, 200) || `HTTP ${res.status}`);
+    log[dateStr] = { mode, id: json.id || '', created: new Date().toISOString() };
+    fs.writeFileSync(logPath, JSON.stringify(log, null, 2), 'utf8');
+    console.log(`✓ Email: ${mode === 'send' ? 'scheduled to send in 10 minutes' : 'draft created'} — "${subject}"`);
+  } catch (err) {
+    console.warn(`  ⚠ Email: Buttondown request failed (${err.message}); the site was still published`);
+  }
 }
 
 function footerHtml() {
@@ -1302,6 +1404,7 @@ async function main() {
     html = html.replace('<!--PODCASTS-->', podcastsHtml(podcastItems));
     html = html.replace('<!--HOME_INTEL-->', homeIntelHtml(newsItems, vStats, tStats, weekEntries));
     html = html.replace('<!--CTA-->', ctaHtml());
+    html = html.replace('<!--SIGNUP-->', isArchive ? '' : mastheadSignupHtml());
     html = html.replace('<!--FOOTER-->', footerHtml());
     html = html.replace(/<!--DATELINE-->/g, esc(dateline));
     html = html.replace(/<!--EDITION_NO-->/g, String(archives.length));
@@ -1375,6 +1478,15 @@ ${sitemapUrls.map(u => `  <url>
 </urlset>`;
   fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
   console.log(`✓ sitemap.xml written (${sitemapUrls.length} URLs)`);
+
+  // ── The day's email edition ───────────────────────────────────────────────
+  const topHeadline = topPicks[0] ? (topPicks[0].item.headline || topPicks[0].item.title) : `${newsItems.length} stories`;
+  await sendEmailEdition({
+    subject: `${shortDate(dateStr)}: ${topHeadline}`,
+    body: emailEditionHtml({ dateline, editionNo: archives.length, dateStr, topPicks, newsItems }),
+    dateStr,
+    logPath: path.join(archivesDir, 'emails.json'),
+  });
 
   console.log(`\nDone! ${newsItems.length} articles + ${podcastItems.length} podcasts · ${buildDate}`);
 }
