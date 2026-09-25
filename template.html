@@ -3,1238 +3,453 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Plumber — AI Networking Intelligence</title>
+<title>Digital Plumber — The daily briefing for network engineers</title>
 <meta name="description" content="<!--META_DESCRIPTION-->">
 <link rel="canonical" href="<!--CANONICAL_URL-->">
 
 <!-- Open Graph -->
 <meta property="og:type"        content="website">
 <meta property="og:site_name"   content="Digital Plumber">
-<meta property="og:title"       content="Digital Plumber — AI Networking Intelligence">
+<meta property="og:title"       content="Digital Plumber — The daily briefing for network engineers">
 <meta property="og:description" content="<!--META_DESCRIPTION-->">
 <meta property="og:url"         content="<!--CANONICAL_URL-->">
 
 <!-- Twitter Card -->
 <meta name="twitter:card"        content="summary">
-<meta name="twitter:title"       content="Digital Plumber — AI Networking Intelligence">
+<meta name="twitter:title"       content="Digital Plumber — The daily briefing for network engineers">
 <meta name="twitter:description" content="<!--META_DESCRIPTION-->">
 
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 
 <!--ARCHIVE_LIST_SCRIPT-->
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
-
   :root {
-    --bg:        #0a0c10;
-    --surface:   #111318;
-    --border:    #1e2230;
-    --accent:    #00c2ff;
-    --accent2:   #7b5ea7;
-    --text:      #e8eaf0;
-    --muted:     #6b7280;
-    --tag-bg:    #0d1a24;
-    --tag-text:  #00c2ff;
-    --red:       #ff4d6d;
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+    }
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  html { scroll-padding-top: 64px; }
+
   body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
     line-height: 1.6;
-    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
-  /* ── HEADER ── */
-  header {
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    position: sticky;
-    top: 36px;
-    background: rgba(10,12,16,0.92);
-    backdrop-filter: blur(12px);
-    z-index: 100;
-  }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
 
-  .logo-icon { width: 36px; height: 36px; }
-
-  .logo-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.02em;
-  }
-
-  .logo-text span { color: var(--accent); }
-
-  nav { display: flex; gap: 0.25rem; align-items: center; }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.1rem;
-    margin-right: 0.75rem;
-  }
-
-  .nav-link {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.4rem 0.65rem;
-    border-radius: 6px;
-    transition: color 0.15s, background 0.15s;
-    white-space: nowrap;
-  }
-
-  .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.04); }
-
-  .nav-link.active {
-    color: var(--accent);
-    background: var(--tag-bg);
-  }
-
-  @media (max-width: 900px) { .nav-links { display: none; } }
-
-  /* ── HERO ── */
-  .hero {
-    padding: 2.5rem 2rem 1rem;
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  h1 {
-    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 0.5rem;
-  }
-
-  h1 em { font-style: normal; color: var(--accent); }
-
-  .hero-sub {
-    color: var(--muted);
-    font-size: 0.9rem;
-    max-width: 560px;
-    margin-bottom: 1rem;
-  }
-
-  /* ── SEARCH BAR ── */
-  /* ── HERO STATS ── */
-  .hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--muted);
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
-  }
-
-  .hero-stat-sep { color: var(--border); }
-
-  .hero-stat-highlight {
-    color: var(--accent);
-    font-weight: 700;
-  }
-
-  .hero-stat-live {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
-
-  .hero-stat-live-dot {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  /* ── PROMINENT SEARCH ── */
-  .search-hero {
-    margin-bottom: 1.5rem;
-  }
-
-  .search-hero-wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    padding: 0 1.1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    max-width: 640px;
-  }
-
-  .search-hero-wrap:focus-within {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(0,194,255,0.12);
-  }
-
-  .search-hero-icon {
-    color: var(--muted);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    line-height: 1;
-  }
-
-  .search-hero-wrap input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 1rem 0;
-    color: var(--text);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    outline: none;
-    min-width: 0;
-  }
-
-  .search-hero-wrap input::placeholder { color: var(--muted); }
-
-  .search-kbd {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--muted);
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 0.15rem 0.4rem;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 600px) { .search-kbd { display: none; } }
-
-  /* keep old .fetch-bar for archive pages that still use it */
-  .fetch-bar { display: none; }
-
-  /* ── TOPIC PILLS ── */
-  .topics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .topic-pill {
-    font-size: 0.78rem;
-    font-weight: 500;
-    padding: 0.35rem 0.85rem;
-    border-radius: 100px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.18s;
-    background: transparent;
-    font-family: 'Space Grotesk', sans-serif;
-  }
-
-  .topic-pill:hover, .topic-pill.active {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--tag-bg);
-  }
-
-  /* ── DIVIDER ── */
-  .section-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text);
-    font-weight: 700;
-    margin: 2rem 0 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* ── CONTENT LAYOUT (two-column on wide screens) ── */
-  .content-wrap {
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 260px;
-    gap: 2.5rem;
-    align-items: start;
-  }
-
-  .feed-col { min-width: 0; }
-
-  /* ── NEWS GRID ── */
-  .news-grid {
-    display: grid;
-    gap: 1rem;
-    padding-bottom: 4rem;
-  }
-
-  /* ── STATUS ── */
-  .status-bar {
-    padding: 0 0 2rem;
-    font-size: 0.8rem;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
-  /* ── CARD ── */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: border-color 0.2s, transform 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card:hover {
-    border-color: #2e3550;
-    transform: translateY(-2px);
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .card:hover::before { opacity: 1; }
-
-  .card-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .source-tag {
-    font-family: 'Space Mono', monospace;
+  .label {
+    font-family: var(--sans);
     font-size: 0.68rem;
-    font-weight: 700;
-    color: var(--tag-text);
-    background: var(--tag-bg);
-    border: 1px solid rgba(0,194,255,0.2);
-    padding: 0.2rem 0.55rem;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .source-favicon {
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-    flex-shrink: 0;
-    object-fit: contain;
-  }
-
-  .card-date {
-    font-size: 0.72rem;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .card-date::before {
-    content: '';
-    display: inline-block;
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: var(--muted);
-    flex-shrink: 0;
-  }
-
-  .card-category {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 0.18rem 0.5rem;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    margin-left: auto;
-    color: var(--muted);
-  }
-
-  .card-category[data-cat="Research"]       { color: #14b8a6; border-color: rgba(20,184,166,0.3); background: rgba(20,184,166,0.06); }
-  .card-category[data-cat="Product Launch"] { color: #00c2ff; border-color: rgba(0,194,255,0.3);  background: rgba(0,194,255,0.06); }
-  .card-category[data-cat="Industry Trend"] { color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.06); }
-  .card-category[data-cat="Standards"]      { color: #22c55e; border-color: rgba(34,197,94,0.3);  background: rgba(34,197,94,0.06); }
-  .card-category[data-cat="Acquisition"]    { color: #f97316; border-color: rgba(249,115,22,0.3); background: rgba(249,115,22,0.06); }
-  .card-category[data-cat="Opinion"]        { color: #eab308; border-color: rgba(234,179,8,0.3);  background: rgba(234,179,8,0.06); }
-  .card-category[data-cat="Community"]      { color: #ec4899; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.06); }
-
-  .card h2 {
-    font-size: 1.12rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.35;
-    margin-bottom: 0.55rem;
-    color: var(--text);
-  }
-
-  .card-summary {
-    font-size: 0.875rem;
-    color: var(--muted);
-    line-height: 1.65;
-    margin-bottom: 0.75rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .card-read-time {
-    font-size: 0.68rem;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-  }
-
-  /* ── CARD TAGS ── */
-  .card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .card-tag {
-    font-size: 0.65rem;
-    font-family: 'Space Mono', monospace;
-    padding: 0.18rem 0.5rem;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    color: var(--muted);
-  }
-
-  /* ── TOPIC ACCENT BORDERS (left inset shadow per topic) ── */
-  .card[data-topic="AI Ops & Observability"]    { box-shadow: inset 3px 0 0 #00c2ff; }
-  .card[data-topic="Agentic AI & MCP"]          { box-shadow: inset 3px 0 0 #7b5ea7; }
-  .card[data-topic="Network Automation"]        { box-shadow: inset 3px 0 0 #22c55e; }
-  .card[data-topic="Security Automation"]       { box-shadow: inset 3px 0 0 #f97316; }
-  .card[data-topic="AI Infrastructure"]         { box-shadow: inset 3px 0 0 #eab308; }
-  .card[data-topic="Research, Standards & Industry"] { box-shadow: inset 3px 0 0 #14b8a6; }
-  .card[data-topic="AI Model Providers"]        { box-shadow: inset 3px 0 0 #ec4899; }
-  .card[data-topic="AI Industry & Policy"]      { box-shadow: inset 3px 0 0 #3b82f6; }
-
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .read-link {
-    font-size: 0.78rem;
     font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    transition: gap 0.2s;
-  }
-
-  .read-link:hover { gap: 0.55rem; }
-
-  /* ── EXPANDABLE DETAIL ── */
-  .read-toggle {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-family: inherit;
-  }
-
-  .card-detail {
-    display: none;
-    margin: 0.25rem 0 0.9rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.85rem;
-    line-height: 1.7;
-    color: var(--text);
-  }
-
-  .card-detail.open {
-    display: block;
-    animation: detailFade 0.25s ease;
-  }
-
-  .card-detail p { margin-bottom: 0.7rem; }
-
-  @keyframes detailFade {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .source-link {
-    display: inline-block;
-    margin-top: 0.15rem;
-    font-size: 0.72rem;
-    font-weight: 600;
-    font-family: 'Space Mono', monospace;
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .source-link:hover { text-decoration: underline; }
-
-  .ai-badge {
-    font-size: 0.68rem;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-family: 'Space Mono', monospace;
-  }
-
-  .ai-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--accent2);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  /* ── NO RESULTS ── */
-  .no-results {
-    text-align: center;
-    padding: 3rem 2rem;
-    color: var(--muted);
-    display: none;
-  }
-
-  .no-results.visible { display: block; }
-
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .footer-brand {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-
-  .footer-brand strong { color: var(--accent); }
-  .footer-creds { font-size: 0.75rem; color: var(--muted); }
-
-  /* ── SECTION NAV ── */
-  .section-nav {
-    position: sticky;
-    top: 100px;
-    z-index: 90;
-    background: rgba(10,12,16,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0;
-  }
-
-  .section-nav-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    gap: 0;
-    align-items: center;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .section-nav-inner::-webkit-scrollbar { display: none; }
-
-  .section-nav-link { text-decoration: none; margin-left: auto; }
-
-  .section-nav-btn {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    font-weight: 700;
-    color: var(--muted);
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 0.75rem 1.25rem;
-    cursor: pointer;
-    transition: color 0.2s, border-color 0.2s;
-    white-space: nowrap;
-    margin-bottom: -1px;
   }
 
-  .section-nav-btn:hover { color: var(--text); }
-
-  .section-nav-btn.active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
-  }
-
-  .section-nav-btn .nav-count {
-    font-size: 0.6rem;
-    opacity: 0.6;
-    margin-left: 0.4rem;
-  }
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
 
   /* ── ARCHIVE NOTICE ── */
   .archive-notice {
-    background: rgba(123,94,167,0.12);
-    border-bottom: 1px solid rgba(123,94,167,0.3);
-    padding: 0.6rem 2rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
     font-size: 0.8rem;
-    color: var(--muted);
     text-align: center;
+    padding: 0.55rem 1rem;
   }
-  .archive-notice a { color: var(--accent); text-decoration: none; }
-  .archive-notice a:hover { text-decoration: underline; }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
 
-  /* ── ARCHIVES NAV DROPDOWN ── */
-  .archive-nav { position: relative; }
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 9vw, 6.4rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.9rem 0 0.35rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; margin-bottom: 1rem; }
 
-  .archive-btn {
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.35rem 0.75rem;
+  /* ── SECTIONS BAR (sticky) ── */
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 46px; }
+  .mini-nameplate {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    text-decoration: none;
+    white-space: nowrap;
+    display: none;
+  }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links {
+    display: flex;
+    gap: 1.1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex: 1;
+    min-width: 0;
+  }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.7rem 0 0.55rem;
     cursor: pointer;
-    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+
+  .nav-tools { display: flex; align-items: center; gap: 0.9rem; }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 15rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  .archive-nav { position: relative; }
+  .archive-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-2);
     white-space: nowrap;
   }
-
-  .archive-btn:hover { color: var(--text); border-color: var(--accent); }
-
+  .archive-btn:hover { color: var(--accent); }
   .archive-menu {
     display: none;
     position: absolute;
     right: 0;
-    top: calc(100% + 6px);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    min-width: 200px;
-    max-height: 300px;
+    top: calc(100% + 10px);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    min-width: 250px;
+    max-height: 340px;
     overflow-y: auto;
-    z-index: 200;
-    padding: 0.4rem 0;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    z-index: 60;
+    padding: 0.35rem 0;
+    box-shadow: 4px 4px 0 var(--hair);
   }
-
   .archive-menu.open { display: block; }
-
   .archive-menu a {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    color: var(--muted);
-    font-size: 0.8rem;
-    text-decoration: none;
-    transition: background 0.15s, color 0.15s;
-  }
-
-  .archive-menu a:hover { background: rgba(255,255,255,0.04); color: var(--text); }
-
-  .archive-menu-count {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent);
-    opacity: 0.7;
-  }
-
-  /* ── PODCASTS & TALKS ── */
-  .podcast-section {
-    padding-bottom: 4rem;
-  }
-
-  .podcast-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
-  }
-
-  .podcast-card {
-    background: linear-gradient(135deg, #111318 0%, #14102a 100%);
-    border: 1px solid rgba(123,94,167,0.3);
-    border-radius: 12px;
-    padding: 1.25rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .podcast-card:hover {
-    border-color: var(--accent2);
-    transform: translateY(-2px);
-  }
-
-  .podcast-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent2), var(--accent));
-  }
-
-  .podcast-card-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.6rem;
-    flex-wrap: wrap;
-  }
-
-  .podcast-source-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--accent2);
-    background: rgba(123,94,167,0.15);
-    border: 1px solid rgba(123,94,167,0.3);
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .podcast-date { font-size: 0.72rem; color: var(--muted); }
-
-  .podcast-category {
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: var(--muted);
-    margin-left: auto;
-  }
-
-  .podcast-card h3 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-  }
-
-  .podcast-summary {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 0.75rem;
-  }
-
-  .no-podcast {
-    color: var(--muted);
-    font-size: 0.875rem;
-    font-style: italic;
-    padding: 1rem 0;
-  }
-
-  /* ── INTELLIGENCE PANEL ── */
-  .intel-panel {
-    position: sticky;
-    top: 145px; /* scores(36) + header(64) + section-nav(41) + gap */
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .intel-widget {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
-  }
-
-  .intel-widget-title {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.9rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .intel-topic-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.32rem 0;
-    font-size: 0.8rem;
-    cursor: pointer;
-    color: var(--text);
-    transition: color 0.15s;
+    padding: 0.4rem 1rem;
     text-decoration: none;
-  }
-
-  .intel-topic-row:hover { color: var(--accent); }
-
-  .intel-topic-count {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent);
-    background: var(--tag-bg);
-    border: 1px solid rgba(0,194,255,0.15);
-    padding: 0.12rem 0.45rem;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-
-  .intel-vendor-item {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0.32rem 0;
-    cursor: pointer;
-  }
-
-  .intel-vendor-item:hover .intel-vendor-name { color: var(--accent); }
-
-  .intel-vendor-name {
-    font-size: 0.8rem;
-    color: var(--text);
-    min-width: 80px;
-  }
-
-  .intel-vendor-bar-wrap {
-    flex: 1;
-    height: 3px;
-    background: var(--border);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .intel-vendor-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    border-radius: 2px;
-  }
-
-  .intel-vendor-count {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--muted);
-    min-width: 16px;
-    text-align: right;
-  }
-
-  .intel-term-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .intel-term {
-    font-size: 0.68rem;
-    font-family: 'Space Mono', monospace;
-    padding: 0.22rem 0.55rem;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid var(--border);
-    color: var(--muted);
-    cursor: default;
-  }
-
-  .intel-term.hot {
-    background: var(--tag-bg);
-    border-color: rgba(0,194,255,0.3);
-    color: var(--accent);
-  }
-
-  /* ── SCORES BANNER ── */
-  .scores-banner {
-    background: #0d0f14;
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    overflow: hidden;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.72rem;
-  }
-
-  .scores-banner-label {
-    color: var(--muted);
-    font-size: 0.62rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding-right: 1.25rem;
-    border-right: 1px solid var(--border);
-    margin-right: 1.25rem;
-    flex-shrink: 0;
-  }
-
-  .scores-track {
-    display: flex;
-    gap: 0;
-    align-items: center;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    flex: 1;
-  }
-
-  .scores-track::-webkit-scrollbar { display: none; }
-
-  .score-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 1.25rem;
-    border-right: 1px solid var(--border);
-    white-space: nowrap;
-    height: 36px;
-  }
-
-  .score-team {
-    color: var(--muted);
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .score-value {
-    color: var(--text);
-    font-weight: 700;
-    font-size: 0.72rem;
-  }
-
-  .score-status {
-    font-size: 0.6rem;
-    padding: 0.1rem 0.4rem;
-    border-radius: 3px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .score-status.live {
-    background: rgba(255,77,109,0.15);
-    color: var(--red);
-    animation: blink 1.5s ease-in-out infinite;
-  }
-
-  .score-status.final { background: rgba(107,114,128,0.15); color: var(--muted); }
-  .score-status.upcoming { background: rgba(0,194,255,0.1); color: var(--accent); }
-  .score-status.offseason { background: transparent; color: var(--muted); opacity: 0.6; }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-
-  .score-team-logo {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    opacity: 0.85;
-  }
-
-  /* ── ABOUT MODAL ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.72);
-    backdrop-filter: blur(6px);
-    z-index: 500;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  .modal-overlay.open { display: flex; }
-
-  .modal-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem 2.25rem;
-    max-width: 500px;
-    width: 100%;
-    position: relative;
-  }
-
-  .modal-eyebrow {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-  }
-
-  .modal-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-  }
-
-  .modal-body {
-    color: var(--muted);
-    font-size: 0.875rem;
-    line-height: 1.75;
-  }
-
-  .modal-body p + p { margin-top: 0.75rem; }
-  .modal-body strong { color: var(--text); }
-
-  .modal-close {
-    position: absolute;
-    top: 1rem; right: 1rem;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
     font-size: 0.9rem;
-    cursor: pointer;
-    padding: 0.25rem 0.6rem;
-    line-height: 1;
-    transition: color 0.15s, border-color 0.15s;
   }
+  .archive-menu a:hover { background: var(--wash); }
+  .archive-menu .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); }
+  .archive-menu a.archive-menu-week { font-style: italic; color: var(--accent); border-bottom: 1px solid var(--hair); }
 
-  .modal-close:hover { color: var(--text); border-color: var(--accent); }
-
-  /* ── VENDOR RADAR ── */
-  .vendor-radar { padding-bottom: 3rem; }
-
-  .vendor-grid {
+  /* ── FRONT PAGE ── */
+  .front {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    padding: 2rem 0 2.25rem;
+    border-bottom: 3px double var(--rule);
   }
-
-  .vendor-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1rem 1.1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+  .kicker { color: var(--accent); margin-bottom: 0.5rem; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+  .lead-head {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.9rem;
   }
+  .lead-head a, .story h3 a { text-decoration: none; }
+  .lead-head a:hover, .story h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .lead-deck { font-size: 1.22rem; line-height: 1.45; color: var(--ink-2); margin-bottom: 0.9rem; }
+  .byline { font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .byline b { color: var(--ink); font-weight: 600; }
+  .lead-body {
+    columns: 2 16rem;
+    column-gap: 2rem;
+    column-rule: 1px solid var(--hair);
+    margin-top: 1.1rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--hair);
+    font-size: 1rem;
+    hyphens: auto;
+  }
+  .lead-body p { margin-bottom: 0.8rem; }
+  .lead-body p:first-child::first-letter {
+    font-family: var(--display);
+    float: left;
+    font-size: 3.6em;
+    line-height: 0.82;
+    padding: 0.08em 0.1em 0 0;
+  }
+  .why {
+    margin-top: 0.4rem;
+    padding: 0.8rem 1rem;
+    background: var(--wash);
+    border-left: 3px solid var(--accent);
+    font-size: 0.98rem;
+    break-inside: avoid;
+  }
+  .why .label { display: block; color: var(--accent); margin-bottom: 0.2rem; }
+  .source-link { display: inline-block; margin-top: 0.8rem; font-family: var(--sans); font-size: 0.78rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
 
-  .vendor-card-head {
+  .inside { border-left: 1px solid var(--rule); padding-left: 1.75rem; }
+  .rail-head { border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; margin-bottom: 0.2rem; }
+  .inside ol { list-style: none; counter-reset: inside; }
+  .inside li { counter-increment: inside; padding: 0.95rem 0; border-bottom: 1px solid var(--hair); display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); }
+  .inside li:last-child { border-bottom: none; }
+  .inside li::before { content: counter(inside); font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .inside a { text-decoration: none; font-weight: 600; font-size: 1.02rem; line-height: 1.3; display: block; }
+  .inside a:hover { text-decoration: underline; }
+  .inside .rail-kicker { display: block; color: var(--muted); margin-bottom: 0.2rem; }
+  .inside p { font-size: 0.88rem; color: var(--ink-2); margin-top: 0.3rem; line-height: 1.45; }
+
+  /* ── NEWSPAPER SECTIONS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 0.5rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
   }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head .label { color: var(--muted); }
 
-  .vendor-name { font-weight: 700; font-size: 0.95rem; }
-
-  .vendor-count {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--accent);
-    white-space: nowrap;
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    column-gap: 2.25rem;
   }
-
-  .vendor-headlines {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    font-size: 0.8rem;
-    line-height: 1.45;
-  }
-
-  .vendor-headlines a { color: var(--muted); text-decoration: none; }
-  .vendor-headlines a:hover { color: var(--text); }
-
-  .vendor-history {
-    margin-top: auto;
-    align-self: flex-start;
+  .story { padding: 1.1rem 0 1.25rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .story .summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.55rem; }
+  .story .tags { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); margin-top: 0.35rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.95rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
     background: none;
     border: none;
     padding: 0;
+    margin-top: 0.6rem;
     cursor: pointer;
-    font-family: inherit;
+    font-family: var(--sans);
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--accent);
   }
+  .more:hover { text-decoration: underline; }
 
-  .vendor-history:hover { text-decoration: underline; }
-
-  .vendor-quiet, .vendor-empty {
-    margin-top: 0.9rem;
-    font-size: 0.75rem;
-    color: var(--muted);
+  @media (min-width: 900px) {
+    .story-grid .story:first-child { grid-column: span 2; padding-right: 1rem; }
+    .story-grid .story:first-child h3 { font-size: 2.15rem; }
+    .story-grid .story:first-child .summary { font-size: 1.05rem; }
   }
 
-  .archive-menu a.archive-menu-week { color: var(--accent); border-bottom: 1px solid var(--border); }
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
 
-  footer a { color: var(--muted); }
-  footer a:hover { color: var(--accent); }
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LEDGER (companies & signals) ── */
+  .ledger-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.25rem;
+    padding: 1rem 0 2.5rem;
+  }
+  .ledger-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .ledger h3 { margin-bottom: 0.6rem; color: var(--ink-2); }
+  .company { padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-of-type { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin: 0.2rem 0; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .coverage { background: none; border: none; padding: 0; cursor: pointer; font-family: var(--sans); font-size: 0.72rem; font-weight: 600; color: var(--accent); }
+  .coverage:hover { text-decoration: underline; }
+  .quiet { font-size: 0.82rem; font-style: italic; color: var(--muted); margin-top: 0.8rem; }
+
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; cursor: pointer; font-size: 0.95rem; }
+  .tally li:hover .tally-name { color: var(--accent); }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .terms { font-size: 0.98rem; line-height: 1.9; color: var(--ink-2); }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .empty-note { font-size: 0.88rem; font-style: italic; color: var(--muted); }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  [hidden] { display: none !important; }
 
   /* ── WEEK IN REVIEW (week.html) ── */
-  .week-header { top: 0; }
-  .week-header .archive-btn { text-decoration: none; }
-
-  .week-wrap {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem 4rem;
-  }
-
-  .week-title-link { color: inherit; text-decoration: none; }
-  .week-title-link:hover { color: var(--accent); }
-
-  .week-why {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--text);
-    border-left: 2px solid var(--accent2);
-    padding-left: 0.75rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .week-why strong { color: var(--accent2); font-weight: 600; }
-
-  .week-rss { color: var(--accent); text-decoration: none; }
-
-  .week-topic { margin-bottom: 2rem; }
-
-  .week-topic h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .week-list {
-    list-style: none;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--surface);
-  }
-
-  .week-list li {
-    padding: 0.75rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-  }
-
-  .week-list li + li { border-top: 1px solid var(--border); }
-
-  .week-list li > a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; line-height: 1.45; }
-  .week-list li > a:hover { color: var(--accent); }
-
-  .week-meta { font-size: 0.72rem; color: var(--muted); font-family: 'Space Mono', monospace; }
-  .week-meta a { color: var(--muted); }
+  .week-top { list-style: none; padding: 1.25rem 0 2rem; border-bottom: 3px double var(--rule); counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.2rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .week-top .summary { font-size: 0.97rem; color: var(--ink-2); }
+  .week-top .why { margin-top: 0.6rem; }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; }
+  .week-list a:hover { text-decoration: underline; }
+  .week-list .byline { display: block; margin-top: 0.15rem; }
+  .week-list .byline a { font-weight: 500; font-size: inherit; color: var(--accent); }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1100px) {
-    .content-wrap { grid-template-columns: 1fr; }
-    .intel-panel { display: none; }
+  @media (max-width: 960px) {
+    .front { grid-template-columns: 1fr; gap: 1.75rem; }
+    .inside { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1rem; }
+    .ledger-grid { grid-template-columns: 1fr 1fr; }
+    .ledger-grid > div:first-child { grid-column: 1 / -1; }
+    .ledger-grid > div + div { border-left: none; padding-left: 0; }
+    .ledger-grid > div:last-child { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+    .search input { width: 11rem; }
   }
 
-  @media (max-width: 600px) {
-    header { padding: 0 1rem; height: 56px; }
-    .hero { padding: 1.75rem 1rem 1rem; }
-    .content-wrap { padding: 0 1rem; }
-    .card { padding: 1.1rem 1rem; }
-    .card h2 { font-size: 1rem; }
-    .card-summary { -webkit-line-clamp: 2; }
-    .topic-pill { padding: 0.5rem 0.9rem; min-height: 40px; }
-    .search-hero-wrap { border-radius: 10px; }
-    .section-nav-inner { padding: 0 0.5rem; }
-    .section-nav-btn { padding: 0.75rem 0.8rem; }
-    .week-wrap { padding: 0 1rem 3rem; }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .dateline { flex-direction: column; align-items: center; gap: 0; }
+    .motto { font-size: 0.92rem; }
+    .sections-inner { flex-wrap: wrap; gap: 0 1rem; padding-bottom: 0.4rem; }
+    .section-links { flex-basis: 100%; order: 2; }
+    .nav-tools { flex: 1; justify-content: space-between; padding-top: 0.5rem; }
+    .search { flex: 1; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+    .lead-body { columns: 1; }
+    .ledger-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .ledger-grid > div:last-child { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
   }
 </style>
 </head>
@@ -1242,184 +457,111 @@
 
 <!--ARCHIVE_NOTICE-->
 
-<!-- SCORES BANNER -->
-<div class="scores-banner">
-  <div class="scores-banner-label">Toronto</div>
-  <div class="scores-track" id="scoresTrack">
-    <div class="score-item"><span class="score-team">Loading…</span></div>
+<div class="topstrip">
+  <div class="wrap topstrip-inner">
+    <div class="ear" id="sportsEar"><span class="label">Toronto</span></div>
+    <div class="ear-links"><a href="/week.html">The week in review</a><a href="/feed.xml">RSS</a><a href="#about">About</a></div>
   </div>
 </div>
 
-<header>
-  <a class="logo" href="/">
-    <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="36" height="36" rx="8" fill="#111318"/>
-      <path d="M8 18h4M24 18h4M14 12l-2 6 2 6M22 12l2 6-2 6" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="18" cy="18" r="3" fill="#00c2ff"/>
-    </svg>
-    <span class="logo-text">digital<span>plumber</span>.ca</span>
-  </a>
-  <nav>
-    <div class="nav-links">
-      <a class="nav-link" href="#" onclick="navFilter(this,'AI Ops & Observability');return false">AI Ops</a>
-      <a class="nav-link" href="#" onclick="navFilter(this,'Network Automation');return false">Networking</a>
-      <a class="nav-link" href="#" onclick="navFilter(this,'Agentic AI & MCP');return false">Agentic AI</a>
-      <a class="nav-link" href="#" onclick="navFilter(this,'Security Automation');return false">Security</a>
-      <a class="nav-link" href="#" onclick="navFilter(this,'Research, Standards & Industry');return false">Research</a>
-      <a class="nav-link" href="#" onclick="navFilter(this,'__vendors');return false">Vendors</a>
-      <a class="nav-link" href="/week.html">This Week</a>
-      <a class="nav-link" href="#" onclick="openAbout();return false">About</a>
-    </div>
-    <div class="archive-nav">
-      <button class="archive-btn" onclick="toggleArchiveMenu(this)">Archives ▾</button>
-      <div class="archive-menu" id="archiveMenu"></div>
-    </div>
-  </nav>
+<header class="masthead wrap" id="masthead">
+  <div class="dateline label"><span><!--DATELINE--></span><span>No. <!--EDITION_NO--> · Toronto edition · <!--ARTICLE_COUNT--> stories</span></div>
+  <h1 class="nameplate"><a href="/">Digital Plumber</a></h1>
+  <p class="motto">The daily briefing for the people who keep networks running</p>
 </header>
 
-<!-- About modal -->
-<div class="modal-overlay" id="aboutModal" onclick="if(event.target===this)closeAbout()">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeAbout()">✕</button>
-    <p class="modal-eyebrow">About this site</p>
-    <h2 class="modal-title">Digital Plumber</h2>
-    <div class="modal-body">
-      <p><strong>Digital Plumber</strong> is an independent daily intelligence briefing for network and IT operations practitioners — senior network engineers, NetDevOps leads, AIOps architects, and the teams keeping infrastructure running.</p>
-      <p>Every morning, an AI agent searches the web across dozens of sources and curates the most substantive developments across AI Ops, network automation, agentic AI, security, research, and vendor news. Summaries are written for practitioners, not marketers.</p>
-      <p>Content is AI-curated and AI-summarized — always verify before acting on anything here.</p>
+<nav class="sections-bar" id="sectionsBar" aria-label="Sections">
+  <div class="wrap sections-inner">
+    <a class="mini-nameplate" href="/">Digital Plumber</a>
+    <div class="section-links label" id="sectionLinks">
+      <button class="section-link active" onclick="filterTopic(this, 'all')">Front page</button>
+      <!--SECTION_LINKS-->
+      <button class="section-link" onclick="goToCompanies(this)">Companies</button>
     </div>
-  </div>
-</div>
-
-<section class="hero">
-  <p class="hero-eyebrow">AI Networking Intelligence</p>
-  <h1>Plumbing the<br><em>information age</em></h1>
-
-  <div class="search-hero">
-    <div class="search-hero-wrap">
-      <span class="search-hero-icon">⌕</span>
-      <input type="text" id="searchInput" placeholder="Search AI Ops, networking, vendors, research…" oninput="filterSearch(this.value)" />
-      <span class="search-kbd">⌘K</span>
+    <div class="nav-tools">
+      <label class="search">
+        <input type="search" id="searchInput" placeholder="Search every edition" oninput="filterSearch(this.value)" aria-label="Search every edition">
+        <kbd>⌘K</kbd>
+      </label>
+      <div class="archive-nav label">
+        <button class="archive-btn label" onclick="toggleArchiveMenu(this)">Past editions ▾</button>
+        <div class="archive-menu" id="archiveMenu"></div>
+      </div>
     </div>
-  </div>
-
-  <div class="hero-stats">
-    <span class="hero-stat-live"><span class="hero-stat-live-dot"></span> Live</span>
-    <span class="hero-stat-sep">·</span>
-    <span><span class="hero-stat-highlight"><!--ARTICLE_COUNT--></span> articles today</span>
-    <span class="hero-stat-sep">·</span>
-    <span><span class="hero-stat-highlight"><!--TOPIC_COUNT--></span> topics</span>
-    <span class="hero-stat-sep">·</span>
-    <span>Updated <!--BUILD_DATE--></span>
-  </div>
-
-  <div class="topics" id="topicPills">
-    <button class="topic-pill active" onclick="filterTopic(this, 'all')">All Topics</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'Agentic AI & MCP')">Agentic AI &amp; MCP</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'AI Ops & Observability')">AI Ops &amp; Observability</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'Network Automation')">Network Automation</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'AI Infrastructure')">AI Infrastructure</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'Security Automation')">Security Automation</button>
-    <button class="topic-pill" onclick="filterTopic(this, 'AI Industry & Policy')">AI Industry &amp; Policy</button>
-  </div>
-</section>
-
-<nav class="section-nav" id="sectionNav">
-  <div class="section-nav-inner">
-    <button class="section-nav-btn active" onclick="scrollToSection('section-news', this)">Today's Briefing<span class="nav-count"><!--ARTICLE_COUNT--> Stories</span></button>
-    <button class="section-nav-btn" onclick="scrollToSection('section-vendors', this)">Vendor Radar</button>
-    <button class="section-nav-btn" onclick="scrollToSection('section-podcasts', this)">Podcasts &amp; Talks</button>
-    <a class="section-nav-btn section-nav-link" href="/week.html">This Week →</a>
   </div>
 </nav>
 
-<div class="content-wrap">
-  <div class="feed-col">
+<main class="wrap">
+  <section class="front" id="frontPage">
+    <!--FRONT_PAGE-->
+  </section>
 
-    <div id="section-news">
-      <p class="section-label">Daily Briefing · <!--BUILD_DATE--></p>
+  <div id="sections">
+    <!--SECTIONS-->
+  </div>
 
-      <div class="status-bar">
-        <div class="status-dot"></div>
-        <span><!--ARTICLE_COUNT--> articles · AI-curated · Updated <!--BUILD_DATE--></span>
-      </div>
+  <div class="no-results" id="noResults">
+    Nothing in today's paper matches that. <button onclick="resetFilter()">Clear search</button>
+  </div>
 
-      <div class="news-grid" id="newsGrid">
-        <!--NEWS_CARDS-->
-      </div>
+  <section class="archive-results" id="archiveResults" hidden>
+    <div class="section-head"><h2>From past editions</h2><span class="label" id="archiveLabel"></span></div>
+    <ol class="archive-list" id="archiveGrid"></ol>
+  </section>
 
-      <div class="no-results" id="noResults">
-        <p>No articles match your filter. <a href="#" onclick="resetFilter(); return false;" style="color:var(--accent)">Clear filter</a></p>
-      </div>
+  <!--PODCASTS-->
 
-      <div id="archiveResults" style="display:none">
-        <p class="section-label" style="margin-top:2rem" id="archiveLabel">From the Archive</p>
-        <div class="news-grid" id="archiveGrid"></div>
-      </div>
-    </div><!-- /#section-news -->
-
-    <!-- VENDOR RADAR -->
-    <div id="section-vendors">
-      <p class="section-label">Vendor Radar · <!--BUILD_DATE--></p>
-      <div class="vendor-radar">
+  <section class="paper-section ledger" id="section-vendors">
+    <div class="section-head"><h2>Companies and signals</h2><span class="label">Tracked vendors</span></div>
+    <div class="ledger-grid">
+      <div>
+        <h3 class="label">In today's paper</h3>
         <!--VENDOR_RADAR-->
       </div>
-    </div><!-- /#section-vendors -->
+      <!--INTELLIGENCE_PANEL-->
+    </div>
+  </section>
+</main>
 
-    <!-- PODCASTS & TALKS -->
-    <div id="section-podcasts">
-      <p class="section-label">Podcasts &amp; Talks · <!--BUILD_DATE--></p>
-      <div class="podcast-section">
-        <div class="podcast-grid">
-          <!--PODCAST_CARDS-->
-        </div>
-      </div>
-    </div><!-- /#section-podcasts -->
-
-  </div><!-- /.feed-col -->
-
-  <aside class="intel-panel" id="intelPanel">
-    <!--INTELLIGENCE_PANEL-->
-  </aside>
-
-</div><!-- /.content-wrap -->
-
-<footer>
-  <div class="footer-brand">
-    <strong>digitalplumber.ca</strong> — Network Intelligence
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About this paper</h2>
+    <p><strong>Digital Plumber</strong> is an independent daily briefing for network and IT operations practitioners: senior network engineers, NetDevOps leads, AIOps architects, and the teams keeping infrastructure running.</p>
+    <p>Each morning an AI editor searches the web, picks the most substantive developments across AI ops, network automation, agentic AI, security and infrastructure, and writes them up for practitioners, not marketers. It's AI-curated and AI-summarized, so verify before acting on anything here.</p>
   </div>
-  <div class="footer-creds">Independent networking &amp; AI industry intelligence · <a href="/week.html">This week</a> · <a href="/feed.xml">RSS</a></div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">The week in review</a>
+    <a href="/feed.xml">RSS feed</a>
+    <a href="#" onclick="toggleArchiveMenu(document.querySelector('.archive-btn')); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Past editions</a>
+  </nav>
+</div>
 </footer>
 
 <script>
-  // ── TORONTO SCORES BANNER ──
+  // ── TORONTO SPORTS EAR ──
   const TORONTO_TEAMS = [
-    { league: 'hockey/nhl',     sport: 'hockey',     abbr: 'TOR', name: 'Maple Leafs', emoji: '🍁' },
-    { league: 'baseball/mlb',   sport: 'baseball',   abbr: 'TOR', name: 'Blue Jays',   emoji: '🐦' },
-    { league: 'basketball/nba', sport: 'basketball', abbr: 'TOR', name: 'Raptors',     emoji: '🦖' },
+    { league: 'hockey/nhl',     abbr: 'TOR', name: 'Leafs' },
+    { league: 'baseball/mlb',   abbr: 'TOR', name: 'Jays' },
+    { league: 'basketball/nba', abbr: 'TOR', name: 'Raptors' },
   ];
 
-  async function fetchTeamScore({ league, abbr, name, emoji }) {
-    const url = `https://site.api.espn.com/apis/site/v2/sports/${league}/scoreboard`;
+  async function fetchTeamScore({ league, abbr, name }) {
     try {
-      const res = await fetch(url);
-      const data = await res.json();
-      const events = data.events || [];
-
-      const game = events.find(e =>
+      const data = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${league}/scoreboard`)).json();
+      const game = (data.events || []).find(e =>
         e.competitions?.[0]?.competitors?.some(c => c.team?.abbreviation === abbr)
       );
-
-      if (!game) return await fetchNextGame({ league, abbr, name, emoji });
-      return gameResult(game, { abbr, name, emoji });
+      if (!game) return await fetchNextGame({ league, abbr, name });
+      return gameResult(game, { abbr, name });
     } catch {
-      return { name, emoji, offseason: true };
+      return { name, offseason: true };
     }
   }
 
   // No game on today's scoreboard: show the next scheduled game, checking the
   // regular season too in case the current schedule (e.g. preseason) is done.
-  async function fetchNextGame({ league, abbr, name, emoji }) {
+  async function fetchNextGame({ league, abbr, name }) {
     const base = `https://site.api.espn.com/apis/site/v2/sports/${league}/teams/${abbr.toLowerCase()}/schedule`;
     for (const url of [base, `${base}?seasontype=2`]) {
       try {
@@ -1427,92 +569,60 @@
         const next = (data.events || [])
           .filter(e => Date.parse(e.date) > Date.now() && !e.competitions?.[0]?.status?.type?.completed)
           .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
-        if (next) return gameResult(next, { abbr, name, emoji });
+        if (next) return gameResult(next, { abbr, name });
       } catch {}
     }
-    return { name, emoji, offseason: true };
+    return { name, offseason: true };
   }
 
-  function gameResult(game, { abbr, name, emoji }) {
+  function gameResult(game, { abbr, name }) {
     const comp = game.competitions[0];
     const tor = comp.competitors.find(c => c.team.abbreviation === abbr);
     const opp = comp.competitors.find(c => c.team.abbreviation !== abbr);
     const status = comp.status.type;
-    const isHome = tor.homeAway === 'home';
-
     // Scoreboard scores are strings; schedule scores are { displayValue } objects
     return {
-      name, emoji, offseason: false,
+      name,
+      offseason: false,
       torScore: tor.score?.displayValue ?? tor.score,
       oppScore: opp.score?.displayValue ?? opp.score,
       oppAbbr: opp.team.abbreviation,
-      isHome,
+      isHome: tor.homeAway === 'home',
       statusName: status.name,
       statusShort: status.shortDetail,
     };
   }
 
-  function renderScoreItem({ name, emoji, offseason, torScore, oppScore, oppAbbr, isHome, statusName, statusShort }) {
-    const el = document.createElement('div');
-    el.className = 'score-item';
-
-    if (offseason) {
-      el.innerHTML = `
-        <span class="score-team">${emoji} ${name}</span>
-        <span class="score-status offseason">Off Season</span>`;
-      return el;
+  function scoreText({ name, offseason, torScore, oppScore, oppAbbr, isHome, statusName, statusShort }) {
+    if (offseason) return `<b>${name}</b> off season`;
+    const live = statusName === 'STATUS_IN_PROGRESS';
+    const final = statusName === 'STATUS_FINAL';
+    const vs = isHome ? 'vs' : 'at';
+    if (live || final) {
+      return `<b>${name}</b> ${torScore}–${oppScore} ${vs} ${oppAbbr} · ${live ? '<span class="ear-live">live</span>' : 'final'}`;
     }
-
-    const isLive = statusName === 'STATUS_IN_PROGRESS';
-    const isFinal = statusName === 'STATUS_FINAL';
-    const isUpcoming = !isLive && !isFinal;
-
-    let statusClass = isLive ? 'live' : isFinal ? 'final' : 'upcoming';
-    let statusLabel = isLive ? 'Live' : isFinal ? 'Final' : statusShort;
-
-    const matchup = isHome
-      ? `TOR ${torScore ?? '—'} – ${oppScore ?? '—'} ${oppAbbr}`
-      : `${oppAbbr} ${oppScore ?? '—'} – ${torScore ?? '—'} TOR`;
-
-    el.innerHTML = `
-      <span class="score-team">${emoji} ${name}</span>
-      <span class="score-value">${isUpcoming ? `vs ${oppAbbr}` : matchup}</span>
-      <span class="score-status ${statusClass}">${statusLabel}</span>`;
-    return el;
+    return `<b>${name}</b> ${vs} ${oppAbbr} · ${statusShort}`;
   }
 
   async function loadScores() {
-    const track = document.getElementById('scoresTrack');
+    const ear = document.getElementById('sportsEar');
     const results = await Promise.all(TORONTO_TEAMS.map(fetchTeamScore));
-    track.innerHTML = '';
-    results.forEach(r => track.appendChild(renderScoreItem(r)));
+    ear.innerHTML = '<span class="label">Toronto</span>' +
+      results.map(r => `<span class="ear-item">${scoreText(r)}</span>`).join('');
   }
 
   loadScores();
   setInterval(loadScores, 60000);
 
-  // ── SECTION NAV ──
-  function scrollToSection(id, btn) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const navOffset = 100 + 41;
-    const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }
-
+  // ── STICKY BAR: show the small nameplate once the masthead scrolls away ──
   (function () {
-    const sections = ['section-news', 'section-vendors', 'section-podcasts'];
-    const btns = document.querySelectorAll('.section-nav-btn');
-    const setActive = (id) => btns.forEach((b, i) => b.classList.toggle('active', sections[i] === id));
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+    const bar = document.getElementById('sectionsBar');
+    const masthead = document.getElementById('masthead');
+    if (!bar || !masthead) return;
+    new IntersectionObserver(([e]) => bar.classList.toggle('stuck', !e.isIntersecting)).observe(masthead);
   })();
 
-  // ── ARCHIVES DROPDOWN ──
+  // ── PAST EDITIONS DROPDOWN ──
   (function () {
     const archives = window.__archives || [];
     const menu = document.getElementById('archiveMenu');
@@ -1520,12 +630,13 @@
     const week = document.createElement('a');
     week.href = '/week.html';
     week.className = 'archive-menu-week';
-    week.textContent = 'This week in review →';
+    week.textContent = 'The week in review';
     menu.appendChild(week);
-    archives.forEach(a => {
+    archives.forEach((a, i) => {
       const link = document.createElement('a');
       link.href = `/archives/${a.date}.html`;
-      link.innerHTML = `${a.label} <span class="archive-menu-count">${a.count} articles</span>`;
+      const weekday = new Date(`${a.date}T12:00:00Z`).toLocaleDateString('en-CA', { weekday: 'short', timeZone: 'UTC' });
+      link.innerHTML = `<span>${weekday}, ${a.label}</span><span class="n">No. ${archives.length - i} · ${a.count}</span>`;
       menu.appendChild(link);
     });
   })();
@@ -1533,23 +644,18 @@
   function toggleArchiveMenu(btn) {
     const menu = document.getElementById('archiveMenu');
     const isOpen = menu.classList.toggle('open');
-    btn.textContent = isOpen ? 'Archives ▴' : 'Archives ▾';
+    btn.textContent = isOpen ? 'Past editions ▴' : 'Past editions ▾';
     if (isOpen) {
-      function close(e) { if (!btn.closest('.archive-nav').contains(e.target)) { menu.classList.remove('open'); btn.textContent = 'Archives ▾'; document.removeEventListener('click', close); } }
+      function close(e) {
+        if (!btn.closest('.archive-nav').contains(e.target)) {
+          menu.classList.remove('open');
+          btn.textContent = 'Past editions ▾';
+          document.removeEventListener('click', close);
+        }
+      }
       setTimeout(() => document.addEventListener('click', close), 0);
     }
   }
-
-  // ── ABOUT MODAL ──
-  function openAbout() {
-    document.getElementById('aboutModal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeAbout() {
-    document.getElementById('aboutModal').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
 
   // ── ⌘K / Ctrl+K SEARCH SHORTCUT ──
   document.addEventListener('keydown', e => {
@@ -1560,21 +666,7 @@
     }
   });
 
-  // ── NAV FILTER (header links) ──
-  function navFilter(el, topic) {
-    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
-    if (topic === '__vendors') {
-      el.classList.add('active');
-      filterTopic(null, 'all');
-      scrollToSection('section-vendors');
-      return;
-    }
-    el.classList.add('active');
-    filterTopic(null, topic);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ── FILTER LOGIC ──
+  // ── SECTIONS, SEARCH AND FILTERING ──
   let activeTopic = 'all';
   let searchIndexCache = null;
   const ARCHIVE_RESULT_LIMIT = 50;
@@ -1589,104 +681,114 @@
     return searchIndexCache;
   }
 
-  function setActivePill(el) {
-    document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
-    if (el) el.classList.add('active');
+  function scrollToPaper() {
+    const bar = document.getElementById('sectionsBar');
+    const top = bar.getBoundingClientRect().top + window.scrollY;
+    if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  function setActiveLink(el) {
+    document.querySelectorAll('.section-link').forEach(b => b.classList.toggle('active', b === el));
   }
 
   function filterTopic(el, topic) {
     activeTopic = topic;
-    setActivePill(el);
+    if (!el) el = [...document.querySelectorAll('.section-link')].find(b => b.dataset.topic === topic) || null;
+    setActiveLink(topic === 'all' && !el ? document.querySelector('.section-link') : el);
     document.getElementById('searchInput').value = '';
-    // sync nav link active state
-    document.querySelectorAll('.nav-link').forEach(a => {
-      const t = a.getAttribute('onclick') || '';
-      const match = t.includes(`'${topic}'`) || t.includes(`"${topic}"`);
-      a.classList.toggle('active', match && topic !== 'all');
-    });
     applyFilters();
+    scrollToPaper();
+  }
+
+  function goToCompanies(el) {
+    activeTopic = 'all';
+    document.getElementById('searchInput').value = '';
+    applyFilters();
+    setActiveLink(el);
+    document.getElementById('section-vendors').scrollIntoView({ behavior: 'smooth' });
   }
 
   function filterSearch(query) {
     if (query.trim()) {
-      document.querySelectorAll('.topic-pill').forEach(p => p.classList.remove('active'));
-      document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
       activeTopic = 'all';
+      setActiveLink(null);
+    } else {
+      setActiveLink(document.querySelector('.section-link'));
     }
     applyFilters(query.trim().toLowerCase());
   }
 
-  // Search today's briefing and the archive for a vendor, e.g. from the radar
+  // Search today's paper and every past edition for a company, e.g. from the ledger
   function searchVendor(name) {
     const input = document.getElementById('searchInput');
     input.value = name;
     filterSearch(name);
-    scrollToSection('section-news');
+    scrollToPaper();
   }
 
   function applyFilters(searchQuery) {
-    const cards = document.querySelectorAll('#newsGrid .card');
+    const filtering = activeTopic !== 'all' || !!searchQuery;
     let visibleCount = 0;
 
-    cards.forEach(card => {
-      const matchesTopic = activeTopic === 'all' || card.dataset.topic === activeTopic;
-      const matchesSearch = !searchQuery || card.textContent.toLowerCase().includes(searchQuery);
+    document.querySelectorAll('.story').forEach(story => {
+      const matchesTopic = activeTopic === 'all' || story.dataset.topic === activeTopic;
+      const matchesSearch = !searchQuery || story.textContent.toLowerCase().includes(searchQuery);
       const visible = matchesTopic && matchesSearch;
-      card.style.display = visible ? '' : 'none';
+      story.hidden = !visible;
       if (visible) visibleCount++;
     });
 
-    const noResults = document.getElementById('noResults');
-    noResults.classList.toggle('visible', visibleCount === 0 && cards.length > 0);
-    const archiveLabel = document.getElementById('archiveLabel');
+    document.querySelectorAll('.paper-section[data-topic]').forEach(sec => {
+      sec.hidden = !sec.querySelector('.story:not([hidden])');
+    });
 
-    // Archive search
+    const front = document.getElementById('frontPage');
+    const lead = front.querySelector('.story');
+    front.querySelector('.inside')?.toggleAttribute('hidden', filtering);
+    front.hidden = filtering && (!lead || lead.hidden);
+    document.getElementById('section-vendors').hidden = filtering;
+    const listening = document.getElementById('section-listening');
+    if (listening) listening.hidden = filtering;
+
+    const noResults = document.getElementById('noResults');
+    noResults.classList.toggle('visible', filtering && visibleCount === 0);
+
     const archiveSection = document.getElementById('archiveResults');
     const archiveGrid = document.getElementById('archiveGrid');
     if (!searchQuery) {
-      archiveSection.style.display = 'none';
+      archiveSection.hidden = true;
       archiveGrid.innerHTML = '';
       return;
     }
     loadSearchIndex().then(index => {
-      // Exclude today's date (already shown in main grid)
       const todayDate = window.__buildDate;
       const hits = index.filter(a => {
         if (a.date === todayDate) return false;
         return [a.title, a.summary, a.source, a.topic, ...(a.tags || [])].join(' ').toLowerCase().includes(searchQuery);
       });
       // Ignore results from a search the user has since changed
-      if ((document.getElementById('searchInput').value.trim().toLowerCase()) !== searchQuery) return;
+      if (document.getElementById('searchInput').value.trim().toLowerCase() !== searchQuery) return;
       if (hits.length === 0) {
-        archiveSection.style.display = 'none';
+        archiveSection.hidden = true;
         archiveGrid.innerHTML = '';
         return;
       }
       if (visibleCount === 0) noResults.classList.remove('visible');
       const shown = hits.slice(0, ARCHIVE_RESULT_LIMIT);
-      archiveLabel.textContent = hits.length > shown.length
-        ? `From the Archive · ${shown.length} of ${hits.length} matches — refine your search to see more`
-        : `From the Archive · ${hits.length} ${hits.length === 1 ? 'match' : 'matches'}`;
+      document.getElementById('archiveLabel').textContent = hits.length > shown.length
+        ? `${shown.length} of ${hits.length} matches · refine to see more`
+        : `${hits.length} ${hits.length === 1 ? 'match' : 'matches'}`;
       archiveGrid.innerHTML = shown.map(a => `
-        <div class="card" data-topic="${escHtml(a.topic)}">
-          <div class="card-meta">
-            <span class="source-tag">${escHtml(a.source)}</span>
-            <span class="card-date">${escHtml(a.dateLabel)}</span>
-            <span class="card-category">${escHtml(a.topic)}</span>
+        <li>
+          <div class="when">${escHtml(a.dateLabel)}<br><a href="/archives/${escHtml(a.date)}.html">Read that edition</a></div>
+          <div>
+            <p class="kicker label">${escHtml(a.topic)}</p>
+            <h3><a href="${escHtml(a.url)}" target="_blank" rel="noopener">${escHtml(a.title)}</a></h3>
+            <p>${escHtml(a.summary)}</p>
+            <p class="byline">${escHtml(a.source)}</p>
           </div>
-          <h2>${escHtml(a.title)}</h2>
-          <p class="card-summary">${escHtml(a.summary)}</p>
-          ${a.detail ? `<div class="card-detail">
-            ${String(a.detail).split(/\n\s*\n/).map(p => `<p>${escHtml(p.trim())}</p>`).join('')}
-            <a class="source-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read full article ↗</a>
-          </div>` : ''}
-          <div class="card-footer">
-            ${a.detail
-              ? `<button type="button" class="read-link read-toggle" aria-expanded="false" onclick="toggleDetail(this)">Read more →</button>`
-              : `<a class="read-link" href="${escHtml(a.url)}" target="_blank" rel="noopener">Read more →</a>`}
-          </div>
-        </div>`).join('');
-      archiveSection.style.display = '';
+        </li>`).join('');
+      archiveSection.hidden = false;
     });
   }
 
@@ -1694,22 +796,19 @@
     return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // Expand / collapse the in-card detail briefing
+  // Expand / collapse a story's full write-up
   function toggleDetail(btn) {
-    const card = btn.closest('.card, .podcast-card');
-    const detail = card && card.querySelector('.card-detail');
+    const detail = btn.closest('.story, li')?.querySelector('.story-detail');
     if (!detail) return;
     const open = detail.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent = open ? 'Show less ↑' : 'Read more →';
+    btn.textContent = open ? 'Show less' : 'Continue reading';
   }
 
   function resetFilter() {
     activeTopic = 'all';
     document.getElementById('searchInput').value = '';
-    document.querySelectorAll('.topic-pill').forEach((p, i) => {
-      p.classList.toggle('active', i === 0);
-    });
+    setActiveLink(document.querySelector('.section-link'));
     applyFilters();
   }
 </script>
