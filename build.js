@@ -846,8 +846,14 @@ ${paras}
     .map(({ t, items }) => `
 <hr>
 <h2>${esc(t.label)}</h2>${items.map(story).join('')}`).join('');
-  return `<!-- buttondown-editor-mode: fancy -->
-<p style="${muted};text-transform:uppercase;letter-spacing:0.08em">${esc(dateline)} · No. ${editionNo} · ${newsItems.length} stories</p>
+  // Email clients mostly ignore web fonts, so the masthead falls back to Georgia
+  const masthead = `
+<div style="text-align:center;margin:0 0 24px;padding:0 0 10px;border-bottom:3px double #1b1814">
+  <p style="margin:0;font-family:'Instrument Serif',Georgia,'Times New Roman',serif;font-size:44px;line-height:1.05;font-weight:normal"><a href="${SITE}/" style="color:#1b1814;text-decoration:none">Digital Plumber</a></p>
+  <p style="margin:6px 0 0;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:15px;color:#3d372f">Plumbing the information age</p>
+  <p style="margin:12px 0 0;padding-top:6px;border-top:1px solid #1b1814;font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#3d372f">${esc(dateline)} &nbsp;·&nbsp; No. ${editionNo} &nbsp;·&nbsp; ${newsItems.length} stories</p>
+</div>`;
+  return `<!-- buttondown-editor-mode: fancy -->${masthead}
 <h2>Today's ${topPicks.length} things that matter</h2>
 <ol>${three}
 </ol>
