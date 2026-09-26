@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Infrastructure — Topics — Digital Plumber</title>
-<meta name="description" content="AI Infrastructure in Digital Plumber's daily briefings: 105 stories, 4 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
+<meta name="description" content="AI Infrastructure in Digital Plumber's daily briefings: 107 stories, 6 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
 <link rel="canonical" href="https://digitalplumber.ca/topics/ai-infrastructure/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Plumber">
 <meta property="og:title" content="AI Infrastructure — Topics — Digital Plumber">
-<meta property="og:description" content="AI Infrastructure in Digital Plumber's daily briefings: 105 stories, 4 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
+<meta property="og:description" content="AI Infrastructure in Digital Plumber's daily briefings: 107 stories, 6 in the last 7 days. The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.">
 <meta property="og:url" content="https://digitalplumber.ca/topics/ai-infrastructure/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -501,80 +527,92 @@
   <h1 class="page-title">AI Infrastructure</h1>
   <p class="page-dek">The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.</p>
   <div class="stat-row">
-    <div><span class="stat">105</span><span class="label">stories in the archive</span></div>
-    <div><span class="stat">4 </span><span class="label">last 7 days · 4 the 7 before</span></div>
+    <div><span class="stat">107</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">6 <span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span></span><span class="label">last 7 days · 4 the 7 before</span></div>
     <div><span class="stat">24</span><span class="label">last 30 days</span></div>
     <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
   </div>
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 4, 2, 7, 6, 10, 3, 9, 10, 8, 5, 4, 4">
-      <div class="bar-col" title="Week of Jul 4: 4 stories">
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 4, 3, 8, 4, 11, 4, 9, 9, 8, 4, 4, 6">
+      <div class="bar-col" title="Week of Jul 5: 4 stories">
         <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
-        <span class="bar-label">Jul 4</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Jul 11: 2 stories">
-        <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
-        <span class="bar-label">Jul 11</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 18: 7 stories">
-        <span class="bar-n">7</span>
-        <div class="bar-track"><div class="bar" style="height:70%"></div></div>
-        <span class="bar-label">Jul 18</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 25: 6 stories">
-        <span class="bar-n">6</span>
-        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
-        <span class="bar-label">Jul 25</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 1: 10 stories">
-        <span class="bar-n">10</span>
-        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Aug 1</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 8: 3 stories">
+      <div class="bar-col" title="Week of Jul 12: 3 stories">
         <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:30%"></div></div>
-        <span class="bar-label">Aug 8</span>
+        <div class="bar-track"><div class="bar" style="height:27%"></div></div>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Aug 15: 9 stories">
-        <span class="bar-n">9</span>
-        <div class="bar-track"><div class="bar" style="height:90%"></div></div>
-        <span class="bar-label">Aug 15</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 22: 10 stories">
-        <span class="bar-n">10</span>
-        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Aug 22</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 29: 8 stories">
+      <div class="bar-col" title="Week of Jul 19: 8 stories">
         <span class="bar-n">8</span>
-        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
-        <span class="bar-label">Aug 29</span>
+        <div class="bar-track"><div class="bar" style="height:73%"></div></div>
+        <span class="bar-label">Jul 19</span>
       </div>
-      <div class="bar-col" title="Week of Sep 5: 5 stories">
-        <span class="bar-n">5</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Sep 5</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 12: 4 stories">
+      <div class="bar-col" title="Week of Jul 26: 4 stories">
         <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
-        <span class="bar-label">Sep 12</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Jul 26</span>
       </div>
-      <div class="bar-col" title="Week of Sep 19: 4 stories">
+      <div class="bar-col" title="Week of Aug 2: 11 stories">
+        <span class="bar-n">11</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 2</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 9: 4 stories">
         <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
-        <span class="bar-label">Sep 19</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Aug 9</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 16: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:82%"></div></div>
+        <span class="bar-label">Aug 16</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 23: 9 stories">
+        <span class="bar-n">9</span>
+        <div class="bar-track"><div class="bar" style="height:82%"></div></div>
+        <span class="bar-label">Aug 23</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 30: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:73%"></div></div>
+        <span class="bar-label">Aug 30</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 6: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Sep 6</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 13: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
+        <span class="bar-label">Sep 13</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 20: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:55%"></div></div>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>
   <section class="paper-section">
     <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
     <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>PRNewswire</b> · Sep 23, 2026 · <span class="stype">Primary source</span></p>
+        <h3><a href="https://www.prnewswire.com/news-releases/whitefiber-launches-whitefiber-continuum-the-highest-performing-distributed-gpu-supercluster-architecture-302886976.html" target="_blank" rel="noopener" title="WhiteFiber Launches Continuum: 83km Distributed GPU Supercluster with 136 Tbps Guaranteed Bandwidth">WhiteFiber links GPU clusters 83km apart at 136 Tbps</a></h3>
+        <p class="summary">WhiteFiber commercially launched Continuum on Sept 23, a distributed GPU supercluster spanning two QTS facilities 83km apart across 12 dark fiber strands. The architecture delivers 136 Tbps bandwidth at 0.9ms guaranteed round-trip latency using DriveNets AI Fabric and WEKA NeuralMesh storage.</p><p class="why-line"><span class="label">Why it matters</span> Demonstrates feasible scale-across architecture for GPU clusters beyond single-facility power/space limits, critical for operators planning multi-site AI infrastructure without proprietary interconnects.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>24/7 Wall St.</b> · Sep 23, 2026 · <span class="stype">Analysis</span></p>
+        <h3><a href="https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/" target="_blank" rel="noopener" title="Network Fabric Becomes the Binding Constraint on GPU Utilization, Not Compute Itself">Network fabric, not GPUs, now limits AI cluster utilisation</a></h3>
+        <p class="summary">Analysis reveals hyperscalers are shifting capex priorities from GPU compute to networking fabric. Cisco booked $9.3B in AI infrastructure orders in FY2026, driving a &quot;networking supercycle&quot; because multi-datacenter clusters require fiber, switches, and coherent optics to prevent idle GPU cycles.</p><p class="why-line"><span class="label">Why it matters</span> Network engineering has become the critical bottleneck for GPU utilization; capex allocation decisions now depend on fabric design rather than silicon procurement—a fundamental shift in infrastructure investment strategy.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
       <li class="entry">
         <p class="meta"><b>Investing.com</b> · Sep 24, 2026 · <span class="stype">Industry news</span></p>
         <h3><a href="https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355" target="_blank" rel="noopener" title="BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints">BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</a></h3>
@@ -623,25 +661,15 @@
         <p class="summary">Cornelis Networks announced a new Active Compute Fabric architecture to support scale-up and scale-out networks for AI workloads, alongside a $205 million funding round led by IAG Capital Partners and a strategy collaboration with Qualcomm. The 400 Gbps CN5000 started shipping September 14, with claims of 2x message rate and 35% lower latency compared to other 400 Gbps solutions, and 6x faster collective communications compared to RoCE implementations. The 800 Gbps CN6000 is sampling with customers ahead of Q4 2026 availability, with both products built on open standards: UALink and ESUN for scale-up, Ultra Ethernet for scale-out.</p>
         <p class="edition label"><a href="/archives/2026-09-16.html">Sep 16, 2026 edition</a></p>
       </li>
-      <li class="entry">
-        <p class="meta"><b>TechNode</b> · Sep 9, 2026</p>
-        <h3><a href="https://technode.global/2026/09/09/oracle-hpe-juniper-global-ai-data-center-networking/" target="_blank" rel="noopener" title="Oracle Plans HPE Juniper Rollout Across Global AI Data Centers">Oracle Plans HPE Juniper Rollout Across Global AI Data Centers</a></h3>
-        <p class="summary">Oracle plans to extend HPE Juniper networking across its global AI data centers as OCI superclusters scale. The multiyear deployment covers routing, switching equipment, support services and financing. HPE raised its fiscal 2026 revenue growth forecast to 34%-37% after record quarterly sales driven by AI servers and networking demand.</p>
-        <p class="edition label"><a href="/archives/2026-09-10.html">Sep 10, 2026 edition</a></p>
-      </li>
-      <li class="entry">
-        <p class="meta"><b>NVIDIA Newsroom</b> · Sep 9, 2026</p>
-        <h3><a href="https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference" target="_blank" rel="noopener" title="Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference">Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference</a></h3>
-        <p class="summary">Nvidia announced Rubin CPX, a new GPU class purpose-built for massive-context processing enabling AI systems to handle million-token workloads. The Vera Rubin NVL144 CPX platform delivers 8 exaflops of AI compute with 7.5x more performance than prior GB300 NVL72 systems, plus 100TB of fast memory and 1.7 petabytes per second of memory bandwidth in a single rack.</p>
-        <p class="edition label"><a href="/archives/2026-09-10.html">Sep 10, 2026 edition</a></p>
-      </li>
     </ol>
   </section>
   <section class="paper-section">
-    <div class="section-head"><h2>Coverage history</h2><span class="label">95 earlier stories</span></div>
+    <div class="section-head"><h2>Coverage history</h2><span class="label">97 earlier stories</span></div>
     
-    <h3 class="month label">September 2026 <span class="n">8</span></h3>
+    <h3 class="month label">September 2026 <span class="n">10</span></h3>
     <ul class="history">
+      <li><span class="when">Sep 10</span><a href="https://technode.global/2026/09/09/oracle-hpe-juniper-global-ai-data-center-networking/" target="_blank" rel="noopener" title="Oracle Plans HPE Juniper Rollout Across Global AI Data Centers">Oracle Plans HPE Juniper Rollout Across Global AI Data Centers</a><span class="src">TechNode</span></li>
+      <li><span class="when">Sep 10</span><a href="https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference" target="_blank" rel="noopener" title="Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference">Nvidia Announces Rubin CPX GPU and Vera Rubin NVL144 CPX Platform for Massive-Context Inference</a><span class="src">NVIDIA Newsroom</span></li>
       <li><span class="when">Sep 10</span><a href="https://www.investing.com/news/transcripts/arista-networks-at-goldman-sachs-conference-ai-demand-drives-growth-93CH-4892139" target="_blank" rel="noopener" title="Arista Networks Targets $12.6B 2026 Revenue Amid Record AI Infrastructure Demand">Arista Networks Targets $12.6B 2026 Revenue Amid Record AI Infrastructure Demand</a><span class="src">Investing.com</span></li>
       <li><span class="when">Sep 6</span><a href="https://convergedigest.com/hpe-juniper-ai-infrastructure-networking/" target="_blank" rel="noopener" title="HPE Reports Juniper Networking Orders up 36% as AI Data Center Switching Demand Surges">HPE Reports Juniper Networking Orders up 36% as AI Data Center Switching Demand Surges</a><span class="src">Converge Digest</span></li>
       <li><span class="when">Sep 5</span><a href="https://www.networkworld.com/article/4218314/hpes-record-q3-ai-infrastructure-networking-demand-drives-growth-but-supply-constraints-tap-the-brakes.html" target="_blank" rel="noopener" title="HPE's record Q3 AI infrastructure and networking demand surge with $7.6B AI backlog">HPE's record Q3 AI infrastructure and networking demand surge with $7.6B AI backlog</a><span class="src">Network World</span></li>

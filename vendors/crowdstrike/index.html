@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CrowdStrike — Vendor Radar — Digital Plumber</title>
-<meta name="description" content="CrowdStrike in Digital Plumber's daily briefings: 36 stories, 3 in the last 7 days. Endpoint, cloud and identity security company, best known for its Falcon platform.">
+<meta name="description" content="CrowdStrike in Digital Plumber's daily briefings: 37 stories, 3 in the last 7 days. Endpoint, cloud and identity security company, best known for its Falcon platform.">
 <link rel="canonical" href="https://digitalplumber.ca/vendors/crowdstrike/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Plumber">
 <meta property="og:title" content="CrowdStrike — Vendor Radar — Digital Plumber">
-<meta property="og:description" content="CrowdStrike in Digital Plumber's daily briefings: 36 stories, 3 in the last 7 days. Endpoint, cloud and identity security company, best known for its Falcon platform.">
+<meta property="og:description" content="CrowdStrike in Digital Plumber's daily briefings: 37 stories, 3 in the last 7 days. Endpoint, cloud and identity security company, best known for its Falcon platform.">
 <meta property="og:url" content="https://digitalplumber.ca/vendors/crowdstrike/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -501,80 +527,86 @@
   <h1 class="page-title">CrowdStrike</h1>
   <p class="page-dek">Endpoint, cloud and identity security company, best known for its Falcon platform.</p>
   <div class="stat-row">
-    <div><span class="stat">36</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">37</span><span class="label">stories in the archive</span></div>
     <div><span class="stat">3 </span><span class="label">last 7 days · 3 the 7 before</span></div>
-    <div><span class="stat">12</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">13</span><span class="label">last 30 days</span></div>
     <div><span class="stat">Jun 21</span><span class="label">first covered · 2026</span></div>
   </div>
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 2, 6, 0, 2, 3, 2, 2, 2, 4, 2, 3, 3">
-      <div class="bar-col" title="Week of Jul 4: 2 stories">
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 2, 5, 1, 1, 3, 2, 3, 1, 4, 3, 3, 3">
+      <div class="bar-col" title="Week of Jul 5: 2 stories">
         <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Jul 4</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Jul 11: 6 stories">
-        <span class="bar-n">6</span>
+      <div class="bar-col" title="Week of Jul 12: 5 stories">
+        <span class="bar-n">5</span>
         <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Jul 11</span>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Jul 18: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Jul 18</span>
+      <div class="bar-col" title="Week of Jul 19: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
+        <span class="bar-label">Jul 19</span>
       </div>
-      <div class="bar-col" title="Week of Jul 25: 2 stories">
-        <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Jul 25</span>
+      <div class="bar-col" title="Week of Jul 26: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
+        <span class="bar-label">Jul 26</span>
       </div>
-      <div class="bar-col" title="Week of Aug 1: 3 stories">
+      <div class="bar-col" title="Week of Aug 2: 3 stories">
         <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Aug 1</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Aug 2</span>
       </div>
-      <div class="bar-col" title="Week of Aug 8: 2 stories">
+      <div class="bar-col" title="Week of Aug 9: 2 stories">
         <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Aug 8</span>
+        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
+        <span class="bar-label">Aug 9</span>
       </div>
-      <div class="bar-col" title="Week of Aug 15: 2 stories">
-        <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Aug 15</span>
+      <div class="bar-col" title="Week of Aug 16: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Aug 16</span>
       </div>
-      <div class="bar-col" title="Week of Aug 22: 2 stories">
-        <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Aug 22</span>
+      <div class="bar-col" title="Week of Aug 23: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
+        <span class="bar-label">Aug 23</span>
       </div>
-      <div class="bar-col" title="Week of Aug 29: 4 stories">
+      <div class="bar-col" title="Week of Aug 30: 4 stories">
         <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:67%"></div></div>
-        <span class="bar-label">Aug 29</span>
+        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
+        <span class="bar-label">Aug 30</span>
       </div>
-      <div class="bar-col" title="Week of Sep 5: 2 stories">
-        <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:33%"></div></div>
-        <span class="bar-label">Sep 5</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 12: 3 stories">
+      <div class="bar-col" title="Week of Sep 6: 3 stories">
         <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Sep 12</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Sep 6</span>
       </div>
-      <div class="bar-col" title="Week of Sep 19: 3 stories">
+      <div class="bar-col" title="Week of Sep 13: 3 stories">
         <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Sep 19</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Sep 13</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 20: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>
   <section class="paper-section">
     <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
     <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Business Wire / CrowdStrike</b> · Sep 24, 2026 · <span class="stype">Vendor release</span></p>
+        <h3><a href="https://www.financialcontent.com/article/bizwire-2026-9-24-crowdstrike-named-a-leader-in-proactive-security-platforms-by-independent-research-firm" target="_blank" rel="noopener" title="CrowdStrike Named Leader in The Forrester Wave: Proactive Security Platforms, Q3 2026">CrowdStrike named leader in Forrester proactive security wave</a></h3>
+        <p class="summary">CrowdStrike ranks highest of all vendors in the Strategy category with maximum scores in Innovation and Roadmap. The market has shifted from ASM visibility focus to integrated exposure management prioritization and remediation as frontier AI accelerates exploitation cycles from weeks to hours.</p><p class="why-line"><span class="label">Why it matters</span> Market shift from vulnerability visibility to prioritization-and-remediation integration as frontier AI becomes standard attacker tooling—operations teams must adopt predictive action frameworks rather than reactive detection.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
       <li class="entry">
         <p class="meta"><b>GuruFocus</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
         <h3><a href="https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting" target="_blank" rel="noopener" title="Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security">Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</a></h3>
@@ -629,19 +661,14 @@
         <p class="summary">CrowdStrike introduced Falcon Guardian, a new AI Detection and Response (AIDR) solution delivering complete visibility and runtime enforcement from the endpoint where AI agents execute. Guardian covers the full AI estate—data, models, prompts, agents, identities, infrastructure—with protection extending from endpoint to cloud, SaaS, and browser. The Falcon sensor discovers known and shadow AI agents across Windows and macOS, connecting agent behavior directly to endpoint telemetry to establish causal chains from prompt through to downstream system actions.</p>
         <p class="edition label"><a href="/archives/2026-09-02.html">Sep 2, 2026 edition</a></p>
       </li>
-      <li class="entry">
-        <p class="meta"><b>Investing.com</b> · Sep 1, 2026</p>
-        <h3><a href="https://www.investing.com/news/transcripts/crowdstrike-at-falcon-day-1-ai-defense-moves-to-machine-speed-93CH-4884482" target="_blank" rel="noopener" title="CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances">CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances</a></h3>
-        <p class="summary">CrowdStrike used Fal.Con 2026 opening to argue cybersecurity has entered a new phase defined by autonomous AI agents, faster attacks, and shrinking response windows. CEO George Kurtz stated the old threat pyramid has been obliterated as frontier AI spreads beyond nation-states. CrowdStrike announced new tools, a research lab, and alliances with NVIDIA, Intel, and OpenAI to give defenders machine-speed capabilities matching attackers. Falcon IQ, powered by NVIDIA Nemotron and Charlotte AI AgentWorks, brings workflow automation to secure frontier AI risk.</p>
-        <p class="edition label"><a href="/archives/2026-09-02.html">Sep 2, 2026 edition</a></p>
-      </li>
     </ol>
   </section>
   <section class="paper-section">
-    <div class="section-head"><h2>Coverage history</h2><span class="label">26 earlier stories</span></div>
+    <div class="section-head"><h2>Coverage history</h2><span class="label">27 earlier stories</span></div>
     
-    <h3 class="month label">September 2026 <span class="n">2</span></h3>
+    <h3 class="month label">September 2026 <span class="n">3</span></h3>
     <ul class="history">
+      <li><span class="when">Sep 2</span><a href="https://www.investing.com/news/transcripts/crowdstrike-at-falcon-day-1-ai-defense-moves-to-machine-speed-93CH-4884482" target="_blank" rel="noopener" title="CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances">CrowdStrike at Fal.Con Day 1: AI Defense Moves to Machine Speed with Ecosystem Alliances</a><span class="src">Investing.com</span></li>
       <li><span class="when">Sep 2</span><a href="https://securityboulevard.com/2026/09/crowdstrike-adds-platform-to-secure-ai-agents-running-on-endpoints/" target="_blank" rel="noopener" title="CrowdStrike Adds Runtime Security Platform for AI Agents at the Endpoint">CrowdStrike Adds Runtime Security Platform for AI Agents at the Endpoint</a><span class="src">Security Boulevard</span></li>
       <li><span class="when">Sep 2</span><a href="https://aiagentstore.ai/ai-agent-news/daily/2026-09-01" target="_blank" rel="noopener" title="CrowdStrike Launches AI Partner Specialization with Verified Agent Certification for Production Deployment">CrowdStrike Launches AI Partner Specialization with Verified Agent Certification for Production Deployment</a><span class="src">AI Agent Store</span></li>
     </ul>

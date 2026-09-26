@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agentic AI &amp; MCP — Topics — Digital Plumber</title>
-<meta name="description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 185 stories, 12 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
+<meta name="description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 187 stories, 13 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
 <link rel="canonical" href="https://digitalplumber.ca/topics/agentic-ai/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Plumber">
 <meta property="og:title" content="Agentic AI &amp; MCP — Topics — Digital Plumber">
-<meta property="og:description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 185 stories, 12 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
+<meta property="og:description" content="Agentic AI &amp; MCP in Digital Plumber's daily briefings: 187 stories, 13 in the last 7 days. AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.">
 <meta property="og:url" content="https://digitalplumber.ca/topics/agentic-ai/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -501,80 +527,92 @@
   <h1 class="page-title">Agentic AI &amp; MCP</h1>
   <p class="page-dek">AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.</p>
   <div class="stat-row">
-    <div><span class="stat">185</span><span class="label">stories in the archive</span></div>
-    <div><span class="stat">12 <span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span></span><span class="label">last 7 days · 9 the 7 before</span></div>
-    <div><span class="stat">46</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">187</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">13 <span class="trend up" title="Up from 10 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 10</span></span></span><span class="label">last 7 days · 10 the 7 before</span></div>
+    <div><span class="stat">45</span><span class="label">last 30 days</span></div>
     <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
   </div>
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 25, 10, 8, 12, 11, 8, 7, 11, 9, 12, 9, 12">
-      <div class="bar-col" title="Week of Jul 4: 25 stories">
-        <span class="bar-n">25</span>
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 19, 11, 8, 11, 12, 8, 7, 9, 12, 9, 10, 13">
+      <div class="bar-col" title="Week of Jul 5: 19 stories">
+        <span class="bar-n">19</span>
         <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Jul 4</span>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Jul 11: 10 stories">
-        <span class="bar-n">10</span>
-        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
-        <span class="bar-label">Jul 11</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 18: 8 stories">
-        <span class="bar-n">8</span>
-        <div class="bar-track"><div class="bar" style="height:32%"></div></div>
-        <span class="bar-label">Jul 18</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 25: 12 stories">
-        <span class="bar-n">12</span>
-        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
-        <span class="bar-label">Jul 25</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 1: 11 stories">
+      <div class="bar-col" title="Week of Jul 12: 11 stories">
         <span class="bar-n">11</span>
-        <div class="bar-track"><div class="bar" style="height:44%"></div></div>
-        <span class="bar-label">Aug 1</span>
+        <div class="bar-track"><div class="bar" style="height:58%"></div></div>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Aug 8: 8 stories">
+      <div class="bar-col" title="Week of Jul 19: 8 stories">
         <span class="bar-n">8</span>
-        <div class="bar-track"><div class="bar" style="height:32%"></div></div>
-        <span class="bar-label">Aug 8</span>
+        <div class="bar-track"><div class="bar" style="height:42%"></div></div>
+        <span class="bar-label">Jul 19</span>
       </div>
-      <div class="bar-col" title="Week of Aug 15: 7 stories">
+      <div class="bar-col" title="Week of Jul 26: 11 stories">
+        <span class="bar-n">11</span>
+        <div class="bar-track"><div class="bar" style="height:58%"></div></div>
+        <span class="bar-label">Jul 26</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 2: 12 stories">
+        <span class="bar-n">12</span>
+        <div class="bar-track"><div class="bar" style="height:63%"></div></div>
+        <span class="bar-label">Aug 2</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 9: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:42%"></div></div>
+        <span class="bar-label">Aug 9</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 16: 7 stories">
         <span class="bar-n">7</span>
-        <div class="bar-track"><div class="bar" style="height:28%"></div></div>
-        <span class="bar-label">Aug 15</span>
+        <div class="bar-track"><div class="bar" style="height:37%"></div></div>
+        <span class="bar-label">Aug 16</span>
       </div>
-      <div class="bar-col" title="Week of Aug 22: 11 stories">
-        <span class="bar-n">11</span>
-        <div class="bar-track"><div class="bar" style="height:44%"></div></div>
-        <span class="bar-label">Aug 22</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 29: 9 stories">
+      <div class="bar-col" title="Week of Aug 23: 9 stories">
         <span class="bar-n">9</span>
-        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
-        <span class="bar-label">Aug 29</span>
+        <div class="bar-track"><div class="bar" style="height:47%"></div></div>
+        <span class="bar-label">Aug 23</span>
       </div>
-      <div class="bar-col" title="Week of Sep 5: 12 stories">
+      <div class="bar-col" title="Week of Aug 30: 12 stories">
         <span class="bar-n">12</span>
-        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
-        <span class="bar-label">Sep 5</span>
+        <div class="bar-track"><div class="bar" style="height:63%"></div></div>
+        <span class="bar-label">Aug 30</span>
       </div>
-      <div class="bar-col" title="Week of Sep 12: 9 stories">
+      <div class="bar-col" title="Week of Sep 6: 9 stories">
         <span class="bar-n">9</span>
-        <div class="bar-track"><div class="bar" style="height:36%"></div></div>
-        <span class="bar-label">Sep 12</span>
+        <div class="bar-track"><div class="bar" style="height:47%"></div></div>
+        <span class="bar-label">Sep 6</span>
       </div>
-      <div class="bar-col" title="Week of Sep 19: 12 stories">
-        <span class="bar-n">12</span>
-        <div class="bar-track"><div class="bar" style="height:48%"></div></div>
-        <span class="bar-label">Sep 19</span>
+      <div class="bar-col" title="Week of Sep 13: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:53%"></div></div>
+        <span class="bar-label">Sep 13</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 20: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:68%"></div></div>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>
   <section class="paper-section">
     <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
     <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Anthropic</b> · Sep 25, 2026 · <span class="stype">Primary source</span></p>
+        <h3><a href="https://claude.com/blog/build-plugins-for-claude" target="_blank" rel="noopener" title="Claude plugin directory launches with submission portal, analytics, and enterprise managed auth support">Anthropic opens Claude plugin directory for MCP connectors</a></h3>
+        <p class="summary">Anthropic launched a Claude plugin directory with developer submission portal, enabling developers to submit MCP connectors and Agent Skills for discovery and monetization. Plugins package MCP connectors, Agent Skills, or both as the main way to build third-party extensions for Claude.</p><p class="why-line"><span class="label">Why it matters</span> Developers can now distribute MCP-based agent integrations at scale through a curated marketplace, reducing friction in building and deploying production-grade agentic applications connected to enterprise systems.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>Network World</b> · Sep 23, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.networkworld.com/article/4225341/80-of-network-pros-are-ok-with-giving-ai-an-autonomous-role-in-network-operations.html" target="_blank" rel="noopener" title="Network World: 80% of network ops professionals comfortable with autonomous AI roles in production">Most network ops leaders would give AI autonomous control</a></h3>
+        <p class="summary">Cisco and Omdia survey of 1,000 IT and network operations leaders finds 51% already use agentic AI tools in production for real-time corrective action, and 84% expect to reach a fully AI-led operating model within twelve months. 80% are comfortable granting AI high or fully autonomous roles.</p><p class="why-line"><span class="label">Why it matters</span> 24% are comfortable with AI taking network actions with no human oversight; adoption velocity and autonomy comfort are shifting faster than governance frameworks can catch up, creating operational risk across large-scale networks.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
       <li class="entry">
         <p class="meta"><b>Help Net Security</b> · Sep 25, 2026 · <span class="stype">Industry news</span></p>
         <h3><a href="https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/" target="_blank" rel="noopener" title="Ping Identity, Cohesity, Dataminr ship agent-specific IAM, resilience, and governance controls">Vendors ship identity and backup controls built for AI agents</a></h3>
@@ -623,25 +661,15 @@
         <p class="summary">Selector introduced Selector Foundry, a development and runtime environment enabling network operations teams to build, test, version and govern their own AI agents where telemetry is correlated and stored in Git. Before promotion to production, agents are replayed against historical incident data for pass/fail validation against actual past outcomes.</p>
         <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
       </li>
-      <li class="entry">
-        <p class="meta"><b>Cisco Blogs</b> · Sep 22, 2026 · <span class="stype">Industry news</span></p>
-        <h3><a href="https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one" target="_blank" rel="noopener" title="Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation">Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</a></h3>
-        <p class="summary">Cisco posted that the AI shift is raising stakes on both network security and availability, as every AI agent and AI-powered experience depends on the network while attackers use AI to find vulnerabilities faster and distributed workloads create more paths to protect. Network assessment and response at machine speed is now a core operational constraint.</p>
-        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
-      </li>
-      <li class="entry">
-        <p class="meta"><b>Luca Berton Blog</b> · Sep 20, 2026</p>
-        <h3><a href="https://lucaberton.com/blog/agntcon-mcpcon-europe-2026-recap-agents-in-production/" target="_blank" rel="noopener" title="AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption">AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption</a></h3>
-        <p class="summary">Post-conference analysis from AGNTCon + MCPCon Europe (Sept 17-18, Amsterdam) showing 81% of practitioners have agents in production, MCP adoption at 89%, and AGENTS.md reaching 60k repositories. The conversation has definitively shifted from demos to production reliability and operational governance.</p>
-        <p class="edition label"><a href="/archives/2026-09-21.html">Sep 21, 2026 edition</a></p>
-      </li>
     </ol>
   </section>
   <section class="paper-section">
-    <div class="section-head"><h2>Coverage history</h2><span class="label">175 earlier stories</span></div>
+    <div class="section-head"><h2>Coverage history</h2><span class="label">177 earlier stories</span></div>
     
-    <h3 class="month label">September 2026 <span class="n">31</span></h3>
+    <h3 class="month label">September 2026 <span class="n">33</span></h3>
     <ul class="history">
+      <li><span class="when">Sep 22</span><a href="https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one" target="_blank" rel="noopener" title="Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation">Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</a><span class="src">Cisco Blogs</span></li>
+      <li><span class="when">Sep 21</span><a href="https://lucaberton.com/blog/agntcon-mcpcon-europe-2026-recap-agents-in-production/" target="_blank" rel="noopener" title="AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption">AGNTCon + MCPCon Europe 2026 Recap: Agents in Production, MCP at 89% Adoption</a><span class="src">Luca Berton Blog</span></li>
       <li><span class="when">Sep 21</span><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-september-20-2026" target="_blank" rel="noopener" title="Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM">Google Expands AI Agent Development Tools: On-Device and Hybrid AI for Android and JVM</a><span class="src">AI Agents News Brief</span></li>
       <li><span class="when">Sep 19</span><a href="https://ai-agent-engineering.org/news/the-2026-mcp-roadmap-from-tool-integration-to-agent-to-agent-communication" target="_blank" rel="noopener" title="MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams">MCP 2026 Roadmap Update: Agent-to-Agent Communication and Enterprise Identity Workstreams</a><span class="src">AI Agent Engineering</span></li>
       <li><span class="when">Sep 18</span><a href="https://moorinsightsstrategy.com/field-notes/at-dreamforce-2026-salesforce-goes-all-in-on-agentic-ai/" target="_blank" rel="noopener" title="Salesforce Pivots to Agentic Strategy with AIforce, Claudeforce Partnership at Dreamforce 2026">Salesforce Pivots to Agentic Strategy with AIforce, Claudeforce Partnership at Dreamforce 2026</a><span class="src">Moor Insights &amp; Strategy</span></li>

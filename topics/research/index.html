@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research, Standards &amp; Industry — Topics — Digital Plumber</title>
-<meta name="description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 161 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
+<meta name="description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 163 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
 <link rel="canonical" href="https://digitalplumber.ca/topics/research/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Plumber">
 <meta property="og:title" content="Research, Standards &amp; Industry — Topics — Digital Plumber">
-<meta property="og:description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 161 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
+<meta property="og:description" content="Research, Standards &amp; Industry in Digital Plumber's daily briefings: 163 stories, 12 in the last 7 days. Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.">
 <meta property="og:url" content="https://digitalplumber.ca/topics/research/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -501,80 +527,92 @@
   <h1 class="page-title">Research, Standards &amp; Industry</h1>
   <p class="page-dek">Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.</p>
   <div class="stat-row">
-    <div><span class="stat">161</span><span class="label">stories in the archive</span></div>
-    <div><span class="stat">12 <span class="trend down" title="Down from 16 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 16</span></span></span><span class="label">last 7 days · 16 the 7 before</span></div>
+    <div><span class="stat">163</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">12 <span class="trend down" title="Down from 17 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 17</span></span></span><span class="label">last 7 days · 17 the 7 before</span></div>
     <div><span class="stat">56</span><span class="label">last 30 days</span></div>
     <div><span class="stat">Jun 19</span><span class="label">first covered · 2026</span></div>
   </div>
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 12, 6, 13, 13, 10, 5, 7, 14, 17, 7, 16, 12">
-      <div class="bar-col" title="Week of Jul 4: 12 stories">
-        <span class="bar-n">12</span>
-        <div class="bar-track"><div class="bar" style="height:71%"></div></div>
-        <span class="bar-label">Jul 4</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 11: 6 stories">
-        <span class="bar-n">6</span>
-        <div class="bar-track"><div class="bar" style="height:35%"></div></div>
-        <span class="bar-label">Jul 11</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 18: 13 stories">
-        <span class="bar-n">13</span>
-        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
-        <span class="bar-label">Jul 18</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 25: 13 stories">
-        <span class="bar-n">13</span>
-        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
-        <span class="bar-label">Jul 25</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 1: 10 stories">
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 10, 6, 13, 14, 10, 4, 10, 13, 15, 8, 17, 12">
+      <div class="bar-col" title="Week of Jul 5: 10 stories">
         <span class="bar-n">10</span>
         <div class="bar-track"><div class="bar" style="height:59%"></div></div>
-        <span class="bar-label">Aug 1</span>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Aug 8: 5 stories">
-        <span class="bar-n">5</span>
-        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
-        <span class="bar-label">Aug 8</span>
+      <div class="bar-col" title="Week of Jul 12: 6 stories">
+        <span class="bar-n">6</span>
+        <div class="bar-track"><div class="bar" style="height:35%"></div></div>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Aug 15: 7 stories">
-        <span class="bar-n">7</span>
-        <div class="bar-track"><div class="bar" style="height:41%"></div></div>
-        <span class="bar-label">Aug 15</span>
+      <div class="bar-col" title="Week of Jul 19: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
+        <span class="bar-label">Jul 19</span>
       </div>
-      <div class="bar-col" title="Week of Aug 22: 14 stories">
+      <div class="bar-col" title="Week of Jul 26: 14 stories">
         <span class="bar-n">14</span>
         <div class="bar-track"><div class="bar" style="height:82%"></div></div>
-        <span class="bar-label">Aug 22</span>
+        <span class="bar-label">Jul 26</span>
       </div>
-      <div class="bar-col" title="Week of Aug 29: 17 stories">
+      <div class="bar-col" title="Week of Aug 2: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:59%"></div></div>
+        <span class="bar-label">Aug 2</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 9: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:24%"></div></div>
+        <span class="bar-label">Aug 9</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 16: 10 stories">
+        <span class="bar-n">10</span>
+        <div class="bar-track"><div class="bar" style="height:59%"></div></div>
+        <span class="bar-label">Aug 16</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 23: 13 stories">
+        <span class="bar-n">13</span>
+        <div class="bar-track"><div class="bar" style="height:76%"></div></div>
+        <span class="bar-label">Aug 23</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 30: 15 stories">
+        <span class="bar-n">15</span>
+        <div class="bar-track"><div class="bar" style="height:88%"></div></div>
+        <span class="bar-label">Aug 30</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 6: 8 stories">
+        <span class="bar-n">8</span>
+        <div class="bar-track"><div class="bar" style="height:47%"></div></div>
+        <span class="bar-label">Sep 6</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 13: 17 stories">
         <span class="bar-n">17</span>
         <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Aug 29</span>
+        <span class="bar-label">Sep 13</span>
       </div>
-      <div class="bar-col" title="Week of Sep 5: 7 stories">
-        <span class="bar-n">7</span>
-        <div class="bar-track"><div class="bar" style="height:41%"></div></div>
-        <span class="bar-label">Sep 5</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 12: 16 stories">
-        <span class="bar-n">16</span>
-        <div class="bar-track"><div class="bar" style="height:94%"></div></div>
-        <span class="bar-label">Sep 12</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 19: 12 stories">
+      <div class="bar-col" title="Week of Sep 20: 12 stories">
         <span class="bar-n">12</span>
         <div class="bar-track"><div class="bar" style="height:71%"></div></div>
-        <span class="bar-label">Sep 19</span>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>
   <section class="paper-section">
     <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
     <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>arXiv cs.NI</b> · Sep 23, 2026 · <span class="stype">Research</span></p>
+        <h3><a href="https://arxiv.org/list/cs.NI/2026-09" target="_blank" rel="noopener" title="Agents That Model Agents: Five Principles Toward a Theory of Mind for 6G Networks">Paper sets five principles for 6G multi-agent coordination</a></h3>
+        <p class="summary">Research paper presents five principles for multi-agent coordination in 6G networks, addressing how agentic AI systems model each other's beliefs and actions to enable autonomous, stable network control across distributed RAN and core network elements.</p><p class="why-line"><span class="label">Why it matters</span> As 6G networks evolve toward intent-based control with multiple autonomous agents managing different segments, formal frameworks for agent-agent modeling prevent emergent failures, control oscillations, and coordination deadlocks.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>arXiv cs.NI</b> · Sep 24, 2026 · <span class="stype">Research</span></p>
+        <h3><a href="https://arxiv.org/pdf/2609.09849" target="_blank" rel="noopener" title="Can AI Agents Detect and Repair Artifact Drift in Network Experiments?">NetAgentBench tests AI agents on network configuration drift</a></h3>
+        <p class="summary">Research examines whether AI agents can autonomously detect and repair configuration drift in network experiments, introducing NetAgentBench—a state-centric benchmark for evaluating agentic network configuration management.</p><p class="why-line"><span class="label">Why it matters</span> Network experiments suffer from silent configuration drift that invalidates results; agentic systems that autonomously detect and correct drift reduce manual validation overhead and improve reproducibility for research and production SRE testbeds.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
       <li class="entry">
         <p class="meta"><b>Dataiku</b> · Sep 24, 2026 · <span class="stype">Vendor release</span></p>
         <h3><a href="https://www.dataiku.com/company/news/dataiku-agent-management-general-availability" target="_blank" rel="noopener" title="Dataiku Launches Agent Management for Cross-Platform AI Agent Inventory and Governance">Dataiku tool inventories AI agents across rival platforms</a></h3>
@@ -623,25 +661,15 @@
         <p class="summary">OpenAI released GPT-6 Sol on September 22, 2026, a same-day cost-efficiency release designed for complex coding and agentic workflows. Pricing: $2/1M input, $10/1M output tokens. Features: 1.05M context window, structured outputs, function calling, web search, code interpreter, computer use, MCP support, and prompt caching.</p>
         <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
       </li>
-      <li class="entry">
-        <p class="meta"><b>Anthropic / Featherbench</b> · Sep 22, 2026 · <span class="stype">Vendor release</span></p>
-        <h3><a href="https://github.com/ed-is-ai/featherbench/issues/74" target="_blank" rel="noopener" title="Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks">Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</a></h3>
-        <p class="summary">Anthropic released Claude Opus 5.5 on September 22, 2026, a frontier model for long-running agentic coding and knowledge work. Available via Claude API and partners (Amazon Bedrock, Google Cloud, Microsoft Foundry). Pricing: $4/1M input, $20/1M output; cache: $0.20 cached input, $5/$8 per 1M for 5-min/1-hour cache writes.</p>
-        <p class="edition label"><a href="/archives/2026-09-22.html">Sep 22, 2026 edition</a></p>
-      </li>
-      <li class="entry">
-        <p class="meta"><b>Stripe Engineering Blog</b> · Sep 18, 2026</p>
-        <h3><a href="https://stripe.dev/blog" target="_blank" rel="noopener" title="Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs">Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs</a></h3>
-        <p class="summary">Stripe released next-generation reporting APIs focused on enterprise scalability, enabling custom financial reconciliation workflows. The update targets organizations running AI-native payments infrastructure and needing programmatic access to real-time transaction and settlement data.</p>
-        <p class="edition label"><a href="/archives/2026-09-20.html">Sep 20, 2026 edition</a></p>
-      </li>
     </ol>
   </section>
   <section class="paper-section">
-    <div class="section-head"><h2>Coverage history</h2><span class="label">151 earlier stories</span></div>
+    <div class="section-head"><h2>Coverage history</h2><span class="label">153 earlier stories</span></div>
     
-    <h3 class="month label">September 2026 <span class="n">37</span></h3>
+    <h3 class="month label">September 2026 <span class="n">39</span></h3>
     <ul class="history">
+      <li><span class="when">Sep 22</span><a href="https://github.com/ed-is-ai/featherbench/issues/74" target="_blank" rel="noopener" title="Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks">Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</a><span class="src">Anthropic / Featherbench</span></li>
+      <li><span class="when">Sep 20</span><a href="https://stripe.dev/blog" target="_blank" rel="noopener" title="Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs">Stripe Launches Custom Financial Reconciliation Workflows with Enterprise-Grade Reporting APIs</a><span class="src">Stripe Engineering Blog</span></li>
       <li><span class="when">Sep 19</span><a href="https://github.com/open-telemetry/opentelemetry-collector-releases/releases" target="_blank" rel="noopener" title="OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry">OpenTelemetry Collector v0.161.0 Released with K8s Attributes Processor v1 and Oracle Enhanced Telemetry</a><span class="src">GitHub (opentelemetry-collector-releases)</span></li>
       <li><span class="when">Sep 19</span><a href="https://trewknowledge.com/2026/09/18/ai-this-week-the-infrastructure-around-ai-gets-serious/" target="_blank" rel="noopener" title="OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers">OpenAI Launches Agents API in Public Beta—Production Agent Harness Now Available to Developers</a><span class="src">TrewKnowledge</span></li>
       <li><span class="when">Sep 18</span><a href="https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/" target="_blank" rel="noopener" title="Google DeepMind launches institute for AGI safety debate with model transparency framework">Google DeepMind launches institute for AGI safety debate with model transparency framework</a><span class="src">TechCrunch</span></li>

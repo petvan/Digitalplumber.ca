@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cisco — Vendor Radar — Digital Plumber</title>
-<meta name="description" content="Cisco in Digital Plumber's daily briefings: 52 stories, 5 in the last 7 days. Networking, security and observability company, including Splunk and ThousandEyes.">
+<meta name="description" content="Cisco in Digital Plumber's daily briefings: 54 stories, 7 in the last 7 days. Networking, security and observability company, including Splunk and ThousandEyes.">
 <link rel="canonical" href="https://digitalplumber.ca/vendors/cisco/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Digital Plumber">
 <meta property="og:title" content="Cisco — Vendor Radar — Digital Plumber">
-<meta property="og:description" content="Cisco in Digital Plumber's daily briefings: 52 stories, 5 in the last 7 days. Networking, security and observability company, including Splunk and ThousandEyes.">
+<meta property="og:description" content="Cisco in Digital Plumber's daily briefings: 54 stories, 7 in the last 7 days. Networking, security and observability company, including Splunk and ThousandEyes.">
 <meta property="og:url" content="https://digitalplumber.ca/vendors/cisco/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -501,80 +527,92 @@
   <h1 class="page-title">Cisco</h1>
   <p class="page-dek">Networking, security and observability company, including Splunk and ThousandEyes.</p>
   <div class="stat-row">
-    <div><span class="stat">52</span><span class="label">stories in the archive</span></div>
-    <div><span class="stat">5 <span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span><span class="label">last 7 days · 0 the 7 before</span></div>
-    <div><span class="stat">12</span><span class="label">last 30 days</span></div>
+    <div><span class="stat">54</span><span class="label">stories in the archive</span></div>
+    <div><span class="stat">7 <span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span><span class="label">last 7 days · 0 the 7 before</span></div>
+    <div><span class="stat">14</span><span class="label">last 30 days</span></div>
     <div><span class="stat">Jun 11</span><span class="label">first covered · 2026</span></div>
   </div>
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 5, 1, 0, 4, 2, 0, 4, 3, 4, 3, 0, 5">
-      <div class="bar-col" title="Week of Jul 4: 5 stories">
-        <span class="bar-n">5</span>
-        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Jul 4</span>
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 3, 1, 2, 2, 2, 2, 3, 4, 2, 3, 0, 7">
+      <div class="bar-col" title="Week of Jul 5: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Jul 11: 1 story">
+      <div class="bar-col" title="Week of Jul 12: 1 story">
         <span class="bar-n">1</span>
-        <div class="bar-track"><div class="bar" style="height:20%"></div></div>
-        <span class="bar-label">Jul 11</span>
+        <div class="bar-track"><div class="bar" style="height:14%"></div></div>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Jul 18: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Jul 18</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 25: 4 stories">
-        <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
-        <span class="bar-label">Jul 25</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 1: 2 stories">
+      <div class="bar-col" title="Week of Jul 19: 2 stories">
         <span class="bar-n">2</span>
-        <div class="bar-track"><div class="bar" style="height:40%"></div></div>
-        <span class="bar-label">Aug 1</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Jul 19</span>
       </div>
-      <div class="bar-col" title="Week of Aug 8: 0 stories">
+      <div class="bar-col" title="Week of Jul 26: 2 stories">
+        <span class="bar-n">2</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Jul 26</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 2: 2 stories">
+        <span class="bar-n">2</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Aug 2</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 9: 2 stories">
+        <span class="bar-n">2</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Aug 9</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 16: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Aug 16</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 23: 4 stories">
+        <span class="bar-n">4</span>
+        <div class="bar-track"><div class="bar" style="height:57%"></div></div>
+        <span class="bar-label">Aug 23</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 30: 2 stories">
+        <span class="bar-n">2</span>
+        <div class="bar-track"><div class="bar" style="height:29%"></div></div>
+        <span class="bar-label">Aug 30</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 6: 3 stories">
+        <span class="bar-n">3</span>
+        <div class="bar-track"><div class="bar" style="height:43%"></div></div>
+        <span class="bar-label">Sep 6</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 13: 0 stories">
         <span class="bar-n"></span>
         <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Aug 8</span>
+        <span class="bar-label">Sep 13</span>
       </div>
-      <div class="bar-col" title="Week of Aug 15: 4 stories">
-        <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
-        <span class="bar-label">Aug 15</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 22: 3 stories">
-        <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
-        <span class="bar-label">Aug 22</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 29: 4 stories">
-        <span class="bar-n">4</span>
-        <div class="bar-track"><div class="bar" style="height:80%"></div></div>
-        <span class="bar-label">Aug 29</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 5: 3 stories">
-        <span class="bar-n">3</span>
-        <div class="bar-track"><div class="bar" style="height:60%"></div></div>
-        <span class="bar-label">Sep 5</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 12: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Sep 12</span>
-      </div>
-      <div class="bar-col" title="Week of Sep 19: 5 stories">
-        <span class="bar-n">5</span>
+      <div class="bar-col" title="Week of Sep 20: 7 stories">
+        <span class="bar-n">7</span>
         <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Sep 19</span>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>
   <section class="paper-section">
     <div class="section-head"><h2>Latest stories</h2><span class="label">10 most recent</span></div>
     <ol class="entry-list">
+      <li class="entry">
+        <p class="meta"><b>Network World</b> · Sep 23, 2026 · <span class="stype">Industry news</span></p>
+        <h3><a href="https://www.networkworld.com/article/4225341/80-of-network-pros-are-ok-with-giving-ai-an-autonomous-role-in-network-operations.html" target="_blank" rel="noopener" title="Network World: 80% of network ops professionals comfortable with autonomous AI roles in production">Most network ops leaders would give AI autonomous control</a></h3>
+        <p class="summary">Cisco and Omdia survey of 1,000 IT and network operations leaders finds 51% already use agentic AI tools in production for real-time corrective action, and 84% expect to reach a fully AI-led operating model within twelve months. 80% are comfortable granting AI high or fully autonomous roles.</p><p class="why-line"><span class="label">Why it matters</span> 24% are comfortable with AI taking network actions with no human oversight; adoption velocity and autonomy comfort are shifting faster than governance frameworks can catch up, creating operational risk across large-scale networks.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
+      <li class="entry">
+        <p class="meta"><b>24/7 Wall St.</b> · Sep 23, 2026 · <span class="stype">Analysis</span></p>
+        <h3><a href="https://247wallst.com/investing/2026/09/23/while-gpus-get-the-headlines-these-3-stocks-build-the-networks-that-actually-move-data/" target="_blank" rel="noopener" title="Network Fabric Becomes the Binding Constraint on GPU Utilization, Not Compute Itself">Network fabric, not GPUs, now limits AI cluster utilisation</a></h3>
+        <p class="summary">Analysis reveals hyperscalers are shifting capex priorities from GPU compute to networking fabric. Cisco booked $9.3B in AI infrastructure orders in FY2026, driving a &quot;networking supercycle&quot; because multi-datacenter clusters require fiber, switches, and coherent optics to prevent idle GPU cycles.</p><p class="why-line"><span class="label">Why it matters</span> Network engineering has become the critical bottleneck for GPU utilization; capex allocation decisions now depend on fabric design rather than silicon procurement—a fundamental shift in infrastructure investment strategy.</p>
+        <p class="edition label"><a href="/archives/2026-09-26.html">Sep 26, 2026 edition</a></p>
+      </li>
       <li class="entry">
         <p class="meta"><b>Cisco Newsroom / Light Reading</b> · Sep 23, 2026 · <span class="stype">Research</span></p>
         <h3><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html" target="_blank" rel="noopener" title="Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps">Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</a></h3>
@@ -623,25 +661,18 @@
         <p class="summary">Nine vulnerabilities show confirmed active exploitation on September 10, concentrating in Citrix NetScaler ADC, Cisco Secure Firewall Management Center, Fortinet FortiOS, Check Point Quantum Security Gateway, and N-able N-central. Critical remote-exploitation flaws in centralized management and remote access infrastructure require immediate administrative interface isolation pending patches.</p>
         <p class="edition label"><a href="/archives/2026-09-10.html">Sep 10, 2026 edition</a></p>
       </li>
-      <li class="entry">
-        <p class="meta"><b>The Hacker News</b> · Sep 3, 2026</p>
-        <h3><a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" target="_blank" rel="noopener" title="Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days">Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days</a></h3>
-        <p class="summary">Cisco disclosed a critical Nexus 9000 vulnerability allowing unauthenticated remote code execution. The September 2 release represents the third hardening drop in 30 days across Nexus, IOS XE, Catalyst SD-WAN, Crosswork, and Secure Workload—indicating sustained pressure on network operations teams managing infrastructure security updates.</p>
-        <p class="edition label"><a href="/archives/2026-09-04.html">Sep 4, 2026 edition</a></p>
-      </li>
-      <li class="entry">
-        <p class="meta"><b>Solutions Review</b> · Aug 28, 2026</p>
-        <h3><a href="https://solutionsreview.com/ai-news-for-the-week-of-august-28-updates-from-cisco-google-cloud-nutanix-more/" target="_blank" rel="noopener" title="Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture">Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture</a></h3>
-        <p class="summary">Cisco is expanding its Secure AI Factory partnership with NVIDIA to deliver rack-scale, liquid-cooled AI infrastructure integrated with Supermicro systems. The announcement includes Cisco Validated Infrastructure Services (CVIS) for end-to-end solution design validation aligned with NVIDIA's NVIS methodology, making Cisco the first NVIDIA Cloud Partner to deliver a reference architecture spanning both Cisco Silicon One and NVIDIA Spectrum-X Ethernet switch silicon.</p>
-        <p class="edition label"><a href="/archives/2026-08-30.html">Aug 30, 2026 edition</a></p>
-      </li>
     </ol>
   </section>
   <section class="paper-section">
-    <div class="section-head"><h2>Coverage history</h2><span class="label">42 earlier stories</span></div>
+    <div class="section-head"><h2>Coverage history</h2><span class="label">44 earlier stories</span></div>
     
-    <h3 class="month label">August 2026 <span class="n">11</span></h3>
+    <h3 class="month label">September 2026 <span class="n">1</span></h3>
     <ul class="history">
+      <li><span class="when">Sep 4</span><a href="https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html" target="_blank" rel="noopener" title="Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days">Cisco Nexus 9000 Critical Unauthenticated RCE with Three Hardening Drops in 30 Days</a><span class="src">The Hacker News</span></li>
+    </ul>
+    <h3 class="month label">August 2026 <span class="n">12</span></h3>
+    <ul class="history">
+      <li><span class="when">Aug 30</span><a href="https://solutionsreview.com/ai-news-for-the-week-of-august-28-updates-from-cisco-google-cloud-nutanix-more/" target="_blank" rel="noopener" title="Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture">Cisco Expands Secure AI Factory with NVIDIA to Rack-Scale, Liquid-Cooled Architecture</a><span class="src">Solutions Review</span></li>
       <li><span class="when">Aug 29</span><a href="https://www.cisco.com/site/us/en/solutions/data-center/stack-automation-quali/index.html" target="_blank" rel="noopener" title="Cisco Stack Automation by Quali — Software-Only Release Targeted for August 2026">Cisco Stack Automation by Quali — Software-Only Release Targeted for August 2026</a><span class="src">Cisco</span></li>
       <li><span class="when">Aug 29</span><a href="https://siliconangle.com/2026/08/26/the-network-becomes-the-computer-as-cisco-and-nvidia-accelerate-ai-factory-rack-scale-cisconvidiaaifactory/" target="_blank" rel="noopener" title="The Network Becomes the Computer: Cisco-NVIDIA Shift Signals Move From GPU Acquisition to AI Production Cycle">The Network Becomes the Computer: Cisco-NVIDIA Shift Signals Move From GPU Acquisition to AI Production Cycle</a><span class="src">SiliconANGLE</span></li>
       <li><span class="when">Aug 26</span><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m08/cisco-secure-ai-factory-nvidia-rack-scale.html" target="_blank" rel="noopener" title="Cisco Expands Secure AI Factory with NVIDIA for Rack-Scale Architecture with Supermicro Partnership">Cisco Expands Secure AI Factory with NVIDIA for Rack-Scale Architecture with Supermicro Partnership</a><span class="src">Cisco Newsroom</span></li>

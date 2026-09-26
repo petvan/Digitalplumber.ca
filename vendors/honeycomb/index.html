@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -509,66 +535,66 @@
   <section class="paper-section">
     <div class="section-head"><h2>Recent activity</h2><span class="label">Stories per week</span></div>
     
-    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 0">
-      <div class="bar-col" title="Week of Jul 4: 1 story">
+    <div class="activity" role="img" aria-label="Stories per week over the last 12 weeks, oldest first: 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0">
+      <div class="bar-col" title="Week of Jul 5: 1 story">
         <span class="bar-n">1</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Jul 4</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 11: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Jul 11</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 18: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Jul 18</span>
-      </div>
-      <div class="bar-col" title="Week of Jul 25: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Jul 25</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 1: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Aug 1</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 8: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Aug 8</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 15: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Aug 15</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 22: 0 stories">
-        <span class="bar-n"></span>
-        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Aug 22</span>
-      </div>
-      <div class="bar-col" title="Week of Aug 29: 2 stories">
-        <span class="bar-n">2</span>
         <div class="bar-track"><div class="bar" style="height:100%"></div></div>
-        <span class="bar-label">Aug 29</span>
+        <span class="bar-label">Jul 5</span>
       </div>
-      <div class="bar-col" title="Week of Sep 5: 0 stories">
+      <div class="bar-col" title="Week of Jul 12: 0 stories">
         <span class="bar-n"></span>
         <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Sep 5</span>
+        <span class="bar-label">Jul 12</span>
       </div>
-      <div class="bar-col" title="Week of Sep 12: 1 story">
+      <div class="bar-col" title="Week of Jul 19: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Jul 19</span>
+      </div>
+      <div class="bar-col" title="Week of Jul 26: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Jul 26</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 2: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 2</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 9: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 9</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 16: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Aug 16</span>
+      </div>
+      <div class="bar-col" title="Week of Aug 23: 1 story">
         <span class="bar-n">1</span>
-        <div class="bar-track"><div class="bar" style="height:50%"></div></div>
-        <span class="bar-label">Sep 12</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 23</span>
       </div>
-      <div class="bar-col" title="Week of Sep 19: 0 stories">
+      <div class="bar-col" title="Week of Aug 30: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Aug 30</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 6: 0 stories">
         <span class="bar-n"></span>
         <div class="bar-track"><div class="bar" style="height:0%"></div></div>
-        <span class="bar-label">Sep 19</span>
+        <span class="bar-label">Sep 6</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 13: 1 story">
+        <span class="bar-n">1</span>
+        <div class="bar-track"><div class="bar" style="height:100%"></div></div>
+        <span class="bar-label">Sep 13</span>
+      </div>
+      <div class="bar-col" title="Week of Sep 20: 0 stories">
+        <span class="bar-n"></span>
+        <div class="bar-track"><div class="bar" style="height:0%"></div></div>
+        <span class="bar-label">Sep 20</span>
       </div>
     </div>
   </section>

@@ -360,6 +360,29 @@
   .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
   .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
   .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
 
   /* ── COLOPHON ── */
   .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
@@ -466,8 +489,11 @@
     .positioning { margin: 0.6rem auto 0.8rem; }
     .positioning strong { font-size: 1.2rem; }
     .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
     .toolbar { gap: 0.6rem 1rem; }
-    .primary-nav { gap: 0.9rem; letter-spacing: 0.06em; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
     .three .section-head .label, .briefing-head .section-head .label { display: none; }
     .search { flex: 1 1 100%; }
     .search input { width: 100%; }
@@ -505,63 +531,63 @@
     <tbody>
       <tr>
         <th scope="row"><a href="/topics/industry-policy/">AI Industry &amp; Policy</a></th>
-        <td class="num">13 <span class="trend down" title="Down from 14 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 14</span></span></td>
-        <td class="num">64</td>
-        <td class="num col-all">188</td>
-        <td class="col-latest"><a href="https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo" target="_blank" rel="noopener">Anthropic co-founders seek majority voting control before IPO</a> <span class="when">Sep 25</span></td>
-      </tr>
-      <tr>
-        <th scope="row"><a href="/topics/research/">Research, Standards &amp; Industry</a></th>
-        <td class="num">12 <span class="trend down" title="Down from 16 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 16</span></span></td>
-        <td class="num">56</td>
-        <td class="num col-all">161</td>
-        <td class="col-latest"><a href="https://www.dataiku.com/company/news/dataiku-agent-management-general-availability" target="_blank" rel="noopener">Dataiku tool inventories AI agents across rival platforms</a> <span class="when">Sep 25</span></td>
-      </tr>
-      <tr>
-        <th scope="row"><a href="/topics/agentic-ai/">Agentic AI &amp; MCP</a></th>
-        <td class="num">12 <span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span></td>
-        <td class="num">46</td>
-        <td class="num col-all">185</td>
-        <td class="col-latest"><a href="https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/" target="_blank" rel="noopener">Vendors ship identity and backup controls built for AI agents</a> <span class="when">Sep 25</span></td>
+        <td class="num">15 <span class="trend up" title="Up from 13 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 13</span></span></td>
+        <td class="num">65</td>
+        <td class="num col-all">191</td>
+        <td class="col-latest"><a href="https://www.cnn.com/2026/09/23/business/australia-openai-agent-hack-intl-hnk" target="_blank" rel="noopener">OpenAI agent breached Australian Medicare reporting portal</a> <span class="when">Sep 26</span></td>
       </tr>
       <tr>
         <th scope="row"><a href="/topics/ai-models/">AI Model Providers</a></th>
-        <td class="num">12 <span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></td>
-        <td class="num">40</td>
-        <td class="num col-all">141</td>
-        <td class="col-latest"><a href="https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/" target="_blank" rel="noopener">Anthropic and OpenAI cut model prices on the same day</a> <span class="when">Sep 25</span></td>
+        <td class="num">14 <span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></td>
+        <td class="num">39</td>
+        <td class="num col-all">143</td>
+        <td class="col-latest"><a href="https://cellcog.ai/blog/claude-opus-5-5-release-date/" target="_blank" rel="noopener">Claude Opus 5.5 runs 40% cheaper than Opus 5</a> <span class="when">Sep 26</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/topics/agentic-ai/">Agentic AI &amp; MCP</a></th>
+        <td class="num">13 <span class="trend up" title="Up from 10 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 10</span></span></td>
+        <td class="num">45</td>
+        <td class="num col-all">187</td>
+        <td class="col-latest"><a href="https://claude.com/blog/build-plugins-for-claude" target="_blank" rel="noopener">Anthropic opens Claude plugin directory for MCP connectors</a> <span class="when">Sep 26</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/topics/research/">Research, Standards &amp; Industry</a></th>
+        <td class="num">12 <span class="trend down" title="Down from 17 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 17</span></span></td>
+        <td class="num">56</td>
+        <td class="num col-all">163</td>
+        <td class="col-latest"><a href="https://arxiv.org/list/cs.NI/2026-09" target="_blank" rel="noopener">Paper sets five principles for 6G multi-agent coordination</a> <span class="when">Sep 26</span></td>
       </tr>
       <tr>
         <th scope="row"><a href="/topics/telco/">Telco &amp; Cable AI</a></th>
-        <td class="num">9 <span class="trend up" title="Up from 8 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 8</span></span></td>
-        <td class="num">25</td>
-        <td class="num col-all">76</td>
-        <td class="col-latest"><a href="https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing" target="_blank" rel="noopener">Orange takes Nokia AI-RAN into live network testing</a> <span class="when">Sep 25</span></td>
+        <td class="num">9 <span class="trend down" title="Down from 10 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 10</span></span></td>
+        <td class="num">27</td>
+        <td class="num col-all">78</td>
+        <td class="col-latest"><a href="https://rcrwireless.com/20260923/network-infrastructure/ai-ran-leaves-the-lab-5g-apps-dont-yet-telco-diary" target="_blank" rel="noopener">Orange to test Nokia AI-RAN in live network</a> <span class="when">Sep 26</span></td>
       </tr>
       <tr>
         <th scope="row"><a href="/topics/security/">Security Automation</a></th>
-        <td class="num">7 <span class="trend down" title="Down from 9 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 9</span></span></td>
-        <td class="num">30</td>
-        <td class="num col-all">118</td>
-        <td class="col-latest"><a href="https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/" target="_blank" rel="noopener">Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</a> <span class="when">Sep 24</span></td>
+        <td class="num">6 <span class="trend down" title="Down from 9 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 9</span></span></td>
+        <td class="num">31</td>
+        <td class="num col-all">119</td>
+        <td class="col-latest"><a href="https://www.financialcontent.com/article/bizwire-2026-9-24-crowdstrike-named-a-leader-in-proactive-security-platforms-by-independent-research-firm" target="_blank" rel="noopener">CrowdStrike named leader in Forrester proactive security wave</a> <span class="when">Sep 26</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/topics/ai-infrastructure/">AI Infrastructure</a></th>
+        <td class="num">6 <span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span></td>
+        <td class="num">24</td>
+        <td class="num col-all">107</td>
+        <td class="col-latest"><a href="https://www.prnewswire.com/news-releases/whitefiber-launches-whitefiber-continuum-the-highest-performing-distributed-gpu-supercluster-architecture-302886976.html" target="_blank" rel="noopener">WhiteFiber links GPU clusters 83km apart at 136 Tbps</a> <span class="when">Sep 26</span></td>
       </tr>
       <tr>
         <th scope="row"><a href="/topics/network-automation/">Network Automation</a></th>
-        <td class="num">6 <span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span></td>
-        <td class="num">18</td>
+        <td class="num">5 </td>
+        <td class="num">17</td>
         <td class="num col-all">84</td>
         <td class="col-latest"><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html" target="_blank" rel="noopener">Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</a> <span class="when">Sep 24</span></td>
       </tr>
       <tr>
-        <th scope="row"><a href="/topics/ai-infrastructure/">AI Infrastructure</a></th>
-        <td class="num">4 </td>
-        <td class="num">24</td>
-        <td class="num col-all">105</td>
-        <td class="col-latest"><a href="https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355" target="_blank" rel="noopener">BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</a> <span class="when">Sep 24</span></td>
-      </tr>
-      <tr>
         <th scope="row"><a href="/topics/aiops/">AI Ops &amp; Observability</a></th>
-        <td class="num">3 <span class="trend down" title="Down from 5 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 5</span></span></td>
+        <td class="num">2 <span class="trend down" title="Down from 6 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 6</span></span></td>
         <td class="num">13</td>
         <td class="num col-all">71</td>
         <td class="col-latest"><a href="https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/" target="_blank" rel="noopener">AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</a> <span class="when">Sep 24</span></td>
