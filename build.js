@@ -821,30 +821,37 @@ function ctaHtml() {
   </section>`;
 }
 
-// The day's edition as an email: the 3 things that matter, then every story by topic
+// The day's edition as an email. There's no "Full briefing" button in an inbox,
+// so every story carries its full write-up; the top 3 are a short list pointing down to them.
 function emailEditionHtml({ dateline, editionNo, dateStr, topPicks, newsItems }) {
   const muted = 'color:#6f675c;font-size:13px';
   const link = (href, text) => `<a href="${esc(href)}">${esc(text)}</a>`;
   const three = topPicks.map(({ item, why }) => `
-<li style="margin-bottom:18px">
-  <p style="margin:0 0 4px"><strong>${link(item.url, item.headline || item.title)}</strong><br><span style="${muted}">${esc(item.source)}${sourceTypeOf(item) ? ` · ${esc(sourceTypeOf(item))}` : ''}</span></p>
-  <p style="margin:0 0 4px">${esc(leadSentences(item.summary))}</p>
-  ${(item.why || why) ? `<p style="margin:0"><em>Why it matters:</em> ${esc(item.why || why)}</p>` : ''}
-</li>`).join('');
+<li style="margin-bottom:10px"><strong>${esc(item.headline || item.title)}</strong>${(item.why || why) ? `<br>${esc(item.why || why)}` : ''}</li>`).join('');
+  const story = i => {
+    const type = sourceTypeOf(i);
+    const paras = stripCites(i.detail || '').split(/\n\s*\n/).map(p => p.trim()).filter(Boolean)
+      .map(p => `<p>${esc(p)}</p>`).join('\n');
+    return `
+<h3 style="margin:28px 0 4px">${link(i.url, i.headline || i.title)}</h3>
+<p style="${muted};margin:0 0 10px">${esc(i.source)} · ${esc(displayDate(i.date))}${type ? ` · ${esc(type)}` : ''}</p>
+<p><strong>What happened:</strong> ${esc(i.summary)}</p>
+${i.why ? `<p><strong>Why it matters:</strong> ${esc(i.why)}</p>` : ''}
+${paras}
+<p style="font-size:14px">${link(i.url, `Read the original at ${hostname(i.url) || i.source}`)}</p>`;
+  };
   const sections = TOPICS
     .map(t => ({ t, items: newsItems.filter(i => i.topicLabel === t.label) }))
     .filter(({ items }) => items.length > 0)
     .map(({ t, items }) => `
-<h3>${esc(t.label)}</h3>
-<ul>${items.map(i => `
-  <li style="margin-bottom:10px">${link(i.url, i.headline || i.title)} <span style="${muted}">${esc(i.source)}</span>${i.why ? `<br><span style="font-size:14px">${esc(i.why)}</span>` : ''}</li>`).join('')}
-</ul>`).join('');
+<hr>
+<h2>${esc(t.label)}</h2>${items.map(story).join('')}`).join('');
   return `<!-- buttondown-editor-mode: fancy -->
 <p style="${muted};text-transform:uppercase;letter-spacing:0.08em">${esc(dateline)} · No. ${editionNo} · ${newsItems.length} stories</p>
 <h2>Today's ${topPicks.length} things that matter</h2>
 <ol>${three}
 </ol>
-<h2>Today's briefing</h2>${sections}
+<p style="${muted}">Full stories below, grouped by topic.</p>${sections}
 <hr>
 <p>${link(`${SITE}/archives/${dateStr}.html`, 'Read this edition on the web')} · ${link(`${SITE}/week.html`, 'The week in network intelligence')} · ${link(`${SITE}/vendors/`, 'Vendor Radar')}</p>
 <p style="${muted}">Digital Plumber is AI-curated and AI-summarized, with no human review before publishing. Verify before acting on anything here. ${link(`${SITE}/about.html`, 'How it works')}.</p>`;
@@ -1498,4 +1505,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { storyHtml, sectionsHtml, vendorMentions, vendorStats, topicStats, rssXml, weekHtml, editStories, main };
+module.exports = { storyHtml, sectionsHtml, vendorMentions, vendorStats, topicStats, rssXml, weekHtml, editStories, emailEditionHtml, main };
