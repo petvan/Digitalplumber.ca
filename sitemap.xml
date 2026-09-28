@@ -121,19 +121,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://digitalplumber.ca/topics/network-automation/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://digitalplumber.ca/topics/aiops/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://digitalplumber.ca/topics/agentic-ai/</loc>
+    <loc>https://digitalplumber.ca/topics/ai-infrastructure/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://digitalplumber.ca/topics/network-automation/</loc>
+    <loc>https://digitalplumber.ca/topics/routing-internet/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -145,7 +151,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://digitalplumber.ca/topics/ai-infrastructure/</loc>
+    <loc>https://digitalplumber.ca/topics/agentic-ai/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/topics/telco/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -158,12 +170,6 @@
   </url>
   <url>
     <loc>https://digitalplumber.ca/topics/ai-models/</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://digitalplumber.ca/topics/telco/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
