@@ -15,94 +15,119 @@ const path = require('path');
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ── Topics to fetch ──────────────────────────────────────────────────────────
-// maxItems per topic reflects editorial priority. Total possible ~30, trimmed to 20.
+// maxItems is each topic's daily cap and reflects editorial priority: the
+// networking topics get the most room, general AI news the least. Order here is
+// the section order on the page.
 const DEFAULT_MAX = 3;
 
-// Hard cutoff for article publication dates — the prompt asks for 72 hours,
-// with one extra day of slack for timezone/date ambiguity. Anything older
-// (or undated, or malformed) is dropped after fetch rather than trusted.
-const MAX_AGE_DAYS = 4;
+// Default search window, in days, for topics without their own maxAgeDays.
+// Networking moves more slowly than AI news, so those topics look back a week.
+const DEFAULT_WINDOW_DAYS = 3;
 
 const TOPICS = [
   {
-    label: 'AI Ops & Observability',
+    label: 'Network Automation',
+    slug: 'network-automation',
+    about: 'NetDevOps, intent-based networking, network source of truth and the tools that automate network change.',
+    short: 'Automation',
+    maxItems: 4,
+    maxAgeDays: 7,
+    query: 'network automation and NetDevOps: new tools, releases and practitioner write-ups on NetBox, Nautobot, Ansible, Nornir, Batfish, Itential, intent-based networking and network source of truth, plus AutoCon and NANOG talks'
+  },
+  {
+    label: 'AIOps & Network Observability',
     slug: 'aiops',
-    about: 'AIOps, observability and AI-assisted operations: monitoring, event correlation, incident response and the platforms behind them.',
-    short: 'AI ops',
-    maxItems: 8,
-    query: 'AIOps observability AI operations LogicMonitor Selector.ai net.ai Honeycomb Last9 Chronosphere Dynatrace Datadog New Relic ServiceNow Exaforce news 2026'
+    aliases: ['AI Ops & Observability'],
+    about: 'AIOps and network observability: NOC practice, event correlation, outage detection, network digital twins and the platforms behind them.',
+    short: 'AIOps',
+    maxItems: 4,
+    maxAgeDays: 7,
+    query: 'network observability and AIOps for network operations: NOC practice, event correlation, outage detection and network digital twins, from ThousandEyes, Kentik, Selector, LogicMonitor, Forward Networks, Datadog, Dynatrace and OpenTelemetry for networks'
+  },
+  {
+    label: 'Data Center & AI Networking',
+    slug: 'ai-infrastructure',
+    aliases: ['AI Infrastructure'],
+    about: 'The networks under AI: Ethernet and InfiniBand fabrics, Ultra Ethernet, GPU cluster networking and 800G/1.6T optics.',
+    short: 'DC networking',
+    maxItems: 4,
+    maxAgeDays: 7,
+    query: 'data center and AI cluster networking: Ethernet and InfiniBand fabrics, Ultra Ethernet Consortium, RoCE, NVIDIA Spectrum-X, Arista, Cisco Nexus and Silicon One, Juniper and HPE, Broadcom Tomahawk, 800G and 1.6T optics, co-packaged optics'
+  },
+  {
+    label: 'Routing & Internet',
+    slug: 'routing-internet',
+    about: 'How the internet runs: BGP and RPKI, route leaks and hijacks, DNS, peering, subsea cables, outages and their postmortems.',
+    short: 'Routing',
+    maxItems: 3,
+    maxAgeDays: 7,
+    query: 'internet routing and operations: BGP incidents, hijacks and route leaks, RPKI, DNS, peering and IXPs, subsea cables, major outages and postmortems, IETF routing work, Cloudflare and Fastly engineering posts'
+  },
+  {
+    label: 'Network Security',
+    slug: 'security',
+    aliases: ['Security Automation'],
+    about: 'Security for network teams: firewall, VPN and SASE vulnerabilities and advisories, zero trust networking and SOC automation.',
+    short: 'Security',
+    maxItems: 3,
+    maxAgeDays: 7,
+    query: 'network security operations: firewall, VPN and SASE vulnerabilities and advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, zero trust networking, and SOC automation for network threats'
   },
   {
     label: 'Agentic AI & MCP',
     slug: 'agentic-ai',
-    about: 'AI agents in operations: agent frameworks, the Model Context Protocol, multi-agent systems and agentic NetOps.',
+    about: 'AI agents in IT and network operations: agentic NetOps, MCP servers for infrastructure, and the agent frameworks operations teams use.',
     short: 'Agentic AI',
-    maxItems: 7,
-    query: 'agentic AI MCP Model Context Protocol multi-agent systems AI agents networking operations news 2026'
-  },
-  {
-    label: 'Network Automation',
-    slug: 'network-automation',
-    about: 'NetDevOps, intent-based networking, orchestration and the tools that automate network change.',
-    short: 'Networking',
-    maxItems: 7,
-    query: 'network automation NetDevOps Itential Cisco Juniper Arista HPE OpenConfig NANOG LogicMonitor news 2026'
-  },
-  {
-    label: 'Security Automation',
-    slug: 'security',
-    about: 'Security operations and automation: SOC tooling, SASE, zero trust, and AI on both sides of attack and defence.',
-    short: 'Security',
-    maxItems: 3,
-    query: 'security operations automation AI SASE zero trust Palo Alto Fortinet Versa CrowdStrike news 2026'
-  },
-  {
-    label: 'AI Infrastructure',
-    slug: 'ai-infrastructure',
-    about: 'The networks under AI: data center fabrics, optics, GPU clusters and the hardware roadmap.',
-    short: 'Infrastructure',
-    maxItems: 3,
-    query: 'AI infrastructure networking data center GPU fabric Nvidia Cisco Juniper Arista HPE news 2026'
-  },
-  {
-    label: 'Research, Standards & Industry',
-    slug: 'research',
-    about: 'Research papers, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.',
-    short: 'Research',
-    maxItems: 6,
-    query: 'AI ML research paper networking AIOps MLOps agents arxiv IETF NANOG OpenTelemetry OpenConfig standards acquisitions funding platform engineering news 2026'
-  },
-  {
-    label: 'AI Model Providers',
-    slug: 'ai-models',
-    about: 'Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.',
-    short: 'Models',
-    maxItems: 3,
-    query: 'Anthropic Claude OpenAI Google DeepMind Cohere Mistral xAI AI model announcement product launch shutdown 2026'
+    maxItems: 5,
+    query: 'AI agents in IT and network operations: agentic NetOps, MCP servers for infrastructure and networking, and agent frameworks used by operations and SRE teams'
   },
   {
     label: 'Telco & Cable AI',
     slug: 'telco',
     about: 'How telecom and cable operators are applying AI and automation to their networks.',
     short: 'Telco',
-    maxItems: 5,
+    maxItems: 3,
+    maxAgeDays: 7,
     query: 'AT&T Verizon Lumen Singtel Bell Canada Rogers Cogeco Comcast Charter Cox Telus BCE telco cable operator AI artificial intelligence automation network deployment 2026'
+  },
+  {
+    label: 'Research, Standards & Industry',
+    slug: 'research',
+    about: 'Networking and operations research, standards work such as IETF, OpenConfig and OpenTelemetry, and notable industry moves.',
+    short: 'Research',
+    maxItems: 4,
+    maxAgeDays: 7,
+    query: 'research papers and standards for networking and IT operations: arXiv networking (cs.NI) and AIOps papers, IETF drafts and RFCs, OpenConfig, OpenTelemetry, NANOG presentations'
+  },
+  {
+    label: 'AI Model Providers',
+    slug: 'ai-models',
+    about: 'Model releases and changes from Anthropic, OpenAI, Google and others that affect operations tooling.',
+    short: 'Models',
+    maxItems: 1,
+    query: 'Anthropic Claude OpenAI Google DeepMind Cohere Mistral xAI AI model announcement product launch shutdown 2026'
   },
   {
     label: 'AI Industry & Policy',
     slug: 'industry-policy',
     about: 'AI regulation, policy, funding and enterprise adoption.',
     short: 'Industry and policy',
-    maxItems: 5,
+    maxItems: 2,
     query: 'artificial intelligence industry news regulation policy enterprise adoption AI governance geopolitics funding acquisitions 2026'
   },
   {
     label: 'Podcasts & Talks',
     short: 'Listening',
     maxItems: 4,
+    maxAgeDays: 7,
     query: 'Packet Pushers podcast episode networking AutoCon NANOG presentation talk Cisco Live KubeCon network automation AIOps DevOps operations 2026'
   },
 ];
+
+// The current topic for a story's label, including labels a topic was renamed from
+function topicFor(label) {
+  return TOPICS.find(t => t.label === label || (t.aliases || []).includes(label));
+}
 
 // ── Vendors ───────────────────────────────────────────────────────────────────
 const TRENDING_TERMS = [
@@ -164,7 +189,7 @@ const SYSTEM_PROMPT = `You are a technical news curator writing for experienced 
 
 Use web search to find real, recent, substantive developments related to the given topic area. Today's date will be provided.
 
-RECENCY: This is a strict rule — only include articles published within the last 72 hours. Check the publication date of every article before including it. If an article has no clear date, or if the date is older than 72 hours, exclude it. Return an empty array [] rather than including stale content.
+RECENCY: This is a strict rule — only include articles published on or after the cutoff date given in the request. Check the publication date of every article before including it. If an article has no clear date, or it is older than the cutoff, exclude it. Return an empty array [] rather than including stale content.
 
 PREFERRED SOURCES — weight these heavily:
 - AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
@@ -186,7 +211,7 @@ WHAT TO AVOID — these are common but low-quality sources for this audience:
 - Generic press releases with no technical substance ("Company X is excited to announce a partnership...")
 - Pure sales or analyst-summary content that recaps what vendors say about themselves
 - Any content that reads like it was written to rank in search rather than inform a practitioner
-- Articles older than 72 hours
+- Articles older than the cutoff date in the request
 
 NOTE on vendor/engineering blogs: blogs from engineering-led companies (Cloudflare, Stripe, Netflix, Uber, etc.) often publish genuinely substantive technical content — include these if they have real depth. Exclude vendor marketing blogs that only promote their own products without technical substance.
 
@@ -218,11 +243,11 @@ function esc(str) {
   return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-// Valid ISO date, no older than MAX_AGE_DAYS, no more than a day in the future
-function isFreshIsoDate(dateStr) {
+// Valid ISO date, no older than maxAgeDays, no more than a day in the future
+function isFreshIsoDate(dateStr, maxAgeDays) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(dateStr || ''))) return false;
   const ageDays = (Date.now() - Date.parse(dateStr + 'T00:00:00Z')) / 86400000;
-  return ageDays <= MAX_AGE_DAYS && ageDays >= -1;
+  return ageDays <= maxAgeDays && ageDays >= -1;
 }
 
 // "2026-06-26" → "Jun 26, 2026" for card display
@@ -262,11 +287,11 @@ function sourceTypeOf(a) {
 }
 
 function topicShort(label) {
-  return (TOPICS.find(t => t.label === label) || {}).short || label;
+  return (topicFor(label) || {}).short || label;
 }
 
 function topicHref(label) {
-  const slug = (TOPICS.find(t => t.label === label) || {}).slug;
+  const slug = (topicFor(label) || {}).slug;
   return slug ? `/topics/${slug}/` : '';
 }
 
@@ -397,7 +422,7 @@ function vendorStats(index, today) {
 // Per-topic coverage across the whole archive; `all` is newest first
 function topicStats(index, today) {
   return TOPICS.filter(t => t.slug).map(t => {
-    const all = index.filter(a => a.topic === t.label);
+    const all = index.filter(a => topicFor(a.topic) === t);
     return { kind: 'topic', label: t.label, short: t.short, about: t.about, href: `/topics/${t.slug}/`, all, ...periodCounts(all, today) };
   });
 }
@@ -492,10 +517,11 @@ async function fetchTopicNews(topic, attempt = 1) {
   console.log(`  Fetching: ${topic.label} (target: ${maxItems})…`);
 
   const today = new Date().toISOString().split('T')[0];
-  const cutoff = new Date(Date.now() - 72 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const windowDays = topic.maxAgeDays || DEFAULT_WINDOW_DAYS;
+  const cutoff = new Date(Date.now() - windowDays * 86400000).toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last 72 hours) about: ${topic.query} after:${cutoff}`
+    content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last ${windowDays} days) about: ${topic.query} after:${cutoff}`
   }];
 
   const apiCall = async (body) => {
@@ -585,7 +611,7 @@ async function fetchTopicNews(topic, attempt = 1) {
 
     const parsed = JSON.parse(jsonMatch[0]);
     const items = parsed.filter(item => {
-      if (isFreshIsoDate(item.date)) return true;
+      if (isFreshIsoDate(item.date, windowDays + 1)) return true;
       console.warn(`    ⤫ Dropped stale/undated ("${item.date || 'no date'}"): ${stripCites(item.title).slice(0, 70)}`);
       return false;
     });
@@ -1116,10 +1142,10 @@ function aboutHtml(template) {
   <p class="page-dek">Digital Plumber is an AI-curated daily intelligence briefing for the people who run networks: network engineers, NetDevOps and automation engineers, and AIOps and SRE leads. This page explains where stories come from and how they're chosen.</p>
   <div class="prose">
     <h2>What we monitor</h2>
-    <p>Each morning the build searches the web across about ten coverage areas: AIOps and observability, agentic AI and MCP, network automation, security automation, AI infrastructure, research and standards, AI model providers, telco and cable, and AI industry and policy. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
+    <p>Each morning the build searches the web across ten coverage areas, weighted toward networking: network automation, AIOps and network observability, data center and AI networking, routing and the internet, network security, agentic AI in operations, telco and cable, and research and standards, with a small allowance for AI model and AI industry news. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
 
     <h2>How stories are selected</h2>
-    <p>Only stories published in the last 72 hours qualify, and anything older or undated is dropped automatically. The editor favours concrete developments and technical substance over marketing, and skips search-engine filler and pure sales content. An AI editor then ranks the day's stories to pick the three that matter most, and writes the short headlines.</p>
+    <p>Networking topics accept stories from the last 7 days, since that news moves more slowly; general AI topics accept only the last 72 hours. Anything older or undated is dropped automatically. The editor favours concrete developments and technical substance over marketing, and skips search-engine filler and pure sales content. An AI editor then ranks the day's stories to pick the three that matter most, and writes the short headlines.</p>
 
     <h2>How duplicates are handled</h2>
     <p>A story that already appeared in an earlier edition is dropped, and so is the same link turning up under two topics on the same day. Duplicates are matched by link, so the same event reported by two different outlets can occasionally appear twice.</p>
@@ -1161,7 +1187,7 @@ function weekHtml(template, { entries, picks, headlines, watch, vStats, tStats, 
       </div></li>`).join('');
 
   const byTopic = TOPICS
-    .map(t => ({ t, items: entries.filter(a => a.topic === t.label) }))
+    .map(t => ({ t, items: entries.filter(a => topicFor(a.topic) === t) }))
     .filter(({ items }) => items.length > 0);
 
   const body = `
@@ -1511,4 +1537,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { storyHtml, sectionsHtml, vendorMentions, vendorStats, topicStats, rssXml, weekHtml, editStories, emailEditionHtml, main };
+module.exports = { TOPICS, topicFor, storyHtml, sectionsHtml, vendorMentions, vendorStats, topicStats, rssXml, weekHtml, editStories, emailEditionHtml, main };
