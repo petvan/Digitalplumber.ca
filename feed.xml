@@ -6,7 +6,95 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 28 Sep 2026 18:09:14 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 15:50:56 GMT</lastBuildDate>
+    <item>
+      <title>When to pick Ansible, Nornir or Netmiko</title>
+      <link>https://oneuptime.com/blog/post/2026-09-26-choose-ansible-nornir-netmiko-network-workflow/view</link>
+      <guid isPermaLink="true">https://oneuptime.com/blog/post/2026-09-26-choose-ansible-nornir-netmiko-network-workflow/view</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Practitioner guide comparing three network automation tools by mapping workflows to state management, orchestration, transport, testing, and operational ownership. Covers when to use each tool and provides decision framework based on real requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Helps NetDevOps practitioners avoid tool selection based on popularity and instead match tools to actual operational workflows and scaling constraints.&lt;/p&gt;&lt;p&gt;Source: OneUptime · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Making NetBox the real source of truth for inventories</title>
+      <link>https://oneuptime.com/blog/post/2026-09-26-netbox-source-truth-ansible-nornir-inventories/view</link>
+      <guid isPermaLink="true">https://oneuptime.com/blog/post/2026-09-26-netbox-source-truth-ansible-nornir-inventories/view</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Technical guide on establishing NetBox as a true network source of truth (SoT) by separating three concerns: device selection, data validation, and inventory format translation. Shows contract-driven integration pattern for both Ansible and Nornir.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses the gap between having a SoT API and actually consuming it reliably; essential for practitioners trying to eliminate hand-edited inventory files.&lt;/p&gt;&lt;p&gt;Source: OneUptime · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bounding automation concurrency and reporting partial failures</title>
+      <link>https://oneuptime.com/blog/post/2026-09-26-network-automation-concurrency-partial-failures/view</link>
+      <guid isPermaLink="true">https://oneuptime.com/blog/post/2026-09-26-network-automation-concurrency-partial-failures/view</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Deep technical guide on safely scaling parallel network automation by identifying concurrency bottlenecks (AAA, jump hosts, WAN bandwidth) and implementing result tracking that fails gracefully on partial execution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Prevents common gotchas when scaling from serial to parallel automation: exhausted AAA capacity, connection storms, and loss of visibility into which targets failed.&lt;/p&gt;&lt;p&gt;Source: OneUptime · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CloudWatch Omni reaches general availability with cross-cloud observability</title>
+      <link>https://aws.amazon.com/blogs/mt/this-month-in-aws-observability-august-september-2026/</link>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/mt/this-month-in-aws-observability-august-september-2026/</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Amazon CloudWatch Omni reached general availability with AI-first, app-centric observability across AWS accounts, Regions, and Azure workloads. New features include alarm warm-up periods, wall clock evaluation windows, expanded database observability, and native journald support for log collection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Omni's cross-cloud and cross-region aggregation reduces NOC tool sprawl; warm-up/wall clock evaluation directly addresses alert noise during deployments—a core operational efficiency metric for SREs.&lt;/p&gt;&lt;p&gt;Source: AWS Cloud Operations Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Check Point patches management server zero-day used in attacks</title>
+      <link>https://thehackernews.com/2026/09/check-point-warns-of-management-server.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/09/check-point-warns-of-management-server.html</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CVE-2026-93616 allows unauthenticated attackers to run scripts on Check Point management servers via path traversal; Check Point released a fix on September 22. A separate CVE-2026-91843 was patched via LivePatch on September 16.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Firewall management server compromise gives attackers policy control and credential access across all managed gateways, exposing the entire network infrastructure.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CISA flags exploited Check Point, Arista and F5 flaws</title>
+      <link>https://aviatrix.ai/threat-research-center/cisa-kev-catalog-four-vulnerabilities-2026-09-22/</link>
+      <guid isPermaLink="true">https://aviatrix.ai/threat-research-center/cisa-kev-catalog-four-vulnerabilities-2026-09-22/</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added four critical vulnerabilities to Known Exploited Vulnerabilities catalog on September 22: Check Point CVE-2026-85102/93616, Arista VeloCloud CVE-2026-93952, and F5 BIG-IP CVE-2026-94127—all actively exploited in the wild with CVSS 9.0+.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN gateways, SD-WAN orchestrators, and management platforms whose compromise expose credentials, policies, and downstream devices represent the highest-risk attack surface for enterprise networks.&lt;/p&gt;&lt;p&gt;Source: Aviatrix Threat Research Center · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Six exploited edge and identity flaws added last week</title>
+      <link>https://aboutinfosec.com/2026/09/28/security-week-in-review-september-19-25-2026/</link>
+      <guid isPermaLink="true">https://aboutinfosec.com/2026/09/28/security-week-in-review-september-19-25-2026/</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Four newly cataloged exploited edge and identity vulnerabilities led the week's defender queue, with CISA adding six actively exploited flaws affecting F5 BIG-IP APM, Check Point gateways/management, Arista VeloCloud Orchestrator, WSO2, and Adobe Commerce. Citrix separately disclosed two NetScaler zero-days patched on September 27.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Edge and management infrastructure—VPN gateways, SD-WAN orchestrators, OAuth servers, security-management platforms—are the perimeter's real high-value targets; their compromise exposes credentials, policies, and configuration across downstream infrastructure.&lt;/p&gt;&lt;p&gt;Source: about InfoSec · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forward Networks ships change validation for agentic NetOps</title>
+      <link>https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</link>
+      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Forward Networks announced Forward Predict, a capability for safe Agentic NetOps now generally available, which deterministically shows the impact of proposed network changes before production using a mathematically accurate digital twin to give AI agents proof of connectivity, security, and compliance effects at design time.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Forward Predict provides the verification and guardrails Agentic NetOps requires for network operations teams deploying autonomous agents.&lt;/p&gt;&lt;p&gt;Source: PR Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic releases faster Claude Sonnet 5.5 at same price</title>
+      <link>https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/</link>
+      <guid isPermaLink="true">https://9to5mac.com/2026/09/28/anthropic-upgrades-claude-with-new-sonnet-5-5-model-details-here/</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic upgraded Claude Sonnet, replacing Sonnet 5 with Sonnet 5.5 as its best medium-sized model. Sonnet 5.5 generates output more than 30% faster than Sonnet 5 while maintaining identical pricing at $2 input / $10 output per million tokens.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Better performance at unchanged pricing means lower per-token costs for API workloads; first Sonnet with Opus-level cybersecurity safeguards expands secure deployment options.&lt;/p&gt;&lt;p&gt;Source: 9to5Mac · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>False AI intelligence report nearly triggered US-China incident</title>
+      <link>https://p4sc4l.substack.com/p/ai-and-geopolitics-20-september-27</link>
+      <guid isPermaLink="true">https://p4sc4l.substack.com/p/ai-and-geopolitics-20-september-27</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;A false AI-assisted intelligence report brought the U.S. military close to boarding a Chinese vessel before error was caught. Report documents broader trends in AI governance hardening into operational controls, training-data conflicts expanding beyond copyright, and geopolitical competition over AI as national-security infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Military institutions deploying AI for intelligence now face demonstrable risks of AI failures in high-consequence situations; governance and safety controls moving from advisory to mandatory.&lt;/p&gt;&lt;p&gt;Source: p4sc4l (Substack) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Google challenges EU AI and search competition orders</title>
+      <link>https://www.riotimesonline.com/europe-intelligence-brief-tuesday-september-29-2026/</link>
+      <guid isPermaLink="true">https://www.riotimesonline.com/europe-intelligence-brief-tuesday-september-29-2026/</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Google filed challenges at the General Court in Luxembourg against two EU orders requiring it to open up to AI rivals and search competitors, arguing the measures undermine privacy and would cause irreversible harm. Filing marks direct test of EU enforcement authority over AI interoperability and competitive access.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; EU AI Act enforcement is moving from regulatory guidance to court proceedings; outcomes will set precedent for how regulators can mandate AI platform interoperability and may affect data governance strategies globally.&lt;/p&gt;&lt;p&gt;Source: Rio Times · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-29.html&quot;&gt;Sep 29, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nautobot 3.2.6 patches SSO flaws and breaks login flow</title>
       <link>https://github.com/nautobot/nautobot/releases/tag/v3.2.6</link>
@@ -598,110 +686,6 @@
       <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;In the past year, 38% of organizations left former employees or guests with access they should have lost, 35% hit an audit or compliance gap, and 26% had sensitive content reach the wrong people; altogether, 77% experienced at least one Microsoft 365 governance incident, as two-thirds now run two or more AI tools on that same content. Meanwhile, just 1% use a purpose-built governance tool. The governance gap reflects enterprise adoption massively outpacing security infrastructure.&lt;/p&gt;&lt;p&gt;Source: The Manila Times / PRNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Aragon Research 2026 Globe for Strategic Response Management: Shift from AI Assistants to Autonomous Agentic AI</title>
-      <link>https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html</link>
-      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/aragon-research-unveils-the-2026-globe-for-strategic-response-management-the-rise-of-the-ai-coworker-302886720.html</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Aragon Research's second annual Globe benchmarks 14 strategic response management providers, finding enterprise adoption accelerating from reactive AI assistants toward fully autonomous agentic AI for complex customer-facing workflows. The report signals the era of simple AI assistants is over, with organizations deploying AI coworkers managing multi-step tasks without constant human intervention.&lt;/p&gt;&lt;p&gt;Source: Aragon Research / PR Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetBrain Launches Expanded Agentic NetOps Agent Suite with Governed Change and Assessment Agents</title>
-      <link>https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network</link>
-      <guid isPermaLink="true">https://www.financialcontent.com/article/bizwire-2026-9-22-netbrain-launches-a-full-team-of-governed-agentic-netops-agents-that-safely-act-on-the-live-network</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;NetBrain announced a major expansion of the NetBrain Agentic NetOps Platform, adding new Change and Assessment agents governed by an expanded NetOps Harness that enables AI agents and network engineers to work together across troubleshooting, change, assessment and prevention. These new agents join the previously released Diagnosis agent, running on a common governance framework.&lt;/p&gt;&lt;p&gt;Source: NetBrain / Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Selector Foundry: Agent Development and Runtime Platform for Network Operations with Historical Validation</title>
-      <link>https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data</link>
-      <guid isPermaLink="true">https://www.financialcontent.com/article/bizwire-2026-9-22-selector-foundry-brings-ai-agents-to-network-operations-enabling-organizations-to-build-version-and-run-on-their-own-data</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Selector introduced Selector Foundry, a development and runtime environment enabling network operations teams to build, test, version and govern their own AI agents where telemetry is correlated and stored in Git. Before promotion to production, agents are replayed against historical incident data for pass/fail validation against actual past outcomes.&lt;/p&gt;&lt;p&gt;Source: Selector / Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco Emphasizes Network as Critical Security Layer Amid AI Agent Proliferation</title>
-      <link>https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one</link>
-      <guid isPermaLink="true">https://blogs.cisco.com/networking/your-network-is-a-security-layer-its-time-to-treat-it-like-one</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco posted that the AI shift is raising stakes on both network security and availability, as every AI agent and AI-powered experience depends on the network while attackers use AI to find vulnerabilities faster and distributed workloads create more paths to protect. Network assessment and response at machine speed is now a core operational constraint.&lt;/p&gt;&lt;p&gt;Source: Cisco Blogs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI Network Fabric Market Accelerates as Gigascale AI Clusters Drive Demand for High-Speed, Low-Latency Connectivity</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/22/3366824/0/en/ai-network-fabric-market-accelerates-as-gigascale-ai-clusters-drive-demand-for-high-speed-low-latency-connectivity.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/22/3366824/0/en/ai-network-fabric-market-accelerates-as-gigascale-ai-clusters-drive-demand-for-high-speed-low-latency-connectivity.html</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;The U.S. AI Network Fabric Market is projected to grow from $5.03 billion in 2025 to $109.65 billion by 2035 at a 36.06% CAGR, driven by GPU-accelerated computing, hyperscale infrastructure, and adoption of Ethernet-based, InfiniBand, NVLink/NVSwitch, and UALink technologies. Network fabrics are now critical infrastructure for AI workloads requiring fast connectivity between GPUs, CPUs, and storage rather than traditional data center networks.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI Releases GPT-6 Sol: Cost-Optimized Model for Agentic Workflows with Computer Use</title>
-      <link>https://github.com/ed-is-ai/featherbench/issues/75</link>
-      <guid isPermaLink="true">https://github.com/ed-is-ai/featherbench/issues/75</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenAI released GPT-6 Sol on September 22, 2026, a same-day cost-efficiency release designed for complex coding and agentic workflows. Pricing: $2/1M input, $10/1M output tokens. Features: 1.05M context window, structured outputs, function calling, web search, code interpreter, computer use, MCP support, and prompt caching.&lt;/p&gt;&lt;p&gt;Source: OpenAI / Featherbench · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic Releases Claude Opus 5.5: Frontier Reasoning Model for Long-Running Agent Tasks</title>
-      <link>https://github.com/ed-is-ai/featherbench/issues/74</link>
-      <guid isPermaLink="true">https://github.com/ed-is-ai/featherbench/issues/74</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, a frontier model for long-running agentic coding and knowledge work. Available via Claude API and partners (Amazon Bedrock, Google Cloud, Microsoft Foundry). Pricing: $4/1M input, $20/1M output; cache: $0.20 cached input, $5/$8 per 1M for 5-min/1-hour cache writes.&lt;/p&gt;&lt;p&gt;Source: Anthropic / Featherbench · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI Resolves 100+ Open Math Problems; Forms Advisory Group with Nine Mathematicians</title>
-      <link>https://openai.com/index/advisory-group-on-mathematics-and-artificial-intelligence/</link>
-      <guid isPermaLink="true">https://openai.com/index/advisory-group-on-mathematics-and-artificial-intelligence/</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI's internal model trained from August 28 has resolved more than 100 long-standing open problems across mathematics including Navier–Stokes. The company formed an independent Advisory Group on Mathematics and AI hosted at Princeton, with nine mathematicians including Timothy Gowers and Edward Witten tasked with coordinating the release of unpublished results.&lt;/p&gt;&lt;p&gt;Source: OpenAI Blog / TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>xAI Launches Grok 4.7: 2.1T Parameters, 40% Larger Base Model at Grok 4.6 Pricing</title>
-      <link>https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;xAI released Grok 4.7 on September 21 as its most capable coding and knowledge-work model, featuring a 2.1 trillion parameter base (40% larger than 4.6), longer RL training on harder multi-hour tasks, and a redesigned safeguard stack—all at identical $2/$6 per-million-token pricing to Grok 4.6.&lt;/p&gt;&lt;p&gt;Source: xAI / GitHub Changelog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen launches flexible enterprise internet for AI workloads with on-demand bandwidth controls</title>
-      <link>https://voip.review/2026/09/22/lumen-launches-flexible-enterprise-internet-ai-workloads/</link>
-      <guid isPermaLink="true">https://voip.review/2026/09/22/lumen-launches-flexible-enterprise-internet-ai-workloads/</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, an on-demand connectivity service that lets enterprises provision bandwidth in minutes and adjust capacity dynamically as AI workload demands change. The service addresses IDC findings that 37% of enterprises saw bandwidth needs rise over 50% year-over-year, with 29% struggling to align networks with AI workloads.&lt;/p&gt;&lt;p&gt;Source: VoIP Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The future of telecoms, according to AI</title>
-      <link>https://www.mobileeurope.co.uk/future-of-telecoms-ai/</link>
-      <guid isPermaLink="true">https://www.mobileeurope.co.uk/future-of-telecoms-ai/</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Mobile Europe consulted AI to forecast the telecom industry 18 months ahead. Key prediction: networks will shift from connectivity infrastructure to programmable platforms, with operators exposing network capabilities via APIs directly to applications. The critical distinction is between 'AI for networks' (operational intelligence) and 'networks for AI' (infrastructure for enterprise AI), with the latter presenting greater disruption.&lt;/p&gt;&lt;p&gt;Source: Mobile Europe · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Trump announces 'AI Force' and rejects safety concerns as hoax</title>
-      <link>https://www.bloomberg.com/news/articles/2026-09-19/trump-to-name-ai-czar-while-rejecting-safety-risks-as-a-hoax</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-09-19/trump-to-name-ai-czar-while-rejecting-safety-risks-as-a-hoax</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;On September 19, President Trump announced he would name an AI czar and form an 'AI Force' modeled on the Space Force, while rejecting concerns about AI risks to humans as a hoax. The White House is not backing down from its laissez-faire approach to AI, even as the industry's biggest leaders call for stronger safety rules and public concern about AI intensifies.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>UN Independent AI Panel urges governments to rein in AI agents in first thematic brief</title>
-      <link>https://news.un.org/en/story/2026/09/1168353</link>
-      <guid isPermaLink="true">https://news.un.org/en/story/2026/09/1168353</guid>
-      <pubDate>Tue, 22 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The UN's Independent AI Panel released its first thematic brief urging governments to rein in AI agents, marking a significant escalation in multilateral AI governance. UN Secretary-General António Guterres emphasized that 'National action is essential, but global coordination is indispensable' for addressing AI's transnational risks.&lt;/p&gt;&lt;p&gt;Source: UN News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-22.html&quot;&gt;Sep 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
