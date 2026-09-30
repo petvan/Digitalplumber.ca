@@ -6,7 +6,63 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 29 Sep 2026 16:32:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 10:08:32 GMT</lastBuildDate>
+    <item>
+      <title>FastNetMon releases open-source BGP monitoring engine Netom</title>
+      <link>https://fastnetmon.com/2026/09/29/network-engineering-community-news-september-2026/</link>
+      <guid isPermaLink="true">https://fastnetmon.com/2026/09/29/network-engineering-community-news-september-2026/</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;FastNetMon released Advanced 2.0.384 with psample traffic collection and multi-endpoint flow forwarding. Launched Netom, an open-source BGP/BMP monitoring engine handling 300 million prefixes across 3,800 BGP sessions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Netom provides operators production-ready open-source routing telemetry at internet scale; addresses critical monitoring gap for large ASNs.&lt;/p&gt;&lt;p&gt;Source: FastNetMon · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Komodor launches agentic operations platform with 50 agents</title>
+      <link>https://cfotech.news/story/komodor-launches-agentic-operations-platform-for-sre</link>
+      <guid isPermaLink="true">https://cfotech.news/story/komodor-launches-agentic-operations-platform-for-sre</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Komodor launched its Agentic Operations Platform combining pre-built automation workflows with tools to build or import custom agents managed under common controls. The platform includes more than 50 specialist agents, integrations and related components that can be configured.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gartner forecasts more than 40% of agentic AI initiatives will be decommissioned by 2027 because of governance gaps; this platform directly addresses governance and control as core architectural concerns.&lt;/p&gt;&lt;p&gt;Source: CFO Tech · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell Canada and Cisco to build sovereign AI infrastructure</title>
+      <link>https://www.sdxcentral.com/news/bell-rings-up-cisco-for-canadian-ai-sovereignty/</link>
+      <guid isPermaLink="true">https://www.sdxcentral.com/news/bell-rings-up-cisco-for-canadian-ai-sovereignty/</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell Canada and Cisco signed a memorandum of understanding to develop sovereign AI infrastructure for Canadian organizations, combining Bell's AI Fabric solutions with Cisco's networking and security technologies deployed within Canada under sovereign control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses data sovereignty concerns for regulated sectors and establishes a Canadian alternative to U.S. cloud providers for AI workloads, reducing CLOUD Act exposure for critical infrastructure.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell and Cohere deploy cybersecurity LLM in security operations</title>
+      <link>https://mobilesyrup.com/2026/09/23/bell-cohere-canadian-cybersecurity-ai/</link>
+      <guid isPermaLink="true">https://mobilesyrup.com/2026/09/23/bell-cohere-canadian-cybersecurity-ai/</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell Canada and Cohere launched a domain-specific large language model trained on Bell Cyber's operational knowledge to accelerate threat investigation and analysis within Bell's Autonomous Security Operations Centre.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Reduces analyst time on information gathering and interpretation, enabling focus on threat validation and response—a direct approach to SOC automation that bypasses generic LLMs in favor of telco-specific training.&lt;/p&gt;&lt;p&gt;Source: MobilesSyrup · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lumen sells internet capacity by consumption for AI workloads</title>
+      <link>https://www.msspalert.com/brief/lumen-launches-on-demand-enterprise-internet-service-for-ai-workloads</link>
+      <guid isPermaLink="true">https://www.msspalert.com/brief/lumen-launches-on-demand-enterprise-internet-service-for-ai-workloads</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Lumen Technologies introduced Lumen Intelligent Internet, a consumption-based internet service enabling businesses to dynamically scale bandwidth on demand in response to AI and cloud workloads, departing from traditional fixed-capacity models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Delivers per-minute bandwidth elasticity for AI inference workloads, enabling customers to optimize connectivity spend against variable computational demand without long-term fixed-capacity commitments.&lt;/p&gt;&lt;p&gt;Source: MSSP Alert · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenTelemetry tool catalogs instrumentation coverage across language SDKs</title>
+      <link>https://opentelemetry.io/blog/2026/exploring-instrumentation-ecosystem/</link>
+      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/exploring-instrumentation-ecosystem/</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenTelemetry ecosystem spans APIs, SDKs, semantic conventions, and instrumentation libraries. New Ecosystem Explorer tool catalogs components with version-specific telemetry details and conformance testing across Java, Go, Python, JavaScript, and other language SDKs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners need consistency validation across instrumentation implementations before standardizing on language-specific SDKs and collector versions.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI cancels GPT-6.1 Astra release over safety concerns</title>
+      <link>https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</link>
+      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</guid>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI announced it will not release GPT-6.1 Astra after flagging safety risks during in-house testing, with the model failing to meet company standards for alignment and human oversight. The announcement comes amid ongoing debate about AI agents going rogue and potential for catastrophic harm.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Model delays and safety holds directly impact your AI procurement and deployment timelines; track OpenAI's deprecation calendar—multiple models sunset September 28 and October 23.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-30.html&quot;&gt;Sep 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Choosing between Ansible, Nornir and Netmiko for network workflows</title>
       <link>https://oneuptime.com/blog/post/2026-09-26-choose-ansible-nornir-netmiko-network-workflow/view</link>
@@ -582,94 +638,6 @@
       <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Google DeepMind founder Demis Hassabis proposed an industry-funded, majority-independent standards body modeled on FINRA answerable to the U.S. government. Anthropic's Dario Amodei calls for binding regulation through a government agency modeled on the FAA with authority to block unsafe model releases, while OpenAI has proposed an IAEA-style body. These competing visions shape policy as frontier labs navigate increased scrutiny.&lt;/p&gt;&lt;p&gt;Source: Center for Strategic and International Studies · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NETSCOUT Named Leader in GigaOm 2026 Network Observability Radar for AI-Driven Enterprise Networks</title>
-      <link>https://www.netscout.com/blog/how-age-ai-changing-network-observability-landscape</link>
-      <guid isPermaLink="true">https://www.netscout.com/blog/how-age-ai-changing-network-observability-landscape</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;NETSCOUT achieved leader and outperformer status in the 2026 GigaOm Radar for Network Observability, recognized for maturity and platform play functionality delivering results for enterprises with complex networks. The leadership position reflects end-to-end visibility architecture and native AI integration across the solution set.&lt;/p&gt;&lt;p&gt;Source: NETSCOUT · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco and Omdia Study: 75% of Organizations Deploy AI for Network Operations, 84% Expect AI-Led Operating Model Within 12 Months</title>
-      <link>https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html</link>
-      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise-302887642.html</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco and Omdia's study of 1,000 IT and network operations leaders shows 75% of organizations have already deployed AI for network operations, with more than half running agentic AI systems in production today and 84% expecting an AI-led operating model within 12 months. Over three-quarters are willing to grant agentic AI significant autonomy in NetOps, with 86% saying a single integrated platform is most effective.&lt;/p&gt;&lt;p&gt;Source: Cisco Blogs / PR Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetOps is already deploying agentic autonomy - trust will decide how far it goes</title>
-      <link>https://blogs.cisco.com/news/netops-is-already-deploying-autonomy-trust-will-decide-how-far-it-goes</link>
-      <guid isPermaLink="true">https://blogs.cisco.com/news/netops-is-already-deploying-autonomy-trust-will-decide-how-far-it-goes</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Cisco and Omdia study of 1,000 IT and network operations leaders shows 75% have already deployed AI for network operations, with 84% expecting to reach an AI-led operating model within 12 months. More than three-quarters willing to grant agentic AI significant autonomy in NetOps, but trust requires explainability, approval gates, policy limits, and audit trails.&lt;/p&gt;&lt;p&gt;Source: Cisco Blogs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Unit 42 Continuous Frontier AI Defense: Agentic Offensive Security with Claude Mythos and GPT-5.6</title>
-      <link>https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense</link>
-      <guid isPermaLink="true">https://investors.paloaltonetworks.com/news-releases/news-release-details/unit-42-continuous-frontier-ai-defense</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Palo Alto Networks announced Unit 42 Continuous Frontier AI Defense, an agentic offensive security service leveraging frontier AI models (Anthropic's Claude Mythos and OpenAI's GPT-5.6) to perpetually identify, validate, and remediate enterprise vulnerabilities before attackers exploit them. The service addresses threat actors' new capability to compress breach cycles from weeks to hours.&lt;/p&gt;&lt;p&gt;Source: Palo Alto Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>D&amp;H Distributing Expands Relationship with HPE; Chosen as a North American Distributor of HPE Networking</title>
-      <link>https://www.globenewswire.com/news-release/2026/09/23/3367501/0/en/d-h-distributing-expands-relationship-with-hpe-chosen-as-a-north-american-distributor-of-hpe-networking.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/09/23/3367501/0/en/d-h-distributing-expands-relationship-with-hpe-chosen-as-a-north-american-distributor-of-hpe-networking.html</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;D&amp;amp;H Distributing extended its distribution partnership with HPE on September 23, 2026, gaining access to the HPE Networking portfolio including HPE Juniper Networking routers and switches, with full availability to partners by end of September 2026. This integration adds HPE Networking to D&amp;amp;H's Advanced Solutions+ ecosystem, giving partners access to HPE's networking, cloud, and AI portfolios along with D&amp;amp;H's training, enablement, and 24/7 support.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Marvell Showcases 2nm Optical Technology and 1.6T Coherent Optics at ECOC 2026</title>
-      <link>https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html</link>
-      <guid isPermaLink="true">https://www.marvell.com/company/newsroom/marvell-industry-first-2nm-optical-technology-ai-data-center-infrastructure-ecoc-2026.html</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;Marvell demonstrated 2nm 800G ZR/ZR+ with MACsec and first 2nm 1.6T ZR and coherent-lite O-band optical technologies at ECOC 2026, powered by next-generation DSPs optimized for high-bandwidth connectivity within and between data center facilities and paving the way for 3.2T connectivity. Advanced co-packaged optics (CPO) technology integrates optics directly with AI accelerators and switch silicon as per-lane speeds and multi-rack AI pods push past copper's reach limits.&lt;/p&gt;&lt;p&gt;Source: Marvell Technology · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Snorkel AI Raises $350M Series E at $3.5B Valuation to Build the Frontier Lab for AI Data</title>
-      <link>https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/</link>
-      <guid isPermaLink="true">https://snorkel.ai/blog/data-2-0-and-the-research-era-of-ai-data/</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Snorkel AI announced a $350M Series E at $3.5B valuation, having achieved $375M annualized revenue run rate (18x growth year-over-year) from its data-as-a-service pivot. The company now supplies finished training datasets, evaluation environments, and RL environments to frontier labs and enterprises, shifting from labeling software to prepared data products.&lt;/p&gt;&lt;p&gt;Source: Snorkel AI Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mirendil Raises $1B Series A at $5B Valuation to Scale Self-Improving AI Research Systems</title>
-      <link>https://www.bloomberg.com/news/articles/2026-09-22/ex-anthropic-staffers-ai-startup-in-talks-to-raise-at-5-billion-value</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-09-22/ex-anthropic-staffers-ai-startup-in-talks-to-raise-at-5-billion-value</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Mirendil, founded by ex-Anthropic researchers Behnam Neyshabur and Harsh Mehta, is in talks to raise up to $1B at a $5B valuation (5x increase from $1B seed in June 2026). The startup is building AI systems that autonomously improve themselves—a capability that frontier labs OpenAI, Anthropic, and DeepMind guard internally but Mirendil aims to productize.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic Claude Opus 5.5: Fable-class performance at 40% lower cost for production agents</title>
-      <link>https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price</link>
-      <guid isPermaLink="true">https://venturebeat.com/technology/anthropic-releases-claude-opus-5-5-beating-fable-5-1-on-key-agentic-benchmarks-at-60-cheaper-api-price</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, delivering Fable 5.1-class performance while cutting execution costs by roughly 40% compared to Opus 5. Pricing drops 20% on raw tokens to $4 per million input tokens and $20 per million output tokens, while prompt cache reads drop 60% to $0.20 per million. According to Artificial Analysis, Opus 5.5 achieved top spot on their Intelligence Index with a score of 58 at max effort, leading on six of ten core evaluations including Humanity's Last Exam (61.4%) and SciCode (66.9%).&lt;/p&gt;&lt;p&gt;Source: VentureBeat · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI GPT-6 Sol and Luna: 50% price cuts and three-tier distribution architecture</title>
-      <link>https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more</link>
-      <guid isPermaLink="true">https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI released GPT-6 Sol and Luna on September 22, 2026, with permanent pricing cutting API costs 50% versus GPT-5.6 series. Sol runs at $2 per million input tokens and $10 per million output; Luna at $0.10 and $0.50. Together with Astra at $10/$50, OpenAI now fields a three-tier family spanning enterprise reasoning to high-volume clerical work. Both models were trained with similar methods to Astra but optimized for speed and cost through improvements in caching and inference.&lt;/p&gt;&lt;p&gt;Source: VentureBeat · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ShareGate reports 77% of organizations hit Microsoft 365 governance incidents; AI adoption outpaces controls</title>
-      <link>https://www.manilatimes.net/2026/09/23/tmt-newswire/pr-newswire/three-in-four-organizations-experienced-microsoft-365-governance-incidents-in-the-past-year-as-ai-adoption-outpaces-the-skills-to-govern-it/2431420</link>
-      <guid isPermaLink="true">https://www.manilatimes.net/2026/09/23/tmt-newswire/pr-newswire/three-in-four-organizations-experienced-microsoft-365-governance-incidents-in-the-past-year-as-ai-adoption-outpaces-the-skills-to-govern-it/2431420</guid>
-      <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;In the past year, 38% of organizations left former employees or guests with access they should have lost, 35% hit an audit or compliance gap, and 26% had sensitive content reach the wrong people; altogether, 77% experienced at least one Microsoft 365 governance incident, as two-thirds now run two or more AI tools on that same content. Meanwhile, just 1% use a purpose-built governance tool. The governance gap reflects enterprise adoption massively outpacing security infrastructure.&lt;/p&gt;&lt;p&gt;Source: The Manila Times / PRNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-23.html&quot;&gt;Sep 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
