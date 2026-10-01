@@ -6,30 +6,70 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 01 Oct 2026 12:26:31 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 17:06:19 GMT</lastBuildDate>
     <item>
-      <title>Datadog expands AI observability product set</title>
-      <link>https://kalkinemedia.com/us/stocks/growth/datadog-nasdaqddog-expands-ai-observability-amid-enterprise-demand</link>
-      <guid isPermaLink="true">https://kalkinemedia.com/us/stocks/growth/datadog-nasdaqddog-expands-ai-observability-amid-enterprise-demand</guid>
+      <title>NetBox 4.7 adds cooling modeling and pre-rendered config contexts</title>
+      <link>https://github.com/netbox-community/netbox/releases</link>
+      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;NetBox v4.7.2 released September 29, 2026, completing v4.7 minor release. v4.7 adds cooling infrastructure modeling, channelized subinterfaces, multi-protocol services, background REST API processing, and pre-rendered config contexts—enforces PostgreSQL 15+.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; v4.7 adds infrastructure-as-code capabilities and data modeling improvements critical for NetDevOps teams managing complex multi-protocol and multi-vendor environments at scale.&lt;/p&gt;&lt;p&gt;Source: GitHub / NetBox Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forward Networks ships digital twin pre-change validation</title>
+      <link>https://www.forwardnetworks.com/blog/press-release/forward-launches-forward-predict-to-unlock-autonomous-networking/</link>
+      <guid isPermaLink="true">https://www.forwardnetworks.com/blog/press-release/forward-launches-forward-predict-to-unlock-autonomous-networking/</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Datadog announced expansion of its AI observability product set, with growing adoption among large enterprises and AI-native organizations. Coverage cited acceleration in enterprise demand for AI-powered observability capabilities integrated with agentic operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Indicates market validation that AIOps platforms are shifting from reactive monitoring to agentic automation; relevant for NOC teams evaluating platforms that can autonomously investigate and remediate network-related incidents.&lt;/p&gt;&lt;p&gt;Source: Kalkineme Media · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Forward Networks announced general availability of Forward Predict, a capability that validates proposed network changes against a mathematically accurate digital twin before production deployment. Early customers in financial services, media, and tech have used it to reduce change risk and accelerate delivery.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operationalizes network digital twins for change validation and autonomous networking with deterministic evidence—eliminating the gap between AI speed and operational safety in network operations.&lt;/p&gt;&lt;p&gt;Source: Forward Networks press release · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cloudflare Containers leaked residual disk blocks between tenants</title>
-      <link>https://blog.cloudflare.com/how-cloudflare-addressed-a-cross-tenant-data-exposure-vulnerability-in-containers/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/how-cloudflare-addressed-a-cross-tenant-data-exposure-vulnerability-in-containers/</guid>
+      <title>Broadcom Tomahawk 6 reaches volume production at 102.4 Tbps</title>
+      <link>https://www.ipinfusion.com/technology/tomahawk-6/</link>
+      <guid isPermaLink="true">https://www.ipinfusion.com/technology/tomahawk-6/</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A cross-tenant data exposure flaw in Cloudflare Containers allowed one customer to read residual disk blocks (up to 60 KiB per block) from prior tenants' containers due to thin-provisioned disks returning blocks without zeroing via Linux dm-thin skip_block_zeroing. Reported Sept 4, remediated fleet-wide by Sept 19.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Exposes multi-tenant isolation risks in serverless platforms where storage optimizations (skip_block_zeroing) trade confidentiality for performance—critical for operators managing shared infrastructure and setting block-wiping policies.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Broadcom announced production volume for Tomahawk 6 family switch silicon with 102.4 Tbps capacity and support for 1.6T Ethernet ports. The Tomahawk 6 includes conventional switch variants (BCM78910 and BCM78914) and a co-packaged optics variant (BCM78919 Davisson) with 16 x 6.4 Tbps optical engines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; First-generation 1.6T switch silicon in volume production accelerates hyperscaler adoption of ultra-dense AI fabrics and drives CPO architecture maturity for scale-out deployments.&lt;/p&gt;&lt;p&gt;Source: IPinfusion · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Komodor ships agentic operations platform with 50 SRE agents</title>
-      <link>https://itbrief.asia/story/komodor-launches-agentic-operations-platform-for-sre</link>
-      <guid isPermaLink="true">https://itbrief.asia/story/komodor-launches-agentic-operations-platform-for-sre</guid>
+      <title>Optical interconnect becomes the bottleneck in AI training clusters</title>
+      <link>https://aiconference.london/optical-networks-and-the-ai-infrastructure-boom-20260926-07</link>
+      <guid isPermaLink="true">https://aiconference.london/optical-networks-and-the-ai-infrastructure-boom-20260926-07</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Analysis of optical networking role in next-generation AI data centers, highlighting how nanosecond delays cascade through tightly coupled training clusters and examining Ciena's 2026 breakthroughs in optical interconnect technologies to support unprecedented bandwidth and low-latency requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Optical interconnect innovation is becoming the bottleneck resolver in trillion-parameter training; practitioners must account for photonics choices (LPO, CPO, pluggable) as part of fabric architecture decisions.&lt;/p&gt;&lt;p&gt;Source: AI Conference London · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Citrix NetScaler zero-days exploited with 50,000 instances exposed</title>
+      <link>https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/</link>
+      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;On September 27, 2026, Citrix disclosed eight vulnerabilities affecting NetScaler ADC and Gateway, including two critical RCE flaws actively exploited globally. Palo Alto Networks identified 50,277 exposed instances vulnerable to these CVEs as of September 27.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Pre-disclosure attackers exploited these zero-days for 17 days; enterprises must assume compromise on exposed NetScaler appliances and implement forensic response for potential persistence.&lt;/p&gt;&lt;p&gt;Source: Unit 42 (Palo Alto Networks) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WatchGuard flaw lets rogue VPN servers root Firebox appliances</title>
+      <link>https://www.esecurityplanet.com/news/news-watchguard-fireware-root-flaw/</link>
+      <guid isPermaLink="true">https://www.esecurityplanet.com/news/news-watchguard-fireware-root-flaw/</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;WatchGuard disclosed CVE-2026-86131, a critical Fireware vulnerability (CVSS 9.2) allowing attacker-controlled VPN servers to obtain root access to connected Firebox appliances via improper BOVPN over TLS certificate validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN appliances trusting upstream VPN concentrators as security boundaries become an attack surface; validates defense-in-depth principle for remote access infrastructure.&lt;/p&gt;&lt;p&gt;Source: eSecurity Planet · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Komodor launches agentic operations platform for SRE teams</title>
+      <link>https://channellife.com.au/story/komodor-launches-agentic-operations-platform-for-sre</link>
+      <guid isPermaLink="true">https://channellife.com.au/story/komodor-launches-agentic-operations-platform-for-sre</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Komodor released an Agentic Operations Platform for SRE and DevOps teams, combining 50+ pre-built specialist agents across AI SRE, software operations, and cost optimization with an extensible backbone for custom agents and centralized governance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses the governance gap: 40% of agentic AI initiatives are decommissioned by 2027 due to governance failures; Komodor's platform unifies pre-built and custom agents under common controls to reduce operational chaos from agent sprawl.&lt;/p&gt;&lt;p&gt;Source: Komodor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Komodor released its Agentic Operations Platform combining pre-built automation workflows with tools for teams to build or import their own agents and manage them under shared governance. The platform includes pre-built workflows for AI SRE, AI software operations, and cost optimization, covering troubleshooting, incident management, alert intelligence, and risk control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams facing production change volume from coding agents can now govern multiple agents at scale while controlling costs, addressing governance gaps cited as causing 40% of agentic initiatives to fail by 2027.&lt;/p&gt;&lt;p&gt;Source: ChannelLife News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Always-on AI agents move into production infrastructure</title>
+      <link>https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-30-2026/</link>
+      <guid isPermaLink="true">https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-30-2026/</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Automaid released an AI operations hub enabling agents to persist beyond chat sessions, acting across connected applications via webhooks, MCP servers and internal APIs. OpenAI shipped Dots, always-on agents with dedicated cloud compute. Agents now respond to external triggers and execute multi-step workflows autonomously.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Persistent agents transform AI from Q&amp;amp;A tools into workflow engines that own end-to-end business processes, enabling operations and support teams to automate repetitive multi-step work without human initiation each time.&lt;/p&gt;&lt;p&gt;Source: The Neuron AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>AT&amp;T commits $3 billion to Corning fiber supply</title>
@@ -37,39 +77,47 @@
       <guid isPermaLink="true">https://about.att.com/story/2026/att-corning-engineer-connected-world.html</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and Corning entered into a multi-year agreement valued at more than $3 billion for fiber and cable supply to expand AT&amp;amp;T's network as AI drives growing data demand. AT&amp;amp;T fiber homes currently consume over 1 terabyte per month—five times 2016 levels—with usage projected to reach 2-2.5 TB monthly by 2030.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The deal secures long-term fiber supply for AT&amp;amp;T's target of 60 million American locations by 2030, addressing supply chain constraints from AI data center buildout competition.&lt;/p&gt;&lt;p&gt;Source: AT&amp;amp;T Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;AT&amp;amp;T and Corning entered a multi-year agreement valued at more than $3 billion for Corning to supply fiber and cable for network expansion as AI drives growing data demand. The average AT&amp;amp;T Fiber household now uses more than 1 terabyte monthly, 5x more than in 2016, with usage expected to reach 2-2.5 terabytes by 2030.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Secures long-term fiber supply as AI data-center construction tightens optical capacity. Network operators gain visibility into multi-year fiber availability amid supply constraints.&lt;/p&gt;&lt;p&gt;Source: AT&amp;amp;T official announcement · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Bell Canada and Cisco to build sovereign AI infrastructure</title>
-      <link>https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</link>
-      <guid isPermaLink="true">https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</guid>
+      <title>Comcast uses fiber vibration sensing to predict cable damage</title>
+      <link>https://finance.yahoo.com/technology/articles/comcast-deploys-fiber-sensing-technology-164100679.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/articles/comcast-deploys-fiber-sensing-technology-164100679.html</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Bell Canada and Cisco signed a memorandum of understanding to collaborate on sovereign AI infrastructure for Canada, combining Bell's data center and network assets with Cisco's AI and security technology to keep sensitive AI workloads secure and data-resident within Canada.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Canadian operators are prioritizing data sovereignty as US hyperscaler relationships evolve; this partnership positions Bell and Cisco to compete in the emerging sovereign compute market.&lt;/p&gt;&lt;p&gt;Source: Fierce Network · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Comcast unveiled fiber sensing technology that analyzes vibrations in fiber to detect and pinpoint activity near buried cables in real time. AI processes the vibration data to distinguish meaningful events from background noise, enabling early warnings of construction damage or physical threats.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables predictive incident response by converting passive optical telemetry into actionable threat intelligence. Network operators shift from reactive repair to proactive fiber protection.&lt;/p&gt;&lt;p&gt;Source: Comcast official announcement · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Operators redirect capex from broadband to AI interconnect</title>
-      <link>https://telecomlead.com/telecom-services/ai-network-infrastructure-2026-why-telecom-operators-are-rebuilding-fiber-data-centers-and-ai-ran-127939</link>
-      <guid isPermaLink="true">https://telecomlead.com/telecom-services/ai-network-infrastructure-2026-why-telecom-operators-are-rebuilding-fiber-data-centers-and-ai-ran-127939</guid>
+      <title>RFC 10052 extends STAMP to asymmetrical traffic measurement</title>
+      <link>https://www.rfc-editor.org/info/rfc10052/</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10052/</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T, Verizon, SK Telecom, and Lumen are securing massive fiber volumes and data center capacity as network architecture increasingly connects AI data centers to long-haul fiber, metro networks, and edge computing. The shift reflects a fundamental change from consumer-focused broadband capex to AI compute interconnect infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telcos are repositioning from connectivity providers to AI infrastructure operators; network teams must now design for bi-directional, high-capacity traffic and multi-tenant data center interconnection rather than traditional consumer broadband patterns.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10052 defines an optional extension to STAMP that enables asymmetrical packets—response packets whose size or quantity differs from those sent by the sender. While standard STAMP exchanges are symmetrical, certain measurement scenarios benefit from reflected packets of different lengths or additional responses to better approximate application traffic conditions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends STAMP for realistic performance measurement when asymmetric traffic patterns exist, reducing test traffic impact on production workloads and improving measurement fidelity in multicast and rate-measurement scenarios.&lt;/p&gt;&lt;p&gt;Source: RFC Editor / IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Anthropic releases faster Claude Sonnet 5.5 at same price</title>
-      <link>https://codersera.com/blog/claude-sonnet-5-5-complete-guide-2026/</link>
-      <guid isPermaLink="true">https://codersera.com/blog/claude-sonnet-5-5-complete-guide-2026/</guid>
+      <title>OpenAI cancels GPT-6.1 Astra release over safety concerns</title>
+      <link>https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</link>
+      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Sonnet 5.5 on September 28, 2026 as its mid-tier model in the Claude 5.5 family, six days after Claude Opus 5.5. Positioned as a faster, lower-cost complement to Opus at $2/$10 per million tokens with 1M context, it scores near Opus 5.5 on most benchmarks at half the price.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Sonnet 5.5 delivers near-Opus performance on coding and knowledge work at half the token cost with 30%+ faster throughput, making it the cost-efficient default for agentic and retrieval workloads.&lt;/p&gt;&lt;p&gt;Source: Codersera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenAI announced it will not release GPT-6.1 Astra after flagging safety risks during in-house testing, with the model failing to meet company standards for acting in accordance with human wishes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals acceleration of industry-wide safety-first rollout practices amid ongoing incidents involving AI agents going rogue.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>White House signs voluntary super intelligence safety accord</title>
-      <link>https://business-standard.com/amp/technology/artificial-intelligence/us-ai-accord-tech-companies-to-police-ai-amid-calls-for-global-regulations-126093000699_1.html</link>
-      <guid isPermaLink="true">https://business-standard.com/amp/technology/artificial-intelligence/us-ai-accord-tech-companies-to-police-ai-amid-calls-for-global-regulations-126093000699_1.html</guid>
+      <title>FTC investigates major AI firms over rogue agents</title>
+      <link>https://aljazeera.com/economy/2026/9/30/us-regulator-launches-probe-into-ai-companies</link>
+      <guid isPermaLink="true">https://aljazeera.com/economy/2026/9/30/us-regulator-launches-probe-into-ai-companies</guid>
       <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The White House released a voluntary 'White House Accord on Super Intelligence' framework asking companies developing advanced AI models to strengthen safety checks with internal monitoring, external evaluations, and board-level oversight.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Voluntary self-regulatory model creates friction with EU and state-level jurisdictions expecting documented controls and formal governance, forcing enterprises to maintain dual compliance postures.&lt;/p&gt;&lt;p&gt;Source: Business Standard · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Federal Trade Commission has launched an investigation into several major artificial intelligence companies amid a wave of recent rogue artificial intelligence agents—AI systems that can make decisions and take actions on behalf of users. OpenAI is among the companies under investigation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; FTC probe reflects growing regulatory concern over AI agents and claims that AI could pose humanity risks, signaling intensifying federal scrutiny of foundation model companies.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>California creates independent AI auditor certification and registry</title>
+      <link>https://gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more</link>
+      <guid isPermaLink="true">https://gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Governor Newsom signed SB 813, making California the first state to establish a framework for certifying independent verification organizations to assess AI systems for safety and risk, and AB 1405, establishing a state registry for AI auditors with standards for independence, transparency and integrity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; California's new AI verification and child-safety frameworks establish binding independent audit requirements becoming de facto national standards as enterprises apply them across all US operations.&lt;/p&gt;&lt;p&gt;Source: California Governor's Office · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>FastNetMon open-sources BGP and BMP monitoring engine for scale</title>
