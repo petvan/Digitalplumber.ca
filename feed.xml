@@ -6,7 +6,71 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 30 Sep 2026 16:26:36 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:26:31 GMT</lastBuildDate>
+    <item>
+      <title>Datadog expands AI observability product set</title>
+      <link>https://kalkinemedia.com/us/stocks/growth/datadog-nasdaqddog-expands-ai-observability-amid-enterprise-demand</link>
+      <guid isPermaLink="true">https://kalkinemedia.com/us/stocks/growth/datadog-nasdaqddog-expands-ai-observability-amid-enterprise-demand</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Datadog announced expansion of its AI observability product set, with growing adoption among large enterprises and AI-native organizations. Coverage cited acceleration in enterprise demand for AI-powered observability capabilities integrated with agentic operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Indicates market validation that AIOps platforms are shifting from reactive monitoring to agentic automation; relevant for NOC teams evaluating platforms that can autonomously investigate and remediate network-related incidents.&lt;/p&gt;&lt;p&gt;Source: Kalkineme Media · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloudflare Containers leaked residual disk blocks between tenants</title>
+      <link>https://blog.cloudflare.com/how-cloudflare-addressed-a-cross-tenant-data-exposure-vulnerability-in-containers/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/how-cloudflare-addressed-a-cross-tenant-data-exposure-vulnerability-in-containers/</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;A cross-tenant data exposure flaw in Cloudflare Containers allowed one customer to read residual disk blocks (up to 60 KiB per block) from prior tenants' containers due to thin-provisioned disks returning blocks without zeroing via Linux dm-thin skip_block_zeroing. Reported Sept 4, remediated fleet-wide by Sept 19.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Exposes multi-tenant isolation risks in serverless platforms where storage optimizations (skip_block_zeroing) trade confidentiality for performance—critical for operators managing shared infrastructure and setting block-wiping policies.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Komodor ships agentic operations platform with 50 SRE agents</title>
+      <link>https://itbrief.asia/story/komodor-launches-agentic-operations-platform-for-sre</link>
+      <guid isPermaLink="true">https://itbrief.asia/story/komodor-launches-agentic-operations-platform-for-sre</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Komodor released an Agentic Operations Platform for SRE and DevOps teams, combining 50+ pre-built specialist agents across AI SRE, software operations, and cost optimization with an extensible backbone for custom agents and centralized governance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses the governance gap: 40% of agentic AI initiatives are decommissioned by 2027 due to governance failures; Komodor's platform unifies pre-built and custom agents under common controls to reduce operational chaos from agent sprawl.&lt;/p&gt;&lt;p&gt;Source: Komodor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AT&amp;T commits $3 billion to Corning fiber supply</title>
+      <link>https://about.att.com/story/2026/att-corning-engineer-connected-world.html</link>
+      <guid isPermaLink="true">https://about.att.com/story/2026/att-corning-engineer-connected-world.html</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AT&amp;amp;T and Corning entered into a multi-year agreement valued at more than $3 billion for fiber and cable supply to expand AT&amp;amp;T's network as AI drives growing data demand. AT&amp;amp;T fiber homes currently consume over 1 terabyte per month—five times 2016 levels—with usage projected to reach 2-2.5 TB monthly by 2030.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The deal secures long-term fiber supply for AT&amp;amp;T's target of 60 million American locations by 2030, addressing supply chain constraints from AI data center buildout competition.&lt;/p&gt;&lt;p&gt;Source: AT&amp;amp;T Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell Canada and Cisco to build sovereign AI infrastructure</title>
+      <link>https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</link>
+      <guid isPermaLink="true">https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell Canada and Cisco signed a memorandum of understanding to collaborate on sovereign AI infrastructure for Canada, combining Bell's data center and network assets with Cisco's AI and security technology to keep sensitive AI workloads secure and data-resident within Canada.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Canadian operators are prioritizing data sovereignty as US hyperscaler relationships evolve; this partnership positions Bell and Cisco to compete in the emerging sovereign compute market.&lt;/p&gt;&lt;p&gt;Source: Fierce Network · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Operators redirect capex from broadband to AI interconnect</title>
+      <link>https://telecomlead.com/telecom-services/ai-network-infrastructure-2026-why-telecom-operators-are-rebuilding-fiber-data-centers-and-ai-ran-127939</link>
+      <guid isPermaLink="true">https://telecomlead.com/telecom-services/ai-network-infrastructure-2026-why-telecom-operators-are-rebuilding-fiber-data-centers-and-ai-ran-127939</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AT&amp;amp;T, Verizon, SK Telecom, and Lumen are securing massive fiber volumes and data center capacity as network architecture increasingly connects AI data centers to long-haul fiber, metro networks, and edge computing. The shift reflects a fundamental change from consumer-focused broadband capex to AI compute interconnect infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telcos are repositioning from connectivity providers to AI infrastructure operators; network teams must now design for bi-directional, high-capacity traffic and multi-tenant data center interconnection rather than traditional consumer broadband patterns.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic releases faster Claude Sonnet 5.5 at same price</title>
+      <link>https://codersera.com/blog/claude-sonnet-5-5-complete-guide-2026/</link>
+      <guid isPermaLink="true">https://codersera.com/blog/claude-sonnet-5-5-complete-guide-2026/</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic released Claude Sonnet 5.5 on September 28, 2026 as its mid-tier model in the Claude 5.5 family, six days after Claude Opus 5.5. Positioned as a faster, lower-cost complement to Opus at $2/$10 per million tokens with 1M context, it scores near Opus 5.5 on most benchmarks at half the price.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Sonnet 5.5 delivers near-Opus performance on coding and knowledge work at half the token cost with 30%+ faster throughput, making it the cost-efficient default for agentic and retrieval workloads.&lt;/p&gt;&lt;p&gt;Source: Codersera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>White House signs voluntary super intelligence safety accord</title>
+      <link>https://business-standard.com/amp/technology/artificial-intelligence/us-ai-accord-tech-companies-to-police-ai-amid-calls-for-global-regulations-126093000699_1.html</link>
+      <guid isPermaLink="true">https://business-standard.com/amp/technology/artificial-intelligence/us-ai-accord-tech-companies-to-police-ai-amid-calls-for-global-regulations-126093000699_1.html</guid>
+      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The White House released a voluntary 'White House Accord on Super Intelligence' framework asking companies developing advanced AI models to strengthen safety checks with internal monitoring, external evaluations, and board-level oversight.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Voluntary self-regulatory model creates friction with EU and state-level jurisdictions expecting documented controls and formal governance, forcing enterprises to maintain dual compliance postures.&lt;/p&gt;&lt;p&gt;Source: Business Standard · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FastNetMon open-sources BGP and BMP monitoring engine for scale</title>
       <link>https://fastnetmon.com/2026/09/29/network-engineering-community-news-september-2026/</link>
@@ -518,174 +582,6 @@
       <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Between April and September 2026, venture capital investors poured $435 million into 12 financings for enterprise AI agent security and governance companies, with nine rounds focused on making AI agents safe enough to run inside businesses. 88% of enterprises with agent initiatives never ship to production, and Gartner predicts 40% of agentic AI projects will be canceled by end of 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Capital concentration in governance infrastructure reveals market bottleneck: enterprises recognize agents require enterprise-grade risk controls before scaling—shifting investment from models to guardrails.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI-Powered Observability in Cloud-Native DevOps: LSTM-Based Anomaly Detection for Kubernetes Microservices</title>
-      <link>https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/</link>
-      <guid isPermaLink="true">https://ijsret.com/2026/09/24/ai-powered-observability-in-cloud-native-devops-lstm-based-anomaly-detection-for-kubernetes-microservices/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Ops &amp; Observability</category>
-      <description>&lt;p&gt;Researchers introduce an LSTM autoencoder-based AI observability framework integrated with Prometheus-Grafana for anomaly detection in Kubernetes microservice environments, addressing the gap where traditional rule-based monitoring is insufficient for modern cloud-native architectures.&lt;/p&gt;&lt;p&gt;Source: IJSRET · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetBrain Live 2026: Agentic NetOps Suite Unveiled September 22-24</title>
-      <link>https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations</link>
-      <guid isPermaLink="true">https://www.businesswire.com/news/home/20260529011510/en/From-Network-Automation-to-Agentic-NetOps-NetBrain-Sets-the-Standard-for-Deploying-AI-in-Network-Operations</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;NetBrain Live takes place September 22-24, 2026 in Boston unveiling full suite of agents built on context platform spanning diagnosis, remediation, change management, validation, and assessment. Represents production-grade agentic NetOps for network operations domain.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco &amp; Omdia Research: 51% of Enterprises Run Agentic AI in Production NetOps</title>
-      <link>https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html</link>
-      <guid isPermaLink="true">https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m09/cisco-ai-research-agenticops-scaling-quickly-in-the-enterprise.html</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;51% of large organizations now run agentic systems that execute autonomous modifications in production environments. 75% of organizations have already deployed AI for network operations, with 84% of technology executives anticipating running an agent-directed operational framework within the next twelve months. The study identifies a critical operational bottleneck: the average organization would need roughly 100 IT specialists to clear its daily network alert backlog by hand.&lt;/p&gt;&lt;p&gt;Source: Cisco Newsroom / Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco Catalyst Center 3.3.1 Datasheet: Updated Sept 22 with AgenticOps &amp; Lifecycle Automation</title>
-      <link>https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html</link>
-      <guid isPermaLink="true">https://www.cisco.com/c/en/us/products/collateral/networking/catalyst-center-3-3-1-ds.html</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Cisco released an updated Catalyst Center 3.3.1 datasheet (September 22, 2026) featuring new AI and AgenticOps capabilities, including the Cisco AI Assistant, and network automation deployment, configuration management, compliance, and lifecycle management features. The update reflects Cisco's push to embed agentic operations directly into its enterprise network management platform.&lt;/p&gt;&lt;p&gt;Source: Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>HPE Reports 36% Networking Orders Growth; Juniper Integration On Track</title>
-      <link>https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115</link>
-      <guid isPermaLink="true">https://www.ad-hoc-news.de/boerse/news/corporate-news/juniper-networks-stock-gains-as-hpe-points-to-synergy-progress/70099115</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Hewlett Packard Enterprise reported networking revenue grew 10% year over year in Q3 FY2026, with networking orders rising 36%, and cloud and AI orders up about 75%. HPE linked the integration to 14-17% networking growth in fiscal 2027. The strong order momentum reflects accelerating demand for AI-native networking infrastructure from the Juniper acquisition.&lt;/p&gt;&lt;p&gt;Source: AD-HOC NEWS / Futuriom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>51% of Large Organizations Run Agentic Systems in Production Networks</title>
-      <link>https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/</link>
-      <guid isPermaLink="true">https://www.telecomstechnews.com/news/cisco-agentic-ai-takes-control-enterprise-networks/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Industry research indicates that 51% of large organizations now run agentic systems that execute autonomous modifications in production environments rather than offering static operational advice. Over 84% of technology executives anticipate running an agent-directed operational framework within the next twelve months.&lt;/p&gt;&lt;p&gt;Source: Telecom Technology News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft Unveils Integrated Security Operations Center in Defender for AI Agents</title>
-      <link>https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/23/microsoft-unveils-integrated-security-operations-center-in-defender-for-ai-agents/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Microsoft announced the Integrated Security Operations Center (ISOC) in Microsoft Defender, moving security information and event management features from Microsoft Sentinel directly into Defender. The architecture addresses attackers using agents to automate execution at scale, requiring a modern cyber stack with environment-wide visibility so security operations and native protection function as one system. ISOC brings XDR, SIEM, threat intelligence, automation, and AI together in Microsoft Defender.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto Automates Vulnerability Hunting as Competitor Pressure Escalates in AI Security</title>
-      <link>https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting</link>
-      <guid isPermaLink="true">https://www.gurufocus.com/news/9091976/crowdstrike-slips-as-palo-alto-automates-vulnerability-hunting</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Palo Alto Networks pushed deeper into continuous AI-driven vulnerability hunting, creating direct competition with CrowdStrike in the race to automate more of the security workflow. Palo Alto's Unit 42 used its own AI to uncover over 14,000 unknown vulnerabilities, demonstrating practical machine-speed threat discovery. The real contest is moving beyond endpoint protection toward discovering exposures, deciding which threats matter, and fixing them with less human intervention.&lt;/p&gt;&lt;p&gt;Source: GuruFocus · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft Brings ISOC to Defender—Consolidating SIEM and XDR for Agentic SOC Operations</title>
-      <link>https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/</link>
-      <guid isPermaLink="true">https://www.unite.ai/microsoft-brings-isoc-to-defender-uniting-siem-and-threat-protection/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Security Automation</category>
-      <description>&lt;p&gt;Microsoft announced the integrated security operations center (ISOC) in Microsoft Defender on September 23, 2026, a foundation for agentic security that brings SIEM and threat protection together in one system as a shared foundation on which people and agents can see, understand, and act across the environment without running separate systems. Cyberattackers are using agents to automate execution at scale, with work that once required entire teams now requiring a single operator and an agent framework. Out-of-the-box security operations capabilities include case management, workbooks, and playbook generation in natural language.&lt;/p&gt;&lt;p&gt;Source: Unite.AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>BCE Outlines AI Infrastructure Strategy as Carrier Navigates Data Center Expansion Amid Power Constraints</title>
-      <link>https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355</link>
-      <guid isPermaLink="true">https://www.investing.com/news/transcripts/bce-at-25th-annual-cibc-eastern-institutional-investor-conference-ai-fiber-93CH-4915355</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Infrastructure</category>
-      <description>&lt;p&gt;BCE presented its AI infrastructure strategy at the CIBC Eastern Institutional Investor Conference on September 24, 2026, outlining plans centered on better customer experience, steady fiber gains, and a fast-growing AI infrastructure business. Management acknowledged heavy capital demands as the company pushes into data centers, U.S. fiber expansion, and media transformation.&lt;/p&gt;&lt;p&gt;Source: Investing.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic releases Claude Opus 5.5, cutting agentic workload costs 40% with faster inference</title>
-      <link>https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</link>
-      <guid isPermaLink="true">https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Anthropic shipped Claude Opus 5.5 on September 22, achieving 40% cost reduction versus Opus 5 and 30% faster output speed while matching Fable 5.1 performance. The model includes 1M token context, always-on adaptive thinking, and inline tool support—built for long-running agentic coding and knowledge work at scale.&lt;/p&gt;&lt;p&gt;Source: Anthropic Blog / GitHub Changelog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI, Anthropic, Google DeepMind launch formal working group on independent AI safety standards body</title>
-      <link>https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/</link>
-      <guid isPermaLink="true">https://cryptobriefing.com/google-openai-anthropic-ai-safety-standards/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenAI confirmed on September 15 that it is in active coordination with Anthropic and Google DeepMind since July 2026 to establish an independent, industry-led standards body for frontier AI model safety. The effort aims to create shared evaluation protocols, external safety assessments, and pre-release checks before public deployment, with a target launch in late 2026 or 2027.&lt;/p&gt;&lt;p&gt;Source: Bloomberg / Crypto Briefing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI launches GPT-6 Sol and Luna with 50% cost cuts and aligned reasoning improvements</title>
-      <link>https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI expanded the GPT-6 generation with updated Sol and Luna models that extend Astra's benefits by making that intelligence more efficient and accessible. Both models feature a 50% price cut for developers, with Sol cutting factual error rates in half compared to GPT-5.6 Sol. On AutomationBench and DeepSWE 1.1 benchmarks, GPT-6 Sol matched or approached Anthropic's Fable 5 and Opus 5 models at 80–90% lower task costs.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Claude Opus 5.5 ships with Fable-level performance at 40% lower runtime cost</title>
-      <link>https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained</link>
-      <guid isPermaLink="true">https://www.vellum.ai/blog/claude-opus-5-5-benchmarks-explained</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 on September 22, 2026, less than two months after Opus 5. The headline pitch is simple: it delivers Claude Fable 5.1-class performance while cutting execution costs by roughly 40% compared to Opus 5. Pricing drops 20% on raw tokens to $4 per million input tokens and $20 per million output tokens, while prompt cache reads drop 60% down to $0.20 per million.&lt;/p&gt;&lt;p&gt;Source: Vellum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google DeepMind confirms Gemini 4 in early post-training with aggressive release timeline</title>
-      <link>https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/google-gemini-4-enters-post-122454510.html</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google DeepMind has transitioned its next-generation model, Gemini 4, into the early post-training phase, confirmed by Koray Kavukcuoglu at The Information AI Agenda Live Summit on September 23-24, 2026. Kavukcuoglu signaled an aggressive timeline: intention to roll out an early post-training version as soon as possible, with no specific date but a target much earlier than end of year. This marks a critical pivot for a company whose current frontier offering sits 40 percent behind the market leaders on the standard intelligence benchmark.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>T-Mobile Expands AI-Powered AutoPilot and Dynamic CX Nationwide for 5G Network Resilience</title>
-      <link>https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make</link>
-      <guid isPermaLink="true">https://investor.t-mobile.com/news-releases/news-release-details/t-mobile-adds-new-ai-powered-intelligence-and-resilience-make</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;T-Mobile is launching new AI-powered AutoPilot capabilities and expanding Dynamic CX nationwide to make its 5G network stronger, smarter and more resilient. Built into T-Mobile's Self-Organizing Network (SON), AutoPilot helps the network make real-time adjustments faster as conditions change, while Dynamic CX uses AI to anticipate demand and optimize performance automatically, with testing showing real-time network adjustments in about half the time. During Winter Storm Fern, SON helped T-Mobile keep sites online for more than 250,000 additional minutes across 30+ states and made 30,000+ antenna adjustments to extend coverage.&lt;/p&gt;&lt;p&gt;Source: T-Mobile Newsroom / TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen Launches Intelligent Internet: On-Demand Bandwidth for AI and Cloud Workloads</title>
-      <link>https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises</link>
-      <guid isPermaLink="true">https://www.businesswire.com/news/home/20260921927643/en/Lumen-Launches-Intelligent-Internet-Bringing-Cloud-Like-Agility-to-Enterprises</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, giving customers a new digital internet experience that lets them buy connectivity in minutes and scale bandwidth up or down as AI, cloud, and business needs change. IDC research found that 37% of enterprises saw bandwidth needs grow by more than 50% year over year, while 29% struggled to align their networks with AI workloads. The service is available immediately at more than 10 million U.S. business locations and can scale to bandwidth levels of up to 100 Gbps.&lt;/p&gt;&lt;p&gt;Source: Business Wire / Lumen · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Samsung Selected as Vendor for South Korea's Hyper AI Network Initiative with KT and SK Telecom</title>
-      <link>https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/</link>
-      <guid isPermaLink="true">https://www.sammyfans.com/2026/09/24/take-a-look-at-samsungs-first-ever-galaxy-buds-on-clip-on-earbuds/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Under South Korea's Ministry of Science and ICT's Hyper AI Network initiative, Samsung has been selected as the sole global vendor for KT's project and the main vendor for SK Telecom's, with projects beginning in October 2026 using 5G Standalone private networks at industrial sites to test how AI can be integrated directly into network operations and physical machines. KT will conduct trials at HD Hyundai Samho's Yeongam shipyard where AI-powered robots will be used for welding and painting, with Samsung providing its Network in a Server platform combining virtualized RAN, AI computing and applications at the network edge.&lt;/p&gt;&lt;p&gt;Source: Samsung Electronics / Sammy Fans · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AIOps for Telecom Operations Market Projected to Reach $6.69 Billion by 2030 at 38.3% CAGR</title>
-      <link>https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report</link>
-      <guid isPermaLink="true">https://www.thebusinessresearchcompany.com/report/artificial-intelligence-for-information-technology-operations-aiops-for-telecom-operations-global-market-report</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;The artificial intelligence for information technology operations (AIOps) for telecom operations market has grown exponentially, expanding from $1.25 billion in 2025 to $1.83 billion in 2026 at a 46% CAGR, and is expected to reach $6.69 billion in 2030 at a 38.3% CAGR. Growth is attributed to telecom network complexity, increasing adoption of AI in IT operations, cloud computing in telecom, demand for real-time analytics, and need for automated infrastructure management.&lt;/p&gt;&lt;p&gt;Source: The Business Research Company · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI Calls for International Technical Standards on Recursive Self-Improvement AI</title>
-      <link>https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/</link>
-      <guid isPermaLink="true">https://www.pymnts.com/news/artificial-intelligence/2026/openai-urges-global-guardrails-on-autonomous-ai-development/</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;OpenAI published a position paper advocating for the U.S. to lead an international effort to develop global technical standards for frontier AI, specifically around recursive self-improvement (RSI) capabilities. The company proposes leveraging existing AI safety institutes through a Center for AI Standards and Innovation (CAISI) to facilitate coordinated standard-setting across democratic nations.&lt;/p&gt;&lt;p&gt;Source: PYMNTS.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CSIS Analysis: Competing Proposals for AI Governance Show Industry Convergence but Structural Disagreement</title>
-      <link>https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit</link>
-      <guid isPermaLink="true">https://www.csis.org/analysis/state-ai-global-governance-and-its-implications-us-china-summit</guid>
-      <pubDate>Thu, 24 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Google DeepMind founder Demis Hassabis proposed an industry-funded, majority-independent standards body modeled on FINRA answerable to the U.S. government. Anthropic's Dario Amodei calls for binding regulation through a government agency modeled on the FAA with authority to block unsafe model releases, while OpenAI has proposed an IAEA-style body. These competing visions shape policy as frontier labs navigate increased scrutiny.&lt;/p&gt;&lt;p&gt;Source: Center for Strategic and International Studies · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-24.html&quot;&gt;Sep 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
