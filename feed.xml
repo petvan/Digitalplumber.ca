@@ -6,7 +6,87 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 01 Oct 2026 17:06:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 16:17:40 GMT</lastBuildDate>
+    <item>
+      <title>NetBox 4.7.2 rebuilds cable paths and scopes VLAN groups</title>
+      <link>https://github.com/netbox-community/netbox/releases/tag/v4.7.2</link>
+      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases/tag/v4.7.2</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;NetBox v4.7.2 released September 29, 2026 with Cable.update_dependent_objects() hook to rebuild cable paths after writes, VLAN group site scoping, and form validation error focus improvements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fixes cable management consistency issues and improves VLAN filtering by site; operationally relevant for teams managing large cabled infrastructure via API or bulk operations.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eleven years of data test whether RPKI destabilises BGP</title>
+      <link>https://blog.apnic.net/2026/10/02/is-rpki-becoming-harmful-to-bgp-stability/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/02/is-rpki-becoming-harmful-to-bgp-stability/</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;As more address space becomes protected by RPKI and networks deploy Route Origin Validation, RPKI-related routing activity increases. Analysis of 11+ years of RPKI and BGP data measures how routing activity correlates with RPKI-related changes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; RPKI is BGP's primary hijack defence, but growing deployment may paradoxically increase control-plane churn and impact routing stability through validation-induced changes.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Philippines subsea cable cuts strip 300 Gbps of capacity</title>
+      <link>https://www.gizguide.com/2026/10/dict-submarine-cable-outage-triggers.html</link>
+      <guid isPermaLink="true">https://www.gizguide.com/2026/10/dict-submarine-cable-outage-triggers.html</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;DICT investigating subsea fiber-optic cable outage affecting Philippines on October 2, 2026. Damage to Philippines-Singapore and Philippines-Hong Kong links cost approximately 300 Gbps capacity; ISPs claim sufficient redundancy to cover loss.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Damage on dual critical SEA routes forces rerouting, increasing latency for intra-Asian cloud services, gaming, and video calls. Real-time case study of subsea infrastructure fragility and BGP re-convergence across regional ASes.&lt;/p&gt;&lt;p&gt;Source: DICT/GizGuide · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FortiMail zero-day exploited for unauthenticated arbitrary file writes</title>
+      <link>https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Fortinet disclosed a path traversal and NULL byte vulnerability allowing unauthenticated attackers to write arbitrary files via crafted HTTP/HTTPS requests to FortiMail systems. The vulnerability is being exploited in the wild; Fortinet issued immediate workarounds including disabling IBE feature and restricting management interface access from the internet.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Active exploitation of unauthenticated file write flaw on internet-facing Fortinet email gateway requires immediate workaround deployment or isolation pending vendor patches across different FortiMail versions.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SASE vendors move toward agents that write policy</title>
+      <link>https://www.thenetworkdna.com/2026/10/sase-is-moving-toward-ai-operated.html</link>
+      <guid isPermaLink="true">https://www.thenetworkdna.com/2026/10/sase-is-moving-toward-ai-operated.html</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;SASE (Secure Access Service Edge) converged SD-WAN and security services into cloud-delivered platforms; the next evolution is AI-operated SASE where agents autonomously tune paths, write policy, hunt threats, and resolve incidents without human intervention.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI-driven policy automation and autonomous threat hunting in converged SASE architectures represent the operational shift from manual zero-trust policy tuning to self-healing network access fabric.&lt;/p&gt;&lt;p&gt;Source: The Network DNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Verizon puts reasoning agents across RAN and transport</title>
+      <link>https://rcrwireless.com/20261001/ai-infrastructure/agentic-verizon-draws-line-marks-difference</link>
+      <guid isPermaLink="true">https://rcrwireless.com/20261001/ai-infrastructure/agentic-verizon-draws-line-marks-difference</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Verizon is moving beyond rule-based automation towards AI systems that can reason about problems and act across RAN, transport, and other network domains. Sub-domain agents investigate individual problems before findings are compiled to determine final deterministic actions, with the operator retaining control of intent and guardrails.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The shift from scripted automation to reasoning AI agents across network domains represents a fundamental change in autonomous network architecture that operators must architect for orchestration and governance.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vodafone and Ericsson run call translation in the network</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-19-25-sept-2026-56343/amp/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-19-25-sept-2026-56343/amp/</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Vodafone and Ericsson demonstrated real-time language translation and noise cancellation for voice calls running on the network layer without requiring customer app changes. Liberty Global partnered with Sierra to deploy multi-channel agentic AI for customer service across 80 million European connections.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network-embedded voice AI and multi-channel agentic customer engagement represent new operator revenue streams and shift telcos from connectivity-only to AI service providers.&lt;/p&gt;&lt;p&gt;Source: TelecoomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI ships GPT-6.1 Sol at a fifth of Astra cost</title>
+      <link>https://www.layer3labs.io/comparisons/gpt-6-1-sol-vs-gpt-6-sol</link>
+      <guid isPermaLink="true">https://www.layer3labs.io/comparisons/gpt-6-1-sol-vs-gpt-6-sol</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI launched GPT-6.1 Sol on September 29, 2026, as a multimodal point-release upgrade to the GPT-6 Sol series. The model costs $2 per million input tokens and $10 per million output tokens, has a 1.05M-token context window, and nearly matches GPT-6 Astra on agentic coding at about one-fifth the price.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; GPT-6.1 Sol targets agentic software engineering, desktop tool manipulation, and complex document processing, offering significant cost savings for production AI ops workloads.&lt;/p&gt;&lt;p&gt;Source: Layer3Labs / CodersEra · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BIS finds 55% of AI investment flows between AI firms</title>
+      <link>https://universalassetowners.com/intelligence/uao-daily-brief-2026-10-02</link>
+      <guid isPermaLink="true">https://universalassetowners.com/intelligence/uao-daily-brief-2026-10-02</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The Bank for International Settlements measured circular financing in AI for the first time: 55.2% of investment value flowing into AI firms came from other AI firms between 2021 and 2025. The RBA sized obligations at US$1 to 1.5 trillion with 20-30 year debt financing hardware against uncertain economic lives.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure spending concentration and circular financing creates systemic risk and potential debt service pressure if AI hardware ROI assumptions fail.&lt;/p&gt;&lt;p&gt;Source: Universal Asset Owners · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI seeks $30 billion at $1.4 trillion valuation</title>
+      <link>https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value</guid>
+      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;OpenAI aims to raise at least $30 billion at a $1.4 trillion valuation while pushing back IPO plans. CEO Sam Altman tied public listing timing to safety claims rather than business fundamentals, signaling extended private-market governance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extended private status means reduced SEC-mandated transparency; enterprises cannot rely on public disclosure for vendor due diligence on frontier AI safety and governance.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NetBox 4.7 adds cooling modeling and pre-rendered config contexts</title>
       <link>https://github.com/netbox-community/netbox/releases</link>
@@ -518,118 +598,6 @@
       <pubDate>Sat, 26 Sep 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Transparency obligations for AI systems have shifted from corporate ethics initiatives to legally enforceable requirements across multiple jurisdictions, particularly under the EU AI Act and emerging US state laws. Organizations can no longer rely on abstract principles; compliance now requires audit trails, data governance pipelines, and jurisdictional risk assessment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Transparency is now a legal requirement with enforcement mechanisms; non-compliance carries fines; compliance strategies must map AI deployments to user jurisdiction and regulatory scope.&lt;/p&gt;&lt;p&gt;Source: Luiza's Newsletter · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-26.html&quot;&gt;Sep 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Vendors ship identity and backup controls built for AI agents</title>
-      <link>https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/</link>
-      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/09/25/new-infosec-products-of-the-month-september-2026/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Ping Identity announced Enterprise Personal Agent Access combining discovery, secretless privileged access, and runtime control for AI agents. Cohesity introduced Agent Resilience for discovering, protecting, and recovering infrastructure behind enterprise agents. Dataminr released agentic AI capabilities for corporate security teams.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Vendors are shipping agent-specific IAM, runtime enforcement, and resilience controls; infrastructure and security teams need to understand how these integrate with existing identity, observability, and backup systems as agent adoption moves to production scale.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>agentproto runtime adds Grok 4.x and million-token Codestral models</title>
-      <link>https://github.com/agentproto/ts/releases/tag/release/2026-09-25</link>
-      <guid isPermaLink="true">https://github.com/agentproto/ts/releases/tag/release/2026-09-25</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;agentproto released TypeScript agentic runtime updates with scheduled catalog sync adding Grok 4.x multi-agent variants, Codestral 2508 (256K context), and Mistral glm-5-2 (1M context). All thirteen packages are patch-only with no breaking changes or migration required.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multi-agent model variants (Grok 4.20-multi-agent-0309) and large context windows (1M tokens) lower barriers for agents coordinating across multiple reasoning tasks and maintaining state across tool calls without truncation.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Autonomous AI agents breached 27 companies and stole card data</title>
-      <link>https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c</link>
-      <guid isPermaLink="true">https://www.cisoplatform.com/profiles/blogs/breach-watch-september-23-2026-ai-agents-autonomously-breach-27-c</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Transluce research shows AI-agent-driven skimming campaigns that independently scan for vulnerable sites, exploit them, deploy skimming code, and clean up evidence with minimal human direction. Threat actors have moved beyond proof-of-concept agent chains to production campaigns breaching 27 companies and stealing over 600,000 credit cards.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agent autonomy is no longer confined to defensive operations; security teams must assume sophisticated threat actors are deploying multi-step agentic workflows for reconnaissance, exploitation, and exfiltration at scale, changing threat modeling for network and infrastructure teams.&lt;/p&gt;&lt;p&gt;Source: CISO Platform · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dataiku tool inventories AI agents across rival platforms</title>
-      <link>https://www.dataiku.com/company/news/dataiku-agent-management-general-availability</link>
-      <guid isPermaLink="true">https://www.dataiku.com/company/news/dataiku-agent-management-general-availability</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Dataiku announced Agent Management on September 24, 2026, a standalone product that discovers every AI agent an enterprise runs regardless of platform, measures business and technical performance, and flags highest-risk agents. General availability planned for October 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fewer than one in five organizations maintain a complete inventory of their AI systems; centralized agent observability and governance solves critical operational blindness for large-scale AI deployments.&lt;/p&gt;&lt;p&gt;Source: Dataiku · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen sells on-demand bandwidth that scales with AI workloads</title>
-      <link>https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity</link>
-      <guid isPermaLink="true">https://www.benton.org/newsletter/daily-digest-9242026-new-compact-connectivity</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Lumen Technologies launched Lumen Intelligent Internet, enabling enterprise customers to buy connectivity in minutes and scale bandwidth elastically as AI and cloud workloads demand. IDC research shows 37% of enterprises experienced 50%+ year-over-year bandwidth growth, with 29% struggling to align networks with AI workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; On-demand bandwidth provisioning eliminates network as a constraint for scaling AI inference and training; network elasticity now matches compute elasticity, critical for LLM cluster operations.&lt;/p&gt;&lt;p&gt;Source: Benton Institute for Broadband &amp;amp; Society · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Flash-dLLM cuts memory and bandwidth costs in LLM inference</title>
-      <link>https://github.com/zachysun/DailyArXiv/issues/567</link>
-      <guid isPermaLink="true">https://github.com/zachysun/DailyArXiv/issues/567</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Flash-dLLM optimizes key-value caching and parallel decoding in diffusion language models through IO-aware kernel techniques, addressing memory and bandwidth bottlenecks in LLM inference systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Memory-bandwidth optimization in LLM serving directly impacts cluster utilization and per-token serving cost, critical metrics for infrastructure teams sizing GPU clusters for production agentic workloads.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic and OpenAI cut model prices on the same day</title>
-      <link>https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/22/anthropic-releases-claude-opus-5-5-and-openai-counters-with-two-cheaper-gpt-6-models/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic released Claude Opus 5.5 with 20% price cuts (to $4/$20 per million tokens, 60% reduction on cache reads) and improved safety metrics; OpenAI immediately countered with GPT-6 Sol and Luna at half the cost of predecessors, with Sol at $2/$10 and Luna at $0.10/$0.50 per million tokens.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Direct API cost reduction and competitive positioning changes how teams evaluate model economics for production workloads and agentic deployments.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI launches cheaper GPT-6 Sol and Luna models</title>
-      <link>https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5</link>
-      <guid isPermaLink="true">https://decrypt.co/378986/openai-launches-gpt-6-sol-luna-anthropic-claude-opus-5-5</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI launched GPT-6 Sol and Luna on September 22, minutes after Anthropic's Claude Opus 5.5 release. Sol costs $2 per million input tokens and $10 output (down from $4/$20); Luna drops to $0.10/$0.50 (from $0.20/$1.20). Both models sit below GPT-6 Astra.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Pricing halving and rapid release cycles create new cost tiers for both enterprise and edge-use-case deployments, affecting model selection strategies.&lt;/p&gt;&lt;p&gt;Source: Decrypt · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google DeepMind says Gemini 4 is in post-training</title>
-      <link>https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model</link>
-      <guid isPermaLink="true">https://www.gurufocus.com/news/9094960/googles-deepmind-nears-launch-of-gemini-4-ai-model</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google DeepMind announced on September 24 that Gemini 4 is in early post-training phase, with expected release before year-end. The model is positioned to compete with recent Anthropic and OpenAI launches.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gemini 4 timeline signals Google's three-way competitive refresh cadence and provides practitioners a near-term window for evaluating multimodal reasoning capabilities.&lt;/p&gt;&lt;p&gt;Source: GuruFocus · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Orange takes Nokia AI-RAN into live network testing</title>
-      <link>https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20260922/network-infrastructure/orange-takes-nokia-ai-ran-into-live-network-testing</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Orange is preparing to test Nokia's AI-RAN platform in its live network, putting claimed radio-efficiency gains to the commercial test while exploring shared compute for AI workloads. Orange will start small, testing performance, energy efficiency, operational impact and total cost of ownership before scaling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Validates whether AI-RAN can work under production conditions with live traffic and customer obligations—moving beyond lab trials to operator validation on network operations and revenue impact.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic co-founders seek majority voting control before IPO</title>
-      <link>https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo</link>
-      <guid isPermaLink="true">https://www.theinformation.com/articles/anthropic-seeks-palantir-style-voting-control-seven-co-founders-ahead-ipo</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic is requesting shareholder approval for a special share class granting CEO Dario Amodei and six co-founders collective 50.1% voting control in most corporate matters ahead of an anticipated IPO near $2 trillion valuation. The structure mimics Palantir's founder-control framework and requires at least three of seven co-founders to retain minimum share thresholds.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Founder supershares structurally decouple governance from dilution risk—critical for long-term R&amp;amp;D focus in frontier AI labs but constrains minority shareholder influence post-IPO.&lt;/p&gt;&lt;p&gt;Source: The Information / Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ema raises $77 million as enterprises run agent workflows</title>
-      <link>https://siliconangle.com/2026/09/23/ema-raises-77m-in-funding-to-deploy-ai-employees-across-enterprise-hr-it-and-finance-departments/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/09/23/ema-raises-77m-in-funding-to-deploy-ai-employees-across-enterprise-hr-it-and-finance-departments/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Ema closed a $77 million Series B round led by Creaegis, bringing total funding to $140 million and more than quadrupling valuation from its previous round. The company reports customers running HR, IT and Finance operations on AI Employees at a scale of millions of interactions per year, with one $50B conglomerate moving from concept to production in four weeks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates enterprise agentic AI moving past pilots into sustained production with measurable ROI—resolving the deployment bottleneck that has stalled 88% of agent projects.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Opinion warns AI safety rhetoric is masking geopolitical containment</title>
-      <link>https://moderndiplomacy.eu/2026/09/23/ai-governance-must-not-become-a-geopolitical-battlefield/</link>
-      <guid isPermaLink="true">https://moderndiplomacy.eu/2026/09/23/ai-governance-must-not-become-a-geopolitical-battlefield/</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Opinion piece warns that blending legitimate AI safety concerns with geopolitical containment rhetoric distorts governance debates, as Western tech leaders and policymakers frame AI competition as military/economic contest requiring technological blockades and decoupling strategies rather than coordinated safety baselines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Identifies policy fragmentation risk: if AI governance becomes weaponized along US-China lines, enterprises face multiplied compliance regimes and fragmented standards bodies unable to coordinate safety baselines.&lt;/p&gt;&lt;p&gt;Source: Modern Diplomacy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Most enterprise agent projects never reach production despite funding surge</title>
-      <link>https://finance.yahoo.com/technology/ai/articles/enterprise-ai-agent-funding-surges-093104627.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/enterprise-ai-agent-funding-surges-093104627.html</guid>
-      <pubDate>Fri, 25 Sep 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Between April and September 2026, venture capital investors poured $435 million into 12 financings for enterprise AI agent security and governance companies, with nine rounds focused on making AI agents safe enough to run inside businesses. 88% of enterprises with agent initiatives never ship to production, and Gartner predicts 40% of agentic AI projects will be canceled by end of 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Capital concentration in governance infrastructure reveals market bottleneck: enterprises recognize agents require enterprise-grade risk controls before scaling—shifting investment from models to guardrails.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-09-25.html&quot;&gt;Sep 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
