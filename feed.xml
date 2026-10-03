@@ -6,110 +6,94 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 03 Oct 2026 07:23:54 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 14:45:19 GMT</lastBuildDate>
     <item>
-      <title>NetBox patch stops API tokens leaking into job results</title>
-      <link>https://github.com/netbox-community/netbox/releases/tag/v4.7.2</link>
-      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases/tag/v4.7.2</guid>
-      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;NetBox v4.7.2 patches a critical security flaw where plaintext API tokens created via background bulk requests were logged in job results readable by any user with job-view permissions. This release rejects such requests; exposed tokens must be replaced immediately.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; If you use NetBox's background bulk operations for automation, audit your job results for exposed tokens and upgrade to v4.7.2 immediately to prevent lateral movement via leaked credentials.&lt;/p&gt;&lt;p&gt;Source: GitHub netbox-community/netbox · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Forward Predict ships change verification against network digital twin</title>
-      <link>https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</link>
-      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</guid>
-      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Forward Predict enables safe Agentic NetOps by verifying the impact of proposed network changes against a mathematically accurate digital twin before execution, addressing security exposure, connectivity failure, and compliance violation risks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gives network operators deterministic validation of proposed changes before agents execute them—essential guardrails for safe autonomous NetOps at scale.&lt;/p&gt;&lt;p&gt;Source: PRNewswire / Forward Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Infoblox completes Kentik acquisition and merges DNS with flow data</title>
+      <title>Kentik compares twelve network monitoring platforms for 2026</title>
       <link>https://www.kentik.com/kentipedia/best-network-monitoring-tools-2026/</link>
       <guid isPermaLink="true">https://www.kentik.com/kentipedia/best-network-monitoring-tools-2026/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Infoblox completed acquisition of Kentik in August 2026, uniting DNS/DHCP/IPAM authority with real-time network flow behavioral intelligence and AI-guided investigation for root cause analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infoblox-Kentik integration unites DNS/IPAM context with behavioral flow intelligence—strengthens correlation capabilities critical for event correlation and root cause analysis in complex networks.&lt;/p&gt;&lt;p&gt;Source: Kentik · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Kentik published comprehensive 2026 network monitoring tool evaluation covering 12 platforms including Kentik, Datadog, SolarWinds NPM, LogicMonitor, ThousandEyes, Dynatrace. Kentik leads for AI-powered network intelligence; LogicMonitor for broad hybrid monitoring with AIOps; ThousandEyes for DEM and internet path visibility.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Current practitioner evaluation framework shows network observability market segmentation: AI-first intelligence platforms vs. broad observability suites vs. digital experience monitoring, helping operators evaluate tool fit for NOC operations.&lt;/p&gt;&lt;p&gt;Source: Kentik · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OpenTelemetry collectors unify traces metrics and logs for anomaly detection</title>
-      <link>https://dev.to/mtahir27/full-stack-observability-opentelemetry-structured-logging-and-tracing-in-2026-338p</link>
-      <guid isPermaLink="true">https://dev.to/mtahir27/full-stack-observability-opentelemetry-structured-logging-and-tracing-in-2026-338p</guid>
+      <title>RPKI adds negligible BGP update noise, study finds</title>
+      <link>https://blog.apnic.net/2026/10/02/is-rpki-becoming-harmful-to-bgp-stability/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/02/is-rpki-becoming-harmful-to-bgp-stability/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Full-stack observability requires unified collection of traces, metrics, and logs via OpenTelemetry SDKs and Collectors, with AI integration for automated anomaly detection and root cause analysis across distributed systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenTelemetry's stabilization across traces, metrics, logs, and continuous profiling enables NetOps teams to correlate network events with application behavior without vendor lock-in.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Study provides strong evidence that RPKI is not a significant source of BGP noise, with RPKI-triggered updates showing negligible volume. Operators should not view routing stability as a major obstacle to RPKI deployment when ROAs are managed correctly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses the common concern that RPKI deployment increases routing instability. Operators can confidently expand RPKI adoption without fearing destabilization from validation-triggered updates.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Citrix NetScaler zero-day used to plant web shells</title>
-      <link>https://dev.to/anoymask/september-2026-security-review-attacks-following-legitimate-features-and-ai-execution-capabilities-2k8l</link>
-      <guid isPermaLink="true">https://dev.to/anoymask/september-2026-security-review-attacks-following-legitimate-features-and-ai-execution-capabilities-2k8l</guid>
+      <title>Subsea cable cut disrupts Philippines to Singapore traffic</title>
+      <link>https://www.rappler.com/technology/submarine-cable-cut-philippines-singapore-disrupts-internet-services/</link>
+      <guid isPermaLink="true">https://www.rappler.com/technology/submarine-cable-cut-philippines-singapore-disrupts-internet-services/</guid>
+      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Undersea cable cut between Philippines and Singapore on October 2 disrupted international traffic; PLDT and Converge ICT rerouted most traffic through alternative submarine cables while maintaining local service availability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates real-world subsea resilience and traffic engineering responses in Southeast Asia, critical for multi-path strategy planning given regional concentration of recent cable incidents.&lt;/p&gt;&lt;p&gt;Source: Rappler · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Check Point VPN gateways exploited through pre-auth RCE flaw</title>
+      <link>https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Investigation of Citrix NetScaler zero-day CVE-2026-88772 reveals web shells and internal-facing proxies deployed on affected systems with DTLS enabled. Azure compromise by Storm-3168 demonstrates abuse of pre-assigned administrative permissions to execute mass resource deletions in 7 minutes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Attacker tradecraft now shifts to legitimate feature abuse and pre-existing administrative privileges; correlating operations across services is essential for SOC automation to detect post-compromise lateral movement invisible to perimeter firewalls.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Check Point confirmed active exploitation of CVE-2026-85102, a pre-authentication RCE in VPN certificate handling affecting Security Gateways and Spark Firewalls since September 12. Attacks originate from anonymized infrastructure using crafted VPN certificates; CISA added both CVE-2026-85102 and CVE-2026-85103 to KEV catalog with federal patch deadline of September 25.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Zero-day-like exploitation of perimeter VPN infrastructure demands immediate patching for gateway administrators managing remote access; certificate-based bypass undermines trust model for edge security.&lt;/p&gt;&lt;p&gt;Source: Bleeping Computer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Most operators will let AI change production networks unsupervised</title>
-      <link>https://www.cisco.com/c/dam/en/us/solutions/artificial-intelligence/the-impact-of-agentic-ai-on-network-operations.pdf</link>
-      <guid isPermaLink="true">https://www.cisco.com/c/dam/en/us/solutions/artificial-intelligence/the-impact-of-agentic-ai-on-network-operations.pdf</guid>
+      <title>Cisco patches 97 CVEs including exploited FMC flaw</title>
+      <link>https://www.greenbone.net/en/blog/cisco-vulnerabilities-september-2026/</link>
+      <guid isPermaLink="true">https://www.greenbone.net/en/blog/cisco-vulnerabilities-september-2026/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;51% of organizations have deployed AI technologies (AIOps and AgenticOps) for network operations, and 82% are comfortable letting AI make changes to production networks without seeking human permission first. 84% expect to reach fully AI-led operating models within 12 months.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agentic adoption is poised to roughly double in the next 12 months; ops teams must establish governance and audit frameworks for autonomous network actions immediately.&lt;/p&gt;&lt;p&gt;Source: Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Cisco released 97 CVE fixes in September 2026, largest coordinated disclosure to date, with 18 fixes to Secure Firewall (ASA/FTD/FMC) including multiple critical unauthenticated RCE flaws running as root. CVE-2026-20079 (CVSS 10) targeting FMC was added to CISA KEV with evidence of active exploitation campaigns in August affecting 178 devices.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Mass firewall RCE patches require prioritized lab testing and staged rollout; CVE-2026-20079 active exploitation on FMC justifies emergency patching ahead of routine change windows for sensitive environments.&lt;/p&gt;&lt;p&gt;Source: Greenbone · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Agentic NetOps starts replacing the network ticket queue</title>
+      <title>Agentic AI agents start replacing NetOps ticket queues</title>
       <link>https://www.thenetworkdna.com/2026/10/agentic-netops-how-ai-powered-network.html</link>
       <guid isPermaLink="true">https://www.thenetworkdna.com/2026/10/agentic-netops-how-ai-powered-network.html</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;AI-powered network operations has crossed from marketing slide to production reality. The shift from AIOps that tells to agentic systems that act is the most significant change in network operations since SDN, requiring new governance frameworks and approval processes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners need a practical framework for evaluating agentic NetOps readiness; winning organizations will build clean data foundations and strong guardrails, not grant agents maximum autonomy.&lt;/p&gt;&lt;p&gt;Source: The Network DNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Agentic NetOps uses autonomous AI agents to monitor, diagnose, plan, and remediate network issues with minimal human intervention, reasoning and acting rather than simply detecting and alerting. The article contrasts agentic systems with traditional AIOps, covering practical adoption patterns and failure modes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clarifies architectural distinction between AIOps (detection/alerting) and AgenticOps (reasoning/execution); guides practitioners on safe adoption guardrails and domain boundaries.&lt;/p&gt;&lt;p&gt;Source: The Network DNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>On-premises small models cut troubleshooting to one minute</title>
-      <link>https://insidetowers.com/ai-moves-from-buzzword-to-network-operations-at-scte-techexpo26/</link>
-      <guid isPermaLink="true">https://insidetowers.com/ai-moves-from-buzzword-to-network-operations-at-scte-techexpo26/</guid>
-      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Network architects demonstrated AI agents analyzing telemetry and diagnosing problems with guardrails and human approval for high-risk changes. Small on-premises language models automated troubleshooting in approximately one minute versus tens of minutes manually.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Small on-prem LLMs and governed local execution are viable alternatives to cloud-based agentic systems; infrastructure teams can start with constrained, approval-gated automation today without cloud dependencies.&lt;/p&gt;&lt;p&gt;Source: Inside Towers · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T commits $3 billion to Corning fiber for expansion</title>
-      <link>https://www.lightreading.com/broadband/at-t-corning-partner-to-engineer-the-connected-world-with-fiber</link>
-      <guid isPermaLink="true">https://www.lightreading.com/broadband/at-t-corning-partner-to-engineer-the-connected-world-with-fiber</guid>
+      <title>Bell and Cisco to build sovereign AI infrastructure in Canada</title>
+      <link>https://www.iphoneincanada.ca/2026/09/30/bell-and-cisco-plan-sovereign-ai-infrastructure-for-canada/</link>
+      <guid isPermaLink="true">https://www.iphoneincanada.ca/2026/09/30/bell-and-cisco-plan-sovereign-ai-infrastructure-for-canada/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and Corning entered into a multi-year agreement valued at more than $3 billion to supply fiber and cable for AT&amp;amp;T's nationwide network expansion driven by AI data demand. The agreement includes Corning's Evolv portfolio with FlexNAP and Multifiber Pushlok technology, compliant with BEAD program requirements, supporting both consumer broadband and AI data center connectivity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Illustrates scale of fiber capex required for AI data-center connectivity: operators must upgrade not just consumer backhaul but dedicated high-capacity routes between distributed GPU clusters.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bell Canada and Cisco announced a memorandum of understanding to collaborate on sovereign AI infrastructure for Canada, combining Bell's data centres, network and operations with Cisco's AI, security, observability and infrastructure management technologies. Goal is to help Canadian organizations deploy, secure and manage AI infrastructure inside Canada with greater control over data location and security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Bell positions itself as a front-runner in Canada's sovereign AI market through its AI Fabric strategy, extending telco infrastructure strategy beyond consumer broadband into regulated-industry AI hosting with new opex and security architecture requirements.&lt;/p&gt;&lt;p&gt;Source: CNW (Canada Newswire) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Charter turns headends into edge compute with 10ms latency</title>
-      <link>https://www.lightreading.com/ai-machine-learning/ai-and-edge-computing-step-into-the-cable-spotlight</link>
-      <guid isPermaLink="true">https://www.lightreading.com/ai-machine-learning/ai-and-edge-computing-step-into-the-cable-spotlight</guid>
+      <title>New RFC extends STAMP to asymmetric network paths</title>
+      <link>https://www.rfc-editor.org/</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;At SCTE TechExpo, Charter and Spectrum demonstrated how they are repurposing space, power and cooling at hubs and headends to serve up AI and low-latency edge compute services. Post-Cox merger, the operator can provide capacity within 10 milliseconds to roughly 500 million connected devices in US homes and businesses from distributed edge locations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cable operators monetizing HSD infrastructure (hubs, headends) as edge compute nodes for AI inference and low-latency workloads; consolidation creates 500M-device addressable base with unified edge platform across 70M passings.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10052 standardizes performance measurement with asymmetrical traffic using the Simple Two-Way Active Measurement Protocol (STAMP), published as a Proposed Standard in September 2026. Extends STAMP capabilities to handle asymmetric network paths where forward and return paths have different characteristics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Essential for network operators measuring real performance across asymmetric paths—critical for cloud, ISP, and WAN telemetry operations using STAMP probes.&lt;/p&gt;&lt;p&gt;Source: RFC Editor / IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Google limits Gemini 4 Argon to cyber defenders</title>
-      <link>https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/</link>
-      <guid isPermaLink="true">https://kingy.ai/blog/gemini-4-argon-specs-benchmarks-pricing/</guid>
+      <title>OpenTelemetry JavaScript SDK 3.0 slips to October, requires Node 22</title>
+      <link>https://github.com/open-telemetry/opentelemetry-js/issues/6926</link>
+      <guid isPermaLink="true">https://github.com/open-telemetry/opentelemetry-js/issues/6926</guid>
+      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenTelemetry JavaScript SDK 3.0 release date postponed to October 15, 2026, with feature-freeze on 2.x as of September 1. Raises minimum Node.js requirement to v22+ (EOL for v20 was April 30, 2026), adds dual CJS/ESM exports via tsdown, and aligns Prometheus exporter with OpenTelemetry specification.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SRE and AIOps teams must plan Node.js runtime upgrades and SDK migration timelines; v3.0 drops support for older runtimes and fixes metric semantics, requiring dependency updates across observability infrastructure.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Project GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Google unveils Gemini 4 Argon to security partners</title>
+      <link>https://www.axios.com/2026/09/30/google-gemini-4</link>
+      <guid isPermaLink="true">https://www.axios.com/2026/09/30/google-gemini-4</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google DeepMind announced Gemini 4 Argon on September 30, 2026, positioned for coding, knowledge work and cyber defense with a 1 million token output limit and 95% discount on cached input. The model achieves 91.9% on Vibe Code Bench and leads AutomationBench at 51.3%, while internally optimizing data centers and accelerating video decoders by 2.7x.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Frontier model with industry-leading 1M output tokens and aggressive cache pricing ($2/$10 intro rates) challenges cost-performance assumptions, but Fairwind-only access delays real-world deployment planning.&lt;/p&gt;&lt;p&gt;Source: Kingy AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Google unveiled its long-awaited next-generation AI model, Gemini 4 Argon, to a small group of cybersecurity partners. The model claims state-of-the-art performance on coding and knowledge work benchmarks, outperforming OpenAI's GPT-6 Astra on several.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gemini 4 closes a capability gap after Google spent much of 2026 shipping smaller Flash models while OpenAI and Anthropic released multiple frontier variants.&lt;/p&gt;&lt;p&gt;Source: Axios · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Senate Republicans block two AI safety bills</title>
-      <link>https://techpolicy.press/september-2026-us-tech-policy-roundup</link>
-      <guid isPermaLink="true">https://techpolicy.press/september-2026-us-tech-policy-roundup</guid>
+      <title>OpenAI launches GPT-6.1 Sol at a fifth of the price</title>
+      <link>https://aiweekly.co/ai-news-today/edition/2026-10-01</link>
+      <guid isPermaLink="true">https://aiweekly.co/ai-news-today/edition/2026-10-01</guid>
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;US tech policy dominated by debate over slowing frontier AI development, sparked by Anthropic researcher resignation warning of existential risk and CEO calling for slower development. Top AI executives signed safety accord with President Trump on September 29, but congressional efforts to pass binding safeguards stalled when Republican senators blocked two AI safety bills.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI companies disclosed agent breaches of external systems; White House and major labs responded with voluntary measures instead of regulation, leaving regulatory fragmentation across states and litigation.&lt;/p&gt;&lt;p&gt;Source: Tech Policy Press · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Only 13% of companies scale AI beyond pilots</title>
-      <link>https://investing.com/news/stock-market-news/ai-adoption-stalls-as-companies-struggle-to-scale-projects-despite-strong-returns-study-shows-4926252</link>
-      <guid isPermaLink="true">https://investing.com/news/stock-market-news/ai-adoption-stalls-as-companies-struggle-to-scale-projects-despite-strong-returns-study-shows-4926252</guid>
-      <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Only 13% of companies on track with AI initiatives as regulatory hurdles and legacy IT integration blocked large-scale adoption, per BearingPoint study. Nearly 75% reported positive financial returns from pilots but fewer than 30% moved beyond proof-of-concept stage.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; 40% cited legal regulations as main barrier; 34% cited legacy system integration—both critical blockers for enterprise deployment that signal regulatory fragmentation and infrastructure gaps.&lt;/p&gt;&lt;p&gt;Source: Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenAI released GPT-6.1 Sol on October 1, 2026 at $2/$10 per million tokens (input/output), approximately one-fifth of GPT-6 Astra pricing, delivering near-Astra performance for agentic coding and computer-use tasks. The separate Astra 6.1 release was cancelled, consolidating the product line.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Dramatic cost reduction on frontier agentic models changes unit economics for enterprise AI deployments; ops teams should reassess inference cost modeling and containerization strategies around this new pricing tier.&lt;/p&gt;&lt;p&gt;Source: AI Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenTelemetry maps its instrumentation ecosystem from SDKs to Collector</title>
