@@ -788,7 +788,7 @@ ${list}`,
 
 // ── Site pages ────────────────────────────────────────────────────────────────
 const SITE = 'https://digitalplumber.ca';
-const CORRECTIONS_URL = 'https://github.com/petvan/Digitalplumber.ca/issues/new';
+const CORRECTIONS_URL = 'mailto:hello@digitalplumber.ca?subject=Correction';
 const NAV = [
   ['briefing', 'Daily briefing', '/'],
   ['radar', 'Vendor Radar', '/vendors/'],
@@ -934,7 +934,7 @@ function footerHtml() {
   <div>
     <h2>About Digital Plumber</h2>
     <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
-    <p><a href="/about.html">How stories are selected</a> · <a href="${CORRECTIONS_URL}" target="_blank" rel="noopener">Report a correction</a></p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="${CORRECTIONS_URL}">Report a correction</a></p>
   </div>
   <nav class="label" aria-label="More">
     <a href="/week.html">This week</a>
@@ -1230,7 +1230,7 @@ function aboutHtml(template) {
     <p>There is none before publishing. The briefing is fully automated and published each morning as the AI produced it, so check the original source before acting on anything here.</p>
 
     <h2>Corrections</h2>
-    <p>If something is wrong, <a href="${CORRECTIONS_URL}" target="_blank" rel="noopener">open an issue on GitHub</a> with a link to the story and what needs fixing.</p>
+    <p>If something is wrong, <a href="${CORRECTIONS_URL}">email hello@digitalplumber.ca</a> with a link to the story and what needs fixing.</p>
   </div>`;
   return pageShell(template, {
     title: 'How Digital Plumber works — Methodology',

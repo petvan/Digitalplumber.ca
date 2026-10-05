@@ -22,7 +22,7 @@ Last reviewed: 2026-09-28.
 | Anthropic Console | API key for the build | console.anthropic.com |
 | Netlify | Hosting and HTTPS | Site `loquacious-phoenix-d6fc63`, custom domains `digitalplumber.ca` and `www.digitalplumber.ca`, Let's Encrypt certificate managed by Netlify |
 | GoDaddy | Domain registration (Go Daddy Domains Canada), DNS, and the Microsoft 365 mailbox | Domain `digitalplumber.ca`, nameservers `ns37.domaincontrol.com` and `ns38.domaincontrol.com` |
-| Microsoft 365 from GoDaddy | The `@digitalplumber.ca` mailbox, Email Essentials plan | Aliases `hello@` (newsletter replies) and `dmarc@` (DMARC reports) |
+| Microsoft 365 from GoDaddy | The `@digitalplumber.ca` mailbox, Email Essentials plan | Aliases `hello@` (newsletter replies, and the site's "Report a correction" link) and `dmarc@` (DMARC reports) |
 | Buttondown | Email subscribers and sending | Username `pvo`, sending domain `mail.digitalplumber.ca` (managed setup), sender `briefing@mail.digitalplumber.ca`, newsletter name "Digital Plumber" |
 | ESPN public API | Toronto sports scores in the page header | No account or key; called from visitors' browsers |
 
