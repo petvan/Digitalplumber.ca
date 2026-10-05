@@ -948,8 +948,58 @@ function footerHtml() {
 </footer>`;
 }
 
-// Every page except the daily briefing: the briefing's styles, a compact masthead and the primary nav
-function pageShell(template, { title, description, pagePath, active, body }) {
+// ── Structured data (schema.org) for search engines ─────────────────────────
+const WEBSITE_LD = {
+  '@type': 'WebSite',
+  '@id': `${SITE}/#website`,
+  name: 'Digital Plumber',
+  url: `${SITE}/`,
+  description: 'AI-curated intelligence for people who run networks.',
+  inLanguage: 'en-CA',
+  publisher: { '@id': `${SITE}/#publisher` },
+};
+const PUBLISHER_LD = {
+  '@type': 'Organization',
+  '@id': `${SITE}/#publisher`,
+  name: 'Digital Plumber',
+  url: `${SITE}/`,
+  logo: { '@type': 'ImageObject', url: `${SITE}/apple-touch-icon.png`, width: 180, height: 180 },
+};
+
+// A list of stories (or pages) as a schema.org ItemList
+function itemListLd(items) {
+  return {
+    '@type': 'ItemList',
+    numberOfItems: items.length,
+    itemListElement: items.map((a, i) => ({ '@type': 'ListItem', position: i + 1, url: a.url, name: a.headline || a.title || a.label })),
+  };
+}
+
+// Home › ... breadcrumbs from [[name, path], ...]
+function breadcrumbLd(trail) {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map(([name, pagePath], i) => ({ '@type': 'ListItem', position: i + 1, name, item: `${SITE}${pagePath}` })),
+  };
+}
+
+// The site, its publisher and this page, as one JSON-LD block
+function structuredDataHtml(page, extra = []) {
+  const graph = [WEBSITE_LD, PUBLISHER_LD, { isPartOf: { '@id': `${SITE}/#website` }, publisher: { '@id': `${SITE}/#publisher` }, ...page }, ...extra];
+  // "<" is escaped so nothing in a headline can close the script tag
+  return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}</script>`;
+}
+
+// Page titles: "Sep 28, 2026: Lead headline — Digital Plumber", trimmed at a word near 70 characters
+function editionTitle(dateStr, headline) {
+  let lead = String(headline || '');
+  if (lead.length > 70) lead = lead.slice(0, 70).replace(/\s+\S*$/, '') + '…';
+  return lead ? `${displayDate(dateStr)}: ${lead} — Digital Plumber` : `${displayDate(dateStr)} edition — Digital Plumber`;
+}
+
+// Every page except the daily briefing: the briefing's styles, a compact masthead and the primary nav.
+// `pageType` and `structured` add schema.org data; `crumbs` adds breadcrumbs.
+function pageShell(template, { title, description, pagePath, active, body, pageType = 'WebPage', structured = {}, crumbs }) {
   const head = (template.match(/<link rel="preconnect"[\s\S]*?<\/style>/) || [''])[0].replace('<!--ARCHIVE_LIST_SCRIPT-->', '');
   return `<!DOCTYPE html>
 <html lang="en">
@@ -964,6 +1014,15 @@ function pageShell(template, { title, description, pagePath, active, body }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${SITE}${pagePath}">
+<meta property="og:image" content="${SITE}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Digital Plumber: AI-curated intelligence for people who run networks">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${SITE}/og-image.png">
+${structuredDataHtml({ '@type': pageType, '@id': `${SITE}${pagePath}`, url: `${SITE}${pagePath}`, name: title, description, ...structured }, crumbs ? [breadcrumbLd(crumbs)] : [])}
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -1070,6 +1129,9 @@ function subjectPageHtml(template, subject, today) {
     pagePath: href,
     active: kind === 'vendor' ? 'radar' : '',
     body,
+    pageType: 'CollectionPage',
+    structured: { about: { '@type': 'Thing', name: label }, mainEntity: itemListLd(latest) },
+    crumbs: [['Digital Plumber', '/'], [section[0], section[1]], [label, href]],
   });
 }
 
@@ -1104,6 +1166,9 @@ function subjectIndexHtml(template, stats, kind) {
     pagePath: isVendor ? '/vendors/' : '/topics/',
     active: isVendor ? 'radar' : '',
     body,
+    pageType: 'CollectionPage',
+    structured: { mainEntity: itemListLd(rows.map(s => ({ url: `${SITE}${s.href}`, label: s.label }))) },
+    crumbs: [['Digital Plumber', '/'], [isVendor ? 'Vendor Radar' : 'Topics', isVendor ? '/vendors/' : '/topics/']],
   });
 }
 
@@ -1132,6 +1197,8 @@ function archiveIndexHtml(template, archives) {
     pagePath: '/archive/',
     active: 'archive',
     body,
+    pageType: 'CollectionPage',
+    crumbs: [['Digital Plumber', '/'], ['Archive', '/archive/']],
   });
 }
 
@@ -1171,6 +1238,8 @@ function aboutHtml(template) {
     pagePath: '/about.html',
     active: '',
     body,
+    pageType: 'AboutPage',
+    crumbs: [['Digital Plumber', '/'], ['Methodology', '/about.html']],
   });
 }
 
@@ -1240,6 +1309,9 @@ function weekHtml(template, { entries, picks, headlines, watch, vStats, tStats, 
     pagePath: '/week.html',
     active: 'week',
     body,
+    pageType: 'CollectionPage',
+    structured: { mainEntity: itemListLd(picks.map(({ entry }) => ({ ...entry, headline: headlines.get(entry) || entry.headline }))) },
+    crumbs: [['Digital Plumber', '/'], ['This week', '/week.html']],
   });
 }
 
@@ -1434,6 +1506,19 @@ async function main() {
       ? `https://digitalplumber.ca/archives/${dateStr}.html`
       : 'https://digitalplumber.ca/';
 
+    // The homepage keeps the brand title; each dated edition gets its own date and lead headline
+    const lead = topPicks[0] ? (topPicks[0].item.headline || topPicks[0].item.title) : '';
+    const pageTitle = isArchive ? editionTitle(dateStr, lead) : 'Digital Plumber — AI-curated intelligence for people who run networks';
+    const structuredData = structuredDataHtml({
+      '@type': 'CollectionPage',
+      '@id': canonicalUrl,
+      url: canonicalUrl,
+      name: pageTitle,
+      description: metaDesc,
+      datePublished: dateStr,
+      mainEntity: itemListLd(newsItems),
+    });
+
     let html = template;
     html = html.replace('<!--PRIMARY_NAV-->', primaryNavHtml(isArchive ? 'archive' : 'briefing'));
     html = html.replace('<!--THREE_THINGS-->', threeThingsHtml(topPicks));
@@ -1451,6 +1536,8 @@ async function main() {
     html = html.replace('<!--ARCHIVE_NOTICE-->', archiveBanner);
     html = html.replace(/<!--META_DESCRIPTION-->/g, esc(metaDesc));
     html = html.replace(/<!--CANONICAL_URL-->/g, canonicalUrl);
+    html = html.replace(/<!--PAGE_TITLE-->/g, esc(pageTitle));
+    html = html.replace('<!--STRUCTURED_DATA-->', structuredData);
     return html;
   }
 

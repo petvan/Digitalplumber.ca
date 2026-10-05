@@ -114,6 +114,7 @@ Everything else, including every edition since 2026-06-11, is in this repo.
 
 - `tools/offline-build.js` runs the whole build on a throwaway copy with every network call stubbed: no API costs, no emails, and the repo isn't touched. See the comment at the top of the file for usage.
 - `bootstrap-search-index.js` rebuilds `archives/index.json` and `archives/search-index.json` entries from the archive HTML pages, adding any missing days. Safe to re-run.
+- `tools/og-image.py` regenerates `og-image.png`, the image shown when a link to the site is shared. The font download links are at the top of the file.
 
 ## Costs
 
