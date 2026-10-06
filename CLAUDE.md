@@ -11,6 +11,7 @@ Full setup, accounts, DNS and disaster recovery: `docs/RECOVERY.md`.
 - Generated files are committed: `index.html`, `week.html`, `feed.xml`, `about.html`, `sitemap.xml`, `archive/`, `vendors/`, `topics/`, `archives/`. Change build.js or template.html, not these; they're overwritten on the next build. Only patch a generated file to fix the live site immediately, and make the same change in the source.
 - `archives/search-index.json` is the story database (every edition since June 11, 2026); vendor, topic and trend pages are computed from it. `archives/index.json` lists editions. `archives/emails.json` records which dates already had an email.
 - Topics renamed later keep their history through `aliases` in `TOPICS`; look labels up with `topicFor()`, not by comparing strings.
+- Tracked vendors are `VENDORS` in build.js. Each matches its name or any of its `aliases` as a whole word, case-sensitively unless the name is all lowercase. A new vendor's page and counts are computed from the whole archive on the next build.
 
 ## Working rules
 

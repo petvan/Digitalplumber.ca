@@ -156,20 +156,36 @@ const VENDORS = [
   { name: 'Cisco', slug: 'cisco', about: 'Networking, security and observability company, including Splunk and ThousandEyes.' },
   { name: 'ServiceNow', slug: 'servicenow', about: 'IT service and operations management platform, with AI agents for IT workflows.' },
   { name: 'net.ai', slug: 'net-ai', about: 'Coverage of net.ai in Digital Plumber briefings.' },
+  { name: 'NVIDIA', aliases: ['Nvidia'], slug: 'nvidia', about: 'AI computing company whose networking (Spectrum-X Ethernet, InfiniBand and BlueField DPUs) underpins many AI clusters.' },
+  { name: 'HPE', aliases: ['Hewlett Packard Enterprise'], slug: 'hpe', about: 'Hewlett Packard Enterprise: servers, storage and networking through Aruba and, since 2025, Juniper Networks.' },
+  { name: 'Nokia', slug: 'nokia', about: 'Telecom and IP networking equipment: mobile networks, IP routing, optical and data center fabrics.' },
+  { name: 'Broadcom', slug: 'broadcom', about: 'Maker of the Tomahawk and Jericho switch chips used in most data center networks, and owner of VMware.' },
+  { name: 'Fortinet', slug: 'fortinet', about: 'Network security company: FortiGate firewalls, SD-WAN and SASE.' },
+  { name: 'Zscaler', slug: 'zscaler', about: 'Cloud security company focused on zero trust access and SASE.' },
+  { name: 'Cloudflare', slug: 'cloudflare', about: 'Connectivity cloud: CDN, DNS, DDoS protection and zero trust, plus Cloudflare Radar\'s view of internet traffic.' },
+  { name: 'NetBrain', slug: 'netbrain', about: 'Network automation and NetOps platform, built around agents for diagnosis and governed change.' },
+  { name: 'Kentik', slug: 'kentik', about: 'Network observability platform for traffic analysis, internet routing and cloud networking.' },
+  { name: 'Forward Networks', slug: 'forward-networks', about: 'Network digital twin platform that models and verifies how an enterprise network behaves.' },
+  { name: 'NetBox Labs', aliases: ['NetBox'], slug: 'netbox-labs', about: 'The company behind NetBox, the open-source network source of truth.' },
+  { name: 'Network to Code', aliases: ['Nautobot'], slug: 'network-to-code', about: 'Network automation consultancy and maintainer of Nautobot, an open-source source of truth and automation platform.' },
+  { name: 'Infoblox', slug: 'infoblox', about: 'DNS, DHCP and IP address management (DDI) and DNS security.' },
+  { name: 'Splunk', slug: 'splunk', about: 'Observability and security analytics platform, part of Cisco since 2024.' },
+  { name: 'Exaforce', slug: 'exaforce', about: 'Agentic security operations (AI SOC) platform.' },
 ];
 const TRACKED_VENDORS = VENDORS.map(v => v.name);
 
-// Names match as whole words, case-sensitively ("Cisco" must not match "San
-// Francisco", "Selector" must not match a Kubernetes label selector). An
-// all-lowercase entry such as 'net.ai' matches in any case.
-const VENDOR_PATTERNS = VENDORS.map(v => ({
-  ...v,
-  vendor: v.name,
-  re: new RegExp(
-    `(?<![\\w-])${v.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`,
-    v.name === v.name.toLowerCase() ? 'i' : ''
-  ),
-}));
+// A vendor matches its name or any alias as a whole word, case-sensitively
+// ("Cisco" must not match "San Francisco", "Selector" must not match a
+// Kubernetes label selector). An all-lowercase name such as 'net.ai' matches
+// in any case.
+const wordPattern = name => new RegExp(
+  `(?<![\\w-])${name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`,
+  name === name.toLowerCase() ? 'i' : ''
+);
+const VENDOR_PATTERNS = VENDORS.map(v => {
+  const patterns = [v.name, ...(v.aliases || [])].map(wordPattern);
+  return { ...v, vendor: v.name, re: { test: text => patterns.some(p => p.test(text)) } };
+});
 
 // The text a story is matched against for vendor mentions
 function mentionText(a) {
@@ -192,12 +208,16 @@ Use web search to find real, recent, substantive developments related to the giv
 RECENCY: This is a strict rule — only include articles published on or after the cutoff date given in the request. Check the publication date of every article before including it. If an article has no clear date, or it is older than the cutoff, exclude it. Return an empty array [] rather than including stale content.
 
 PREFERRED SOURCES — weight these heavily:
-- AI research: arXiv (cs.AI, cs.LG, cs.NI), Anthropic blog, OpenAI blog, Google DeepMind blog, Meta AI blog, Google Research blog
-- MLOps/AIOps practitioners: ML Ops Community (mlops.community), The New Stack, Honeycomb blog, Last9 blog, Chronosphere blog
-- Networking practitioners: Packet Pushers, Network World, SDxCentral, NANOG presentations/mailing list
-- Standards & open source: IETF working group drafts, OpenTelemetry, OpenConfig, CNCF project blogs
-- AI industry & policy: AI News (artificialintelligence-news.com), VentureBeat AI, MIT Technology Review, The Register, TechCrunch AI
-- Quality engineering blogs: Cloudflare Blog, Stripe Engineering, Netflix Tech Blog, Uber Engineering, AWS News Blog (for technically substantive posts)
+- Network engineering: Packet Pushers (articles and podcasts), ipSpace.net, Network World, SDxCentral, the Network to Code and NetBox Labs blogs, Network Automation Forum and AutoCon talks, NANOG presentations and mailing list
+- Internet routing and operations: Kentik blog, ThousandEyes Internet Report, Cloudflare Blog and Cloudflare Radar, RIPE Labs, APNIC Blog, MANRS
+- Data center and AI networking: ServeTheHome, Ultra Ethernet Consortium, Open Compute Project, Futuriom
+- Telco: Light Reading, Fierce Network, TelecomTV
+- Operations, SRE and observability: The New Stack, InfoQ, USENIX SREcon talks, Uptime Institute outage analysis, cloud providers' incident postmortems, and the Grafana Labs, incident.io, Honeycomb, Last9 and Chronosphere blogs
+- Network security, first-hand: CISA's Known Exploited Vulnerabilities catalog and advisories, vendor security advisories (Cisco, Fortinet, Palo Alto Networks, Juniper), BleepingComputer, SecurityWeek
+- Standards and open source: IETF working group drafts and RFCs, OpenTelemetry, OpenConfig, CNCF project blogs
+- AI research and labs: arXiv (cs.NI, cs.AI, cs.LG), and the Anthropic, OpenAI, Google DeepMind, Meta AI and Google Research blogs
+- AI industry and policy: MIT Technology Review, The Register, VentureBeat AI, TechCrunch AI, AI News (artificialintelligence-news.com)
+- Engineering blogs with real technical depth: Cloudflare, Stripe, Netflix, Uber, AWS News Blog
 
 WHAT TO PRIORITIZE:
 - Research papers and technical write-ups with real depth
@@ -211,6 +231,9 @@ WHAT TO AVOID — these are common but low-quality sources for this audience:
 - Generic press releases with no technical substance ("Company X is excited to announce a partnership...")
 - Pure sales or analyst-summary content that recaps what vendors say about themselves
 - Any content that reads like it was written to rank in search rather than inform a practitioner
+- Finance and stock-market sites (Yahoo Finance, Investing.com, GuruFocus, Seeking Alpha) and coverage that is only about share prices, earnings or analyst ratings
+- Press-release wires (Business Wire, PR Newswire, Globe Newswire) unless the release itself has substantive technical detail; prefer the company's own technical post or independent coverage of the same news
+- AI listicles, tool directories and aggregator sites that summarize other people's coverage
 - Articles older than the cutoff date in the request
 
 NOTE on vendor/engineering blogs: blogs from engineering-led companies (Cloudflare, Stripe, Netflix, Uber, etc.) often publish genuinely substantive technical content — include these if they have real depth. Exclude vendor marketing blogs that only promote their own products without technical substance.
