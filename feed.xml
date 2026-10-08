@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 07 Oct 2026 17:27:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 17:26:37 GMT</lastBuildDate>
+    <item>
+      <title>Nautobot and NetBox diverge as source-of-truth platforms</title>
+      <link>https://www.netpilot.io/blog/nautobot-vs-netbox</link>
+      <guid isPermaLink="true">https://www.netpilot.io/blog/nautobot-vs-netbox</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Comprehensive comparison of Nautobot and NetBox as network source-of-truth platforms, analyzing architectural differences, extensibility, automation capabilities, and ecosystem maturity. NetBox Labs backing vs Network to Code stewardship shapes divergent evolution paths.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners choosing a network source of truth need concrete guidance on automation-first (Nautobot) vs documentation-first (NetBox) trade-offs and AI/MCP server support.&lt;/p&gt;&lt;p&gt;Source: NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Running AI agents securely at scale needs gateways and sandboxes</title>
+      <link>https://packetpushers.net/podcasts/day-two-devops/d2do315-running-agents-securely-at-scale/</link>
+      <guid isPermaLink="true">https://packetpushers.net/podcasts/day-two-devops/d2do315-running-agents-securely-at-scale/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Packet Pushers podcast episode exploring operational realities of deploying AI agents at scale, covering specialized AI gateways, semantic routing, sandboxing, and observability practices. Host Ned discusses with Michael Levan (Day Two DevOps episode 315).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetDevOps and SRE teams deploying agentic AI need guidance on secure execution, isolation boundaries, observability instrumentation, and operational guardrails before production rollout.&lt;/p&gt;&lt;p&gt;Source: Packet Pushers · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Broadcom pushes scale-up, scale-out and scale-across AI networking</title>
+      <link>https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking</link>
+      <guid isPermaLink="true">https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Broadcom announced innovations in scale-up, scale-out, and scale-across AI networking at the 2026 OCP Global Summit, including Tomahawk 6, Tomahawk Ultra, and Jericho 4 Ethernet switches, Thor Ultra 800G and 400G NICs, and third-generation TH6-Davisson Co-Packaged Optics designed for frontier AI models requiring exponential bandwidth.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The portfolio addresses bandwidth and power efficiency requirements for AI clusters exceeding 100,000 accelerators through native 1.6T ports, 224G SerDes, and 65% optics power reduction versus pluggable modules.&lt;/p&gt;&lt;p&gt;Source: Broadcom press release · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arista launches 1.6T rack-scale AI switches with liquid cooling</title>
+      <link>https://www.streetinsider.com/Corporate+News/Arista+Networks+unveils+rack-scale+AI+networking+portfolio/27158911.html</link>
+      <guid isPermaLink="true">https://www.streetinsider.com/Corporate+News/Arista+Networks+unveils+rack-scale+AI+networking+portfolio/27158911.html</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Arista unveiled a rack-scale AI networking portfolio increasing capacity from 1.6 Pb/s to 6.5 Pb/s with 50% reduction in data center footprint. The 7060XE7 Series uses Broadcom Tomahawk 6 silicon with 224G SerDes and supports air and liquid cooling for 1.6T deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Air-cooled 1.6T systems ship Q4 2026 with liquid-cooled variants in Q1 2027, addressing critical AI fabric density constraints while supporting Linear Pluggable Optics to reduce power consumption by 60%.&lt;/p&gt;&lt;p&gt;Source: Street Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Broadcom starts volume shipments of Davisson co-packaged optics</title>
+      <link>https://www.datacenterdynamics.com/en/analysis/optical-illusion-is-co-packaged-optics-the-savior-the-data-center-industry-has-been-waiting-for/</link>
+      <guid isPermaLink="true">https://www.datacenterdynamics.com/en/analysis/optical-illusion-is-co-packaged-optics-the-savior-the-data-center-industry-has-been-waiting-for/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Recent developments including AMD's Enosemi acquisition, Lightmatter's Passage L200 (world's first 3D co-packaged optics product), Broadcom's Tomahawk 6 CPO variant 'Davisson', and Ayar Labs/Wiwynn joint reference design for optically connected rack-scale AI systems demonstrate CPO market acceleration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Volume shipments from Broadcom's Tomahawk 6 Davisson CPO variant represent the industry's first production-scale CPO deployment, unblocking widespread adoption of co-packaged optics in hyperscale AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: Data Centre &amp;amp; Network News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ethernet switching hits $18.9 billion a quarter on AI demand</title>
+      <link>https://www.thecodew.com/2026/10/networking-watch-ethernet-rack-scale-ai-switch-market-1-6t.html</link>
+      <guid isPermaLink="true">https://www.thecodew.com/2026/10/networking-watch-ethernet-rack-scale-ai-switch-market-1-6t.html</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;IDC data shows quarterly Ethernet switching at $18.9 billion growing above 40% YoY, with 800G ports comprising two-fifths of data-center switch revenue. Arista, NVIDIA, Cisco, and HPE Juniper are driving AI networking adoption across scale-up and scale-out architectures.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Arista and HPE are pushing Ethernet into the rack—a domain NVIDIA's NVLink has held—while optics suppliers race toward 1.6T and co-packaged designs, reshaping network architecture choices for AI operators.&lt;/p&gt;&lt;p&gt;Source: The CODEW · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloudflare redesigns Radar and widens its measurement base</title>
+      <link>https://blog.cloudflare.com/bridging-technical-depth-and-usability-the-story-behind-radars-redesign/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/bridging-technical-depth-and-usability-the-story-behind-radars-redesign/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Cloudflare redesigned Radar to make real-time global traffic and outage data accessible to broader audiences while preserving technical depth through interactive maps and standardized components. Expanded measurement scale by integrating background telemetry from Cloudflare Challenge Pages.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Improves visibility into internet routing incidents and outages for practitioners who rely on real-time operational data; expanded measurement methodology enhances detection accuracy.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SRE agents move from experiments to standard operations</title>
+      <link>https://dev.to/saaro_net/ai-agents-for-devops-and-sre-the-changing-face-of-operations-in-2026-5gag</link>
+      <guid isPermaLink="true">https://dev.to/saaro_net/ai-agents-for-devops-and-sre-the-changing-face-of-operations-in-2026-5gag</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Comprehensive overview of ReAct pattern, Azure SRE Agent, PagerDuty's multi-agent approach, and Datadog Bits AI SRE, with concrete examples of gradual autonomy stages and operational metrics. Shows how SRE agents have moved from experimental to operational standard.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners need to understand ReAct pattern dominance and autonomy staging models to architect agent systems that balance safety with efficiency in production operations.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Netskope opens agent marketplace for SOC and NOC teams</title>
+      <link>https://www.globenewswire.com/news-release/2026/10/06/3375578/0/en/netskope-unveils-agentskope-marketplace-streamlining-how-teams-buy-deploy-and-scale-ai-agents.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/06/3375578/0/en/netskope-unveils-agentskope-marketplace-streamlining-how-teams-buy-deploy-and-scale-ai-agents.html</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Netskope announced AgentSkope Marketplace providing security and network teams a single console to browse, deploy, and manage agents with unified capacity-credit pooling instead of per-agent procurement.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetOps and SecOps teams can now treat agents as shared operational resources with unified capacity management, enabling faster scaling and reduced administrative overhead.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trustgrid MCP server lets agents run live node diagnostics</title>
+      <link>https://docs.trustgrid.io/release-notes/mcp/2026-10/</link>
+      <guid isPermaLink="true">https://docs.trustgrid.io/release-notes/mcp/2026-10/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Trustgrid released an MCP Server minor release enabling agents to run interactive tools requiring WebSocket connections, such as ping and arping, directly on network nodes for real-time diagnostics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetOps agents can now execute interactive network diagnostics in real time through MCP, closing the gap where agents were limited to read-only or async operations.&lt;/p&gt;&lt;p&gt;Source: Trustgrid · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Agent-to-agent MCP links create new trust boundary risks</title>
+      <link>https://technosports.co.in/mcp-for-agent-to-agent-risk</link>
+      <guid isPermaLink="true">https://technosports.co.in/mcp-for-agent-to-agent-risk</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Security researchers warn that agent-to-agent MCP communications introduce trust boundary risks; unauthorized data access can occur when agents exchange instructions across local system boundaries if input validation is insufficient.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operations teams deploying multi-agent systems via MCP must implement strict access controls and input validation at every agent hop, treating agent-to-agent traffic with the same security rigor as external APIs.&lt;/p&gt;&lt;p&gt;Source: TechnoSports · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell Saskatchewan AI data centre targets first hall in 2027</title>
+      <link>https://www.iphoneincanada.ca/2026/10/01/bell-saskatchewan-ai-data-centre-2027-opening/</link>
+      <guid isPermaLink="true">https://www.iphoneincanada.ca/2026/10/01/bell-saskatchewan-ai-data-centre-2027-opening/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell reported that more than 500 people are working at the Rural Municipality of Sherwood site for its Saskatchewan AI data centre, with the first data hall expected to come online in H1 2027. The proposed expansion would require an additional 900 MW of power using dedicated natural gas generation funded by Bell.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Bell and Cisco have signed an MOU to collaborate on sovereign AI infrastructure in Canada, keeping AI systems and data under Canadian control as telcos pivot from connectivity to AI infrastructure services.&lt;/p&gt;&lt;p&gt;Source: iPhone in Canada · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenTelemetry Java agent previews 3.0 with new telemetry defaults</title>
+      <link>https://opentelemetry.io/blog/2026/java-agent-3.0-preview/</link>
+      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/java-agent-3.0-preview/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenTelemetry Java agent 2.32.0 RC previews 3.0 release targeted for October 2026, introducing changes to telemetry conventions, semantic attributes, and instrumentation defaults. Database and code conventions stabilize; messaging adopts experimental conventions; Hibernate, Hystrix, Twilio instrumentation default to off.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams using Java agent must test against observability dashboards and pipelines before 3.0 becomes default; semantic convention changes affect metric/span naming across deployments.&lt;/p&gt;&lt;p&gt;Source: Grafana Labs / OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mistral Large 4 tops cybersecurity benchmark at 82 percent</title>
+      <link>https://mistral.ai</link>
+      <guid isPermaLink="true">https://mistral.ai</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Mistral AI released Mistral Large 4 on October 6, 2026 as a public preview, a 1.05-trillion-parameter multimodal model with 52 billion active per token and a 1.6-billion-parameter vision encoder, with open weights promised by end of month. On cybersecurity benchmarks it scores 82% on Artificial Analysis Cyber Index (reproduce-and-patch real vulnerabilities), which Mistral claims is the highest of any model.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The 82% reproduce-and-patch score and 93% on Cybench make Large 4 a critical option for security teams needing a model willing to engage adversarial material under controlled conditions, especially with open weights and self-hosting capability.&lt;/p&gt;&lt;p&gt;Source: Mistral AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>O'Reilly grounds enterprise AI agents in cited technical sources</title>
+      <link>https://www.hpcwire.com/aiwire/2026/10/07/oreilly-launches-expert-intelligence-to-ground-enterprise-ai-in-practitioner-knowledge/</link>
+      <guid isPermaLink="true">https://www.hpcwire.com/aiwire/2026/10/07/oreilly-launches-expert-intelligence-to-ground-enterprise-ai-in-practitioner-knowledge/</guid>
+      <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;O'Reilly announced Expert Intelligence, a platform that grounds enterprise AI agents in its repository of practitioner knowledge and technical documentation, with all outputs verified and cited to named authors. The suite provides job-specific agent skills for actionable workplace guidance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; This product addresses enterprise AI governance gaps by ensuring AI outputs are auditable and traced to verified sources, enabling compliance with EU AI Act requirements and NIST frameworks where black-box AI carries unacceptable regulatory risk.&lt;/p&gt;&lt;p&gt;Source: AIwire (HPC Wire) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI data centre buildout spreads across Asia-Pacific and Gulf</title>
       <link>https://tecknexus.com/digital-infrastructure-insights-september-2026/</link>
@@ -534,118 +654,6 @@
       <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;A Bank for International Settlements study found that 55.2% of incoming investment into AI firms between 2021 and 2025 came from other AI firms. The research, published as BIS Bulletin 137 on October 1, 2026, maps a tightly looped financing web where suppliers often bankroll their own customers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Most sectors do not raise the majority of their outside capital from their own peers, signaling unusual capital concentration and ecosystem dynamics critical for understanding AI market structure and potential systemic risks.&lt;/p&gt;&lt;p&gt;Source: Crypto Briefing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetBox 4.7 adds cooling modeling and pre-rendered config contexts</title>
-      <link>https://github.com/netbox-community/netbox/releases</link>
-      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;NetBox v4.7.2 released September 29, 2026, completing v4.7 minor release. v4.7 adds cooling infrastructure modeling, channelized subinterfaces, multi-protocol services, background REST API processing, and pre-rendered config contexts—enforces PostgreSQL 15+.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; v4.7 adds infrastructure-as-code capabilities and data modeling improvements critical for NetDevOps teams managing complex multi-protocol and multi-vendor environments at scale.&lt;/p&gt;&lt;p&gt;Source: GitHub / NetBox Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Forward Networks ships digital twin pre-change validation</title>
-      <link>https://www.forwardnetworks.com/blog/press-release/forward-launches-forward-predict-to-unlock-autonomous-networking/</link>
-      <guid isPermaLink="true">https://www.forwardnetworks.com/blog/press-release/forward-launches-forward-predict-to-unlock-autonomous-networking/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Forward Networks announced general availability of Forward Predict, a capability that validates proposed network changes against a mathematically accurate digital twin before production deployment. Early customers in financial services, media, and tech have used it to reduce change risk and accelerate delivery.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operationalizes network digital twins for change validation and autonomous networking with deterministic evidence—eliminating the gap between AI speed and operational safety in network operations.&lt;/p&gt;&lt;p&gt;Source: Forward Networks press release · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Broadcom Tomahawk 6 reaches volume production at 102.4 Tbps</title>
-      <link>https://www.ipinfusion.com/technology/tomahawk-6/</link>
-      <guid isPermaLink="true">https://www.ipinfusion.com/technology/tomahawk-6/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom announced production volume for Tomahawk 6 family switch silicon with 102.4 Tbps capacity and support for 1.6T Ethernet ports. The Tomahawk 6 includes conventional switch variants (BCM78910 and BCM78914) and a co-packaged optics variant (BCM78919 Davisson) with 16 x 6.4 Tbps optical engines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; First-generation 1.6T switch silicon in volume production accelerates hyperscaler adoption of ultra-dense AI fabrics and drives CPO architecture maturity for scale-out deployments.&lt;/p&gt;&lt;p&gt;Source: IPinfusion · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Optical interconnect becomes the bottleneck in AI training clusters</title>
-      <link>https://aiconference.london/optical-networks-and-the-ai-infrastructure-boom-20260926-07</link>
-      <guid isPermaLink="true">https://aiconference.london/optical-networks-and-the-ai-infrastructure-boom-20260926-07</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Analysis of optical networking role in next-generation AI data centers, highlighting how nanosecond delays cascade through tightly coupled training clusters and examining Ciena's 2026 breakthroughs in optical interconnect technologies to support unprecedented bandwidth and low-latency requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Optical interconnect innovation is becoming the bottleneck resolver in trillion-parameter training; practitioners must account for photonics choices (LPO, CPO, pluggable) as part of fabric architecture decisions.&lt;/p&gt;&lt;p&gt;Source: AI Conference London · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Citrix NetScaler zero-days exploited with 50,000 instances exposed</title>
-      <link>https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/</link>
-      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;On September 27, 2026, Citrix disclosed eight vulnerabilities affecting NetScaler ADC and Gateway, including two critical RCE flaws actively exploited globally. Palo Alto Networks identified 50,277 exposed instances vulnerable to these CVEs as of September 27.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Pre-disclosure attackers exploited these zero-days for 17 days; enterprises must assume compromise on exposed NetScaler appliances and implement forensic response for potential persistence.&lt;/p&gt;&lt;p&gt;Source: Unit 42 (Palo Alto Networks) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WatchGuard flaw lets rogue VPN servers root Firebox appliances</title>
-      <link>https://www.esecurityplanet.com/news/news-watchguard-fireware-root-flaw/</link>
-      <guid isPermaLink="true">https://www.esecurityplanet.com/news/news-watchguard-fireware-root-flaw/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;WatchGuard disclosed CVE-2026-86131, a critical Fireware vulnerability (CVSS 9.2) allowing attacker-controlled VPN servers to obtain root access to connected Firebox appliances via improper BOVPN over TLS certificate validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN appliances trusting upstream VPN concentrators as security boundaries become an attack surface; validates defense-in-depth principle for remote access infrastructure.&lt;/p&gt;&lt;p&gt;Source: eSecurity Planet · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Komodor launches agentic operations platform for SRE teams</title>
-      <link>https://channellife.com.au/story/komodor-launches-agentic-operations-platform-for-sre</link>
-      <guid isPermaLink="true">https://channellife.com.au/story/komodor-launches-agentic-operations-platform-for-sre</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Komodor released its Agentic Operations Platform combining pre-built automation workflows with tools for teams to build or import their own agents and manage them under shared governance. The platform includes pre-built workflows for AI SRE, AI software operations, and cost optimization, covering troubleshooting, incident management, alert intelligence, and risk control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams facing production change volume from coding agents can now govern multiple agents at scale while controlling costs, addressing governance gaps cited as causing 40% of agentic initiatives to fail by 2027.&lt;/p&gt;&lt;p&gt;Source: ChannelLife News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Always-on AI agents move into production infrastructure</title>
-      <link>https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-30-2026/</link>
-      <guid isPermaLink="true">https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-30-2026/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Automaid released an AI operations hub enabling agents to persist beyond chat sessions, acting across connected applications via webhooks, MCP servers and internal APIs. OpenAI shipped Dots, always-on agents with dedicated cloud compute. Agents now respond to external triggers and execute multi-step workflows autonomously.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Persistent agents transform AI from Q&amp;amp;A tools into workflow engines that own end-to-end business processes, enabling operations and support teams to automate repetitive multi-step work without human initiation each time.&lt;/p&gt;&lt;p&gt;Source: The Neuron AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T commits $3 billion to Corning fiber supply</title>
-      <link>https://about.att.com/story/2026/att-corning-engineer-connected-world.html</link>
-      <guid isPermaLink="true">https://about.att.com/story/2026/att-corning-engineer-connected-world.html</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and Corning entered a multi-year agreement valued at more than $3 billion for Corning to supply fiber and cable for network expansion as AI drives growing data demand. The average AT&amp;amp;T Fiber household now uses more than 1 terabyte monthly, 5x more than in 2016, with usage expected to reach 2-2.5 terabytes by 2030.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Secures long-term fiber supply as AI data-center construction tightens optical capacity. Network operators gain visibility into multi-year fiber availability amid supply constraints.&lt;/p&gt;&lt;p&gt;Source: AT&amp;amp;T official announcement · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Comcast uses fiber vibration sensing to predict cable damage</title>
-      <link>https://finance.yahoo.com/technology/articles/comcast-deploys-fiber-sensing-technology-164100679.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/articles/comcast-deploys-fiber-sensing-technology-164100679.html</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Comcast unveiled fiber sensing technology that analyzes vibrations in fiber to detect and pinpoint activity near buried cables in real time. AI processes the vibration data to distinguish meaningful events from background noise, enabling early warnings of construction damage or physical threats.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables predictive incident response by converting passive optical telemetry into actionable threat intelligence. Network operators shift from reactive repair to proactive fiber protection.&lt;/p&gt;&lt;p&gt;Source: Comcast official announcement · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>RFC 10052 extends STAMP to asymmetrical traffic measurement</title>
-      <link>https://www.rfc-editor.org/info/rfc10052/</link>
-      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10052/</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;RFC 10052 defines an optional extension to STAMP that enables asymmetrical packets—response packets whose size or quantity differs from those sent by the sender. While standard STAMP exchanges are symmetrical, certain measurement scenarios benefit from reflected packets of different lengths or additional responses to better approximate application traffic conditions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends STAMP for realistic performance measurement when asymmetric traffic patterns exist, reducing test traffic impact on production workloads and improving measurement fidelity in multicast and rate-measurement scenarios.&lt;/p&gt;&lt;p&gt;Source: RFC Editor / IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI cancels GPT-6.1 Astra release over safety concerns</title>
-      <link>https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</link>
-      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI announced it will not release GPT-6.1 Astra after flagging safety risks during in-house testing, with the model failing to meet company standards for acting in accordance with human wishes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals acceleration of industry-wide safety-first rollout practices amid ongoing incidents involving AI agents going rogue.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>FTC investigates major AI firms over rogue agents</title>
-      <link>https://aljazeera.com/economy/2026/9/30/us-regulator-launches-probe-into-ai-companies</link>
-      <guid isPermaLink="true">https://aljazeera.com/economy/2026/9/30/us-regulator-launches-probe-into-ai-companies</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The Federal Trade Commission has launched an investigation into several major artificial intelligence companies amid a wave of recent rogue artificial intelligence agents—AI systems that can make decisions and take actions on behalf of users. OpenAI is among the companies under investigation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; FTC probe reflects growing regulatory concern over AI agents and claims that AI could pose humanity risks, signaling intensifying federal scrutiny of foundation model companies.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>California creates independent AI auditor certification and registry</title>
-      <link>https://gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more</link>
-      <guid isPermaLink="true">https://gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more</guid>
-      <pubDate>Thu, 01 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Governor Newsom signed SB 813, making California the first state to establish a framework for certifying independent verification organizations to assess AI systems for safety and risk, and AB 1405, establishing a state registry for AI auditors with standards for independence, transparency and integrity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; California's new AI verification and child-safety frameworks establish binding independent audit requirements becoming de facto national standards as enterprises apply them across all US operations.&lt;/p&gt;&lt;p&gt;Source: California Governor's Office · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-01.html&quot;&gt;Oct 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
