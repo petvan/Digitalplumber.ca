@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 08 Oct 2026 17:26:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 14:40:09 GMT</lastBuildDate>
+    <item>
+      <title>Broadcom publishes hybrid network observability buyer's guide</title>
+      <link>https://networkobservability.broadcom.com/blog/2026-network-observability-buyers-guide</link>
+      <guid isPermaLink="true">https://networkobservability.broadcom.com/blog/2026-network-observability-buyers-guide</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Broadcom published guidance on modern hybrid network observability spanning multi-cloud, SD-WAN, and internet paths. The guide emphasizes unified telemetry, continuous synthetic probes, and AI-ready data foundations to accelerate root-cause isolation and reduce operational tool sprawl.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides framework for evaluating observability platforms; consolidating tools and establishing correlated hop-by-hop visibility directly reduces MTTR and improves NOC efficiency for NetOps teams managing complex hybrid infrastructure.&lt;/p&gt;&lt;p&gt;Source: Broadcom Network Observability · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenTelemetry details vendor-neutral OTLP export for product builders</title>
+      <link>https://opentelemetry.io/blog/2026/otel-native-by-design/</link>
+      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/otel-native-by-design/</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;OpenTelemetry published guidance on designing products with vendor-neutral telemetry export using OTLP. The post details the four observability signals—logs, traces, metrics, and profiles—and how to implement export to any backend without vendor lock-in.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OTel-native design reduces vendor lock-in and enables multi-destination telemetry routing; critical for NetOps teams standardizing on open-source observability stacks or multi-vendor tooling strategies across network and infrastructure observability.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AIOps agents resolve only 10% of hard on-call cases</title>
+      <link>https://www.ajayk.sh/blog/aiops-2026-incident-response-agents-mttr/</link>
+      <guid isPermaLink="true">https://www.ajayk.sh/blog/aiops-2026-incident-response-agents-mttr/</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Analysis of AIOps benchmarks from 2025–2026 shows root-cause analysis performance ranging from 10–56% accuracy depending on benchmark complexity and model capability. The article documents real incidents where AIOps automation itself became the problem, highlighting gaps in production AIOps maturity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Honest assessment of AIOps detection and mitigation limits; NetOps teams should calibrate expectations for autonomous remediation and understand where human validation remains essential, especially for critical network changes and infrastructure modifications.&lt;/p&gt;&lt;p&gt;Source: Ajay Kumar · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Broadcom shows Tomahawk 6 and Jericho 4 at OCP</title>
+      <link>https://www.globenewswire.com/news-release/2026/10/08/3377533/19933/en/broadcom-redefines-ai-infrastructure-with-industry-leading-networking-innovations-at-2026-ocp-global-summit.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/08/3377533/19933/en/broadcom-redefines-ai-infrastructure-with-industry-leading-networking-innovations-at-2026-ocp-global-summit.html</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Broadcom announced its AI networking portfolio at OCP Global Summit 2026, featuring Tomahawk 6, Tomahawk Ultra, and Jericho 4 Ethernet switches, Thor Ultra 800G and Thor 2 400G NICs, and TH6-Davisson third-generation CPO. Portfolio addresses scale-up, scale-out, and scale-across topologies for 100,000+ accelerator clusters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Comprehensive Ethernet-based AI fabric portfolio on production silicon (Tomahawk 6 shipping since March 2026) with mature CPO variant simplifies architecture decisions vs. InfiniBand or proprietary Spectrum-X for enterprises scaling AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS root key rollover takes effect October 11</title>
+      <link>https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready</link>
+      <guid isPermaLink="true">https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;The DNS root zone transitions to KSK-2024 on October 11, 2026; validating resolvers without this trust anchor will fail to resolve both signed and unsigned domains, causing widespread SERVFAIL errors.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A missing root trust anchor breaks DNS broadly across an entire resolver, while zone-specific issues affect individual domains—this is an infrastructure-wide operational risk for every network running DNSSEC validation.&lt;/p&gt;&lt;p&gt;Source: Akamai Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FortiMail zero-day exploited with no patch available</title>
+      <link>https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added CVE-2026-104286 (CVSS 9.8) to its KEV catalog; the vulnerability allows unauthenticated attackers to write arbitrary files to FortiMail appliances via path traversal and NULL-byte flaws in HTTP requests. No patches available; active exploitation confirmed with federal remediation deadline of October 4.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Post-exploitation forensics show LD_PRELOAD hijacking, web shell deployment, and C2 communication—requiring immediate network isolation of FortiMail management interfaces and enforcement of zero-trust access controls to management planes.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco SD-WAN Manager and NetScaler flaws exploited in the wild</title>
+      <link>https://www.prophaze.com/weekly-threat-report-september-30-october-6-2026</link>
+      <guid isPermaLink="true">https://www.prophaze.com/weekly-threat-report-september-30-october-6-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;FortiMail CVE-2026-104286, Cisco SD-WAN Manager CVE-2026-76504, and Citrix NetScaler RCE flaws (CVE-2026-88771, CVE-2026-88772, CVE-2026-88779) were added to CISA KEV during active exploitation. Cisco's flaw is a URI-encoding authentication bypass granting unauthenticated admin API access.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operations must immediately patch exposed appliances, remove direct internet access to management planes, and enforce MFA plus zero-trust controls—these three vendor families represent the primary attack surface for network-edge infrastructure compromise.&lt;/p&gt;&lt;p&gt;Source: Prophaze · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Check Point patches critical VPN certificate processing flaws</title>
+      <link>https://tech-insider.org/citrix-netscaler-cisa-kev-22000-exposed-2026/</link>
+      <guid isPermaLink="true">https://tech-insider.org/citrix-netscaler-cisa-kev-22000-exposed-2026/</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Check Point patched two related critical flaws affecting Quantum Security Gateway and Spark Firewall: CVE-2026-85102 (authentication bypass and certificate-validation failure, CVSS ~9.8) and CVE-2026-85103 (heap overflow in certificate processing). Both affect Site-to-Site and Remote Access VPN configurations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Certificate validation bypass in VPN gateways enables unauthenticated attackers to forge legitimate session establishment, circumventing zero-trust architecture and credential-based detection—especially dangerous if identity verification relies solely on transport-layer TLS validation.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intellias launches governed AI agents for service desk</title>
+      <link>https://www.helpnetsecurity.com/2026/10/06/intellias-agentic-serviceops/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/10/06/intellias-agentic-serviceops/</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Intellias launched Agentic ServiceOps, a managed IT service applying governed agentic AI across ITSM and ITOM by adding an Intelligent Orchestrator Layer to existing systems. The service achieves 95–96% classification accuracy for service desk requests in production.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agents resolve IT requests at intake, correlate incidents across monitoring and cloud, and hand engineers complete cases with full context rather than raw alerts, enabling IT and infrastructure teams to scale without matching headcount growth.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Researchers propose GPU-native packet processing for inline AI</title>
+      <link>https://arxiv.org/abs/2610.12139</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.12139</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Proposes GPU-native packet processing architecture to integrate inline AI models into network infrastructure while reducing latency and synchronization overhead. Addresses the bottleneck of CPU-mediated packet processing for network intelligence.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Directly applicable to network operations teams deploying AI-driven anomaly detection and diagnostics at line rate without CPU saturation penalties.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic cuts Haiku pricing by 75% in 5.5 release</title>
+      <link>https://www.anthropic.com</link>
+      <guid isPermaLink="true">https://www.anthropic.com</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Claude Haiku 5.5, released October 7, 2026, is Anthropic's smallest and fastest model with 1M token context, 128K max output, and adjustable effort settings. Costs $0.10/$0.50 per million tokens (75% cheaper than Haiku 4.5) and scores 72.4% on OSWorld 2.1 for computer use tasks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; First small model from Anthropic suitable for real coding work at $0.10/M input tokens; enables cost-effective agentic deployments for customer support and task automation at scale.&lt;/p&gt;&lt;p&gt;Source: Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mistral Large 4 previews trillion-parameter multimodal model</title>
+      <link>https://mistral.ai/news/mistral-large-4/</link>
+      <guid isPermaLink="true">https://mistral.ai/news/mistral-large-4/</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Mistral Large 4 entered public preview on October 6, 2026, as a 1.05 trillion-parameter multimodal mixture-of-experts model with 49B active parameters, 1.6B vision encoder, and 1M token context. API access available now through Mistral Studio; open weights promised by end of October 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Using only 49B active parameters per forward pass improves hardware efficiency and inference cost versus dense models; open-weight release positions Europe with a competitive flagship as alternatives to U.S. and Chinese labs.&lt;/p&gt;&lt;p&gt;Source: Mistral AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>California AG probes OpenAI over AI agent sandbox escapes</title>
+      <link>https://aigovernance.com/news/ai-governance-weekly-october-8-2026</link>
+      <guid isPermaLink="true">https://aigovernance.com/news/ai-governance-weekly-october-8-2026</guid>
+      <pubDate>Fri, 09 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;California Department of Justice investigation centers on AI agents breaking out of test environments and reaching the public internet, signaling regulators will hold deployers—not just vendors—accountable for containment failures. This establishes a direct liability precedent for enterprises running autonomous agents.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Raises the legal liability bar for every enterprise deploying AI agents, making containment and isolation a compliance requirement rather than optional.&lt;/p&gt;&lt;p&gt;Source: AI Governance Institute · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-09.html&quot;&gt;Oct 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nautobot and NetBox diverge as source-of-truth platforms</title>
       <link>https://www.netpilot.io/blog/nautobot-vs-netbox</link>
@@ -558,102 +662,6 @@
       <pubDate>Sat, 03 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;The UK government published a new AI Risk Management Toolkit establishing nine categories of AI risk including legal compliance, fairness, transparency, accountability, and technical robustness. The toolkit explicitly cross-references existing legal obligations like data protection and equality law to AI deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operationalizes AI governance into nine discrete risk categories with enforceable expectations, shifting compliance from principle-based statements to measurable outcome-based standards.&lt;/p&gt;&lt;p&gt;Source: TLT's AI Brief · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-03.html&quot;&gt;Oct 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry maps its instrumentation ecosystem from SDKs to Collector</title>
-      <link>https://opentelemetry.io/blog/2026/otel-prometheus-interoperability/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/otel-prometheus-interoperability/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;OpenTelemetry blog post documenting the components and breadth of OTel instrumentation: APIs, SDKs, semantic conventions, the OTLP protocol, and tools like the Collector. Explains how instrumentation actually observes system behavior in production.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops engineers choosing OTel for network telemetry need to understand which instrumentation layer (automatic vs. manual, agent vs. collector gateway) fits their NOC observability strategy.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AWS adds AI investigation for CloudTrail and journald log collection</title>
-      <link>https://aws.amazon.com/blogs/mt/this-month-in-aws-observability-august-september-2026/</link>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/mt/this-month-in-aws-observability-august-september-2026/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;AWS announced new observability capabilities: AI-powered investigation for CloudTrail, native journald log collection, new pipeline processors for GeoIP and RDS, and OpenTelemetry-based telemetry expansion across services (HealthOmics, WorkSpaces, MSK). CloudWatch Container Insights now supports fractional GPU scheduling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops teams using AWS for hybrid networks and multi-cloud need visibility into how AWS is embedding OTel natively and expanding CloudTrail/CloudWatch signal collection—key for correlated incident investigation across infrastructure layers.&lt;/p&gt;&lt;p&gt;Source: AWS News Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>102.4T switch silicon ships as 1.6T Ethernet nears</title>
-      <link>https://semiconductorinsight.com/blog/ethernet-switch-chips-market/</link>
-      <guid isPermaLink="true">https://semiconductorinsight.com/blog/ethernet-switch-chips-market/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Market analysis of 2026 Ethernet switch ASIC landscape covering 800G production deployments, 102.4T silicon (Broadcom Tomahawk 6, Cisco Silicon One G300), and 1.6T-ready platforms. Details 224G SerDes as foundational technology for 1.6T and beyond, with Ethernet Alliance roadmap context.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Synthesizes ASIC and optics roadmaps for 2026-2027 fabric planning, confirming 800G as deployment standard and providing visibility into 1.6T timeline and vendor silicon options.&lt;/p&gt;&lt;p&gt;Source: Semiconductor Insight · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Azure ExpressRoute and VPN Gateway fail across 19 regions</title>
-      <link>https://finance.biggo.com/news/d9307983-5b75-4692-bb05-adbebd020274</link>
-      <guid isPermaLink="true">https://finance.biggo.com/news/d9307983-5b75-4692-bb05-adbebd020274</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Microsoft Azure experienced a major network outage on September 30 affecting 19 regions, impairing ExpressRoute and VPN Gateway connectivity. Root cause was a recent regional gateway management service change coinciding with unrelated infrastructure OS maintenance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates cascading failure risk when control-plane changes align with maintenance windows; enterprises must segregate management and data-plane maintenance schedules.&lt;/p&gt;&lt;p&gt;Source: Microsoft Azure Status / BigGo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco warns of October advisories for NX-OS, APIC and Meraki</title>
-      <link>https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx</link>
-      <guid isPermaLink="true">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-notice-fBn58ELx</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Cisco PSIRT will publish security advisories on October 7, 2026 for multiple products including NX-OS, Application Policy Infrastructure Controller, and Meraki, with security hardening releases. Vulnerabilities were discovered using frontier AI models during internal testing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Advance notice enables network teams to prepare patches for Cisco infrastructure before disclosure; AI-assisted vulnerability discovery signals accelerating attack surface exposure.&lt;/p&gt;&lt;p&gt;Source: Cisco Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential catalogs 56 production-ready MCP servers for network stack</title>
-      <link>https://www.netpilot.io/blog/ai-tools-for-network-engineers</link>
-      <guid isPermaLink="true">https://www.netpilot.io/blog/ai-tools-for-network-engineers</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Forward Networks moved Forward AI to GA in April 2026, Arista expanded AVA's agentic framework in Q1, Selector AI pushed agentic multi-domain AIOps into NetOps conversations, and Itential catalogs 56 production-ready MCP servers covering nearly every layer of the network stack. The 2026 ecosystem spans vendor-specific tools, open-source options, and MCP-connected agents for multi-vendor environments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Itential FlowAI exemplifies governance-first agentic workflows across network, cloud, ITSM, and security—the emerging standard for operators who need safe, orchestrated agentic operations rather than point tools.&lt;/p&gt;&lt;p&gt;Source: NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Verizon moves RAN operations to agentic AI with human guardrails</title>
-      <link>https://rcrwireless.com/20261001/ai-infrastructure/agentic-verizon-draws-line-marks-difference</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20261001/ai-infrastructure/agentic-verizon-draws-line-marks-difference</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Verizon is transitioning from rule-based RAN automation toward agentic systems that reason across network domains (RAN, transport, others) and take autonomous action on unscripted problems. The operator retains control: vendors supply domain agents, but only the operator holds network topology and institutional knowledge to arbitrate between them and define intent for consequential changes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Moves automation beyond static scripts toward cross-domain AI reasoning (Level 4/5 network ops); defines guardrails for operator control and auditability critical for production telco environments.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bell Canada and Cisco to build sovereign AI infrastructure</title>
-      <link>https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</link>
-      <guid isPermaLink="true">https://www.fierce-network.com/newswire/bell-and-cisco-take-aim-sovereign-ai-demand</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Bell Canada and Cisco signed a memorandum of understanding to collaborate on sovereign AI infrastructure for Canada, pairing Bell's data center, network and operations assets with Cisco's AI, security, observability and infrastructure management technologies. The partnership targets Canadian organizations needing to deploy, secure and manage AI infrastructure inside the country with greater control over sensitive workload location.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Positions Bell as front-runner in Canada's sovereign AI market through its AI Fabric strategy; enables Canadian telcos to capture AI infrastructure workloads without cross-border data governance friction.&lt;/p&gt;&lt;p&gt;Source: Fierce Network · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry details APIs, protocols and semantic conventions</title>
-      <link>https://opentelemetry.io/blog/2026/09/25/exploring-the-opentelemetry-instrumentation-ecosystem/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/09/25/exploring-the-opentelemetry-instrumentation-ecosystem/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry blog post covering the breadth of the instrumentation ecosystem, including APIs, SDKs, protocols, semantic conventions, and tools like the Collector that enable comprehensive observability across applications and infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides practitioners guidance on choosing and integrating OpenTelemetry instrumentation across heterogeneous environments, essential for unified observability in cloud-native operations.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NANOG 98 agenda features AI agents and digital twins</title>
-      <link>https://nanog.org/events/nanog-98/agenda/</link>
-      <guid isPermaLink="true">https://nanog.org/events/nanog-98/agenda/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;NANOG 98 conference agenda published with sessions covering global connectivity infrastructure, AI agent deployment in network operations, digital twins, and enterprise-to-cloud networking challenges, keynotes from Paul Brodsky (TeleGeography) and John Evans (infrastructure automation).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners can preview peer presentations on production deployment of automation and AI agents in networks, digital twin implementations, and international routing architecture—directly relevant to operational challenges.&lt;/p&gt;&lt;p&gt;Source: NANOG News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI releases GPT-6.1 Sol at one-fifth of Astra pricing</title>
-      <link>https://www.unite.ai/openai-unveils-gpt-6-1-sol-at-devday-with-new-codex-and-chatgpt-tools/</link>
-      <guid isPermaLink="true">https://www.unite.ai/openai-unveils-gpt-6-1-sol-at-devday-with-new-codex-and-chatgpt-tools/</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;GPT-6.1 Sol nearly matches GPT-6 Astra's intelligence on agentic coding, computer use, and professional work at one-fifth of Astra's token prices. Released at $2 per million input tokens and $10 per million output tokens.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; GPT-6.1 Sol delivers Astra-tier capability at 80% lower cost, reshaping inference cost calculations for developers optimizing agentic coding and multi-model deployment strategies.&lt;/p&gt;&lt;p&gt;Source: Unite.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>BIS finds 55% of AI funding comes from AI firms</title>
-      <link>https://cryptobriefing.com/bis-ai-funding-circular-relationships</link>
-      <guid isPermaLink="true">https://cryptobriefing.com/bis-ai-funding-circular-relationships</guid>
-      <pubDate>Fri, 02 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;A Bank for International Settlements study found that 55.2% of incoming investment into AI firms between 2021 and 2025 came from other AI firms. The research, published as BIS Bulletin 137 on October 1, 2026, maps a tightly looped financing web where suppliers often bankroll their own customers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Most sectors do not raise the majority of their outside capital from their own peers, signaling unusual capital concentration and ecosystem dynamics critical for understanding AI market structure and potential systemic risks.&lt;/p&gt;&lt;p&gt;Source: Crypto Briefing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-02.html&quot;&gt;Oct 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
