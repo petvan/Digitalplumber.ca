@@ -6,7 +6,87 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 12 Oct 2026 19:52:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 12:40:26 GMT</lastBuildDate>
+    <item>
+      <title>Forrester puts Dynatrace observability ROI at 466 percent</title>
+      <link>https://www.dynatrace.com/news/blog/forrester-study-models-466-roi-from-unified-observability-with-dynatrace/</link>
+      <guid isPermaLink="true">https://www.dynatrace.com/news/blog/forrester-study-models-466-roi-from-unified-observability-with-dynatrace/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Forrester study finds Dynatrace unified observability platform delivers 466% ROI with diagnosis time reduced from 45 minutes to 5 minutes and log/metric gathering from 15–20 minutes to 1 minute, driven by AI-powered correlation and topology context.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Quantifies MTTR reduction and operational efficiency gains from unified observability and AI-driven event correlation in production environments.&lt;/p&gt;&lt;p&gt;Source: Dynatrace Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dynatrace ships end-to-end Snowflake observability</title>
+      <link>https://www.dynatrace.com/news/blog/end-to-end-snowflake-observability-is-now-generally-available-in-dynatrace/</link>
+      <guid isPermaLink="true">https://www.dynatrace.com/news/blog/end-to-end-snowflake-observability-is-now-generally-available-in-dynatrace/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Dynatrace launches end-to-end Snowflake observability in GA, enabling teams to correlate application, infrastructure, and data warehouse telemetry to pinpoint root causes across the full data stack without tool-switching.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends unified observability into data warehouse operations, closing visibility gaps in modern data pipelines and enabling correlation between application and warehouse-level issues.&lt;/p&gt;&lt;p&gt;Source: Dynatrace Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco starts shipping 102.4T Silicon One G300 systems</title>
+      <link>https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-advances-scalability-and-openness-at-ocp-2026.html</link>
+      <guid isPermaLink="true">https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-advances-scalability-and-openness-at-ocp-2026.html</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;The 102.4T Silicon One G300 is now available for customer sampling, and the first G300-powered systems are currently shipping to customers. The new Silicon One G302 delivers 51.2T capacity and features Cisco 1.6T optics and direct-to-chip liquid cooling integration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Inside the data center, AI scale is driving the same need for greater bandwidth, density and power efficiency across silicon, systems and optics. To meet the radical bandwidth requirements of the next generation of AI, Cisco's Silicon One portfolio is delivering the next level of network performance designed for massive AI scale.&lt;/p&gt;&lt;p&gt;Source: Cisco Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Broadcom shows Tomahawk 6 and third-generation co-packaged optics</title>
+      <link>https://marketchameleon.com/articles/b/2026/10/9/avgo-2026-ocp-global-summit-ai-networking-ethernet-cpo</link>
+      <guid isPermaLink="true">https://marketchameleon.com/articles/b/2026/10/9/avgo-2026-ocp-global-summit-ai-networking-ethernet-cpo</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Broadcom will showcase AI networking innovations at the 2026 OCP Global Summit, highlighting Ethernet switching, 800G/400G AI Ethernet NICs, and third-generation co-packaged optics aimed at meeting rising bandwidth and power-efficiency needs. The company's keynote agenda points to scaling designs for AI clusters of over 100,000 accelerators, while partner demos emphasize Tomahawk 6 and Tomahawk 6-Davisson 102.4T CPO on the show floor.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CPO at 1.6T scale is transitioning from early-access to production deployments; co-packaged photonics reduce power per port and enable extreme-density AI fabric scaling beyond pluggable optics limits.&lt;/p&gt;&lt;p&gt;Source: MarketChameleon · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FBI warns of mass Fortinet firewall credential compromise</title>
+      <link>https://bestantiviruspro.org/fortinet-firewall-vulnerability-advisory/</link>
+      <guid isPermaLink="true">https://bestantiviruspro.org/fortinet-firewall-vulnerability-advisory/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;FBI and US Secret Service issued joint advisory on October 6, 2026 warning of ongoing FortiBleed operations targeting Fortinet FortiGate firewalls and SSL VPN gateways with reused or leaked credentials. SOCRadar verified over 86,644 compromised devices across 194 countries; attackers exploit legacy password storage weaknesses to harvest and crack authentication data at scale.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops teams must assume Fortinet credentials are compromised; implement aggressive VPN access controls, enforce MFA, and monitor for lateral movement from perimeter devices into internal networks.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three agent interoperability specs miss October delivery targets</title>
+      <link>https://forkast.news/agntconmcpcons-11-tracks-map-the-agent-infrastructure-control-planes-the-specs-that-would-connect-them-remain-unshipped/</link>
+      <guid isPermaLink="true">https://forkast.news/agntconmcpcons-11-tracks-map-the-agent-infrastructure-control-planes-the-specs-that-would-connect-them-remain-unshipped/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;AGNTCon+MCPCon drew over 3,500 attendees at the San Jose McEnery Convention Center, mapping 11 tracks across agent infrastructure control planes; PAP v0.1, Google universal agent for work, and A2A Agent Registry all missed their October delivery targets.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure providers are implementing network-layer intercepts to manage credentials, swapping in short-lived scoped credentials at the network layer rather than inside agent code, creating a new architectural pattern for ops teams deploying multi-agent systems.&lt;/p&gt;&lt;p&gt;Source: Forkast · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deutsche Telekom sets AI revenue and cost targets</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-3-9-oct-2026-56443/amp</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-3-9-oct-2026-56443/amp</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Deutsche Telekom's AI revenue and cost targets dominated operator announcements on sovereign AI infrastructure and autonomous network governance. Indosat Ooredoo Hutchison partnered with F5 to launch the Indosat Intelligence Suite, providing enterprises a governed environment to deploy AI without managing complex infrastructure themselves.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telcos are becoming AI infrastructure providers for regulated workloads; A1 Telekom Austria and others now embed regulatory compliance (EU AI Act, data residency) into platform design, signaling a structural shift from connectivity to AI-capable infrastructure provisioning.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BGP-LS inter-AS topology extensions reach Proposed Standard</title>
+      <link>https://mailarchive.ietf.org/arch/browse/ietf-announce/</link>
+      <guid isPermaLink="true">https://mailarchive.ietf.org/arch/browse/ietf-announce/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;IESG approved BGP-LS Extensions for Inter-AS Topology Retrieval (draft-ietf-idr-bgpls-inter-as-topology-ext-46) as Proposed Standard. BGP-LS now extends to multi-domain topology discovery for inter-AS visibility.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables operators to retrieve topology across autonomous systems using BGP-LS, improving visibility for traffic engineering and network automation in multi-domain environments.&lt;/p&gt;&lt;p&gt;Source: IETF Announce · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HCLTech partners with Anthropic on governed agentic AI</title>
+      <link>https://www.prnewswire.com/news-releases/hcltech-and-anthropic-sign-global-premier-partnership-to-scale-governed-agentic-ai-across-global-enterprises-302905626.html</link>
+      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/hcltech-and-anthropic-sign-global-premier-partnership-to-scale-governed-agentic-ai-across-global-enterprises-302905626.html</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;HCLTech announced a Global Premier Partnership with Anthropic to accelerate enterprise adoption of agentic AI with a focus on safety, cybersecurity and governance. HCLTech will develop industry-specific solutions using Claude and Claude Code, integrating them into enterprise products to help businesses move from AI experimentation to large-scale deployment with secure implementation and governance mechanisms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; HCLTech will provide secure sandbox environments and help clients adopt AI-native engineering practices and governance — directly addressing the governance gap constraining enterprise AI scaling at runtime.&lt;/p&gt;&lt;p&gt;Source: PR Newswire / HCLTech · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nvidia weighs buying Reflection AI at 25 billion valuation</title>
+      <link>https://dealroom.co/news/161539-nvidia-weighs-buyout-of-reflection-ai-at-25b-valuation/</link>
+      <guid isPermaLink="true">https://dealroom.co/news/161539-nvidia-weighs-buyout-of-reflection-ai-at-25b-valuation/</guid>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Nvidia is in early-stage talks to either acquire Reflection AI outright or deepen its investment in the open-weight model developer, according to the Financial Times on October 10. Nvidia has previously invested $800 million in Reflection AI, which was valued at $25 billion in its latest funding round.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Nvidia's shift from pure infrastructure plays to acquiring model development capability signals its strategy to control the stack — not just the hardware — as open-weight models threaten GPU margin concentration.&lt;/p&gt;&lt;p&gt;Source: Financial Times / Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>netlab 26.10 adds SRv6 support and Netmiko configuration</title>
       <link>https://blog.ipspace.net/2026/10/netlab-26-10/</link>
@@ -606,94 +686,6 @@
       <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;President Trump announced formation of a 'Super Intelligence Force' artificial intelligence task force to promote AI dominance while protecting American lives and interests. The US is simultaneously weighing a rapid-communication channel with China for AI-related incidents, while California introduced measures on AI use in employment decisions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals major shift in US AI governance posture toward acceleration and geopolitical competition, while establishing direct US-China communication channel for AI safety incidents—reshaping enterprise risk management and regulatory expectations.&lt;/p&gt;&lt;p&gt;Source: ABC News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>NetBox patch fixes plaintext API token exposure in jobs</title>
-      <link>https://github.com/netbox-community/netbox/releases/tag/v4.7.2</link>
-      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases/tag/v4.7.2</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;NetBox v4.7.2 addresses a critical security issue where API tokens created via background bulk requests were recorded in plaintext in job results and viewable by any user. This patch rejects such requests; any tokens created this way should be rotated immediately.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Essential security fix for teams using NetBox's bulk operations API—audit your job results and invalidate exposed tokens before upgrading.&lt;/p&gt;&lt;p&gt;Source: GitHub NetBox Releases · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Forward Networks ships Predict for pre-change impact analysis</title>
-      <link>https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</link>
-      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/forward-predict-is-now-generally-available-advancing-safer-agentic-netops-and-autonomous-networking-302892408.html</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Forward Predict, a first-of-its-kind capability and critical enabler of safe Agentic NetOps, is now generally available, deterministically showing the impact of proposed network changes before they touch production. It includes broader hybrid and multi-cloud coverage (Zscaler ZPA, IBM Cloud), deeper multi-vendor support (Cisco FMC/FTD, Check Point Maestro, F5 Velos), and expanded security with CIS-certified benchmarks and DISA STIG support.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Forward has built the world's first AI networking agent for multivendor network change, creating networking equivalents of compiler and testing frameworks, eliminating production as the test bed for changes and enabling safer autonomous networking.&lt;/p&gt;&lt;p&gt;Source: Forward Networks / PRNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS root signing key changes on October 11</title>
-      <link>https://blog.cloudflare.com/root-ksk-2024-rollover/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/root-ksk-2024-rollover/</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;On October 11, 2026, the DNS root is scheduled to change its key-signing key (KSK) for only the second time ever; this key anchors DNSSEC's chain of trust. DNSSEC-validating resolver operators must verify trust of the new KSK-2024 key; Cloudflare's systems already trust it.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Critical preparation window for resolver operators: misconfigured DNSSEC validation can make healthy sites unreachable; Cloudflare offers RFC 8509 readiness testing via dnstest.dev.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Exploited Citrix NetScaler denial-of-service flaw added to KEV</title>
-      <link>https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog</link>
-      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Citrix NetScaler ADC and Citrix NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service. Due date for patches is 2026-10-07 under BOD 26-04.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetScaler GACs are critical perimeter assets; a DoS on gateway instances can disrupt remote access and force failover, requiring immediate patch prioritization in your access architecture.&lt;/p&gt;&lt;p&gt;Source: CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CISA flags two critical Zammad flaws as exploited</title>
-      <link>https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog</link>
-      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CISA added two new vulnerabilities to its KEV catalog: CVE-2026-102489 Zammad Session Fixation Vulnerability and CVE-2026-102490 Zammad Improper Privilege Management Vulnerability, both CVSS 9.8 critical severity. CVE-2026-102489 can lead to remote code execution as the zammad user.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; If Zammad handles ticket management for your SOC or security infrastructure, these RCE flaws create a direct path to SOC compromise and lateral movement into your network via automation workflows.&lt;/p&gt;&lt;p&gt;Source: CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kubernetes diagnostic agents move into production SRE workflows</title>
-      <link>https://press.farm/the-best-ai-agents-for-automated-devops-and-infrastructure/</link>
-      <guid isPermaLink="true">https://press.farm/the-best-ai-agents-for-automated-devops-and-infrastructure/</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Guide to production infrastructure and SRE agents: Kubiya acts as an agentic engineering organization for platform/DevOps/SRE teams; K8sGPT specialized Kubernetes diagnostic agent codifies real-world SRE debugging patterns and supports multiple LLM backends including local privacy-focused models, running as in-cluster operator.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Specialized agents like K8sGPT for Kubernetes prove agentic maturity is achievable starting narrow on high-frequency, domain-specific tasks rather than general-purpose LLM interfaces; in-cluster deployment with local models enables air-gapped and data-residency-constrained environments.&lt;/p&gt;&lt;p&gt;Source: Press.farm · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Bell and Cisco to build sovereign AI infrastructure in Canada</title>
-      <link>https://www.sdxcentral.com/news/bell-rings-up-cisco-for-canadian-ai-sovereignty/</link>
-      <guid isPermaLink="true">https://www.sdxcentral.com/news/bell-rings-up-cisco-for-canadian-ai-sovereignty/</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Bell Canada and Cisco signed a memorandum of understanding on September 29 to collaborate on sovereign AI infrastructure, combining Bell's AI Fabric end-to-end solutions with Cisco's networking, security, and infrastructure technologies deployed within Canada. The firms will assess Cisco AI PODs for modular AI workloads and develop flexible commercial models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses data sovereignty and regulatory compliance for infrastructure operators deploying AI workloads; enables Canadian organizations to maintain control over sensitive systems and data location.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Charter turns cable headends into AI and edge compute sites</title>
-      <link>https://www.lightreading.com/ai-machine-learning/ai-and-edge-computing-step-into-the-cable-spotlight</link>
-      <guid isPermaLink="true">https://www.lightreading.com/ai-machine-learning/ai-and-edge-computing-step-into-the-cable-spotlight</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Charter and Spectrum discussed at SCTE TechExpo how they are repurposing space, power and cooling at hubs and headends to serve AI and edge compute services. AI is being integrated into cable broadband operations to detect and automatically fix network impairments while improving customer experience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cable operators are automating network fault detection and remediation; leveraging existing physical infrastructure for new AI-powered operational and edge services compresses truck rolls and accelerates incident response.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mistral releases trillion-parameter open-weight model trained in Europe</title>
-      <link>https://qz.com/mistral-large-4-open-weight-ai-model-launch-100626</link>
-      <guid isPermaLink="true">https://qz.com/mistral-large-4-open-weight-ai-model-launch-100626</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Mistral Large 4 (&amp;quot;Le Chonk&amp;quot;) is a 1-trillion-parameter open-weight model trained on 4,000 Nvidia Grace Blackwell GPUs over two months in European data centers. Mistral claims it ranks among the top open-weight models globally and is the strongest developed outside China.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open-weight model available in API preview now with full weights October 27; provides viable alternative to closed US and Chinese models for production deployments.&lt;/p&gt;&lt;p&gt;Source: Quartz · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SAP acquires TechWolf for AI skills mapping platform</title>
-      <link>https://news.sap.com/2026/10/sap-to-acquire-techwolf-evidence-based-work-age-of-ai/</link>
-      <guid isPermaLink="true">https://news.sap.com/2026/10/sap-to-acquire-techwolf-evidence-based-work-age-of-ai/</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;SAP announced an agreement to acquire TechWolf, a provider of an AI work intelligence platform that maps work, skills, and external labor markets using a proprietary context graph. The deal is expected to close in Q4 2026 subject to regulatory approval.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; TechWolf's context graph and AI models will establish work intelligence as a strategic SAP asset within SuccessFactors, directly shaping enterprise talent strategy and reskilling decisions in an AI-driven labor market.&lt;/p&gt;&lt;p&gt;Source: SAP News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>California enacts binding AI laws as Washington stays voluntary</title>
-      <link>https://www.originbrief.app/en/reports/ai-regulation-policy/2026-10-05/weekly</link>
-      <guid isPermaLink="true">https://www.originbrief.app/en/reports/ai-regulation-policy/2026-10-05/weekly</guid>
-      <pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;US federal response to AI agent security incidents relies on voluntary accords and terminology rebranding while Congress holds hearings on AI agent liability and the FTC opens broad investigation. California enacts multiple AI statutes including No Robo Bosses Act, AI evaluator certification, chatbot child safety and arbitrator restrictions, positioning itself as template for national regulation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The 'super intelligence' rebranding creates ambiguity about whether existing AI regulations and international commitments apply, requiring organizations to audit whether governance frameworks are technology-neutral or terminology-dependent.&lt;/p&gt;&lt;p&gt;Source: Origin Brief AI Policy Tracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-06.html&quot;&gt;Oct 6, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
