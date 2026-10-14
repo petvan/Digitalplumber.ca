@@ -6,7 +6,87 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 13 Oct 2026 17:37:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 12:49:14 GMT</lastBuildDate>
+    <item>
+      <title>NetBox 4.7.3 speeds up REST API and fixes cable bugs</title>
+      <link>https://github.com/netbox-community/netbox/releases/tag/v4.7.3</link>
+      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases/tag/v4.7.3</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;NetBox v4.7.3 patch release shipped with REST API performance improvements including deferred GraphQL schema building, optimized prefetch logic for many-to-many relations, and bug fixes for cable termination tracking and custom field handling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Performance gains reduce query overhead for large-scale IPAM/DCIM operations; schema deferral speeds up management command startup for operators running frequent bulk jobs.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco and Broadcom show 102.4 Tbps Ethernet AI fabrics</title>
+      <link>https://techblog.comsoc.org/2026/10/13/2026-ocp-summit-full-stack-ai-networking-silicon-from-nvidia-cisco-ethernet-vs-infiniband-interconnects/</link>
+      <guid isPermaLink="true">https://techblog.comsoc.org/2026/10/13/2026-ocp-summit-full-stack-ai-networking-silicon-from-nvidia-cisco-ethernet-vs-infiniband-interconnects/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;At the 2026 OCP Global Summit in San Jose, the multi-vendor push for open, gigawatt-scale AI networks reached a critical tipping point as Cisco and Broadcom deployed massive 102.4 Tbps Ethernet fabrics. Modern 800Gbps Ethernet is increasingly deployed by hyperscalers for AI clusters due to superior TCO and rapid innovation cycles.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The convergence of open Ethernet standardization (ESUN, UEC) with 102.4 Tbps switching capacity signals Ethernet's path to displacing InfiniBand as the default AI fabric, forcing infrastructure teams to reassess vendor and architectural roadmaps.&lt;/p&gt;&lt;p&gt;Source: ComsOC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nvidia pitches Spectrum-X Ethernet as 1.6x faster for AI</title>
+      <link>https://www.sdxcentral.com/analysis/nvidia-gets-serious-about-ethernet-networking-with-spectrum-x/</link>
+      <guid isPermaLink="true">https://www.sdxcentral.com/analysis/nvidia-gets-serious-about-ethernet-networking-with-spectrum-x/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;NVIDIA positions Spectrum-X as its first Ethernet fabric purpose-built for AI workloads, accelerating AI network performance by 1.6x over traditional Ethernet. CEO Jensen Huang noted that many data centers cannot adopt InfiniBand due to existing Ethernet ecosystem investments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NVIDIA reports Spectrum-X now outsells Quantum InfiniBand for Blackwell deployments and is open-sourcing MRC via OCP, signaling that Ethernet is NVIDIA's growth vector and the incumbent is hedging on InfiniBand market share.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Subsea cable faults rise as repairs still take 40 days</title>
+      <link>https://blog.apnic.net/2026/10/14/submarine-cable-resilience/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/14/submarine-cable-resilience/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;APNIC published a comprehensive analysis of submarine cable resilience challenges covering 1.5M km of 607 in-service systems. Key findings: trawler activity rose 11.8% in Q2 2026 with 1,594 confirmed events; median global repair time is ~40 days; geological events, cable abrasion, and accidental damage dominate fault causes (7%, 4% respectively).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators must account for subsea cable vulnerability in traffic engineering; trawler-caused faults consume scarce repair capacity regardless of headline impact. Repair timelines of 14–40+ days demand robust rerouting and capacity planning strategies.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Radware adds protection for MCP servers</title>
+      <link>https://www.globenewswire.com/news-release/2026/10/14/3380514/8980/en/radware-introduces-model-context-protocol-mcp-server-protection-to-help-secure-the-integration-layer-of-agentic-ai.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/14/3380514/8980/en/radware-introduces-model-context-protocol-mcp-server-protection-to-help-secure-the-integration-layer-of-agentic-ai.html</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Radware announced Radware Model Context Protocol (MCP) Server Protection, a solution to help organizations secure MCP servers against protocol-specific attacks, DDoS and abuse while providing visibility and governance across MCP deployments. The solution joins Radware Agentic AI Protection and LLM Firewall to protect AI infrastructure across agents, models and the MCP servers that connect them to enterprise systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP is rapidly emerging as a standard way for AI agents to connect to enterprise applications, and nearly half of software companies are using MCP in production, making MCP-specific security controls essential for operations teams adopting agent-driven infrastructure workflows.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruflo open-source harness runs swarms of 100 coding agents</title>
+      <link>https://dev.to/cortexflow_tech/ruflo-the-open-source-meta-harness-running-100-agent-coding-swarms-3609</link>
+      <guid isPermaLink="true">https://dev.to/cortexflow_tech/ruflo-the-open-source-meta-harness-running-100-agent-coding-swarms-3609</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Cognitum One released Ruflo, an open-source meta-harness that turns one coding assistant (Claude Code, OpenAI Codex, or any MCP client) into a coordinated swarm of 100+ specialized agents. The release includes 314 native MCP tools spanning CI checks, local security scans, cloud deployment hooks, and observability pipelines, with governance-first architecture for production operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Ruflo reframes agent building around memory, routing, approvals, observability, and policy instead of model choice, providing a governance-first framework for infrastructure and SRE teams deploying multi-agent systems at scale without vendor lock-in.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scytale MCP server exposes live compliance data to AI tools</title>
+      <link>https://helpnetsecurity.com/2026/10/14/scytale-mcp</link>
+      <guid isPermaLink="true">https://helpnetsecurity.com/2026/10/14/scytale-mcp</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Scytale announced Scytale MCP, a Model Context Protocol server that connects AI tools directly to compliance programs, allowing tools such as Claude and ChatGPT to query live compliance data and complete routine work through plain language queries. The release reflects how AI-native teams operate, where preferred AI tools pull answers directly rather than send users into separate applications.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Scytale MCP enables agents to query audit readiness, controls, policies, risks and vendor data, allowing compliance automation for infrastructure teams managing governance at scale while maintaining audit trails for autonomous remediation.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New MCP spec goes stateless and scales behind load balancers</title>
+      <link>https://dev.to/saaro_net/mcp-2026-the-overhaul-to-a-production-ready-agent-protocol-8m</link>
+      <guid isPermaLink="true">https://dev.to/saaro_net/mcp-2026-the-overhaul-to-a-production-ready-agent-protocol-8m</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;The 2026-07-28 MCP specification revision makes the Model Context Protocol stateless and scalable, eliminating session affinity requirements and enabling horizontal scaling behind standard HTTP load balancers. The update formally establishes MCP Apps and Tasks as official extensions while the NSA urges security maturity for production deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The stateless redesign enables MCP servers to scale horizontally without session management or server affinity, a critical requirement for production deployments of infrastructure agents in large enterprises and cloud-native environments.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenTelemetry ships release candidate process metrics in hostmetrics</title>
+      <link>https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</link>
+      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenTelemetry Collector Contrib v0.160.0 adds release candidate (RC) process semantic conventions metrics to the hostmetrics receiver's process scraper, the last stage before stable v1. The System SIG has worked on this for the better part of a year, with process metrics in good shape for community testing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Stabilizing hostmetrics with versioned metrics enables production adoption of semantic conventions without breaking existing deployments, unblocking the entire hostmetrics receiver stabilization.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic warns small models could self-replicate on IoT devices</title>
+      <link>https://www.aljazeera.com/economy/2026/10/13/ai-could-self-replicate-on-home-devices-within-months-anthropic-says</link>
+      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/10/13/ai-could-self-replicate-on-home-devices-within-months-anthropic-says</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Anthropic researchers released a report warning small AI models could soon begin self-replicating on everyday consumer products such as smart TVs and fridges, potentially within months. The frontier red team tested multiple US- and Chinese-developed models and found such self-replicating AI would be difficult to shut down due to lack of a centralized host.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A critical risk assessment for enterprise security and operational governance—IoT self-replication could bypass centralized monitoring and escalate incidents across distributed consumer device networks.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NetBox becomes source of truth for NVIDIA DSX OS</title>
       <link>https://netboxlabs.com/blog/evolving-infrastructure-intelligence-platform/</link>
@@ -662,86 +742,6 @@
       <pubDate>Thu, 08 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;O'Reilly announced Expert Intelligence, a platform that grounds enterprise AI agents in its repository of practitioner knowledge and technical documentation, with all outputs verified and cited to named authors. The suite provides job-specific agent skills for actionable workplace guidance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; This product addresses enterprise AI governance gaps by ensuring AI outputs are auditable and traced to verified sources, enabling compliance with EU AI Act requirements and NIST frameworks where black-box AI carries unacceptable regulatory risk.&lt;/p&gt;&lt;p&gt;Source: AIwire (HPC Wire) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-08.html&quot;&gt;Oct 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI data centre buildout spreads across Asia-Pacific and Gulf</title>
-      <link>https://tecknexus.com/digital-infrastructure-insights-september-2026/</link>
-      <guid isPermaLink="true">https://tecknexus.com/digital-infrastructure-insights-september-2026/</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;AI data centre capacity expanded across Asia-Pacific and the Gulf with interconnect and subsea capacity keeping pace. d-Matrix integrates Raptor XPUs with NVIDIA using NVLink Fusion for scale-up and Spectrum-X Ethernet for scale-out, while Qualcomm and Amazon develop custom silicon for AWS AI with 1.6 Tbps optical connectivity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Networking vendors warned of supply bottlenecks affecting US AI data centre builds, signaling procurement urgency for infrastructure teams planning cluster scaling.&lt;/p&gt;&lt;p&gt;Source: TecKnexus · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Infoblox closes Kentik deal to merge DDI with flow data</title>
-      <link>https://buttondown.com/pvo/archive/oct-3-netbox-patch-stops-api-tokens-leaking-into/</link>
-      <guid isPermaLink="true">https://buttondown.com/pvo/archive/oct-3-netbox-patch-stops-api-tokens-leaking-into/</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Infoblox completed acquisition of Kentik in August 2026, uniting DNS/DHCP/IPAM authority with real-time network flow behavioral intelligence and AI-guided investigation for root cause analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Converges network observability architecture: IPAM/DNS state now correlates directly with BGP routing context and flow data, enabling faster RCA for routing-related incidents and subsea cable failovers.&lt;/p&gt;&lt;p&gt;Source: The New Stack / PVO Newsletter · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CISA flags actively exploited Fortinet FortiMail path traversal flaw</title>
-      <link>https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog</link>
-      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CISA added CVE-2026-104286, a Fortinet FortiMail path traversal vulnerability, to its Known Exploited Vulnerabilities Catalog based on evidence of active exploitation. This type of vulnerability poses significant risks to federal enterprise security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; BOD 26-04 requires federal agencies to prioritize rapid remediation of KEV Catalog vulnerabilities on publicly exposed assets; all organizations should apply risk-based patching urgency to perimeter mail gateways.&lt;/p&gt;&lt;p&gt;Source: CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco puts Claude managed agents inside Webex</title>
-      <link>https://investor.cisco.com/news/news-details/2026/Cisco-Unveils-New-Agentic-Collaboration-Experiences/default.aspx</link>
-      <guid isPermaLink="true">https://investor.cisco.com/news/news-details/2026/Cisco-Unveils-New-Agentic-Collaboration-Experiences/default.aspx</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco announced agentic collaboration innovations including Claude integration in Webex and Dialog, a new agentic harness for customer engagement. Teams can now use Claude Managed Agents to analyze data and execute work within Webex without switching contexts.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Expands agentic AI beyond infrastructure operations into collaboration and customer experience workflows; demonstrates enterprise adoption of agent frameworks beyond NetOps.&lt;/p&gt;&lt;p&gt;Source: Cisco Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Megaport demos AI agents provisioning networks via APIs</title>
-      <link>https://www.megaport.com/blog/how-agentic-ai-could-change-global-network-deployment/</link>
-      <guid isPermaLink="true">https://www.megaport.com/blog/how-agentic-ai-could-change-global-network-deployment/</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Megaport demonstrated agentic AI simplifying network deployment at Alibaba Cloud Apsara Conference, showing how agents and APIs can automate routing decisions and network provisioning. The live demo showed AI agents coordinating complex network setup tasks with minimal human intervention.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates production-ready agentic network automation beyond theoretical pilots; shows automation of routing and provisioning decisions at scale in cloud environments.&lt;/p&gt;&lt;p&gt;Source: Megaport Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Half of enterprises now run agentic AI in network operations</title>
-      <link>https://www.cisco.com/c/dam/en/us/solutions/artificial-intelligence/the-impact-of-agentic-ai-on-network-operations.pdf</link>
-      <guid isPermaLink="true">https://www.cisco.com/c/dam/en/us/solutions/artificial-intelligence/the-impact-of-agentic-ai-on-network-operations.pdf</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco and Omdia released research showing 75% of enterprises have deployed AI for network operations, with 51% running agentic AI in production today. 84% expect an AI-led operating model within 12 months. Key finding: 67% say generative AI increased network complexity; 95% say existing AIOps tools fall short significantly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Quantifies agentic AI adoption in NetOps: half of large enterprises already have agents acting in production; shows operators prioritize autonomy over advisory tools despite organizational barriers.&lt;/p&gt;&lt;p&gt;Source: Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Singtel sells AI model access by the token</title>
-      <link>https://www.lightreading.com/ai-machine-learning/singtel-s-re-ai-launches-ai-token-as-a-service</link>
-      <guid isPermaLink="true">https://www.lightreading.com/ai-machine-learning/singtel-s-re-ai-launches-ai-token-as-a-service</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;RE:AI, Singtel's sovereign AI cloud business, launched Token-as-a-Service (TaaS), providing enterprises with access to multiple AI models, scalable infrastructure, orchestration and governance through a flexible, token-based consumption model. TaaS provides access to open-weight models (Qwen, Mistral, GLM, Kimi, MiniMax) and selected frontier models, with enterprises able to onboard their own models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise token costs and data sovereignty concerns hinder AI adoption; agentic AI deployment increases token consumption and model management complexity, making cost transparency and sovereign hosting critical for operators competing with hyperscalers.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mistral trains trillion-parameter model on European Blackwell cluster</title>
-      <link>https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Mistral AI released Mistral Large 4, a 1-trillion-parameter natively multimodal mixture-of-experts model with 49 billion active parameters, trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The API is live at $1.36/$4.18 per million input/output tokens with weights shipping end of October—a new sovereign EU-based frontier model option competing directly with US and Chinese closed models at mid-tier pricing.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GSA issues AI acquisition clause for federal contracts</title>
-      <link>https://fedscoop.com/gsa-ai-acquisitions-clause-experts-react</link>
-      <guid isPermaLink="true">https://fedscoop.com/gsa-ai-acquisitions-clause-experts-react</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The General Services Administration issued a regulation on AI acquisitions as a deviation on October 6, 2026, allowing immediate use for new contracts before it becomes mandatory on October 19. Federal agencies began purchasing ChatGPT through consumption-based token pricing under a OneGov agreement, replacing the previous $1 monthly model with 50% discount, creating access for approximately 23 million public servants.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes binding procurement standards for federal AI acquisitions and shifts US government from subscription to consumption-based AI purchasing—affecting budget forecasting and vendor relationships for agencies and contractors.&lt;/p&gt;&lt;p&gt;Source: FedScoop · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Trump creates AI task force and weighs China hotline</title>
-      <link>https://abcnews.com/Politics/president-donald-trump-announces-creation-super-intelligence-force/story?id=136986122</link>
-      <guid isPermaLink="true">https://abcnews.com/Politics/president-donald-trump-announces-creation-super-intelligence-force/story?id=136986122</guid>
-      <pubDate>Wed, 07 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;President Trump announced formation of a 'Super Intelligence Force' artificial intelligence task force to promote AI dominance while protecting American lives and interests. The US is simultaneously weighing a rapid-communication channel with China for AI-related incidents, while California introduced measures on AI use in employment decisions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals major shift in US AI governance posture toward acceleration and geopolitical competition, while establishing direct US-China communication channel for AI safety incidents—reshaping enterprise risk management and regulatory expectations.&lt;/p&gt;&lt;p&gt;Source: ABC News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-07.html&quot;&gt;Oct 7, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
