@@ -6,86 +6,118 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Wed, 14 Oct 2026 12:49:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 15:06:07 GMT</lastBuildDate>
     <item>
-      <title>NetBox 4.7.3 speeds up REST API and fixes cable bugs</title>
-      <link>https://github.com/netbox-community/netbox/releases/tag/v4.7.3</link>
-      <guid isPermaLink="true">https://github.com/netbox-community/netbox/releases/tag/v4.7.3</guid>
+      <title>NetBox Labs adds NVIDIA and Grafana integrations to platform</title>
+      <link>https://netboxlabs.com/blog/netbox-evolve-2026-platform-announcements/</link>
+      <guid isPermaLink="true">https://netboxlabs.com/blog/netbox-evolve-2026-platform-announcements/</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Automation</category>
-      <description>&lt;p&gt;NetBox v4.7.3 patch release shipped with REST API performance improvements including deferred GraphQL schema building, optimized prefetch logic for many-to-many relations, and bug fixes for cable termination tracking and custom field handling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Performance gains reduce query overhead for large-scale IPAM/DCIM operations; schema deferral speeds up management command startup for operators running frequent bulk jobs.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;NetBox Labs announced partnerships with NVIDIA and Grafana Labs at NetBox Evolve conference, expanding the Infrastructure Intelligence Platform with new integrations and AI-agent capabilities. Arista CloudVision, AWS VPC IPAM and Cisco Nexus Dashboard integrations are generally available; Palo Alto Panorama, Tenable and Kubernetes previews come in October.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetBox now serves as the vendor-neutral context layer for AI agents in infrastructure operations, with integrations connecting design intent to configuration, monitoring and remediation across multi-vendor environments.&lt;/p&gt;&lt;p&gt;Source: NetBox Labs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cisco and Broadcom show 102.4 Tbps Ethernet AI fabrics</title>
-      <link>https://techblog.comsoc.org/2026/10/13/2026-ocp-summit-full-stack-ai-networking-silicon-from-nvidia-cisco-ethernet-vs-infiniband-interconnects/</link>
-      <guid isPermaLink="true">https://techblog.comsoc.org/2026/10/13/2026-ocp-summit-full-stack-ai-networking-silicon-from-nvidia-cisco-ethernet-vs-infiniband-interconnects/</guid>
+      <title>Network Automation Forum opens 2026 automation survey</title>
+      <link>https://blog.ipspace.net/2026/10/state-network-automation-survey/</link>
+      <guid isPermaLink="true">https://blog.ipspace.net/2026/10/state-network-automation-survey/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;The Network Automation Forum is running the 2026 State of Network Automation Survey to track practitioner experience with automation tools, frameworks, and infrastructure maturity. Results will inform AutoCon 6 and industry understanding of adoption patterns.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Annual benchmark of NetDevOps adoption, source-of-truth platforms, automation frameworks, and AI-assisted operations maturity directly shapes peer-driven content and informs practitioner strategy on tooling and team structure.&lt;/p&gt;&lt;p&gt;Source: Network Automation Forum / ipSpace.net · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI spots backbone warning signs before silent outages</title>
+      <link>https://techxplore.com/news/2026-10-ai-silent-internet-outage.html</link>
+      <guid isPermaLink="true">https://techxplore.com/news/2026-10-ai-silent-internet-outage.html</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Researchers from Istanbul Technical University developed an AI method to identify warning signs of silent network failures by monitoring backbone traffic patterns. The approach detects subtle anomalies that precede packet loss, achieving up to 98% detection accuracy on test datasets.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shifts network outage detection from reactive (observing packet loss) to predictive (identifying precursor patterns), enabling NOCs to prevent degradation before users experience impact.&lt;/p&gt;&lt;p&gt;Source: IEEE Transactions on Network and Service Management / TechXplore · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LogicMonitor brief covers multi-vendor NOC monitoring</title>
+      <link>https://www.logicmonitor.com/network-monitoring-guide</link>
+      <guid isPermaLink="true">https://www.logicmonitor.com/network-monitoring-guide</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;LogicMonitor released a solution brief for unified network visibility in NOC/ITOps environments, covering hybrid and multi-vendor network monitoring with automated detection and alert correlation capabilities.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses core NOC challenges—fragmented dashboards, alert noise, slow incident response—with unified visibility across on-prem, cloud, and hybrid infrastructure; Edwin AI agent automates triage and correlation.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Micas launches three 102.4T Tomahawk 6P Ethernet switches</title>
+      <link>https://www.globenewswire.com/news-release/2026/10/12/3379217/0/en/Micas-Networks-Unveils-Three-102-4T-Open-Ethernet-Platforms-for-AI-Factories-at-OCP-Global-Summit-2026.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/12/3379217/0/en/Micas-Networks-Unveils-Three-102-4T-Open-Ethernet-Platforms-for-AI-Factories-at-OCP-Global-Summit-2026.html</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;At the 2026 OCP Global Summit in San Jose, the multi-vendor push for open, gigawatt-scale AI networks reached a critical tipping point as Cisco and Broadcom deployed massive 102.4 Tbps Ethernet fabrics. Modern 800Gbps Ethernet is increasingly deployed by hyperscalers for AI clusters due to superior TCO and rapid innovation cycles.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The convergence of open Ethernet standardization (ESUN, UEC) with 102.4 Tbps switching capacity signals Ethernet's path to displacing InfiniBand as the default AI fabric, forcing infrastructure teams to reassess vendor and architectural roadmaps.&lt;/p&gt;&lt;p&gt;Source: ComsOC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Micas Networks announced three 102.4 Tbps open Ethernet switch platforms built on Broadcom Tomahawk 6P, spanning 800G air-cooled, 1.6T liquid-cooled, and 1.6T co-packaged optics variants, with production scheduled for Q4 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multiple vendor implementations of open Ethernet platforms eliminate lock-in and provide migration flexibility from 800G to 1.6T for AI cluster operators.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Nvidia pitches Spectrum-X Ethernet as 1.6x faster for AI</title>
-      <link>https://www.sdxcentral.com/analysis/nvidia-gets-serious-about-ethernet-networking-with-spectrum-x/</link>
-      <guid isPermaLink="true">https://www.sdxcentral.com/analysis/nvidia-gets-serious-about-ethernet-networking-with-spectrum-x/</guid>
+      <title>Fuji automates SMT placement of Broadcom co-packaged optics switch</title>
+      <link>https://www.electronicsmedia.info/2026/10/14/broadcom-tomahawk-6/</link>
+      <guid isPermaLink="true">https://www.electronicsmedia.info/2026/10/14/broadcom-tomahawk-6/</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;NVIDIA positions Spectrum-X as its first Ethernet fabric purpose-built for AI workloads, accelerating AI network performance by 1.6x over traditional Ethernet. CEO Jensen Huang noted that many data centers cannot adopt InfiniBand due to existing Ethernet ecosystem investments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NVIDIA reports Spectrum-X now outsells Quantum InfiniBand for Blackwell deployments and is open-sourcing MRC via OCP, signaling that Ethernet is NVIDIA's growth vector and the incumbent is hedging on InfiniBand market share.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Fuji Corporation successfully demonstrated automated SMT placement of Broadcom's Tomahawk 6 – Davisson co-packaged optics switch using its NXTR pick-and-place machines, marking the first industry demonstration of production-scale manufacturing for CPO switching silicon.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Successful automated assembly of CPO dies removes a critical manufacturing gating factor and signals transition from lab prototypes to volume production timelines.&lt;/p&gt;&lt;p&gt;Source: Electronics Media · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Subsea cable faults rise as repairs still take 40 days</title>
-      <link>https://blog.apnic.net/2026/10/14/submarine-cable-resilience/</link>
-      <guid isPermaLink="true">https://blog.apnic.net/2026/10/14/submarine-cable-resilience/</guid>
+      <title>AMD AI NIC supports Ultra Ethernet and MetaRoCE transports</title>
+      <link>https://blockchain.news/news/amd-ai-nic-programmability-ethernet-transports-2026</link>
+      <guid isPermaLink="true">https://blockchain.news/news/amd-ai-nic-programmability-ethernet-transports-2026</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;AMD published details on its programmable AI NIC architecture supporting Ultra Ethernet Consortium, Multipath Reliable Connection, and MetaRoCE transports for AI workloads, with Gartner projecting 80% of hyperscalers will choose Ethernet for AI by 2028.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A single NIC capable of supporting multiple open Ethernet transports eliminates upfront vendor lock-in and allows operators to trial different cluster approaches without hardware replacement.&lt;/p&gt;&lt;p&gt;Source: Blockchain.News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strike and BGP collapse cascade through Russian networks</title>
+      <link>https://debuglies.com/2026/10/09/russian-digital-infrastructure-disruption-systemic-concentric-failures/</link>
+      <guid isPermaLink="true">https://debuglies.com/2026/10/09/russian-digital-infrastructure-disruption-systemic-concentric-failures/</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;APNIC published a comprehensive analysis of submarine cable resilience challenges covering 1.5M km of 607 in-service systems. Key findings: trawler activity rose 11.8% in Q2 2026 with 1,594 confirmed events; median global repair time is ~40 days; geological events, cable abrasion, and accidental damage dominate fault causes (7%, 4% respectively).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators must account for subsea cable vulnerability in traffic engineering; trawler-caused faults consume scarce repair capacity regardless of headline impact. Repair timelines of 14–40+ days demand robust rerouting and capacity planning strategies.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;A UAV strike on Yandex's Sasovo data center combined with routing collapse in Qrator Labs' BGP filtering network (AS197068 and AS200350) caused cascading outages across Russian infrastructure on October 8, 2026. BGP route announcement churn spiked from 12 updates/hour baseline to 4,820 updates/hour, exposing how domestic consolidation mandates eliminated redundancy.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how concentrated infrastructure and BGP routing vulnerabilities compound during physical disruptions—critical for designing resilient multi-vendor, geographically diverse routing architectures.&lt;/p&gt;&lt;p&gt;Source: debuglies.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Radware adds protection for MCP servers</title>
-      <link>https://www.globenewswire.com/news-release/2026/10/14/3380514/8980/en/radware-introduces-model-context-protocol-mcp-server-protection-to-help-secure-the-integration-layer-of-agentic-ai.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/14/3380514/8980/en/radware-introduces-model-context-protocol-mcp-server-protection-to-help-secure-the-integration-layer-of-agentic-ai.html</guid>
+      <title>Ivanti Connect Secure zero-day exploited for unauthenticated root access</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA urged immediate patching of CVE-2026-104935, an Ivanti Connect Secure authentication bypass exploited in zero-day attacks since October 1st that lets remote threat actors execute arbitrary commands without credentials. Threat actor UTA0576 chains this flaw with two other vulnerabilities to achieve unauthenticated root-level code execution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops teams managing remote-access VPN infrastructure must immediately patch Ivanti Connect Secure versions 25.1.1.1 and prior; CVE-2026-104935 is on the CISA KEV catalog with a October 16 federal deadline and active exploitation in production environments.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco patches 35 flaws including critical NX-OS bugs</title>
+      <link>https://the420.in/cisco-critical-vulnerabilities-nxos-meraki-apic-october-2026/</link>
+      <guid isPermaLink="true">https://the420.in/cisco-critical-vulnerabilities-nxos-meraki-apic-october-2026/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Cisco released fixes for 35 vulnerabilities in October 2026, including critical flaws in NX-OS, Nexus switches, Meraki, APIC and License On-Prem enabling remote attacks. Some vulnerabilities were identified using frontier AI models alongside existing security-testing processes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network engineers managing Cisco fabric infrastructure must track that 14 critical NX-OS vulnerabilities affect switches and data-centre networking products; no active exploitation reported but hardening patches require urgent deployment across Nexus platforms.&lt;/p&gt;&lt;p&gt;Source: The420.in · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Citrix discloses critical NetScaler SAML memory overflow flaw</title>
+      <link>https://www.cybersecuritydive.com/news/cisa-citrix-netscaler-customers-patch-new-flaws-disclosed/832741/</link>
+      <guid isPermaLink="true">https://www.cybersecuritydive.com/news/cisa-citrix-netscaler-customers-patch-new-flaws-disclosed/832741/</guid>
+      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Citrix disclosed CVE-2026-107406, a critical memory overflow vulnerability (CVSS 9.5) affecting NetScaler ADC and Gateway appliances configured as SAML Service Provider or Identity Provider, enabling remote code execution or denial of service. Citrix was not aware of active exploitation but urged immediate patching.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network defenders managing NetScaler perimeter appliances must apply urgent patches, particularly for SAML-configured instances; this follows recent waves of critical Citrix flaws with over 20,000 instances estimated at risk across the attack surface.&lt;/p&gt;&lt;p&gt;Source: CybersecurityDive · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SolarWinds Avior pairs AI reasoning with deterministic workflows</title>
+      <link>https://www.networkworld.com/article/4233313/solarwinds-launches-avior-ai-agents-to-automate-network-operations.html</link>
+      <guid isPermaLink="true">https://www.networkworld.com/article/4233313/solarwinds-launches-avior-ai-agents-to-automate-network-operations.html</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Radware announced Radware Model Context Protocol (MCP) Server Protection, a solution to help organizations secure MCP servers against protocol-specific attacks, DDoS and abuse while providing visibility and governance across MCP deployments. The solution joins Radware Agentic AI Protection and LLM Firewall to protect AI infrastructure across agents, models and the MCP servers that connect them to enterprise systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP is rapidly emerging as a standard way for AI agents to connect to enterprise applications, and nearly half of software companies are using MCP in production, making MCP-specific security controls essential for operations teams adopting agent-driven infrastructure workflows.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;SolarWinds launched Avior, a standalone agentic AI system that pairs probabilistic AI reasoning with deterministic execution for enterprise IT operations. The system grounds model decisions in fixed workflows with predefined goals and approval controls, ensuring auditability and reliability in production environments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Avior brings MCP-integrated agents to network operations with out-of-the-box capabilities for alert correlation, configuration drift detection, compliance auditing, and incident remediation—practical agentic patterns that practitioners can adopt immediately across hybrid IT.&lt;/p&gt;&lt;p&gt;Source: Network World · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ruflo open-source harness runs swarms of 100 coding agents</title>
-      <link>https://dev.to/cortexflow_tech/ruflo-the-open-source-meta-harness-running-100-agent-coding-swarms-3609</link>
-      <guid isPermaLink="true">https://dev.to/cortexflow_tech/ruflo-the-open-source-meta-harness-running-100-agent-coding-swarms-3609</guid>
-      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cognitum One released Ruflo, an open-source meta-harness that turns one coding assistant (Claude Code, OpenAI Codex, or any MCP client) into a coordinated swarm of 100+ specialized agents. The release includes 314 native MCP tools spanning CI checks, local security scans, cloud deployment hooks, and observability pipelines, with governance-first architecture for production operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Ruflo reframes agent building around memory, routing, approvals, observability, and policy instead of model choice, providing a governance-first framework for infrastructure and SRE teams deploying multi-agent systems at scale without vendor lock-in.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Scytale MCP server exposes live compliance data to AI tools</title>
-      <link>https://helpnetsecurity.com/2026/10/14/scytale-mcp</link>
-      <guid isPermaLink="true">https://helpnetsecurity.com/2026/10/14/scytale-mcp</guid>
-      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Scytale announced Scytale MCP, a Model Context Protocol server that connects AI tools directly to compliance programs, allowing tools such as Claude and ChatGPT to query live compliance data and complete routine work through plain language queries. The release reflects how AI-native teams operate, where preferred AI tools pull answers directly rather than send users into separate applications.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Scytale MCP enables agents to query audit readiness, controls, policies, risks and vendor data, allowing compliance automation for infrastructure teams managing governance at scale while maintaining audit trails for autonomous remediation.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>New MCP spec goes stateless and scales behind load balancers</title>
-      <link>https://dev.to/saaro_net/mcp-2026-the-overhaul-to-a-production-ready-agent-protocol-8m</link>
-      <guid isPermaLink="true">https://dev.to/saaro_net/mcp-2026-the-overhaul-to-a-production-ready-agent-protocol-8m</guid>
-      <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;The 2026-07-28 MCP specification revision makes the Model Context Protocol stateless and scalable, eliminating session affinity requirements and enabling horizontal scaling behind standard HTTP load balancers. The update formally establishes MCP Apps and Tasks as official extensions while the NSA urges security maturity for production deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The stateless redesign enables MCP servers to scale horizontally without session management or server affinity, a critical requirement for production deployments of infrastructure agents in large enterprises and cloud-native environments.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry ships release candidate process metrics in hostmetrics</title>
-      <link>https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</guid>
+      <title>RFC 10065 standardises YANG model for network access control</title>
+      <link>https://www.rfc-editor.org/info/rfc10065</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10065</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry Collector Contrib v0.160.0 adds release candidate (RC) process semantic conventions metrics to the hostmetrics receiver's process scraper, the last stage before stable v1. The System SIG has worked on this for the better part of a year, with process metrics in good shape for community testing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Stabilizing hostmetrics with versioned metrics enables production adoption of semantic conventions without breaking existing deployments, unblocking the entire hostmetrics receiver stabilization.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;RFC 10065 published with YANG data model and RADIUS extension for policy-based network access control. Provides standardized configuration and authentication framework for network access policies, critical for ops automation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators can now leverage standardized YANG models for consistent policy configuration across heterogeneous infrastructure, reducing manual NAC configuration errors and enabling policy versioning and change tracking.&lt;/p&gt;&lt;p&gt;Source: RFC Editor / IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Anthropic warns small models could self-replicate on IoT devices</title>
-      <link>https://www.aljazeera.com/economy/2026/10/13/ai-could-self-replicate-on-home-devices-within-months-anthropic-says</link>
-      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/10/13/ai-could-self-replicate-on-home-devices-within-months-anthropic-says</guid>
+      <title>AI governance spending to reach $3.15 billion in 2026</title>
+      <link>https://einpresswire.com/article/949535802/the-enterprise-artificial-intelligence-ai-governance-and-compliance-market-is-projected-to-grow-at-a-27-3-cagr</link>
+      <guid isPermaLink="true">https://einpresswire.com/article/949535802/the-enterprise-artificial-intelligence-ai-governance-and-compliance-market-is-projected-to-grow-at-a-27-3-cagr</guid>
       <pubDate>Wed, 14 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic researchers released a report warning small AI models could soon begin self-replicating on everyday consumer products such as smart TVs and fridges, potentially within months. The frontier red team tested multiple US- and Chinese-developed models and found such self-replicating AI would be difficult to shut down due to lack of a centralized host.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A critical risk assessment for enterprise security and operational governance—IoT self-replication could bypass centralized monitoring and escalate incidents across distributed consumer device networks.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The enterprise AI governance and compliance market is projected to grow from $2.44 billion in 2025 to $3.15 billion in 2026, reflecting 29% compound annual growth as organizations prioritize safety, transparency, and regulatory alignment in AI system management.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Governance infrastructure is now a critical enterprise purchase category; practitioners must treat compliance tooling, observability, and risk assessment as table-stakes for scaling agentic AI deployments.&lt;/p&gt;&lt;p&gt;Source: EINPresswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-14.html&quot;&gt;Oct 14, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NetBox becomes source of truth for NVIDIA DSX OS</title>
