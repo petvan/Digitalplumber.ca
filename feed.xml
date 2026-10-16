@@ -6,118 +6,134 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 16 Oct 2026 13:29:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 14:50:50 GMT</lastBuildDate>
     <item>
-      <title>Packet Pushers updates its open source network automation list</title>
-      <link>https://packetpushers.net/blog/open-source-networking-projects/</link>
-      <guid isPermaLink="true">https://packetpushers.net/blog/open-source-networking-projects/</guid>
-      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Packet Pushers maintains curated reference of open-source network automation tools. October 13, 2026 update documents maintenance status, recent activity, and adoption of Netmiko, Ansible, Nornir, Batfish, eNMS, and others.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Reference for practitioners evaluating which open-source automation tools are actively maintained and production-ready vs. stalled or deprecated; critical for avoiding build-on-abandoned-tools pitfall.&lt;/p&gt;&lt;p&gt;Source: Packet Pushers · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Micas launches three 102.4T open Ethernet switches on Tomahawk 6</title>
-      <link>https://www.storagenewsletter.com/2026/10/15/ocp-global-summit-2026-micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories/</link>
-      <guid isPermaLink="true">https://www.storagenewsletter.com/2026/10/15/ocp-global-summit-2026-micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories/</guid>
+      <title>Cisco Silicon One P200 ships in Microsoft and Alibaba networks</title>
+      <link>https://moorinsightsstrategy.com/field-notes/cisco-at-ocp-2026-silicon-one-nvidia-optics-and-the-network-behind-ai/</link>
+      <guid isPermaLink="true">https://moorinsightsstrategy.com/field-notes/cisco-at-ocp-2026-silicon-one-nvidia-optics-and-the-network-behind-ai/</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Micas Networks announced three 102.4 Tbps open Ethernet switch platforms built on Broadcom Tomahawk 6, offering 800G air-cooled, 1.6T liquid-cooled, and 1.6T Davisson CPO variants. Portfolio enables practical migration from 800G to 1.6T while maintaining vendor-neutral architecture for mega-scale AI clusters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; ODM customers can deploy 1.6T Ethernet fabrics at scale without proprietary vendor dependencies; Tomahawk 6-Davisson CPO offers power-efficient path for cluster builders planning 2026-2027 mega-scale builds with 100K+ accelerators.&lt;/p&gt;&lt;p&gt;Source: StorageNewsletter · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Cisco's Silicon One P200 is in hyperscale production at Microsoft and Alibaba. Cisco and NVIDIA's new USFP optics claim 4x bandwidth density and 1.3x power efficiency with planned open multi-source specification.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cisco's open networking strategy has production deployments validating multi-vendor Ethernet momentum; Acacia optics acquisition and SONiC adoption indicate platform credibility for hyperscale AI clusters.&lt;/p&gt;&lt;p&gt;Source: Moor Insights &amp;amp; Strategy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>1.6T Ethernet samples now with volume ramp due in 2027</title>
-      <link>https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html</link>
-      <guid isPermaLink="true">https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html</guid>
+      <title>NVIDIA Spectrum-XGS links data centers into one GPU fabric</title>
+      <link>https://www.techtimes.com/articles/328917/20261012/nvidia-readies-continent-scale-ai-factories-ocp-summit-2026-spectrum-xgs-debuts-tonight.htm</link>
+      <guid isPermaLink="true">https://www.techtimes.com/articles/328917/20261012/nvidia-readies-continent-scale-ai-factories-ocp-summit-2026-spectrum-xgs-debuts-tonight.htm</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Comprehensive technical roadmap of 1.6T Ethernet adoption covering IEEE 802.3dj standardization status, LPO/CPO architectures, optical module form factors (OSFP-XD, DR8, 2×FR4), deployment timeline, and practical guidance distinguishing 800G (mature, dominant) from 1.6T (early sampling, 2027 volume ramp).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network engineers sizing 2026 builds should baseline 800G (cost-optimized, ubiquitous); validate 1.6T link budgets for spine/inter-cluster links targeting 2027 adoption; prioritize OSFP-XD form-factor qualification to avoid proprietary module lock-in.&lt;/p&gt;&lt;p&gt;Source: The Network DNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;NVIDIA unveiled Spectrum-XGS extending Spectrum-X with scale-across capability enabling GPU clusters in separate data centers to operate as one fabric. Scale-across uses co-packaged optics, distance-aware congestion control, and unified telemetry.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Spectrum-XGS enables disaggregated multi-site builds in cost-favorable locations linked as a single cluster, reshaping data center siting economics and allowing distributed AI facilities at continent scale.&lt;/p&gt;&lt;p&gt;Source: TechTimes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>RPKI now covers 70% of routes after China's surge</title>
-      <link>https://ipinfo.io/blog/rpki-protects-70-internet-routes</link>
-      <guid isPermaLink="true">https://ipinfo.io/blog/rpki-protects-70-internet-routes</guid>
+      <title>Fluidstack starts $4B 1.5GW AI campus in Texas</title>
+      <link>https://thegpu.ai/p/gpu-daily-2026-10-13</link>
+      <guid isPermaLink="true">https://thegpu.ai/p/gpu-daily-2026-10-13</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;RPKI now secures 70.3% of global Internet routes, up from 54.0% a year earlier, with China's adoption leap (3.7% to 83.0%) driving most of the gain. However, RPKI only validates origin, not path: a August 2026 Hetzner hijack exploited a loosely scoped ROA to forge a route and serve malware, and roughly 16-21% of covered routes still have such 'open windows.'&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Of 855,217 RPKI-covered IPv4 routes, 138,698 (16.2%) have a ROA looser than the route announced; operators should leave maxLength unset and publish ROAs for all announced prefixes to close attack windows.&lt;/p&gt;&lt;p&gt;Source: IPinfo / daily.dev · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Fluidstack broke ground on a $4 billion, 1.5 GW AI data center campus in Cameron County, Texas, with no tax abatements, signaling neocloud operators' move from capacity aggregation to proprietary facility buildout.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Neoclouds scaling to proprietary data center operations create a third tier of AI networking demand, embedding Ethernet-based interconnects (RoCE, UEC-compliant) on Broadcom or NVIDIA switches.&lt;/p&gt;&lt;p&gt;Source: The GPU Daily · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>DNS root key rollover breaks resolvers missing new anchor</title>
-      <link>https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready</link>
-      <guid isPermaLink="true">https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready</guid>
-      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;On October 11, 2026, the DNS root zone switched to signing with KSK-2024 (key tag 38696), replacing KSK-2017. Any validating resolver lacking this trust anchor fails to resolve both signed and unsigned domains, causing widespread SERVFAIL errors within 48 hours.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; RFC 5011 automated updates often fail on offline systems, read-only key stores, uninventoried embedded appliances, or outdated golden images; operators must verify key tag 38696 is in resolver config files and active in memory before the rollover takes effect.&lt;/p&gt;&lt;p&gt;Source: Akamai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto patches PAN-OS root flaw under active exploitation</title>
-      <link>https://itdaily.com/news/security/palo-alto-cve-2026-0322/</link>
-      <guid isPermaLink="true">https://itdaily.com/news/security/palo-alto-cve-2026-0322/</guid>
+      <title>CISA says PAN-OS code injection flaw is under attack</title>
+      <link>https://cybersecuritynews.com/pan-os-vulnerability-exploited-cisa-warns/</link>
+      <guid isPermaLink="true">https://cybersecuritynews.com/pan-os-vulnerability-exploited-cisa-warns/</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Palo Alto Networks disclosed CVE-2026-0322, a critical vulnerability in PAN-OS management interface allowing authenticated attackers with network access to execute arbitrary code with root privileges. CISA added it to Known Exploited Vulnerabilities catalog with evidence of active exploitation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops must prioritize patching PA-Series, VM-Series firewalls and Panorama immediately; Cloud NGFW and Prisma Access unaffected; limited but real exploit activity observed.&lt;/p&gt;&lt;p&gt;Source: ITdaily · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CISA added CVE-2026-0322, a high-severity code injection flaw in the PAN-OS management interface, to its Known Exploited Vulnerabilities catalog after confirming active exploitation. Federal agencies have until October 17 to apply mitigation measures.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Requires immediate patch assessment for PAN-OS deployments; authenticated RCE against management interfaces is a critical attack path for firewall infrastructure compromise.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity News / CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>FBI says FortiBleed has harvested 86,644 Fortinet credentials</title>
-      <link>https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html</guid>
+      <title>Security operations centers move toward autonomous AI-driven defense</title>
+      <link>https://it-online.co.za/2026/10/14/soc-is-evolving-to-autonomous-defense/</link>
+      <guid isPermaLink="true">https://it-online.co.za/2026/10/14/soc-is-evolving-to-autonomous-defense/</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;FBI and Secret Service issued a joint advisory warning that the FortiBleed credential harvesting campaign remains active, with over 86,644 compromised FortiGate firewall and SSL VPN credentials verified across 194 countries. The campaign exploits reused credentials and legacy SHA-256 password storage for GPU-accelerated cracking.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Active threat to internet-facing FortiGate appliances with verified credential databases in use by organized actors; requires immediate detection of unauthorized access and credential rotation across all FortiOS versions.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Organizations are evolving toward proactive, AI-driven security operations centers that harness automation and intelligent workflows to deliver rapid threat detection and response at machine speed, addressing the challenge of attacks outpacing human-led operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Automation and agentic AI in SOC workflows are operationally critical to detect network threats faster than attack execution; network teams must instrument detection for perimeter and lateral-movement signals accordingly.&lt;/p&gt;&lt;p&gt;Source: IT-Online · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>NetBrain R13 adds agent team and MCP server</title>
-      <link>https://exchange.netbrain.com/events/netbrain-agentic-netops-platform-webinar-58</link>
-      <guid isPermaLink="true">https://exchange.netbrain.com/events/netbrain-agentic-netops-platform-webinar-58</guid>
+      <title>groundcover opens production telemetry to external AI agents via MCP</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/groundcover-launches-agent-agent-observability-130000965.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/groundcover-launches-agent-agent-observability-130000965.html</guid>
+      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;groundcover extended its observability platform to enable external AI agents (Claude, Cursor, Kiro, Codex) to query production data directly via Model Context Protocol (MCP) and delegate investigations to its observability agent, available across Agent Mode, IDEs, and Slack.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gives AI coding agents production visibility without manual context-switching; eliminates observability as a blocker for agentic workflows in SRE and NetOps automation.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Andrew Coward leaves IBM networking for F5 alliances role</title>
+      <link>https://www.sdxcentral.com/news/ibm-network-boss-andrew-coward-joins-f5-to-bravely-take-on-ai-bots/</link>
+      <guid isPermaLink="true">https://www.sdxcentral.com/news/ibm-network-boss-andrew-coward-joins-f5-to-bravely-take-on-ai-bots/</guid>
+      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Ex-IBM networking head Andrew Coward joined F5 as head of strategic alliances. Coward joined IBM in 2021 to build the company's networking business following the Red Hat acquisition and oversaw integrations of HashiCorp, Pliant, and Volta Networks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Coward's role at F5 focuses on driving partnerships necessary to help the enterprise shift to AI workloads, ensuring compatibility across the enterprise stack, end-to-end testing of complete systems, and migration plans encompassing the entire AI ecosystem.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Only 35% of enterprises monitor their agentic AI systems</title>
+      <link>https://www.webpronews.com/ai-agents-run-blind-why-observability-must-get-smarter-cheaper-and-open-in-2026</link>
+      <guid isPermaLink="true">https://www.webpronews.com/ai-agents-run-blind-why-observability-must-get-smarter-cheaper-and-open-in-2026</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;NetBrain R13 release webinar on October 13, 2026 covering the Agent Team (Diagnosis, Assessment, Change, Companion agents) working with the NetOps Harness and MCP Server. Demonstrates end-to-end network change validation and CVE exposure detection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shows production agentic NetOps with MCP as the interop layer; Assessment Agent identifies security exposure proactively, Change Agent validates modifications before execution.&lt;/p&gt;&lt;p&gt;Source: NetBrain Exchange Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Only 35% of enterprises actively monitor their agentic systems; three in four juggle up to 12 observability tools. New Relic, Elastic, and Grafana shipped AI observability updates; automated remediation remains rare at 8.5% of outcomes, while unmonitored agents create blind spots in production infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Observability and governance gaps are the blocking issue for agentic infrastructure operations at scale—tooling is catching up but traces, authority and decision rationale remain hard problems.&lt;/p&gt;&lt;p&gt;Source: Web Pro News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>OpenTelemetry Java agent 3.0 reaches release candidate</title>
+      <title>Guide compares 14 observability tools for AI agents</title>
+      <link>https://arize.com/blog/best-ai-observability-tools-for-autonomous-agents-in-2026/</link>
+      <guid isPermaLink="true">https://arize.com/blog/best-ai-observability-tools-for-autonomous-agents-in-2026/</guid>
+      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Updated October 13, 2026: comparative guide covering 14 AI agent observability tools across tracing, evaluations, OpenTelemetry, self-hosting, and production monitoring. Includes Arize AX, Phoenix (open-source), LangSmith, Langfuse, and enterprise platforms like Datadog and New Relic.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Comprehensive vendor and feature comparison as of October 13 establishes the observability landscape for agentic infrastructure teams—now mature enough for procurement teams to evaluate against internal requirements.&lt;/p&gt;&lt;p&gt;Source: Arize · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deutsche Telekom targets €800m AI service revenue by 2030</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-3-9-oct-2026-56443/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-3-9-oct-2026-56443/</guid>
+      <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Deutsche Telekom's CEO highlighted at an AI Investor Day that the company will generate €1bn-plus in additional revenues outside the US by 2030 from AI investments, with AI-related service revenues expected to grow from €250m this year to €800m in 2030. Operators are setting financial commitments around sovereign AI infrastructure, autonomous network trust frameworks and enterprise AI deployment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; DT is already generating revenues from AI services for B2B/enterprise customers and expects tripling revenue by 2030—concrete proof operators can monetize AI-native automation beyond cost-cutting in real production environments.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenTelemetry Collector adds process semantic convention metrics</title>
       <link>https://opentelemetry.io/blog/2026/</link>
       <guid isPermaLink="true">https://opentelemetry.io/blog/2026/</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry Java agent v2.32.0 released as RC for 3.0 targeting October 2026; Collector Contrib v0.160.0 adds RC process semantic conventions metrics to hostmetrics receiver, advancing stable v1 release candidate maturity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Java shops can preview OTel 3.0 behavior before GA; ops teams gain standardized process-level metrics (CPU, memory, state, timing) for infrastructure observability, unlocking AIOps anomaly detection on system resource consumption.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;OpenTelemetry Collector Contrib v0.160.0 adds release candidate process semantic conventions metrics to the hostmetrics receiver, advancing toward stable v1 versioned metrics for observability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes standardized telemetry collection for network infrastructure observability; RC metrics enable unified signal correlation for AIOps platforms.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IETF draft ties segment routing SIDs to guaranteed resources</title>
-      <link>https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments</guid>
+      <title>IETF draft standardizes YANG models for on-path telemetry</title>
+      <link>https://datatracker.ietf.org/doc/active/</link>
+      <guid isPermaLink="true">https://datatracker.ietf.org/doc/active/</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Active IETF draft (v18, May 2026 publication, expires November 2026) describing mechanisms to allocate network resources (bandwidth, compute, memory) to Segment Routing Identifiers (SIDs) for both SR-MPLS and SRv6, enabling resource-guaranteed policies and Network Resource Partitions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators can now engineer SR policies with explicit resource reservations without RSVP-TE overhead, enabling deterministic slicing for 5G/6G enhanced VPN services and compute-aware routing without per-path state explosion.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;IETF draft advancing YANG data models for on-path telemetry, enabling standardized collection of network performance metrics at every hop without requiring per-flow instrumentation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Standardizes telemetry collection at network layer; critical for AIOps platforms that need fine-grained visibility without relying on endpoint instrumentation.&lt;/p&gt;&lt;p&gt;Source: IETF Active Internet-Drafts · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Google ships Gemini 4 Argon with 1M token context</title>
-      <link>https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/</guid>
+      <title>Google ships Gemini 4 Argon with 1M-token window</title>
+      <link>https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon</link>
+      <guid isPermaLink="true">https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Gemini 4 Argon became globally available October 13, 2026, through the Gemini API with a 1.0M token context window and up to 1M output tokens, designed for complex coding, agentic tasks, mathematics, science, and cybersecurity workflows. Introductory pricing is $2 per million input tokens and $10 per million output tokens through November 30, then $4/$20.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gemini 4 Argon is optimized for long-horizon workflows requiring deep reasoning and structural precision, including code migrations and infrastructure automation, making it relevant for AIOps and complex system design.&lt;/p&gt;&lt;p&gt;Source: Google Developers Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Gemini 4 Argon reached general availability October 13, 2026 with stable model ID gemini-4-argon. Features 1,048,576-token shared context window across input, thinking, and output; supports thinking levels LOW, MEDIUM, HIGH; introductory API pricing $2/$10 per million tokens through November 30, doubling December 1.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unified 1M-token limit (input+thinking+output) and aggressive time-limited pricing undercut competitors on cost through November 30, reshaping economics for long-horizon workflows; practitioners must evaluate whether unified windows fit agentic patterns versus separate input/output limits.&lt;/p&gt;&lt;p&gt;Source: Google Cloud Documentation / eesel.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>xAI's Grok Voice 3.0 tops speech-to-speech benchmark</title>
-      <link>https://x.ai/news</link>
-      <guid isPermaLink="true">https://x.ai/news</guid>
+      <title>Meta open-weights Muse Spark tuned for Mac Studio</title>
+      <link>https://research.meta.ai/blog/muse-spark-open</link>
+      <guid isPermaLink="true">https://research.meta.ai/blog/muse-spark-open</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;xAI announced Grok Voice 3.0 on October 14, 2026, a speech-to-speech model available in the Voice Agent API at $0.08 per minute with sub-one-second latency. Artificial Analysis ranks it first on the Speech-to-Speech Index at 86.9, ahead of GPT-Live-1 at 83.2 and Gemini 3.8 Live at 82.6.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Grok Voice 3.0 powers millions of conversations daily in Tesla and SpaceX infrastructure, handling 20,000 Starlink support calls daily with 70% fully automated, critical for evaluating production voice-driven AIOps automation and agent infrastructure.&lt;/p&gt;&lt;p&gt;Source: xAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Meta released Muse Spark Open October 15: 816B total/42B active MoE with 1M-token context, natively multimodal, optimized for Mac Studio M5 Ultra via MLX framework. Weights available on Hugging Face and API partners (Baseten, Fireworks, Groq, Modal, Nebius, OpenRouter, Together).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; First frontier-class open-weight model optimized for desktop on-device deployment; practitioners can shift from cloud API to local inference (two M5 Ultra studios) for coding agents and long-context work, eliminating per-token metering but requiring ~$300k hardware investment.&lt;/p&gt;&lt;p&gt;Source: Meta Research / TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>US and China models leave middle powers behind</title>
-      <link>https://fortune.com/2026/10/14/middle-powers-private-sector-geopolitics/</link>
-      <guid isPermaLink="true">https://fortune.com/2026/10/14/middle-powers-private-sector-geopolitics/</guid>
+      <title>IMF flags $1.4T circular AI financing as systemic risk</title>
+      <link>https://techtimes.com/articles/328970/20261014/imf-names-14t-ai-financing-loop-top-trigger-global-market-shock.htm</link>
+      <guid isPermaLink="true">https://techtimes.com/articles/328970/20261014/imf-names-14t-ai-financing-loop-top-trigger-global-market-shock.htm</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;US and China dominate AI model development with 59 and 35 notable models respectively through 2025; only South Korea has multiple notable models among other nations. Private sector actors including Nvidia and Anthropic have become geopolitical actors, marginalizing middle powers from the AI field.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For enterprise teams planning AI infrastructure investments, concentration of development and resources in US/China firms shapes vendor ecosystem and supply-chain dependencies for mission-critical workloads.&lt;/p&gt;&lt;p&gt;Source: Fortune · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;The IMF's October 2026 Global Financial Stability Report identifies $1.4 trillion in circular AI financing as a systemic risk: hyperscalers provide $300B in equity and $650B in debt to AI companies, which then commit $1.4T in future revenues back to those same hyperscalers in data center and compute contracts. This creates synchronized collapse risk the IMF warns depleted policy buffers cannot absorb.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise AI deployments and capital planning must account for potential financing system instability and the concentration of vendor lock-in risk across major cloud and AI infrastructure providers.&lt;/p&gt;&lt;p&gt;Source: TechTimes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Canada adds $500M to regional AI initiative</title>
-      <link>https://www.canadianmanufacturing.com/manufacturing/canada-and-the-united-kingdom-renew-their-partnership-on-ai-security-322089/</link>
-      <guid isPermaLink="true">https://www.canadianmanufacturing.com/manufacturing/canada-and-the-united-kingdom-renew-their-partnership-on-ai-security-322089/</guid>
+      <title>Federal agencies embed AI into finance and acquisition systems</title>
+      <link>https://fedscoop.com/what-it-takes-to-build-accountable-ai-in-government</link>
+      <guid isPermaLink="true">https://fedscoop.com/what-it-takes-to-build-accountable-ai-in-government</guid>
       <pubDate>Fri, 16 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Canada's Minister of AI announced $500M in additional federal funding over five years for the Regional Artificial Intelligence Initiative, bringing total federal AI funding to $700M. The investment supports the National Artificial Intelligence Strategy announced in June 2026 to strengthen AI capabilities and ensure responsible adoption.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals how governments are operationalizing AI adoption strategies with concrete funding; relevant for enterprises planning Canadian operations and understanding government incentives for regional AI deployment.&lt;/p&gt;&lt;p&gt;Source: Canadian Manufacturing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;FedScoop reports on six government and industry leaders explaining how federal agencies are moving from standalone chatbots and copilots to embedding AI directly in financial operations, grants, and acquisition systems. The shift requires connecting AI with existing data, workflows, and controls while maintaining human oversight—moving from after-the-fact reporting to real-time risk prevention.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise and government IT operations teams need architectural patterns for integrating AI into existing mission-critical systems safely, not just deploying isolated tools; governance must shift from detection to prevention.&lt;/p&gt;&lt;p&gt;Source: FedScoop · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-16.html&quot;&gt;Oct 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NetBox adds Arista, AWS and Cisco integrations plus MCP server</title>
@@ -790,22 +806,6 @@
       <pubDate>Sat, 10 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
       <description>&lt;p&gt;Cisco announced Claude Managed Agents (cloud-hosted agents from Anthropic) joining Webex spaces and calls for multi-step background work; agents can analyze data, generate content, and coordinate across approved agents within shared team context using MCP integration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP integration into Webex and governance patterns Cisco built show how infrastructure ops teams can embed AI agents into collaboration workflows with model choice flexibility and IT-controlled scoping of agent actions.&lt;/p&gt;&lt;p&gt;Source: Startup Fortune / SiliconANGLE / Computerworld · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-10.html&quot;&gt;Oct 10, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic adds dynamic workflows and vaulted credentials to agents</title>
-      <link>https://platform.claude.com/docs/en/release-notes/overview</link>
-      <guid isPermaLink="true">https://platform.claude.com/docs/en/release-notes/overview</guid>
-      <pubDate>Sat, 10 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Anthropic released dynamic workflows in beta for Claude Managed Agents (Oct 9); workflows enable agents to write and execute multi-agent programs running in background, with phases combining results; new governance: credentials held in vaults, audit trails on all agent actions, two-person approval for sensitive operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Dynamic workflows and credential management patterns directly translate to infrastructure automation; shows how agents can orchestrate multi-phase tasks (e.g., diagnosis → remediation → validation) without human intervention between steps.&lt;/p&gt;&lt;p&gt;Source: Anthropic Claude Platform Docs / Releasebot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-10.html&quot;&gt;Oct 10, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic details scoped credential patterns for agent automations</title>
-      <link>https://claude.dev/blog/building-effective-agent-automations/</link>
-      <guid isPermaLink="true">https://claude.dev/blog/building-effective-agent-automations/</guid>
-      <pubDate>Sat, 10 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Anthropic published operational guide for building scheduled Claude Managed Agents automations; core pattern: agents get scoped credentials via MCP servers or shell (not raw API keys), credentials held in vault and swapped at runtime to prevent exposure in sandbox.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practical reference for ops teams designing agent automations; shows how to safely wire agents to infrastructure APIs without embedding credentials, critical for production deployments.&lt;/p&gt;&lt;p&gt;Source: Claude Blog (claude.dev) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-10.html&quot;&gt;Oct 10, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

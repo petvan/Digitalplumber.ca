@@ -211,6 +211,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://digitalplumber.ca/vendors/nscale/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/vendors/fluidstack/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/vendors/cato-networks/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/vendors/oracle/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://digitalplumber.ca/topics/network-automation/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
@@ -236,6 +260,18 @@
   </url>
   <url>
     <loc>https://digitalplumber.ca/topics/security/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/topics/startups/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://digitalplumber.ca/topics/people-moves/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
