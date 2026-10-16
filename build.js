@@ -83,6 +83,18 @@ const TOPICS = [
     query: 'startups in network automation, DevNetOps and NetDevOps, AIOps, network observability, network security and AI infrastructure: companies emerging from stealth, seed, Series A and Series B funding rounds, first product launches, and acquisitions of startups'
   },
   {
+    label: 'People Moves',
+    slug: 'people-moves',
+    about: 'Publicly announced leadership changes (VP and above, and founders) at networking, AIOps, network security and AI infrastructure companies.',
+    short: 'People',
+    maxItems: 2,
+    maxAgeDays: 7,
+    query: 'publicly announced executive appointments and departures at networking, network automation, AIOps, observability, network security and AI infrastructure companies: new CEOs, CTOs and other C-suite roles, VP and SVP appointments, and founders leaving to start new companies, as announced in company press releases and newsrooms or reported by trade press executive-moves coverage',
+    // Privacy (PIPEDA): only moves the company or the press has made public, never personal profiles or posts
+    guidance: 'Only include leadership moves that were publicly announced: the company\'s own press release or newsroom post, or reporting by a news or trade publication. Never use LinkedIn profiles or posts, personal social media, personal blogs, or rumours, and never link to them. Only VP level and above, C-suite roles, board appointments and company founders. Describe only the role change and its business context; include no personal details beyond the person\'s name and title as the announcement gives them.',
+    blockedHosts: ['linkedin.com', 'lnkd.in', 'x.com', 'twitter.com', 'facebook.com', 'instagram.com', 'threads.net', 'bsky.app', 'mastodon.social', 'tiktok.com', 'reddit.com'],
+  },
+  {
     label: 'Agentic AI & MCP',
     slug: 'agentic-ai',
     about: 'AI agents in IT and network operations: agentic NetOps, MCP servers for infrastructure, and the agent frameworks operations teams use.',
@@ -556,7 +568,7 @@ async function fetchTopicNews(topic, attempt = 1) {
   const cutoff = new Date(Date.now() - windowDays * 86400000).toISOString().split('T')[0];
   const messages = [{
     role: 'user',
-    content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last ${windowDays} days) about: ${topic.query} after:${cutoff}`
+    content: `Today is ${today}. Find ${maxItems} substantive news articles published on or after ${cutoff} (last ${windowDays} days) about: ${topic.query} after:${cutoff}${topic.guidance ? `\n\n${topic.guidance}` : ''}`
   }];
 
   const apiCall = async (body) => {
@@ -645,7 +657,13 @@ async function fetchTopicNews(topic, attempt = 1) {
     if (!jsonMatch) throw new Error(`No JSON array found. Raw: ${textBlock.text.slice(0, 200)}`);
 
     const parsed = JSON.parse(jsonMatch[0]);
+    const blocked = topic.blockedHosts || [];
     const items = parsed.filter(item => {
+      const host = hostname(item.url);
+      if (blocked.some(h => host === h || host.endsWith(`.${h}`))) {
+        console.warn(`    ⤫ Dropped source not allowed for this topic (${host}): ${stripCites(item.title).slice(0, 70)}`);
+        return false;
+      }
       if (isFreshIsoDate(item.date, windowDays + 1)) return true;
       console.warn(`    ⤫ Dropped stale/undated ("${item.date || 'no date'}"): ${stripCites(item.title).slice(0, 70)}`);
       return false;
@@ -1244,7 +1262,7 @@ function aboutHtml(template) {
   <p class="page-dek">Digital Plumber is an AI-curated daily intelligence briefing for the people who run networks: network engineers, NetDevOps and automation engineers, and AIOps and SRE leads. This page explains where stories come from and how they're chosen.</p>
   <div class="prose">
     <h2>What we monitor</h2>
-    <p>Each morning the build searches the web across eleven coverage areas, weighted toward networking: network automation, AIOps and network observability, data center and AI networking, routing and the internet, network security, startups and funding, agentic AI in operations, telco and cable, and research and standards, with a small allowance for AI model and AI industry news. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
+    <p>Each morning the build searches the web across twelve coverage areas, weighted toward networking: network automation, AIOps and network observability, data center and AI networking, routing and the internet, network security, startups and funding, people moves, agentic AI in operations, telco and cable, and research and standards, with a small allowance for AI model and AI industry news. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
 
     <h2>How stories are selected</h2>
     <p>Networking topics accept stories from the last 7 days, since that news moves more slowly; general AI topics accept only the last 72 hours. Anything older or undated is dropped automatically. The editor favours concrete developments and technical substance over marketing, and skips search-engine filler and pure sales content. An AI editor then ranks the day's stories to pick the three that matter most, and writes the short headlines.</p>
@@ -1254,6 +1272,9 @@ function aboutHtml(template) {
 
     <h2>How vendor announcements are treated</h2>
     <p>Vendor news is included when it has technical substance, and labelled <strong>Vendor release</strong> so you can weigh it accordingly. Press releases without technical detail are deprioritized. Vendor Radar counts every story that names a tracked vendor, whoever published it.</p>
+
+    <h2>People moves</h2>
+    <p>People Moves covers leadership changes only once they've been made public: in the company's own press release or newsroom post, or in reporting by a news or trade publication. It's limited to VP level and above, board appointments and company founders, and describes only the role change and its business context. LinkedIn profiles and posts, personal social media and rumours are never used, and links to them are dropped automatically. To ask for a correction or removal, email <a href="${CORRECTIONS_URL}">hello@digitalplumber.ca</a>.</p>
 
     <h2>Source labels</h2>
     <p>Each story carries a source type: <strong>Primary source</strong> (the originator explaining its own work: standards, release notes, engineering blogs, official documentation), <strong>Research</strong> (papers, surveys and studies), <strong>Vendor release</strong> (a company's own announcement), <strong>Industry news</strong> (reporting by a publication) or <strong>Analysis</strong> (commentary and opinion). Older stories are labelled from their original category.</p>

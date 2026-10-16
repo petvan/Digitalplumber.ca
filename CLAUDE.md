@@ -20,4 +20,5 @@ Full setup, accounts, DNS and disaster recovery: `docs/RECOVERY.md`.
 - Test changes offline first: `node tools/offline-build.js` builds a throwaway copy with all network calls stubbed. This Mac has no Node; use `ELECTRON_RUN_AS_NODE=1 "/Applications/Visual Studio Code.app/Contents/MacOS/Code" tools/offline-build.js`.
 - Workflow runs on branches other than `main` build fine but fail at the commit step (shallow checkout), so their pages are lost; use them only to read real API output in the logs.
 - The repo is public: never commit secret values, API keys or subscriber data.
+- People Moves must stay within Canadian privacy law (PIPEDA): only leadership changes made public in company press releases, newsrooms or the press; VP level and above, board appointments and founders; no personal details. LinkedIn and other social media are never used as sources, and the topic's `blockedHosts` drops any such link. Keep these guardrails when editing that topic.
 - Claude API calls use raw `fetch`; the curator uses `claude-haiku-4-5` with web search, the editor uses `claude-opus-5` with structured output and `fallbacks: "default"`.
