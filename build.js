@@ -71,7 +71,7 @@ const TOPICS = [
     short: 'Security',
     maxItems: 3,
     maxAgeDays: 7,
-    query: 'network security operations: firewall, VPN and SASE vulnerabilities and advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, zero trust networking, and SOC automation for network threats'
+    query: 'network security operations: firewall, VPN and SASE vulnerabilities and advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, SASE platform news from Cato Networks, Zscaler and Netskope, zero trust networking, and SOC automation for network threats'
   },
   {
     label: 'Startups & Funding',
@@ -194,6 +194,7 @@ const VENDORS = [
   { name: 'Exaforce', slug: 'exaforce', about: 'Agentic security operations (AI SOC) platform.' },
   { name: 'Nscale', aliases: ['nScale', 'NScale'], slug: 'nscale', about: 'AI cloud ("neocloud") company building GPU data centers and AI infrastructure.' },
   { name: 'Fluidstack', aliases: ['FluidStack'], slug: 'fluidstack', about: 'AI cloud company that builds and runs large GPU clusters for AI labs and enterprises.' },
+  { name: 'Cato Networks', slug: 'cato-networks', about: 'SASE company combining SD-WAN, network security and zero trust access in one cloud service.' },
   { name: 'Oracle', aliases: ['OCI', 'Oracle Cloud Infrastructure'], slug: 'oracle', about: 'Oracle Cloud Infrastructure (OCI): cloud and AI data center capacity, with large RDMA-based GPU cluster networks.' },
 ];
 const TRACKED_VENDORS = VENDORS.map(v => v.name);
