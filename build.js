@@ -52,7 +52,7 @@ const TOPICS = [
     short: 'DC networking',
     maxItems: 4,
     maxAgeDays: 7,
-    query: 'data center and AI cluster networking: Ethernet and InfiniBand fabrics, Ultra Ethernet Consortium, RoCE, NVIDIA Spectrum-X, Arista, Cisco Nexus and Silicon One, Juniper and HPE, Broadcom Tomahawk, 800G and 1.6T optics, co-packaged optics, and AI neoclouds such as Nscale, Fluidstack, CoreWeave and Lambda building GPU data centers'
+    query: 'data center and AI cluster networking: Ethernet and InfiniBand fabrics, Ultra Ethernet Consortium, RoCE, NVIDIA Spectrum-X, Arista, Cisco Nexus and Silicon One, Juniper and HPE, Broadcom Tomahawk, 800G and 1.6T optics, co-packaged optics, AI neoclouds such as Nscale, Fluidstack, CoreWeave and Lambda building GPU data centers, and AI data center networking at Oracle Cloud Infrastructure'
   },
   {
     label: 'Routing & Internet',
@@ -182,6 +182,7 @@ const VENDORS = [
   { name: 'Exaforce', slug: 'exaforce', about: 'Agentic security operations (AI SOC) platform.' },
   { name: 'Nscale', aliases: ['nScale', 'NScale'], slug: 'nscale', about: 'AI cloud ("neocloud") company building GPU data centers and AI infrastructure.' },
   { name: 'Fluidstack', aliases: ['FluidStack'], slug: 'fluidstack', about: 'AI cloud company that builds and runs large GPU clusters for AI labs and enterprises.' },
+  { name: 'Oracle', aliases: ['OCI', 'Oracle Cloud Infrastructure'], slug: 'oracle', about: 'Oracle Cloud Infrastructure (OCI): cloud and AI data center capacity, with large RDMA-based GPU cluster networks.' },
 ];
 const TRACKED_VENDORS = VENDORS.map(v => v.name);
 
