@@ -28,11 +28,11 @@ const TOPICS = [
   {
     label: 'Network Automation',
     slug: 'network-automation',
-    about: 'NetDevOps, intent-based networking, network source of truth and the tools that automate network change.',
+    about: 'DevNetOps (NetDevOps) practice, intent-based networking, network source of truth and the tools that automate and test network change.',
     short: 'Automation',
-    maxItems: 4,
+    maxItems: 5,
     maxAgeDays: 7,
-    query: 'network automation and NetDevOps: new tools, releases and practitioner write-ups on NetBox, Nautobot, Ansible, Nornir, Batfish, Itential, intent-based networking and network source of truth, plus AutoCon and NANOG talks'
+    query: 'network automation and DevNetOps (NetDevOps) practice: new tools, releases and practitioner write-ups on GitOps and CI/CD for network changes, network testing with Batfish, pyATS and Containerlab, Terraform for networks, NetBox, Nautobot, Ansible, Nornir, Itential, intent-based networking and network source of truth, plus AutoCon and NANOG talks'
   },
   {
     label: 'AIOps & Network Observability',
@@ -52,7 +52,7 @@ const TOPICS = [
     short: 'DC networking',
     maxItems: 4,
     maxAgeDays: 7,
-    query: 'data center and AI cluster networking: Ethernet and InfiniBand fabrics, Ultra Ethernet Consortium, RoCE, NVIDIA Spectrum-X, Arista, Cisco Nexus and Silicon One, Juniper and HPE, Broadcom Tomahawk, 800G and 1.6T optics, co-packaged optics'
+    query: 'data center and AI cluster networking: Ethernet and InfiniBand fabrics, Ultra Ethernet Consortium, RoCE, NVIDIA Spectrum-X, Arista, Cisco Nexus and Silicon One, Juniper and HPE, Broadcom Tomahawk, 800G and 1.6T optics, co-packaged optics, and AI neoclouds such as Nscale, Fluidstack, CoreWeave and Lambda building GPU data centers'
   },
   {
     label: 'Routing & Internet',
@@ -72,6 +72,15 @@ const TOPICS = [
     maxItems: 3,
     maxAgeDays: 7,
     query: 'network security operations: firewall, VPN and SASE vulnerabilities and advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, zero trust networking, and SOC automation for network threats'
+  },
+  {
+    label: 'Startups & Funding',
+    slug: 'startups',
+    about: 'New companies in networking, DevNetOps, AIOps and AI infrastructure: stealth launches, early-stage funding and acquisitions.',
+    short: 'Startups',
+    maxItems: 3,
+    maxAgeDays: 7,
+    query: 'startups in network automation, DevNetOps and NetDevOps, AIOps, network observability, network security and AI infrastructure: companies emerging from stealth, seed, Series A and Series B funding rounds, first product launches, and acquisitions of startups'
   },
   {
     label: 'Agentic AI & MCP',
@@ -133,7 +142,7 @@ function topicFor(label) {
 const TRENDING_TERMS = [
   'MCP', 'Agentic AI', 'AIOps', 'Digital Twin', 'RAG', 'LLM',
   'OpenTelemetry', 'OpenConfig', 'eBPF', 'SASE', 'Zero Trust',
-  'NetDevOps', 'MLOps', 'SRE', 'Kubernetes', 'observability',
+  'NetDevOps', 'DevNetOps', 'MLOps', 'SRE', 'Kubernetes', 'observability',
   'GenAI', 'inference', 'fine-tuning', 'automation', 'agent',
 ];
 
@@ -171,6 +180,8 @@ const VENDORS = [
   { name: 'Infoblox', slug: 'infoblox', about: 'DNS, DHCP and IP address management (DDI) and DNS security.' },
   { name: 'Splunk', slug: 'splunk', about: 'Observability and security analytics platform, part of Cisco since 2024.' },
   { name: 'Exaforce', slug: 'exaforce', about: 'Agentic security operations (AI SOC) platform.' },
+  { name: 'Nscale', aliases: ['nScale', 'NScale'], slug: 'nscale', about: 'AI cloud ("neocloud") company building GPU data centers and AI infrastructure.' },
+  { name: 'Fluidstack', aliases: ['FluidStack'], slug: 'fluidstack', about: 'AI cloud company that builds and runs large GPU clusters for AI labs and enterprises.' },
 ];
 const TRACKED_VENDORS = VENDORS.map(v => v.name);
 
@@ -779,7 +790,7 @@ async function editStories(entries, { count, scope }) {
           role: 'user',
           content: `You edit Digital Plumber, a daily briefing for senior network engineers, NetDevOps/automation engineers and AIOps/SRE leads. ${task}
 
-Favour concrete developments in networking, network automation, AIOps, observability and AI infrastructure over general AI-industry news, and substance over press releases. Never pick two stories about the same event. For each pick, write one sentence (under 30 words) on why it matters to a practitioner.
+Favour concrete developments in networking, network automation, AIOps, observability and AI infrastructure over general AI-industry news, and substance over press releases. Readers especially value news about startups and new companies (stealth launches, early funding) and DevNetOps practice, so give those extra weight. Never pick two stories about the same event. For each pick, write one sentence (under 30 words) on why it matters to a practitioner.
 
 Headlines are for a newspaper front page: at most 10 words, sentence case, plain and factual, one clause (no colons or semicolons), no clickbait or questions. Keep the company or product name when it is the news. Report the finding, not the report: "Most operators are ready to let AI change the network", not "Cisco and Omdia study reveals AI readiness findings".
 
@@ -1232,7 +1243,7 @@ function aboutHtml(template) {
   <p class="page-dek">Digital Plumber is an AI-curated daily intelligence briefing for the people who run networks: network engineers, NetDevOps and automation engineers, and AIOps and SRE leads. This page explains where stories come from and how they're chosen.</p>
   <div class="prose">
     <h2>What we monitor</h2>
-    <p>Each morning the build searches the web across ten coverage areas, weighted toward networking: network automation, AIOps and network observability, data center and AI networking, routing and the internet, network security, agentic AI in operations, telco and cable, and research and standards, with a small allowance for AI model and AI industry news. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
+    <p>Each morning the build searches the web across eleven coverage areas, weighted toward networking: network automation, AIOps and network observability, data center and AI networking, routing and the internet, network security, startups and funding, agentic AI in operations, telco and cable, and research and standards, with a small allowance for AI model and AI industry news. It weights practitioner sources: research papers such as arXiv, standards bodies and projects such as the IETF, NANOG, OpenConfig and OpenTelemetry, practitioner publications such as Packet Pushers, Network World and The New Stack, and engineering blogs with real technical depth.</p>
 
     <h2>How stories are selected</h2>
     <p>Networking topics accept stories from the last 7 days, since that news moves more slowly; general AI topics accept only the last 72 hours. Anything older or undated is dropped automatically. The editor favours concrete developments and technical substance over marketing, and skips search-engine filler and pure sales content. An AI editor then ranks the day's stories to pick the three that matter most, and writes the short headlines.</p>
