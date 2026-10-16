@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oct 16, 2026: DNS root key rollover breaks resolvers missing new anchor — Digital Plumber</title>
+<meta name="description" content="AI-curated intelligence for people who run networks. Today: DNS root key rollover breaks resolvers missing new anchor · Palo Alto patches PAN-OS root fl…">
+<link rel="canonical" href="https://digitalplumber.ca/archives/2026-10-16.html">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:site_name"   content="Digital Plumber">
+<meta property="og:title"       content="Oct 16, 2026: DNS root key rollover breaks resolvers missing new anchor — Digital Plumber">
+<meta property="og:description" content="AI-curated intelligence for people who run networks. Today: DNS root key rollover breaks resolvers missing new anchor · Palo Alto patches PAN-OS root fl…">
+<meta property="og:url"         content="https://digitalplumber.ca/archives/2026-10-16.html">
+<meta property="og:image"        content="https://digitalplumber.ca/og-image.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt"    content="Digital Plumber: AI-curated intelligence for people who run networks">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Oct 16, 2026: DNS root key rollover breaks resolvers missing new anchor — Digital Plumber">
+<meta name="twitter:description" content="AI-curated intelligence for people who run networks. Today: DNS root key rollover breaks resolvers missing new anchor · Palo Alto patches PAN-OS root fl…">
+<meta name="twitter:image"       content="https://digitalplumber.ca/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://digitalplumber.ca/#website","name":"Digital Plumber","url":"https://digitalplumber.ca/","description":"AI-curated intelligence for people who run networks.","inLanguage":"en-CA","publisher":{"@id":"https://digitalplumber.ca/#publisher"}},{"@type":"Organization","@id":"https://digitalplumber.ca/#publisher","name":"Digital Plumber","url":"https://digitalplumber.ca/","logo":{"@type":"ImageObject","url":"https://digitalplumber.ca/apple-touch-icon.png","width":180,"height":180}},{"isPartOf":{"@id":"https://digitalplumber.ca/#website"},"publisher":{"@id":"https://digitalplumber.ca/#publisher"},"@type":"CollectionPage","@id":"https://digitalplumber.ca/archives/2026-10-16.html","url":"https://digitalplumber.ca/archives/2026-10-16.html","name":"Oct 16, 2026: DNS root key rollover breaks resolvers missing new anchor — Digital Plumber","description":"AI-curated intelligence for people who run networks. Today: DNS root key rollover breaks resolvers missing new anchor · Palo Alto patches PAN-OS root fl…","datePublished":"2026-10-16","mainEntity":{"@type":"ItemList","numberOfItems":14,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://packetpushers.net/blog/open-source-networking-projects/","name":"Packet Pushers updates its open source network automation list"},{"@type":"ListItem","position":2,"url":"https://www.storagenewsletter.com/2026/10/15/ocp-global-summit-2026-micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories/","name":"Micas launches three 102.4T open Ethernet switches on Tomahawk 6"},{"@type":"ListItem","position":3,"url":"https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html","name":"1.6T Ethernet samples now with volume ramp due in 2027"},{"@type":"ListItem","position":4,"url":"https://ipinfo.io/blog/rpki-protects-70-internet-routes","name":"RPKI now covers 70% of routes after China's surge"},{"@type":"ListItem","position":5,"url":"https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready","name":"DNS root key rollover breaks resolvers missing new anchor"},{"@type":"ListItem","position":6,"url":"https://itdaily.com/news/security/palo-alto-cve-2026-0322/","name":"Palo Alto patches PAN-OS root flaw under active exploitation"},{"@type":"ListItem","position":7,"url":"https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html","name":"FBI says FortiBleed has harvested 86,644 Fortinet credentials"},{"@type":"ListItem","position":8,"url":"https://exchange.netbrain.com/events/netbrain-agentic-netops-platform-webinar-58","name":"NetBrain R13 adds agent team and MCP server"},{"@type":"ListItem","position":9,"url":"https://opentelemetry.io/blog/2026/","name":"OpenTelemetry Java agent 3.0 reaches release candidate"},{"@type":"ListItem","position":10,"url":"https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments","name":"IETF draft ties segment routing SIDs to guaranteed resources"},{"@type":"ListItem","position":11,"url":"https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/","name":"Google ships Gemini 4 Argon with 1M token context"},{"@type":"ListItem","position":12,"url":"https://x.ai/news","name":"xAI's Grok Voice 3.0 tops speech-to-speech benchmark"},{"@type":"ListItem","position":13,"url":"https://fortune.com/2026/10/14/middle-powers-private-sector-geopolitics/","name":"US and China models leave middle powers behind"},{"@type":"ListItem","position":14,"url":"https://www.canadianmanufacturing.com/manufacturing/canada-and-the-united-kingdom-renew-their-partnership-on-ai-security-322089/","name":"Canada adds $500M to regional AI initiative"}]}}]}</script>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Digital Plumber" href="/feed.xml">
+<meta name="color-scheme" content="light dark">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<script>window.__buildDate="2026-10-16";</script>
+<style>
+  :root {
+    --paper:   #f4efe6;
+    --paper-2: #ebe4d7;
+    --ink:     #1b1814;
+    --ink-2:   #3d372f;
+    --muted:   #6f675c;
+    --hair:    #d3c9b8;
+    --rule:    #1b1814;
+    --accent:  #b8321a;
+    --wash:    rgba(184, 50, 26, 0.08);
+    --up:      #2f7d4f;
+    --down:    #b8321a;
+
+    --display: 'Instrument Serif', 'Times New Roman', serif;
+    --serif:   'Source Serif 4', Georgia, serif;
+    --sans:    'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* The night edition */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:   #16140f;
+      --paper-2: #211e17;
+      --ink:     #ece5d8;
+      --ink-2:   #cfc6b6;
+      --muted:   #9c9384;
+      --hair:    #3a342a;
+      --rule:    #ece5d8;
+      --accent:  #ef7a5c;
+      --wash:    rgba(239, 122, 92, 0.1);
+      --up:      #6cc28f;
+      --down:    #ef7a5c;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-padding-top: 64px; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+  .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  [hidden] { display: none !important; }
+
+  /* ── TOP STRIP (sports ear + links) ── */
+  .topstrip { border-bottom: 1px solid var(--hair); font-family: var(--sans); font-size: 0.74rem; color: var(--muted); }
+  .topstrip-inner { display: flex; justify-content: space-between; gap: 1rem; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+  .ear { display: flex; gap: 1.1rem; flex-wrap: wrap; min-width: 0; }
+  .ear-item b { color: var(--ink); font-weight: 600; }
+  .ear-live { color: var(--accent); font-weight: 600; }
+  .ear-links { display: flex; gap: 1rem; white-space: nowrap; }
+  .ear-links a { text-decoration: none; }
+  .ear-links a:hover { color: var(--accent); }
+
+  /* ── ARCHIVE NOTICE ── */
+  .archive-notice {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.55rem 1rem;
+  }
+  .archive-notice a { color: var(--paper); font-weight: 600; }
+
+  /* ── MASTHEAD ── */
+  .masthead { text-align: center; padding-top: 1.1rem; }
+  .dateline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.4rem;
+    color: var(--ink-2);
+  }
+  .nameplate {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0.8rem 0 0.25rem;
+  }
+  .nameplate a { text-decoration: none; }
+  .motto { font-style: italic; color: var(--ink-2); font-size: 1rem; }
+  .positioning { max-width: 44rem; margin: 0.9rem auto 1.1rem; }
+  .positioning strong { display: block; font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.2; }
+  .positioning span { display: block; color: var(--ink-2); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Masthead on every other page */
+  .page-masthead { display: flex; align-items: baseline; gap: 1rem; padding-top: 1.1rem; padding-bottom: 0.6rem; flex-wrap: wrap; }
+  .page-nameplate { font-family: var(--display); font-size: 2.3rem; line-height: 1; text-decoration: none; }
+  .page-masthead .motto { font-size: 0.9rem; }
+
+  /* ── PRIMARY NAV + SEARCH ── */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    border-top: 3px double var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 0.5rem 0;
+  }
+  .primary-nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .primary-nav a { text-decoration: none; color: var(--ink-2); padding: 0.2rem 0; border-bottom: 2px solid transparent; }
+  .primary-nav a:hover { color: var(--ink); }
+  .primary-nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .rss-link { text-decoration: none; color: var(--muted); }
+  .rss-link:hover { color: var(--accent); }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.2rem 0;
+  }
+  .search:focus-within { border-bottom-color: var(--ink); }
+  .search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    width: 18rem;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search kbd { font-family: var(--sans); font-size: 0.65rem; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0 0.3rem; }
+
+  /* ── SECTION HEADS ── */
+  .paper-section { padding: 2.25rem 0 0.5rem; }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 3px solid var(--rule);
+    padding-top: 0.45rem;
+    margin-bottom: 0.25rem;
+  }
+  .section-head h2 { font-family: var(--display); font-weight: 400; font-size: 2rem; line-height: 1.1; }
+  .section-head h2 a { text-decoration: none; }
+  .section-head h2 a:hover { color: var(--accent); }
+  .section-head .label { color: var(--muted); text-align: right; }
+  .kicker { color: var(--accent); margin-bottom: 0.4rem; }
+  .kicker a { text-decoration: none; }
+  .kicker .sep { color: var(--muted); margin: 0 0.35rem; }
+
+  /* ── TODAY'S 3 THINGS THAT MATTER ── */
+  .three { padding: 1.75rem 0 0.5rem; }
+  .three .section-head { border-top-width: 3px; border-top-style: double; }
+  .three-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 2.25rem; counter-reset: three; }
+  .three-list li { counter-increment: three; padding: 1rem 0 1.25rem; }
+  .three-list li + li { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .three-list li::before { content: counter(three); display: block; font-family: var(--display); font-size: 2.6rem; line-height: 1; color: var(--accent); margin-bottom: 0.4rem; }
+  .three-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin-bottom: 0.5rem; }
+  .three-list h3 a { text-decoration: none; }
+  .three-list h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+  .three-summary { font-size: 0.97rem; color: var(--ink-2); margin-bottom: 0.6rem; }
+  .three-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 0.7rem; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; }
+  .three-links a { color: var(--accent); text-decoration: none; }
+  .three-links a:hover { text-decoration: underline; }
+
+  /* ── TODAY'S BRIEFING HEAD + TOPIC FILTERS ── */
+  .briefing-head { padding-top: 2.25rem; }
+  .status-line { font-family: var(--sans); font-size: 0.82rem; color: var(--ink-2); margin: 0.2rem 0 0.8rem; }
+  .sections-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .sections-inner { display: flex; align-items: center; gap: 1.25rem; min-height: 44px; }
+  .mini-nameplate { font-family: var(--display); font-size: 1.35rem; text-decoration: none; white-space: nowrap; display: none; }
+  .sections-bar.stuck .mini-nameplate { display: block; }
+  .section-links { display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+  .section-links::-webkit-scrollbar { display: none; }
+  .section-link {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 0 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--ink-2);
+  }
+  .section-link:hover { color: var(--ink); }
+  .section-link.active { color: var(--ink); border-bottom-color: var(--accent); }
+  .section-link .n { color: var(--muted); font-weight: 500; margin-left: 0.25rem; }
+  .bar-search { display: none; background: none; border: none; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+  .bar-search:hover { color: var(--accent); }
+  .sections-bar.stuck .bar-search { display: block; }
+
+  /* ── COMPACT STORIES ── */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    column-gap: 2.25rem;
+  }
+  .story { padding: 1rem 0 1.1rem; border-bottom: 1px solid var(--hair); }
+  .story h3 { font-family: var(--display); font-weight: 400; font-size: 1.45rem; line-height: 1.12; margin-bottom: 0.3rem; }
+  .story h3 a, .entry h3 a { text-decoration: none; }
+  .story h3 a:hover, .entry h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
+  .meta { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.45rem; }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .meta a { color: inherit; }
+  .stype { text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.62rem; font-weight: 600; color: var(--muted); border: 1px solid var(--hair); border-radius: 3px; padding: 0.05rem 0.3rem; white-space: nowrap; }
+  .summary { font-size: 0.93rem; color: var(--ink-2); line-height: 1.55; }
+  .story .summary { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .story.open .summary { display: block; }
+  .why-line { font-size: 0.93rem; line-height: 1.5; margin-top: 0.5rem; padding-left: 0.7rem; border-left: 2px solid var(--accent); }
+  .why-line .label { color: var(--accent); margin-right: 0.2rem; }
+  .story-detail { display: none; margin-top: 0.75rem; font-size: 0.93rem; }
+  .story-detail.open { display: block; }
+  .story-detail p { margin-bottom: 0.7rem; }
+  .more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0.55rem;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .more:hover { text-decoration: underline; }
+  .source-link { display: inline-block; margin-top: 0.55rem; font-family: var(--sans); font-size: 0.74rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .source-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH RESULTS ── */
+  .no-results { display: none; padding: 2rem 0; font-style: italic; color: var(--ink-2); }
+  .no-results.visible { display: block; }
+  .no-results button { background: none; border: none; cursor: pointer; color: var(--accent); font-style: normal; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .archive-results { padding: 2rem 0 0.5rem; }
+  .archive-list { list-style: none; }
+  .archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1.25rem; padding: 0.9rem 0; border-bottom: 1px solid var(--hair); }
+  .archive-list .when { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); padding-top: 0.3rem; }
+  .archive-list .when a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .archive-list h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.25rem; }
+  .archive-list h3 a { text-decoration: none; }
+  .archive-list h3 a:hover { text-decoration: underline; }
+  .archive-list p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── LISTENING (podcasts & talks) ── */
+  .listening { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); column-gap: 2.25rem; }
+  .listening li { padding: 1rem 0; border-bottom: 1px solid var(--hair); }
+  .listening h3 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0; }
+  .listening h3 a { text-decoration: none; }
+  .listening p { font-size: 0.92rem; color: var(--ink-2); }
+
+  /* ── INTELLIGENCE (vendor radar, what changed, trends) ── */
+  .intel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem; padding: 1rem 0 1.5rem; }
+  .intel-grid.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .intel-grid > div + div { border-left: 1px solid var(--hair); padding-left: 2.25rem; }
+  .intel-grid h3 { margin-bottom: 0.5rem; color: var(--ink-2); }
+  .tally { list-style: none; }
+  .tally li { display: flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0; font-size: 0.95rem; }
+  .tally-name { text-decoration: none; }
+  .tally-name:hover { color: var(--accent); text-decoration: underline; }
+  .tally .dots { flex: 1; border-bottom: 1px dotted var(--muted); transform: translateY(-0.25em); }
+  .tally .n { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; }
+  .trend-slot { width: 0.9rem; text-align: center; }
+  .trend { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; }
+  .trend.up { color: var(--up); }
+  .trend.down { color: var(--down); }
+  .changes { list-style: none; }
+  .changes li { padding: 0.45rem 0; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  .changes li:last-child { border-bottom: none; }
+  .changes a { text-decoration: none; font-weight: 600; }
+  .changes a:hover { text-decoration: underline; }
+  .terms { font-size: 0.95rem; line-height: 1.9; color: var(--ink-2); margin-top: 0.9rem; }
+  .terms .hot { font-style: italic; color: var(--accent); }
+  .company { padding: 0.55rem 0; border-bottom: 1px solid var(--hair); }
+  .company:last-child { border-bottom: none; }
+  .company-name { font-weight: 600; }
+  .company-name a { text-decoration: none; }
+  .company-name a:hover { color: var(--accent); text-decoration: underline; }
+  .company-name .n { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); font-weight: 500; margin-left: 0.35rem; }
+  .company ul { list-style: none; margin-top: 0.15rem; }
+  .company li { font-size: 0.9rem; line-height: 1.4; padding: 0.15rem 0; }
+  .company li a { text-decoration: none; color: var(--ink-2); }
+  .company li a:hover { text-decoration: underline; color: var(--ink); }
+  .more-link { margin-top: 0.8rem; }
+  .more-link a { color: var(--accent); text-decoration: none; }
+  .more-link a:hover { text-decoration: underline; }
+  .empty-note { font-size: 0.9rem; font-style: italic; color: var(--muted); }
+
+  /* ── GET THE DAILY BRIEFING ── */
+  .cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem 2.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--paper-2);
+    border-top: 3px solid var(--rule);
+  }
+  .cta h2 { font-family: var(--display); font-weight: 400; font-size: 1.9rem; line-height: 1.1; margin-bottom: 0.3rem; }
+  .cta p { font-size: 0.95rem; color: var(--ink-2); max-width: 40rem; }
+  .cta-button { background: var(--ink); color: var(--paper); text-decoration: none; padding: 0.8rem 1.3rem; white-space: nowrap; }
+  .cta-button:hover { background: var(--accent); }
+  .cta p a { color: var(--accent); }
+
+  /* ── EMAIL SIGN-UP ── */
+  .signup { display: flex; gap: 0; }
+  .signup input[type="email"] {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-right: none;
+    padding: 0.6rem 0.8rem;
+    width: 17rem;
+    min-width: 0;
+  }
+  .signup input[type="email"]::placeholder { color: var(--muted); }
+  .signup input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .signup button { background: var(--ink); color: var(--paper); border: 1px solid var(--rule); padding: 0.6rem 1.1rem; cursor: pointer; white-space: nowrap; }
+  .signup button:hover { background: var(--accent); border-color: var(--accent); }
+  .masthead-signup { display: flex; justify-content: center; align-items: center; gap: 0.6rem 1rem; flex-wrap: wrap; margin: 0 auto 1.1rem; }
+  .masthead-signup > .label { color: var(--ink-2); }
+  .masthead-signup .signup input[type="email"] { padding: 0.45rem 0.7rem; font-size: 0.9rem; width: 15rem; }
+  .masthead-signup .signup button { padding: 0.45rem 0.9rem; }
+
+  /* ── COLOPHON ── */
+  .colophon { border-top: 3px double var(--rule); padding-top: 1.4rem; padding-bottom: 3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; }
+  .colophon h2 { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1; margin-bottom: 0.5rem; }
+  .colophon p { font-size: 0.92rem; color: var(--ink-2); max-width: 44rem; }
+  .colophon p + p { margin-top: 0.5rem; }
+  .colophon p a { color: var(--accent); }
+  .colophon nav { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+  .colophon nav a { text-decoration: none; color: var(--ink-2); }
+  .colophon nav a:hover { color: var(--accent); }
+
+  /* ── INNER PAGES (vendors, topics, week, archive, methodology) ── */
+  .page { padding-top: 1.75rem; padding-bottom: 1rem; }
+  .page-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.02; margin-bottom: 0.6rem; }
+  .page-dek { font-size: 1.1rem; color: var(--ink-2); max-width: 46rem; }
+  .page-dek a { color: var(--accent); }
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 2rem; margin: 1.5rem 0 0.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--hair); }
+  .stat-row > div { display: flex; flex-direction: column; gap: 0.2rem; }
+  .stat { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+  .stat .trend { font-size: 1.1rem; vertical-align: middle; }
+  .stat-row .label { color: var(--muted); }
+
+  .activity { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.5rem; align-items: end; padding: 1rem 0 0.5rem; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .bar-n { font-family: var(--sans); font-size: 0.7rem; font-weight: 600; color: var(--ink-2); min-height: 1em; }
+  .bar-track { width: 100%; height: 110px; display: flex; align-items: flex-end; border-bottom: 1px solid var(--rule); }
+  .bar { width: 100%; background: var(--accent); min-height: 0; }
+  .bar-label { font-family: var(--sans); font-size: 0.62rem; color: var(--muted); white-space: nowrap; visibility: hidden; }
+  .bar-col:nth-child(3n+1) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+
+  .entry-list { list-style: none; }
+  .entry { padding: 1rem 0; border-bottom: 1px solid var(--hair); max-width: 52rem; }
+  .entry h3 { font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.12; margin-bottom: 0.35rem; }
+  .entry .edition { margin-top: 0.5rem; }
+  .entry .edition a { color: var(--accent); text-decoration: none; }
+  .month { margin: 1.2rem 0 0.3rem; color: var(--ink-2); }
+  .month .n { color: var(--muted); font-weight: 500; }
+  .history { list-style: none; }
+  .history li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) auto; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--hair); font-size: 0.93rem; align-items: baseline; }
+  .history a { text-decoration: none; }
+  .history a:hover { text-decoration: underline; }
+  .history .when, .history .src { font-family: var(--sans); font-size: 0.72rem; color: var(--muted); }
+
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .data-table th, .data-table td { text-align: left; padding: 0.6rem 0.75rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: baseline; font-weight: 400; }
+  .data-table thead th { font-family: var(--sans); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); }
+  .data-table tbody th a { font-weight: 600; text-decoration: none; }
+  .data-table tbody th a:hover { color: var(--accent); text-decoration: underline; }
+  .data-table .num { text-align: right; font-family: var(--sans); font-size: 0.85rem; white-space: nowrap; }
+  .data-table .col-latest { font-size: 0.9rem; color: var(--ink-2); }
+  .data-table .col-latest a { text-decoration: none; }
+  .data-table .col-latest a:hover { text-decoration: underline; }
+  .data-table .when { font-family: var(--sans); font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+
+  .editions { list-style: none; columns: 2 20rem; column-gap: 2.25rem; }
+  .editions li { break-inside: avoid; display: flex; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--hair); }
+  .editions a { text-decoration: none; }
+  .editions a:hover { text-decoration: underline; color: var(--accent); }
+  .editions .label { color: var(--muted); }
+
+  .prose { max-width: 44rem; margin-top: 1.5rem; }
+  .prose h2 { font-family: var(--display); font-weight: 400; font-size: 1.6rem; margin: 1.6rem 0 0.4rem; }
+  .prose p { color: var(--ink-2); margin-bottom: 0.8rem; }
+  .prose a { color: var(--accent); }
+
+  .week-top { list-style: none; counter-reset: top; }
+  .week-top li { counter-increment: top; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0.5rem; padding: 1.1rem 0; border-bottom: 1px solid var(--hair); }
+  .week-top li:last-child { border-bottom: none; }
+  .week-top li::before { content: counter(top); font-family: var(--display); font-size: 2.6rem; line-height: 0.9; color: var(--accent); }
+  .week-top h3 { font-family: var(--display); font-weight: 400; font-size: 1.75rem; line-height: 1.1; margin: 0.1rem 0 0.4rem; }
+  .week-top h3 a { text-decoration: none; }
+  .week-top h3 a:hover { text-decoration: underline; }
+  .watch { list-style: none; counter-reset: watch; max-width: 50rem; padding-top: 0.5rem; }
+  .watch li { counter-increment: watch; padding: 0.7rem 0 0.7rem 2.2rem; border-bottom: 1px solid var(--hair); position: relative; }
+  .watch li::before { content: counter(watch); position: absolute; left: 0; top: 0.55rem; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--accent); }
+  .week-list { list-style: none; columns: 2 20rem; column-gap: 2.25rem; column-rule: 1px solid var(--hair); }
+  .week-list li { break-inside: avoid; padding: 0.6rem 0; border-bottom: 1px solid var(--hair); }
+  .week-list > li > a { text-decoration: none; font-weight: 600; font-size: 0.98rem; line-height: 1.35; display: block; margin-bottom: 0.15rem; }
+  .week-list > li > a:hover { text-decoration: underline; }
+  .week-list .meta { margin-bottom: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    .three-list { grid-template-columns: 1fr; }
+    .three-list li + li { border-left: none; padding-left: 0; border-top: 1px solid var(--hair); }
+    .three-list li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); }
+    .three-list li::before { grid-row: span 6; }
+    .intel-grid.three-col { grid-template-columns: 1fr 1fr; }
+    .intel-grid.three-col > div:last-child { grid-column: 1 / -1; border-left: none; padding-left: 0; }
+    .sections-bar.stuck .mini-nameplate { display: none; }
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 1rem; }
+    body { font-size: 16px; }
+    .topstrip-inner { flex-direction: column; gap: 0.2rem; }
+    .ear { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
+    .ear::-webkit-scrollbar { display: none; }
+    .ear-links { display: none; }
+    .masthead { padding-top: 0.6rem; }
+    .dateline-extra { display: none; }
+    .nameplate { font-size: 2.7rem; margin: 0.5rem 0 0.1rem; }
+    .motto { font-size: 0.85rem; }
+    .positioning { margin: 0.6rem auto 0.8rem; }
+    .positioning strong { font-size: 1.2rem; }
+    .positioning span { font-size: 0.85rem; }
+    .signup { width: 100%; }
+    .signup input[type="email"], .masthead-signup .signup input[type="email"] { flex: 1; width: auto; }
+    .cta .signup { flex-basis: 100%; }
+    .toolbar { gap: 0.6rem 1rem; }
+    .primary-nav { gap: 0.75rem; letter-spacing: 0.04em; font-size: 0.64rem; flex-wrap: nowrap; }
+    .three .section-head .label, .briefing-head .section-head .label { display: none; }
+    .search { flex: 1 1 100%; }
+    .search input { width: 100%; }
+    .search kbd { display: none; }
+    .three-list h3 { font-size: 1.45rem; }
+    .intel-grid, .intel-grid.three-col { grid-template-columns: 1fr; gap: 1.25rem; }
+    .intel-grid > div + div { border-left: none; padding-left: 0; }
+    .archive-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+    .colophon { grid-template-columns: 1fr; }
+    .colophon nav { flex-direction: row; flex-wrap: wrap; gap: 1rem; text-align: left; }
+    .history li { grid-template-columns: 3.6rem minmax(0, 1fr); }
+    .history .src { display: none; }
+    .data-table .col-latest, .data-table .col-all { display: none; }
+    .activity { gap: 0.25rem; }
+    .bar-col:nth-child(3n+1) .bar-label { visibility: hidden; }
+    .bar-col:first-child .bar-label, .bar-col:nth-child(7) .bar-label, .bar-col:last-child .bar-label { visibility: visible; }
+    .week-top li { grid-template-columns: 2.2rem minmax(0, 1fr); }
+    .week-top li::before { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="archive-notice">You're reading the Friday, October 16, 2026 edition. <a href="/">Today's briefing →</a></div>
+
+<div class="topstrip">
+  <div class="wrap topstrip-inner">
+    <div class="ear" id="sportsEar"><span class="label">Toronto</span></div>
+    <div class="ear-links"><a href="/feed.xml">RSS</a><a href="/about.html">Methodology</a></div>
+  </div>
+</div>
+
+<header class="masthead wrap" id="masthead">
+  <div class="dateline label"><span>Friday, October 16, 2026</span><span>No. 124<span class="dateline-extra"> · Toronto edition</span></span></div>
+  <h1 class="nameplate"><a href="/">Digital Plumber</a></h1>
+  <p class="motto">Plumbing the information age</p>
+  <p class="positioning">
+    <strong>AI-curated intelligence for people who run networks.</strong>
+    <span>Daily coverage of AIOps, network automation, agentic operations, AI infrastructure, security and the vendors shaping them.</span>
+  </p>
+  
+</header>
+
+<div class="wrap">
+  <div class="toolbar">
+    <nav class="primary-nav label" aria-label="Primary"><a href="/">Daily briefing</a><a href="/vendors/">Vendor Radar</a><a href="/week.html">This week</a><a href="/archive/" class="active" aria-current="page">Archive</a></nav>
+    <label class="search">
+      <input type="search" id="searchInput" placeholder="Search every edition" oninput="filterSearch(this.value)" aria-label="Search every edition">
+      <kbd>⌘K</kbd>
+    </label>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    
+  <section class="three home-extra" aria-labelledby="three-head">
+    <div class="section-head"><h2 id="three-head">Today's 3 things that matter</h2><span class="label">Picked by the AI editor</span></div>
+    <ol class="three-list">
+      <li>
+        <p class="kicker label">Routing<span class="sep">·</span>Industry news</p>
+        <h3><a href="#s-5">DNS root key rollover breaks resolvers missing new anchor</a></h3>
+        <p class="three-summary">On October 11, 2026, the DNS root zone switched to signing with KSK-2024 (key tag 38696), replacing KSK-2017.</p>
+        <p class="why-line"><span class="label">Why it matters</span> RFC 5011 automated updates often fail on offline systems, read-only key stores, uninventoried embedded appliances, or outdated golden images; operators must verify key tag 38696 is in resolver config files and active in memory before the rollover takes effect.</p>
+        <p class="three-links"><a href="#s-5">Full item ↓</a><a href="https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready" target="_blank" rel="noopener">Read at Akamai ↗</a></p>
+      </li>
+      <li>
+        <p class="kicker label">Security<span class="sep">·</span>Industry news</p>
+        <h3><a href="#s-6">Palo Alto patches PAN-OS root flaw under active exploitation</a></h3>
+        <p class="three-summary">Palo Alto Networks disclosed CVE-2026-0322, a critical vulnerability in PAN-OS management interface allowing authenticated attackers with network access to execute arbitrary code with root privileges.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Network ops must prioritize patching PA-Series, VM-Series firewalls and Panorama immediately; Cloud NGFW and Prisma Access unaffected; limited but real exploit activity observed.</p>
+        <p class="three-links"><a href="#s-6">Full item ↓</a><a href="https://itdaily.com/news/security/palo-alto-cve-2026-0322/" target="_blank" rel="noopener">Read at ITdaily ↗</a></p>
+      </li>
+      <li>
+        <p class="kicker label">Routing<span class="sep">·</span>Industry news</p>
+        <h3><a href="#s-4">RPKI now covers 70% of routes after China's surge</a></h3>
+        <p class="three-summary">RPKI now secures 70.3% of global Internet routes, up from 54.0% a year earlier, with China's adoption leap (3.7% to 83.0%) driving most of the gain.</p>
+        <p class="why-line"><span class="label">Why it matters</span> Of 855,217 RPKI-covered IPv4 routes, 138,698 (16.2%) have a ROA looser than the route announced; operators should leave maxLength unset and publish ROAs for all announced prefixes to close attack windows.</p>
+        <p class="three-links"><a href="#s-4">Full item ↓</a><a href="https://ipinfo.io/blog/rpki-protects-70-internet-routes" target="_blank" rel="noopener">Read at IPinfo / daily.dev ↗</a></p>
+      </li>
+    </ol>
+  </section>
+
+    <div class="briefing-head" id="briefing">
+      <div class="section-head"><h2>Today's briefing</h2><span class="label">What happened, and why it matters</span></div>
+      <p class="status-line">14 stories · 8 topics · Updated 9:29 AM ET</p>
+    </div>
+  </div>
+
+  <nav class="sections-bar" id="sectionsBar" aria-label="Topics">
+    <div class="wrap sections-inner">
+      <a class="mini-nameplate" href="/">Digital Plumber</a>
+      <div class="section-links label" id="sectionLinks">
+        <button class="section-link active" onclick="filterTopic(this, 'all')">All topics</button>
+        <button class="section-link" data-topic="Network Automation" onclick="filterTopic(this, this.dataset.topic)">Automation<span class="n">1</span></button>
+      <button class="section-link" data-topic="Data Center &amp; AI Networking" onclick="filterTopic(this, this.dataset.topic)">DC networking<span class="n">2</span></button>
+      <button class="section-link" data-topic="Routing &amp; Internet" onclick="filterTopic(this, this.dataset.topic)">Routing<span class="n">2</span></button>
+      <button class="section-link" data-topic="Network Security" onclick="filterTopic(this, this.dataset.topic)">Security<span class="n">2</span></button>
+      <button class="section-link" data-topic="Agentic AI &amp; MCP" onclick="filterTopic(this, this.dataset.topic)">Agentic AI<span class="n">1</span></button>
+      <button class="section-link" data-topic="Research, Standards &amp; Industry" onclick="filterTopic(this, this.dataset.topic)">Research<span class="n">2</span></button>
+      <button class="section-link" data-topic="AI Model Providers" onclick="filterTopic(this, this.dataset.topic)">Models<span class="n">2</span></button>
+      <button class="section-link" data-topic="AI Industry &amp; Policy" onclick="filterTopic(this, this.dataset.topic)">Industry and policy<span class="n">2</span></button>
+      </div>
+      <button class="bar-search label" onclick="focusSearch()">Search</button>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div id="sections">
+      
+    <section class="paper-section" data-topic="Network Automation">
+      <div class="section-head"><h2><a href="/topics/network-automation/">Network Automation</a></h2><span class="label">1 story</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Network Automation" data-title="Open Source Networking Projects: A Current List (updated October 13, 2026)" id="s-1">
+          <h3><a href="https://packetpushers.net/blog/open-source-networking-projects/" target="_blank" rel="noopener" title="Open Source Networking Projects: A Current List (updated October 13, 2026)">Packet Pushers updates its open source network automation list</a></h3>
+          <p class="meta"><b>Packet Pushers</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">Packet Pushers maintains curated reference of open-source network automation tools. October 13, 2026 update documents maintenance status, recent activity, and adoption of Netmiko, Ansible, Nornir, Batfish, eNMS, and others.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Reference for practitioners evaluating which open-source automation tools are actively maintained and production-ready vs. stalled or deprecated; critical for avoiding build-on-abandoned-tools pitfall.</p>
+          <div class="story-detail"><p>Packet Pushers maintains a living reference of open-source networking projects, last updated October 13, 2026. This curated list serves as a health check on the automation ecosystem: which projects have recent commits, active maintainers, and real operator adoption. Coverage includes configuration management (Ansible, Nornir, AVD), validation (Batfish, pyATS/Genie), device screen-scraping (Netmiko), and NMS platforms (eNMS). Tools like Netmiko show sustained activity and production adoption, while some community projects have been abandoned or absorbed into vendor offerings. For practitioners building new automation stacks, this reference answers critical questions: Is this tool maintained? Will it be supported in 2–3 years? Does the operator community still use it? The list reflects real-world adoption and vendor investment patterns, avoiding the trap of standardizing on deprecated tools.</p><a class="source-link" href="https://packetpushers.net/blog/open-source-networking-projects/" target="_blank" rel="noopener">Read the original at packetpushers.net ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="Data Center &amp; AI Networking">
+      <div class="section-head"><h2><a href="/topics/ai-infrastructure/">Data Center &amp; AI Networking</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Data Center &amp; AI Networking" data-title="Micas Networks Unveils Three 102.4T Open Ethernet Platforms for AI Factories at OCP Global Summit 2026" id="s-2">
+          <h3><a href="https://www.storagenewsletter.com/2026/10/15/ocp-global-summit-2026-micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories/" target="_blank" rel="noopener" title="Micas Networks Unveils Three 102.4T Open Ethernet Platforms for AI Factories at OCP Global Summit 2026">Micas launches three 102.4T open Ethernet switches on Tomahawk 6</a></h3>
+          <p class="meta"><b>StorageNewsletter</b> · Oct 15, 2026 · <span class="stype">Industry news</span></p>
+          <p class="summary">Micas Networks announced three 102.4 Tbps open Ethernet switch platforms built on Broadcom Tomahawk 6, offering 800G air-cooled, 1.6T liquid-cooled, and 1.6T Davisson CPO variants. Portfolio enables practical migration from 800G to 1.6T while maintaining vendor-neutral architecture for mega-scale AI clusters.</p>
+          <p class="why-line"><span class="label">Why it matters</span> ODM customers can deploy 1.6T Ethernet fabrics at scale without proprietary vendor dependencies; Tomahawk 6-Davisson CPO offers power-efficient path for cluster builders planning 2026-2027 mega-scale builds with 100K+ accelerators.</p>
+          <div class="story-detail"><p>Micas' three-platform portfolio addresses different deployment profiles: air-cooled 51.2T Tomahawk 6 at 800G for hyperscalers with existing thermal budgets; liquid-cooled 102.4T variant with 1.6T pluggable connectivity for highest density; and 1RU 102.4T co-packaged system with 64 x 1.6T MMC DR8 optics for power-constrained mega-clusters. Each maintains vendor neutrality through Broadcom Tomahawk 6 architecture. Broadcom's VP of optical systems confirmed co-packaged optics will play increasing role as networks scale to higher bandwidth, highlighting Meta's deployment success with Tomahawk 5 'Bailly' CPO achieving 0.34% annual link failure rate—five times more reliable than traditional pluggable transceivers during first million hours of testing. Partners including Celestica, Delta, and Micas demonstrated these systems at OCP Summit (Oct 12-15), signaling rapid volume ramp. Support for Tomahawk 6's dual 100G/200G SerDes modes enables flexible capacity optimization.</p><a class="source-link" href="https://www.storagenewsletter.com/2026/10/15/ocp-global-summit-2026-micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories/" target="_blank" rel="noopener">Read the original at storagenewsletter.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="Data Center &amp; AI Networking" data-title="1.6T Ethernet and Optical Networking: The Complete Guide to the Next Speed Tier for AI Data Centers" id="s-3">
+          <h3><a href="https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html" target="_blank" rel="noopener" title="1.6T Ethernet and Optical Networking: The Complete Guide to the Next Speed Tier for AI Data Centers">1.6T Ethernet samples now with volume ramp due in 2027</a></h3>
+          <p class="meta"><b>The Network DNA</b> · Oct 16, 2026 · <span class="stype">Analysis</span></p>
+          <p class="summary">Comprehensive technical roadmap of 1.6T Ethernet adoption covering IEEE 802.3dj standardization status, LPO/CPO architectures, optical module form factors (OSFP-XD, DR8, 2×FR4), deployment timeline, and practical guidance distinguishing 800G (mature, dominant) from 1.6T (early sampling, 2027 volume ramp).</p>
+          <p class="why-line"><span class="label">Why it matters</span> Network engineers sizing 2026 builds should baseline 800G (cost-optimized, ubiquitous); validate 1.6T link budgets for spine/inter-cluster links targeting 2027 adoption; prioritize OSFP-XD form-factor qualification to avoid proprietary module lock-in.</p>
+          <div class="story-detail"><p>800G remains the dominant deployed speed across hyperscale AI fabrics and is the natural upgrade path for most large-scale builds in 2026, while 1.6T is entering early sampling with hyperscalers and neoclouds but lacks ubiquity. IEEE 802.3dj targets completion in late 2026, enabling 1.6T-capable NICs to ship with next-generation accelerators in Q4 2026 and Q1 2027. Optical landscape includes 1.6T DR8 (500m O-band, 22W typical), DR8-2 (2km), 2×FR4 de-facto standard using CWDM (2km reach), SR8 multimode (50-100m 850nm), and coherent variants (1600ZR/ZR+ to 1,000km, 32-40W power). OSFP-XD with dual MPO-12 APC or single MPO-16 APC enables 16-fiber connectivity per 1.6T link. Module pricing is expected to decline from current $2,500-3,500 to $1,500-2,000 by late 2026, achieving cost-per-bit parity with 800G by 2027. Practitioners should validate backplane electrical-interface (1.6TAUI-8/-16) compatibility and firmware support before committing to 1.6T; multi-vendor interoperability remains nascent and platform-specific.</p><a class="source-link" href="https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html" target="_blank" rel="noopener">Read the original at thenetworkdna.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="Routing &amp; Internet">
+      <div class="section-head"><h2><a href="/topics/routing-internet/">Routing &amp; Internet</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Routing &amp; Internet" data-title="RPKI now protects 70% of internet routes; China's ROA leap drives most gains" id="s-4">
+          <h3><a href="https://ipinfo.io/blog/rpki-protects-70-internet-routes" target="_blank" rel="noopener" title="RPKI now protects 70% of internet routes; China's ROA leap drives most gains">RPKI now covers 70% of routes after China's surge</a></h3>
+          <p class="meta"><b>IPinfo / daily.dev</b> · Oct 16, 2026 · <span class="stype">Industry news</span></p>
+          <p class="summary">RPKI now secures 70.3% of global Internet routes, up from 54.0% a year earlier, with China's adoption leap (3.7% to 83.0%) driving most of the gain. However, RPKI only validates origin, not path: a August 2026 Hetzner hijack exploited a loosely scoped ROA to forge a route and serve malware, and roughly 16-21% of covered routes still have such 'open windows.'</p>
+          <p class="why-line"><span class="label">Why it matters</span> Of 855,217 RPKI-covered IPv4 routes, 138,698 (16.2%) have a ROA looser than the route announced; operators should leave maxLength unset and publish ROAs for all announced prefixes to close attack windows.</p>
+          <div class="story-detail"><p>RPKI-valid routes cover 70.3% of routed prefixes, up from 54.0% a year earlier, with IPv4 addresses rising from 53.1% to 65.0%. Much of the jump came from China moving from 3.7% to 83.0% of its IPv4 addresses in valid routes, accounting for nearly 60% of the global gain. However, RPKI validates only the origin AS, not the path taken by the route, and cannot catch attackers who stay within published ROA constraints. Roughly 16.2% of IPv4 and 20.9% of IPv6 RPKI-covered routes have loose 'open windows'—ROAs broader than the routes announced, creating gaps exploitable by forged-origin hijacks. The August 2026 Hetzner incident demonstrated this: attackers exploited a loosely scoped ROA authorizing origination at /24 lengths within a /16 block, received RPKI-valid validation, and used the route to obtain a TLS certificate and serve malicious updates. Operators should publish ROAs for everything announced (three in ten routed prefixes remain not RPKI-valid), avoid setting maxLength (one in six covered IPv4 routes has a gap like Hetzner's), and verify ROAs are still present, as several operators including Saudi Telecom, SEACOM, and Orange Maroc have recently lost some of theirs.</p><a class="source-link" href="https://ipinfo.io/blog/rpki-protects-70-internet-routes" target="_blank" rel="noopener">Read the original at ipinfo.io ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="Routing &amp; Internet" data-title="DNS root KSK rollover executed October 11: Validating resolvers failing if missing key tag 38696" id="s-5">
+          <h3><a href="https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready" target="_blank" rel="noopener" title="DNS root KSK rollover executed October 11: Validating resolvers failing if missing key tag 38696">DNS root key rollover breaks resolvers missing new anchor</a></h3>
+          <p class="meta"><b>Akamai</b> · Oct 11, 2026 · <span class="stype">Industry news</span></p>
+          <p class="summary">On October 11, 2026, the DNS root zone switched to signing with KSK-2024 (key tag 38696), replacing KSK-2017. Any validating resolver lacking this trust anchor fails to resolve both signed and unsigned domains, causing widespread SERVFAIL errors within 48 hours.</p>
+          <p class="why-line"><span class="label">Why it matters</span> RFC 5011 automated updates often fail on offline systems, read-only key stores, uninventoried embedded appliances, or outdated golden images; operators must verify key tag 38696 is in resolver config files and active in memory before the rollover takes effect.</p>
+          <div class="story-detail"><p>On October 11, 2026, the DNS root zone stopped signing with KSK-2017 (key tag 20326, active since 2018) and switched to KSK-2024 (key tag 38696), only the second KSK change in DNSSEC history. Resolvers can cache the old key set for up to 48 hours, so failures manifest within two days as the cache expires. KSK-2024 was published in the root zone on January 11, 2025, giving resolvers 21 months to pick it up either automatically through RFC 5011 (watching the root for new keys and trusting one after 30 days residence) or through software updates. Both keys use RSA/SHA-256, so no algorithm change occurred. Operators running DNSSEC-validating resolvers must ensure their systems trust key 38696 beforehand; a missing trust anchor breaks DNS broadly across an entire resolver, while zone-specific DNSSEC issues affect individual domains. Organizations should verify their baseline DNS health before October 11 to rapidly distinguish local configuration issues from root key rollover outages during troubleshooting.</p><a class="source-link" href="https://www.akamai.com/blog/security/october-2026-root-ksk-rollover-dns-ready" target="_blank" rel="noopener">Read the original at akamai.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="Network Security">
+      <div class="section-head"><h2><a href="/topics/security/">Network Security</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Network Security" data-title="Palo Alto Networks patches flaw in firewall software already being exploited" id="s-6">
+          <h3><a href="https://itdaily.com/news/security/palo-alto-cve-2026-0322/" target="_blank" rel="noopener" title="Palo Alto Networks patches flaw in firewall software already being exploited">Palo Alto patches PAN-OS root flaw under active exploitation</a></h3>
+          <p class="meta"><b>ITdaily</b> · Oct 15, 2026 · <span class="stype">Industry news</span></p>
+          <p class="summary">Palo Alto Networks disclosed CVE-2026-0322, a critical vulnerability in PAN-OS management interface allowing authenticated attackers with network access to execute arbitrary code with root privileges. CISA added it to Known Exploited Vulnerabilities catalog with evidence of active exploitation.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Network ops must prioritize patching PA-Series, VM-Series firewalls and Panorama immediately; Cloud NGFW and Prisma Access unaffected; limited but real exploit activity observed.</p>
+          <div class="story-detail"><p>Palo Alto Networks disclosed CVE-2026-0322 in PAN-OS on October 14, with a CVSS score of 8.6 and high severity rating. The flaw allows an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall, affecting PA-Series and VM-Series firewalls and Panorama. Very limited exploitation targeting the management interface has been observed, with three IP addresses tied to exploit attempts. CISA added CVE-2026-0322 to its Known Exploited Vulnerabilities catalog and gave federal civilian agencies three days until October 17, 2026 to remediate. Unlike the GlobalProtect VPN bypass vulnerabilities, this requires authentication but affects the most critical management plane. Organizations with internet-exposed management interfaces or those allowing authenticated remote access face immediate risk.</p><a class="source-link" href="https://itdaily.com/news/security/palo-alto-cve-2026-0322/" target="_blank" rel="noopener">Read the original at itdaily.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="Network Security" data-title="FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials" id="s-7">
+          <h3><a href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" target="_blank" rel="noopener" title="FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials">FBI says FortiBleed has harvested 86,644 Fortinet credentials</a></h3>
+          <p class="meta"><b>The Hacker News</b> · Oct 9, 2026 · <span class="stype">Industry news</span></p>
+          <p class="summary">FBI and Secret Service issued a joint advisory warning that the FortiBleed credential harvesting campaign remains active, with over 86,644 compromised FortiGate firewall and SSL VPN credentials verified across 194 countries. The campaign exploits reused credentials and legacy SHA-256 password storage for GPU-accelerated cracking.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Active threat to internet-facing FortiGate appliances with verified credential databases in use by organized actors; requires immediate detection of unauthorized access and credential rotation across all FortiOS versions.</p>
+          <div class="story-detail"><p>The FBI and Secret Service warned that the FortiBleed credential harvesting campaign remains an active threat aimed at internet-facing Fortinet FortiGate firewalls and SSL VPN gateways. The campaign exploits reused or leaked credentials and legacy SHA-256 password storage, enabling threat actors to harvest and crack authentication data at scale, with attackers continuing to scan internet-exposed Fortinet firewalls using previously obtained compromised credentials. The Russian-speaking operation is estimated to have netted more than 86,644 working device credentials spanning 194 countries as of June 19, 2026. In some cases, criminals are creating their own administrator accounts and changing or deleting legitimate accounts, leaving companies unable to access their own devices. Unlike zero-day vulnerabilities, FortiBleed relies on credential stuffing against exposed management interfaces and weak password practices. Network defenders must audit FortiGate access logs for anomalous logins, implement IP-based access restrictions, and force credential rotation immediately.</p><a class="source-link" href="https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html" target="_blank" rel="noopener">Read the original at thehackernews.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="Agentic AI &amp; MCP">
+      <div class="section-head"><h2><a href="/topics/agentic-ai/">Agentic AI &amp; MCP</a></h2><span class="label">1 story</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Agentic AI &amp; MCP" data-title="NetBrain Agentic NetOps Platform Webinar: R13 Release" id="s-8">
+          <h3><a href="https://exchange.netbrain.com/events/netbrain-agentic-netops-platform-webinar-58" target="_blank" rel="noopener" title="NetBrain Agentic NetOps Platform Webinar: R13 Release">NetBrain R13 adds agent team and MCP server</a></h3>
+          <p class="meta"><b>NetBrain Exchange Community</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">NetBrain R13 release webinar on October 13, 2026 covering the Agent Team (Diagnosis, Assessment, Change, Companion agents) working with the NetOps Harness and MCP Server. Demonstrates end-to-end network change validation and CVE exposure detection.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Shows production agentic NetOps with MCP as the interop layer; Assessment Agent identifies security exposure proactively, Change Agent validates modifications before execution.</p>
+          <div class="story-detail"><p>The October 13 webinar announced the NetBrain R13 release, available in early October 2026 to all customers. The core innovation is the Agent Team + NetOps Harness architecture: a unified platform where Diagnosis, Assessment, Change, and Companion agents operate on live network context with built-in guardrails. The Assessment Agent uses the Golden Assessment Library—pre-built network automations derived from NetBrain's customer base—to surface CVE exposure and configuration drift before they become incidents. The Change Agent plans, validates, and documents changes end-to-end, reducing change execution and validation effort by 85% according to internal data. Critical for operations teams: MCP Server exposes NetBrain network intelligence (topology, path calculations, automation tools) to external agents from AI SRE platforms (Resolve AI, Azure SRE Agent), AIOps (BigPanda), ITSM (ServiceNow), and custom agents built with Claude or OpenAI models. This bi-directional MCP integration positions the NetOps Harness as the network context layer in broader IT Ops ecosystems—agents from incident management, SRE, and ITSM can query live network state and trigger network-aware workflows without reimplementing network topology logic.</p><a class="source-link" href="https://exchange.netbrain.com/events/netbrain-agentic-netops-platform-webinar-58" target="_blank" rel="noopener">Read the original at exchange.netbrain.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="Research, Standards &amp; Industry">
+      <div class="section-head"><h2><a href="/topics/research/">Research, Standards &amp; Industry</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="Research, Standards &amp; Industry" data-title="OpenTelemetry Java Agent 3.0 Release Candidate (v2.32.0) and Collector v0.160.0 with Process Metrics" id="s-9">
+          <h3><a href="https://opentelemetry.io/blog/2026/" target="_blank" rel="noopener" title="OpenTelemetry Java Agent 3.0 Release Candidate (v2.32.0) and Collector v0.160.0 with Process Metrics">OpenTelemetry Java agent 3.0 reaches release candidate</a></h3>
+          <p class="meta"><b>OpenTelemetry Blog</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">OpenTelemetry Java agent v2.32.0 released as RC for 3.0 targeting October 2026; Collector Contrib v0.160.0 adds RC process semantic conventions metrics to hostmetrics receiver, advancing stable v1 release candidate maturity.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Java shops can preview OTel 3.0 behavior before GA; ops teams gain standardized process-level metrics (CPU, memory, state, timing) for infrastructure observability, unlocking AIOps anomaly detection on system resource consumption.</p>
+          <div class="story-detail"><p>The OpenTelemetry Java agent 2.32.0 serves as the release candidate for 3.0, allowing early adopters to validate changes before the final GA release targeted for October 2026. Alongside this, OpenTelemetry Collector Contrib v0.160.0 introduces release candidate support for process semantic conventions metrics in the hostmetrics receiver's process scraper, marking the final stage before stable v1 status. These metrics include process status, CPU usage, memory footprint, and lifecycle timestamps—critical signals for AIOps systems to correlate application behavior with host-level resource contention. For SRE and network operations teams, this enables unified observability pipelines where process metrics (e.g., network daemon CPU burn, DNS resolver memory growth) flow through the same Collector infrastructure as network telemetry, allowing correlation-based root cause analysis. The semantic conventions standardization ensures metrics naming and cardinality consistency across vendors and languages, reducing the friction of multi-language observability integration common in cloud-native networks.</p><a class="source-link" href="https://opentelemetry.io/blog/2026/" target="_blank" rel="noopener">Read the original at opentelemetry.io ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="Research, Standards &amp; Industry" data-title="draft-ietf-spring-resource-aware-segments (v18, expires Nov 16, 2026): Resource-Aware Segment Routing for Network Resource Partitions" id="s-10">
+          <h3><a href="https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments" target="_blank" rel="noopener" title="draft-ietf-spring-resource-aware-segments (v18, expires Nov 16, 2026): Resource-Aware Segment Routing for Network Resource Partitions">IETF draft ties segment routing SIDs to guaranteed resources</a></h3>
+          <p class="meta"><b>IETF Datatracker</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">Active IETF draft (v18, May 2026 publication, expires November 2026) describing mechanisms to allocate network resources (bandwidth, compute, memory) to Segment Routing Identifiers (SIDs) for both SR-MPLS and SRv6, enabling resource-guaranteed policies and Network Resource Partitions.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Network operators can now engineer SR policies with explicit resource reservations without RSVP-TE overhead, enabling deterministic slicing for 5G/6G enhanced VPN services and compute-aware routing without per-path state explosion.</p>
+          <div class="story-detail"><p>The draft-ietf-spring-resource-aware-segments working group document (v18, expires Nov 16, 2026) defines how to associate network resource subsets (bandwidth pools, dedicated processor time, memory buffers) with individual SIDs or groups of SIDs. This extends SR beyond pure topology steering to include resource-aware path selection: a resource-aware SID retains its forwarding semantics but also identifies the set of underlay resources reserved for packets using that SID. The mechanism supports centralized controller-driven resource planning based on service traffic matrices and performance requirements, addressing a long-standing gap where SR policies lacked the resource guarantee capabilities of RSVP-TE. Implementations are already in production on Huawei ATN9XX and CX600 routers. For network architects, this enables declarative service slicing: define an enhanced VPN intent (&quot;latency &lt; 10ms, throughput &gt; 10Gbps&quot;) and map it to resource-aware SR policies, with the controller allocating appropriate SID pools and advertising them via BGP-LS. The draft remains active; standards track completion is expected soon, making this practical for near-term deployment in tier-1 carrier and cloud networks planning deterministic slices.</p><a class="source-link" href="https://datatracker.ietf.org/doc/html/draft-ietf-spring-resource-aware-segments" target="_blank" rel="noopener">Read the original at datatracker.ietf.org ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="AI Model Providers">
+      <div class="section-head"><h2><a href="/topics/ai-models/">AI Model Providers</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="AI Model Providers" data-title="Google Launches Gemini 4 Argon with 1M token context and physical reasoning for robotics" id="s-11">
+          <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/" target="_blank" rel="noopener" title="Google Launches Gemini 4 Argon with 1M token context and physical reasoning for robotics">Google ships Gemini 4 Argon with 1M token context</a></h3>
+          <p class="meta"><b>Google Developers Blog</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">Gemini 4 Argon became globally available October 13, 2026, through the Gemini API with a 1.0M token context window and up to 1M output tokens, designed for complex coding, agentic tasks, mathematics, science, and cybersecurity workflows. Introductory pricing is $2 per million input tokens and $10 per million output tokens through November 30, then $4/$20.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Gemini 4 Argon is optimized for long-horizon workflows requiring deep reasoning and structural precision, including code migrations and infrastructure automation, making it relevant for AIOps and complex system design.</p>
+          <div class="story-detail"><p>Gemini 4 Argon marks a step change in physical understanding, code generation, and visual-semantic reasoning, unlocking new workflows across the robotics stack and developer tooling. The rollout coincided with broader Gemini 4 Argon integration into Android Studio's developer environments on October 13, 2026. Developers can access Argon through Google AI Studio, the Gemini API, and Google Antigravity to build applications leveraging simulation tools like MuJoCo and code-as-policies for seamless transitions from real-world data to physically verified control and self-improvement workflows. Google made it globally available on October 13, 2026 at 16:00 UTC with Pro and Ultra tier subscribers gaining immediate access in the Gemini app. The aggressive introductory pricing and broad API availability position this as a direct competitor for infrastructure automation coding tasks, particularly relevant for teams evaluating reasoning models for complex orchestration and policy generation in robotics and physical systems.</p><a class="source-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/" target="_blank" rel="noopener">Read the original at blog.google ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="AI Model Providers" data-title="xAI releases Grok Voice 3.0 speech-to-speech model ranking first on benchmarks at $0.08/minute" id="s-12">
+          <h3><a href="https://x.ai/news" target="_blank" rel="noopener" title="xAI releases Grok Voice 3.0 speech-to-speech model ranking first on benchmarks at $0.08/minute">xAI's Grok Voice 3.0 tops speech-to-speech benchmark</a></h3>
+          <p class="meta"><b>xAI</b> · Oct 14, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">xAI announced Grok Voice 3.0 on October 14, 2026, a speech-to-speech model available in the Voice Agent API at $0.08 per minute with sub-one-second latency. Artificial Analysis ranks it first on the Speech-to-Speech Index at 86.9, ahead of GPT-Live-1 at 83.2 and Gemini 3.8 Live at 82.6.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Grok Voice 3.0 powers millions of conversations daily in Tesla and SpaceX infrastructure, handling 20,000 Starlink support calls daily with 70% fully automated, critical for evaluating production voice-driven AIOps automation and agent infrastructure.</p>
+          <div class="story-detail"><p>xAI released Grok Voice 3.0 on October 14, 2026, eleven weeks after Grok Voice 2.0; the grok-voice-latest alias immediately moved to 3.0 with Grok Voice 2.0 marked deprecated. Artificial Analysis testing dated October 13 reported 98.5% on Big Bench Audio speech reasoning, 94.8% task success rate, and 97.0% on Full Duplex Bench for natural turn-taking and interruption handling. Pricing remained unchanged at $0.08 per minute. Critical operational detail: users running the grok-voice-latest alias received automatic model upgrades without code deployment on October 14, creating a silent production behavior change for existing integrations. The WebSocket endpoint, session parameters, and events remained stable. The production workload scale (Tesla, SpaceX, Starlink) and unchanged pricing make this highly relevant for operators evaluating voice-driven automation at scale in production SRE workflows.</p><a class="source-link" href="https://x.ai/news" target="_blank" rel="noopener">Read the original at x.ai ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    <section class="paper-section" data-topic="AI Industry &amp; Policy">
+      <div class="section-head"><h2><a href="/topics/industry-policy/">AI Industry &amp; Policy</a></h2><span class="label">2 stories</span></div>
+      <div class="story-grid">
+        <article class="story" data-topic="AI Industry &amp; Policy" data-title="Middle powers are losing the AI race to Nvidia, Anthropic, and Big Tech" id="s-13">
+          <h3><a href="https://fortune.com/2026/10/14/middle-powers-private-sector-geopolitics/" target="_blank" rel="noopener" title="Middle powers are losing the AI race to Nvidia, Anthropic, and Big Tech">US and China models leave middle powers behind</a></h3>
+          <p class="meta"><b>Fortune</b> · Oct 14, 2026 · <span class="stype">Analysis</span></p>
+          <p class="summary">US and China dominate AI model development with 59 and 35 notable models respectively through 2025; only South Korea has multiple notable models among other nations. Private sector actors including Nvidia and Anthropic have become geopolitical actors, marginalizing middle powers from the AI field.</p>
+          <p class="why-line"><span class="label">Why it matters</span> For enterprise teams planning AI infrastructure investments, concentration of development and resources in US/China firms shapes vendor ecosystem and supply-chain dependencies for mission-critical workloads.</p>
+          <div class="story-detail"><p>Stanford University's 2026 AI Index reveals stark concentration in model development: the U.S. led with 59 notable AI models (by citation rate, compute costs, and usage levels) while China produced 35; South Korea was the only other country with multiple notable models, at eight. The analysis highlights that private sector actors—particularly Nvidia and large AI labs—have stepped into roles traditionally held by national intelligence and defense agencies, making private companies de facto geopolitical actors. For middle powers, this concentration represents a structural disadvantage: they play only tangentially in the AI field despite its expanding global influence. The implication for enterprise infrastructure teams is significant: AI capability, model availability, and supply-chain dependencies are increasingly controlled by a handful of jurisdictions and private actors, affecting choices around cloud providers, chip sourcing, and model selection.</p><a class="source-link" href="https://fortune.com/2026/10/14/middle-powers-private-sector-geopolitics/" target="_blank" rel="noopener">Read the original at fortune.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+        <article class="story" data-topic="AI Industry &amp; Policy" data-title="Canada announces $500M additional AI funding via Regional AI Initiative" id="s-14">
+          <h3><a href="https://www.canadianmanufacturing.com/manufacturing/canada-and-the-united-kingdom-renew-their-partnership-on-ai-security-322089/" target="_blank" rel="noopener" title="Canada announces $500M additional AI funding via Regional AI Initiative">Canada adds $500M to regional AI initiative</a></h3>
+          <p class="meta"><b>Canadian Manufacturing</b> · Oct 13, 2026 · <span class="stype">Primary source</span></p>
+          <p class="summary">Canada's Minister of AI announced $500M in additional federal funding over five years for the Regional Artificial Intelligence Initiative, bringing total federal AI funding to $700M. The investment supports the National Artificial Intelligence Strategy announced in June 2026 to strengthen AI capabilities and ensure responsible adoption.</p>
+          <p class="why-line"><span class="label">Why it matters</span> Signals how governments are operationalizing AI adoption strategies with concrete funding; relevant for enterprises planning Canadian operations and understanding government incentives for regional AI deployment.</p>
+          <div class="story-detail"><p>On October 13, Minister Evan Solomon announced $500M in new funding, expanding total federal support for the Regional AI Initiative to $700M. This initiative is part of Canada's broader National Artificial Intelligence Strategy (announced June 2026), designed to strengthen domestic AI capabilities and ensure responsible, country-wide AI adoption. The timing and scale suggest a shift from exploratory AI pilots to structured, government-backed scaling efforts. For enterprises with Canadian operations or partnerships, this investment structure indicates growing government coordination with private sector adoption targets and regulatory frameworks. The initiative likely includes regulatory sandboxes and incentive structures that affect how organizations deploy AI tools in regulated sectors (energy, healthcare, finance) where provincial oversight intersects with federal strategy.</p><a class="source-link" href="https://www.canadianmanufacturing.com/manufacturing/canada-and-the-united-kingdom-renew-their-partnership-on-ai-security-322089/" target="_blank" rel="noopener">Read the original at canadianmanufacturing.com ↗</a></div>
+          <button type="button" class="more" aria-expanded="false" onclick="toggleDetail(this)">Full briefing ↓</button>
+        </article>
+      </div>
+    </section>
+    </div>
+
+    <div class="no-results" id="noResults">
+      Nothing in today's briefing matches that. <button onclick="resetFilter()">Clear search</button>
+    </div>
+
+    <section class="archive-results" id="archiveResults" hidden>
+      <div class="section-head"><h2>From past editions</h2><span class="label" id="archiveLabel"></span></div>
+      <ol class="archive-list" id="archiveGrid"></ol>
+    </section>
+
+    
+
+    
+  <section class="paper-section home-extra" id="vendor-radar">
+    <div class="section-head"><h2><a href="/vendors/">Vendor Radar</a></h2><span class="label">Last 7 days · arrows compare with the 7 before</span></div>
+    <div class="intel-grid">
+      <div>
+        <h3 class="label">Most active</h3>
+        <ul class="tally">
+          <li><a class="tally-name" href="/vendors/cisco/">Cisco</a><span class="dots"></span><span class="n">11</span><span class="trend-slot"><span class="trend up" title="Up from 9 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 9</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/broadcom/">Broadcom</a><span class="dots"></span><span class="n">11</span><span class="trend-slot"><span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/nvidia/">NVIDIA</a><span class="dots"></span><span class="n">8</span><span class="trend-slot"><span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/palo-alto/">Palo Alto</a><span class="dots"></span><span class="n">5</span><span class="trend-slot"><span class="trend up" title="Up from 1 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 1</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/netbox-labs/">NetBox Labs</a><span class="dots"></span><span class="n">4</span><span class="trend-slot"><span class="trend up" title="Up from 3 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 3</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/arista/">Arista</a><span class="dots"></span><span class="n">4</span><span class="trend-slot"><span class="trend up" title="Up from 2 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 2</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/logicmonitor/">LogicMonitor</a><span class="dots"></span><span class="n">4</span><span class="trend-slot"><span class="trend up" title="Up from 1 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 1</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/cloudflare/">Cloudflare</a><span class="dots"></span><span class="n">2</span><span class="trend-slot"><span class="trend down" title="Down from 3 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 3</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/fortinet/">Fortinet</a><span class="dots"></span><span class="n">2</span><span class="trend-slot"><span class="trend up" title="Up from 1 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 1</span></span></span></li>
+          <li><a class="tally-name" href="/vendors/selector-ai/">Selector</a><span class="dots"></span><span class="n">2</span><span class="trend-slot"><span class="trend up" title="Up from 0 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 0</span></span></span></li>
+        </ul>
+        <p class="more-link label"><a href="/vendors/">Every tracked vendor →</a></p>
+      </div>
+      <div>
+        <h3 class="label">In today's briefing</h3>
+        
+        <div class="company">
+          <div class="company-name"><a href="/vendors/palo-alto/">Palo Alto</a><span class="n">1 story</span></div>
+          <ul><li><a href="#s-6">Palo Alto patches PAN-OS root flaw under active exploitation</a></li></ul>
+        </div>
+        <div class="company">
+          <div class="company-name"><a href="/vendors/nvidia/">NVIDIA</a><span class="n">1 story</span></div>
+          <ul><li><a href="#s-13">US and China models leave middle powers behind</a></li></ul>
+        </div>
+        <div class="company">
+          <div class="company-name"><a href="/vendors/broadcom/">Broadcom</a><span class="n">1 story</span></div>
+          <ul><li><a href="#s-2">Micas launches three 102.4T open Ethernet switches on Tomahawk 6</a></li></ul>
+        </div>
+        <div class="company">
+          <div class="company-name"><a href="/vendors/fortinet/">Fortinet</a><span class="n">1 story</span></div>
+          <ul><li><a href="#s-7">FBI says FortiBleed has harvested 86,644 Fortinet credentials</a></li></ul>
+        </div>
+        <div class="company">
+          <div class="company-name"><a href="/vendors/netbrain/">NetBrain</a><span class="n">1 story</span></div>
+          <ul><li><a href="#s-8">NetBrain R13 adds agent team and MCP server</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper-section home-extra" id="what-changed">
+    <div class="section-head"><h2><a href="/week.html">What changed this week</a></h2><span class="label">Last 7 days vs the 7 before</span></div>
+    <div class="intel-grid">
+      <div>
+        <h3 class="label">Biggest moves</h3>
+        <ul class="changes">
+          <li><span class="trend up" title="Up from 7 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 7</span></span> <a href="/topics/ai-infrastructure/">Data Center &amp; AI Networking</a> coverage rose to 16 stories, from 7</li>
+          <li><span class="trend up" title="Up from 3 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 3</span></span> <a href="/topics/aiops/">AIOps &amp; Network Observability</a> coverage rose to 11 stories, from 3</li>
+          <li><span class="trend up" title="Up from 7 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 7</span></span> <a href="/topics/security/">Network Security</a> coverage rose to 14 stories, from 7</li>
+          <li><span class="trend up" title="Up from 4 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 4</span></span> <a href="/vendors/broadcom/">Broadcom</a> rose to 11 stories, from 4</li>
+          <li><span class="trend down" title="Down from 10 the previous 7 days"><span aria-hidden="true">↓</span><span class="sr-only">down from 10</span></span> <a href="/topics/telco/">Telco &amp; Cable AI</a> coverage fell to 4 stories, from 10</li>
+        </ul>
+        <p class="more-link label"><a href="/week.html">The week in network intelligence →</a></p>
+      </div>
+      <div>
+        <h3 class="label">Trending topics</h3>
+        <ul class="tally">
+          <li><a class="tally-name" href="/topics/ai-infrastructure/">DC networking</a><span class="dots"></span><span class="n">16</span><span class="trend-slot"><span class="trend up" title="Up from 7 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 7</span></span></span></li>
+          <li><a class="tally-name" href="/topics/security/">Security</a><span class="dots"></span><span class="n">14</span><span class="trend-slot"><span class="trend up" title="Up from 7 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 7</span></span></span></li>
+          <li><a class="tally-name" href="/topics/agentic-ai/">Agentic AI</a><span class="dots"></span><span class="n">13</span><span class="trend-slot"><span class="trend up" title="Up from 12 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 12</span></span></span></li>
+          <li><a class="tally-name" href="/topics/routing-internet/">Routing</a><span class="dots"></span><span class="n">11</span><span class="trend-slot"></span></li>
+          <li><a class="tally-name" href="/topics/aiops/">AIOps</a><span class="dots"></span><span class="n">11</span><span class="trend-slot"><span class="trend up" title="Up from 3 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 3</span></span></span></li>
+          <li><a class="tally-name" href="/topics/industry-policy/">Industry and policy</a><span class="dots"></span><span class="n">10</span><span class="trend-slot"></span></li>
+          <li><a class="tally-name" href="/topics/research/">Research</a><span class="dots"></span><span class="n">9</span><span class="trend-slot"><span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></span></li>
+          <li><a class="tally-name" href="/topics/network-automation/">Automation</a><span class="dots"></span><span class="n">8</span><span class="trend-slot"><span class="trend up" title="Up from 6 the previous 7 days"><span aria-hidden="true">↑</span><span class="sr-only">up from 6</span></span></span></li>
+          <li><a class="tally-name" href="/topics/ai-models/">Models</a><span class="dots"></span><span class="n">7</span><span class="trend-slot"></span></li>
+        </ul>
+        <p class="terms"><span class="hot">agent</span> · automation · MCP · observability · OpenTelemetry · Agentic AI · RAG · Kubernetes · inference</p>
+      </div>
+    </div>
+  </section>
+
+    
+  <section class="cta home-extra" aria-labelledby="cta-head">
+    <div>
+      <h2 id="cta-head">Get the daily briefing</h2>
+      <p>Today's 3 things that matter and every story with why it matters, in your inbox each morning. Free, and you can unsubscribe at any time. Prefer a reader? <a href="/feed.xml">Follow the RSS feed</a>.</p>
+    </div>
+    <form class="signup" action="https://buttondown.com/api/emails/embed-subscribe/pvo" method="post" target="_blank">
+        <label class="sr-only" for="signup-cta">Email address</label>
+        <input type="email" name="email" id="signup-cta" placeholder="you@example.com" required autocomplete="email">
+        <input type="hidden" name="embed" value="1">
+        <button type="submit" class="label">Subscribe</button>
+      </form>
+  </section>
+  </div>
+</main>
+
+
+<footer class="wrap" id="about">
+<div class="colophon">
+  <div>
+    <h2>About Digital Plumber</h2>
+    <p>An independent daily intelligence briefing for network and IT operations practitioners. Each morning an AI editor searches the web, selects the most substantive developments, and writes up what happened and why it matters. It's fully automated with no human review before publishing, so verify before acting on anything here.</p>
+    <p><a href="/about.html">How stories are selected</a> · <a href="mailto:hello@digitalplumber.ca?subject=Correction">Report a correction</a></p>
+  </div>
+  <nav class="label" aria-label="More">
+    <a href="/week.html">This week</a>
+    <a href="/vendors/">Vendor Radar</a>
+    <a href="/topics/">Topics</a>
+    <a href="/archive/">Archive</a>
+    <a href="/about.html">Methodology</a>
+    <a href="/feed.xml">RSS feed</a>
+  </nav>
+</div>
+</footer>
+
+<script>
+  // ── TORONTO SPORTS EAR ──
+  const TORONTO_TEAMS = [
+    { league: 'hockey/nhl',     abbr: 'TOR', name: 'Leafs' },
+    { league: 'baseball/mlb',   abbr: 'TOR', name: 'Jays' },
+    { league: 'basketball/nba', abbr: 'TOR', name: 'Raptors' },
+  ];
+
+  async function fetchTeamScore({ league, abbr, name }) {
+    try {
+      const data = await (await fetch(`https://site.api.espn.com/apis/site/v2/sports/${league}/scoreboard`)).json();
+      const game = (data.events || []).find(e =>
+        e.competitions?.[0]?.competitors?.some(c => c.team?.abbreviation === abbr)
+      );
+      if (!game) return await fetchNextGame({ league, abbr, name });
+      return gameResult(game, { abbr, name });
+    } catch {
+      return { name, offseason: true };
+    }
+  }
+
+  // No game on today's scoreboard: show the next scheduled game, checking the
+  // regular season too in case the current schedule (e.g. preseason) is done.
+  async function fetchNextGame({ league, abbr, name }) {
+    const base = `https://site.api.espn.com/apis/site/v2/sports/${league}/teams/${abbr.toLowerCase()}/schedule`;
+    for (const url of [base, `${base}?seasontype=2`]) {
+      try {
+        const data = await (await fetch(url)).json();
+        const next = (data.events || [])
+          .filter(e => Date.parse(e.date) > Date.now() && !e.competitions?.[0]?.status?.type?.completed)
+          .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
+        if (next) return gameResult(next, { abbr, name });
+      } catch {}
+    }
+    return { name, offseason: true };
+  }
+
+  function gameResult(game, { abbr, name }) {
+    const comp = game.competitions[0];
+    const tor = comp.competitors.find(c => c.team.abbreviation === abbr);
+    const opp = comp.competitors.find(c => c.team.abbreviation !== abbr);
+    const status = comp.status.type;
+    // Scoreboard scores are strings; schedule scores are { displayValue } objects
+    return {
+      name,
+      offseason: false,
+      torScore: tor.score?.displayValue ?? tor.score,
+      oppScore: opp.score?.displayValue ?? opp.score,
+      oppAbbr: opp.team.abbreviation,
+      isHome: tor.homeAway === 'home',
+      statusName: status.name,
+      statusShort: status.shortDetail,
+    };
+  }
+
+  function scoreText({ name, offseason, torScore, oppScore, oppAbbr, isHome, statusName, statusShort }) {
+    if (offseason) return `<b>${name}</b> off season`;
+    const live = statusName === 'STATUS_IN_PROGRESS';
+    const final = statusName === 'STATUS_FINAL';
+    const vs = isHome ? 'vs' : 'at';
+    if (live || final) {
+      return `<b>${name}</b> ${torScore}–${oppScore} ${vs} ${oppAbbr} · ${live ? '<span class="ear-live">live</span>' : 'final'}`;
+    }
+    return `<b>${name}</b> ${vs} ${oppAbbr} · ${statusShort}`;
+  }
+
+  async function loadScores() {
+    const ear = document.getElementById('sportsEar');
+    const results = await Promise.all(TORONTO_TEAMS.map(fetchTeamScore));
+    ear.innerHTML = '<span class="label">Toronto</span>' +
+      results.map(r => `<span class="ear-item">${scoreText(r)}</span>`).join('');
+  }
+
+  loadScores();
+  setInterval(loadScores, 60000);
+
+  // ── STICKY TOPIC BAR: show the small nameplate once the masthead scrolls away ──
+  (function () {
+    const bar = document.getElementById('sectionsBar');
+    const masthead = document.getElementById('masthead');
+    if (!bar || !masthead) return;
+    new IntersectionObserver(([e]) => bar.classList.toggle('stuck', !e.isIntersecting)).observe(masthead);
+  })();
+
+  // ── ⌘K / Ctrl+K SEARCH SHORTCUT ──
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      focusSearch();
+    }
+  });
+
+  function focusSearch() {
+    const input = document.getElementById('searchInput');
+    input.focus();
+    input.select();
+  }
+
+  // ── TOPIC FILTERS AND SEARCH ──
+  let activeTopic = 'all';
+  let searchIndexCache = null;
+  const ARCHIVE_RESULT_LIMIT = 50;
+
+  async function loadSearchIndex() {
+    if (searchIndexCache) return searchIndexCache;
+    try {
+      const res = await fetch('/archives/search-index.json');
+      if (!res.ok) return [];
+      searchIndexCache = await res.json();
+    } catch { searchIndexCache = []; }
+    return searchIndexCache;
+  }
+
+  // Bring the briefing into view when a filter hides what's above it
+  function scrollToBriefing() {
+    const head = document.getElementById('briefing');
+    const top = head.getBoundingClientRect().top + window.scrollY;
+    if (window.scrollY > top) window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  function setActiveLink(el) {
+    document.querySelectorAll('.section-link').forEach(b => b.classList.toggle('active', b === el));
+  }
+
+  function filterTopic(el, topic) {
+    activeTopic = topic;
+    setActiveLink(el);
+    document.getElementById('searchInput').value = '';
+    applyFilters();
+    scrollToBriefing();
+  }
+
+  function filterSearch(query) {
+    if (query.trim()) {
+      activeTopic = 'all';
+      setActiveLink(null);
+    } else {
+      setActiveLink(document.querySelector('.section-link'));
+    }
+    applyFilters(query.trim().toLowerCase());
+  }
+
+  function applyFilters(searchQuery) {
+    const filtering = activeTopic !== 'all' || !!searchQuery;
+    let visibleCount = 0;
+
+    document.querySelectorAll('.story').forEach(story => {
+      const matchesTopic = activeTopic === 'all' || story.dataset.topic === activeTopic;
+      const matchesSearch = !searchQuery || `${story.textContent} ${story.dataset.title || ''}`.toLowerCase().includes(searchQuery);
+      const visible = matchesTopic && matchesSearch;
+      story.hidden = !visible;
+      if (visible) visibleCount++;
+    });
+
+    document.querySelectorAll('.paper-section[data-topic]').forEach(sec => {
+      sec.hidden = !sec.querySelector('.story:not([hidden])');
+    });
+    document.querySelectorAll('.home-extra, #section-listening').forEach(el => { el.hidden = filtering; });
+
+    const noResults = document.getElementById('noResults');
+    noResults.classList.toggle('visible', filtering && visibleCount === 0);
+
+    const archiveSection = document.getElementById('archiveResults');
+    const archiveGrid = document.getElementById('archiveGrid');
+    if (!searchQuery) {
+      archiveSection.hidden = true;
+      archiveGrid.innerHTML = '';
+      return;
+    }
+    loadSearchIndex().then(index => {
+      const todayDate = window.__buildDate;
+      const hits = index.filter(a => {
+        if (a.date === todayDate) return false;
+        return [a.title, a.headline, a.summary, a.why, a.source, a.topic, ...(a.tags || [])].join(' ').toLowerCase().includes(searchQuery);
+      });
+      // Ignore results from a search the user has since changed
+      if (document.getElementById('searchInput').value.trim().toLowerCase() !== searchQuery) return;
+      if (hits.length === 0) {
+        archiveSection.hidden = true;
+        archiveGrid.innerHTML = '';
+        return;
+      }
+      if (visibleCount === 0) noResults.classList.remove('visible');
+      const shown = hits.slice(0, ARCHIVE_RESULT_LIMIT);
+      document.getElementById('archiveLabel').textContent = hits.length > shown.length
+        ? `${shown.length} of ${hits.length} matches · refine to see more`
+        : `${hits.length} ${hits.length === 1 ? 'match' : 'matches'}`;
+      archiveGrid.innerHTML = shown.map(a => `
+        <li>
+          <div class="when">${escHtml(a.dateLabel)}<br><a href="/archives/${escHtml(a.date)}.html">Read that edition</a></div>
+          <div>
+            <p class="kicker label">${escHtml(a.topic)}</p>
+            <h3><a href="${escHtml(a.url)}" target="_blank" rel="noopener" title="${escHtml(a.title)}">${escHtml(a.headline || a.title)}</a></h3>
+            <p>${escHtml(a.summary)}</p>
+            <p class="meta" style="margin-top:0.3rem">${escHtml(a.source)}</p>
+          </div>
+        </li>`).join('');
+      archiveSection.hidden = false;
+    });
+  }
+
+  function escHtml(str) {
+    return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // Expand / collapse a story's full briefing
+  function toggleDetail(btn) {
+    const story = btn.closest('.story');
+    const detail = story?.querySelector('.story-detail');
+    if (!detail) return;
+    const open = detail.classList.toggle('open');
+    story.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Show less ↑' : 'Full briefing ↓';
+  }
+
+  function resetFilter() {
+    activeTopic = 'all';
+    document.getElementById('searchInput').value = '';
+    setActiveLink(document.querySelector('.section-link'));
+    applyFilters();
+  }
+</script>
+</body>
+</html>
