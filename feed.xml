@@ -6,7 +6,135 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 17 Oct 2026 13:42:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 14:01:32 GMT</lastBuildDate>
+    <item>
+      <title>LogicMonitor pushes governed automation toward autonomous IT operations</title>
+      <link>https://siliconangle.com/2026/10/15/ai-driven-observability-logicmonitor-elevate-2026-logicmonitorelevate/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/10/15/ai-driven-observability-logicmonitor-elevate-2026-logicmonitorelevate/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;LogicMonitor Elevate 2026 conference revealed AI-driven observability strategy centered on governed automation and Edwin AI, advancing autonomous IT operations. Focus on unified context, AI-governed action, and trust as strategic pillars for enterprise observability transformation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Edwin AI and governed automation frameworks directly address NOC practitioners' need to balance autonomous remediation with human oversight in complex hybrid environments.&lt;/p&gt;&lt;p&gt;Source: SiliconAngle · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle calls for standards on AI data center grid interfaces</title>
+      <link>https://www.datacenterfrontier.com/machine-learning/article/55412214/ocp-2026-ai-infrastructure-moves-from-scaling-to-coordination</link>
+      <guid isPermaLink="true">https://www.datacenterfrontier.com/machine-learning/article/55412214/ocp-2026-ai-infrastructure-moves-from-scaling-to-coordination</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Oracle Cloud Infrastructure VP called for industry-wide standards governing how large-scale AI data centers interact with power grids at OCP Global Summit 2026, emphasizing grid-interface standardization as hyperscale loads create challenges for utilities and operators.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals infrastructure planners that grid interface standardization is becoming a practical requirement for multigigawatt AI data centers, shifting focus from internal cluster optimization to grid interaction protocols.&lt;/p&gt;&lt;p&gt;Source: Data Center Frontier · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>1.6T Ethernet NICs and co-packaged optics reach production</title>
+      <link>https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html</link>
+      <guid isPermaLink="true">https://www.thenetworkdna.com/2026/10/16t-ethernet-and-optical-networking.html</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;IEEE 802.3dj is targeted for completion in 2026, with 1.6T-capable NICs shipping and hyperscaler deployments of 1.6T spine switches beginning in production; co-packaged optics (CPO) entering production at lead customers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Early 1.6T switches and optics began appearing in 2025; broader deployment expected in 2026 as IEEE 802.3dj finalizes and 1.6T-capable NICs ship, with volume adoption in AI data centers from 2026 to 2027. Network teams should begin qualification processes now.&lt;/p&gt;&lt;p&gt;Source: The Network DNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Malicious bots shifted hosts within hours of Yandex outage</title>
+      <link>https://blog.cloudflare.com/yandex-outage/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/yandex-outage/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Following Ukrainian drone strikes on Yandex data centers (Oct 7–11), traffic from Yandex's two main ASNs collapsed 86–99%. Cloudflare's analysis shows Yandex Search traffic drop was legitimate search crawling, while malicious bot traffic from Yandex.Cloud migrated to alternative Russian hosting ASNs (Radist, Selectel) within hours, maintaining identical TLS fingerprints and request patterns.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates infrastructure resilience tactics for malicious automation and shows how ASN-level outages cause rapid traffic migration rather than cessation—critical for understanding BGP failover behavior and threat actor adaptability.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DDoS config change cut Inngest data center links for 44 minutes</title>
+      <link>https://www.inngest.com/blog/2026-10-15-incident-report-for-october-9-and-10-2026</link>
+      <guid isPermaLink="true">https://www.inngest.com/blog/2026-10-15-incident-report-for-october-9-and-10-2026</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;On October 9, a data center provider lost bidirectional network connectivity between data centers and to the internet; root cause was an error during a DDoS protection configuration change. Accounts in that facility could not reach the primary database, halting queue processing until connectivity returned 44 minutes later.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how BGP-adjacent DDoS mitigation configuration errors cascade into multi-site outages; relevant for operators managing active-active architectures and understanding failure modes in upstream provider misconfigurations.&lt;/p&gt;&lt;p&gt;Source: Inngest Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exploited PAN-OS root RCE added to CISA KEV catalog</title>
+      <link>https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Palo Alto Networks released patches for CVE-2026-0322, a PAN-OS remote code execution zero-day exploited in attacks. The flaw allows authenticated attackers with network access to execute arbitrary code with root privileges on firewall management interfaces. CISA added it to the KEV catalog on October 14 with an October 17 federal remediation deadline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Affects PA-Series, VM-Series firewalls and Panorama—your edge perimeter is actively under attack. Immediate patching of internet-facing appliances is critical for any organization running Palo Alto firewalls.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Juniper patches critical Junos J-Web and routing daemon flaws</title>
+      <link>https://securityonline.info/juniper-patches-critical-junos-os-vulnerabilities/</link>
+      <guid isPermaLink="true">https://securityonline.info/juniper-patches-critical-junos-os-vulnerabilities/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Juniper Networks published October 2026 security bulletins on October 14 resolving dozens of critical Junos OS vulnerabilities. CVE-2026-101983 (CVSS 9.8) is a stack buffer overflow in httpd allowing unauthenticated RCE via J-Web virtual domains. CVE-2026-101954 (CVSS 9.8) enables full device takeover when J-Web is enabled. Multiple additional 9.8 CVSS flaws allow malformed BGP or EVPN traffic to crash routing daemon or compromise Routing Engine.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multiple 9.8 CVSS flaws in core routing and web management interfaces demand immediate inventory and patching of internet-facing Juniper devices. Affects core and peering routers deployed by ISPs, telcos, and hyperscalers.&lt;/p&gt;&lt;p&gt;Source: SecurityOnline · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Agentic AI takes over SOC triage from SOAR playbooks</title>
+      <link>https://underdefense.com/blog/incident-response-automation-2/</link>
+      <guid isPermaLink="true">https://underdefense.com/blog/incident-response-automation-2/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Incident response automation in 2026 has moved beyond rigid SOAR runbooks into agentic AI that reasons across SIEM, EDR, and identity data in seconds. Human analysts validate roughly 30% of cases AI gets wrong. Identity-anomaly investigation (impossible travel, MFA fatigue) saves 15-30 minutes per case with human-in-the-loop approval gates on high-risk actions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SOC teams face 960 average alerts per day with 40% uninvestigated; automated response reduces mean time to contain by up to 33%. Essential capability for network ops as ransomware groups actively exploit firewall and VPN vulnerabilities.&lt;/p&gt;&lt;p&gt;Source: UnderDefense · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pluto leaves stealth with $42M to secure AI workspaces</title>
+      <link>https://www.ynetnews.com/business/article/hj6nn1asze</link>
+      <guid isPermaLink="true">https://www.ynetnews.com/business/article/hj6nn1asze</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Israeli cybersecurity startup Pluto emerged from stealth with $42M in total funding to address enterprise security challenges from AI tools and applications employees build. The platform provides visibility and control over AI assistants, autonomous agents, and third-party software components used across organizations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes a new category of AI-native security infrastructure that network and security teams must monitor as part of infrastructure risk posture alongside traditional network and endpoint controls.&lt;/p&gt;&lt;p&gt;Source: YNet News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xurrent ships AI SRE agent wired into Slack and MCP</title>
+      <link>https://www.xurrent.com/blog/ai-sre-guide</link>
+      <guid isPermaLink="true">https://www.xurrent.com/blog/ai-sre-guide</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;An AI SRE is an autonomous LLM-based software agent that detects, triages, investigates, and helps remediate production incidents, working alongside human site reliability engineers. Xurrent's Sera agent integrates into incident management platforms, Slack, and Claude through MCP.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners need guidance on governance, autonomy levels, and tool integration for agents to operate safely at scale—this guide covers what works now versus what remains experimental.&lt;/p&gt;&lt;p&gt;Source: Xurrent · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Researchers propose analog RF computing for edge AI inference</title>
+      <link>https://arxiv.org/abs/2610.20841</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2610.20841</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Paper proposes using base stations to multicast weight-encoded RF waveforms enabling edge devices to perform neural network matrix-vector multiplications through passive RF mixers with extremely low power and memory. Studies joint beamforming for simultaneous AI inference and conventional data transmission in MU-MIMO systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables telecom operators to provide AI inference services to edge devices without on-device compute capacity or cloud offloading latency. Shifts computational burden to physical layer and network infrastructure, changing how operators allocate spectrum and power.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF advances YANG model for Ethernet traffic engineering topology</title>
+      <link>https://datatracker.ietf.org/doc/draft-ietf-ccamp-eth-client-te-topo-yang/</link>
+      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-ccamp-eth-client-te-topo-yang/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;Latest revision of Ethernet TE topology YANG data model defines standardized definitions for Ethernet networks used as client-layer or transport networks. Version 12 submitted October 15, 2026, advancing toward IESG publication with November 2027 target.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables programmatic network topology management and controller-to-device communication for large-scale Ethernet infrastructure automation without vendor-specific APIs.&lt;/p&gt;&lt;p&gt;Source: IETF CCAMP Working Group · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NANOG 98 agenda features troubleshooting agents and autonomous networks</title>
+      <link>https://nanog.org/events/nanog-98/</link>
+      <guid isPermaLink="true">https://nanog.org/events/nanog-98/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;NANOG 98 conference agenda now live with peer-reviewed presentations on network troubleshooting agents, BGP adoption, flat datacenter networks, IPv6 routing loops, and autonomous networks. Keynotes address global infrastructure and Layer 3 interconnection shifts.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Access to practitioner-tested operational patterns and vendor technical capabilities presented by network operators at scale; sessions reflect current production pain points and emerging technical directions.&lt;/p&gt;&lt;p&gt;Source: NANOG · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Platform adds OpenTelemetry tracing in public beta</title>
+      <link>https://ai-cluster.world/news/AI/Industry/Daily/15/10/2026/</link>
+      <guid isPermaLink="true">https://ai-cluster.world/news/AI/Industry/Daily/15/10/2026/</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic released OpenTelemetry observability tracing in public beta on the Claude Platform, sending run traces from the Messages API, Claude Managed Agents and Claude SDK to monitoring systems with latency and token usage metrics. Anthropic reported Q3 revenue of $16.8 billion, acquired security company OPAQUE, and opened a Singapore office.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenTelemetry support lets practitioners integrate Claude observability into existing monitoring stacks (Datadog, Grafana, New Relic) via standard OTLP endpoints, eliminating vendor lock-in for Claude-powered agent deployments.&lt;/p&gt;&lt;p&gt;Source: AI Industry Daily · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ramp raises $1.85 billion at $60 billion valuation</title>
+      <link>https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/15/ramp-reaches-60b-valuation-as-it-pushes-deeper-into-ai</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Expense management company Ramp raised $1.85 billion in a funding round that values it at $60 billion, with annualized revenue crossing $2 billion and revenue growth 25% faster than the prior year. The round reflects sustained capital velocity toward AI-integrated enterprise software as autonomous agents move from pilots to operational deployment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates accelerating enterprise adoption of AI-driven finance automation and validates the market for agentic systems in mission-critical workflows—key to understanding procurement patterns and infrastructure demands.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bugging device found in OpenAI executive conference room</title>
+      <link>https://cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html</link>
+      <guid isPermaLink="true">https://cnbc.com/2026/10/16/ai-espionage-openai-jay-clayton.html</guid>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;A Saudi national was charged with allegedly installing a recording device in an OpenAI executive conference room, prompting Director of National Intelligence Jay Clayton to warn companies and the Trump administration must be wary of foreign espionage attempts as the race for AI dominance continues.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals escalating geopolitical AI competition with physical security and counterintelligence implications; underscores enterprise risk landscape as foreign actors target proprietary AI capabilities and research.&lt;/p&gt;&lt;p&gt;Source: CNBC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-18.html&quot;&gt;Oct 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Selector launches agent that builds network dashboards from plain language</title>
       <link>https://www.selector.ai/blog/meet-artist/</link>
@@ -678,134 +806,6 @@
       <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
       <description>&lt;p&gt;Peer-reviewed paper by Loye, Bautista, and Fontugne published in IMC 2026 proceedings on multi-scale anomaly detection methods for BGP routing incidents. Addresses detection of route leaks, hijacks, and anomalous path behavior across multiple measurement vantage points using signal analysis techniques.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides academic-grade techniques for identifying routing anomalies across time and topology scales, enabling practitioners to build more robust automated detection systems for leaks and hijacks beyond single-point monitoring.&lt;/p&gt;&lt;p&gt;Source: ACM Internet Measurement Conference (IMC 2026) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ransomware gangs exploit patched Palo Alto GlobalProtect flaw</title>
-      <link>https://www.infosecurity-magazine.com/news/palo-alto-vpn-vulnerability-target/</link>
-      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/palo-alto-vpn-vulnerability-target/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Multiple ransomware groups, including Qilin and Settra, are actively targeting CVE-2026-0257 to establish unauthorized VPN sessions and gain initial access to internal networks, despite a security patch released five months prior.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Patch adoption rates for VPN authentication bypasses remain critically low; prioritize rapid deployment of CVE-2026-0257 mitigations and network-edge verification in your SOC.&lt;/p&gt;&lt;p&gt;Source: Infosecurity Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential counts 56 production-ready MCP servers for network stacks</title>
-      <link>https://www.itential.com/resource/blog/mcp-101-understanding-the-model-context-protocol/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/blog/mcp-101-understanding-the-model-context-protocol/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Itential published an updated guide on MCP for network operations with video breakdowns and best practices from Head of AI John Capobianco. As of early 2026, 56 production-ready MCP servers span every major layer of the network and infrastructure stack.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; With Anthropic moving MCP under the Linux Foundation and every major vendor shipping a server, network teams must decide how fast to move and with what governance model.&lt;/p&gt;&lt;p&gt;Source: Itential Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential urges curated tools in production MCP server design</title>
-      <link>https://www.itential.com/resource/blog/designing-mcp-servers-for-infrastructure/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/blog/designing-mcp-servers-for-infrastructure/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Itential published guidance on designing production-grade MCP servers that prioritize curated, intention-level capabilities over hundreds of granular tools, addressing context bloat and operational risk.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; How you design MCP server capabilities directly impacts agent success: bloated context windows and ad-hoc tool exposure lead to higher failure rates versus curated, intention-level tooling with predictable selection behavior.&lt;/p&gt;&lt;p&gt;Source: Itential Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Comcast deploys Harmonic fiber sensing for real-time monitoring</title>
-      <link>https://finance.yahoo.com/technology/articles/comcast-cmcsa-builds-smarter-fiber-091625139.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/articles/comcast-cmcsa-builds-smarter-fiber-091625139.html</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Comcast partnered with Harmonic to deploy fiber sensing tools using AI and edge computing to track infrastructure conditions and security in real time for network monitoring and issue detection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-time fiber sensing with AI reduces mean-time-to-detect for network faults, critical for cable operators managing dense HFC plant alongside new fiber builds.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen partners on sovereign AI and moves to Nasdaq</title>
-      <link>https://ir.lumen.com/news/news-details/2026/Eminence-Grey-and-Lumen-Partner-to-Deliver-Sovereign-AI-Infrastructure-Across-the-U-S--2026-AssvtZO2CD/default.aspx</link>
-      <guid isPermaLink="true">https://ir.lumen.com/news/news-details/2026/Eminence-Grey-and-Lumen-Partner-to-Deliver-Sovereign-AI-Infrastructure-Across-the-U-S--2026-AssvtZO2CD/default.aspx</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen and Eminence Grey announced a partnership combining sovereign AI platform capabilities with Lumen's fiber infrastructure and programmable network to securely connect distributed AI environments. Lumen simultaneously moved to Nasdaq, positioning itself as a technology-focused enterprise networking company.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Lumen's programmable network fabric for sovereign AI creates a carrier-grade alternative to hyperscaler infrastructure for regulated AI workloads, with implications for enterprise infrastructure choices and carrier positioning.&lt;/p&gt;&lt;p&gt;Source: Lumen investor relations · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ByteDance runs RDMA software layer for large-scale AI training</title>
-      <link>https://arxiv.org/abs/2610.12815</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.12815</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;ByteDance reports production deployment of ByteExpress, a software communication layer over hardware RDMA, addressing challenges in distributed ML systems: variable-size messages, concurrent connections, bursty incasts, and service failures that hardware offload alone cannot solve.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Production RDMA deployment insights directly applicable to datacenter infrastructure operations and high-performance computing networking at scale.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tutorial models decentralised latency for TSN shapers</title>
-      <link>https://arxiv.org/abs/2610.11999</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.11999</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Tutorial paper on Time-Sensitive Networking (TSN) shapers providing decentralized latency models and information flow analysis for deterministic real-time network scheduling, submitted to IEEE Communications Surveys &amp;amp; Tutorials.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; TSN shapers and deterministic latency modeling are critical for industrial automation, critical infrastructure, and real-time edge operations where network timing guarantees are non-negotiable.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Moving target defence counters low-rate DoS on EV charging SDN</title>
-      <link>https://arxiv.org/abs/2610.11996</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.11996</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Studies cyber-defense strategies for Software-Defined Networking (SDN) applied to electric vehicle charging infrastructure, focusing on low-rate Denial-of-Service (DoS) attacks arising from IT/OT convergence using game-theoretic moving target defense.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Security analysis of SDN-controlled critical infrastructure (EV charging) with game-theoretic defense mechanisms directly applicable to network operations and security architecture decisions in emerging autonomous and smart-grid domains.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft-Decision-1 cuts agent routing costs 200-fold</title>
-      <link>https://buttondown.com/ai-tldr/archive/aitldr-daily-digest-october-10-2026</link>
-      <guid isPermaLink="true">https://buttondown.com/ai-tldr/archive/aitldr-daily-digest-october-10-2026</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Microsoft released Microsoft-Decision-1, a specialized model for structured decision tasks like routing, classification, and guardrails. On XBOX feedback-triage workload, it matched GPT-6 Sol quality at 14x faster speed and 200x lower cost.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Significantly cheaper and faster alternative for agent decision-making in AIOps pipelines; enables cost-effective routing and guardrail decisions at millisecond latency.&lt;/p&gt;&lt;p&gt;Source: AI/TLDR Daily Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic proposes binding government rules for frontier AI models</title>
-      <link>https://www.anthropic.com/policy</link>
-      <guid isPermaLink="true">https://www.anthropic.com/policy</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic published its Advanced AI Framework, proposing how governments should establish binding safety testing, incident reporting, and oversight regimes for frontier AI models. The framework includes mandatory risk assessment, model transparency reporting, security controls, and external expert evaluation requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Major AI labs are shifting from voluntary commitments to advocating for binding statutory regulation, reshaping enterprise compliance obligations across multiple jurisdictions and setting precedent for how safety governance should be legally enforced.&lt;/p&gt;&lt;p&gt;Source: Anthropic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Philippines-Singapore subsea cable cut disrupts regional traffic for days</title>
-      <link>https://subtelforum.com/philippines-cable-disruption-slows-internet</link>
-      <guid isPermaLink="true">https://subtelforum.com/philippines-cable-disruption-slows-internet</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A fiber-optic submarine cable segment connecting the Philippines to Singapore was severed on October 2, causing intermittent connectivity across the region. Telecommunications companies including Converge and Globe restored services within days by rerouting through redundant cable systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates real-time subsea cable resilience: redundant routing prevented total outage, but shows concentration risk in Asia-Pacific regional connectivity and the operational value of diverse cable routing.&lt;/p&gt;&lt;p&gt;Source: SubTel Forum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cloudflare makes BGP over IPsec and GRE generally available</title>
-      <link>https://developers.cloudflare.com/changelog/</link>
-      <guid isPermaLink="true">https://developers.cloudflare.com/changelog/</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Cloudflare released general availability of BGP peering over IPsec and GRE tunnels for Unified Routing, enabling dynamic route exchanges without manual static route management. Available to all WAN and Magic Transit customers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Simplifies SD-WAN routing: operators can now use BGP as control plane over encrypted transport tunnels, eliminating tedious static route provisioning when network topology changes.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Changelog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>BGP flapping at Qrator Labs breaks Russian proxy forwarding</title>
-      <link>https://debuglies.com/2026/10/09/russian-digital-infrastructure-disruption-systemic-concentric-failures</link>
-      <guid isPermaLink="true">https://debuglies.com/2026/10/09/russian-digital-infrastructure-disruption-systemic-concentric-failures</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A major October 8 incident in Russian digital infrastructure involved BGP flapping at Qrator Labs causing upstream reverse-proxy nodes to cease packet forwarding. Analysis notes potential BGP hijacking or volumetric saturation attacks against Qrator's advertising infrastructure concurrent with kinetic events.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-world case study in routing control plane degradation under stress: demonstrates how BGP instability isolates origin servers from public internet even when backends remain operational.&lt;/p&gt;&lt;p&gt;Source: debuglies.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ransomware crews exploit Palo Alto GlobalProtect authentication bypass</title>
-      <link>https://cybersecuritynews.com/palo-alto-globalprotect-flaw-vpn-access/</link>
-      <guid isPermaLink="true">https://cybersecuritynews.com/palo-alto-globalprotect-flaw-vpn-access/</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Ransomware groups including Qilin and Settra are actively exploiting CVE-2026-0257, an authentication bypass in Palo Alto Networks PAN-OS GlobalProtect and Prisma Access, to create unauthorized VPN sessions and enter internal networks through trusted remote access services.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The vulnerability affects firewalls with GlobalProtect portal or gateway when authentication override cookies are enabled, requiring immediate audit of cookie-based authentication configurations on all PAN-OS deployments.&lt;/p&gt;&lt;p&gt;Source: CyberSecurityNews · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco and SonicWall edge zero-days land in CISA KEV</title>
-      <link>https://tech-insider.org/cisco-sonicwall-zero-days-cisa-kev-cvss-10-2026/</link>
-      <guid isPermaLink="true">https://tech-insider.org/cisco-sonicwall-zero-days-cisa-kev-cvss-10-2026/</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Cisco CVE-2026-76504 and SonicWall CVE-2026-102255 were added to CISA's Known Exploited Vulnerabilities catalog within weeks of disclosure, both scoring near-maximum CVSS and affecting network edge devices that serve as preferred entry points for ransomware crews.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN gateways and SD-WAN controllers remain prioritized ransomware targets because they are internet-facing, upstream of internal networks, and often subject to extended patch-window schedules that create exploitation windows lasting weeks or months.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mistral releases trillion-parameter open-weight Large 4 in preview</title>
-      <link>https://distillintelligence.com/briefings/ai-leaders-2026-10-09</link>
-      <guid isPermaLink="true">https://distillintelligence.com/briefings/ai-leaders-2026-10-09</guid>
-      <pubDate>Sun, 11 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Mistral AI released Mistral Large 4, a trillion-parameter open-weight multimodal model with Mixture-of-Experts architecture and 1M context window, available in public preview with full weights coming October 27.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open-weight deployment flexibility and MoE efficiency reduce inference costs for coding and agent workloads while offering alternatives to closed-model providers.&lt;/p&gt;&lt;p&gt;Source: Distilling Intelligence · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-11.html&quot;&gt;Oct 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
