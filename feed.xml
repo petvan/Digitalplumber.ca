@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 18 Oct 2026 20:03:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 17:01:26 GMT</lastBuildDate>
+    <item>
+      <title>OpenTelemetry graduates CNCF and adds continuous profiling signal</title>
+      <link>https://dev.to/saaro_net/opentelemetry-2026-cncf-graduation-kubernetes-processor-and-the-dawn-of-a-new-observability-era-3i1d</link>
+      <guid isPermaLink="true">https://dev.to/saaro_net/opentelemetry-2026-cncf-graduation-kubernetes-processor-and-the-dawn-of-a-new-observability-era-3i1d</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;OpenTelemetry achieved CNCF graduation in May 2026; Kubernetes Attributes Processor reached stable v1.0.0 in September; Continuous Profiling entered alpha in March as a fourth observability signal alongside traces, metrics, and logs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OTel graduation and profiling alpha enable operators to standardize telemetry collection across network, infrastructure, and applications without vendor lock-in—critical for unified observability stacks in NOCs.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ultra Ethernet 1.1 adds scale-up and congestion control</title>
+      <link>https://ultraethernet.org/ultra-ethernet-consortium-releases-specification-1-1-advancing-ai-and-hpc-networking/</link>
+      <guid isPermaLink="true">https://ultraethernet.org/ultra-ethernet-consortium-releases-specification-1-1-advancing-ai-and-hpc-networking/</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;UEC released Specification v1.1 to advance Ethernet performance for AI and HPC workloads. The update builds on v1.0's adoption by next-generation AI deployments, introducing enhancements for scale-up networking and improved congestion control to address AI cluster bottlenecks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; UEC v1.1 sets standards for Ethernet fabric congestion management and scale-up performance, directly influencing how network operators design lossless AI training fabrics and compete with InfiniBand and Spectrum-X.&lt;/p&gt;&lt;p&gt;Source: Ultra Ethernet Consortium · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nscale data centers slip as Microsoft exits UK project</title>
+      <link>https://www.bloomberg.com/news/features/2026-10-15/nscale-s-35-billion-ipo-plans-muddied-by-ai-data-center-delays</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/features/2026-10-15/nscale-s-35-billion-ipo-plans-muddied-by-ai-data-center-delays</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Nscale's Norwegian flagship data center is six months behind schedule due to cooling system leaks, local regulations, construction delays and a fire, with only 6.4 MW of intended 30 MW operational. Microsoft pulled out of anchoring Nscale's first UK data center, where grid power is not expected until the 2030s, weeks before Nscale's planned IPO.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure delays at tier-1 neocloud operators expose financed AI buildout risks; power grid coordination failures and multi-year timelines highlight operational bottlenecks that network provisioning alone cannot solve in large-scale AI data center deployments.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RPKI now protects 70% of internet routes</title>
+      <link>https://ipinfo.io/blog/rpki-protects-70-internet-routes</link>
+      <guid isPermaLink="true">https://ipinfo.io/blog/rpki-protects-70-internet-routes</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;RPKI-valid routing jumped from 54.0% in September 2025 to 70.3% in September 2026, a 16.4 percentage point gain. China's adoption surge from 3.7% to 83.0% drove most of the global gain, while invalid routes barely propagate at scale.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; RPKI now covers 70% of prefixes but only validates origin, not path; a August 2026 Hetzner hijack exploited loose ROA scope, showing 16-21% of covered routes still have attack windows.&lt;/p&gt;&lt;p&gt;Source: IPinfo · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DDoS config change cut Inngest off from its databases</title>
+      <link>https://www.inngest.com/blog/2026-10-15-incident-report-for-october-9-and-10-2026</link>
+      <guid isPermaLink="true">https://www.inngest.com/blog/2026-10-15-incident-report-for-october-9-and-10-2026</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;On October 9, a data center provider lost bidirectional network connectivity and outbound internet access due to an error during a DDoS protection configuration change. Accounts unable to reach their primary database halted processing; cascading failures affected even independent accounts sharing processing pipelines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how a single provider's network isolation error cascades through shared infrastructure and dependent systems, affecting multiple customer accounts despite some having no direct dependency.&lt;/p&gt;&lt;p&gt;Source: Inngest Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cohere to acquire vulnerability-hunting AI startup AISLE</title>
+      <link>https://www.techzine.eu/news/security/145007/cohere-plans-to-acquire-ai-security-startup-aisle/</link>
+      <guid isPermaLink="true">https://www.techzine.eu/news/security/145007/cohere-plans-to-acquire-ai-security-startup-aisle/</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Cohere signed a letter of intent to acquire AISLE, a startup building autonomous AI systems that detect and help patch unknown vulnerabilities in critical software. In its first year, AISLE identified over 500 previously unknown vulnerabilities across OpenSSL, curl, and other codebases.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Makes security a core component of Cohere's sovereign AI platform; addresses enterprise requirements for vulnerability detection and governance in production AI deployments.&lt;/p&gt;&lt;p&gt;Source: Techzine Global · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NinjaOne ships agentic IT technician with MCP server</title>
+      <link>https://helpnetsecurity.com/2026/10/16/new-infosec-products-of-the-week-october-16-2026</link>
+      <guid isPermaLink="true">https://helpnetsecurity.com/2026/10/16/new-infosec-products-of-the-week-october-16-2026</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;NinjaOne launched Katana AI, an agentic AI technician with an MCP server connector, that analyzes device telemetry, history, alerts and activity to surface root causes and recommend remediation actions where technicians already work.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP standardization for IT operations lets AI agents access tools and infrastructure at scale; the human-in-the-loop model directly supports NetOps teams adopting governed autonomy.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Radware launches protection for MCP server deployments</title>
+      <link>https://securitymea.com/2026/10/19/radware-launches-mcp-server-protection-for-agentic-ai</link>
+      <guid isPermaLink="true">https://securitymea.com/2026/10/19/radware-launches-mcp-server-protection-for-agentic-ai</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Radware launched MCP Server Protection designed to give organizations visibility into MCP infrastructure and protect MCP servers against MCP-specific attacks while establishing governance as deployments scale.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; As MCP deployments scale in production, attack surface protection becomes operational necessity; security teams need tooling to audit and control agentic AI access to infrastructure and services.&lt;/p&gt;&lt;p&gt;Source: Security MEA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Context-Mode cuts AI agent tool output by 98%</title>
+      <link>https://aitoolly.com/ai-news/2026-10-18</link>
+      <guid isPermaLink="true">https://aitoolly.com/ai-news/2026-10-18</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Context-Mode for AI coding agents provides 98% tool output reduction and persistent session memory using MCP alongside hooks to route across 17 platforms, optimizing agent efficiency without losing task continuity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Efficient MCP integration reduces token overhead in agent workflows; multi-platform routing via standard protocol allows infrastructure agents to orchestrate across diverse DevOps and NetOps toolchains without context pollution.&lt;/p&gt;&lt;p&gt;Source: AIToolly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenSRE releases open-source framework for AI incident agents</title>
+      <link>https://github.com/tracer-cloud/opensre</link>
+      <guid isPermaLink="true">https://github.com/tracer-cloud/opensre</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;OpenSRE released v0.1, an open-source framework for AI SRE agents that resolve production incidents on your own infrastructure, connecting 60+ tools to define custom workflows and answer production questions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open-source, self-hosted SRE agent framework eliminates vendor lock-in and allows operations teams to train agents on their own incident history and tooling; community-driven approach surfaces practical patterns for bounded remediation.&lt;/p&gt;&lt;p&gt;Source: GitHub / Tracer-Cloud · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AT&amp;T and Verizon push AI into the RAN at scale</title>
+      <link>https://rcrwireless.com/20261019/networks/ai-ran-scale-test</link>
+      <guid isPermaLink="true">https://rcrwireless.com/20261019/networks/ai-ran-scale-test</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AT&amp;amp;T and Verizon executives described AI-based RAN deployments producing measurable results. AT&amp;amp;T is using AI at scale through applications covering planning, forecasting, deployment, configuration, and network optimization, while testing AI-native capabilities embedded directly in the RAN including Ericsson's AI-native link adaptation feature.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators stress AI must deliver meaningful performance benefits to justify additional compute and cost; scaling beyond trials requires open architectures and disciplined lifecycle management across distributed networks.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RFC 10055 details ECN setup for UDP sockets</title>
+      <link>https://www.rfc-editor.org/info/rfc10055</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10055</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10055 published as Informational guidance on ECN configuration for UDP sockets across operating systems and platforms. Provides practical implementation guidance for enabling ECN on UDP endpoints to improve congestion response.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Helps operators and platform engineers correctly enable ECN across heterogeneous UDP-based infrastructure, improving congestion signals for better adaptive traffic control.&lt;/p&gt;&lt;p&gt;Source: IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DeepSeek V4.1-Flash scores 77 and opens search API</title>
+      <link>https://tech-insider.org/deepseek-v4-1-flash-1017-deepswe-search-api-2026/</link>
+      <guid isPermaLink="true">https://tech-insider.org/deepseek-v4-1-flash-1017-deepswe-search-api-2026/</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;DeepSeek released V4.1-Flash-1017 into production on October 17, 2026, achieving a 77.0 Pass@1 score on DeepSWE v1.1 software engineering benchmark. The release opens paid Search and Fetch APIs at $0.75 per 1,000 calls.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Delivers frontier-class coding performance in a cost-optimized model; AI practitioners should evaluate against Claude Opus 5 and GPT-5.6 Sol at substantially lower inference cost, particularly for agentic workflows.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Illinois creates AI cabinet to draft state policy</title>
+      <link>https://www.insurancejournal.com/magazines/mag-features/2026/10/19/889095.htm</link>
+      <guid isPermaLink="true">https://www.insurancejournal.com/magazines/mag-features/2026/10/19/889095.htm</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Gov. JB Pritzker signed an executive order to establish an AI Cabinet made up of experts and representatives from several state agencies; the unpaid group will formulate policy proposals through 2027 and analyze risks posed by AI to Illinois residents and critical infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise and infrastructure operators should track state-level governance frameworks; Illinois joins multiple states building formal AI policy structures beyond federal preemption efforts.&lt;/p&gt;&lt;p&gt;Source: Insurance Journal / Capitol News Illinois · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>California orders kill switches and verification for AI models</title>
+      <link>https://www.aljazeera.com/economy/2026/10/17/california-gov-newsom-boosts-ai-regulation-as-he-eyes-2028-presidential-run</link>
+      <guid isPermaLink="true">https://www.aljazeera.com/economy/2026/10/17/california-gov-newsom-boosts-ai-regulation-as-he-eyes-2028-presidential-run</guid>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;California Governor Gavin Newsom signed executive orders requiring independent verification of AI models and establishing an expert committee to create kill switches for AI agents that could go rogue, reversing earlier vetoes as he eyes a 2028 presidential run.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; California's independent model verification mandate and AI agent kill-switch framework set operational precedent for enterprise AI governance; expect similar requirements to cascade into federal policy and other state regulations.&lt;/p&gt;&lt;p&gt;Source: Al Jazeera · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NetBox Labs links source of truth to NVIDIA and Grafana</title>
       <link>https://netboxlabs.com/blog/</link>
@@ -686,126 +806,6 @@
       <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Microsoft president Brad Smith calls for urgent AI regulation, arguing consumer products like milk and washing machines have more oversight than AI companies. Smith says the UK, not the US or EU, is best placed to lead on global safety rules.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals potential global AI governance framework emerging; enterprise buyers should monitor UK regulatory posture as it shapes multinational AI deployment strategies.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Chinese agent startup Manus raises $500 million</title>
-      <link>https://suminfo.substack.com/p/127-october-13-2026</link>
-      <guid isPermaLink="true">https://suminfo.substack.com/p/127-october-13-2026</guid>
-      <pubDate>Tue, 13 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Manus, a Chinese AI agent startup, closed a $500 million funding round led by Boyu Capital and IDG Capital with Tencent participation. Chinese authorities previously forced the company to unwind a $2 billion Meta acquisition over AI talent transfer concerns.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates active geopolitical enforcement of AI talent restrictions; enterprise teams evaluating agent AI vendors must account for jurisdiction-based licensing and deployment constraints beyond technical capability.&lt;/p&gt;&lt;p&gt;Source: SUM(info) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-13.html&quot;&gt;Oct 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>netlab 26.10 adds SRv6 support and Netmiko configuration</title>
-      <link>https://blog.ipspace.net/2026/10/netlab-26-10/</link>
-      <guid isPermaLink="true">https://blog.ipspace.net/2026/10/netlab-26-10/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Ivan Pepelnjak released netlab 26.10 with full SRv6 support (IS-IS, layer-3 services, L3VPN) on Junos and Nokia SR Linux, plus Netmiko-based device configuration as a new setup option. Generic prefix sets simplify ACL and prefix-list authoring.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners gain Netmiko as a first-class alternative to Ansible for device configuration management; SRv6 maturity across platforms expands segment-routing testing options.&lt;/p&gt;&lt;p&gt;Source: ipSpace.net blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor pushes Edwin AI correlation into ServiceNow incidents</title>
-      <link>https://www.prnewswire.com/news-releases/work4flow-and-logicmonitor-deepen-edwin-ai-investigations-in-servicenow-with-new-agent-to-agent-capabilities-302898638.html</link>
-      <guid isPermaLink="true">https://www.prnewswire.com/news-releases/work4flow-and-logicmonitor-deepen-edwin-ai-investigations-in-servicenow-with-new-agent-to-agent-capabilities-302898638.html</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Work4Flow and LogicMonitor developed Agent-to-Agent (A2A) capabilities that extend Edwin AI's event correlation and AI-powered investigation directly into ServiceNow, enriching incidents with operational intelligence as they unfold in real time.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agentic event correlation flowing directly into ITSM eliminates context-switching; NOC teams act on enriched, correlated alerts in ServiceNow without re-investigating in separate tools.&lt;/p&gt;&lt;p&gt;Source: PR Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Edwin AI adds cross-domain correlation for autonomous operations</title>
-      <link>https://siliconangle.com/2026/10/10/autonomous-it-logicmonitor-elevate-2026-logicmonitorelevate/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/10/10/autonomous-it-logicmonitor-elevate-2026-logicmonitorelevate/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor Elevate 2026 showcases Autonomous IT using AI-powered observability, predictive intelligence and automation to identify, diagnose and resolve problems with less manual intervention. Edwin AI now correlates events across infrastructure, application, and external dependencies.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cross-domain event correlation (infrastructure + application + external) closes blind spots NOC teams face; detecting problem origins is now AI-assisted rather than manual.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry synchronises spec, collector and SDK release cadence</title>
-      <link>https://iotdigitaltwinplm.com/opentelemetry-specification-1-61-collector-changes-q3-2026-what-matters/</link>
-      <guid isPermaLink="true">https://iotdigitaltwinplm.com/opentelemetry-specification-1-61-collector-changes-q3-2026-what-matters/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;OpenTelemetry specification v1.61.0, Collector v0.161.0, demo application, Helm chart and SDKs aligned releases in September 2026. Synchronized release cadence simplifies upgrade planning for platform teams managing observability infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Coordinated OpenTelemetry releases reduce upgrade complexity; platform teams can now align Collector, SDK and specification upgrades instead of managing independent cadences.&lt;/p&gt;&lt;p&gt;Source: IoT Digital Twin PLM · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Micas launches three 102.4T Tomahawk 6 Ethernet switches</title>
-      <link>https://www.globenewswire.com/news-release/2026/10/12/3379036/0/en/micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories-at-ocp-global-summit-2026.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/12/3379036/0/en/micas-networks-unveils-three-102-4t-open-ethernet-platforms-for-ai-factories-at-ocp-global-summit-2026.html</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Micas Networks announced three 102.4 Tbps open Ethernet switch platforms built on Broadcom Tomahawk 6, spanning 800G air-cooled, 1.6T liquid-cooled, and 1.6T co-packaged optics variants for AI infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open-platform alternative at OCP Summit 2026 provides hyperscalers choice in scaling 1.6T Ethernet without vendor lock-in, critical for 8K-100K GPU AI clusters.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ninety percent of resolvers ready for DNSSEC root key rollover</title>
-      <link>https://blog.apnic.net/2026/10/09/rolling-the-root-key-2/</link>
-      <guid isPermaLink="true">https://blog.apnic.net/2026/10/09/rolling-the-root-key-2/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Geoff Huston measures pre-rollover adoption of KSK-2024 (key tag 38696) across DNSSEC-validating recursive resolvers. Analysis shows ~90% of reporting resolvers have incorporated the new key into trust-anchor sets before the October 11 migration from KSK-2017, tracking real-time readiness via DNSSEC sentinel queries.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Resolver operators and recursive DNS infrastructure teams must verify active trust-anchor configuration before October 11 to avoid cascading SERVFAIL errors across all DNSSEC-signed domains.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Packeteer adds automatic BGP route leak detection and withdrawal</title>
-      <link>https://github.com/GrandArcher/Packeteer/issues/199</link>
-      <guid isPermaLink="true">https://github.com/GrandArcher/Packeteer/issues/199</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Open-source BGP route-leak detection feature for Packeteer enables operators to watch their own announced routes across public collectors (RIPE RIS, RouteViews) and external vantage points, automatically withdrawing leaked routes while flagging RPKI invalidity. Leak detection integrates with optional BMP and Routinator feeds for operator's own AS validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators can now implement automated leak-watching without manual monitoring, reducing operator load for route-leak incident response and enabling per-route safety actions (withdraw single route, not bulk session flap).&lt;/p&gt;&lt;p&gt;Source: GitHub (GrandArcher/Packeteer) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Researchers detect BGP leaks and hijacks across multiple scales</title>
-      <link>https://dl.acm.org/doi/10.1145/3777912.3839829</link>
-      <guid isPermaLink="true">https://dl.acm.org/doi/10.1145/3777912.3839829</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Peer-reviewed paper by Loye, Bautista, and Fontugne published in IMC 2026 proceedings on multi-scale anomaly detection methods for BGP routing incidents. Addresses detection of route leaks, hijacks, and anomalous path behavior across multiple measurement vantage points using signal analysis techniques.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides academic-grade techniques for identifying routing anomalies across time and topology scales, enabling practitioners to build more robust automated detection systems for leaks and hijacks beyond single-point monitoring.&lt;/p&gt;&lt;p&gt;Source: ACM Internet Measurement Conference (IMC 2026) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ransomware gangs exploit patched Palo Alto GlobalProtect flaw</title>
-      <link>https://www.infosecurity-magazine.com/news/palo-alto-vpn-vulnerability-target/</link>
-      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/palo-alto-vpn-vulnerability-target/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Multiple ransomware groups, including Qilin and Settra, are actively targeting CVE-2026-0257 to establish unauthorized VPN sessions and gain initial access to internal networks, despite a security patch released five months prior.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Patch adoption rates for VPN authentication bypasses remain critically low; prioritize rapid deployment of CVE-2026-0257 mitigations and network-edge verification in your SOC.&lt;/p&gt;&lt;p&gt;Source: Infosecurity Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential counts 56 production-ready MCP servers for network stacks</title>
-      <link>https://www.itential.com/resource/blog/mcp-101-understanding-the-model-context-protocol/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/blog/mcp-101-understanding-the-model-context-protocol/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Itential published an updated guide on MCP for network operations with video breakdowns and best practices from Head of AI John Capobianco. As of early 2026, 56 production-ready MCP servers span every major layer of the network and infrastructure stack.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; With Anthropic moving MCP under the Linux Foundation and every major vendor shipping a server, network teams must decide how fast to move and with what governance model.&lt;/p&gt;&lt;p&gt;Source: Itential Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential urges curated tools in production MCP server design</title>
-      <link>https://www.itential.com/resource/blog/designing-mcp-servers-for-infrastructure/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/blog/designing-mcp-servers-for-infrastructure/</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Itential published guidance on designing production-grade MCP servers that prioritize curated, intention-level capabilities over hundreds of granular tools, addressing context bloat and operational risk.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; How you design MCP server capabilities directly impacts agent success: bloated context windows and ad-hoc tool exposure lead to higher failure rates versus curated, intention-level tooling with predictable selection behavior.&lt;/p&gt;&lt;p&gt;Source: Itential Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Comcast deploys Harmonic fiber sensing for real-time monitoring</title>
-      <link>https://finance.yahoo.com/technology/articles/comcast-cmcsa-builds-smarter-fiber-091625139.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/articles/comcast-cmcsa-builds-smarter-fiber-091625139.html</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Comcast partnered with Harmonic to deploy fiber sensing tools using AI and edge computing to track infrastructure conditions and security in real time for network monitoring and issue detection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-time fiber sensing with AI reduces mean-time-to-detect for network faults, critical for cable operators managing dense HFC plant alongside new fiber builds.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen partners on sovereign AI and moves to Nasdaq</title>
-      <link>https://ir.lumen.com/news/news-details/2026/Eminence-Grey-and-Lumen-Partner-to-Deliver-Sovereign-AI-Infrastructure-Across-the-U-S--2026-AssvtZO2CD/default.aspx</link>
-      <guid isPermaLink="true">https://ir.lumen.com/news/news-details/2026/Eminence-Grey-and-Lumen-Partner-to-Deliver-Sovereign-AI-Infrastructure-Across-the-U-S--2026-AssvtZO2CD/default.aspx</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen and Eminence Grey announced a partnership combining sovereign AI platform capabilities with Lumen's fiber infrastructure and programmable network to securely connect distributed AI environments. Lumen simultaneously moved to Nasdaq, positioning itself as a technology-focused enterprise networking company.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Lumen's programmable network fabric for sovereign AI creates a carrier-grade alternative to hyperscaler infrastructure for regulated AI workloads, with implications for enterprise infrastructure choices and carrier positioning.&lt;/p&gt;&lt;p&gt;Source: Lumen investor relations · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ByteDance runs RDMA software layer for large-scale AI training</title>
-      <link>https://arxiv.org/abs/2610.12815</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2610.12815</guid>
-      <pubDate>Mon, 12 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;ByteDance reports production deployment of ByteExpress, a software communication layer over hardware RDMA, addressing challenges in distributed ML systems: variable-size messages, concurrent connections, bursty incasts, and service failures that hardware offload alone cannot solve.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Production RDMA deployment insights directly applicable to datacenter infrastructure operations and high-performance computing networking at scale.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-12.html&quot;&gt;Oct 12, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
