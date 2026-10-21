@@ -67,11 +67,12 @@ const TOPICS = [
     label: 'Network Security',
     slug: 'security',
     aliases: ['Security Automation'],
-    about: 'Security for network teams: firewall, VPN and SASE vulnerabilities and advisories, zero trust networking and SOC automation.',
+    about: 'Security for network teams: internet-wide incidents, TLS and certificate authority problems, firewall, VPN and SASE vulnerabilities, zero trust networking and SOC automation.',
     short: 'Security',
-    maxItems: 3,
+    maxItems: 4,
     maxAgeDays: 7,
-    query: 'network security operations: firewall, VPN and SASE vulnerabilities and advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, SASE platform news from Cato Networks, Zscaler and Netskope, zero trust networking, and SOC automation for network threats'
+    query: 'security events that network and infrastructure teams must act on: internet-wide incidents such as TLS, PKI and certificate authority compromises and browser trust-store removals, flaws in cryptographic libraries like OpenSSL and BoringSSL, DNS and BGP security, critical vulnerabilities in network operating systems and appliances, new entries in the CISA Known Exploited Vulnerabilities catalog, firewall, VPN and SASE advisories from Palo Alto Networks, Fortinet, Cisco and Juniper, SASE platform news from Cato Networks, Zscaler and Netskope, zero trust networking, and SOC automation for network threats',
+    guidance: 'Put the biggest security event of the week first if it affects network infrastructure, even when it is not a vendor advisory: a compromised certificate authority, a widespread TLS or cryptographic library flaw, or a mass-exploited network device vulnerability matters more than a routine advisory.',
   },
   {
     label: 'Startups & Funding',
