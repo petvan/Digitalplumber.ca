@@ -32,7 +32,7 @@ const TOPICS = [
     short: 'Automation',
     maxItems: 5,
     maxAgeDays: 7,
-    query: 'network automation and DevNetOps (NetDevOps) practice: new tools, releases and practitioner write-ups on GitOps and CI/CD for network changes, network testing with Batfish, pyATS and Containerlab, Terraform for networks, NetBox, Nautobot, Ansible, Nornir, Itential, intent-based networking and network source of truth, plus AutoCon and NANOG talks'
+    query: 'network automation and DevNetOps (NetDevOps) practice: new tools, releases and practitioner write-ups on GitOps and CI/CD for network changes, network testing with Batfish, pyATS and Containerlab, Terraform for networks, NetBox, Nautobot, Ansible, Nornir, Itential, intent-based networking and network source of truth, plus write-ups of specific AutoCon and NANOG talks and what they showed'
   },
   {
     label: 'AIOps & Network Observability',
@@ -260,6 +260,7 @@ WHAT TO AVOID — these are common but low-quality sources for this audience:
 - Finance and stock-market sites (Yahoo Finance, Investing.com, GuruFocus, Seeking Alpha) and coverage that is only about share prices, earnings or analyst ratings
 - Press-release wires (Business Wire, PR Newswire, Globe Newswire) unless the release itself has substantive technical detail; prefer the company's own technical post or independent coverage of the same news
 - AI listicles, tool directories and aggregator sites that summarize other people's coverage
+- Event announcements, agendas, schedules, registration pages and "conference X is happening" pieces. Readers already know what NANOG, AutoCon or Cisco Live are. Conference coverage only counts when it reports what was actually presented or decided: a specific talk's findings, a new tool or result shown on stage, or released slides or recordings with real substance
 - Articles older than the cutoff date in the request
 
 NOTE on vendor/engineering blogs: blogs from engineering-led companies (Cloudflare, Stripe, Netflix, Uber, etc.) often publish genuinely substantive technical content — include these if they have real depth. Exclude vendor marketing blogs that only promote their own products without technical substance.
@@ -276,7 +277,7 @@ Return ONLY a JSON array (no markdown, no preamble, no code fences) with exactly
     "Industry news" (reporting by a news publication),
     "Analysis" (commentary, opinion or analysis by an analyst, practitioner or publication)
 - "summary": what happened, in two short sentences (under 50 words) for a peer practitioner: the facts and the one technical detail that matters most. No fluff, no marketing tone, and no significance — that goes in why_it_matters. The detail field carries everything else.
-- "why_it_matters": one sentence, under 30 words, on what this means specifically for network, infrastructure, NetDevOps or IT operations practitioners. Concrete ("changes how you size X", "a new option for Y"), not generic hype.
+- "why_it_matters": one sentence, under 30 words, on what this means specifically for network, infrastructure, NetDevOps or IT operations practitioners. Concrete ("changes how you size X", "a new option for Y"), not generic hype. If you can't name a concrete consequence for practitioners, leave the story out.
 - "detail": a longer 150-250 word briefing that expands on the summary so a reader gets the full gist WITHOUT leaving to read the source. Cover: what happened and the key specifics (numbers, versions, benchmark results, architectural choices), why it matters to a network/AIOps/SRE practitioner, and any notable caveats or context. Write 2-3 tight paragraphs of substance — no marketing tone, no filler, no restating the title. Base it only on what the source actually says; do not invent details.
 - "url": the actual source URL
 - "tags": array of 3–5 short tags pulled directly from the article — company names, product names, or key technology terms (e.g. ["Cisco", "AIOps", "MCP"], ["Anthropic", "Claude", "Agents"])
