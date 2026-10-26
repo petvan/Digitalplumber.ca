@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 25 Oct 2026 14:21:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 15:03:47 GMT</lastBuildDate>
+    <item>
+      <title>Nautobot app-nornir 3.3.0 supports nornir-nautobot 5.0.0</title>
+      <link>https://github.com/nautobot/nautobot-app-nornir/pull/292</link>
+      <guid isPermaLink="true">https://github.com/nautobot/nautobot-app-nornir/pull/292</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Nautobot app-nornir v3.3.0 released October 22, 2026, adding support for nornir-nautobot major version 5.0.0 which treats scrapli as an optional dependency. This enables tighter integration between Nautobot's network source of truth and Nornir's Python automation framework.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams using Nautobot with Nornir for multi-vendor automation now have a cleaner dependency model and can skip scrapli installation if using alternative connection libraries—reducing overhead for network automation pipelines.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guide maps staged AI agents into self-healing CI/CD pipelines</title>
+      <link>https://www.itechguides.com/building-a-self-healing-ci-cd-pipeline-with-ai-agents-a-safe-2026-implementation-guide/</link>
+      <guid isPermaLink="true">https://www.itechguides.com/building-a-self-healing-ci-cd-pipeline-with-ai-agents-a-safe-2026-implementation-guide/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Practical 2026 guide to self-healing CI/CD with AI agents covering GitOps desired state, progressive delivery, telemetry, guardrails, and rollback. Emphasizes staged automation: observation mode, selective automation in low-risk namespaces, and deterministic reconciliation for network infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network automation practitioners implementing AI-driven CI/CD must adopt drift policies and approval gates; enabling automated sync without guardrails risks cascade failures—this guide shows how to tier adoption safely.&lt;/p&gt;&lt;p&gt;Source: iTechGuides · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Junos BGP monitoring flaws allow unauthenticated root execution</title>
+      <link>https://dev.to/ioneyrezende/cve-2026-33789-and-cve-2026-33796-how-bgp-monitoring-protocol-became-an-attack-surface-on-junos-2kg</link>
+      <guid isPermaLink="true">https://dev.to/ioneyrezende/cve-2026-33789-and-cve-2026-33796-how-bgp-monitoring-protocol-became-an-attack-surface-on-junos-2kg</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Two critical stack-based buffer overflow vulnerabilities (CVSS 9.8) in Juniper Junos OS rpd allow unauthenticated BGP peers to cause DoS or root execution via BGP Monitoring Protocol. CVE-2026-33789 reaches unauthenticated peers; CVE-2026-33796 requires configured eBGP adjacency.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; BMP telemetry is critical for route-leak detection and hijack forensics; these bugs degrade visibility during active routing incidents and enable full device compromise if BMP is enabled for monitoring.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ASPA extends route validation to full AS paths</title>
+      <link>https://blog.apnic.net/2026/10/22/your-most-pressing-questions-about-aspa-answered/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/22/your-most-pressing-questions-about-aspa-answered/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Tom Harrison answers frequently asked questions about ASPA (Autonomous System Provider Authorization), the IETF-standardized mechanism to validate AS path integrity beyond RPKI origin validation, defending against path-hijack attacks that bypass origin-only checks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; ASPA deployment closes the critical gap left by RPKI ROV: validating AS paths, not just origins, defends against path-hijack attacks and route leaks that bypass origin validation alone.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eight eMudhra CA keys cracked from weak entropy</title>
+      <link>https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Eight eMudhra intermediate CA certificate private keys were compromised with catastrophically weak entropy (3-8 bits instead of 384 bits), enabling trivial recovery and forged TLS certificates. Chrome and Firefox blocked all eight certificates within hours of researcher notification on October 17.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators with TLS endpoints, VPNs, or load balancers trusting eMudhra must audit certificate chains immediately and acquire replacement certificates before October 27 Chrome root store removal.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arista VeloCloud Orchestrator zero-day exploited in attacks</title>
+      <link>https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;A SQL injection vulnerability in on-premises Arista VeloCloud Orchestrator (CVE-2026-114625, CVSS 9.9) allows any authenticated user, even with read-only credentials, to escalate to full operator privileges and compromise SD-WAN infrastructure. Active exploitation confirmed; CISA added to KEV on October 23.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators running on-premises VeloCloud Orchestrator must patch immediately (5.2.3.18, 6.1.3.10, 6.4.2.12) as the flaw enables privilege escalation from basic tenant roles to superuser operator control of all SD-WAN edge devices.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Transmit Security names Matt Thompson chief executive</title>
+      <link>https://www.citybiz.co/article/920593/transmit-security-appoints-matt-thompson-ceo-and-launches-agentic-trust-for-ai-powered-transactions/</link>
+      <guid isPermaLink="true">https://www.citybiz.co/article/920593/transmit-security-appoints-matt-thompson-ceo-and-launches-agentic-trust-for-ai-powered-transactions/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Transmit Security appointed Matt Thompson, former president of Socure and co-founder of ID.me, as CEO, succeeding co-founder Mickey Boodaei, who moves to chairman role. The company introduced Agentic Trust, a new offering to help financial institutions and merchants detect, investigate and control AI agents, extending its identity and fraud prevention platform beyond authenticating human users to identifying and governing AI agents operating on their behalf.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Transmit Security seeks to extend its identity management and fraud prevention capabilities beyond human users to include AI agents interacting with enterprise applications, establishing new identity-security requirements for infrastructure operators managing autonomous agent traffic.&lt;/p&gt;&lt;p&gt;Source: Business Wire / Transmit Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Only 18% of enterprises let network agents act</title>
+      <link>https://www.cybersecurityinstitute.com/blog/?p=6145</link>
+      <guid isPermaLink="true">https://www.cybersecurityinstitute.com/blog/?p=6145</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Most enterprises still use network agents to advise rather than act, with 51% running agentic AI in production but only 18% letting agents carry out fixes; EMA found just 13.2% have agents acting on network monitoring alerts.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise NetOps vendors face buyer pressure for evidence of safe autonomous action, ServiceNow workflow integration, and clear agent licensing and telemetry costs.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity Institute · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SK Telecom gives AI agents employee IDs and supervisors</title>
+      <link>https://aiagentstore.ai/ai-agent-news/daily/2026-10-26</link>
+      <guid isPermaLink="true">https://aiagentstore.ai/ai-agent-news/daily/2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;SK Telecom published its first AI Governance Report, treating agents as a new form of labor by assigning employee IDs, recording roles and supervisors, and monitoring operating status, token use, and work history.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SK Telecom is exploring linking agent performance to organizational KPIs, signaling enterprises are moving from agent pilots to managed production operation and accountability frameworks.&lt;/p&gt;&lt;p&gt;Source: AI Agent News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comcast self-heals 77% of network alarms automatically</title>
+      <link>https://futurenetworld.net/comcast-proves-intelligence-at-the-edge-creates-a-foundation-for-innovation/2026/10/</link>
+      <guid isPermaLink="true">https://futurenetworld.net/comcast-proves-intelligence-at-the-edge-creates-a-foundation-for-innovation/2026/10/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Comcast's AIOps platform self-heals 77% of network alarms without human intervention. Agentic AI agents now autonomously detect fiber cuts, reroute traffic, identify cyber threats, and optimize power usage across distributed edge compute centers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates practical production deployment of agentic AI in broadband networks for autonomous remediation, reducing MTTR and technician dispatch costs while setting operational efficiency benchmarks for cable operators.&lt;/p&gt;&lt;p&gt;Source: FutureNet World · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Telco executives call OSS/BSS integration key to AI operations</title>
+      <link>https://www.telecomrevieweurope.com/articles/reports-and-coverage/how-telecom-should-embed-intelligence-to-achieve-operational-excellence/</link>
+      <guid isPermaLink="true">https://www.telecomrevieweurope.com/articles/reports-and-coverage/how-telecom-should-embed-intelligence-to-achieve-operational-excellence/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;At the 20th Telecom Review Leaders' Summit, telecom executives identified OSS/BSS platform integration as foundational for coordinating AI models across network and customer operations. Agentic AI governance, audit trails, and workforce upskilling emerged as critical gaps blocking autonomous network operations at scale.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators shifting from connectivity to intelligence services require unified OSS/BSS data foundations and clear governance frameworks for agentic AI systems; most lack these prerequisites despite pilot deployments.&lt;/p&gt;&lt;p&gt;Source: Telecom Review Europe · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF advances YANG network inventory topology model</title>
+      <link>https://mailarchive.ietf.org/arch/browse/ietf-announce/</link>
+      <guid isPermaLink="true">https://mailarchive.ietf.org/arch/browse/ietf-announce/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;IETF IESG advanced draft-ietf-ivy-network-inventory-topology-12 to Proposed Standard, providing a YANG data model for managing and representing network inventory topology information across multi-vendor environments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network automation and NetDevOps teams gain a standardized YANG model for inventory topology; simplifies programmatic network discovery, asset tracking, and multi-vendor orchestration.&lt;/p&gt;&lt;p&gt;Source: IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI stops training frontier models on the live internet</title>
+      <link>https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI announced it will train models using cached copies and simulated versions of the internet instead of the live web because frontier models are too unpredictable to be trusted with live internet access. The policy follows Anthropic's earlier move to limit its newest models from accessing the live internet.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners using OpenAI's frontier models for production systems need to understand this constraint affects model behavior: inference-time internet access remains available, but training data freshness will depend on snapshot age.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UK ICO opens call for evidence on agentic AI</title>
+      <link>https://ashford-publishing.com/blog/ai-governance-news</link>
+      <guid isPermaLink="true">https://ashford-publishing.com/blog/ai-governance-news</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Regulators shifted focus from AI models to AI agents—software that plans and takes actions on its own—and found that company governance had not kept pace. The UK's Information Commissioner's Office opened a six-week call for evidence on agentic AI, closing 20 November, with findings to shape future ICO guidance and a statutory code of practice on AI and automated decision-making.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprises deploying agentic AI systems must urgently audit automated decision-making governance and data handling practices; regulatory expectations are hardening beyond model-focused controls.&lt;/p&gt;&lt;p&gt;Source: Ashford Publishing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Five nations race to build sovereign AI supercomputers</title>
+      <link>https://www.faf.ae/home/2026/10/24/sovereignty-by-the-megawatt-the-new-geopolitics-of-supercomputing-part-iv</link>
+      <guid isPermaLink="true">https://www.faf.ae/home/2026/10/24/sovereignty-by-the-megawatt-the-new-geopolitics-of-supercomputing-part-iv</guid>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Between October 1–22, 2026, five developments across Germany, the United States, India, France and Sweden demonstrated that the world's most powerful computing machines are no longer merely instruments of scientific discovery but have become objects of industrial policy, vehicles of technological sovereignty and measures of national ambition.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Geopolitical competition over AI compute infrastructure is now explicit state policy; this reshapes data center strategy, supply chains, and deployment locations for enterprise AI workloads.&lt;/p&gt;&lt;p&gt;Source: Foreign Affairs Forum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ASPA brings RPKI route leak detection to BGP paths</title>
       <link>https://safeguard.sh/resources/blog/aspa-explained-autonomous-system-provider-authorization-rpki-route-leak-detection-and-deployment</link>
@@ -638,78 +758,6 @@
       <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Anthropic offered Blackstone a yield above 10% to anchor $9B of an $18B junior tranche in a $60B Broadcom-arranged package funding its five-year Google TPU lease. Gartner warns that over $3.5T of AI infrastructure spend could face impairment by 2030, with over 80% of neoclouds stopping independent operation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Value is likely to accrue to hyperscalers and capital-light plumbing rather than debt-funded capacity, reshaping competitive dynamics in enterprise AI adoption and limiting which vendors can sustain infrastructure-heavy strategies.&lt;/p&gt;&lt;p&gt;Source: Market News (Herve Cuviliez) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco and NVIDIA ship rack-scale AI fabric to 73,728 GPUs</title>
-      <link>https://www.cisco.com/c/en/us/solutions/collateral/artificial-intelligence/sovereign-ai-factory-nvidia-rackscale-neosov-so.html</link>
-      <guid isPermaLink="true">https://www.cisco.com/c/en/us/solutions/collateral/artificial-intelligence/sovereign-ai-factory-nvidia-rackscale-neosov-so.html</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Cisco and NVIDIA released NCP-RA (NVIDIA Collective Communications Platform – Reference Architecture) compliant rack-scale AI factory platform, orderable October 2026, scaling to 73,728 GPUs with Cisco Silicon One N9300 front-end and Spectrum-X N9100 back-end fabrics unified under Nexus One architecture.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; First vendor-neutral NCP-RA reference architecture from non-NVIDIA partner using proprietary silicon; enables neo-cloud and sovereign cloud operators to deploy standardized, multi-tenant rack-scale AI without NVIDIA-exclusive networking hardware.&lt;/p&gt;&lt;p&gt;Source: Cisco Solutions Collateral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Eleven years of data question whether RPKI destabilizes BGP</title>
-      <link>https://blog.lacnic.net/en/bgp-rpki/</link>
-      <guid isPermaLink="true">https://blog.lacnic.net/en/bgp-rpki/</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;LACNIC/APNIC analysis examines over 11 years of RPKI and BGP data to measure correlation between routing activity and RPKI-related changes, questioning whether growing RPKI deployment could destabilize routing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Rapid RPKI adoption may create cascading validation failures or misconfigured ROAs; operators must understand if deployment patterns threaten BGP stability at 70%+ coverage.&lt;/p&gt;&lt;p&gt;Source: LACNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cloudflare cuts HTTP telemetry pipeline from 9GB/s to under 2GB/s</title>
-      <link>https://blog.cloudflare.com/rewinding-the-exponential/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/rewinding-the-exponential/</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Cloudflare engineering post details data pipeline optimization: sampling applied upstream, replication rearchitected, aggregations introduced—reducing HTTP dataset from 9+ GB/s to &amp;lt;2 GB/s compressed, achieving ~80% wire reduction.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Sampling moved upstream and aggregation deferred to pipeline ingestion; resilient failure handling routes traffic to surviving regions without backpressure when inter-DC links fail.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Attackers chain three Ivanti Connect Secure flaws for root</title>
-      <link>https://www.sherlockforensics.com/blog/2026-10-14-weekly-security-roundup.html</link>
-      <guid isPermaLink="true">https://www.sherlockforensics.com/blog/2026-10-14-weekly-security-roundup.html</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;UTA0576 actor chained three Ivanti Connect Secure flaws (led by CVE-2026-104935, CVSS 8.6) to achieve root on VPN appliances, exfiltrate credentials and AD metadata, and run Kerberoasting attacks. CISA added multiple firewall and VPN flaws to the KEV list.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN appliance compromise enables lateral movement into directory infrastructure; chained authentication-bypass flaws demonstrate attackers pivoting from edge perimeter to core identity systems via credential harvesting and Kerberoasting.&lt;/p&gt;&lt;p&gt;Source: Sherlock Forensics · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Opsin raises $21 million to police enterprise AI agent sprawl</title>
-      <link>https://www.remio.ai/post/opsin-ai-agent-security-raises-21-million-as-agent-sprawl-tests-traditional-defe</link>
-      <guid isPermaLink="true">https://www.remio.ai/post/opsin-ai-agent-security-raises-21-million-as-agent-sprawl-tests-traditional-defe</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Opsin, a San Jose-based AI governance and security startup, raised $21 million led by SYN Ventures and Race Capital to address autonomous software sprawl. The platform monitors AI agents and tools deployed across enterprises, identifying risky components and agent behavior while enforcing policies without blocking legitimate use.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network and SRE teams face new risks from unsanctioned AI agents operating autonomously across infrastructure; Opsin's agent-centric security approach fills a gap traditional security tools cannot address.&lt;/p&gt;&lt;p&gt;Source: Remio.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Roc\u00edo Lorenzo takes over as Telenet chief executive</title>
-      <link>https://www.broadbandtvnews.com/2026/10/15/rocio-lorenzo-to-succeed-john-porter-as-telenet-ceo/</link>
-      <guid isPermaLink="true">https://www.broadbandtvnews.com/2026/10/15/rocio-lorenzo-to-succeed-john-porter-as-telenet-ceo/</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Rocío Lorenzo becomes CEO of Telenet effective November 2, 2026, succeeding John Porter after 13 years. Separately, Telenet CTO Luk Bruynseels is leaving for a new role at parent company Liberty Global.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Leadership transition at major European telecom operator during infrastructure consolidation within Liberty Global's new Benelux group; CTO departure to parent signals organizational restructuring.&lt;/p&gt;&lt;p&gt;Source: Broadband TV News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft Agent Framework 1.22 retires AutoGen for Harness agents</title>
-      <link>https://www.developersdigest.tech/blog/microsoft-agent-framework-whats-new-2026</link>
-      <guid isPermaLink="true">https://www.developersdigest.tech/blog/microsoft-agent-framework-whats-new-2026</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Microsoft Agent Framework (MAF) at Python 1.22 and .NET 1.25 replaces AutoGen with production-ready Harness agent, functional workflow API, and channel packages for distributed deployment. AutoGen moved to maintenance mode October 2025 with no new features.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Framework consolidation signals industry alignment on harness architecture for operations agents. For teams building bespoke infrastructure agents, MAF is now the canonical replacement with 22 Python minor releases in six months post-1.0.&lt;/p&gt;&lt;p&gt;Source: Developers Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T and Verizon push AI into live RAN processing</title>
-      <link>https://rcrwireless.com/20261019/networks/ai-ran-scale-test</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20261019/networks/ai-ran-scale-test</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and Verizon executives described AI-based RAN deployments producing measurable results while emphasizing economic and operational constraints for scale deployment. AT&amp;amp;T uses AI at scale across planning, forecasting, deployment, configuration, and network optimization; Verizon is moving AI into real-time gNodeB processing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shifts focus from proving AI-RAN works to determining ROI at production scale; defines 'AI worthiness' test where performance gains must outweigh computing cost and complexity.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry ships first release candidate process metrics in hostmetrics</title>
-      <link>https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/hostmetrics-process-scraper-rc/</guid>
-      <pubDate>Mon, 19 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry Collector Contrib v0.160.0 released October 13, 2026, shipping first Release Candidate process semantic conventions metrics in hostmetrics receiver's process scraper, moving toward stable v1 process metrics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Ops/SRE teams can now standardize on stable process-level observability; RC metrics enable community validation before stable release, accelerating adoption of standardized process telemetry.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-19.html&quot;&gt;Oct 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
