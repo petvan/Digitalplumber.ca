@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 26 Oct 2026 16:50:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 10:10:59 GMT</lastBuildDate>
+    <item>
+      <title>Terraform adds provider sets for self-service network modules</title>
+      <link>https://github.com/hashicorp/terraform/releases</link>
+      <guid isPermaLink="true">https://github.com/hashicorp/terraform/releases</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;HashiCorp released Provider Sets feature on October 22, 2026, enabling platform teams to separate provider configuration from module code and expose modules through no-code and self-service workflows. Terraform 1.16.5 shipped as stable release on October 2, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provider Sets eliminate provider credential duplication across teams and enable self-service infrastructure provisioning without exposing sensitive API keys—reducing operational friction for network engineers using Terraform for cloud and on-prem network resources.&lt;/p&gt;&lt;p&gt;Source: Terraform Release Notes / HashiCorp · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LogicMonitor topology maps link packet loss to application impact</title>
+      <link>https://hoop.dev/blog/can-logicmonitor-correlate-network-issues-with-application-performance</link>
+      <guid isPermaLink="true">https://hoop.dev/blog/can-logicmonitor-correlate-network-issues-with-application-performance</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;LogicMonitor's topology mapping automatically connects network device state changes to dependent application services; when packet loss occurs on a network segment, alert rules group all downstream service impacts into a single incident context.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Topology-aware correlation eliminates manual dependency tracing during incidents: engineers and AI agents query a single platform to understand whether a network or application component failed first, cutting MTTR by removing the guesswork phase.&lt;/p&gt;&lt;p&gt;Source: Hoop Dev · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Observability data floods tools that still cannot explain outages</title>
+      <link>https://cloudsecurityalliance.org/blog/2026/10/20/cloud-observability-has-never-had-more-data-it-still-can-t-tell-you-what-actually-broke</link>
+      <guid isPermaLink="true">https://cloudsecurityalliance.org/blog/2026/10/20/cloud-observability-has-never-had-more-data-it-still-can-t-tell-you-what-actually-broke</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Modern observability systems generate terabytes of telemetry (metrics, logs, traces) but lack semantic relationships between components; without topology and causality modeling, operators manually reconstruct incident chains across disparate tools.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Event correlation and digital twin approaches address observability's core gap: raw telemetry volume hasn't reduced MTTR because operators still spend 30+ minutes manually connecting the dots between independent data streams during incidents.&lt;/p&gt;&lt;p&gt;Source: Cloud Security Alliance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Innovorbs launches practice for private GPU cluster networking</title>
+      <link>https://www.einnews.com/pr_news/950490398/innovorbs-technologies-launches-ai-data-center-infrastructure-practice-for-gpu-clusters-and-private-ai-deployments</link>
+      <guid isPermaLink="true">https://www.einnews.com/pr_news/950490398/innovorbs-technologies-launches-ai-data-center-infrastructure-practice-for-gpu-clusters-and-private-ai-deployments</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Innovorbs announced an AI data center infrastructure practice for enterprises building private GPU clusters, covering RoCEv2 on 400G/800G Ethernet, NVIDIA Quantum InfiniBand (NDR/XDR), and emerging Ultra Ethernet Consortium standards across NVIDIA Spectrum-X, Arista, Cisco Nexus, and Juniper QFX platforms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides practitioners a systems-integration reference for building lossless AI fabrics: concrete guidance on fabric topology choices, congestion control (PFC/ECN/DCQCN), adaptive routing, and rail-optimized non-blocking Clos designs for 130 kW racks.&lt;/p&gt;&lt;p&gt;Source: EIN Presswire / CIOInfluence · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Junos BMP flaws let BGP peers crash or root routers</title>
+      <link>https://dev.to/ioneyrezende/cve-2026-33789-and-cve-2026-33796-how-bgp-monitoring-protocol-became-an-attack-surface-on-junos-2kg</link>
+      <guid isPermaLink="true">https://dev.to/ioneyrezende/cve-2026-33789-and-cve-2026-33796-how-bgp-monitoring-protocol-became-an-attack-surface-on-junos-2kg</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Two critical October 2026 Junos vulnerabilities reveal BGP Monitoring Protocol as an attack surface via stack overflow. CVE-2026-33789 is a stack-based buffer overflow in rpd allowing an unauthenticated BGP peer to cause denial of service and potential root-level command execution via crafted BGP route updates when BMP is enabled.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; In environments accepting BGP sessions from customers, peers or transit partners, this represents a materially wider set of potential triggers than typical internal monitoring stations; both vulnerabilities require BMP to be enabled.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Eight eMudhra intermediate CA keys were trivially breakable</title>
+      <link>https://www.microsoft.com/en-us/msrc/blog/2026/10/microsoft-response-to-compromised-emudhra-certificate-authority-keys</link>
+      <guid isPermaLink="true">https://www.microsoft.com/en-us/msrc/blog/2026/10/microsoft-response-to-compromised-emudhra-certificate-authority-keys</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Eight eMudhra intermediate CA private keys (six for TLS, two for code signing) were compromised with catastrophically weak entropy (3-8 bits instead of 384), allowing attackers to trivially recover keys and forge trusted certificates for any domain. Microsoft removed seven certificates from Windows and Edge trust lists; browsers blocked all eight intermediates.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Docker containers and CI/CD pipelines built before October 20 with bundled CA trust stores still trust eMudhra certs and require deliberate rebuild; all outbound TLS connections from pre-October 20 container images remain within attack surface until remediated.&lt;/p&gt;&lt;p&gt;Source: Microsoft Security Response Center · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Critical Brotli flaw hits all PAN-OS versions without fix</title>
+      <link>https://cybersecuritynews.com/brotli-vulnerability-affects-pan-os</link>
+      <guid isPermaLink="true">https://cybersecuritynews.com/brotli-vulnerability-affects-pan-os</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Palo Alto Networks confirmed that a critical out-of-bounds write vulnerability in the Brotli compression library affects all PAN-OS versions 10.2–12.2 and Panorama, allowing unauthenticated remote code execution or privilege elevation. Company provided no fix release date as of October 26.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Every Palo Alto firewall and Panorama instance running affected versions is potentially exploitable without authentication; 22.6 million exposed PAN-OS instances are at risk until patches arrive, forcing immediate implementation of network segmentation and access controls on management interfaces.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Campaign harvests 70,000 credentials from Fortinet and Palo Alto devices</title>
+      <link>https://cybersecuritynews.com/breaking-into-fortigate-fortiweb</link>
+      <guid isPermaLink="true">https://cybersecuritynews.com/breaking-into-fortigate-fortiweb</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Group-IB and NyxLab documented an active campaign targeting internet-facing FortiGate, FortiWeb, and Palo Alto GlobalProtect devices, exploiting CVE-2026-0257 (GlobalProtect auth bypass) and Fortinet flaws to extract 70,000+ exposed network device credentials and LDAP records for persistent network access.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Threat actors are systematically compromising perimeter VPN and firewall devices to steal credentials and establish lasting network presence; any internet-facing Palo Alto or Fortinet device without patched CVE-2026-0257 is actively being targeted and should be treated as compromised until verified clean.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Darktrace names new chief product and technology officers</title>
+      <link>https://www.darktrace.com/news/darktrace-strengthens-product-and-technology-leadership-with-new-executive-appointments</link>
+      <guid isPermaLink="true">https://www.darktrace.com/news/darktrace-strengthens-product-and-technology-leadership-with-new-executive-appointments</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Behavioral security company Darktrace announced appointments of Issy Richards as Chief Product Officer and Stephen Pickman as Chief Technology Officer, both joining the Executive Leadership Team reporting to CEO Ed Jennings. Richards will lead the global product organization while Pickman will oversee research and development.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes product and R&amp;amp;D leadership focused on enterprise AI and autonomous threat response capabilities, relevant to security practitioners evaluating behavioral detection platforms.&lt;/p&gt;&lt;p&gt;Source: Darktrace Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Outcomex names Michael van Zoggel chief executive</title>
+      <link>https://datacenternews.asia/story/outcomex-names-michael-van-zoggel-as-chief-executive-officer</link>
+      <guid isPermaLink="true">https://datacenternews.asia/story/outcomex-names-michael-van-zoggel-as-chief-executive-officer</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Australian technology services firm Outcomex appointed Michael van Zoggel as Chief Executive Officer after 14 years under founder Marco Delgado, who transitioned to Founder and Chairman. Delgado has been pivoting to other ventures including AI and IoT startups while maintaining strategic oversight of Outcomex.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Leadership transition in a regional infrastructure and cyber services provider reflects broader industry focus on cyber security, managed services, and AI advisory—key growth areas for NetOps and infrastructure practitioners.&lt;/p&gt;&lt;p&gt;Source: Outcomex Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Canadian carriers shift capex toward AI data centres and fibre</title>
+      <link>https://telecomlead.com/5g/canada-telecom-market-2026-19-5-billion-capex-45-million-5g-connections-and-ai-investment-128384</link>
+      <guid isPermaLink="true">https://telecomlead.com/5g/canada-telecom-market-2026-19-5-billion-capex-45-million-5g-connections-and-ai-investment-128384</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell, Rogers, and Telus are shifting capital investment toward 5G standalone, fiber broadband, FWA, and AI infrastructure as traditional mobile revenue slows. Bell plans a 300 MW AI facility near Regina; Telus targets 150 MW across three BC sites with 60,000 GPUs; Rogers launched 5G standalone in 2020 and 5G RedCap nationwide in 2025.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Canadian telcos' aggressive AI compute infrastructure buildout creates new demand drivers for fiber and data center capacity, shifting operational spending priorities and creating network architecture implications for AI workload distribution.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Comcast AIOps platform self-heals 77 percent of alarms</title>
+      <link>https://futurenetworld.net/comcast-proves-intelligence-at-the-edge-creates-a-foundation-for-innovation/2026/10/</link>
+      <guid isPermaLink="true">https://futurenetworld.net/comcast-proves-intelligence-at-the-edge-creates-a-foundation-for-innovation/2026/10/</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Comcast's Octave platform recognizes different conditions and demands using billions of telemetry data points to make real-time decisions, improving service reliability and increasing network capacity by 35%. The AIOps platform self-heals roughly 77% of platform alarms via automation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates measurable ROI from edge intelligence and AIOps automation at scale—specific capacity gains and alarm reduction metrics provide benchmarks for operators evaluating AI-driven network operations investments.&lt;/p&gt;&lt;p&gt;Source: FutureNet World · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New RFCs extend PCEP to segment routing multipath</title>
+      <link>https://www.rfc-editor.org/info/rfc10067/</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10067/</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10066 defines PCEP extensions to signal multiple forwarding paths with a single LSP for load balancing and redundancy. RFC 10067 extends this to group two unidirectional SR LSPs into associated bidirectional SR LSPs for both co-routed and non-co-routed paths.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators can now build redundant, load-balanced SR policies that support multipath forwarding and bidirectional path association, enabling carrier-grade redundancy with simplified configuration.&lt;/p&gt;&lt;p&gt;Source: RFC Editor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Regulators shift scrutiny from AI models to autonomous agents</title>
+      <link>https://ashford-publishing.com/blog/ai-governance-news</link>
+      <guid isPermaLink="true">https://ashford-publishing.com/blog/ai-governance-news</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;In October 2026, regulators shifted focus from AI model regulation to agentic AI—software that plans and takes actions on its own—and companies' governance has not kept pace. The UK's ICO opened a call for evidence on agentic AI, and an IBM study found 80% of large EMEA firms experienced an AI incident reach the board in the past year.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The EU pushed its strictest AI rules back by over a year with fixed deadlines, while the U.S. continues debating federal preemption of state laws.&lt;/p&gt;&lt;p&gt;Source: Ashford Publishing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Beijing orders job-impact reviews for some AI projects</title>
+      <link>https://automatinggovernmentinsights.substack.com/p/ai-in-government-policy-brief-wc-ae3</link>
+      <guid isPermaLink="true">https://automatinggovernmentinsights.substack.com/p/ai-in-government-policy-brief-wc-ae3</guid>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Beijing ordered AI job-impact reviews for some projects, requiring employment risk assessments alongside project review for AI in labor-intensive industries, while mandating AI deployment first in labor-shortage or hazardous work areas. Italy's AI Decree (179/2026) took effect, prohibiting employment decisions solely on automated processing; a natural person must retain effective autonomous decision-making power on hiring, discipline, and termination.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; China's employment-impact screening and Italy's human-decision mandate signal jurisdictional divergence in agentic AI governance—key for multiregional enterprise deployment and compliance planning.&lt;/p&gt;&lt;p&gt;Source: Automating Government Insights · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AutoCon 6 talk dissects automating from spreadsheet sources of truth</title>
       <link>https://nil.com/en/events/nil-at-autocon-6-conference/</link>
@@ -654,102 +774,6 @@
       <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Tenstorrent raised $1.5 billion in Series E funding at $6.2 billion post-money valuation, more than doubling its December 2024 valuation. Funds will scale Galaxy servers combining dozens of AI chips for inference workloads including video generation and open-weight models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CEO Jim Keller chose independent funding over acquisition by Intel or Qualcomm, positioning Tenstorrent as credible Nvidia/AMD challenger with RISC-V architecture and licensable IP strategy for volume compute deployment.&lt;/p&gt;&lt;p&gt;Source: Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI data centre networks outgrow passive monitoring tools</title>
-      <link>https://www.datacenterknowledge.com/data-observability/beyond-observability-achieving-proactive-assurance-in-ai-era-data-center-networks</link>
-      <guid isPermaLink="true">https://www.datacenterknowledge.com/data-observability/beyond-observability-achieving-proactive-assurance-in-ai-era-data-center-networks</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;AI-era data center networks require a shift from passive observability to proactive assurance; legacy monitoring systems cannot keep pace with modern demands where uptime and performance are non-negotiable.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Context-aware AIOps and domain-specific automation are now mandatory for NOC teams managing AI infrastructure complexity; static playbooks and threshold-based alerting are insufficient for dynamic multicloud environments.&lt;/p&gt;&lt;p&gt;Source: Data Center Knowledge · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nvidia Spectrum-X Photonics ships in 2026 with fewer switches</title>
-      <link>https://www.simpletechtrend.com/en/post/nvidia-ocp-2026-ian-buck-mgx-open-ai-factory-en</link>
-      <guid isPermaLink="true">https://www.simpletechtrend.com/en/post/nvidia-ocp-2026-ian-buck-mgx-open-ai-factory-en</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;NVIDIA announced Spectrum-X Photonics shipping in 2026 with 5x power efficiency, 10x MTBI, 40% fewer switches, and 2.6 ms fault detection. The co-packaged optics roadmap follows two stages: scale-out fabric in 2026, scale-up (NVL-class) in 2027. NVIDIA also revealed port compatibility with third-party transports: Google Falcon runs on ConnectX SuperNICs and BlueField DPUs, while Meta's 102.4T FBOSS switch (N-IceCube) uses Spectrum-6 silicon.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Co-packaged optics at scale breaks the power wall for AI data center fabrics; enables 40% switch density gain and significantly lower per-GPU networking TCO at gigawatt scale, but only if you're already standardized on NVIDIA silicon.&lt;/p&gt;&lt;p&gt;Source: Simple Tech Trend · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ultra Ethernet v1.0 ready for greenfield AI clusters</title>
-      <link>https://techyorker.com/ultra-ethernet-vs-infiniband-vs-roce-which-interconnect-fits-your-ai-cluster/</link>
-      <guid isPermaLink="true">https://techyorker.com/ultra-ethernet-vs-infiniband-vs-roce-which-interconnect-fits-your-ai-cluster/</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;InfiniBand minimizes integration risk for purpose-built AI training because it natively integrates adaptive routing, credit-based flow control, and in-network collective offload (SHARP), while RoCE is the better organizational fit when Ethernet operational familiarity and multi-vendor supply chains outweigh the complexity of designing and tuning lossless networks. Ultra Ethernet Consortium v1.0 is now production-deployable for greenfield clusters in Q4 2026 with vendor support, but collective operations libraries (NCCL-equivalent) are still maturing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clarifies the 2026 fabric decision tree: InfiniBand for purpose-built training at hyperscale, RoCE for inference or mixed multi-tenant estates, Ultra Ethernet for greenfield if you have Ethernet expertise and can wait on software ecosystem maturity.&lt;/p&gt;&lt;p&gt;Source: TechYorker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS root key rollover tests resolver trust anchors</title>
-      <link>https://blog.cloudflare.com/root-ksk-2024-rollover</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/root-ksk-2024-rollover</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;On October 11, 2026, the DNS root switched from KSK-2017 to KSK-2024, only the second root key rollover in history. DNSSEC-validating resolvers must trust the new key beforehand using RFC 5011 automatic updates or manual configuration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operations teams running DNSSEC-validating resolvers must verify KSK-2024 trust before October 11 or face SERVFAIL errors; RFC 8509 sentinels enable testing at dnstest.dev.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS root changed its master key without breaking anything</title>
-      <link>https://dev.to/kashif_manzer/how-the-dns-root-rotated-its-master-key-on-october-11-without-breaking-the-internet-pm7</link>
-      <guid isPermaLink="true">https://dev.to/kashif_manzer/how-the-dns-root-rotated-its-master-key-on-october-11-without-breaking-the-internet-pm7</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;On October 11, 2026, DNS root switched from KSK-2017 to KSK-2024; the slow-motion rollover mechanism, RFC 8509 sentinel testing, and resolver trust-anchor lifecycle prevented breakage despite a few isolated reports.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Understanding how distributed DNS state management prevents failures helps operators debug DNSSEC validation issues and test resolver readiness for future critical rollouts.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Attackers exploit PAN-OS VPN bypass to reach vCenter</title>
-      <link>https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/</link>
-      <guid isPermaLink="true">https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Palo Alto Networks Unit 42 confirmed active exploitation of CVE-2026-0257, a GlobalProtect VPN authentication bypass allowing unauthorized access and VPN session establishment. October 19 update reveals attackers are bypassing MFA, conducting network reconnaissance with RMM tools, moving laterally via RDP/SMB, and pivoting to vCenter hypervisor management appliances for ransomware staging.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Hypervisor-layer pivots from VPN gateways represent a critical evolution in ransomware-deployment tactics, enabling attackers to move from perimeter compromise directly to VM control plane compromise and automated enterprise-wide encryption.&lt;/p&gt;&lt;p&gt;Source: Palo Alto Networks Unit 42 · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Boomi buys Elementary Data for data observability</title>
-      <link>https://boomi.com/resources/resources-library/boomi-acquires-elementary/</link>
-      <guid isPermaLink="true">https://boomi.com/resources/resources-library/boomi-acquires-elementary/</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Boomi acquired Elementary Data, a provider of widely adopted data observability solution adopted by 1,500+ data teams with 1.1M+ monthly downloads, to add observability, quality, governance and discovery capabilities to the Boomi Enterprise Platform. Elementary Data provides column-level lineage, data catalog and MCP server exposing context to AI agents, and includes AI agents automating data testing, triaging issues, optimizing and governing data.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses a key bottleneck in AI agent workflows by ensuring data issues are caught before reaching models, devices and AI agents; operationalizes observability for agents managing enterprise data pipelines.&lt;/p&gt;&lt;p&gt;Source: Boomi · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AIsa raises seed extension past $9m with Tether</title>
-      <link>https://aisa.one/blog/aisa-seed-extension-tether-hiven/</link>
-      <guid isPermaLink="true">https://aisa.one/blog/aisa-seed-extension-tether-hiven/</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;AIsa announced completion of its Seed Extension Round with Tether and HIVEN as strategic investors, bringing total funding to more than $9 million. AIsa is building the Trusted Resource and Transaction Network for Enterprise AI Agents, connecting enterprise agents to external data, AI models, APIs, software tools and industry services with governed access, usage metering, billing and settlement.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables billing and spending governance for AI agent infrastructure; connects agents to external resources while managing usage controls, allowing enterprises to govern AI agent transactions securely; treats agent resource access as a payment problem.&lt;/p&gt;&lt;p&gt;Source: AIsa · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Prevalent AI names JD Sherry chief revenue officer</title>
-      <link>https://www.globenewswire.com/news-release/2026/10/15/3381543/0/en/prevalent-ai-appoints-istari-s-jd-sherry-as-chief-revenue-officer-to-drive-global-expansion.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/15/3381543/0/en/prevalent-ai-appoints-istari-s-jd-sherry-as-chief-revenue-officer-to-drive-global-expansion.html</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Prevalent AI appointed JD Sherry as Chief Revenue Officer to lead global go-to-market operations across sales, marketing, and partnerships. Sherry joins from ISTARI, where he was Managing Partner and Global Head of Sales, bringing nearly three decades of cybersecurity and board experience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals expansion phase for AI-powered enterprise context platform extending beyond cybersecurity into broader AI governance and data fabric use cases.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft adds controls to stop risky AI agent actions</title>
-      <link>https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/</link>
-      <guid isPermaLink="true">https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-october-20-2026/</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;A hacker used agentic tools to breach more than 100 company sites with little human intervention, while Microsoft introduced enterprise controls that can assess agent risk and stop actions. Reuters reported that a hacker used agentic tools to breach more than 100 company sites with little human intervention, while Microsoft introduced enterprise controls that can assess agent risk and stop actions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operations teams deploying agents face a sharp credibility test: if agents can breach 100+ sites autonomously, enterprise governance and kill-switch controls are no longer optional—they're table-stakes for production deployment.&lt;/p&gt;&lt;p&gt;Source: The Neuron · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI gives GPT-6 Pro parallel agents in ChatGPT</title>
-      <link>https://pasqualepillitteri.it/en/news/24850/parallel-agents-arrive-gpt-6-pro-chatgpt</link>
-      <guid isPermaLink="true">https://pasqualepillitteri.it/en/news/24850/parallel-agents-arrive-gpt-6-pro-chatgpt</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI added parallel agents to GPT-6 Pro on October 16, enabling multiple agents to split and execute different parts of a task simultaneously while users track progress in the conversation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multi-agent task parallelization in ChatGPT Pro changes how users structure complex workflows and tool orchestration, though API integration and usage accounting remain unspecified.&lt;/p&gt;&lt;p&gt;Source: Pasquale Pillitteri · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic pays over 10% yield for $60bn compute financing</title>
-      <link>https://hervecuviliez.substack.com/p/market-news-saturday-17-october-2026</link>
-      <guid isPermaLink="true">https://hervecuviliez.substack.com/p/market-news-saturday-17-october-2026</guid>
-      <pubDate>Tue, 20 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic offered Blackstone a yield above 10% to anchor $9B of an $18B junior tranche in a $60B Broadcom-arranged package funding its five-year Google TPU lease. Gartner warns that over $3.5T of AI infrastructure spend could face impairment by 2030, with over 80% of neoclouds stopping independent operation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Value is likely to accrue to hyperscalers and capital-light plumbing rather than debt-funded capacity, reshaping competitive dynamics in enterprise AI adoption and limiting which vendors can sustain infrastructure-heavy strategies.&lt;/p&gt;&lt;p&gt;Source: Market News (Herve Cuviliez) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-20.html&quot;&gt;Oct 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
