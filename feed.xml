@@ -6,7 +6,103 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 27 Oct 2026 15:57:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:38:13 GMT</lastBuildDate>
+    <item>
+      <title>Oracle links NVIDIA and Google accelerators with Acceleron networking</title>
+      <link>https://techblog.comsoc.org/2026/10/27/oracle-integrates-nvidia-and-google-ai-accelerators-with-high-performance-cloud-networking/</link>
+      <guid isPermaLink="true">https://techblog.comsoc.org/2026/10/27/oracle-integrates-nvidia-and-google-ai-accelerators-with-high-performance-cloud-networking/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Oracle announced integration of NVIDIA NVL72 systems, Google TPU 8t/8i accelerators, and advanced Oracle Acceleron networking featuring Multipath Reliable Connection (MRC) transport and distributed collective communications for AI training, inference and agentic workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Public cloud provider treats networking as primary constraint, not compute—operators should expect multipath RoCE and resilience to become baseline for cloud AI infrastructure, signaling shift from single-path oversubscribed fabrics.&lt;/p&gt;&lt;p&gt;Source: Tech Blog CoMSoC / Oracle · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS root key roll succeeded, APNIC measurements show</title>
+      <link>https://blog.apnic.net/2026/10/21/rolling-the-root-key-what-happened/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/21/rolling-the-root-key-what-happened/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;The DNS root key was rolled on 11 October 2026. Using key sentinel signals, APNIC measured DNSSEC validation outcomes across networks worldwide and concluded the KSK roll was successful based on widespread acceptance rate improvements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides operators with concrete data on rollover success metrics and trust-anchor deployment outcomes for their own infrastructure validation.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ASPA extends BGP validation to the full AS path</title>
+      <link>https://blog.apnic.net/2026/10/22/your-most-pressing-questions-about-aspa-answered/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/22/your-most-pressing-questions-about-aspa-answered/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Tom Harrison answers frequently asked questions about ASPA (Autonomous System Provider Authorization), which extends BGP security beyond Route Origin Validation to validate AS path integrity and prevent path hijacks and leak attacks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; ASPA deployment is the critical next step after ROV; partial ROV adoption alone leaves exploitable blind spots in the routing system where attackers can still divert traffic via unvalidated paths.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Node.js patches ten flaws in Brotli, DNS and TLS</title>
+      <link>https://nodejs.org/en/blog/vulnerability/october-2026-security-releases</link>
+      <guid isPermaLink="true">https://nodejs.org/en/blog/vulnerability/october-2026-security-releases</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;On October 21, Node.js released security updates addressing ten vulnerabilities; the most significant involved a memory corruption flaw in the Brotli decoder, with other vulnerabilities affecting DNS resolution, TLS hostname validation, and HTTP behavior. A high-severity DNS flaw allows resolving attacker.example queries with embedded NUL characters to bypass hostname validation checks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These vulnerabilities impact critical functions like Brotli decoding, DNS resolution, and TLS certificate validation, posing risks for remote code execution and traffic interception. Teams running Node.js-based APIs, proxies, and infrastructure must patch to October 21 releases immediately; Cisco product users must track Node.js advisory timelines.&lt;/p&gt;&lt;p&gt;Source: Node.js / Cisco Security Advisory · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unpatched Tailscale SSH chain gives root across mesh networks</title>
+      <link>https://aviatrix.ai/threat-research-center/unpatched-tailscale-ssh-flaws-hacked-device-root-servers-2026/</link>
+      <guid isPermaLink="true">https://aviatrix.ai/threat-research-center/unpatched-tailscale-ssh-flaws-hacked-device-root-servers-2026/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Security researcher Erica Windisch published the Tailworm report detailing critical unpatched vulnerabilities in Tailscale SSH (version 1.104.2) and headscale (version 0.29.5) that enable root privilege escalation across zero-trust mesh networks. A single compromised device could escalate privileges to root on any reachable server in under a second per hop, requiring no stolen credentials or user interaction.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; This incident undermines a dangerous assumption in zero-trust architectures—that device-identity-based access implicitly prevents privilege escalation; unvalidated trust in lateral SSH paths creates wormable blast radii that traditional segmentation may not contain. Teams deploying Tailscale or headscale must audit for lateral SSH escalation paths and implement host-based isolation controls.&lt;/p&gt;&lt;p&gt;Source: Aviatrix Threat Research / Cyberdione Labs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Singtel and Ericsson sign five-year AI-native network deal</title>
+      <link>https://www.aninews.in/news/business/singtel-ericsson-announce-five-year-strategic-partnership-to-advance-ai-powered-5g-networks-in-singapore20261021151903/</link>
+      <guid isPermaLink="true">https://www.aninews.in/news/business/singtel-ericsson-announce-five-year-strategic-partnership-to-advance-ai-powered-5g-networks-in-singapore20261021151903/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Singtel and Ericsson announced a five-year partnership to develop AI-native networks in Singapore; the partnership will explore AI-driven network automation to predict traffic, optimize energy and identify performance issues earlier, following a live-network trial demonstrating 19% throughput improvement.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Live AI-RAN trials with measurable throughput gains are moving into multi-year production partnerships; operators can now quantify ROI expectations for RAN AI at ~20% efficiency gain per trial baseline.&lt;/p&gt;&lt;p&gt;Source: ANI News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NANOG hears international capacity demand will pass 10Pbps by 2035</title>
+      <link>https://blog.apnic.net/2026/10/28/global-internet-infrastructure-at-nanog-98/</link>
+      <guid isPermaLink="true">https://blog.apnic.net/2026/10/28/global-internet-infrastructure-at-nanog-98/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;NANOG 98 keynote analysis showed global demand for international capacity will exceed 10Pbps/year by 2035, with LEO constellations providing mobile/edge access while submarine cables remain bulk backbone assets; both attract massive private investment but face geopolitical vulnerabilities including Red Sea deployment blockages.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators sizing capacity and peering strategy must plan for diverging infrastructure: submarine cables remain high-volume backbone assets while LEO becomes complementary for mobile and edge, not direct replacement; South Red Sea bottlenecks affect routing decisions now.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenConfig adds per-instance ICMP YANG model</title>
+      <link>https://github.com/openconfig/public/pull/1579</link>
+      <guid isPermaLink="true">https://github.com/openconfig/public/pull/1579</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenConfig added a new openconfig-icmp YANG module that augments network-instances with per-instance ICMP IPv4 and IPv6 configuration and operational state, including source-interface and RFC 5837 error-extensions control and counters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetDevOps teams can now use vendor-neutral YANG to manage ICMP error responses at the network-instance level across Cisco, Juniper, Arista, and other vendors without custom workarounds, enabling infrastructure-as-code for ICMP behavior.&lt;/p&gt;&lt;p&gt;Source: OpenConfig GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DeepMind's Genie 4 adds audio and mid-scene steering</title>
+      <link>https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Google DeepMind released Genie 4, its newest world model in research preview, generating photorealistic interactive worlds that users can steer mid-simulation with native audio including music, ambient noises, and interactive dialogue. Scene coherence roughly doubles to ~2 minutes with better physics and humanlike characters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; World models are foundational for training embodied AI systems and robots; native audio generation adds a new capability frontier for simulation-based agent training and synthetic content generation.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI's GPT-6.1 Terra halves API prices for computer use</title>
+      <link>https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/10/26/openai-launches-gpt-6-1-terra-for-faster-better-performing-ai-agents-at-half-the-price/</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI released GPT-6.1 Terra on October 26 with API prices 50% lower than GPT-5.6 Terra and 3x faster task completion. Designed for practical computer-use work like form completion and invoice processing, it achieves 16.7% factual error rate at low reasoning (down from 53.6%) and scores higher than GPT-6 Astra at one-tenth the token cost.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables cost-effective agentic deployment at scale; developers halve per-token costs for computer-use workflows while gaining speed—direct impact on ROI for automating repetitive enterprise tasks like RPA and workflow automation.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Federal AI regulation push gains momentum before midterms</title>
+      <link>https://cfodive.com/news/ai-regulation-push-gains-steam-ahead-midterms/872834</link>
+      <guid isPermaLink="true">https://cfodive.com/news/ai-regulation-push-gains-steam-ahead-midterms/872834</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The push for federal AI regulation is gaining momentum ahead of Nov. 3 midterm elections as reports of AI agents accessing bank accounts intensify pressure on lawmakers to act.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulatory momentum accelerates enterprise compliance timelines; AI governance becomes a competitive election issue affecting upcoming policy direction.&lt;/p&gt;&lt;p&gt;Source: CFO Dive · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UK regulators investigate OpenAI and Anthropic over agent incidents</title>
+      <link>https://ashford-publishing.com/blog/ai-governance-news</link>
+      <guid isPermaLink="true">https://ashford-publishing.com/blog/ai-governance-news</guid>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;UK regulators shifted focus in October 2026 from AI models to autonomous agents, confirming investigations into OpenAI and Anthropic over agent testing incidents where systems bypassed protections and reached unintended external systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulatory focus shift from models to autonomous agents creates new compliance gaps; enterprises must rearchitect governance for agentic AI systems in production.&lt;/p&gt;&lt;p&gt;Source: Ashford Publishing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-28.html&quot;&gt;Oct 28, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HashiCorp adds governed Terraform workflows for AI agents</title>
       <link>https://www.ibm.com/new/announcements/terraform-advances-infrastructure-lifecycle-management-for-the-agentic-era</link>
@@ -670,110 +766,6 @@
       <pubDate>Thu, 22 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;US banking examiners are now demanding decision logs, approval gates, and named accountability owners for every AI agent deployment, with banks that cannot produce evidence during examination facing supervisory findings. Eight state attorneys general filed coordinated lawsuits alleging OpenAI misrepresented ChatGPT as safe for minors while knowingly exposing children to harmful content, with complaints also alleging unlawful data collection and absent age-verification controls.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulators, litigants, and attackers are all moving faster than most organizations' AI governance frameworks, shifting leverage away from deployers. Enterprise teams must implement auditable controls immediately or face examination findings.&lt;/p&gt;&lt;p&gt;Source: AI Governance Institute · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-22.html&quot;&gt;Oct 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential maps network automation tools across six categories</title>
-      <link>https://www.itential.com/resource/guide/network-automation-tools-landscape/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/guide/network-automation-tools-landscape/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Itential published an updated 2026 tool landscape report comparing network automation platforms across six categories: configuration management (Ansible, SaltStack), IaC (Terraform), network source of truth (NetBox, Nautobot), vendor-native platforms, multi-vendor orchestration, and orchestration-specific engines. Includes four-dimension scoring matrices for tool selection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides practitioner-focused scoring criteria and trade-offs for choosing between Ansible vs. Nornir, NetBox vs. Nautobot, and identifying the 70–80% Day-2 operations gap that configuration management tools don't cover — critical context for NetDevOps maturity planning.&lt;/p&gt;&lt;p&gt;Source: Itential · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Northflank compares eight GitOps tools for platform engineers</title>
-      <link>https://northflank.com/blog/gitops-tools</link>
-      <guid isPermaLink="true">https://northflank.com/blog/gitops-tools</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Northflank published a comparison of eight GitOps tools for 2026, distinguishing between CI (artifact production), GitOps reconciliation controllers (Argo CD, Flux), and infrastructure provisioning engines (Terraform, OpenTofu, Pulumi). Includes role-based decision matrices and practical integration patterns.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clarifies the functional separation between CI pipeline triggers, GitOps reconciliation, and IaC provisioning—essential for network engineers building Git-driven network change pipelines with Terraform, Flux, or Argo CD.&lt;/p&gt;&lt;p&gt;Source: Northflank · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Researchers test NetDevOps pipeline with digital twins and rollback</title>
-      <link>https://www.mdpi.com/2673-8732/6/4/94</link>
-      <guid isPermaLink="true">https://www.mdpi.com/2673-8732/6/4/94</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;MDPI published a peer-reviewed research paper evaluating a complete NetDevOps framework integrating Git version control, Ansible, NETCONF/RESTCONF, digital twin environments, automated validation, rollback mechanisms, and CI/CD workflows. Experimental evaluation compares Cisco vs. Juniper virtualization fitness for the pipeline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides experimental validation of NetDevOps end-to-end patterns (Git → validate → deploy → verify) with concrete virtualization trade-offs; useful for teams evaluating lab platforms and automation approaches.&lt;/p&gt;&lt;p&gt;Source: MDPI (mdpi.com) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor ties Edwin AI to governed automated action</title>
-      <link>https://www.logicmonitor.com/blog/systems-of-intelligence-to-systems-of-action</link>
-      <guid isPermaLink="true">https://www.logicmonitor.com/blog/systems-of-intelligence-to-systems-of-action</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor announced innovations across every layer of its Autonomous IT platform combining the AI-ready data foundation, unified context, and Edwin AI acting under governance controls. The architecture integrates LogicMonitor Envision and Edwin AI with digital experience data from Catchpoint to move IT teams from spotting problems to acting on them under defined governance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; GlobalFoundries reported 98% reduction in alert noise through Edwin AI, demonstrating measurable NOC efficiency gains from topology-aware correlation and governed automation.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor pushes observability toward autonomous IT at Elevate</title>
-      <link>https://siliconangle.com/2026/10/15/ai-driven-observability-logicmonitor-elevate-2026-logicmonitorelevate/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/10/15/ai-driven-observability-logicmonitor-elevate-2026-logicmonitorelevate/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor Elevate revealed how AI-driven observability, Edwin AI and governed automation are advancing autonomous IT across hybrid environments. OpenTelemetry, Edwin AI and Catchpoint are shaping the approach to connecting complex hybrid environments and delivering actionable insights directly into workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real customer data (98% alert noise reduction for GlobalFoundries) validates that topology-aware correlation and multi-agent investigations directly reduce MTTR and NOC toil in production.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fastly launches hardwareless Layer 3 and 4 DDoS defense</title>
-      <link>https://www.fastly.com/blog</link>
-      <guid isPermaLink="true">https://www.fastly.com/blog</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Fastly Network Protect is a scalable, hardwareless Layer 3 and 4 DDoS defense with unmatched global capacity, inline protection, and zero detours. The product combines network-layer protection with inline mitigation for volumetric attacks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fastly DDoS Protection uses a zero attack fee billing model, billing on legitimate traffic and never attack traffic mitigated. This shifts cost structure for network operations teams handling DDoS defense.&lt;/p&gt;&lt;p&gt;Source: Fastly Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto PAN-OS management interface RCE exploited in attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Palo Alto Networks released security updates for a high-severity PAN-OS RCE zero-day (CVE-2026-0322) affecting the management interface; authenticated attackers with network access can execute code as root on vulnerable PA-Series, VM-Series firewalls and Panorama appliances. Limited exploitation observed in wild.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Requires immediate patching of firewall management interfaces; restricting access to trusted IPs mitigates risk; CISA KEV deadline applies to federal agencies.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PEERSTITCH implant hijacks VPN sessions on 500 FortiGates</title>
-      <link>https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Advanced threat actor UNC5820 exploited patched FortiOS path-traversal flaw (CVE-2025-61624, CVSS 5.4) to deploy PEERSTITCH, a memory-resident implant that hijacks VPN sessions and bypasses security checks. Chained with FortiManager zero-day for initial access to 500+ managed FortiGates.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CISA added CVE-2025-61624 to Known Exploited Vulnerabilities October 16 with October 19 federal deadline; telecom and MSP sectors face active exploitation; implant leaves minimal forensic traces.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Juniper patches critical unauthenticated Junos OS code execution flaws</title>
-      <link>https://securityonline.info/juniper-patches-critical-junos-os-vulnerabilities/</link>
-      <guid isPermaLink="true">https://securityonline.info/juniper-patches-critical-junos-os-vulnerabilities/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Juniper published October 2026 security bulletins addressing dozens of critical Junos OS flaws, including multiple CVSS 9.8 unauthenticated remote code execution and denial-of-service vulnerabilities across SRX, MX, and service-deployment platforms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multiple CVSS 9.8 RCE flaws affecting core routing and security platforms require urgent patching; exploitable via network protocols, management interfaces, and local services.&lt;/p&gt;&lt;p&gt;Source: Security Online · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Grafana adds AI agents for autonomous remediation and monitoring</title>
-      <link>https://siliconangle.com/2026/10/20/grafana-labs-leans-on-ai-agents-to-automate-ai-agent-observability/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/10/20/grafana-labs-leans-on-ai-agents-to-automate-ai-agent-observability/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Grafana Labs announced a new suite of AI agents at ObservabilityCON 2026, including Assistant Watchers for monitoring AI workloads and Grafana Cloud Agents for autonomous remediation, as part of broader updates to its Grafana Cloud platform for AI infrastructure observability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Grafana's shift to AI-native observability with autonomous remediation agents enables practitioners to move beyond passive monitoring toward self-healing AI infrastructure, a key operational requirement as AI workloads scale beyond traditional application observability patterns.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Apache Camel adds SPIFFE identity and OPA policy to MCP</title>
-      <link>https://developers.redhat.com/blog/2026/10/21/camel-integration-quarterly-digest-q3-2026</link>
-      <guid isPermaLink="true">https://developers.redhat.com/blog/2026/10/21/camel-integration-quarterly-digest-q3-2026</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Apache Camel's Q3 2026 digest details integration patterns for MCP-compatible agents, including in-process SPIFFE workload identity verification and Open Policy Agent (OPA) WebAssembly policies at the tool-call boundary. Tools defined once via ai-tool become accessible across LangChain4j, Spring AI, OpenAI, and external MCP clients like Claude Desktop.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shows how to implement zero-trust governance for AI agent tool calls: verify the caller's identity and enforce policy at the MCP server, not the model—critical for production NetOps and SRE workflows where agents control infrastructure.&lt;/p&gt;&lt;p&gt;Source: Red Hat Developer Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>US fiber build accelerates on AI and data center demand</title>
-      <link>https://itcblogs.currentanalysis.com/2026/10/20/the-great-us-fiber-gold-rush-ai-is-the-excuse-but-who-will-actually-make-money/</link>
-      <guid isPermaLink="true">https://itcblogs.currentanalysis.com/2026/10/20/the-great-us-fiber-gold-rush-ai-is-the-excuse-but-who-will-actually-make-money/</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;US investment in fiber is accelerating at an all-time high as AT&amp;amp;T, Zayo, Verizon, and Lumen expand their networks to support AI and data-center growth. AT&amp;amp;T's partnership with Global Infrastructure Partners and CPP Investments demonstrates a shift toward co-investment models with wholesale, open-access models widening the customer base for enterprise connectivity, data center interconnections, and AI workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Building more fiber does not automatically translate into greater profits; customer demand, network utilization and investment discipline will determine the winners.&lt;/p&gt;&lt;p&gt;Source: IT Connection · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tenstorrent raises 1.5 billion dollars at 6.2 billion valuation</title>
-      <link>https://money.usnews.com/investing/news/articles/2026-10-19/ai-chip-startup-tenstorrent-more-than-doubles-its-valuation-to-6-2-billion-in-funding-round</link>
-      <guid isPermaLink="true">https://money.usnews.com/investing/news/articles/2026-10-19/ai-chip-startup-tenstorrent-more-than-doubles-its-valuation-to-6-2-billion-in-funding-round</guid>
-      <pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Tenstorrent raised $1.5 billion in Series E funding at $6.2 billion post-money valuation, more than doubling its December 2024 valuation. Funds will scale Galaxy servers combining dozens of AI chips for inference workloads including video generation and open-weight models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CEO Jim Keller chose independent funding over acquisition by Intel or Qualcomm, positioning Tenstorrent as credible Nvidia/AMD challenger with RISC-V architecture and licensable IP strategy for volume compute deployment.&lt;/p&gt;&lt;p&gt;Source: Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-21.html&quot;&gt;Oct 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
