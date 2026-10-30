@@ -6,94 +6,134 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 30 Oct 2026 14:09:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 16:45:53 GMT</lastBuildDate>
     <item>
-      <title>Oracle adds multiplanar failover to Acceleron AI networking fabric</title>
-      <link>https://www.oracle.com/apac/news/announcement/ai-world-oracle-unveils-new-cloud-networking-innovations-for-ai-2026-10-27/</link>
-      <guid isPermaLink="true">https://www.oracle.com/apac/news/announcement/ai-world-oracle-unveils-new-cloud-networking-innovations-for-ai-2026-10-27/</guid>
+      <title>Nautobot 3.2.8 patches dependency CVEs and adds HA guide</title>
+      <link>https://github.com/nautobot/nautobot/releases/tag/v3.2.8</link>
+      <guid isPermaLink="true">https://github.com/nautobot/nautobot/releases/tag/v3.2.8</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Nautobot v3.2.8 released October 27, 2026 addressing multiple security vulnerabilities including CVE-2026-114145 in GitPython, CVE-2026-114603 in OpenTelemetry SDK, and CVE-2026-115897. Added High Availability deployment guide and restricted queryset enhancements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams running Nautobot in production must update to patch CVE-2026-114145 (GitPython) and OpenTelemetry vulnerabilities; security-sensitive deployments using Nautobot for multi-tenant automation require queryset restriction updates.&lt;/p&gt;&lt;p&gt;Source: GitHub Releases · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ThousandEyes agents now propose network fixes with visible reasoning</title>
+      <link>https://www.techzine.eu/blogs/applications/145331/cisco-extends-thousandeyes-deeper-into-the-network-to-build-trust/</link>
+      <guid isPermaLink="true">https://www.techzine.eu/blogs/applications/145331/cisco-extends-thousandeyes-deeper-into-the-network-to-build-trust/</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Cisco introduced Agentic Actions within ThousandEyes, enabling AI agents to propose network remediation actions with full transparency into reasoning, moving network operations beyond dashboard-driven workflows toward AI-assisted and agentic operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operations is shifting from dashboard-driven to agentic workflows; visibility platforms must now integrate with automation frameworks and provide explainable AI reasoning for NOC teams to trust autonomous actions.&lt;/p&gt;&lt;p&gt;Source: Techzine Global · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ThousandEyes adds BGP monitoring for internal enterprise routes</title>
+      <link>https://www.sdxcentral.com/news/cisco-thousandeyes-brings-improved-bgp-visibility-to-enterprise-networks/</link>
+      <guid isPermaLink="true">https://www.sdxcentral.com/news/cisco-thousandeyes-brings-improved-bgp-visibility-to-enterprise-networks/</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Cisco ThousandEyes introduced Enterprise Routing Assurance, a BGP monitoring feature enabling visibility into internal enterprise network routes that public BGP monitors cannot observe, using dedicated agent-based telemetry collection.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise Routing Assurance correlates BGP announcements with network and application performance, enabling NOC teams to detect routing-induced outages proactively and validate changes during planned maintenance without external visibility gaps.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle extends Acceleron fabric with RDMA on front-end compute</title>
+      <link>https://www.oracle.com/europe/news/announcement/ai-world-oracle-unveils-new-cloud-networking-innovations-for-ai-2026-10-27/</link>
+      <guid isPermaLink="true">https://www.oracle.com/europe/news/announcement/ai-world-oracle-unveils-new-cloud-networking-innovations-for-ai-2026-10-27/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Oracle announced new capabilities in Oracle Acceleron, OCI's suite of networking and infrastructure technologies for running demanding AI workloads reliably, securely, and at scale. Features include a Collective Communications Library for handling network path failures and Transparent Front-End Multiplanar Networking with built-in failover and congestion control for front-end RDMA traffic.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCI's programmable networking architecture with native multiplanar support and transparent RDMA control provides operational model alternative to NVIDIA Spectrum-X for large-scale AI cloud operators and sovereign AI builders.&lt;/p&gt;&lt;p&gt;Source: Oracle · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Oracle announced new capabilities in Oracle Acceleron, OCI's suite of networking and infrastructure technologies for AI workloads. Updates include a new fabric for RDMA connectivity on front-end compute, expanded NVMe block-storage options, collective communications library for resilience during network failures, and transparent front-end multiplanar networking with congestion control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; At scale, networking becomes a fundamental constraint—multiplanar front-end RDMA and collective communications add resilience and reduce tail latency for large cluster training runs, directly improving GPU utilization.&lt;/p&gt;&lt;p&gt;Source: Oracle Cloud Infrastructure · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>BMP monitoring can catch MAC hijacks in EVPN fabrics</title>
-      <link>https://blog.apnic.net/2026/10/28/the-evpn-trust-challenge-how-to-detect-and-contain-internal-mac-hijacks/</link>
-      <guid isPermaLink="true">https://blog.apnic.net/2026/10/28/the-evpn-trust-challenge-how-to-detect-and-contain-internal-mac-hijacks/</guid>
+      <title>Cloudflare details what took the internet offline last quarter</title>
+      <link>https://blog.cloudflare.com/what-took-the-internet-offline-in-q3-2026/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/what-took-the-internet-offline-in-q3-2026/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;EVPN MAC mobility enables seamless workload movement, but MAC spoofing can amplify damage by redirecting traffic through BGP. Operators can export BGP updates using BMP to a collector for route-reflector monitoring and detect anomalous MAC moves.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fabric operators using EVPN need visibility into MAC mobility events and BGP path anomalies to prevent hijacks in data center environments.&lt;/p&gt;&lt;p&gt;Source: APNIC Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Cloudflare Radar analysis of global Internet disruptions during Q3 2026, examining major outages and their causes affecting global connectivity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides empirical outage data and patterns for infrastructure planning and incident response benchmarking.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Forged documents let attacker hijack LACNIC routes via transit provider</title>
-      <link>https://btw.media/en/sanjaya-bgp-hijack-forged-customer-identity</link>
-      <guid isPermaLink="true">https://btw.media/en/sanjaya-bgp-hijack-forged-customer-identity</guid>
-      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;APNIC and LACNIC investigated three brief route hijacks of LACNIC address space in July 2025. An attacker used forged letterhead and a lookalike domain to convince a multinational transit provider to enable BGP for an unauthorized ASN, then announced spoofed routes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators must implement strict ASN onboarding controls and BGP session validation—forged corporate identity can bypass technical controls at ingress.&lt;/p&gt;&lt;p&gt;Source: btw.media · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Attackers exploit PHP2Shell flaws on Palo Alto management interfaces</title>
-      <link>https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html</guid>
+      <title>eMudhra issued certificates with keys crackable in seconds</title>
+      <link>https://aviatrix.ai/threat-research-center/compromised-tls-certificates-emudhra-pki-2026/</link>
+      <guid isPermaLink="true">https://aviatrix.ai/threat-research-center/compromised-tls-certificates-emudhra-pki-2026/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Threat actors are actively exploiting PHP2Shell vulnerabilities (CVE-2026-109618, CVE-2026-109619) against publicly-accessible Palo Alto Networks management interfaces; unauthenticated remote code execution affects all PHP installations including Apache mod_php, PHP-FPM, php-cgi, FrankenPHP and LiteSpeed.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CISA added CVE-2026-46300 to KEV catalog requiring federal agencies to patch by October 31, 2026; any internet-exposed PAN-OS management interface requires immediate patching as exploit is actively chained with kernel privilege-escalation bugs for full system compromise.&lt;/p&gt;&lt;p&gt;Source: Palo Alto Networks, CISA, Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Indian Certificate Authority eMudhra Limited issued eight TLS certificates with catastrophically weak private keys (3–8 bits of entropy instead of 384 bits for NIST P-384), enabling recovery of private keys and MITM attacks. Google removed emSign ECC Root CA-G3 from Chrome Root Store and blocked keys via CRLSet update on 27 October 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Well-resourced adversaries can trivially factor and recover private keys to mount MITM attacks against TLS sessions using eMudhra intermediates. Network teams must immediately audit certificate chains and implement pinning or revocation checking on all infrastructure relying on eMudhra-issued certificates.&lt;/p&gt;&lt;p&gt;Source: Aviatrix Threat Research Center · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Exploited Cisco firewall VPN flaw reloads ASA and FTD devices</title>
-      <link>https://blog.openvpn.net/cve-2026-76418-cisco-asa-ftd-vpn-dos/</link>
-      <guid isPermaLink="true">https://blog.openvpn.net/cve-2026-76418-cisco-asa-ftd-vpn-dos/</guid>
+      <title>Node.js Brotli decoder flaw exploited for remote code execution</title>
+      <link>https://www.helpnetsecurity.com/2026/10/27/node2shell-broccoli2shell-vulnerability-cve-2026-111497/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/10/27/node2shell-broccoli2shell-vulnerability-cve-2026-111497/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Cisco disclosed CVE-2026-76418, an actively exploited unauthenticated remote denial-of-service flaw in Secure Firewall ASA and FTD Remote Access SSL VPN service (CVSS 8.6) that triggers unexpected device reloads via crafted requests sent without requiring VPN authentication.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CISA added CVE-2026-76418 to KEV on October 29; this vulnerability directly disrupts VPN availability for remote workers and branch sites, requiring immediate identification of affected ASA/FTD releases and patching or segmentation controls.&lt;/p&gt;&lt;p&gt;Source: Cisco, CISA, OpenVPN · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Node.js released security updates on 21 October fixing CVE-2026-111497, an out-of-bounds write in the bundled Brotli decoder that allows remote code execution via malformed Brotli-compressed data. CISA added the flaw to Known Exploited Vulnerabilities catalog on 27 October with evidence of active exploitation in the wild.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Applications decompressing untrusted Brotli data via fetch() API, Express 5 body-parser, or reverse proxies are at immediate risk. Infrastructure teams must upgrade Node.js to 22.23.4, 24.22.1, or 26.12.1 and audit ingress configurations for automatic Brotli decompression. End-of-life Node.js versions (20 and earlier) have no official fix.&lt;/p&gt;&lt;p&gt;Source: Help Net Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>GoAhead TLS silently accepts revoked client certificates</title>
-      <link>https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</guid>
+      <title>Actively exploited PHP flaws hit all PAN-OS versions</title>
+      <link>https://www.zetik.com/news/article/story_id-p008-227545</link>
+      <guid isPermaLink="true">https://www.zetik.com/news/article/story_id-p008-227545</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;GoAhead TLS library version 6.1.0 and earlier silently accepts revoked client certificates when using OpenSSL backend with mutual-TLS and revocation lists configured; CVE-2026-115881 (CVSS 9.1) allows attackers holding revoked keys to authenticate without revocation enforcement.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teams using GoAhead or similar embedded TLS libraries for mTLS authentication must immediately verify revocation list enforcement is active and upgrade to version 6.1.1; revoked certificates bypass zero-trust mechanisms until next revocation list refresh.&lt;/p&gt;&lt;p&gt;Source: Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CISA added PHP2Shell flaws CVE-2026-109618 and CVE-2026-109619 to Known Exploited Vulnerabilities catalog on 26 October, confirming active exploitation. Both flaws allow unauthenticated remote code execution on PHP servers. Patches released 21 October; all versions of Palo Alto PAN-OS and Panorama affected with fixes rolling out through 30 October.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; PHP powers 73% of internet-facing web server workloads; Qualys found 156 million PHP installations with known versions on internet-facing assets and 110 million on end-of-life branches. Operations teams managing PAN-OS, Fortinet FortiMail, Cisco Secure Email, or any PHP-based management interfaces must patch immediately as this flaw directly compromises firewall, email security appliance, and web application firewall perimeters.&lt;/p&gt;&lt;p&gt;Source: Zetik · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cisco AgenticOps automates network remediation with human approval</title>
-      <link>https://www.cio.com/video/4241720/cisco-agenticops-from-ai-insights-to-network-action-with-operations-in-control.html</link>
-      <guid isPermaLink="true">https://www.cio.com/video/4241720/cisco-agenticops-from-ai-insights-to-network-action-with-operations-in-control.html</guid>
+      <title>Neo hires former Cisco Security CRO Scott Stout</title>
+      <link>https://www.globenewswire.com/news-release/2026/10/26/3388119/0/en/neo-appoints-scott-stout-as-chief-revenue-officer.html</link>
+      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/26/3388119/0/en/neo-appoints-scott-stout-as-chief-revenue-officer.html</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Neo, an agentic software security company, appointed Scott Stout as Chief Revenue Officer on October 26. Stout brings more than two decades of cybersecurity leadership, including prior service as CRO at Cisco Security and 10 years at Palo Alto Networks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Stout's appointment signals Neo's shift from stealth-mode security startup to scaling enterprise go-to-market as agentic AI governance becomes critical for enterprise adoption.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire / Neo Security, Inc. · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IBM extends Vault and Terraform to govern AI agents</title>
+      <link>https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise</link>
+      <guid isPermaLink="true">https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco demonstrates AgenticOps in Cisco Cloud Control, showing how agentic AI identifies network issues, diagnoses root causes, recommends fixes, and automates remediation with human oversight via Deep Reasoning mode for configuration analysis and security audits.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates production-ready agentic NetOps workflow with explicit human-in-the-loop control, showing how enterprises can scale operations without proportional headcount growth.&lt;/p&gt;&lt;p&gt;Source: CIO.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;IBM announced new capabilities to help developers and IT teams deploy AI agents with clear authority and accountability, extending HashiCorp Vault to enforce least-privilege access and enable real-time revocation on unauthorized agent actions. Terraform features including Terraform policy, Developer Portal, and remote MCP server enable agents to access approved infrastructure configurations through established controls.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; New Terraform capabilities and Vault extensions enable humans and AI agents to operate safely at scale with governed discovery, compliance evaluation, and agent self-service through approved infrastructure patterns.&lt;/p&gt;&lt;p&gt;Source: IBM Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Telus to spend CA$70bn on Canadian network and AI sites</title>
-      <link>https://www.datacenterdynamics.com/en/news/telus-outlines-50bn-network-infrastructure-investment-to-support-canadas-ai-drive/</link>
-      <guid isPermaLink="true">https://www.datacenterdynamics.com/en/news/telus-outlines-50bn-network-infrastructure-investment-to-support-canadas-ai-drive/</guid>
+      <title>IBM maps CVE blast radius to Terraform-managed infrastructure</title>
+      <link>https://www.techtarget.com/news/infrastructure-anchors-new-ibm-agentic-security-stack/873130/</link>
+      <guid isPermaLink="true">https://www.techtarget.com/news/infrastructure-anchors-new-ibm-agentic-security-stack/873130/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Telus announced a CA$70 billion investment across Canada over five years, planning to launch two sovereign AI facilities in Kamloops, British Columbia, and Rimouski, Quebec. The announcement coincides with Bell Canada's launch of 'Bell AI Fabric,' a plan to help build AI data centers across the country.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The sovereign AI factory will leverage Telus's PureFibre network with sustainable data centers powered by 99 percent renewable energy to deliver AI as a Service, directly integrating network and compute infrastructure for operators.&lt;/p&gt;&lt;p&gt;Source: Data Center Dynamics · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;IBM integrated agentic security with infrastructure through HashiCorp Vault and Terraform integration with IBM Concert Protect, mapping CVE blast radius to affected infrastructure topology and orchestrating remediation through Terraform. Terraform's search feature now applies policies to infrastructure assets before they are moved into management.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Terraform policy enforcement during discovery prevents agents from taking action on assets not under consistent governance, closing the loop on security posture before autonomous remediation begins.&lt;/p&gt;&lt;p&gt;Source: TechTarget · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Verizon says AI agents will push uplink ratios to 1:1</title>
-      <link>https://rcrwireless.com/20261027/carriers/ai-needs-more-than-incremental-6g-fixes-says-verizon-as-uplink-ratio-shifts-11-la28-looms</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20261027/carriers/ai-needs-more-than-incremental-6g-fixes-says-verizon-as-uplink-ratio-shifts-11-la28-looms</guid>
+      <title>UBS runs 12,700 AI agents across 608 production cases</title>
+      <link>https://riorundown.substack.com/p/ai-news-oct-30-2026-ai-infrastructure</link>
+      <guid isPermaLink="true">https://riorundown.substack.com/p/ai-news-oct-30-2026-ai-infrastructure</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Verizon CTO Santiago Tenorio outlined a shift from &amp;quot;transactional&amp;quot; AI to constant &amp;quot;context-aware&amp;quot; AI feeds, with uplink ratio possibly shifting 9:1 to 1:1 to support AI agent demands. With AI, agents will require as many video feeds and resolution as required depending on use case.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; 6G will be AI native, and the openness of interfaces and native standardization following Open RAN specification will accelerate AI inclusion into network design, requiring fundamental rearchitecture for uplink capacity and telemetry.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;UBS reported running 12,700 AI agents with 608 live production use cases, an 81% year-over-year increase. Oracle and Google announced Google TPUs on Oracle Cloud Infrastructure starting 2027, explicitly targeting agentic workloads requiring long-context reasoning and multi-step execution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Least-privilege permission management at cloud platform, gateway, and identity layers is now the operational norm for agent fleets, and cloud providers are building dedicated infrastructure tiers for agentic workloads.&lt;/p&gt;&lt;p&gt;Source: Rio Rundown · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Mistral opens weights for trillion-parameter security-focused model</title>
-      <link>https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/</guid>
+      <title>OpenTelemetry eBPF instrumentation hits 1.0 with zero-code tracing</title>
+      <link>https://opentelemetry.io/blog/2026/obi-v1-release/</link>
+      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/obi-v1-release/</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenTelemetry eBPF Instrumentation (OBI) v1.0.0 brings zero-code observability to running Linux applications using eBPF and runtime-specific instrumentation to capture metrics and traces across services, languages, and frameworks without code modification.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Stable v1.0 foundation eliminates instrumentation friction in heterogeneous environments; SRE/AIOps teams can now deploy automatic telemetry capture across polyglot services without application changes or sidecars.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DeepMind's Genie 4 generates interactive worlds with native audio</title>
+      <link>https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/</link>
+      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Mistral released the weights for its 1.05-trillion-parameter open-source model Mistral Large 4, allowing businesses and governments to download and deploy the system themselves. The model uses 47 percent fewer tokens per task than open-weight competitor GLM-5.3 and achieved 48% on the Artificial Analysis Coding Agent Index.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Organizations gain control over AI for defensive security operations with access that cannot be cut off because the model is open-weighted, eliminating reliance on API-dependent closed models for sensitive security work.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Google DeepMind announced Genie 4, its new world model for real-time interactive simulation, released as a research preview to trusted testers. The model is natively multimodal and generates audio natively—ambient sounds, music, and interactive dialogue alongside visuals.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners building robotics training systems and creative applications can now access a world model with real-time steering and native audio for safe simulation environments.&lt;/p&gt;&lt;p&gt;Source: Google DeepMind Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Norway raises cyber threat level over agentic AI risks</title>
-      <link>https://quantidal.substack.com/p/ai-governance-and-risk-brief-october</link>
-      <guid isPermaLink="true">https://quantidal.substack.com/p/ai-governance-and-risk-brief-october</guid>
+      <title>Cohere raises CAD 7 billion in record Canadian round</title>
+      <link>https://briefglance.com/articles/the-cad-35-billion-bet-on-sovereign-ai-inside-coheres-historic-series-e</link>
+      <guid isPermaLink="true">https://briefglance.com/articles/the-cad-35-billion-bet-on-sovereign-ai-inside-coheres-historic-series-e</guid>
       <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Poland's Act on Artificial Intelligence Systems key provisions entered into force October 28, 2026. Norway's national cybersecurity agency NSM raised cybersecurity risk level to high citing LLMs and agentic AI as serious threats.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multiple jurisdictions enacted AI governance changes within 48 hours—statutory rules, threat escalation, security evaluation methodology, and chatbot safety restrictions. Operators must track cross-jurisdictional compliance shifts rapidly.&lt;/p&gt;&lt;p&gt;Source: Quantidal · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Toronto-based Cohere announced the initial close of its Series E funding round targeting CAD $7 billion at an implied post-money valuation of CAD $35.7 billion, the largest private capital raise in Canadian history. The European foothold was accelerated by Cohere's acquisition of German AI startup Aleph Alpha, integrating explainable AI research with scaling capabilities to compete with US-based labs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Marks geopolitical shift in AI infrastructure investment toward non-US/China builders, signaling enterprise demand for sovereign AI alternatives amid regulatory fragmentation.&lt;/p&gt;&lt;p&gt;Source: BriefGlance.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Circular AI financing deals spread across Asian markets</title>
+      <link>https://bloomberg.com/news/newsletters/2026-10-30/circular-ai-deals-spread-to-asia-widening-contagion-risk</link>
+      <guid isPermaLink="true">https://bloomberg.com/news/newsletters/2026-10-30/circular-ai-deals-spread-to-asia-widening-contagion-risk</guid>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Circular financing deals—where capital invested in an AI company flows back to the investor through technology purchases—are now taking hold in Asia, widening potential fallout from a financing model that risks overstating demand, inflating valuations and leaving lenders holding more risk.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Understanding circular AI deal structures helps practitioners assess vendor valuation credibility and capital-intensive infrastructure commitments underlying enterprise AI deployment partnerships.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-30.html&quot;&gt;Oct 30, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Oracle adds RDMA front-end fabric to OCI Acceleron</title>
