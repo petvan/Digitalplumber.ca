@@ -6,7 +6,71 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 30 Oct 2026 16:45:53 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 15:50:24 GMT</lastBuildDate>
+    <item>
+      <title>NetClaw brings open source MCP assistant to network engineers</title>
+      <link>https://packetpushers.net/podcasts/heavy-networking/hn848-netclaw-your-open-source-network-assistant/</link>
+      <guid isPermaLink="true">https://packetpushers.net/podcasts/heavy-networking/hn848-netclaw-your-open-source-network-assistant/</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;John Capobianco released NetClaw, an open-source automation assistant for network engineers built on MCP (Model Context Protocol) with production-safe security architecture. The tool helps engineers automate configuration and troubleshooting tasks while maintaining operational safety guardrails.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides practitioners with an open-source alternative for integrating LLM-based automation into network operations workflows without vendor lock-in; MCP support enables federated multi-agent networks across teams.&lt;/p&gt;&lt;p&gt;Source: Packet Pushers (Heavy Networking podcast) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forrester names Datadog a leader in AIOps platforms</title>
+      <link>https://www.datadoghq.com/blog/datadog-aiops-platforms-forrester-wave-2026/</link>
+      <guid isPermaLink="true">https://www.datadoghq.com/blog/datadog-aiops-platforms-forrester-wave-2026/</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Datadog named Leader in Forrester Wave AIOps Platforms Q4 2026, reflecting commitment to autonomous operations with unified platform enabling AI agents to detect, investigate, and remediate production issues while maintaining human oversight.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unified platform delivers full-stack AIOps coverage across observability, security, and AI workloads; enables agentic operations with impact correlation to prioritize incidents by business consequence rather than alert volume.&lt;/p&gt;&lt;p&gt;Source: Datadog Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>State actors exploit maximum severity Cisco SD-WAN bypass flaw</title>
+      <link>https://cybersecuritynews.com/critical-cisco-sd-wan-0-day-flaw/</link>
+      <guid isPermaLink="true">https://cybersecuritynews.com/critical-cisco-sd-wan-0-day-flaw/</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;State-linked APT group UAT-11473 exploited CVE-2026-20127, a maximum-severity authentication bypass in Cisco Catalyst SD-WAN Controller/Manager, to gain admin access and install KeyDrift—a malware framework that steals AES-256 encryption keys from the control plane. Exploitation confirmed ongoing since at least 2023; Volt Typhoon also observed exploiting post-disclosure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SD-WAN operators must immediately patch to fixed versions and isolate vManage/vSmart controllers from untrusted networks—active exploitation enables encryption key extraction and lateral movement across corporate infrastructure; impacts all Cisco SD-WAN deployments regardless of configuration.&lt;/p&gt;&lt;p&gt;Source: CyberSecurityNews · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CISA flags PHP, VMware ESX and Linux kernel exploits</title>
+      <link>https://www.cisa.gov/known-exploited-vulnerabilities-catalog</link>
+      <guid isPermaLink="true">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added three critical vulnerabilities to Known Exploited Vulnerabilities catalog: CVE-2026-109618/109619 (PHP2Shell, unauthenticated RCE in PHP), CVE-2026-41709 (VMware ESX), and CVE-2026-46300 (Linux kernel). All are under active exploitation; federal agencies have mandatory remediation deadlines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure teams must patch PHP to 8.2.17+, 8.3.5+, or 8.4.0+ immediately (all versions affected by unauthenticated RCE); audit VMware ESX for unauthorized activity; update Linux kernels—KEV entries carry BOD 26-04 forensic triage requirements with federal deadlines of October 31 for CVE-2026-46300 and CVE-2026-109618.&lt;/p&gt;&lt;p&gt;Source: CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lumen routes AI workloads by power availability and cost</title>
+      <link>https://www.tmcnet.com/usubmit/2026/10/29/10472193.htm</link>
+      <guid isPermaLink="true">https://www.tmcnet.com/usubmit/2026/10/29/10472193.htm</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Lumen Technologies announced on October 29, 2026 three strategic initiatives addressing AI demands, quantum connectivity, and cybersecurity. Emerald AI enables Lumen's intelligent network to automatically shift AI workloads based on power availability, cost, and performance factors, integrating energy intelligence with programmable network and edge locations to route computing among sites based on energy availability, network performance, latency, security and cost.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators can now optimize AI infrastructure deployment economics and carbon footprint through intelligent traffic engineering based on real-time power and cost signals.&lt;/p&gt;&lt;p&gt;Source: TMCnet / Lumen Technologies Official · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mistral releases trillion parameter Large 4 under MIT license</title>
+      <link>https://cleus.ai/blog/new-ai-models-october-2026</link>
+      <guid isPermaLink="true">https://cleus.ai/blog/new-ai-models-october-2026</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Mistral published Mistral Large 4, nicknamed 'Le Chonk', on Hugging Face as a 1-trillion-parameter, natively multimodal model on October 29. Commercial use and fine-tuning allowed; selling as hosted service requires separate license.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Trained on 3,800 Nvidia Grace Blackwell GPUs in Europe, it gives European companies a frontier-scale model they can self-host without relying on US-based APIs.&lt;/p&gt;&lt;p&gt;Source: cleus.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Most European tech leaders see grey areas in AI Act</title>
+      <link>https://quantidal.substack.com/p/ai-governance-and-risk-brief-october</link>
+      <guid isPermaLink="true">https://quantidal.substack.com/p/ai-governance-and-risk-brief-october</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;A Veeam survey showed 62% of European and MENA tech leaders believe the EU AI Act leaves grey areas for practical implementation, with 63% concerned about unintended legal risks. Poland's Act on Artificial Intelligence Systems entered into force on 28 October 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise teams face material compliance uncertainty in the EU's flagship AI framework, while new national rules expand the regulatory patchwork requiring vendor and internal process updates.&lt;/p&gt;&lt;p&gt;Source: Quantidal · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sovereign AI becomes a boardroom mandate as rules diverge</title>
+      <link>https://cio.com/article/4242869/the-new-geopolitics-of-it-why-sovereign-ai-is-the-next-boardroom-mandate.html</link>
+      <guid isPermaLink="true">https://cio.com/article/4242869/the-new-geopolitics-of-it-why-sovereign-ai-is-the-next-boardroom-mandate.html</guid>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Grassroots generative AI adoption across enterprises has exposed vulnerabilities in data privacy, regulatory compliance, and market concentration. Gartner forecasts 35% of countries will be locked into region-specific AI platforms utilizing proprietary contextual data by 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprises must now architect AI infrastructure with sovereign data residency as a primary operational requirement, not just a compliance checkbox, as geopolitical fragmentation creates vendor lock-in risk.&lt;/p&gt;&lt;p&gt;Source: CIO.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-31.html&quot;&gt;Oct 31, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nautobot 3.2.8 patches dependency CVEs and adds HA guide</title>
       <link>https://github.com/nautobot/nautobot/releases/tag/v3.2.8</link>
@@ -662,78 +726,6 @@
       <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Hangzhou-based AI startup DeepSeek raised approximately $15 billion backed by Tencent and Contemporary Amperex Technology, the largest of $16.07 billion in Asian startup funding this week. The funding supports data center investment and open-source model development as DeepSeek prepares for potential IPO.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; China's accelerated AI capital deployment and geopolitical competition over AI capability directly affects U.S. enterprise AI strategy, export controls, and infrastructure investment prioritization.&lt;/p&gt;&lt;p&gt;Source: TechLoy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Power failure knocks out Google Cloud's London region</title>
-      <link>https://www.thousandeyes.com/blog/google-cloud-outage-analysis-october-20-2026</link>
-      <guid isPermaLink="true">https://www.thousandeyes.com/blog/google-cloud-outage-analysis-october-20-2026</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Starting at approximately 06:10 UTC on October 20, Google Cloud's europe-west2 (London) region experienced a complete drop in availability with network traffic unable to reach the service, which Google attributed to power-related issues.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; ThousandEyes' monitoring and Internet Insights service provide practitioners real-time outage detection across thousands of global services, enabling rapid incident correlation and impact assessment.&lt;/p&gt;&lt;p&gt;Source: ThousandEyes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>eMudhra certificates blocked after weak keys allow HTTPS forgery</title>
-      <link>https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/</link>
-      <guid isPermaLink="true">https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;A security researcher identified on October 17, 2026, a cryptographic weakness affecting eight eMudhra intermediate certificates, rendering private keys generated with insufficient randomness (weak cryptographic entropy), enabling anyone to forge trusted HTTPS certificates to impersonate any website. Chrome and Firefox blocked the eight certificates within hours after Chrome verified the findings.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Website operators with certificates chaining to emSign ECC Root CA - G3 must immediately acquire and install a new TLS certificate from another PKI hierarchy; network teams must also update CA bundles in deployed infrastructure to prevent fraudulent certificate acceptance.&lt;/p&gt;&lt;p&gt;Source: Google Chrome Root Program / Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fortinet and Palo Alto flaws expose 70,000 credentials</title>
-      <link>https://safeguard.sh/resources/blog/edge-device-access-broker-campaign-70000-credentials-fortiweb-pan-os</link>
-      <guid isPermaLink="true">https://safeguard.sh/resources/blog/edge-device-access-broker-campaign-70000-credentials-fortiweb-pan-os</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Hackers are targeting internet-facing Fortinet FortiGate firewalls, FortiWeb appliances, and Palo Alto Networks GlobalProtect systems to steal passwords and maintain access to corporate networks. The campaign exploits CVE-2025-64446 (FortiWeb path confusion) and CVE-2026-0257 (PAN-OS GlobalProtect authentication bypass), with 70,000+ credentials exposed.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network teams must prioritize patching CVE-2025-64446 and CVE-2026-0257, and audit credential stores on compromised edge appliances; the combination of initial compromise and credential theft enables rapid lateral movement into internal systems.&lt;/p&gt;&lt;p&gt;Source: Safeguard.sh (Group-IB / NyxLab research) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T and Verizon report throughput gains from AI RAN</title>
-      <link>https://voip.review/2026/10/20/ai-transforms-radio-networks-att-verizon-innovations/</link>
-      <guid isPermaLink="true">https://voip.review/2026/10/20/ai-transforms-radio-networks-att-verizon-innovations/</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and Verizon report real performance gains from AI-based RAN tools. AT&amp;amp;T trials with Ericsson delivered significant improvements in throughput and spectral efficiency. Verizon achieved better downlink spectral efficiency through AI-based link adaptation and improved coverage.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides first field results of AI-RAN deployments achieving measurable gains in spectral efficiency and coverage without expanding cell sites—directly impacts network planning and spectrum ROI calculations.&lt;/p&gt;&lt;p&gt;Source: VoIP Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T and T-Mobile add guardrails around network AI agents</title>
-      <link>https://money.usnews.com/investing/news/articles/2026-10-23/at-t-t-mobile-tighten-ai-guardrails-as-autonomous-networks-remain-years-away</link>
-      <guid isPermaLink="true">https://money.usnews.com/investing/news/articles/2026-10-23/at-t-t-mobile-tighten-ai-guardrails-as-autonomous-networks-remain-years-away</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and T-Mobile are investing in security guardrails to protect customer data and network infrastructure as AI integration ramps up. As AI agents automate workflows with declining human intervention, cybersecurity concerns grow over access to sensitive information and connected software.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Highlights security guardrails and orchestration constraints operators are implementing for agentic AI—essential context for NetDevOps teams designing automation policies and governance frameworks around AI-driven network changes.&lt;/p&gt;&lt;p&gt;Source: Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry names ten candidates for governance committee election</title>
-      <link>https://opentelemetry.io/blog/2026/gc-candidates/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/gc-candidates/</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry Election Committee announced ten candidates for the 2026 Governance Committee with voting opening October 26 and closing October 28, 2026. Election selects four seats post-CNCF graduation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenTelemetry governance now directly shapes observability standards adoption in your infrastructure; voting determines project priorities for platforms, testing, and vendor interoperability.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic launches Claude Duet proactive agent app</title>
-      <link>https://siliconangle.com/2026/10/22/anthropic-introduces-claude-duet-a-proactive-ai-agent-for-professionals/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/10/22/anthropic-introduces-claude-duet-a-proactive-ai-agent-for-professionals/</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic unveiled Claude Duet, a standalone AI agent app built around Opus 5.5 that acts as a proactive assistant, delivering daily briefings and handling tasks ranging from scheduling meetings to building financial forecasts by monitoring users' connected apps and surfacing items requiring attention.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Connects to 6,000+ Claude Marketplace integrations with a built-in classifier for sensitive information detection—relevant for practitioners evaluating autonomous agent architectures and security controls in production systems.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EU publishes first harmonised standard under the AI Act</title>
-      <link>https://associationredefine.substack.com/p/eu-ai-act-2026-what-applies-now</link>
-      <guid isPermaLink="true">https://associationredefine.substack.com/p/eu-ai-act-2026-what-applies-now</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;On October 14, 2026, the European Commission published EN 18286:2026, a quality management system standard for EU AI Act regulatory purposes—the first harmonised standard cited in support of the AI Act. Additional standards including bias management requirements are in public enquiry stages.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Compliance frameworks are now concrete: enterprises must align procurement and internal AI governance to harmonized EU technical standards, not just regulatory language.&lt;/p&gt;&lt;p&gt;Source: Association Redefine (Substack) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nvidia, Nokia and T-Mobile complete first AI-RAN call</title>
-      <link>https://debuglies.com/2026/10/23/ai-ran-and-the-geopolitics-of-6g-the-transformation-of-global-telecommunications-into-distributed-artificial-intelligence-infrastructure/</link>
-      <guid isPermaLink="true">https://debuglies.com/2026/10/23/ai-ran-and-the-geopolitics-of-6g-the-transformation-of-global-telecommunications-into-distributed-artificial-intelligence-infrastructure/</guid>
-      <pubDate>Sat, 24 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;On October 21, 2026, NVIDIA, Nokia and T-Mobile announced completion of an AI-RAN call on T-Mobile's 5G network in Bellevue, Washington, using commercial equipment and NVIDIA Aerial RAN Computer infrastructure. Competitive boundaries between semiconductor manufacturers, telecom vendors, cloud providers and network operators are converging.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI-native RAN architecture shifts telecom infrastructure control upstream to GPU vendors and AI framework providers; supply chain risk and vendor lock-in now extend into core network compute decisions.&lt;/p&gt;&lt;p&gt;Source: Debug Lies · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-24.html&quot;&gt;Oct 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
