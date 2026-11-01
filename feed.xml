@@ -6,7 +6,79 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 31 Oct 2026 15:50:24 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 14:40:28 GMT</lastBuildDate>
+    <item>
+      <title>Forrester names Dynatrace a leader in AIOps platforms</title>
+      <link>https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</link>
+      <guid isPermaLink="true">https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Forrester named Dynatrace a Leader in The Forrester Wave: AIOps Platforms, Q4 2026, evaluating 10 providers on 24 criteria with highest scores in Current Offering category and 16 individual criteria. Dynatrace's hypermodal AI integrates causal, predictive, and generative AI for deterministic root-cause analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Dynatrace's causal AI approach grounds AIOps in real-time topology knowledge, not just correlation, enabling NOCs to automate with confidence and reduce MTTR on complex hybrid infrastructure.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Most telecom operators plan network digital twins for autonomy</title>
+      <link>https://globalriskcommunity.com/profiles/blogs/network-digital-twin-market-outlook-testing-the-network-before-to</link>
+      <guid isPermaLink="true">https://globalriskcommunity.com/profiles/blogs/network-digital-twin-market-outlook-testing-the-network-before-to</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;TM Forum survey of 128 communications service providers found 72% plan to use network digital twins to support autonomous networks and agentic AI, with 13% already adopted. Leading trend is convergence of digital twins with agentic AI and closed-loop automation to validate autonomous actions against a model before execution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Digital twins enable NOCs to validate agentic system changes before deployment by running them against a mathematical model of network behavior, transforming autonomous operations from risky to provably safe.&lt;/p&gt;&lt;p&gt;Source: Global Risk Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Attackers exploit Cisco ASA VPN flaw to reboot firewalls</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Cisco disclosed CVE-2026-76418, an unauthenticated denial-of-service vulnerability in ASA and FTD firewalls that allows remote attackers to force device reboot via crafted SSL VPN requests. Active exploitation confirmed in October 2026; CISA added to KEV catalog October 29.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Over 51,000 internet-exposed ASA SSL VPN devices exist; this zero-day disrupts VPN access for remote workers with no authentication required. Network ops must patch immediately or disable secondary authentication on tunnel groups as a workaround.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GoAhead web server accepts revoked client certificates</title>
+      <link>https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;GoAhead 6.1.0 and earlier accept revoked client certificates on OpenSSL builds despite configured revocation lists (CVE-2026-115881, CVSS 9.1). A separate LibreSSL variant allows over-length certificate chains to bypass chain-length validation, bypassing mutual TLS authentication on affected appliances.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network appliances using GoAhead with OpenSSL-backed mutual TLS (VPN gateways, API servers, management interfaces) may silently accept revoked client credentials. Audit and patch GoAhead to 6.1.1 immediately, or disable certificate revocation checks and validate manually.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Operators move agentic AI into production network operations</title>
+      <link>https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</link>
+      <guid isPermaLink="true">https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Telecom operators are moving agentic AI from pilots into production network operations, with 65% of telecom operators reporting AI drives network automation and 59% identifying it as a leading use case with measurable ROI. Network automation has overtaken customer experience as the top AI deployment priority.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network automation is now the primary telco AI use case with proven returns; NetDevOps and operations teams must accelerate agentic AI adoption for incident detection and root-cause analysis to remain competitive as operators shift from 71% partial automation to full autonomy targets.&lt;/p&gt;&lt;p&gt;Source: TechSabado, Fierce Network, VoIP Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI-native telco networks reach production at major carriers</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-17-23-oct-2026-56523/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-17-23-oct-2026-56523/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AI-native network operations moved into production reality across major carriers in late October 2026, with T-Mobile completing first AI-RAN calls and ServiceNow achieving 90% incident reduction using HPE Juniper Mist AI. Operators are now planning AI-aware network APIs and telco-trained models as production services.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators are standardizing on AI infrastructure plays; network teams must align telemetry stacks, revisit silicon/optical interconnect choices for AI workloads, and plan AI-aware APIs to avoid vendor lock-in and ensure cloud-network roadmap coherence over the next 12-18 months.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF draft carries BGP monitoring protocol over QUIC</title>
+      <link>https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-over-quic/</link>
+      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-over-quic/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;IETF GROW working group updated draft for BGP Monitoring Protocol over QUIC transport, enabling multiple simultaneous streams and improved efficiency for route monitoring. Version 01 replaces earlier draft with technical refinements for operational monitoring.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Changes how you transport BGP monitoring data—QUIC's multiplexing reduces connection overhead and latency compared to TCP-only BMP, critical for large-scale route monitoring at hyperscale and carrier deployments.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenConfig merges vendor-neutral YANG model for ICMP</title>
+      <link>https://github.com/openconfig/public/pull/1579</link>
+      <guid isPermaLink="true">https://github.com/openconfig/public/pull/1579</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;OpenConfig repository merged new openconfig-icmp YANG module providing vendor-neutral configuration and operational state for ICMPv4 and ICMPv6 per network instance. Augments network-instance subtree with standardized ICMP parameters and counters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Standardizes ICMP configuration management across multi-vendor networks—enables consistent, model-driven control of echo requests, time-exceeded handling, and error message behavior per network context without vendor-specific CLI variation.&lt;/p&gt;&lt;p&gt;Source: OpenConfig GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Big Tech borrows record sums to fund AI buildouts</title>
+      <link>https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-oct-31-2026</link>
+      <guid isPermaLink="true">https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-oct-31-2026</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Big Tech now borrows to build AI while Korean chipmakers book the profit; Alphabet sold $80.8 billion of bonds in nine months and spent more than it earned in cash; Amazon's trailing free cash flow swung to an outflow of $42.4 billion; AI-linked borrowers sold $368 billion of bonds this year, more than six times last year's amount. Moscow's investment envoy marketed energy projects and AI data centers to American partners, indicating active dialogue on building AI infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI infrastructure financing is shifting from equity to debt markets, and geopolitical competition for compute capacity and semiconductor supply is reshaping capital allocation and partner relationships—directly impacting infrastructure procurement strategy and risk exposure for enterprises.&lt;/p&gt;&lt;p&gt;Source: Digital Anthropology News Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NetClaw brings open source MCP assistant to network engineers</title>
       <link>https://packetpushers.net/podcasts/heavy-networking/hn848-netclaw-your-open-source-network-assistant/</link>
@@ -638,94 +710,6 @@
       <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;DeepSeek raised roughly $15B (100 billion yuan) including backing from CATL and Tencent, two days after the US ordered federal agencies to remove DeepSeek's technology. OpenAI is near a $30B round at $1.25T valuation, with Coatue and UAE-based investors leading the pre-IPO round.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Geopolitical capital allocation is now actively shaping competitive AI landscape: US restrictions on Chinese AI accelerate capital concentration in rival centers while Western model providers consolidate funding, directly affecting enterprise procurement options and supply-chain sovereignty for AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: bestproductivityresources.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ASPA brings RPKI route leak detection to BGP paths</title>
-      <link>https://safeguard.sh/resources/blog/aspa-explained-autonomous-system-provider-authorization-rpki-route-leak-detection-and-deployment</link>
-      <guid isPermaLink="true">https://safeguard.sh/resources/blog/aspa-explained-autonomous-system-provider-authorization-rpki-route-leak-detection-and-deployment</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;ASPA (Autonomous System Provider Authorization) is an RPKI signed object listing authorized upstream ASes, enabling routers to verify BGP AS paths follow valid customer-provider hierarchy. It detects route leaks and forged paths that route origin validation alone cannot catch.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; ASPA documents are in final IETF draft stages with two RIRs already supporting publication; operators need deployment guidance as standardization completes and RTR v2 becomes mainstream.&lt;/p&gt;&lt;p&gt;Source: Safeguard Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cloudflare rebuilds range request caching in Pingora, halving R2 latency</title>
-      <link>https://blog.cloudflare.com/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Cloudflare rebuilt cache architecture in Pingora to automatically coordinate partial fetches, eliminating naive byte-range caching that wastes gigabytes of origin bandwidth. Result: 50% p99 latency reduction on R2 object storage.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates practical cache-layer optimization for origin bandwidth efficiency relevant to CDN operators and origin-server operators handling video, media, and large-file workloads.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Eight eMudhra intermediate CA keys were trivially computable</title>
-      <link>https://socprime.com/blog/cve-2026-111943-analysis/</link>
-      <guid isPermaLink="true">https://socprime.com/blog/cve-2026-111943-analysis/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;A security researcher identified a cryptographic weakness affecting eight eMudhra intermediate certificates on October 17, 2026. The eight intermediate certificate authority keys were so weak that anyone could calculate them in under a second, and for about 18 months anyone could have used them to impersonate any website or sign code that Windows would trust.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Chrome and Firefox blocked the certificates within hours, but organizations running containerized workloads with bundled CA trust stores built before October 20 remain exposed to fraudulent certificate issuance and must rebuild images.&lt;/p&gt;&lt;p&gt;Source: SOCPrime, Help Net Security, The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fortinet patches actively exploited FortiOS remote code execution flaw</title>
-      <link>https://cybersecuritynews.com/fortinet-urges-to-patch-critical-flaws/</link>
-      <guid isPermaLink="true">https://cybersecuritynews.com/fortinet-urges-to-patch-critical-flaws/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Exploit code for CVE-2025-61624 remote code execution, information disclosure, and tampering vulnerability is actively being used in the wild. Fortinet released emergency security updates for FortiOS, FortiManager, and FortiAnalyzer on October 22, 2026, addressing critical and high-severity vulnerabilities.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Successful exploitation allows remote code execution on affected systems, and the vulnerability spans FortiOS versions 6.4 through 7.6.4—a broad swath of deployed firewalls across production networks.&lt;/p&gt;&lt;p&gt;Source: Fortinet Security Advisory, GovCERT.HK, CyberSecurityNews · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Grafana adds AI agent observability and assistant watchers</title>
-      <link>https://cyprusshippingnews.com/2026/10/23/grafana-labs-charts-the-path-to-agentic-operations-with-watchers-pages-and-agent-observability-at-observabilitycon-2026/</link>
-      <guid isPermaLink="true">https://cyprusshippingnews.com/2026/10/23/grafana-labs-charts-the-path-to-agentic-operations-with-watchers-pages-and-agent-observability-at-observabilitycon-2026/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Grafana Labs released Agent Observability with OpenTelemetry support and Assistant Watchers at ObservabilityCON 2026, enabling visibility into AI agent behavior in production. The platform delivers both AI for observability and observability for AI systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables SRE and platform teams to instrument and monitor production AI agents with the same observability practices (OpenTelemetry) already used for traditional services, closing the visibility gap for agentic workloads.&lt;/p&gt;&lt;p&gt;Source: Cyprus Shipping News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dynatrace acquires Arize AI for model observability</title>
-      <link>https://agentjesse.ai/lists/ai-infrastructure-companies-2026</link>
-      <guid isPermaLink="true">https://agentjesse.ai/lists/ai-infrastructure-companies-2026</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Dynatrace completed acquisition of Arize AI in October 2026, integrating model evaluation, tracing, and observability technology for AI applications. Arize provides platform for identifying AI application failures and monitoring model behavior.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Combines application performance monitoring (APM) with AI model observability, giving infrastructure teams end-to-end visibility from application layer through ML model inference performance in production.&lt;/p&gt;&lt;p&gt;Source: agentjesse.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Transmit Security names Matt Thompson chief executive</title>
-      <link>https://www.biometricupdate.com/202610/transmit-security-taps-matt-thompson-as-ceo-to-drive-ai-agent-security-push</link>
-      <guid isPermaLink="true">https://www.biometricupdate.com/202610/transmit-security-taps-matt-thompson-as-ceo-to-drive-ai-agent-security-push</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Matt Thompson, former president of Socure and co-founder of ID.me, appointed CEO of Transmit Security, succeeding co-founder Mickey Boodaei. Appointment marks strategic pivot for identity platform to govern AI agents operating in customer environments alongside human identity management.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals how identity and fraud prevention platforms must evolve to authenticate and govern autonomous AI agents, not just human users, in financial services and commerce.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nokia and NVIDIA push AI-RAN toward commercial deployment</title>
-      <link>https://www.globenewswire.com/news-release/2026/10/21/3385408/0/en/nokia-advances-ai-ran-toward-commercial-deployment-and-physical-ai-launches-sovereign-agentic-ai-platform-for-telco-autonomy-with-nvidia.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/10/21/3385408/0/en/nokia-advances-ai-ran-toward-commercial-deployment-and-physical-ai-launches-sovereign-agentic-ai-platform-for-telco-autonomy-with-nvidia.html</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Nokia announced new capabilities applying AI within radio processing and extending governed AI agents for cross-domain network operations, moving closer to deployment from the industry's first commercial AI-RAN platform announced in July. NVIDIA AI Enterprise software and Nemotron models are being integrated into Nokia's agentic platform for operators to build and deploy telco-specific agents across radio, core, transport and cloud networks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Multi-domain agentic AI for network operations is entering commercial trials across European operators; standardized telco-specific agent frameworks now available reduce vendor lock-in risk and accelerate time-to-value for NetDevOps teams deploying autonomous systems.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry will allow breaking security fixes in patch releases</title>
-      <link>https://opentelemetry.io/blog/2026/security-versioning-policy/</link>
-      <guid isPermaLink="true">https://opentelemetry.io/blog/2026/security-versioning-policy/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenTelemetry updated its versioning policy to permit narrowly scoped security fixes in minor/patch releases on stable SDKs and Contrib components, even when behavior changes. Public API compatibility remains protected.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Observability teams can now receive critical security patches without waiting for major version upgrades, reducing exposure windows for production telemetry infrastructure.&lt;/p&gt;&lt;p&gt;Source: OpenTelemetry Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nearly all firms use AI but few govern it centrally</title>
-      <link>https://www.cdomagazine.tech/aiml/ai-adoption-outpaces-enterprise-governance-raising-data-security-concerns</link>
-      <guid isPermaLink="true">https://www.cdomagazine.tech/aiml/ai-adoption-outpaces-enterprise-governance-raising-data-security-concerns</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;A monday.com report finds that while 96% of organizations use AI at work, only 29% have AI fully integrated into centralized systems, exposing governance gaps as adoption spreads. 46% of respondents worry about losing control over AI agents' actions, while 52% are concerned about agents accessing data without sufficient restrictions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Adoption expands before access controls and oversight mechanisms are in place—a critical control and compliance risk for infrastructure and IT operations teams managing distributed AI systems.&lt;/p&gt;&lt;p&gt;Source: CDO Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DeepSeek raises $15 billion for data centres and open models</title>
-      <link>https://www.techloy.com/week-43-asia-startup-funding/</link>
-      <guid isPermaLink="true">https://www.techloy.com/week-43-asia-startup-funding/</guid>
-      <pubDate>Sun, 25 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Hangzhou-based AI startup DeepSeek raised approximately $15 billion backed by Tencent and Contemporary Amperex Technology, the largest of $16.07 billion in Asian startup funding this week. The funding supports data center investment and open-source model development as DeepSeek prepares for potential IPO.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; China's accelerated AI capital deployment and geopolitical competition over AI capability directly affects U.S. enterprise AI strategy, export controls, and infrastructure investment prioritization.&lt;/p&gt;&lt;p&gt;Source: TechLoy · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-25.html&quot;&gt;Oct 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
