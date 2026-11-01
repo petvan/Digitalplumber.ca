@@ -6,78 +6,118 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 01 Nov 2026 14:40:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 16:51:27 GMT</lastBuildDate>
     <item>
-      <title>Forrester names Dynatrace a leader in AIOps platforms</title>
-      <link>https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</link>
-      <guid isPermaLink="true">https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</guid>
+      <title>Terraform adds intent-driven workflows and Infragraph infrastructure graph</title>
+      <link>https://www.hashicorp.com/en/blog/terraform-advances-infrastructure-lifecycle-management-for-the-agentic-era</link>
+      <guid isPermaLink="true">https://www.hashicorp.com/en/blog/terraform-advances-infrastructure-lifecycle-management-for-the-agentic-era</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Forrester named Dynatrace a Leader in The Forrester Wave: AIOps Platforms, Q4 2026, evaluating 10 providers on 24 criteria with highest scores in Current Offering category and 16 individual criteria. Dynatrace's hypermodal AI integrates causal, predictive, and generative AI for deterministic root-cause analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Dynatrace's causal AI approach grounds AIOps in real-time topology knowledge, not just correlation, enabling NOCs to automate with confidence and reduce MTTR on complex hybrid infrastructure.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;HashiCorp announced Terraform intent-driven workflows for Z and LinuxONE in private preview, plus HCP Terraform powered by Infragraph for near-real-time infrastructure intelligence. The platform now enables AI agents and humans to discover approved modules, generate code aligned to standards, and analyze plans in natural language.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Terraform's agentic capabilities and connected infrastructure intelligence (Infragraph) change how network and infrastructure teams coordinate AI-driven changes with governance and validation—moving beyond task automation to intelligent infrastructure reasoning.&lt;/p&gt;&lt;p&gt;Source: HashiCorp / IBM · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Most telecom operators plan network digital twins for autonomy</title>
-      <link>https://globalriskcommunity.com/profiles/blogs/network-digital-twin-market-outlook-testing-the-network-before-to</link>
-      <guid isPermaLink="true">https://globalriskcommunity.com/profiles/blogs/network-digital-twin-market-outlook-testing-the-network-before-to</guid>
+      <title>Containerlab leads network lab tools on CI/CD integration</title>
+      <link>https://www.netpilot.io/blog/gns3-vs-eve-ng-vs-containerlab-2026</link>
+      <guid isPermaLink="true">https://www.netpilot.io/blog/gns3-vs-eve-ng-vs-containerlab-2026</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;TM Forum survey of 128 communications service providers found 72% plan to use network digital twins to support autonomous networks and agentic AI, with 13% already adopted. Leading trend is convergence of digital twins with agentic AI and closed-loop automation to validate autonomous actions against a model before execution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Digital twins enable NOCs to validate agentic system changes before deployment by running them against a mathematical model of network behavior, transforming autonomous operations from risky to provably safe.&lt;/p&gt;&lt;p&gt;Source: Global Risk Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Updated October 30, 2026: containerlab has ~2,900 GitHub stars, runs real network OS containers from YAML, and offers the best CI/CD integration of all lab platforms. The comparison shows containerlab excels when labs should live in Git as infrastructure-as-code, supporting Nokia SR Linux, Arista cEOS, Juniper cRPD, Cisco XRd, and more in single-command deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For NetDevOps teams, containerlab's YAML-based, CI/CD-native approach means network labs are now first-class infrastructure-as-code artifacts—version-controlled, automated in pipelines, and reproducible across teams without GUI overhead.&lt;/p&gt;&lt;p&gt;Source: NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Attackers exploit Cisco ASA VPN flaw to reboot firewalls</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</guid>
+      <title>Containerlab runs real network OS containers from YAML</title>
+      <link>https://www.netpilot.io/blog/what-is-containerlab</link>
+      <guid isPermaLink="true">https://www.netpilot.io/blog/what-is-containerlab</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Cisco disclosed CVE-2026-76418, an unauthenticated denial-of-service vulnerability in ASA and FTD firewalls that allows remote attackers to force device reboot via crafted SSL VPN requests. Active exploitation confirmed in October 2026; CISA added to KEV catalog October 29.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Over 51,000 internet-exposed ASA SSL VPN devices exist; this zero-day disrupts VPN access for remote workers with no authentication required. Network ops must patch immediately or disable secondary authentication on tunnel groups as a workaround.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Containerlab (started by Nokia engineers) deploys containerized network operating systems from declarative YAML, wiring them with virtual links. It runs actual network OS containers—not simulations—enabling realistic validation of BGP, OSPF, EVPN/VXLAN designs, network automation scripts, and production troubleshooting with real output.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For NetDevOps and network testing practitioners, containerlab turns network topology testing into a code-first, pipeline-native practice: labs are reproducible, shareable, version-controlled, and integrate seamlessly with GitOps workflows and CI validation gates.&lt;/p&gt;&lt;p&gt;Source: NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>GoAhead web server accepts revoked client certificates</title>
+      <title>BGP hijack traced to forged business card and stolen ASN</title>
+      <link>https://btw.media/en/sanjaya-bgp-hijack-forged-customer-identity</link>
+      <guid isPermaLink="true">https://btw.media/en/sanjaya-bgp-hijack-forged-customer-identity</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;APNIC and LACNIC investigated three brief BGP route hijacks traced back to forged corporate identity used to persuade a multinational transit provider to establish a fraudulent BGP connection, with the attacker using stolen ASN and spoofed origin ASNs to announce short-lived routes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how technical route plausibility can mask unauthorized BGP sessions after forged corporate identity is accepted, revealing a human-factor failure in provider vetting ahead of cryptographic controls like RPKI.&lt;/p&gt;&lt;p&gt;Source: BTW Media · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GoAhead TLS library silently accepts revoked client certificates</title>
       <link>https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</link>
       <guid isPermaLink="true">https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;GoAhead 6.1.0 and earlier accept revoked client certificates on OpenSSL builds despite configured revocation lists (CVE-2026-115881, CVSS 9.1). A separate LibreSSL variant allows over-length certificate chains to bypass chain-length validation, bypassing mutual TLS authentication on affected appliances.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network appliances using GoAhead with OpenSSL-backed mutual TLS (VPN gateways, API servers, management interfaces) may silently accept revoked client credentials. Audit and patch GoAhead to 6.1.1 immediately, or disable certificate revocation checks and validate manually.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;GoAhead TLS library versions 6.1.0 and earlier silently accept revoked client certificates when using OpenSSL backend with mutual-TLS despite configured revocation lists (CVE-2026-115881, CVSS 9.1). A separate LibreSSL issue allows over-length certificate chains to bypass authentication entirely. Fixed in version 6.1.1.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Embedded TLS implementations in appliances and IoT edge devices using GoAhead must be audited for client certificate authentication; revocation checking is silently bypassed, undermining certificate-based access control for network devices.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Operators move agentic AI into production network operations</title>
-      <link>https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</link>
-      <guid isPermaLink="true">https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</guid>
+      <title>Node.js fixes DNS and TLS hostname validation bypasses</title>
+      <link>https://www.unosecur.com/blog/october-2026-cybersecurity-incidents</link>
+      <guid isPermaLink="true">https://www.unosecur.com/blog/october-2026-cybersecurity-incidents</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Node.js released October 21, 2026 fixes for two critical validation flaws: CVE-2026-105482 allows embedded NUL characters in DNS hostnames to redirect resolver queries to different hosts than validated by applications; CVE-2026-105483 allows non-ASCII IP representations to bypass TLS certificate hostname validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; API gateways and microservices running Node.js must patch immediately; hostname validation is a critical security control, and these flaws allow attackers to bypass certificate pinning and hostname-based access restrictions on network traffic.&lt;/p&gt;&lt;p&gt;Source: Uno Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Email security startup Ocean named Fortune Cyber 60 winner</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/ocean-named-winner-fortune-cyber-100400575.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/ocean-named-winner-fortune-cyber-100400575.html</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Ocean, an agentic email security platform, was named a 2026-27 Fortune Cyber 60 winner in the Early Stage category after emerging from stealth five months prior. The platform processes over one billion emails monthly and protects hundreds of thousands of employee mailboxes globally.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates rapid market validation for agent-based security automation; relevant for security operations and infrastructure teams evaluating AI-driven threat response at scale.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quantum eMotion names Wayne Teeple chief technology officer</title>
+      <link>https://www.streetinsider.com/Management+Changes/Quantum+eMotion+names+former+board+member+Wayne+Teeple+as+CTO/27238164.html</link>
+      <guid isPermaLink="true">https://www.streetinsider.com/Management+Changes/Quantum+eMotion+names+former+board+member+Wayne+Teeple+as+CTO/27238164.html</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Quantum eMotion appointed David Wayne Teeple, a former board member with 30+ years of cybersecurity experience, as Chief Technology Officer. Teeple will oversee technology strategy, product development, and engineering coordination, including technical integration for the company's proposed acquisition of Plurilock Security Inc.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Teeple's appointment adds enterprise cybersecurity leadership to guide product commercialization and technical execution for quantum-safe cryptography and identity security integration during a critical M&amp;amp;A process.&lt;/p&gt;&lt;p&gt;Source: StreetInsider / Newsfile Corp · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NCC Group promotes finance chief Guy Ellis to CEO</title>
+      <link>https://www.nccgroup.com/newsroom/guy-ellis-appointed-chief-executive-officer-of-ncc-group/</link>
+      <guid isPermaLink="true">https://www.nccgroup.com/newsroom/guy-ellis-appointed-chief-executive-officer-of-ncc-group/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;NCC Group appointed Guy Ellis, the company's Chief Financial Officer since June 2023, as Chief Executive Officer, effective immediately. Ellis succeeds Mike Maddison, who led the cybersecurity specialist for 4.5 years as it completed its transformation into a pure-play cyber security business following the May 2026 sale of its Escode software escrow unit.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Ellis's internal promotion signals NCC's transition to a growth and services expansion phase; as CFO he orchestrated Escode divestment and financial discipline, positioning him to drive managed services scaling and deepen customer relationships with 15,000+ clients worldwide.&lt;/p&gt;&lt;p&gt;Source: NCC Group / ITPro · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Halon opens mail server operations to AI agents via MCP</title>
+      <link>https://martech.org/the-latest-ai-powered-martech-news-and-releases/</link>
+      <guid isPermaLink="true">https://martech.org/the-latest-ai-powered-martech-news-and-releases/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Halon added support for the Model Context Protocol to connect AI agents directly to the core email infrastructure. Through this connection, AI agents query live mail server logs, analyze message delivery failures, and diagnose infrastructure issues through chat interfaces.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP integration in email infrastructure enables agents to perform triage and root-cause analysis on mail delivery without requiring custom API development, reducing MTTR for email-dependent operations and allowing on-call engineers to supervise agent diagnostics via natural language.&lt;/p&gt;&lt;p&gt;Source: MarTech · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lumen reroutes AI workloads by power and cost</title>
+      <link>https://thequantuminsider.com/2026/10/29/lumen-ai-networking-quantum-research-pqc/</link>
+      <guid isPermaLink="true">https://thequantuminsider.com/2026/10/29/lumen-ai-networking-quantum-research-pqc/</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Telecom operators are moving agentic AI from pilots into production network operations, with 65% of telecom operators reporting AI drives network automation and 59% identifying it as a leading use case with measurable ROI. Network automation has overtaken customer experience as the top AI deployment priority.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network automation is now the primary telco AI use case with proven returns; NetDevOps and operations teams must accelerate agentic AI adoption for incident detection and root-cause analysis to remain competitive as operators shift from 71% partial automation to full autonomy targets.&lt;/p&gt;&lt;p&gt;Source: TechSabado, Fierce Network, VoIP Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lumen Technologies announced Emerald AI, an intelligent network capability that dynamically reroutes AI workloads to optimize for power, cost, and other operational factors. The initiative enables AI workloads to automatically shift to alternate locations based on power availability, cost, and other factors.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Emerald AI abstracts workload placement complexity from enterprise customers—network intelligence automatically routes compute to cheaper or less-congested locations, reducing enterprise CapEx and improving energy efficiency.&lt;/p&gt;&lt;p&gt;Source: The Quantum Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI-native telco networks reach production at major carriers</title>
-      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-17-23-oct-2026-56523/</link>
-      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-17-23-oct-2026-56523/</guid>
+      <title>Mistral releases trillion-parameter Large 4 with open weights</title>
+      <link>https://dev.to/hiroki-ii-ai/ai-daily-digest-october-30-2026-mistral-opens-a-trillion-parameters-cloud-giants-report-openai-1gk7</link>
+      <guid isPermaLink="true">https://dev.to/hiroki-ii-ai/ai-daily-digest-october-30-2026-mistral-opens-a-trillion-parameters-cloud-giants-report-openai-1gk7</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AI-native network operations moved into production reality across major carriers in late October 2026, with T-Mobile completing first AI-RAN calls and ServiceNow achieving 90% incident reduction using HPE Juniper Mist AI. Operators are now planning AI-aware network APIs and telco-trained models as production services.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators are standardizing on AI infrastructure plays; network teams must align telemetry stacks, revisit silicon/optical interconnect choices for AI workloads, and plan AI-aware APIs to avoid vendor lock-in and ensure cloud-network roadmap coherence over the next 12-18 months.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Mistral announced the open weights release of Mistral Large 4, a 1 trillion parameter natively multimodal model on October 29, with distribution across Mistral Studio, API, OpenRouter, NVIDIA NIM containers, and Microsoft Foundry at $0.70/$2.10 per million tokens. The model includes 96.6% refusal rate on malicious requests and is positioned for organizations requiring on-premises deployment and security control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open weights trillion-parameter model enables on-premises deployment with full control—critical for security-sensitive infrastructure and organizations avoiding vendor lock-in for sensitive workloads.&lt;/p&gt;&lt;p&gt;Source: AI Daily Digest (DEV Community) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IETF draft carries BGP monitoring protocol over QUIC</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-over-quic/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-grow-bmp-over-quic/</guid>
-      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;IETF GROW working group updated draft for BGP Monitoring Protocol over QUIC transport, enabling multiple simultaneous streams and improved efficiency for route monitoring. Version 01 replaces earlier draft with technical refinements for operational monitoring.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Changes how you transport BGP monitoring data—QUIC's multiplexing reduces connection overhead and latency compared to TCP-only BMP, critical for large-scale route monitoring at hyperscale and carrier deployments.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenConfig merges vendor-neutral YANG model for ICMP</title>
-      <link>https://github.com/openconfig/public/pull/1579</link>
-      <guid isPermaLink="true">https://github.com/openconfig/public/pull/1579</guid>
-      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenConfig repository merged new openconfig-icmp YANG module providing vendor-neutral configuration and operational state for ICMPv4 and ICMPv6 per network instance. Augments network-instance subtree with standardized ICMP parameters and counters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Standardizes ICMP configuration management across multi-vendor networks—enables consistent, model-driven control of echo requests, time-exceeded handling, and error message behavior per network context without vendor-specific CLI variation.&lt;/p&gt;&lt;p&gt;Source: OpenConfig GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Big Tech borrows record sums to fund AI buildouts</title>
+      <title>AI-linked borrowers sold $368 billion in bonds this year</title>
       <link>https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-oct-31-2026</link>
       <guid isPermaLink="true">https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-oct-31-2026</guid>
       <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Big Tech now borrows to build AI while Korean chipmakers book the profit; Alphabet sold $80.8 billion of bonds in nine months and spent more than it earned in cash; Amazon's trailing free cash flow swung to an outflow of $42.4 billion; AI-linked borrowers sold $368 billion of bonds this year, more than six times last year's amount. Moscow's investment envoy marketed energy projects and AI data centers to American partners, indicating active dialogue on building AI infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI infrastructure financing is shifting from equity to debt markets, and geopolitical competition for compute capacity and semiconductor supply is reshaping capital allocation and partner relationships—directly impacting infrastructure procurement strategy and risk exposure for enterprises.&lt;/p&gt;&lt;p&gt;Source: Digital Anthropology News Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alphabet sold $80.8B in bonds while spending more than earned; Amazon's free cash flow swung to -$42.4B outflow; AI-linked borrowers sold $368B in bonds this year, 6x last year's amount. Report examines geopolitical dimensions including Russia's dialogue with US on AI data centers and semiconductor supply bottlenecks driving extreme margins.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI capital model is fracturing—major hyperscalers burning cash faster than earned, forcing debt reliance; geopolitical compute access now material to supply strategy and capex planning.&lt;/p&gt;&lt;p&gt;Source: Digital Anthropology News Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UK ICO opens call for evidence on agentic AI</title>
+      <link>https://ashford-publishing.com/blog/ai-governance-news</link>
+      <guid isPermaLink="true">https://ashford-publishing.com/blog/ai-governance-news</guid>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;ICO opened six-week call for evidence on agentic AI closing November 20; findings will shape future guidance and statutory code of practice on AI and automated decision-making. Simultaneously, MAS (Singapore), FSB, and UK FCA published binding guidance requiring financial institutions retain primary accountability for AI systems they deploy.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulatory focus shifting from model governance to runtime agent behavior—enterprises deploying agentic AI must overhaul oversight controls for autonomous decision-making, data handling, and failure modes by Q4 2026.&lt;/p&gt;&lt;p&gt;Source: Ashford Publishing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-01.html&quot;&gt;Nov 1, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>NetClaw brings open source MCP assistant to network engineers</title>
