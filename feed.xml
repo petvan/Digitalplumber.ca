@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 01 Nov 2026 16:51:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 20:18:05 GMT</lastBuildDate>
+    <item>
+      <title>Itential outlines governance rules for agents acting on networks</title>
+      <link>https://www.itential.com/resource/blog/autonomous-network-operations/</link>
+      <guid isPermaLink="true">https://www.itential.com/resource/blog/autonomous-network-operations/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Itential published guidance on agentic network operations, where AI agents execute network tasks under governance controls. The framework separates agents from chatbots: agents take an operational goal, plan steps, run them with audit trails, and iterate until the goal is met—but do not replace Ansible, Python, NSO, or monitoring tools.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Defines how practitioners should architect AI into network automation: agents orchestrate reasoning, but governed automation platforms execute deterministically. Clarifies what agents actually replace in your stack.&lt;/p&gt;&lt;p&gt;Source: Itential · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Forrester names Dynatrace a leader in AIOps platforms</title>
+      <link>https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</link>
+      <guid isPermaLink="true">https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Forrester named Dynatrace a Leader in AIOps platforms, scoring highest in Current Offering category across 24 evaluation criteria. Dynatrace received the highest scores in 16 individual criteria, emphasizing causal AI for root cause analysis and unified observability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Validates causal AI approach for deterministic root cause analysis in enterprise AIOps; shifts from correlation to causality for faster MTTR and trustworthy automation in NOC operations.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle adds multiplanar RDMA fabrics to Acceleron networking suite</title>
+      <link>https://blogs.oracle.com/cloud-infrastructure/oci-networking-advances-powering-ai</link>
+      <guid isPermaLink="true">https://blogs.oracle.com/cloud-infrastructure/oci-networking-advances-powering-ai</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Oracle announced new capabilities in Oracle Acceleron, OCI's suite of networking and infrastructure technologies for demanding AI workloads. The expansion adds RDMA-based fabrics, resilient multiplanar networking and distributed collective communications for improved scalability and reliability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCI's Oracle Collective Communications Library (OCCL) plugin enables multi-planar fabrics without requiring specialized multi-port NICs, giving practitioners flexible topology designs and better NIC utilization for large distributed AI clusters.&lt;/p&gt;&lt;p&gt;Source: Oracle Cloud Infrastructure Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloudflare tracks exploitation of weak eMudhra certificate keys</title>
+      <link>https://blog.cloudflare.com/emudhra-patching/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-patching/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Four weak keys from eMudhra certificates can compromise unpatched connections using eMudhra-issued certificates; Cloudflare details patching actions, exploitation attempts observed on its network, and remaining Internet exposure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network and security operators must audit and patch systems using eMudhra-issued certificates; weak CA keys enable MITM attacks on encrypted sessions passing through unpatched infrastructure.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>eMudhra intermediate keys had as little as three bits entropy</title>
+      <link>https://tech-insider.org/emudhra-ca-private-keys-compromised-number-4-2026/</link>
+      <guid isPermaLink="true">https://tech-insider.org/emudhra-ca-private-keys-compromised-number-4-2026/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Indian Certificate Authority eMudhra issued eight TLS intermediate certificates with private keys bearing only 3–8 bits of entropy instead of the required 384 bits, enabling trivial key recovery and adversary-in-the-middle attacks. eMudhra revoked all eight CAs on October 18 and announced voluntary exit from global SSL/TLS business on October 22.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Certificate authority compromise exposes encrypted TLS traffic to interception; infrastructure teams must audit certificate chains, update OS trust stores, and verify certificate validation across internal PKI and cloud services immediately.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three chained Ivanti zero-days give unauthenticated root access</title>
+      <link>https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Threat actor UTA0576 exploits three chained Ivanti Connect Secure flaws to achieve unauthenticated root-level remote code execution: CVE-2026-104935 (authentication bypass + RCE), CVE-2026-111357 (privilege escalation, CVSS 8.8), and CVE-2026-118527 (file upload). Exploited in the wild since October 3, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN gateway compromise enables lateral movement, credential theft (LAPS, BitLocker), and persistent network access; network teams must patch immediately and forensically investigate systems for backdoors and credential exfiltration.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Marvell to buy Lumentum in $115 billion all-stock deal</title>
+      <link>https://techxplore.com/news/2026-11-marvell-lumentum-merge-billion-ai.html</link>
+      <guid isPermaLink="true">https://techxplore.com/news/2026-11-marvell-lumentum-merge-billion-ai.html</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Marvell Technology will acquire optical components maker Lumentum in a $115 billion all-stock deal, integrating networking chips and custom processors with optical transceivers and switching technology for AI data center infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The deal signals that network infrastructure for AI data centers is shifting away from copper toward optical connectivity due to growing AI data traffic and physical limits of conventional wiring—directly affecting how you architect AI cluster networking and interconnect planning.&lt;/p&gt;&lt;p&gt;Source: TechXplore · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Serval raises $150 million for IT automation agents</title>
+      <link>https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Enterprise service management startup Serval raised $150 million at a $3 billion valuation to expand its automation agents beyond IT operations, including new Catalyst agent for scanning support tickets and auto-generating workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Serval's code generation tools for non-engineering staff and scaled on-site automation engineering teams are relevant if you're evaluating enterprise automation platforms for network operations transformation beyond traditional network engineering.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Agent-to-agent protocols converge as MCP ships broadly</title>
+      <link>https://blog.mean.ceo/ai-agents-news-november-2026/</link>
+      <guid isPermaLink="true">https://blog.mean.ceo/ai-agents-news-november-2026/</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;November 2026: agent definitions stabilized across Google Cloud, IBM, Microsoft, GitHub, ServiceNow, BCG; MCP protocol shipping; agent-to-agent communication emerging as standard. 65% of FTSE 100 firms hiring for agent roles; 80% report skills gap.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agent definitions and interoperability standards are crystallizing—NetOps platforms can now assume MCP compatibility and expect agent-to-agent orchestration to become standard architectural pattern.&lt;/p&gt;&lt;p&gt;Source: Mean CEO · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Singtel runs customer calls on sovereign on-premise inferencing platform</title>
+      <link>https://www.computerweekly.com/news/366652716/Singtel-reins-in-AI-sprawl-with-sovereign-inferencing-platform</link>
+      <guid isPermaLink="true">https://www.computerweekly.com/news/366652716/Singtel-reins-in-AI-sprawl-with-sovereign-inferencing-platform</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Singtel built an on-premise sovereign inferencing platform consolidating years of scattered AI work, enabling its virtual agent to handle most customer calls without human help. The platform lets Singtel avoid cloud dependencies and retain vendor flexibility while scaling AI quickly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; On-premise, governed AI platforms let carriers move beyond single-vendor lock-in while meeting data residency requirements—a practical model for network operators managing critical infrastructure.&lt;/p&gt;&lt;p&gt;Source: Computer Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TRAI drafts AI governance rules for Indian telecom operators</title>
+      <link>https://telecomlead.com/4g-lte/trai-proposes-ai-guidelines-for-telecom-operators-jio-airtel-vodafone-idea-and-bsnl-face-new-governance-requirements-128471</link>
+      <guid isPermaLink="true">https://telecomlead.com/4g-lte/trai-proposes-ai-guidelines-for-telecom-operators-jio-airtel-vodafone-idea-and-bsnl-face-new-governance-requirements-128471</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;TRAI released draft AI guidelines on October 30, 2026, as Indian telecom operators accelerate AI adoption across 5G network management, customer service, fraud prevention, network optimization, predictive maintenance and automated business operations. The proposed guidelines ensure that telecom companies deploy AI technologies responsibly while maintaining network reliability, consumer protection, data security and operational resilience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulatory frameworks for telecom AI deployment are now mandating governance, auditability and resilience guardrails—network practitioners must expect similar compliance requirements on AI-native systems to become standard across jurisdictions.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic reports $16.3 billion first-half revenue in IPO filing</title>
+      <link>https://aisdg.substack.com/p/ai-news-for-october-30-2026</link>
+      <guid isPermaLink="true">https://aisdg.substack.com/p/ai-news-for-october-30-2026</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Anthropic filed to go public on October 26 with revenue hitting $16.3B in H1 2026, up from $1.2B a year earlier, with 11,900+ customers paying $100,000 or more annually. Nearly half its revenue flows through Amazon, Google and Microsoft's cloud arms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise adoption is accelerating with major revenue scale and customer concentration at the $100K+ tier, establishing baseline consumption patterns for production AI workloads.&lt;/p&gt;&lt;p&gt;Source: AI News for October 30, 2026 (SDG Strategy / Faithful Intelligence) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Canada takes ownership stake in AI company Cohere</title>
+      <link>https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/01/canadian-taxpayers-now-own-a-part-of-cohere-ai-what-that-means-for-digital-sovereignty</link>
+      <guid isPermaLink="true">https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/01/canadian-taxpayers-now-own-a-part-of-cohere-ai-what-that-means-for-digital-sovereignty</guid>
+      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Canada acquired an ownership stake in Cohere, a homegrown AI company competing with American and Chinese AI giants. In September, Cohere merged with Berlin-based Aleph Alpha to create the first transatlantic sovereign AI solution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; National governments are now directly investing in domestic AI champions as strategic assets to reduce dependency on U.S. and Chinese technology and prevent geopolitical leverage through AI access.&lt;/p&gt;&lt;p&gt;Source: BNN Bloomberg Canada · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Terraform adds intent-driven workflows and Infragraph infrastructure graph</title>
       <link>https://www.hashicorp.com/en/blog/terraform-advances-infrastructure-lifecycle-management-for-the-agentic-era</link>
@@ -638,118 +742,6 @@
       <pubDate>Tue, 27 Oct 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;China placed comprehensive AI legislation on its 2026 agenda and the amended Cybersecurity Law introduced dedicated AI governance provisions. Regulators issued new measures for anthropomorphic AI services and policy guidance on AI agents, shifting focus from content generation to system behavior and decision-making.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; China's shift from content-filtering to behavioral governance signals a fundamental regulatory restructuring; enterprises deploying AI agents and autonomous systems in China face new compliance obligations around system behavior, decision-making transparency, and operational risk.&lt;/p&gt;&lt;p&gt;Source: China Briefing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-27.html&quot;&gt;Oct 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AutoCon 6 talk dissects automating from spreadsheet sources of truth</title>
-      <link>https://nil.com/en/events/nil-at-autocon-6-conference/</link>
-      <guid isPermaLink="true">https://nil.com/en/events/nil-at-autocon-6-conference/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;AutoCon 6 session abstract examining failure modes when automating network changes directly from manually-maintained spreadsheets. Covers data ownership, validation, governance, and scalability pitfalls with practical migration strategies to proper source-of-truth platforms like NetBox.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Warns practitioners that source-of-truth data quality matters more than tooling—poor data governance embedded in automation exposes hidden process weaknesses and operational risks at scale.&lt;/p&gt;&lt;p&gt;Source: NIL (part of Conscia) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry interoperability becomes the battleground for AI observability</title>
-      <link>https://thenewstack.io/ai-observability-through-interoperability/</link>
-      <guid isPermaLink="true">https://thenewstack.io/ai-observability-through-interoperability/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;OpenTelemetry and interoperability standards are becoming critical for enterprise observability and AIOps. Teams standardizing telemetry through OTel can govern AI agent behavior and measure cost per business outcome without vendor lock-in.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For AIOps practitioners: OTel interoperability reduces vendor lock-in and enables multi-backend telemetry processing, essential for building observable, auditable AI-driven operations without tool sprawl.&lt;/p&gt;&lt;p&gt;Source: The New Stack · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ultra Ethernet aims to match InfiniBand as Broadcom silicon nears</title>
-      <link>https://www.spheron.network/blog/gpu-networking-infiniband-roce-spectrum-x-guide/</link>
-      <guid isPermaLink="true">https://www.spheron.network/blog/gpu-networking-infiniband-roce-spectrum-x-guide/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;The Ultra Ethernet Consortium, formed in 2023 with AMD, Intel, HPE, Broadcom, Cisco, Meta, and Microsoft as founding members, aims for an open Ethernet RDMA fabric that matches InfiniBand latency without proprietary components. UEC 1.0 (published 2024) defines credit-based reliability in NIC firmware, eliminating head-of-line blocking. Broadcom's Tomahawk-UEC silicon is expected in 2026–2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; UEC 1.0 eliminates head-of-line blocking that makes RoCEv2 hard to operate at scale. This October 19 update provides operators a current decision framework: UEC hardware is still pre-production, making Spectrum-X the best production Ethernet option today if you need performance beyond vanilla RoCE.&lt;/p&gt;&lt;p&gt;Source: Spheron · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>RIPE NCC adds BGPsec router key certificates to RPKI API</title>
-      <link>https://www.ripe.net/about-us/news/ripe-ncc-member-update-october-2026/</link>
-      <guid isPermaLink="true">https://www.ripe.net/about-us/news/ripe-ncc-member-update-october-2026/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;RIPE NCC has introduced support for creating and managing BGPsec Router Key Certificates through the RPKI API, enabling AS holders to authorize router keys for signing BGP updates. This extends RPKI cryptographic protection beyond route origin validation to include path validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators can now use the RPKI API to manage BGPsec keys programmatically, advancing cryptographic BGP security beyond ROA-based origin validation toward path-level authentication across the routing system.&lt;/p&gt;&lt;p&gt;Source: RIPE NCC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cloudflare Tunnel adds URL normalization for ingress rule matching</title>
-      <link>https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflared-path-normalization/</link>
-      <guid isPermaLink="true">https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflared-path-normalization/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Cloudflare Tunnel now supports URL normalization before matching ingress rules, starting with cloudflared 2026.10.0. The feature normalizes URLs for Access validation checks while keeping the path sent to origins unchanged; it will default to on from January 25, 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network and security teams using Cloudflare Tunnel path-based routing must test their configurations before January 2027, as default URL normalization may change which ingress rule matches requests and affect traffic routing behavior.&lt;/p&gt;&lt;p&gt;Source: Cloudflare · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Eight eMudhra intermediate CA keys recovered from trivially weak entropy</title>
-      <link>https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Eight eMudhra intermediate CA private keys were compromised with catastrophically weak entropy—3 to 8 bits instead of 384 bits required for NIST P-384. Chrome and Firefox blocked the eight certificates within hours of notification on October 17.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Six keys could issue TLS certificates and two code-signing certificates; attackers could forge certificates for any website or service until revocation blocks distributed, enabling man-in-the-middle attacks on encrypted communications.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>HPE patches eight CVSS 10.0 flaws in Aruba wireless systems</title>
-      <link>https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;HPE patched 72 vulnerabilities in Aruba AOS-8 and AOS-10 wireless operating systems on October 22, 2026, including eight maximum-severity authentication bypass and remote code execution flaws rated CVSS 10.0 exploitable without credentials through management interfaces and PAPI protocol.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These flaws affect enterprise wireless infrastructure trusted by 90% of Fortune 500 companies; attackers can gain administrative control of mobility conductors, controllers, gateways, and access points without authentication through web management interfaces and PAPI.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kalepa names Garrett Schlesinger chief technology officer</title>
-      <link>https://finance.yahoo.com/technology/ai/articles/kalepa-appoints-garrett-schlesinger-cto-120000824.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/kalepa-appoints-garrett-schlesinger-cto-120000824.html</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Kalepa appointed Garrett Schlesinger as Chief Technology Officer to lead applied AI, research, engineering, data, and infrastructure as the AI insurance platform expands globally. Schlesinger spent 12 years at Affirm building real-time underwriting systems and scaling infrastructure through hypergrowth.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Brings proven production-scale AI infrastructure and team-scaling experience from fintech to lead enterprise agentic systems development; relevant for practitioners building automated workflow platforms.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Only 18% of enterprises let network agents fix things</title>
-      <link>https://www.cybersecurityinstitute.com/blog/?p=6145</link>
-      <guid isPermaLink="true">https://www.cybersecurityinstitute.com/blog/?p=6145</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;New research shows most enterprises still use network agents to advise rather than act. Only 18% let agents carry out fixes; 13.2% have agents acting on monitoring alerts, revealing adoption constraints for NetOps teams.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Adoption data reveals that most organizations test agents as advisers first, not autonomous actors—network teams planning remediation automation must account for governance and approval workflows as operational baseline.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity Institute · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AT&amp;T and T-Mobile keep humans in the loop on AI</title>
-      <link>https://whtc.com/2026/10/23/att-t-mobile-tighten-ai-guardrails-as-autonomous-networks-remain-years-away/</link>
-      <guid isPermaLink="true">https://whtc.com/2026/10/23/att-t-mobile-tighten-ai-guardrails-as-autonomous-networks-remain-years-away/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;AT&amp;amp;T and T-Mobile are investing in AI governance controls including encryption, multi-factor authentication, and human oversight as AI integration ramps up, though fully autonomous networks remain years away. AT&amp;amp;T has automated trouble-ticket analysis and repairs but emphasizes human intervention is still required for complex network problems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network ops teams should expect staged automation rollouts with governance guardrails rather than full autonomy; full network autonomy remains years away, requiring human judgment for complex issues.&lt;/p&gt;&lt;p&gt;Source: Reuters · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen launches AI service assurance and dual path wavelengths</title>
-      <link>https://simplywall.st/stocks/us/telecom/nasdaq-lumn/lumen-technologies/news/how-investors-may-respond-to-lumen-technologies-lumn-ai-netw/amp</link>
-      <guid isPermaLink="true">https://simplywall.st/stocks/us/telecom/nasdaq-lumn/lumen-technologies/news/how-investors-may-respond-to-lumen-technologies-lumn-ai-netw/amp</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen Technologies launched AI-powered Service Assurance tools and Dual Path wavelength service to address enterprise pain points around uptime, data control, and operational complexity across distributed AI environments. Snowflake partnership ties Lumen's programmable network to the AI Data Cloud.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Lumen's shift to AI-ready programmable networking creates new demand signals for enterprise network upgrades supporting AI workloads, establishing a platform model that differs fundamentally from legacy circuit sales.&lt;/p&gt;&lt;p&gt;Source: Simply Wall St · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic previews Claude Duet as a proactive monitoring agent</title>
-      <link>https://cellcog.ai/blog/claude-duet/</link>
-      <guid isPermaLink="true">https://cellcog.ai/blog/claude-duet/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic opened a research preview of Claude Duet on October 21, 2026, a standalone app where Claude works as a proactive agent instead of waiting for you to open a chat. It monitors connected apps, sends daily briefings, and can handle tasks autonomously with user approval.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Duet adds persistent agent capabilities to Claude's 6,000+ app connectors—meaning infrastructure teams running on Claude can offload task automation without polling or webhooks.&lt;/p&gt;&lt;p&gt;Source: CellCog AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>683 AI rules now in force across 109 countries</title>
-      <link>https://blog.mean.ceo/ai-regulation-news-october-2026/</link>
-      <guid isPermaLink="true">https://blog.mean.ceo/ai-regulation-news-october-2026/</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The regulations.ai tracker counts 1,176 AI instruments across 109 countries, with 683 (58%) already in force. Enterprise buyers now send AI questionnaires before signing, and startups that answer in one day beat rivals needing three weeks and a lawyer.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Compliance now works as a sales weapon in enterprise procurement, forcing vendor teams to integrate governance readiness into product delivery, not legal afterthought.&lt;/p&gt;&lt;p&gt;Source: MEAN CEO · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DeepSeek raises $15 billion in largest China AI round</title>
-      <link>https://bestproductivityresources.com/articles/ai-and-tech-news-23-october-2026</link>
-      <guid isPermaLink="true">https://bestproductivityresources.com/articles/ai-and-tech-news-23-october-2026</guid>
-      <pubDate>Mon, 26 Oct 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;DeepSeek raised roughly $15B (100 billion yuan) including backing from CATL and Tencent, two days after the US ordered federal agencies to remove DeepSeek's technology. OpenAI is near a $30B round at $1.25T valuation, with Coatue and UAE-based investors leading the pre-IPO round.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Geopolitical capital allocation is now actively shaping competitive AI landscape: US restrictions on Chinese AI accelerate capital concentration in rival centers while Western model providers consolidate funding, directly affecting enterprise procurement options and supply-chain sovereignty for AI infrastructure.&lt;/p&gt;&lt;p&gt;Source: bestproductivityresources.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-10-26.html&quot;&gt;Oct 26, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
