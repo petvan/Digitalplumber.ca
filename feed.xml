@@ -6,110 +6,110 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 03 Nov 2026 11:10:09 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 17:48:44 GMT</lastBuildDate>
     <item>
-      <title>AI and automation dominate NANOG 98 and AutoCon 6</title>
-      <link>https://buttondown.com/pvo/archive/oct-29-netbox-labs-and-neyon-ai-link-topology/</link>
-      <guid isPermaLink="true">https://buttondown.com/pvo/archive/oct-29-netbox-labs-and-neyon-ai-link-topology/</guid>
-      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;NANOG 98 (Miami, mid-October 2026) emphasized network automation lessons learned and software development practices. AutoCon 6 (Tucson, November) features talks on IPv6 deployment automation, manual task transformation, network automation as microservices, and AI-assisted learning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practitioners need to know what operational patterns and automation strategies are being validated at the community level before adopting them at scale.&lt;/p&gt;&lt;p&gt;Source: Buttondown · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CoreWeave AI backbone reaches 51 data centers on four continents</title>
-      <link>https://www.coreweave.com/blog/coreweave-builds-the-first-global-backbone-network-purpose-built-for-ai</link>
-      <guid isPermaLink="true">https://www.coreweave.com/blog/coreweave-builds-the-first-global-backbone-network-purpose-built-for-ai</guid>
+      <title>Oracle adds multiplanar RDMA fabrics for Vera Rubin and TPUs</title>
+      <link>https://techblog.comsoc.org/2026/10/27/oracle-integrates-nvidia-and-google-ai-accelerators-with-high-performance-cloud-networking/</link>
+      <guid isPermaLink="true">https://techblog.comsoc.org/2026/10/27/oracle-integrates-nvidia-and-google-ai-accelerators-with-high-performance-cloud-networking/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;CoreWeave announced expansion of its Global AI Network to 51 active data centers across North America and Europe, with new PoPs in Asia Pacific and Middle East coming online in Q4 2026, plus a 22.5 MW renewable-powered data center in Copenhagen using NVIDIA Blackwell and high-speed networking.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Global backbone connecting AI data centers across four continents with non-blocking multi-plane fabric architecture eliminates bottlenecks across entire path from data to compute, enabling distributed training and inference at hyperscale with integrated resilience.&lt;/p&gt;&lt;p&gt;Source: CoreWeave · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Oracle announced Acceleron networking improvements alongside NVIDIA Vera Rubin and Google TPU architecture for AI cloud deployment. New capabilities include RDMA-based fabrics, resilient multiplanar networking, and distributed collective communications for moving data across large clusters.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Oracle's multiplanar RDMA design and collective communications library provide alternatives to single-plane architectures for large distributed training, affecting how practitioners architect fault-tolerant AI infrastructure at hyperscale.&lt;/p&gt;&lt;p&gt;Source: techblog.comsoc.org · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cloudflare details the outages that took the internet offline</title>
-      <link>https://blog.cloudflare.com/q3-2026-internet-disruptions</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/q3-2026-internet-disruptions</guid>
+      <title>CoreWeave builds 240 MW InfiniBand AI cloud in India</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/coreweave-expands-ai-cloud-infrastructure-121800153.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/coreweave-expands-ai-cloud-infrastructure-121800153.html</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;CoreWeave announced a 240 MW AI data center expansion into India in October 2026, powered by NVIDIA Blackwell systems connected via NVIDIA Quantum-X 800 InfiniBand networking. New points of presence planned across Asia-Pacific and UAE with full loop expected by mid-2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Neocloud fabric procurement patterns now show explicit hedging: CoreWeave uses Quantum-2 NDR InfiniBand for training workloads and Spectrum-X RoCE for GB300 deployments, reflecting how providers choose between proprietary and open Ethernet at different GPU generations.&lt;/p&gt;&lt;p&gt;Source: Yahoo Finance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloudflare cuts DNS zone build memory use by 86%</title>
+      <link>https://blog.cloudflare.com/dns-targeted-zone-builds/</link>
+      <guid isPermaLink="true">https://blog.cloudflare.com/dns-targeted-zone-builds/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Cloudflare Radar examined global internet disruptions observed during Q3 2026, analyzing three kinds of events that affected network connectivity and traffic patterns across regions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Engineering teams must account for connectivity failures outside their own stack—well-built multi-region setups don't protect users when networks between infrastructure and users are down, requiring visibility into internet-level outages.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Cloudflare built a targeted DNS Zone Builder that cuts full zone rebuilds by 40%, reduces peak memory from 79 GiB to 7 GiB (86% reduction), and halves median build completion delay from 7.7 to 3.3 seconds by determining the smallest safe rebuild rather than always rebuilding entire zones.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Large-platform performance gains now come from classifying internal changes precisely to skip expensive work without serving stale DNS data; the 85% peak-memory cut and halved median build delay represent capacity and tail-latency gains inside Cloudflare's infrastructure that operators should understand when evaluating DNS platform scalability.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Attackers exploit Cisco ASA and FTD VPN zero-day</title>
-      <link>https://socprime.com/blog/cve-2026-76418-cisco-secure-firewall-zero-day/</link>
-      <guid isPermaLink="true">https://socprime.com/blog/cve-2026-76418-cisco-secure-firewall-zero-day/</guid>
+      <title>Ivanti zero-days chain to unauthenticated root, added to KEV</title>
+      <link>https://www.rapid7.com/blog/post/etr-additional-ivanti-connect-secure-zero-days-exploited-in-the-wild-cve-2026-111357-cve-2026-118527/</link>
+      <guid isPermaLink="true">https://www.rapid7.com/blog/post/etr-additional-ivanti-connect-secure-zero-days-exploited-in-the-wild-cve-2026-111357-cve-2026-118527/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Cisco disclosed CVE-2026-76418, a high-severity zero-day in Cisco Secure Firewall ASA and FTD Remote Access SSL VPN service, after PSIRT became aware of active exploitation in October 2026. The flaw allows unauthenticated remote attackers to trigger device reloads, causing denial-of-service conditions affecting VPN availability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Over 51,000 ASA SSL VPN devices remained internet-exposed—firewall teams must immediately patch or disable secondary authentication on internet-facing tunnel groups; no workaround exists except patching.&lt;/p&gt;&lt;p&gt;Source: Cisco Security Advisory / CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CISA added CVE-2026-111357 (CVSS 8.8, privilege escalation) and CVE-2026-118527 (CVSS 4.3, predictable file upload) to KEV on October 30; both chain with CVE-2026-104935 to enable unauthenticated root-level code execution on Ivanti Connect Secure. Threat group UTA0576 exploited the full chain beginning October 3, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Remote-access gateway compromise chains allow attackers direct enterprise core access; organizations must immediately upgrade all Connect Secure appliances to patched versions (25.1.1.3 or 22.8R2.6) and rotate credentials before federal deadline of November 2–13, 2026.&lt;/p&gt;&lt;p&gt;Source: Rapid7 / CISA / SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Two critical PHP flaws exploited against Palo Alto firewalls</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/</guid>
+      <title>GitLab RCE and Cisco firewall DoS flaws exploited in wild</title>
+      <link>https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;CISA added two critical PHP vulnerabilities (CVE-2026-109618, CVE-2026-109619) collectively tracked as PHP2Shell to its Known Exploited Vulnerabilities catalog after evidence of active exploitation. Both bugs rate 9.2 CVSS and allow unauthenticated code execution on vulnerable PHP servers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Palo Alto Networks confirmed active exploitation targeting management interfaces exposed to the internet; ransomware groups use PHP2Shell against firewalls for initial access—exposed management interfaces must be immediately remediated or air-gapped.&lt;/p&gt;&lt;p&gt;Source: Palo Alto Networks / CISA / BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CISA added CVE-2026-97229 (CVSS 10.0, GitLab RCE via integer overflow in CI/CD regex validation) and CVE-2026-76418 (CVSS 8.6, Cisco ASA/FTD null pointer dereference DoS) to KEV on October 30. GitLab flaw allows unauthenticated code execution; an attacker probed Alpine Linux's GitLab on October 20–21.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Perfect-score GitLab RCE threatens any developer pipeline using self-managed instances; Cisco firewall DoS flaws allow attackers to disable perimeter security mid-attack. Both require immediate patching by November 1, 2026 (federal deadline).&lt;/p&gt;&lt;p&gt;Source: CISA / The Hacker News / Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Marvell to buy Lumentum for $115 billion</title>
-      <link>https://cbsnews.com/news/marvell-lumentum-acquisition-ai-connectivity</link>
-      <guid isPermaLink="true">https://cbsnews.com/news/marvell-lumentum-acquisition-ai-connectivity</guid>
+      <title>Attackers exploit PHP flaws on exposed PAN-OS management interfaces</title>
+      <link>https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/10/attackers-exploit-php2shell-flaws-in.html</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Two critical PHP vulnerabilities (CVE-2026-109618, CVE-2026-109619, CVSS 9.2 each) allow unauthenticated remote code execution on PHP systems. Palo Alto reported active exploitation targeting internet-exposed PAN-OS management interfaces on October 29; threat actors extract credentials and enumerate Active Directory after gaining RCE.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network appliances with exposed management interfaces are primary targets; PHP2Shell enables unauthenticated RCE directly on firewalls and edge devices. Restrict management interface access immediately, scan for exposure, and apply patches across all affected products (Palo Alto, Fortinet, Cisco, GitLab).&lt;/p&gt;&lt;p&gt;Source: CISA / Palo Alto Networks / BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CrowdStrike buys Fiddler AI and Dreadnode for $495 million</title>
+      <link>https://www.securityweek.com/crowdstrike-reportedly-paying-495-million-for-ai-security-firms-fiddler-dreadnode/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/crowdstrike-reportedly-paying-495-million-for-ai-security-firms-fiddler-dreadnode/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Marvell Technology announced acquisition of Lumentum Holdings for $115 billion to become a category leader in AI connectivity. The deal addresses optical interconnect requirements for AI data center infrastructure as the industry shifts toward optical-based architectures.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals consolidation in AI networking semiconductors; optical interconnect becomes table-stakes for data center operations teams planning infrastructure expansion.&lt;/p&gt;&lt;p&gt;Source: CBS News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CrowdStrike signed definitive agreements to acquire Fiddler AI (AI agent observability, ~$400M) and Dreadnode (automated AI security testing, ~$95M) to integrate into its Falcon platform. Both deals expected to close in Q4 FY27.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Consolidates agent observability and pre-deployment security testing into a single platform; signals that AI agent governance is now table-stakes for security infrastructure teams managing agentic deployments.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Dropbox cuts 9% of staff and loses CTO</title>
-      <link>https://www.sec.gov/Archives/edgar/data/0001467623/000146762326000052/dbx-20261028.htm</link>
-      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0001467623/000146762326000052/dbx-20261028.htm</guid>
+      <title>Quantum eMotion names Wayne Teeple chief technology officer</title>
+      <link>https://investornews.com/member_news/quantum-emotion-appoints-cybersecurity-leader-wayne-teeple-as-chief-technology-officer/</link>
+      <guid isPermaLink="true">https://investornews.com/member_news/quantum-emotion-appoints-cybersecurity-leader-wayne-teeple-as-chief-technology-officer/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>People Moves</category>
-      <description>&lt;p&gt;Dropbox announced a 9% workforce reduction and the departure of Chief Technology Officer Ali Dasdan effective November 18, 2026. Dasdan led engineering and technical operations for the cloud storage platform.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CTO transitions often precede shifts in infrastructure or platform priorities; operators using Dropbox should monitor engineering leadership continuity and roadmap implications.&lt;/p&gt;&lt;p&gt;Source: SEC Filing (Form 8-K) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Quantum eMotion appointed David Wayne Teeple as Chief Technology Officer, a former board member since 2021 with over 30 years of cybersecurity and technology leadership experience. Teeple will oversee technology strategy, product development, engineering coordination, and technical integration of quantum-safe cryptography and identity security platforms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes experienced CTO leadership for quantum-safe cryptography product commercialization and technical integration of planned Plurilock Security acquisition; directly impacts security infrastructure modernization roadmaps.&lt;/p&gt;&lt;p&gt;Source: Quantum eMotion press release · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI-RAN automation spending forecast to hit $1.1 billion by 2030</title>
-      <link>https://telconews.co.uk/story/ai-ran-automation-spending-to-hit-usd-1-1bn-by-2030</link>
-      <guid isPermaLink="true">https://telconews.co.uk/story/ai-ran-automation-spending-to-hit-usd-1-1bn-by-2030</guid>
+      <title>Network operations agents move from pilots to pricing debates</title>
+      <link>https://www.cybersecurityinstitute.com/blog/?p=6187</link>
+      <guid isPermaLink="true">https://www.cybersecurityinstitute.com/blog/?p=6187</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Market shifts from whether agents will run networks to how they will be paid for; Gartner predicts half of organizations will run IT operations agents with minimal human involvement by 2030, with HPE folding SD-WAN/SASE into Mist and Aruba Central.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetOps teams must now address token-metered pricing models, agent autonomy governance, and the NOC/SOC convergence as agentic operations become operational standard rather than experimental.&lt;/p&gt;&lt;p&gt;Source: Cybersecurity Institute · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Verizon CTO says 6G must be autonomous from day one</title>
+      <link>https://rcrwireless.com/20261027/carriers/ai-needs-more-than-incremental-6g-fixes-says-verizon-as-uplink-ratio-shifts-11-la28-looms</link>
+      <guid isPermaLink="true">https://rcrwireless.com/20261027/carriers/ai-needs-more-than-incremental-6g-fixes-says-verizon-as-uplink-ratio-shifts-11-la28-looms</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;SNS Telecom &amp;amp; IT forecasts annual AI-RAN automation and optimization spending will reach $1.1 billion by 2030, driven by operators' expansion of service management and orchestration platforms, non-real-time RAN intelligent controllers, and software upgrades embedding AI directly in RAN platforms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Quantifies market shift toward AI-driven RAN automation; operators will spend significantly on orchestration layers and intelligence controllers—critical for NetDevOps teams to understand competitive pressure and budget allocation for RAN modernization.&lt;/p&gt;&lt;p&gt;Source: TelcoNews · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Verizon CTO argues 6G standards must embed autonomous network operations and AI-driven use cases from the outset, rather than bolting them on later. Verizon executed 70 million closed-loop automation processes in 2025 and is targeting Level 4 autonomy, requiring architectural shifts to handle AI-native uplink demand.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Early 6G design decisions now will determine whether autonomous network operations are native or retrofitted—a critical inflection for NetDevOps and AIOps practitioners planning network evolution strategies.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IETF approves STAMP extension for reflecting IP headers</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-ippm-stamp-ext-hdr/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-ippm-stamp-ext-hdr/</guid>
+      <title>Bell plans 1.2 GW AI data centre hub in Saskatchewan</title>
+      <link>https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</link>
+      <guid isPermaLink="true">https://techsabado.com/2026/10/28/special-feature-ai-adoption-in-telecom-rises-as-network-automation-takes-lead/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;IESG approved draft-ietf-ippm-stamp-ext-hdr as Proposed Standard on October 27, 2026. Extension enables STAMP to reflect IPv4/IPv6 headers and IPv6 extension headers for end-to-end and hop-by-hop active measurements, including IOAM data field support.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends STAMP measurement capability to capture IP header attributes and IOAM telemetry in production networks, improving performance validation and troubleshooting across network paths.&lt;/p&gt;&lt;p&gt;Source: IETF IESG · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;The 300-megawatt Sherwood campus is the first phase of Bell AI Fabric's growing presence in Saskatchewan. Bell and the Government of Saskatchewan signed an MOU creating a path to a potential 1.2-gigawatt Canadian AI infrastructure hub in the province. Bell plans to have at least two buildings at the facility up and running by the first half of 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telco-native sovereign AI infrastructure with closed-loop cooling and national fiber backbone is entering production. Practitioners evaluating edge compute and enterprise AI workload placement now have a domestic Canadian alternative in the grid timeline.&lt;/p&gt;&lt;p&gt;Source: TechSabado · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>VXLAN specification moves into the IETF document stream</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-nvo3-rfc7348bis/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-nvo3-rfc7348bis/</guid>
-      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;IESG approved draft-ietf-nvo3-rfc7348bis as Informational RFC on October 27, 2026. Moves deployed VXLAN protocol from Independent Submission to IETF document stream, enabling standardization of extensions and proper IANA code point allocation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Opens VXLAN to controlled standardization for forward extensions and interoperability governance through formal IETF standards process rather than vendor-driven approaches.&lt;/p&gt;&lt;p&gt;Source: IETF IESG · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic tells SEC its AI is accelerating its own development</title>
-      <link>https://github.com/diclogic/ai-daily-digest/issues/202</link>
-      <guid isPermaLink="true">https://github.com/diclogic/ai-daily-digest/issues/202</guid>
+      <title>Google releases Gemini 4 Carbon for vulnerability finding and patching</title>
+      <link>https://mindandmachineweekly.substack.com/p/mind-and-machine-weekly-1-november</link>
+      <guid isPermaLink="true">https://mindandmachineweekly.substack.com/p/mind-and-machine-weekly-1-november</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;Anthropic amended its IPO filing and told the SEC it is close to building AI that speeds up its own development. The S-1/A filing on November 2 provides the first official quarterly look revealing nearly $17B revenue in Q3.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Self-improving AI systems directly impact infrastructure requirements, model iteration cycles, and deployment planning for organizations relying on Anthropic's products.&lt;/p&gt;&lt;p&gt;Source: AI Daily Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Google launched Gemini 4 Carbon, built to find software vulnerabilities and write patches, restricting early access to vetted cyber defenders through its Fairwind programme and reporting it leads external cyber benchmarks. OpenAI published a revised Model Spec reorganized around faithfulness, harm minimization, honesty and transparency, with new guidance on context and memory.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Gemini 4 Carbon's specialized vulnerability-detection capability released two weeks after Gemini 4 Argon signals rapid iteration on frontier model families; teams evaluating large models for security tooling now have a purpose-built option to benchmark.&lt;/p&gt;&lt;p&gt;Source: Mind and Machine Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Anthropic reports $17 billion third quarter revenue before IPO</title>
-      <link>https://www.stocktitan.net/articles/anthropic-ipo-amended-s1-2026-guide</link>
-      <guid isPermaLink="true">https://www.stocktitan.net/articles/anthropic-ipo-amended-s1-2026-guide</guid>
+      <title>Salesforce acquires Cresta for $2.7 billion voice AI agents</title>
+      <link>https://www.cmswire.com/contact-center/salesforce-adds-cresta-to-the-cart-in-its-2026-cx-shopping-spree-01/</link>
+      <guid isPermaLink="true">https://www.cmswire.com/contact-center/salesforce-adds-cresta-to-the-cart-in-its-2026-cx-shopping-spree-01/</guid>
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic filed an amended S-1 on November 2 reporting $17.0 billion in Q3 2026 revenue, more than 12x year-over-year. The IPO roadshow could begin as early as November 10, with trading targeted before November 26 at a reported $2 trillion valuation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Validates massive enterprise AI adoption at scale and sets precedent for frontier lab valuations; signals capital availability for inference infrastructure buildout.&lt;/p&gt;&lt;p&gt;Source: StockTitan · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Canada puts $1.6 billion into Cohere's $7 billion round</title>
-      <link>https://www.pm.gc.ca/en/news/speeches/2026/10/29/prime-minister-carney-announces-landmark-investment-cohere-scale-secure</link>
-      <guid isPermaLink="true">https://www.pm.gc.ca/en/news/speeches/2026/10/29/prime-minister-carney-announces-landmark-investment-cohere-scale-secure</guid>
-      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Canada announced a $1.6 billion equity investment in Cohere as part of a $7 billion Series E round led by Germany's Schwarz Group, valuing the Toronto-based AI company at $36 billion and creating the largest AI company outside the US and China.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals geopolitical AI sovereignty strategy: governments now directly fund critical AI infrastructure as national assets; creates viable alternative for enterprises seeking non-US-aligned AI deployment.&lt;/p&gt;&lt;p&gt;Source: Government of Canada · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Salesforce signed a definitive agreement to acquire Cresta for a reported $2.7 billion to add voice-first AI agents and real-time conversation intelligence to Service Cloud. Cresta's autonomous agents handle complex customer calls end-to-end while also providing real-time guidance to human representatives.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Customer service automation is shifting from text chat to live voice; this acquisition fills a critical gap in Salesforce's Agentforce portfolio and signals enterprise demand for production-grade voice agents with human fallback.&lt;/p&gt;&lt;p&gt;Source: CMSWire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Itential outlines governance rules for agents acting on networks</title>
