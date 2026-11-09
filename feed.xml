@@ -6,7 +6,151 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 08 Nov 2026 16:43:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 20:45:21 GMT</lastBuildDate>
+    <item>
+      <title>Forrester names Dynatrace a leader in AIOps platforms</title>
+      <link>https://www.dynatrace.com/news/blog/dynatrace-recognized-as-a-leader-in-the-forrester-wave-aiops-platforms-q4-2026/</link>
+      <guid isPermaLink="true">https://www.dynatrace.com/news/blog/dynatrace-recognized-as-a-leader-in-the-forrester-wave-aiops-platforms-q4-2026/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Forrester named Dynatrace a Leader in AIOps Platforms with the highest score in Current Offering and 16 criteria. Dynatrace received highest scores in causal root cause analysis and dynamic entity topology, emphasizing deterministic causal analysis over correlation for precision in complex distributed systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps platforms evolve beyond detection into operational intelligence that anticipates risks and prevents incidents before customers are affected—a capability operationalization framework network teams can adopt.&lt;/p&gt;&lt;p&gt;Source: Dynatrace Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LogicMonitor adds governed autonomous action across Envision and Edwin AI</title>
+      <link>https://www.enterprisemanagement.com/product/logicmonitor-extends-observability-to-autonomous-action-advancing-the-enterprise-control-plane/</link>
+      <guid isPermaLink="true">https://www.enterprisemanagement.com/product/logicmonitor-extends-observability-to-autonomous-action-advancing-the-enterprise-control-plane/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;LogicMonitor announced platform enhancements connecting open telemetry, operational context, AI investigation, and governed action across LM Envision, Edwin AI, and Catchpoint. Architecture spans data foundation, context layer linking infrastructure/services/users/digital experience, and AI layer investigating incidents and supporting governed action.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Combining LogicMonitor's infrastructure and AI expertise with Catchpoint's Internet-level intelligence delivers predictive visibility and control across cloud, code, and the Internet itself—enabling proactive NOC operations beyond internal network boundaries.&lt;/p&gt;&lt;p&gt;Source: Enterprise Management Associates (EMA) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LogicMonitor pushes cross-stack correlation for network performance monitoring</title>
+      <link>https://www.logicmonitor.com/deep-dive/network-observability/network-performance-monitoring-tools</link>
+      <guid isPermaLink="true">https://www.logicmonitor.com/deep-dive/network-observability/network-performance-monitoring-tools</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;LogicMonitor published guidance on modern network performance monitoring emphasizing that tools must measure actual user experience combining real user monitoring with synthetic tests, with cross-stack correlation tying network, application, and endpoint metrics together. DNS latency within specific ISP regions detected through multi-layer Internet stack analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cross-stack correlation replacing fragmented troubleshooting with actionable root-cause insights requires platforms that correlate routing, DNS, transport, and application layers—a foundational capability for modern NOC outage detection and MTTR reduction.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tower and Innolight develop near-package optics for AI clusters</title>
+      <link>https://www.sec.gov/Archives/edgar/data/0000928876/000117891326004972/zk2636316.htm</link>
+      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0000928876/000117891326004972/zk2636316.htm</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Tower Semiconductor and Innolight announced collaboration on Near-Package Optics (NPO) for AI infrastructure, leveraging Silicon Photonics platforms. NPO architectures address bandwidth, power, and latency constraints in next-generation AI clusters beyond pluggable optics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NPO moves optical I/O from switch front panel to package level, reducing electrical path loss and power by 50%+ compared to pluggable optics—a required step for 1.6T+ fabric densities and co-packaged optics roadmaps at hyperscalers.&lt;/p&gt;&lt;p&gt;Source: SEC filing / Tower Semiconductor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arista expects to network 10 gigawatts of AI capacity</title>
+      <link>https://www.nextplatform.com/connect/2026/11/05/arista-lines-up-networking-for-10-gigawatts-of-ai-systems/5307929</link>
+      <guid isPermaLink="true">https://www.nextplatform.com/connect/2026/11/05/arista-lines-up-networking-for-10-gigawatts-of-ai-systems/5307929</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Arista reported over 100 customers using Etherlink AI switches and forecasts networking for 10 gigawatts of AI capacity by end-2027, including support for multiple accelerator vendors. Linear-drive pluggable optics (LPO) cut power consumption 50% per optic.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Arista's scale target signals vendor-neutral Ethernet is winning market share from Nvidia InfiniBand in scale-out AI fabrics. 10GW by 2027 implies 70% share of new hyperscale deployments now standardize on Ethernet, not proprietary interconnects.&lt;/p&gt;&lt;p&gt;Source: Next Platform · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Repair ship arrives to fix WACS undersea cable break</title>
+      <link>https://itweb.africa/article/wacs-cable-repairs-enter-critical-phase/lLn14MmQ9DnMJ6Aa</link>
+      <guid isPermaLink="true">https://itweb.africa/article/wacs-cable-repairs-enter-critical-phase/lLn14MmQ9DnMJ6Aa</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;A repair vessel is scheduled to reach the affected area to begin physical restoration of the undersea link. The Gulf of Guinea and Central African coastal waters are known locations for submarine cable faults, with disruptions resulting from deep-sea seismic activity, maritime incidents such as anchor dragging, or underwater landslides.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A major subsea cable fault affecting 14 African countries highlights ongoing subsea infrastructure vulnerability and the need for diversified routing and secondary capacity plans in affected regions.&lt;/p&gt;&lt;p&gt;Source: ITWeb Africa · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu fixes FRR regression that broke RPKI revalidation</title>
+      <link>https://linuxsecurity.com/advisories/ubuntu/ubuntu-frr-regression</link>
+      <guid isPermaLink="true">https://linuxsecurity.com/advisories/ubuntu/ubuntu-frr-regression</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;The fix for CVE-2024-55553 introduced a regression in RPKI support, causing FRR to stop processing RPKI updates after the first one, so routes were not revalidated when RPKI data changed. In Ubuntu 20.04 LTS, the BGP daemon also failed to start when the RPKI module was enabled.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators running FRR on Ubuntu must apply USN-7230-3 to restore RPKI validation—missing this patch leaves routers vulnerable to invalid route acceptance and BGP startup failures on 20.04 LTS.&lt;/p&gt;&lt;p&gt;Source: Ubuntu Security Notice · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenSSH authentication bypass exploited in the wild on musl Linux</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CVE-2026-123158 (sshole), a CVSS 8.1 password authentication bypass in OpenSSH on musl-based Linux without PAM, is actively exploited in the wild. CISA confirmed exploitation and added to KEV with November 12 deadline; GreyNoise recorded first successful wild exploitation November 7, 40 hours after fix release.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unauthenticated SSH access to passwordless accounts including root on Alpine Linux and other musl systems; Alpine is ubiquitous in Kubernetes, container registries, edge infrastructure, and CI/CD—enabling immediate code execution on cloud-native deployments.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SonicWall SSL-VPN flaw lets attackers bypass SAML MFA</title>
+      <link>https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CVE-2026-19868 (CVSS 7.1), an authentication enforcement flaw in SonicOS SSL-VPN, allows attackers with valid alternate credentials to bypass SAML authentication and SAML-enforced MFA. Actively exploited; CISA added to KEV with November 20 deadline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Renders multi-factor authentication on VPN ineffective for attackers holding compromised alternate credentials; MFA bypass on perimeter VPN gateways directly enables unauthorized internal network access, defeating the primary control against credential compromise.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Palo Alto Networks in talks to buy Clutch for $500M</title>
+      <link>https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Palo Alto Networks is in acquisition discussions with Clutch Security, an AI agent security startup, for $500M plus milestone payouts. This would be PANW's seventh acquisition in 2026 as the company aggressively expands into AI-driven security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Consolidation of AI agent security reflects market validation of this threat category for enterprise infrastructure teams managing unauthorized agent access.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNSFilter names Justin Foster chief technology officer</title>
+      <link>https://finance.yahoo.com/technology/ai/articles/dnsfilter-welcomes-justin-foster-executive-140000877.html</link>
+      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/dnsfilter-welcomes-justin-foster-executive-140000877.html</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;DNSFilter announced the appointment of Justin Foster as CTO, strengthening the executive team as the company scales its AI-powered DNS-first security platform with the recent launch of LUMINATE by DNSFilter.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise security and network teams adopting DNS-first controls and AI governance now have a CTO with deep R&amp;amp;D experience scaling security products at Forescout and co-founding Cysiv.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vistance Networks CEO Chuck Treadway to step down in February</title>
+      <link>https://www.lightreading.com/cable-technology/vistance-ceo-stepping-down-in-wake-of-commscope-dismantling</link>
+      <guid isPermaLink="true">https://www.lightreading.com/cable-technology/vistance-ceo-stepping-down-in-wake-of-commscope-dismantling</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Vistance Networks announced that CEO Chuck Treadway will resign from his position and board membership effective February 1, 2027, following a strategic transformation that returned $16.50 per share to shareholders in 2026 and cleared the company's debt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Leadership transition at a major network infrastructure provider signals completion of CommScope restructuring and strategic shift under new management.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Edgecore releases SONiC AI agent with deterministic guardrails</title>
+      <link>https://www.edge-core.com/blogs/secure-agentic-netops-sonic/</link>
+      <guid isPermaLink="true">https://www.edge-core.com/blogs/secure-agentic-netops-sonic/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Edgecore announced its EDM SONiC AI Agent, developed around a security-first approach combining AI-assisted analysis with deterministic controls, role-based access, human oversight, and controlled network management to help network teams streamline troubleshooting and organize operational evidence.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators now have a reference implementation for secure, governance-first autonomous NetOps on disaggregated SONiC hardware, addressing the critical gap between agent capability and regulatory audit requirements.&lt;/p&gt;&lt;p&gt;Source: Edgecore Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Agentic AI operations need an operating model change, not tools</title>
+      <link>https://www.forbes.com/councils/forbestechcouncil/2026/11/06/how-to-redesign-infrastructure-operations-for-agentic-ai/</link>
+      <guid isPermaLink="true">https://www.forbes.com/councils/forbestechcouncil/2026/11/06/how-to-redesign-infrastructure-operations-for-agentic-ai/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;After connecting 21+ enterprise data sources to AI systems, practitioners still struggle to bridge signals to context, context to decisions, and decisions to governed execution, because infrastructure relies on fragmented tools, manual investigations, and ticketing queues. Agentic operations require an operating-model transformation, not just technology deployment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The hard part of agent adoption is organizational: moving from CLI/scripts to policy-driven orchestration fundamentally changes how infrastructure teams interact with production systems and make remediation decisions.&lt;/p&gt;&lt;p&gt;Source: Forbes Technology Council · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Verizon deploys Ericsson intelligent controller for AI-native RAN nationwide</title>
+      <link>https://www.sdxcentral.com/news/verizon-ai-ran-work-rides-nationwide-ericsson-intelligent-controller-deployment/</link>
+      <guid isPermaLink="true">https://www.sdxcentral.com/news/verizon-ai-ran-work-rides-nationwide-ericsson-intelligent-controller-deployment/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Verizon and Ericsson are deploying the Ericsson Intelligent Controller (EIC) nationwide to run AI-native rApps that automate RAN management. Field tests showed gains up to 8.9% in downlink throughput and 8% in uplink UE throughput with closed-loop optimization.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Moves AI-RAN from pilot to production platform, enabling operators to deploy their own closed-loop optimization apps at scale and progress toward Level 4 cognitive automation.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Telco AI automation moves from pilots into multi-country production</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-31-oct-6-nov-2026-56634/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-31-oct-6-nov-2026-56634/</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Global telecom operators deployed AI-driven network automation across the US, Bahrain, Thailand, and Ethiopia this week. Verizon's EIC rollout, Thailand's Network Digital Twin simulations, and BT's agentic AI services signal the inflection point from pilots to sustained production operations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Confirms AI-native network automation is transitioning from experimentation to mainstream operational infrastructure, reducing manual NOC workload across multiple geographies and use cases.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nokia projects AI will drive 44% of traffic by 2035</title>
+      <link>https://www.thefastmode.com/technology-and-solution-trends/51324-nokia-forecasts-ai-to-drive-44-of-global-network-traffic-by-2035</link>
+      <guid isPermaLink="true">https://www.thefastmode.com/technology-and-solution-trends/51324-nokia-forecasts-ai-to-drive-44-of-global-network-traffic-by-2035</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Nokia projects total network traffic will nearly quadruple from 2026 to 2035, reaching 3,789 exabytes per month, with 44% driven by AI. Agentic AI traffic alone is forecast to grow 160x by 2035, physical AI traffic 105x, fundamentally reshaping network architecture requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network infrastructure teams must begin capacity planning now for edge compute, inter-data-center connectivity, and middleware guaranteeing QoS for agentic workloads alongside user traffic—implications span the next decade of capex decisions.&lt;/p&gt;&lt;p&gt;Source: TheFastMode · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI closes $11 billion at $1.25 trillion valuation</title>
+      <link>https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-11-06/openai-completes-11-billion-portion-of-funding-at-1-25-trillion-value</guid>
+      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;OpenAI closed $11 billion in new funding at a $1.25 trillion valuation on November 6, the first close of a larger round that may reach $20 billion. The company scaled back from its original $30 billion target at $1.4 trillion amid AI stock selloffs and investor concerns about data center construction obstacles following US midterm elections.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Market conditions are reshaping mega-round valuations and investor appetite for AI infrastructure spending, with direct implications for enterprise funding prioritization and capital allocation in the sector.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Datadog ships Scout 1.0 model for autonomous incident investigation</title>
       <link>https://investors.datadoghq.com/news-releases</link>
@@ -654,110 +798,6 @@
       <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Salesforce signed a definitive agreement to acquire Cresta for a reported $2.7 billion to add voice-first AI agents and real-time conversation intelligence to Service Cloud. Cresta's autonomous agents handle complex customer calls end-to-end while also providing real-time guidance to human representatives.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Customer service automation is shifting from text chat to live voice; this acquisition fills a critical gap in Salesforce's Agentforce portfolio and signals enterprise demand for production-grade voice agents with human fallback.&lt;/p&gt;&lt;p&gt;Source: CMSWire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-03.html&quot;&gt;Nov 3, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential outlines governance rules for agents acting on networks</title>
-      <link>https://www.itential.com/resource/blog/autonomous-network-operations/</link>
-      <guid isPermaLink="true">https://www.itential.com/resource/blog/autonomous-network-operations/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Itential published guidance on agentic network operations, where AI agents execute network tasks under governance controls. The framework separates agents from chatbots: agents take an operational goal, plan steps, run them with audit trails, and iterate until the goal is met—but do not replace Ansible, Python, NSO, or monitoring tools.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Defines how practitioners should architect AI into network automation: agents orchestrate reasoning, but governed automation platforms execute deterministically. Clarifies what agents actually replace in your stack.&lt;/p&gt;&lt;p&gt;Source: Itential · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Forrester names Dynatrace a leader in AIOps platforms</title>
-      <link>https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</link>
-      <guid isPermaLink="true">https://www.dynatrace.com/news/press-release/independent-research-firm-names-dynatrace-a-leader-in-aiops/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Forrester named Dynatrace a Leader in AIOps platforms, scoring highest in Current Offering category across 24 evaluation criteria. Dynatrace received the highest scores in 16 individual criteria, emphasizing causal AI for root cause analysis and unified observability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Validates causal AI approach for deterministic root cause analysis in enterprise AIOps; shifts from correlation to causality for faster MTTR and trustworthy automation in NOC operations.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Oracle adds multiplanar RDMA fabrics to Acceleron networking suite</title>
-      <link>https://blogs.oracle.com/cloud-infrastructure/oci-networking-advances-powering-ai</link>
-      <guid isPermaLink="true">https://blogs.oracle.com/cloud-infrastructure/oci-networking-advances-powering-ai</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Oracle announced new capabilities in Oracle Acceleron, OCI's suite of networking and infrastructure technologies for demanding AI workloads. The expansion adds RDMA-based fabrics, resilient multiplanar networking and distributed collective communications for improved scalability and reliability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCI's Oracle Collective Communications Library (OCCL) plugin enables multi-planar fabrics without requiring specialized multi-port NICs, giving practitioners flexible topology designs and better NIC utilization for large distributed AI clusters.&lt;/p&gt;&lt;p&gt;Source: Oracle Cloud Infrastructure Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cloudflare tracks exploitation of weak eMudhra certificate keys</title>
-      <link>https://blog.cloudflare.com/emudhra-patching/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-patching/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Four weak keys from eMudhra certificates can compromise unpatched connections using eMudhra-issued certificates; Cloudflare details patching actions, exploitation attempts observed on its network, and remaining Internet exposure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network and security operators must audit and patch systems using eMudhra-issued certificates; weak CA keys enable MITM attacks on encrypted sessions passing through unpatched infrastructure.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>eMudhra intermediate keys had as little as three bits entropy</title>
-      <link>https://tech-insider.org/emudhra-ca-private-keys-compromised-number-4-2026/</link>
-      <guid isPermaLink="true">https://tech-insider.org/emudhra-ca-private-keys-compromised-number-4-2026/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Indian Certificate Authority eMudhra issued eight TLS intermediate certificates with private keys bearing only 3–8 bits of entropy instead of the required 384 bits, enabling trivial key recovery and adversary-in-the-middle attacks. eMudhra revoked all eight CAs on October 18 and announced voluntary exit from global SSL/TLS business on October 22.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Certificate authority compromise exposes encrypted TLS traffic to interception; infrastructure teams must audit certificate chains, update OS trust stores, and verify certificate validation across internal PKI and cloud services immediately.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Three chained Ivanti zero-days give unauthenticated root access</title>
-      <link>https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Threat actor UTA0576 exploits three chained Ivanti Connect Secure flaws to achieve unauthenticated root-level remote code execution: CVE-2026-104935 (authentication bypass + RCE), CVE-2026-111357 (privilege escalation, CVSS 8.8), and CVE-2026-118527 (file upload). Exploited in the wild since October 3, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VPN gateway compromise enables lateral movement, credential theft (LAPS, BitLocker), and persistent network access; network teams must patch immediately and forensically investigate systems for backdoors and credential exfiltration.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Marvell to buy Lumentum in $115 billion all-stock deal</title>
-      <link>https://techxplore.com/news/2026-11-marvell-lumentum-merge-billion-ai.html</link>
-      <guid isPermaLink="true">https://techxplore.com/news/2026-11-marvell-lumentum-merge-billion-ai.html</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Marvell Technology will acquire optical components maker Lumentum in a $115 billion all-stock deal, integrating networking chips and custom processors with optical transceivers and switching technology for AI data center infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The deal signals that network infrastructure for AI data centers is shifting away from copper toward optical connectivity due to growing AI data traffic and physical limits of conventional wiring—directly affecting how you architect AI cluster networking and interconnect planning.&lt;/p&gt;&lt;p&gt;Source: TechXplore · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Serval raises $150 million for IT automation agents</title>
-      <link>https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/10/29/serval-raises-150m-at-3b-valuation-to-bring-its-automation-agents-beyond-it/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Enterprise service management startup Serval raised $150 million at a $3 billion valuation to expand its automation agents beyond IT operations, including new Catalyst agent for scanning support tickets and auto-generating workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Serval's code generation tools for non-engineering staff and scaled on-site automation engineering teams are relevant if you're evaluating enterprise automation platforms for network operations transformation beyond traditional network engineering.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Agent-to-agent protocols converge as MCP ships broadly</title>
-      <link>https://blog.mean.ceo/ai-agents-news-november-2026/</link>
-      <guid isPermaLink="true">https://blog.mean.ceo/ai-agents-news-november-2026/</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;November 2026: agent definitions stabilized across Google Cloud, IBM, Microsoft, GitHub, ServiceNow, BCG; MCP protocol shipping; agent-to-agent communication emerging as standard. 65% of FTSE 100 firms hiring for agent roles; 80% report skills gap.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agent definitions and interoperability standards are crystallizing—NetOps platforms can now assume MCP compatibility and expect agent-to-agent orchestration to become standard architectural pattern.&lt;/p&gt;&lt;p&gt;Source: Mean CEO · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Singtel runs customer calls on sovereign on-premise inferencing platform</title>
-      <link>https://www.computerweekly.com/news/366652716/Singtel-reins-in-AI-sprawl-with-sovereign-inferencing-platform</link>
-      <guid isPermaLink="true">https://www.computerweekly.com/news/366652716/Singtel-reins-in-AI-sprawl-with-sovereign-inferencing-platform</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Singtel built an on-premise sovereign inferencing platform consolidating years of scattered AI work, enabling its virtual agent to handle most customer calls without human help. The platform lets Singtel avoid cloud dependencies and retain vendor flexibility while scaling AI quickly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; On-premise, governed AI platforms let carriers move beyond single-vendor lock-in while meeting data residency requirements—a practical model for network operators managing critical infrastructure.&lt;/p&gt;&lt;p&gt;Source: Computer Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>TRAI drafts AI governance rules for Indian telecom operators</title>
-      <link>https://telecomlead.com/4g-lte/trai-proposes-ai-guidelines-for-telecom-operators-jio-airtel-vodafone-idea-and-bsnl-face-new-governance-requirements-128471</link>
-      <guid isPermaLink="true">https://telecomlead.com/4g-lte/trai-proposes-ai-guidelines-for-telecom-operators-jio-airtel-vodafone-idea-and-bsnl-face-new-governance-requirements-128471</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;TRAI released draft AI guidelines on October 30, 2026, as Indian telecom operators accelerate AI adoption across 5G network management, customer service, fraud prevention, network optimization, predictive maintenance and automated business operations. The proposed guidelines ensure that telecom companies deploy AI technologies responsibly while maintaining network reliability, consumer protection, data security and operational resilience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Regulatory frameworks for telecom AI deployment are now mandating governance, auditability and resilience guardrails—network practitioners must expect similar compliance requirements on AI-native systems to become standard across jurisdictions.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic reports $16.3 billion first-half revenue in IPO filing</title>
-      <link>https://aisdg.substack.com/p/ai-news-for-october-30-2026</link>
-      <guid isPermaLink="true">https://aisdg.substack.com/p/ai-news-for-october-30-2026</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Anthropic filed to go public on October 26 with revenue hitting $16.3B in H1 2026, up from $1.2B a year earlier, with 11,900+ customers paying $100,000 or more annually. Nearly half its revenue flows through Amazon, Google and Microsoft's cloud arms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise adoption is accelerating with major revenue scale and customer concentration at the $100K+ tier, establishing baseline consumption patterns for production AI workloads.&lt;/p&gt;&lt;p&gt;Source: AI News for October 30, 2026 (SDG Strategy / Faithful Intelligence) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Canada takes ownership stake in AI company Cohere</title>
-      <link>https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/01/canadian-taxpayers-now-own-a-part-of-cohere-ai-what-that-means-for-digital-sovereignty</link>
-      <guid isPermaLink="true">https://bnnbloomberg.ca/business/artificial-intelligence/2026/11/01/canadian-taxpayers-now-own-a-part-of-cohere-ai-what-that-means-for-digital-sovereignty</guid>
-      <pubDate>Mon, 02 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Canada acquired an ownership stake in Cohere, a homegrown AI company competing with American and Chinese AI giants. In September, Cohere merged with Berlin-based Aleph Alpha to create the first transatlantic sovereign AI solution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; National governments are now directly investing in domestic AI champions as strategic assets to reduce dependency on U.S. and Chinese technology and prevent geopolitical leverage through AI access.&lt;/p&gt;&lt;p&gt;Source: BNN Bloomberg Canada · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-02.html&quot;&gt;Nov 2, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
