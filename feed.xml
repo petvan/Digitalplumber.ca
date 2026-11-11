@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 10 Nov 2026 17:46:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 17:59:16 GMT</lastBuildDate>
+    <item>
+      <title>Network to Code sets NautoCon Tucson alongside AutoCon 6</title>
+      <link>https://networktocode.com/resources/events/nautocon/tucson-2026/</link>
+      <guid isPermaLink="true">https://networktocode.com/resources/events/nautocon/tucson-2026/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Network to Code confirmed NautoCon Tucson as a half-day event on November 18, 2026, co-located with AutoCon 6, featuring platform roadmap updates and customer panels from ONEOK, Microsoft, and Fidelity discussing production Nautobot deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Direct insights from enterprises running Nautobot at scale on compliance, automation workflow execution, and operational validation—practical reference for evaluating network source-of-truth platforms in production.&lt;/p&gt;&lt;p&gt;Source: Network to Code · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle ships OCCL plugin for resilient AI training networks</title>
+      <link>https://www.hpcwire.com/off-the-wire/oracle-introduces-occl-network-plugin-for-distributed-ai-training/</link>
+      <guid isPermaLink="true">https://www.hpcwire.com/off-the-wire/oracle-introduces-occl-network-plugin-for-distributed-ai-training/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Oracle Cloud Infrastructure released Oracle Collective Communications Library (OCCL), a network plugin for distributed AI workloads that handles congested paths, failed links, and NIC failures. Internal benchmarks show 2-10% increased average NCCL bus bandwidth for AllReduce operations on NVIDIA GB300 systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCCL supports multi-planar RDMA networks in vendor-agnostic fashion, directly addressing network-layer resilience as a bottleneck in multi-thousand-GPU training clusters where collective communication reliability determines job completion time.&lt;/p&gt;&lt;p&gt;Source: HPCwire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Broadcom says network performance now limits trillion-parameter AI training</title>
+      <link>https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</link>
+      <guid isPermaLink="true">https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Broadcom announced at SC26 that network performance has become the limiting factor for trillion-parameter AI models and 100,000+ accelerator clusters. Company showcased open Ethernet fabric architecture using Tomahawk 6 and Jericho 4 silicon under ESUN standards as alternative to proprietary InfiniBand.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Broadcom's 102.4 Tbps Tomahawk 6 platform provides open, multi-vendor alternative to NVIDIA's InfiniBand monopoly, enabling 100,000+ GPU cluster deployments at lower cost and without proprietary feature locks like SHARP.&lt;/p&gt;&lt;p&gt;Source: HPCwire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Attackers exploit SonicWall SSL-VPN flaw to bypass MFA</title>
+      <link>https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-flags-sonicwall-sonicos-mfa-bypass</link>
+      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-flags-sonicwall-sonicos-mfa-bypass</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added high-severity CVE-2026-19868 (CVSS 7.1/7.5) to its Known Exploited Vulnerabilities catalog after SonicWall disclosed evidence of real-world exploitation. The flaw in SonicOS SSL-VPN allows users with valid alternate authentication credentials to bypass SAML authentication controls and SAML-enforced MFA. Fix available in SonicOS 7.3.4-7013 (Gen7) and 8.2.3-8015 (Gen8); SonicWall confirms no workarounds exist.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; An attacker with valid alternate-auth credentials can bypass the organization's identity provider (Okta, Entra ID) MFA check, allowing VPN login with password alone. This breaks zero-trust network access for organizations relying on SAML MFA as primary VPN defense; patch deadline is November 20 for federal agencies.&lt;/p&gt;&lt;p&gt;Source: CISA Known Exploited Vulnerabilities Catalog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bay leaves stealth with $50M to police AI agents</title>
+      <link>https://siliconangle.com/2026/11/10/ai-security-startup-bay-launches-with-50m-to-vet-agent-actions-before-they-run/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/11/10/ai-security-startup-bay-launches-with-50m-to-vet-agent-actions-before-they-run/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Bay, a Tel Aviv AI security startup, raised $50M combining a $37M Series A led by Battery Ventures and $13M seed to intercept and evaluate every action an AI agent proposes before it executes. Bay's Lighthouse system automatically generates policies from 30 days of agent activity, maintaining false-positive rates under 1%.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; With dozens of enterprise customers including Micron, Peloton, and Wix already deployed, this signals enterprise demand for agent execution controls beyond prompt filtering—critical for infrastructure and security teams deploying autonomous systems at scale.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meta infrastructure chief Janardhan steps down, Dave Brown succeeds</title>
+      <link>https://www.bloomberg.com/news/articles/2026-11-11/meta-s-head-of-infrastructure-engineering-to-step-down-in-2027</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-11-11/meta-s-head-of-infrastructure-engineering-to-step-down-in-2027</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Santosh Janardhan, Meta's head of infrastructure and co-head of engineering, will step down in early 2027 and transition to CTO of Meta Compute. Dave Brown, recently hired from Amazon Web Services, will succeed him as head of infrastructure during Meta's $125–145 billion annual infrastructure spending cycle.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure leadership changes at this scale directly affect network operations teams' capacity planning and AI data-center deployment strategies across the industry.&lt;/p&gt;&lt;p&gt;Source: Bloomberg News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Netceed names Eric Updyke group chief executive</title>
+      <link>https://www.businesswire.com/news/home/20261110005421/en/Netceed-appoints-Eric-Updyke-as-Group-CEO</link>
+      <guid isPermaLink="true">https://www.businesswire.com/news/home/20261110005421/en/Netceed-appoints-Eric-Updyke-as-Group-CEO</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Netceed announced Eric Updyke as Group CEO effective November 10, 2026, succeeding Alper Turken. Updyke brings 35+ years of infrastructure leadership, most recently as CEO of Spirent Communications (2019–2025) and prior roles as Amdocs Services group president overseeing 10,000+ employees.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Updyke's appointment to lead Netceed's AI infrastructure, broadband, and energy supply-chain operations directly impacts network operators' access to infrastructure solutions and buildout capacity for large-scale deployments.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Runpod unifies MCP server setup across coding agents</title>
+      <link>https://www.runpod.io/blog/whats-new-runpod-agents-november-2026</link>
+      <guid isPermaLink="true">https://www.runpod.io/blog/whats-new-runpod-agents-november-2026</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Runpod released infrastructure automation enhancements including unified MCP server setup across Claude Code, Codex, and Cursor; added knowledge base and tool generation from REST v2 API spec; shipped 25 reference tasks for common infrastructure operations run end-to-end on live infrastructure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Eliminates setup friction for SRE teams deploying AI agents against compute infrastructure; agents access live resource state through versioned API contracts, enabling safer autonomous operations across Pods, volumes, and GPU scheduling.&lt;/p&gt;&lt;p&gt;Source: Runpod Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GSMA opens contests for RAN automation and 3GPP retrieval</title>
+      <link>https://www.telecomtv.com/content/ai/new-ai-challenges-launch-to-advance-network-automation-and-standards-knowledge-56652/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/new-ai-challenges-launch-to-advance-network-automation-and-standards-knowledge-56652/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;The GSMA's Open Telco AI initiative announced two competitions—TelcoRetrieve and AI Agents for RAN—to enable AI agents to solve complex network engineering problems and improve accuracy of AI systems working with 3GPP technical standards through retrieval-augmented generation pipelines.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These challenges address grounding AI agents in authoritative telecom standards (3GPP) to build trust in autonomous RAN operations while fostering an open ecosystem for competing solutions rather than vendor-specific automation.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RFC 10082 defines hybrid post-quantum signatures for CMS</title>
+      <link>https://www.rfc-editor.org/info/rfc10082/</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10082/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10082 published November 7, 2026 as Standards Track Proposed Standard. Defines combinations of ML-DSA with RSA, ECDSA, and EdDSA for use in Cryptographic Message Syntax (CMS), enabling hybrid post-quantum signatures in S/MIME.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Post-quantum cryptography migration for S/MIME and code signing now has concrete standard; PKI and certificate infrastructure teams must evaluate implications for document and code signing workflows.&lt;/p&gt;&lt;p&gt;Source: RFC Editor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic agents re-derive Fermat proof in 30 hours</title>
+      <link>https://github.com/diclogic/ai-daily-digest/issues/209</link>
+      <guid isPermaLink="true">https://github.com/diclogic/ai-daily-digest/issues/209</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;Anthropic released Claude Fable 5.2 and Mythos 5.2 on November 9, demonstrating ~1,000 agents re-deriving Fermat's Last Theorem formalization in 30 hours versus 11 days with human steering. On November 10, Anthropic launched Claude Sheets, Whiteboards, and Meetings as integrated office productivity tools during its IPO roadshow.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates agentic multi-model coordination achieving 9x speedup on complex mathematical tasks; shift toward embedded AI in team workflows signals new deployment patterns for Claude-based automation and orchestration.&lt;/p&gt;&lt;p&gt;Source: AI Daily Digest (GitHub) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EU AI Act prohibitions and transparency rules take effect</title>
+      <link>https://www.itechguides.com/ai-regulation-in-what-applies-now-and-what-consumers-and-businesses-should-do/</link>
+      <guid isPermaLink="true">https://www.itechguides.com/ai-regulation-in-what-applies-now-and-what-consumers-and-businesses-should-do/</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Prohibitions, general-purpose AI obligations and Article 50 transparency requirements entered into force as of 10 November 2026. Registration of high-risk systems began in November 2026 with a 72-hour incident reporting window and penalties reaching $1 million for first violations and $3 million for repeat violations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise compliance with EU AI Act implementation now determines whether systems can stay online and whether enterprises can continue operating within EU jurisdictions.&lt;/p&gt;&lt;p&gt;Source: itechguides.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Australia creates regulator to enforce frontier AI obligations</title>
+      <link>https://theconversation.com/new-ai-regulator-announced-as-government-considers-criminal-law-change-to-keep-erring-frontier-companies-in-line-296274</link>
+      <guid isPermaLink="true">https://theconversation.com/new-ai-regulator-announced-as-government-considers-criminal-law-change-to-keep-erring-frontier-companies-in-line-296274</guid>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Prime Minister Anthony Albanese announced a new artificial intelligence safety regulator that will enforce penalties for frontier AI companies breaching their obligations. The regulator will require companies to maintain security controls across all development and deployment stages, maintain published safety and security frameworks, and report misaligned behavior or cyber incidents.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Measures are targeted at frontier AI companies building the largest, most advanced models, establishing enforcement mechanisms for safety and security compliance.&lt;/p&gt;&lt;p&gt;Source: The Conversation · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-11.html&quot;&gt;Nov 11, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Batfish catches shadowed ACLs and null routes before deployment</title>
       <link>https://www.pinglabz.com/config-batfish-offline-validation/</link>
@@ -702,110 +806,6 @@
       <pubDate>Thu, 05 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Anthropic's amended IPO filing disclosed a $17 billion quarterly run rate and hundreds of billions in compute commitments; Marvell agreed to acquire Lumentum in a $115 billion all-stock deal for optical interconnects; four major AI companies agreed on a shared opt-out signal for training data.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure spending dominance signals AI competitive advantage is now optical bandwidth and compute access, not model capability; IPO filing transparency forces industry to disclose financial scale and hardware commitments.&lt;/p&gt;&lt;p&gt;Source: AICODESIT Newsroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-05.html&quot;&gt;Nov 5, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Forrester names Datadog an AIOps platform leader</title>
-      <link>https://www.datadoghq.com/about/latest-news/press-releases/datadog-named-a-leader-in-the-forrester-wave-aiops-platforms-q4-2026/</link>
-      <guid isPermaLink="true">https://www.datadoghq.com/about/latest-news/press-releases/datadog-named-a-leader-in-the-forrester-wave-aiops-platforms-q4-2026/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;Datadog named a Leader in The Forrester Wave™: AIOps Platforms, Q4 2026, with highest scores in Innovation, Roadmap, and ModelOps/AI Governance. Platform delivers autonomous operations via Bits AI detecting, investigating, and remediating within guardrails.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Native AI observability unifies application monitoring, agent observability, and digital experience in one correlation flow—when integrated with network tools, eliminates tool-switching during incident investigation and reduces MTTR.&lt;/p&gt;&lt;p&gt;Source: Datadog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ThousandEyes drops legacy OpenTelemetry attribute as Splunk integration ships</title>
-      <link>https://docs.thousandeyes.com/archived-release-notes/2026/2026-10-release-notes</link>
-      <guid isPermaLink="true">https://docs.thousandeyes.com/archived-release-notes/2026/2026-10-release-notes</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;ThousandEyes deprecated legacy OpenTelemetry attribute (thousandeyes.source.agent.connection.type) effective October 29, 2026, standardizing on network.connection.type. Splunk Synthetic Monitoring integration reached GA, enabling test creation and application-network correlation within Splunk dashboards.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenTelemetry semantic alignment reduces instrumentation drift; Splunk integration closes the NOC pain point of correlating network path metrics with application performance traces without manual context-switching during incident response.&lt;/p&gt;&lt;p&gt;Source: ThousandEyes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Arista expects AI fabric revenue to double to $7 billion</title>
-      <link>https://247wallst.com/investing/2026/11/04/arista-says-its-ai-business-will-double-to-7-billion/</link>
-      <guid isPermaLink="true">https://247wallst.com/investing/2026/11/04/arista-says-its-ai-business-will-double-to-7-billion/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Arista CEO Jayshree Ullal forecasted the company's AI fabrics business doubling to approximately $7 billion in 2027, with starting point at about $3.5 billion in 2026. Arista raised its full-year 2026 guidance to $13.3 billion, representing 48% growth, signaling market dominance in Ethernet-based AI fabric architectures.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates Arista's emerging leadership in purpose-built AI networking fabrics; the company's AI-focused strategy and deep relationships with hyperscalers position it as the primary Ethernet alternative to NVIDIA Spectrum-X and proprietary InfiniBand, with tangible revenue metrics confirming market share capture.&lt;/p&gt;&lt;p&gt;Source: 24/7 Wall St. · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Withdrawing one IXP path degrades latency for most members</title>
-      <link>https://pulse.internetsociety.org/en/blog/2026/11/measuring-ixp-resilience-with-bgp-community-withdrawals/</link>
-      <guid isPermaLink="true">https://pulse.internetsociety.org/en/blog/2026/11/measuring-ixp-resilience-with-bgp-community-withdrawals/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Study measuring latency impact on networks when individual IXP paths are withdrawn. Among 30 largest IXPs, 6.8–86.4% of members experience measurable performance degradation, with 64.2% of affected ASes losing &amp;gt;10 ms latency and some exceeding 50 ms increases.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shows IXP importance varies by path quality, not size alone; helps operators size redundancy requirements and understand their real exposure to IXP failures.&lt;/p&gt;&lt;p&gt;Source: Internet Society Pulse · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco ASA and FTD VPN zero-day actively exploited</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Cisco released security updates for CVE-2026-76418, a high-severity zero-day affecting the Remote Access SSL VPN service in Cisco Secure Firewall ASA and FTD software; Cisco disclosed the vulnerability on October 28 after its PSIRT became aware of active exploitation during October, and CISA added it to KEV on October 29.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CVE-2026-76418 is an actively exploited, unauthenticated DoS flaw (CVSS 8.6) caused by logic errors when secondary authentication is configured on tunnel groups; network teams must patch immediately or implement mitigation to prevent attackers from reloading firewalls and taking VPN infrastructure offline.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer / Cisco Security Advisory · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CISA flags VMware ESX and Linux kernel flaws as exploited</title>
-      <link>https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog</link>
-      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CISA added two new vulnerabilities to its Known Exploited Vulnerabilities Catalog on October 28, 2026, based on evidence of active exploitation: CVE-2026-41709 (Broadcom VMware ESX Insufficient Logging) and CVE-2026-46300 (Linux Kernel Missing Initialization of a Variable).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Both CVEs are in CISA KEV as actively exploited; infrastructure teams running VMware hypervisors and Linux systems must prioritize patching to prevent adversary activity from going undetected and to prevent memory corruption exploitation across production environments.&lt;/p&gt;&lt;p&gt;Source: CISA Known Exploited Vulnerabilities Catalog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Traversal raises $120 million for autonomous AI SRE agents</title>
-      <link>https://siliconangle.com/2026/11/03/autonomous-site-reliability-engineering-startup-traversal-bags-120m-in-funding-at-a-1b-valuation/</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/11/03/autonomous-site-reliability-engineering-startup-traversal-bags-120m-in-funding-at-a-1b-valuation/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Traversal Inc. raised $120 million in fresh funding, bringing its valuation to $1 billion, as its AI agents automate site reliability engineering tasks. Monthly investigations grew over 100-fold during 2026 from 513 to nearly 73,000, with usage extending into alert triage, release risk, CMDB validation, and security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The autonomous SRE platform directly addresses operational burden SRE and NetDevOps teams face in production-incident management and infrastructure problem remediation.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>CrowdStrike buys Fiddler AI and Dreadnode for $495 million</title>
-      <link>https://siliconangle.com/2026/11/03/crowdstrike-to-acquire-cybersecurity-startups-fiddler-ai-dreadnode-for-reported-495m</link>
-      <guid isPermaLink="true">https://siliconangle.com/2026/11/03/crowdstrike-to-acquire-cybersecurity-startups-fiddler-ai-dreadnode-for-reported-495m</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;CrowdStrike disclosed plans to acquire Fiddler AI for $400M, a Palo Alto startup whose platform tests AI agents for risks before launch, spotting issues like malicious code and training data leaks. The company also acquired Dreadnode for $95M, an automated security testing platform for AI models and MCP servers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The acquisitions extend CrowdStrike's Falcon platform across AI deployment stages with pre-deployment testing and runtime monitoring capabilities—critical for infrastructure teams managing AI agent risk in production.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Barret Zoph leaves OpenAI for Google DeepMind research role</title>
-      <link>https://aimagazine.com/news/ai-executive-appointments-in-november-2026</link>
-      <guid isPermaLink="true">https://aimagazine.com/news/ai-executive-appointments-in-november-2026</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Barret Zoph, former OpenAI VP of Research, Post-Training, joined Google DeepMind as VP of Research. He brings nine years of AI research leadership spanning Google Brain and OpenAI roles.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; VP-level AI research appointments at frontier labs signal competitive talent consolidation in large-scale model development and infrastructure planning.&lt;/p&gt;&lt;p&gt;Source: AI Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic adds 25 infrastructure and security agents to Claude Marketplace</title>
-      <link>https://www.unite.ai/anthropic-expands-claude-marketplace-with-partner-agents-and-products/</link>
-      <guid isPermaLink="true">https://www.unite.ai/anthropic-expands-claude-marketplace-with-partner-agents-and-products/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Anthropic announced expansion of Claude Marketplace on November 4, 2026 to include 25+ partner agents targeting security operations, developer infrastructure, and productivity workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Pre-built, vetted agents reduce build-versus-buy friction for operations teams deploying autonomous agents; ecosystem maturity signals shift from experimental to production-ready infrastructure.&lt;/p&gt;&lt;p&gt;Source: Unite.AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ChatGPT Business and Enterprise gain custom MCP server connections</title>
-      <link>https://tech-insider.org/au/build-stateless-mcp-server-python-2026/</link>
-      <guid isPermaLink="true">https://tech-insider.org/au/build-stateless-mcp-server-python-2026/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;OpenAI's November 2 documentation update enables custom MCP server connections for ChatGPT Business and Enterprise/Edu plans, allowing workspace admins to provision infrastructure MCP servers directly into ChatGPT without code.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP support across Claude and ChatGPT means operations teams can standardize infrastructure agent tooling (NetBox, Meraki, Splunk, etc.) and choose LLM clients based on regulatory, cost, or performance constraints rather than MCP availability.&lt;/p&gt;&lt;p&gt;Source: Tech Insider · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Verizon and Ericsson roll out AI-native RAN automation nationwide</title>
-      <link>https://www.ericsson.com/en/press-releases/6/2026/verizon-and-ericsson-partner-to-transform-ai-native-autonomous-networks</link>
-      <guid isPermaLink="true">https://www.ericsson.com/en/press-releases/6/2026/verizon-and-ericsson-partner-to-transform-ai-native-autonomous-networks</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Verizon and Ericsson announced nationwide rollout of the Ericsson Intelligent Controller supporting AI-native rApps deployment. Field trials showed up to 8.9% improvement in downlink throughput and 8% in uplink throughput.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables RAN automation at scale with open, programmable interfaces; reduces vendor lock-in while delivering quantified performance gains for closed-loop optimization.&lt;/p&gt;&lt;p&gt;Source: Ericsson · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lumen launches Emerald AI for energy-aware workload routing</title>
-      <link>https://voip.review/2026/10/30/lumen-partners-ai-routing-quantum-safe-networks/</link>
-      <guid isPermaLink="true">https://voip.review/2026/10/30/lumen-partners-ai-routing-quantum-safe-networks/</guid>
-      <pubDate>Wed, 04 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Lumen announced Emerald AI, an intelligent network capability that dynamically reroutes AI workloads to optimize for power, cost, and operational factors, plus quantum-resistant security capabilities via Fortinet-based SASE.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses the critical constraint: by 2030, power limits will force 75% of I&amp;amp;O leaders to mandate energy-aware AI placement, making network-level workload routing directly actionable for operations teams.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-04.html&quot;&gt;Nov 4, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
