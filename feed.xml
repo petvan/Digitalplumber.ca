@@ -6,150 +6,102 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Fri, 13 Nov 2026 14:58:36 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 17:45:40 GMT</lastBuildDate>
     <item>
-      <title>Seven network automation platforms compared for AI agent use</title>
-      <link>https://www.netpilot.io/blog/network-automation-tools-ai-agent-2026</link>
-      <guid isPermaLink="true">https://www.netpilot.io/blog/network-automation-tools-ai-agent-2026</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Comparison of seven network automation platforms for AI agent integration: NetBox MCP, Nautobot MCP, IP Fabric, ServiceNow, Cisco NSO, and nrx. Evaluates source-of-truth input, agent support, and integration patterns for LLM-driven workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Maps how NetBox, Nautobot, and IP Fabric fit into agentic network operations—critical context for choosing a source of truth that supports both traditional automation and AI-driven workflows.&lt;/p&gt;&lt;p&gt;Source: NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor adds MCP support to Edwin AI agentic engine</title>
-      <link>https://www.logicmonitor.com/blog/network-monitoring-explained</link>
-      <guid isPermaLink="true">https://www.logicmonitor.com/blog/network-monitoring-explained</guid>
+      <title>ThousandEyes traces Microsoft 365 Exchange Online outage across global network</title>
+      <link>https://www.thousandeyes.com/blog/microsoft-365-outage-analysis-november-12-2026</link>
+      <guid isPermaLink="true">https://www.thousandeyes.com/blog/microsoft-365-outage-analysis-november-12-2026</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor announced MCP (Model Context Protocol) support for Edwin AI, its agentic AIOps engine. The MCP makes monitoring data and investigation results available to approved AI agents. Edwin AI correlates internal infrastructure signals with Catchpoint internet telemetry in real time, enabling predictive failover—one customer detected AWS degradation 13 minutes before public outage declaration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP integration enables network observability data to flow directly into AI agent workflows, eliminating context-switching for NOC engineers during incident investigation and enabling multi-domain event correlation for predictive remediation at NOC scale.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;ThousandEyes published real-time outage analysis of the Microsoft 365 Exchange Online incident, tracking timeouts, packet loss, and traffic patterns across the global network starting at 17:30 UTC on November 12. The analysis demonstrates internet-scale observability and cross-layer correlation of network and application failures.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Shows how modern NOC teams use internet-scale telemetry to detect and validate outages independent of vendor status pages, enabling faster incident response and root cause validation.&lt;/p&gt;&lt;p&gt;Source: ThousandEyes Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Broadcom shows Tomahawk 6 and co-packaged optics at SC26</title>
-      <link>https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</link>
-      <guid isPermaLink="true">https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</guid>
+      <title>Exchange Online traffic fell 85 percent during Microsoft outage</title>
+      <link>https://ppc.land/microsofts-outlook-is-back-and-it-brought-18-hours-of-mail-with-it/</link>
+      <guid isPermaLink="true">https://ppc.land/microsofts-outlook-is-back-and-it-brought-18-hours-of-mail-with-it/</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom unveiled Tomahawk 6 (102.4 Tbps), Tomahawk Ultra, Jericho 4 switches, Thor Ultra 800G NICs, and TH6-Davisson Co-Packaged Optics, delivering a unified Ethernet foundation for scale-up, scale-out, and scale-across AI fabrics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open Ethernet can now serve every layer of the AI fabric, eliminating vendor lock-in and enabling operators to architect large-scale GPU clusters using merchant silicon and CPO at 800G and 1.6T.&lt;/p&gt;&lt;p&gt;Source: HPCwire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Kentik's Director of Internet Analysis published real-time traffic analytics showing Exchange Online traffic fell 85% below expected levels at 17:35 UTC on November 12, providing independent quantification of outage severity. Recovery began at 11:20 UTC on November 13, with queue catch-up traffic running 19% above baseline by 13:25 UTC.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how network observability platforms provide quantified, time-stamped evidence of service impact severity—critical for SLO validation, incident severity classification, and post-incident root cause investigations in multi-tenant environments.&lt;/p&gt;&lt;p&gt;Source: Kentik Internet Analysis · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Oracle expands Acceleron with multiplanar RDMA AI fabrics</title>
-      <link>https://www.voicendata.com/artificialintelligence/oracle-acceleron-puts-ai-networking-bottlenecks-in-focus-12799024</link>
-      <guid isPermaLink="true">https://www.voicendata.com/artificialintelligence/oracle-acceleron-puts-ai-networking-bottlenecks-in-focus-12799024</guid>
+      <title>Most firms run AI agents in operations without execution transparency</title>
+      <link>https://www.developer-tech.com/news/dynatrace-finds-ai-observability-gap-widening/</link>
+      <guid isPermaLink="true">https://www.developer-tech.com/news/dynatrace-finds-ai-observability-gap-widening/</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Oracle expanded Acceleron with RDMA-based fabrics, resilient multiplanar networking and distributed collective communications at Oracle AI World 2026. OCI Superclusters combine NVIDIA NVL72 rack-scale systems with Oracle Acceleron networking featuring NVIDIA Spectrum-X Ethernet with Spectrum-6 switches and BlueField-4 DPUs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network resilience becomes the critical bottleneck as cluster scale exceeds 100K GPUs; Oracle's multiplanar approach with path selection and failover prevents cascading failures when one congested path impacts thousands of GPU-to-GPU synchronizations.&lt;/p&gt;&lt;p&gt;Source: VoiceNData · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Dynatrace research in its State of Observability 2026 report finds that 87 percent of technology leaders use AI agents for observability and IT operations, yet controls needed to verify what those agents do haven't kept pace. The study identifies a 14-percentage-point gap between AI agent deployment and execution transparency.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Highlights a critical challenge for AIOps practitioners: while AI agents are deployed widely, organizations lack observability and governance mechanisms to validate agent decisions—a prerequisite for autonomous remediation at scale in critical infrastructure.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>HPE closes Juniper deal and launches AI cluster switches</title>
-      <link>https://www.nomios.com/news-blog/hpe-juniper-acquisition-complete/</link>
-      <guid isPermaLink="true">https://www.nomios.com/news-blog/hpe-juniper-acquisition-complete/</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;HPE completed its $14 billion acquisition of Juniper Networks with integration focused on AI-native networking. HPE introduced QFX5220 switches for large-scale AI clusters, QFX5130 for distributed inference, and liquid-cooled 100-terabit-class scale-out switches integrated with AMD Helios racks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A modern network architecture is now as critical to AI as silicon itself; HPE's unified portfolio enables full-stack AI infrastructure contracts combining Juniper switching, Mist AI operations, and compute-storage-networking co-design.&lt;/p&gt;&lt;p&gt;Source: Nomios · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>BGP hijack redirects Chinese web traffic to gambling sites</title>
+      <title>BGP hijack via AS 402425 redirects Chinese traffic to gambling sites</title>
       <link>https://tribuna.com/amp/en/casino/news/2026-11-11-bgp-routing-attack-redirects-chinese-web-traffic-to-gambling-platforms/</link>
       <guid isPermaLink="true">https://tribuna.com/amp/en/casino/news/2026-11-11-bgp-routing-attack-redirects-chinese-web-traffic-to-gambling-platforms/</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Internet users across several Chinese provinces were redirected to gambling platforms after attackers exploited BGP rules through AS 402425 to override legitimate routes via longest-prefix match, substituting official addresses with gambling-site destinations or malicious DNS servers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; BGP route incidents occur hundreds of times monthly and most go unnoticed; this incident shows why route filtering and RPKI enforcement matter operationally for traffic hijacking prevention at scale.&lt;/p&gt;&lt;p&gt;Source: Tribuna · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Malicious actors exploited BGP longest-prefix-match rules to announce false routes through AS 402425 (registered to US-based Qorexa Labs in April 2026), hijacking traffic across Chinese provinces and substituting DNS servers without infecting end-user devices.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates continued BGP hijack risk despite RPKI; highlights operator filtering gaps and AS registration abuse as a vector for regional traffic interception.&lt;/p&gt;&lt;p&gt;Source: tribuna.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Critical FortiOS flaw lets attackers forge BGP and OSPF routes</title>
+      <title>eMudhra revokes eight more CAs after private key blunder</title>
+      <link>https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/</link>
+      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/emudhra-revokes-8-more-ca-certificates-after-private-key-mishap/</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;eMudhra revoked eight additional intermediate CA certificates after discovering improper handling of private keys during certificate generation, where a script reduced eight ECDSA private keys to a single byte. Chrome and Firefox will stop trusting emSign G1-chained certificates as of November 16, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Certificate holders must immediately reissue TLS certificates from unaffected CAs to avoid trust failures; infrastructure teams need immediate CA trust store and certificate inventory audits.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Critical FortiOS routing flaw and FortiManager RCE patched</title>
       <link>https://www.redtigersecurity.com/advisory/fortinet-november-2026-psirt</link>
       <guid isPermaLink="true">https://www.redtigersecurity.com/advisory/fortinet-november-2026-psirt</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Fortinet released fixes for CVE-2026-126253 (CVSS 9.3), a critical flaw in FortiOS allowing unauthenticated attackers to send specially crafted requests that cause firewalls to broadcast malicious routing announcements. Also patched: CVE-2026-126261 (unauthenticated RCE on FortiManager via FGFM channel).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unauthenticated BGP manipulation creates routing hijacking and instability risks across branch networks and SD-WAN deployments. This affects network core infrastructure stability, not just individual device security.&lt;/p&gt;&lt;p&gt;Source: Red Tiger Security, Fortinet PSIRT · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Fortinet released November 2026 advisories fixing a critical FortiOS routing flaw (CVE-2026-126253, CVSS 9.3) enabling unauthenticated attackers to trigger firewall routing announcements, and critical FortiManager flaws including unauthenticated code execution (CVE-2026-126261, CVSS 9.0) via the FGFM management channel.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators running FortiOS or centralized FortiManager must assess attack surface; routing flaws require OSPF network proximity but JSON-RPC API flaws expose systems if API is enabled.&lt;/p&gt;&lt;p&gt;Source: Red Tiger Security · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Microsoft patches unauthenticated RCEs in DNS, LDAP and Exchange</title>
-      <link>https://www.opswat.com/blog/microsoft-s-november-2026-patch-tuesday-one-flaw-in-1-095-scored-6-5-and-it-s-under-attack</link>
-      <guid isPermaLink="true">https://www.opswat.com/blog/microsoft-s-november-2026-patch-tuesday-one-flaw-in-1-095-scored-6-5-and-it-s-under-attack</guid>
+      <title>CISA adds exploited OpenSSH and FreeSwitch flaws to KEV</title>
+      <link>https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>Network Security</category>
-      <description>&lt;p&gt;Microsoft released 1,094 CVEs including CVE-2026-119958 (LDAP unauthenticated RCE on every domain controller) and CVE-2026-88218 (Windows DNS unauthenticated RCE, CVSS 9.8). Only one flaw is under active attack: CVE-2026-124194 (Microsoft Outlook spoofing zero-day).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unauthenticated RCEs in DNS, LDAP, and Exchange directly threaten Active Directory and nameserver availability. These are mass-exploitation candidates affecting infrastructure teams running Windows infrastructure estates.&lt;/p&gt;&lt;p&gt;Source: OPSWAT, Zero Day Initiative, Microsoft · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;CISA added CVE-2026-123158 (OpenBSD OpenSSH SSHole authentication bypass, CVSS 8.1) and CVE-2026-116779 (SignalWire FreeSwitch code injection, CVSS 9.8) to the KEV catalog on November 9. Exploitation of SSHole was first observed in honeypots November 7, 2026, with active attacks ongoing since November 6.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure teams must immediately patch OpenBSD OpenSSH on Linux systems; exploitation is currently active with honeypot hits confirmed by GreyNoise. Any internet-exposed SSH services need emergency patching.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Cribl acquires Tero to cut low-value telemetry</title>
-      <link>https://www.globenewswire.com/news-release/2026/11/10/3399585/0/en/cribl-acquires-tero-to-lead-observability-into-the-ai-era.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/11/10/3399585/0/en/cribl-acquires-tero-to-lead-observability-into-the-ai-era.html</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Cribl acquired Tero, which builds an intelligence layer for observability data that identifies low-value telemetry. Tero's founders, including Vector co-creator Ben Johnson, join Cribl as its third acquisition in four months to expand AI-native observability capabilities.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Tero's technology for pinpointing waste in observability ingestion now feeds APM, host monitoring, federated observability, and AI-native observability tooling—directly addressing cost and signal-to-noise problems in monitoring infrastructure.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Over half of organisations run agentic AI in NetOps production</title>
+      <title>Over half of organizations run agentic AI in production NetOps</title>
       <link>https://hbr.org/sponsored/2026/11/the-math-driving-agentic-ai-adoption-in-netops</link>
       <guid isPermaLink="true">https://hbr.org/sponsored/2026/11/the-math-driving-agentic-ai-adoption-in-netops</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;A 2026 Cisco/Omdia study of 1,000 IT and NetOps leaders finds more than half of organizations already use agentic AI to act on NetOps processes and tasks in production. The challenge now is deciding what to trust agents with, how to verify their work, and cost allocation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Establishes adoption baseline and governance framework that operators must implement; shows verification costs must be lower than manual work to justify agent autonomy.&lt;/p&gt;&lt;p&gt;Source: Harvard Business Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Over half of organizations already use agentic AI to act on NetOps processes and tasks in production, per a 2026 Omdia/Cisco study of 1,000 IT leaders. Enterprise monitoring systems generate over 4,000 alerts daily, roughly half network-related, driving the shift to autonomous triage and action.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; As network teams hand authority to AI agents, the challenge is deciding what to trust them with and ensuring verification costs less than manual work—a practical governance model for production NetOps.&lt;/p&gt;&lt;p&gt;Source: Harvard Business Review / Cisco · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AWS fixes SSRF flaw in MCP gateway registry</title>
-      <link>https://gbhackers.com/aws-warns-of-mcp-gateway-registry-vulnerability</link>
-      <guid isPermaLink="true">https://gbhackers.com/aws-warns-of-mcp-gateway-registry-vulnerability</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;AWS disclosed a server-side request forgery (SSRF) flaw (CVE-2026-125926) in mcp-gateway-registry that lets authenticated users make the gateway send requests to internal services. AWS fixed the issue in version 1.35.0 with upstream address validation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; With thousands of MCP servers already vulnerable, infrastructure ops teams must treat MCP registries as high-value targets and update immediately; adds critical security considerations to agentic infrastructure architectures.&lt;/p&gt;&lt;p&gt;Source: GBHackers · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft and IBM launch joint AI agent platform</title>
-      <link>https://myitforum.substack.com/p/it-pros-weekly-roundup-november-913</link>
-      <guid isPermaLink="true">https://myitforum.substack.com/p/it-pros-weekly-roundup-november-913</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Microsoft and IBM announced an AI agent platform combining Microsoft cloud/security with IBM's prebuilt agents. Google released Gemini 4 Hydrogen for faster agentic workflows and Gemini 4 Carbon for cyber and long-horizon agent capabilities. AMD Venice is the key hardware story for agent infrastructure planning.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Major cloud and enterprise platforms are shipping agentic AI as a baseline competitive capability; hardware requirements for agent and AI infrastructure are now a central ops planning concern.&lt;/p&gt;&lt;p&gt;Source: myITforum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Telcos push AI to run customer journeys autonomously</title>
+      <title>Telcos move fastest on letting AI run customer journeys</title>
       <link>https://www.telecomstechnews.com/news/telcos-race-ahead-on-ai-managed-customer-experience-plans/</link>
       <guid isPermaLink="true">https://www.telecomstechnews.com/news/telcos-race-ahead-on-ai-managed-customer-experience-plans/</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Telecom operators are deploying AI to autonomously orchestrate customer journeys faster than any other industry. 89% of telcos report AI assistants replacing search engines; 9-in-10 telco leaders expect autonomous AI to select plans and renew contracts within 2-3 years, but consumer acceptance lags significantly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Widespread consumer-AI decision-making deployment outpaces customer comfort, creating governance and retention risk; ops teams must anticipate service automation rollback and audit requirements when autonomous systems fail.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Telecom companies are deploying AI to autonomously orchestrate customer journeys at a pace outpacing other industries. Over 90% of telco leaders expect to let AI independently select plans and renew contracts within two to three years, while 89% say AI assistants are replacing search engines as the starting point for customer journeys.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operations teams need to prepare BSS/OSS platforms for autonomous AI decision-making in customer lifecycle management, requiring new auditability and consent mechanisms for production deployments.&lt;/p&gt;&lt;p&gt;Source: Telecom's Tech News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>GSMA and ITU agree to collaborate on open telecom AI</title>
-      <link>https://rcrwireless.com/20261112/ai/gsma-itu-letter-of-intent-telecom-ai</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20261112/ai/gsma-itu-letter-of-intent-telecom-ai</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;GSMA and ITU signed a non-binding letter of intent at MWC26 Doha to collaborate on open telecom AI governance, focusing on telco-grade models, data and benchmarks for network operations, infrastructure and standards. No funding or timeline announced.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Standards bodies are formalizing AI governance framework for operators; establishes basis for interoperability standards and vendor accountability around agentic systems in production networks.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IETF draft sets requirements for inter-domain source address validation</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-savnet-inter-domain-problem-statement/23/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-savnet-inter-domain-problem-statement/23/</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Updated IETF draft addressing inter-domain source address validation (SAV) mechanisms, analyzing gaps in current validation techniques and defining requirements for improved security against source address spoofing at network boundaries.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operational teams deploying DDoS mitigation and anti-spoofing controls need awareness of evolving SAV standards; this draft shapes the future of BGP-based ingress filtering and border router configurations.&lt;/p&gt;&lt;p&gt;Source: IETF DataTracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Janus framework pairs digital twins with LLM network orchestration</title>
-      <link>https://arxiv.org/abs/2611.14920</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.14920</guid>
-      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;arXiv paper proposing Janus, an LLM-based agentic framework unifying digital twin construction and network orchestration in closed-loop systems for large-scale 6G networks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps and network automation teams exploring AI-driven network modeling should track agentic approaches that couple real-time digital twins with orchestration; this represents evolving patterns for autonomous network management at scale.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Anthropic launches Claude Sheets, Whiteboards and Meetings</title>
-      <link>https://github.com/diclogic/ai-daily-digest/issues/209</link>
-      <guid isPermaLink="true">https://github.com/diclogic/ai-daily-digest/issues/209</guid>
+      <title>Google DeepMind ships Gemini Robotics 2.5 to robotics partners</title>
+      <link>https://casrai.org/news/deepmind-gemini-robotics-2-5-2026</link>
+      <guid isPermaLink="true">https://casrai.org/news/deepmind-gemini-robotics-2-5-2026</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Model Providers</category>
-      <description>&lt;p&gt;On November 10, Anthropic launched Claude Sheets, Whiteboards and Meetings on the first day of its IPO roadshow. Claude Sheets enables multi-tab spreadsheets generated from prompts with teammate editing across web, desktop and mobile on paid plans from $20/month, while Claude Whiteboards is a shared canvas for planning discussions and Claude Meetings lets Claude join video calls as a visible participant.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These products mark Anthropic's shift from AI-only services to workspace infrastructure, signaling how frontier model providers are competing with Microsoft and Google beyond the model layer.&lt;/p&gt;&lt;p&gt;Source: AI Daily Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Google DeepMind announced Gemini Robotics 2.5 on November 10, 2026, its most capable vision-language-action model that converts visual and language input into robot motor control. Rolling out to partners including Apptronik, Mercedes-Benz and Agile.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Robotics operators now have access to a production-ready embodied AI model that translates vision and language into physical control, replacing custom end-to-end training for robotic tasks.&lt;/p&gt;&lt;p&gt;Source: CASRAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>EU leaders plan 19 AI factories and triple data-centre capacity</title>
-      <link>https://consilium.europa.eu/en/meetings/european-council/2026/11/13</link>
-      <guid isPermaLink="true">https://consilium.europa.eu/en/meetings/european-council/2026/11/13</guid>
+      <title>Chip export politics reshape AI infrastructure funding and valuations</title>
+      <link>https://www.faf.ae/home/2026/11/12/the-silicon-chokepoint-washington-beijing-and-london-fight-for-the-architecture-of-artificial-intelligence</link>
+      <guid isPermaLink="true">https://www.faf.ae/home/2026/11/12/the-silicon-chokepoint-washington-beijing-and-london-fight-for-the-architecture-of-artificial-intelligence</guid>
       <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;For the first time, EU leaders held a strategic discussion on artificial intelligence to boost European competitiveness. The Commission is rolling out 19 AI Factories across Europe with 13 regional antennas and setting the goal of tripling EU data-center capacity over 5-7 years.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Europe is formalizing AI sovereignty strategy with concrete infrastructure investment and compute capacity targets to compete with US and China while maintaining regulatory leadership.&lt;/p&gt;&lt;p&gt;Source: consilium.europa.eu · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;H200 chip licensing to China became a 2026 flashpoint with bipartisan congressional concern, while Anthropic raised $65 billion at a $965 billion valuation and Fractile, a London chip-design firm, attracted multiples-higher valuations after signing with Anthropic.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Large American technology companies are widening capital sources across Asia during heavy computing investment, creating financial ties that interact with chip policy geopolitics—directly affecting enterprise infrastructure procurement and supply-chain risk.&lt;/p&gt;&lt;p&gt;Source: Foreign Affairs Forum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Southeast Asia AI funding more than doubles to $4.2 billion</title>
+      <link>https://technode.global/2026/11/12/sea-ai-funding-rises-121-percent-to-4-2-billion-in-9m-2026-tracxn</link>
+      <guid isPermaLink="true">https://technode.global/2026/11/12/sea-ai-funding-rises-121-percent-to-4-2-billion-in-9m-2026-tracxn</guid>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Southeast Asia AI companies raised $4.2 billion in the first nine months of 2026—up 121 percent year-over-year—with the largest round being Kling AI's $2.8 billion Series D. The ten largest rounds accounted for 98 percent of all SEA AI funding.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SEA AI funding concentration is extreme: mega-rounds dominate (top 10 = 98% of capital), seed funding declined, and 100% of SEA AI funding came from Singapore-based companies—meaning infrastructure and adoption patterns are highly consolidated and geographically concentrated.&lt;/p&gt;&lt;p&gt;Source: TNGlobal (Tracxn) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-13.html&quot;&gt;Nov 13, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zabbix 7.0 LTS monitors multi-site Cisco IOS-XE lab</title>
@@ -806,6 +758,54 @@
       <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
       <description>&lt;p&gt;Taiwan Maritime Port Bureau announced that Taiwan has scheduled repair operations for faults affecting East Asia Crossing 1 (EAC1), section C, in waters off eastern Taiwan from November 10 to December 20 after an August cable fault. The notice establishes a repair work window and restricts vessel entry to the operation area but does not identify a repair vessel or repair method.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators depending on EAC1 capacity should understand the repair schedule and plan traffic rerouting via alternate cables; this represents a 40+ day window of reduced redundancy in Asia-Pacific connectivity.&lt;/p&gt;&lt;p&gt;Source: SubTel Forum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>eMudhra intermediate CA keys generated with three bits entropy</title>
+      <link>https://emudhra.com/en/post/certificate-security-incident</link>
+      <guid isPermaLink="true">https://emudhra.com/en/post/certificate-security-incident</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Eight intermediate CAs operated by eMudhra had their private keys compromised with catastrophically weak entropy—as few as 3 bits instead of the required 384 bits for NIST P-384. Google Chrome and Mozilla Firefox set SCTNotAfter of November 16, 2026; Apple set G1 removal for November 30, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; TLS traffic encrypted with eMudhra certificates is trivially decryptable; infrastructure teams must identify affected certificates and plan immediate replacements before browser distrust dates—especially for enterprise VPN and load balancers.&lt;/p&gt;&lt;p&gt;Source: eMudhra official statement; Google, Apple, Mozilla browser root program updates · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Palo Alto Networks nears $500M deal for Clutch Security</title>
+      <link>https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Palo Alto Networks is negotiating to acquire Clutch Security, an AI agent security startup, for approximately $500M in cash plus milestone payments. Clutch is approaching $10M ARR, valuing the deal at roughly 50x ARR.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clutch brings specialized AI agent behavior monitoring and anomaly detection, addressing a critical gap in Palo Alto's product lineup as enterprises demand comprehensive AI security solutions.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Five9 to buy Level AI for $325 million</title>
+      <link>https://www.sec.gov/Archives/edgar/data/0001288847/000128884726000141/projectlanderpressreleas.htm</link>
+      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0001288847/000128884726000141/projectlanderpressreleas.htm</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Five9 has signed a definitive agreement to acquire Level AI for $325M in all-cash, expected to close in Q4 2026. Level AI develops conversation analytics, agent-assist, and automation tools for customer experience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The acquisition marks a pivot toward buying AI capabilities and allows Five9 to sell AI tools to enterprises not yet using its cloud platform, widening market reach beyond traditional contact center operators.&lt;/p&gt;&lt;p&gt;Source: Five9 SEC Filing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Z Squared adds CTO Jeffery Harris to board</title>
+      <link>https://www.sec.gov/Archives/edgar/data/0001759186/000118518526005151/zsqr8k110326.htm</link>
+      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0001759186/000118518526005151/zsqr8k110326.htm</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Z Squared Inc., a computing infrastructure company expanding into AI infrastructure, elected Chief Technology Officer Jeffery Harris to its Board of Directors on November 3, 2026. Harris, who previously served as CEO of Paradox Infrastructure and CTO of Paradox Data, brings deep expertise in high-density computing, power infrastructure, and immersion-cooled systems designed for AI workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Elevates AI infrastructure technologist to board-level oversight of capital deployment and site selection decisions as companies race to build data center capacity for AI compute.&lt;/p&gt;&lt;p&gt;Source: PR Newswire / SEC Filing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Versa says two-thirds of network tasks remain manual</title>
+      <link>https://versa-networks.com/blog/agentic-ai-in-netops-the-next-big-leap-for-network-operations/</link>
+      <guid isPermaLink="true">https://versa-networks.com/blog/agentic-ai-in-netops-the-next-big-leap-for-network-operations/</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Autonomous AI agents independently troubleshoot, optimize performance, and contain security threats in real time under defined policy guardrails. Nearly two-thirds of network tasks remain manual today, with agentic AI reducing MTTR from hours to minutes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators can shift from manual triage to autonomous incident response with guardrails, freeing engineers to focus on strategy while agents handle real-time network decisions.&lt;/p&gt;&lt;p&gt;Source: Versa Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell and Singtel lead carrier AI infrastructure spending</title>
+      <link>https://telecomlead.com/telecom-services/telecom-operators-ai-spending-in-2026-bell-ooredoo-china-mobile-china-telecom-and-singtel-reveal-investments-and-returns-128606</link>
+      <guid isPermaLink="true">https://telecomlead.com/telecom-services/telecom-operators-ai-spending-in-2026-bell-ooredoo-china-mobile-china-telecom-and-singtel-reveal-investments-and-returns-128606</guid>
+      <pubDate>Sun, 08 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell Canada, Ooredoo, China Mobile, China Telecom and Singtel are expanding investments in AI infrastructure and GPU computing, with disclosed commitments including C$1.7 billion from Bell Canada and S$130 million from Singtel subsidiary NCS for AI development. Singtel combines customer-backed AI cloud investments with measurable operational applications including AI-assisted customer support.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telecom operators are building sovereign AI clouds and GPU-as-a-service platforms as core strategic units, requiring practitioners to understand both network topology and AI workload placement as interdependent infrastructure problems.&lt;/p&gt;&lt;p&gt;Source: TelecomLead · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-08.html&quot;&gt;Nov 8, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
