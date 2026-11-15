@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 14 Nov 2026 16:36:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 17:06:30 GMT</lastBuildDate>
+    <item>
+      <title>AutoCon 6 talks cover Nautobot federation and disposable labs</title>
+      <link>https://networkautomation.forum/autocon6</link>
+      <guid isPermaLink="true">https://networkautomation.forum/autocon6</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;AutoCon 6 (November 16–20, Tucson) brings network engineers for deep-dive technical talks on open-source tooling and infrastructure operations. Peer presentations examine federated Nautobot, replacing spreadsheet sources of truth, disposable labs, and resumable upgrades.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AutoCon's practitioner-first model—avoiding vendor keynotes and prioritizing real operational lessons—is the primary venue for NetDevOps practitioners to exchange hands-on automation patterns across GitOps, source of truth, and agentic operations.&lt;/p&gt;&lt;p&gt;Source: Network Automation Forum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moving from 800G to 1.6T cuts module spending 25%</title>
+      <link>https://siliconatlas.substack.com/p/ais-optical-boom-faster-modules-smaller</link>
+      <guid isPermaLink="true">https://siliconatlas.substack.com/p/ais-optical-boom-faster-modules-smaller</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;AI clusters require dramatically more optical interconnect per unit of compute than previous data center generations, pulling transceiver speeds from 800G toward 1.6T and driving early adoption of co-packaged optics. Moving from 800G to 1.6T preserves total fiber capacity and halves the module count; at an assumed 50% price premium, module spending for the same capacity falls 25%.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators can reduce fiber run counts and total optics spend per data center while increasing port density, improving rack power budgets and reducing cooling load—the physics of AI density now favor 1.6T transceiver adoption.&lt;/p&gt;&lt;p&gt;Source: Silicon Atlas · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oracle plugin lifts NCCL bus bandwidth up to 10%</title>
+      <link>https://www.hpcwire.com/off-the-wire/oracle-introduces-occl-network-plugin-for-distributed-ai-training/</link>
+      <guid isPermaLink="true">https://www.hpcwire.com/off-the-wire/oracle-introduces-occl-network-plugin-for-distributed-ai-training/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Oracle Cloud Infrastructure introduced Oracle Collective Communications Library (OCCL) network plugin for distributed AI workloads on OCI-supported GPUs and RDMA-enabled infrastructure. Benchmarks on NVIDIA GB300 systems show OCCL increased average NCCL bus bandwidth by up to 10% for AllReduce operations across 16-128 nodes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCCL addresses production constraints in large-scale AI training: congested network paths, failed links, and failed NICs interrupt collective communication and force training jobs to stall or restart—this plugin recovers automatically and reroutes around failures.&lt;/p&gt;&lt;p&gt;Source: HPCwire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Juniper router feature caused nationwide FAA ground stop</title>
+      <link>https://www.cellstream.com/2026/11/15/another-faa-outage-what-we-know/</link>
+      <guid isPermaLink="true">https://www.cellstream.com/2026/11/15/another-faa-outage-what-we-know/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;During routine FAA telecommunications maintenance on November 13, a newly installed Juniper router generated over 1,000 connection attempts every 4-5 seconds, cascading through the network and affecting 17 of 22 en-route air traffic control centers. A specific router feature caused the overload; FAA staff disabled it globally across all Juniper routers. The ground stop lasted 4 hours 21 minutes and affected over 3,500 flights.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The FAA is replacing 2,000 Cisco 600 routers with Juniper equipment while maintaining 24/7 operations, illustrating operational risks of brownfield router migrations and the need for staged canary deployments during equipment transitions.&lt;/p&gt;&lt;p&gt;Source: Tom's Hardware, Transportation.gov, Cellstream · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Traffic rebalancing amplified Microsoft 365 outage into routing deadlock</title>
+      <link>https://www.systemdesign.academy/explained/microsoft-365-outage</link>
+      <guid isPermaLink="true">https://www.systemdesign.academy/explained/microsoft-365-outage</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Technical analysis reveals Microsoft 365 outage was amplified by cascading routing failures. Initial health-check failures triggered traffic rebalancing, which itself generated a surge of outbound routing calls that further overloaded backend servers. Servers returned to service became unresponsive under renewed traffic, creating a self-amplifying deadlock requiring staged recovery.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Large-scale cloud operators should recognize this pattern: remediation actions (traffic rebalancing, failover) can trigger secondary issues through control-plane overload and retry storms. Circuit breakers, traffic throttling, and gradual staged recovery are essential guardrails.&lt;/p&gt;&lt;p&gt;Source: System Design Academy, Enow Software, Azure Blog UK · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CISA flags chained Barracuda flaws giving root on gateways</title>
+      <link>https://shattered.io/cisa-kev-six-exploited-flaws-barracuda-esg-cisco-broadworks-outlook-nov-10/</link>
+      <guid isPermaLink="true">https://shattered.io/cisa-kev-six-exploited-flaws-barracuda-esg-cisco-broadworks-outlook-nov-10/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added six actively exploited vulnerabilities to the KEV Catalog on November 10, including two Barracuda flaws (CVE-2026-116606, CVE-2026-111560) that allow root access when chained, plus Cisco BroadWorks XXE, Openwave, Microsoft Outlook, and Google Chromium vulnerabilities. Two of the Barracuda flaws hand an attacker root on Barracuda Email Security Gateway appliances.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The two Barracuda flaws chain to enable unauthenticated root access: CVE-2026-116606 is a pre-authentication authorization bypass allowing crafted backup restoration, and CVE-2026-111560 is command injection that runs as root; together they bypass all authorization controls. Affects Email Security Gateway and five other Barracuda products; patch immediately with federal deadline November 13.&lt;/p&gt;&lt;p&gt;Source: Shattered.io · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FRRouting BGP daemon flaws let attackers crash bgpd</title>
+      <link>https://cvebrief.com/archive/2026/11/15/</link>
+      <guid isPermaLink="true">https://cvebrief.com/archive/2026/11/15/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;A double-free and use-after-free vulnerability in the FRRouting BGP daemon (CVE-2026-120221, CVSS 8.2) allows unauthenticated remote attackers to cause a denial of service by crashing the bgpd process. Additionally, an out-of-bounds heap read in FRRouting bgpd (CVE-2026-129217) causes DoS when processing BGP NOTIFICATION messages with improperly validated data fields.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These vulnerabilities affect FRRouting 8.3 through 10.5.1 and directly impact network routing infrastructure, particularly in ISPs, large enterprises, and service providers relying on open-source BGP implementations. Unauthenticated DoS attacks against BGP daemons can disrupt critical routing convergence and cause widespread outages; patches should be prioritized for edge and core routing deployments.&lt;/p&gt;&lt;p&gt;Source: CVE Brief · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dreeze leaves stealth with $33M to automate application recovery</title>
+      <link>https://www.helpnetsecurity.com/2026/11/10/dreeze-application-revival-33-million-funding/</link>
+      <guid isPermaLink="true">https://www.helpnetsecurity.com/2026/11/10/dreeze-application-revival-33-million-funding/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Dreeze emerged from stealth on November 10, 2026, with $33M seed funding led by Norwest and Bessemer Venture Partners. The platform automates recovery of entire cloud applications—not just data—by mapping dependencies, orchestrating infrastructure/configuration/identity restoration, and validating recovery before outages.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Addresses a critical gap in cloud infrastructure resilience: traditional backup only restores data, not the configurations, secrets, and identity bindings needed to run applications—critical for SREs managing AI agent failures and cyberattacks.&lt;/p&gt;&lt;p&gt;Source: Help Net Security / SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Netceed names former Spirent chief Eric Updyke as CEO</title>
+      <link>https://pulse2.com/netceed-eric-updyke-appointed-group-ceo-following-financial-restructuring/</link>
+      <guid isPermaLink="true">https://pulse2.com/netceed-eric-updyke-appointed-group-ceo-following-financial-restructuring/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;Netceed appointed Eric Updyke as group CEO, effective November 10, 2026, succeeding Alper Turken. Updyke most recently served as CEO of Spirent Communications from 2019 to 2025, where he led the company's shift from hardware-centric vendor to software, automation and services provider.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Updyke joins as Netceed pursues growth across broadband, AI infrastructure and energy markets following the company's 2026 financial restructuring—relevant for infrastructure teams managing carrier and data center vendor relationships.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AT&amp;T runs 500 agentic workflows on 45 billion tokens daily</title>
+      <link>https://siliconangle.com/2026/11/14/att-uses-agentic-ai-to-reinvent-business-processes-from-the-ground-up/</link>
+      <guid isPermaLink="true">https://siliconangle.com/2026/11/14/att-uses-agentic-ai-to-reinvent-business-processes-from-the-ground-up/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;AT&amp;amp;T has deployed nearly 500 autonomous AI workflows across core operations, handling over 1 million transactions monthly and processing 45 billion AI tokens daily, with plans to triple production workflow count within a year. The Business Agent Foundry maps processes to eliminate steps, handoffs, and legacy dependencies rather than automating isolated tasks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Value comes from connecting agents to business rules, data, and legacy systems, not deploying independent assistants. AT&amp;amp;T requires security, privacy, and compliance review for customer-facing workflows and maintains human oversight until accuracy reaches mid-to-high 90%, providing a practical governance model for operators deploying agents at scale.&lt;/p&gt;&lt;p&gt;Source: SiliconANGLE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Analysis maps MCP networking and security patterns for enterprises</title>
+      <link>https://network-insight.net/2026/11/14/mcp-architecture-explained/</link>
+      <guid isPermaLink="true">https://network-insight.net/2026/11/14/mcp-architecture-explained/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Network Insight published a comprehensive technical analysis of Model Context Protocol architecture covering host–client–server topology, JSON-RPC communication, tools, resources, prompts, authentication, networking stages of remote MCP requests, and enterprise MCP security and observability architectures for AI agent deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Remote MCP deployments introduce standard enterprise networking requirements: DNS, HTTPS, TLS, proxies, firewalls, and load balancing all directly affect MCP availability. Network teams must now account for agent-to-server communication patterns in existing infrastructure, and MCP request failures can occur even when AI applications function correctly due to underlying network or TLS issues.&lt;/p&gt;&lt;p&gt;Source: Network Insight · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI and Anthropic pledge model shutdown mechanisms in Paris Call</title>
+      <link>https://pasqualepillitteri.it/en/news/33121/openai-anthropic-sign-paris-call-shut-down-ai-models</link>
+      <guid isPermaLink="true">https://pasqualepillitteri.it/en/news/33121/openai-anthropic-sign-paris-call-shut-down-ai-models</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI, Anthropic, Microsoft and Mistral AI signed the Paris Call for AI Safety and Security on November 9, 2026, pledging to build mechanisms to stop, pause or shut down their models during training and internal use. OpenAI described Control Room, an internal service that stops research jobs on models in 35 seconds.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The pledge has no binding force or deadline; the commitment is voluntary and covers only frontier models, signaling regulatory pressure without hard enforcement mechanisms.&lt;/p&gt;&lt;p&gt;Source: pasqualepillitteri.it · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic files $1.4 trillion IPO as Nvidia's Huang resigns</title>
+      <link>https://en.wowtale.net/2026/11/15/236014/</link>
+      <guid isPermaLink="true">https://en.wowtale.net/2026/11/15/236014/</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Nvidia CEO Jensen Huang resigned on November 12, and three days later Anthropic filed an amended S-1 that could value the company at up to $1.4 trillion. Meta's acquisition of Conductor and Sequoia Capital's decision to close its London office signal capital at the top of the AI stack is being restructured, not just raised.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Leadership crises at foundational infrastructure providers and record frontier-AI valuations alongside VC retrenchment reshape capital allocation patterns and governance risk assessment for enterprise AI deployment decisions.&lt;/p&gt;&lt;p&gt;Source: WOWTALE · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-15.html&quot;&gt;Nov 15, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Unimus adds native MCP support for AI-driven network changes</title>
       <link>https://packetpushers.net/blog/?doing_wp_cron=1631734174.7304949760437011718750</link>
@@ -702,110 +806,6 @@
       <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
       <category>AIOps &amp; Network Observability</category>
       <description>&lt;p&gt;Forrester named Dynatrace a Leader in AIOps Platforms with the highest score in Current Offering and 16 criteria. Dynatrace received highest scores in causal root cause analysis and dynamic entity topology, emphasizing deterministic causal analysis over correlation for precision in complex distributed systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps platforms evolve beyond detection into operational intelligence that anticipates risks and prevents incidents before customers are affected—a capability operationalization framework network teams can adopt.&lt;/p&gt;&lt;p&gt;Source: Dynatrace Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor adds governed autonomous action across Envision and Edwin AI</title>
-      <link>https://www.enterprisemanagement.com/product/logicmonitor-extends-observability-to-autonomous-action-advancing-the-enterprise-control-plane/</link>
-      <guid isPermaLink="true">https://www.enterprisemanagement.com/product/logicmonitor-extends-observability-to-autonomous-action-advancing-the-enterprise-control-plane/</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor announced platform enhancements connecting open telemetry, operational context, AI investigation, and governed action across LM Envision, Edwin AI, and Catchpoint. Architecture spans data foundation, context layer linking infrastructure/services/users/digital experience, and AI layer investigating incidents and supporting governed action.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Combining LogicMonitor's infrastructure and AI expertise with Catchpoint's Internet-level intelligence delivers predictive visibility and control across cloud, code, and the Internet itself—enabling proactive NOC operations beyond internal network boundaries.&lt;/p&gt;&lt;p&gt;Source: Enterprise Management Associates (EMA) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor pushes cross-stack correlation for network performance monitoring</title>
-      <link>https://www.logicmonitor.com/deep-dive/network-observability/network-performance-monitoring-tools</link>
-      <guid isPermaLink="true">https://www.logicmonitor.com/deep-dive/network-observability/network-performance-monitoring-tools</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;LogicMonitor published guidance on modern network performance monitoring emphasizing that tools must measure actual user experience combining real user monitoring with synthetic tests, with cross-stack correlation tying network, application, and endpoint metrics together. DNS latency within specific ISP regions detected through multi-layer Internet stack analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cross-stack correlation replacing fragmented troubleshooting with actionable root-cause insights requires platforms that correlate routing, DNS, transport, and application layers—a foundational capability for modern NOC outage detection and MTTR reduction.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tower and Innolight develop near-package optics for AI clusters</title>
-      <link>https://www.sec.gov/Archives/edgar/data/0000928876/000117891326004972/zk2636316.htm</link>
-      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0000928876/000117891326004972/zk2636316.htm</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Tower Semiconductor and Innolight announced collaboration on Near-Package Optics (NPO) for AI infrastructure, leveraging Silicon Photonics platforms. NPO architectures address bandwidth, power, and latency constraints in next-generation AI clusters beyond pluggable optics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NPO moves optical I/O from switch front panel to package level, reducing electrical path loss and power by 50%+ compared to pluggable optics—a required step for 1.6T+ fabric densities and co-packaged optics roadmaps at hyperscalers.&lt;/p&gt;&lt;p&gt;Source: SEC filing / Tower Semiconductor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Arista expects to network 10 gigawatts of AI capacity</title>
-      <link>https://www.nextplatform.com/connect/2026/11/05/arista-lines-up-networking-for-10-gigawatts-of-ai-systems/5307929</link>
-      <guid isPermaLink="true">https://www.nextplatform.com/connect/2026/11/05/arista-lines-up-networking-for-10-gigawatts-of-ai-systems/5307929</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Arista reported over 100 customers using Etherlink AI switches and forecasts networking for 10 gigawatts of AI capacity by end-2027, including support for multiple accelerator vendors. Linear-drive pluggable optics (LPO) cut power consumption 50% per optic.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Arista's scale target signals vendor-neutral Ethernet is winning market share from Nvidia InfiniBand in scale-out AI fabrics. 10GW by 2027 implies 70% share of new hyperscale deployments now standardize on Ethernet, not proprietary interconnects.&lt;/p&gt;&lt;p&gt;Source: Next Platform · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Repair ship arrives to fix WACS undersea cable break</title>
-      <link>https://itweb.africa/article/wacs-cable-repairs-enter-critical-phase/lLn14MmQ9DnMJ6Aa</link>
-      <guid isPermaLink="true">https://itweb.africa/article/wacs-cable-repairs-enter-critical-phase/lLn14MmQ9DnMJ6Aa</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A repair vessel is scheduled to reach the affected area to begin physical restoration of the undersea link. The Gulf of Guinea and Central African coastal waters are known locations for submarine cable faults, with disruptions resulting from deep-sea seismic activity, maritime incidents such as anchor dragging, or underwater landslides.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; A major subsea cable fault affecting 14 African countries highlights ongoing subsea infrastructure vulnerability and the need for diversified routing and secondary capacity plans in affected regions.&lt;/p&gt;&lt;p&gt;Source: ITWeb Africa · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ubuntu fixes FRR regression that broke RPKI revalidation</title>
-      <link>https://linuxsecurity.com/advisories/ubuntu/ubuntu-frr-regression</link>
-      <guid isPermaLink="true">https://linuxsecurity.com/advisories/ubuntu/ubuntu-frr-regression</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;The fix for CVE-2024-55553 introduced a regression in RPKI support, causing FRR to stop processing RPKI updates after the first one, so routes were not revalidated when RPKI data changed. In Ubuntu 20.04 LTS, the BGP daemon also failed to start when the RPKI module was enabled.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators running FRR on Ubuntu must apply USN-7230-3 to restore RPKI validation—missing this patch leaves routers vulnerable to invalid route acceptance and BGP startup failures on 20.04 LTS.&lt;/p&gt;&lt;p&gt;Source: Ubuntu Security Notice · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenSSH authentication bypass exploited in the wild on musl Linux</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CVE-2026-123158 (sshole), a CVSS 8.1 password authentication bypass in OpenSSH on musl-based Linux without PAM, is actively exploited in the wild. CISA confirmed exploitation and added to KEV with November 12 deadline; GreyNoise recorded first successful wild exploitation November 7, 40 hours after fix release.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Unauthenticated SSH access to passwordless accounts including root on Alpine Linux and other musl systems; Alpine is ubiquitous in Kubernetes, container registries, edge infrastructure, and CI/CD—enabling immediate code execution on cloud-native deployments.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SonicWall SSL-VPN flaw lets attackers bypass SAML MFA</title>
-      <link>https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/</link>
-      <guid isPermaLink="true">https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CVE-2026-19868 (CVSS 7.1), an authentication enforcement flaw in SonicOS SSL-VPN, allows attackers with valid alternate credentials to bypass SAML authentication and SAML-enforced MFA. Actively exploited; CISA added to KEV with November 20 deadline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Renders multi-factor authentication on VPN ineffective for attackers holding compromised alternate credentials; MFA bypass on perimeter VPN gateways directly enables unauthorized internal network access, defeating the primary control against credential compromise.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto Networks in talks to buy Clutch for $500M</title>
-      <link>https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m</link>
-      <guid isPermaLink="true">https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Palo Alto Networks is in acquisition discussions with Clutch Security, an AI agent security startup, for $500M plus milestone payouts. This would be PANW's seventh acquisition in 2026 as the company aggressively expands into AI-driven security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Consolidation of AI agent security reflects market validation of this threat category for enterprise infrastructure teams managing unauthorized agent access.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNSFilter names Justin Foster chief technology officer</title>
-      <link>https://finance.yahoo.com/technology/ai/articles/dnsfilter-welcomes-justin-foster-executive-140000877.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/dnsfilter-welcomes-justin-foster-executive-140000877.html</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;DNSFilter announced the appointment of Justin Foster as CTO, strengthening the executive team as the company scales its AI-powered DNS-first security platform with the recent launch of LUMINATE by DNSFilter.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise security and network teams adopting DNS-first controls and AI governance now have a CTO with deep R&amp;amp;D experience scaling security products at Forescout and co-founding Cysiv.&lt;/p&gt;&lt;p&gt;Source: Business Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Vistance Networks CEO Chuck Treadway to step down in February</title>
-      <link>https://www.lightreading.com/cable-technology/vistance-ceo-stepping-down-in-wake-of-commscope-dismantling</link>
-      <guid isPermaLink="true">https://www.lightreading.com/cable-technology/vistance-ceo-stepping-down-in-wake-of-commscope-dismantling</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Vistance Networks announced that CEO Chuck Treadway will resign from his position and board membership effective February 1, 2027, following a strategic transformation that returned $16.50 per share to shareholders in 2026 and cleared the company's debt.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Leadership transition at a major network infrastructure provider signals completion of CommScope restructuring and strategic shift under new management.&lt;/p&gt;&lt;p&gt;Source: Light Reading · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Edgecore releases SONiC AI agent with deterministic guardrails</title>
-      <link>https://www.edge-core.com/blogs/secure-agentic-netops-sonic/</link>
-      <guid isPermaLink="true">https://www.edge-core.com/blogs/secure-agentic-netops-sonic/</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Edgecore announced its EDM SONiC AI Agent, developed around a security-first approach combining AI-assisted analysis with deterministic controls, role-based access, human oversight, and controlled network management to help network teams streamline troubleshooting and organize operational evidence.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators now have a reference implementation for secure, governance-first autonomous NetOps on disaggregated SONiC hardware, addressing the critical gap between agent capability and regulatory audit requirements.&lt;/p&gt;&lt;p&gt;Source: Edgecore Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Agentic AI operations need an operating model change, not tools</title>
-      <link>https://www.forbes.com/councils/forbestechcouncil/2026/11/06/how-to-redesign-infrastructure-operations-for-agentic-ai/</link>
-      <guid isPermaLink="true">https://www.forbes.com/councils/forbestechcouncil/2026/11/06/how-to-redesign-infrastructure-operations-for-agentic-ai/</guid>
-      <pubDate>Mon, 09 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;After connecting 21+ enterprise data sources to AI systems, practitioners still struggle to bridge signals to context, context to decisions, and decisions to governed execution, because infrastructure relies on fragmented tools, manual investigations, and ticketing queues. Agentic operations require an operating-model transformation, not just technology deployment.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The hard part of agent adoption is organizational: moving from CLI/scripts to policy-driven orchestration fundamentally changes how infrastructure teams interact with production systems and make remediation decisions.&lt;/p&gt;&lt;p&gt;Source: Forbes Technology Council · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-09.html&quot;&gt;Nov 9, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
