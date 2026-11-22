@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sat, 21 Nov 2026 17:25:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 17:51:44 GMT</lastBuildDate>
+    <item>
+      <title>Nornir 3.7 alpha adds async tasks and cancellable runs</title>
+      <link>https://opsmill.com/blog/nornir-release-3-7-0a1-async-tasks/</link>
+      <guid isPermaLink="true">https://opsmill.com/blog/nornir-release-3-7-0a1-async-tasks/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Nornir 3.7.0a1 adds native asyncio runner, async task execution, run cancellation, progress tracking, and async inventory loading. Existing threaded code remains unaffected; ThreadedRunner is still default.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enables Nornir integration with async applications and modern transports without forcing migration; critical for teams building event-loop-based automation infrastructure.&lt;/p&gt;&lt;p&gt;Source: OpsMill · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SCinet staging builds SC26 network from Nautobot source of truth</title>
+      <link>https://sc26.supercomputing.org/2026/11/the-network-doesnt-build-itself-inside-scinet-staging/</link>
+      <guid isPermaLink="true">https://sc26.supercomputing.org/2026/11/the-network-doesnt-build-itself-inside-scinet-staging/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;SC26 DevOps team uses Nautobot as the single source of truth for the annual supercomputing network infrastructure, automating cabling, patching, VM provisioning, and IP schema generation before the first cable is connected.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-world example of Nautobot in a high-stakes, time-bound production environment; demonstrates how NSoT discipline enables automation at scale in large ephemeral networks.&lt;/p&gt;&lt;p&gt;Source: SC26 (Supercomputing Conference) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Network to Code details SCinet's Nautobot-driven network build</title>
+      <link>https://networktocode.com/blog/</link>
+      <guid isPermaLink="true">https://networktocode.com/blog/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Network to Code publishes case study of SCinet's use of Nautobot to automate design, planning, deployment, and teardown of the annual supercomputing conference network connecting research institutions and high-performance computing systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Production validation of Nautobot in a hyperscale, time-constrained use case; shows NSoT enabling full lifecycle automation from design through operational teardown.&lt;/p&gt;&lt;p&gt;Source: Network to Code · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pakistan reroutes traffic after SMW5 submarine cable fault</title>
+      <link>https://digitalpakistan.pk/submarine-cable-repairs-set-for-december-completion/</link>
+      <guid isPermaLink="true">https://digitalpakistan.pk/submarine-cable-repairs-set-for-december-completion/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;A fault in the SEA-ME-WE 5 (SMW5) submarine cable system approximately 11 kilometres off Pakistan's coast prompted operators to reroute international traffic through alternative undersea corridors, with repairs expected by December 6. The incident highlighted fragility in Pakistan's external bandwidth infrastructure, which relies on seven undersea cable systems, while interim traffic balancing maintains baseline access but full throughput remains constrained until marine repair completion.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how submarine cable outages force real-time traffic engineering and rerouting decisions, with congestion acute during peak hours despite operator coordination—a critical operational scenario for any network dependent on subsea transit paths.&lt;/p&gt;&lt;p&gt;Source: Digital Pakistan · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Latent gateway defect and lost capacity caused Microsoft outage</title>
+      <link>https://controlplane.com/blog/post/november-2026-outage-wave-explained</link>
+      <guid isPermaLink="true">https://controlplane.com/blog/post/november-2026-outage-wave-explained</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Five widely reported outages hit major organizations between November 12 and November 16, 2026, with no organization or official reporting evidence of a cyberattack. Microsoft's preliminary report identified three factors: a latent defect in a July 2026 update to its networking gateway servers, extra load after Teams traffic shifted onto the gateway used by Exchange Online, and nearly 14% of gateway capacity already offline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The outage reveals how latent routing defects interact with traffic failovers and capacity constraints to trigger cascading failures across multiple services—a critical architectural lesson for operators managing complex multi-service, geographically distributed networks.&lt;/p&gt;&lt;p&gt;Source: Control Plane · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chinese group exploited vCenter bypass for two months before patch</title>
+      <link>https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;A China-linked espionage group exploited a critical VMware vCenter authentication bypass (CVE-2026-123890, CVSS 9.8) in the VMware Directory Service for more than two months before Broadcom released a patch on November 19. Attackers used custom tools Bonesaw and Sawsnake to steal encryption keys, forge SAML tokens, and bypass MFA.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; vCenter is a privileged control plane; patching removes the bypass but does not revoke forged SAML capability or added SSO admins—requiring immediate forensic triage, compromise hunting, and inventory of all vCenter instances for signs of lateral movement into ESXi infrastructure.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Critical OpenSSL overflow disputed and still unfixed</title>
+      <link>https://itbusinessdigest.com/openssl-encodeblock-9-8-no-patch/</link>
+      <guid isPermaLink="true">https://itbusinessdigest.com/openssl-encodeblock-9-8-no-patch/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;A heap buffer overflow in OpenSSL's Base64 encoding function (CVE-2026-121481, published November 18, CVSS 9.8) can corrupt application memory when processing very large inputs. CISA scored it 9.8 on November 19, but OpenSSL's own assessment is Low, and no fixed release exists—only an unmerged pull request.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For large untrusted input, EVP_EncodeBlock() integer overflow causes writes beyond buffer bounds that crash applications or corrupt memory. No patch is available yet, forcing teams to identify which applications invoke Base64 encoding with external data and plan for rapid deployment once a release appears.&lt;/p&gt;&lt;p&gt;Source: DeployBase · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CISA flags exploited VMware, Cisco and Apache flaws</title>
+      <link>https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html</link>
+      <guid isPermaLink="true">https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added four actively exploited flaws to its Known Exploited Vulnerabilities catalog on November 21: CVE-2026-123890 (VMware vCenter authentication bypass, CVSS 9.8), CVE-2026-129448 (Apache Roller XML-RPC deserialization RCE, CVSS 9.8), CVE-2026-76466 (Cisco Expressway hardcoded credentials and root command execution, CVSS 9.8), and Cisco Expressway hardcoded credentials flaw exploited against Russian organizations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; All three products are infrastructure-critical and mass-exploitable; CVE-2026-76466 was weaponized to breach a Russian organization after PoC release. Federal agencies must patch by November 23. Network teams running externally accessible VMware vCenter, Cisco Expressway, or Apache Roller instances face immediate active threat and must patch and audit logs for compromise indicators.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Palo Alto Networks buys Applied Compute for $4.5 billion</title>
+      <link>https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/</link>
+      <guid isPermaLink="true">https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Palo Alto Networks agreed to acquire Applied Compute, an AI infrastructure startup founded by former OpenAI researchers, in an all-stock transaction valued at $4.5 billion. Applied Compute provides a platform for post-training and inference of open-weight AI models, reaching $100M ARR within 18 months of founding.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure teams need secure platforms for deploying and governing open-weight models in production; this acquisition signals AI development infrastructure as a core security layer.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elastic acquires HoneyHive for AI agent observability</title>
+      <link>https://www.honeyhive.ai/blog/elastic</link>
+      <guid isPermaLink="true">https://www.honeyhive.ai/blog/elastic</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Elastic entered into an agreement to acquire HoneyHive, an AI observability and evaluation platform, bringing agent-specific tracing and evaluation workflows into Elastic Observability. The deal addresses the need for production monitoring of autonomous AI agents.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps and SRE teams need dedicated observability for autonomous agent behavior; integrating agent tracing and offline evaluation into central observability infrastructure closes a critical gap in production monitoring.&lt;/p&gt;&lt;p&gt;Source: Elastic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Azure SRE Agent cuts root-cause time by 60 percent</title>
+      <link>https://techcommunity.microsoft.com/blog/azureinfrastructureblog/advancing-agentic-operations-on-azure-at-ignite-2026/4573831</link>
+      <guid isPermaLink="true">https://techcommunity.microsoft.com/blog/azureinfrastructureblog/advancing-agentic-operations-on-azure-at-ignite-2026/4573831</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Azure SRE Agent helps teams investigate incidents, identify root causes, and automate operational tasks. Azure SRE Agent identified root causes 60% faster while Azure Copilot observability agent saved 30 minutes per alert across 50+ services.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; More than 11,000 agents powered by Azure SRE Agent have been deployed across Microsoft, 7 times more than when the product became generally available in March 2026, setting enterprise precedent for agentic SRE adoption at scale.&lt;/p&gt;&lt;p&gt;Source: Microsoft Azure Infrastructure Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Asian telcos move autonomous network flows into production</title>
+      <link>https://www.telecomtv.com/content/network-automation/asia-leads-the-way-towards-the-autonomous-ai-native-telco-56717/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/network-automation/asia-leads-the-way-towards-the-autonomous-ai-native-telco-56717/</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Asian telcos are setting the pace as operators migrate towards autonomous networks and AI-native operations, with opportunities and challenges especially as AI agents interact with telco systems. The first autonomous flows were being demonstrated live at Innovate Asia 2026, providing a practical illustration of how the concepts discussed by industry leaders are beginning to move from architecture and experimentation into implementation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators need to prepare for a future in which customers expect to interact with telcos through AI agents, potentially within the next 18 months—a critical timeline for practitioners planning network orchestration, service assurance, and customer-facing AI integrations.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Postgres read-replica failure took down ChatGPT for hours</title>
+      <link>https://dev.to/hiroki-ii-ai/ai-daily-digest-november-22-2026-openais-75-outage-oracles-money-loop-genie-4-opens-up-3239</link>
+      <guid isPermaLink="true">https://dev.to/hiroki-ii-ai/ai-daily-digest-november-22-2026-openais-75-outage-oracles-money-loop-genie-4-opens-up-3239</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;On November 21, ChatGPT experienced a 3.5-hour outage with failure rates peaking at 75%, triggered by scheduled maintenance on a PostgreSQL service that caused both read replicas to fail simultaneously. The Primary API service handles user and service-to-service authentication across OpenAI's entire stack, so read replica failure cascaded across all dependent request paths.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The postmortem's remediation list clarifies failure modes in distributed auth layers; the outage timing ensures operational lessons reach infrastructure planners beyond ops teams.&lt;/p&gt;&lt;p&gt;Source: DEV Community / OpenAI Status · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Regulators across five jurisdictions issue AI agent guidance</title>
+      <link>https://www.insights.beyondhorizons.sg/p/ai-law-regulation-roundup-november-2026</link>
+      <guid isPermaLink="true">https://www.insights.beyondhorizons.sg/p/ai-law-regulation-roundup-november-2026</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Between 14 October and 18 November 2026, official bodies in Singapore, Hong Kong, the United Kingdom, the European Union and Australia published guidance on AI agents. The EU AI Act now includes templates for fundamental rights impact assessments, Australia announced mandatory safety protections with a new regulator, and Hong Kong's central bank seeks views on registering material AI agents in banking.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Standards bodies identified a control problem: AI agents connected to business systems hold delegated authority over credentials and configurations, yet most deployments cannot attribute agent actions or reliably halt them.&lt;/p&gt;&lt;p&gt;Source: Beyond Horizons · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ten nations sign San Francisco AI governance declaration</title>
+      <link>https://timothygoh.substack.com/p/chinas-approach-to-global-ai-governance</link>
+      <guid isPermaLink="true">https://timothygoh.substack.com/p/chinas-approach-to-global-ai-governance</guid>
+      <pubDate>Sun, 22 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;On 15 November 2026, the US and nine partner nations signed the San Francisco Declaration on AI governance. Concurrently, China's Communist Party flagship journal Qiushi published analysis addressing 'How to Respond to the Practical Challenges of Global AI Governance'.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The San Francisco Declaration formalizes a US-led coalition on AI governance, while China's parallel governance framework signals diverging geopolitical approaches that enterprises will navigate across markets.&lt;/p&gt;&lt;p&gt;Source: Timothy Goh (Substack) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-22.html&quot;&gt;Nov 22, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>SCinet builds SC26's record network on Nautobot source of truth</title>
       <link>https://networktocode.com/blog/scinet-nautobot/</link>
@@ -686,126 +806,6 @@
       <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;AMD completed its $8.2 billion all-stock acquisition of World Labs on November 16, 2026, with Fei-Fei Li joining as executive vice president and chief scientist reporting to CEO Lisa Su. World Labs released Atlas—a 3D world model for creating and reconstructing interactive environments with APIs for developers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The acquisition integrates AI model researchers directly into AMD's chip design and software stack, shaping how enterprises architect compute infrastructure for spatial AI and robotics workloads.&lt;/p&gt;&lt;p&gt;Source: AMD / Unite.AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Ten DevOps tools that anchor a network automation pipeline</title>
-      <link>https://www.devopstraininginstitute.com/blog/10-devops-tools-for-network-automation</link>
-      <guid isPermaLink="true">https://www.devopstraininginstitute.com/blog/10-devops-tools-for-network-automation</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Templates in Git render data into device configs; CI pipeline runs Batfish offline validation and pyATS checks before lab deployment and production rollout. Covers the complete NetDevOps workflow from source of truth through multi-stage testing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Application teams can open PRs against network repos instead of tickets, reducing wait time while network team retains approval authority.&lt;/p&gt;&lt;p&gt;Source: Top DevOps Training Institute Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenTelemetry graduates from CNCF with stable Kubernetes processor</title>
-      <link>https://www.xenonstack.com/blog/opentelemetry</link>
-      <guid isPermaLink="true">https://www.xenonstack.com/blog/opentelemetry</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AIOps &amp; Network Observability</category>
-      <description>&lt;p&gt;OpenTelemetry reached CNCF Graduated status on May 11, 2026. As of November 2026, traces and logs are stable, continuous profiling entered public alpha on March 26, 2026, and the Kubernetes Attributes Processor reached v1.0.0 Stable status in September 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenTelemetry is now the de facto standard for telemetry collection across all major cloud providers and observability vendors (Datadog, Honeycomb, Grafana, New Relic). Network teams can standardize instrumentation across domains without vendor lock-in.&lt;/p&gt;&lt;p&gt;Source: XenonStack, Apica.io, DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lambda runs co-packaged optics across 10,000 Blackwell GPUs</title>
-      <link>https://casrai.org/news/lambda-nvidia-photonics-co-packaged-optics-sc26-2026</link>
-      <guid isPermaLink="true">https://casrai.org/news/lambda-nvidia-photonics-co-packaged-optics-sc26-2026</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Lambda and NVIDIA announced the first large-scale commercial deployment of co-packaged optics (CPO) networking, connecting over 10,000 Blackwell Ultra GPUs at Lambda's Quebec data center. The CPO fabric delivered 3.8% lower network latency at rack scale and 10.1% lower latency at pod scale compared to conventional pluggable optics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CPO switches operating at 800 Gb/s achieve median optics temperature of 36°C versus 51°C for pluggables, reducing thermal density and enabling denser AI fabrics without data center infrastructure redesign.&lt;/p&gt;&lt;p&gt;Source: CASRAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Broadcom shows Tomahawk 6 and Thor Ultra at SC26</title>
-      <link>https://casrai.org/news/broadcom-sc26-tomahawk-6-thor-ultra-open-ethernet-ai-2026</link>
-      <guid isPermaLink="true">https://casrai.org/news/broadcom-sc26-tomahawk-6-thor-ultra-open-ethernet-ai-2026</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom demonstrated Tomahawk 6 and Thor Ultra 800G Ethernet silicon at SC26, highlighting compatibility with Ultra Ethernet Consortium (UEC) specifications for AI workloads. Thor Ultra eRoCE NICs achieve job completion times matching 800G InfiniBand quantum fabrics by placing packets directly into GPU memory.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Open Ethernet silicon with UEC compliance and direct GPU memory placement eliminates packet ordering dependencies, allowing switches to spray packets across all links and closing the performance gap with InfiniBand at Ethernet scale and cost.&lt;/p&gt;&lt;p&gt;Source: CASRAI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>BGP hijack knocked out Cloudflare 1.1.1.1 in Canada</title>
-      <link>https://isdown.app/status/cloudflare/incidents/686900-issues-with-1-1-1-1-public-resolver-in-canada</link>
-      <guid isPermaLink="true">https://isdown.app/status/cloudflare/incidents/686900-issues-with-1-1-1-1-public-resolver-in-canada</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A BGP route hijack of Cloudflare's 1.1.1.0/24 prefix disrupted the 1.1.1.1 public DNS resolver for users in Canada for approximately 1.1 hours. Cloudflare identified the offending network responsible for the route leak and contacted them directly to remediate the issue.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Live route hijacks against major infrastructure remain common; this incident demonstrates both the attack surface and effective detection/mitigation responses practitioners should understand.&lt;/p&gt;&lt;p&gt;Source: Cloudflare · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>FRRouting bgpd flaw crashes all BGP sessions</title>
-      <link>https://github.com/FRRouting/frr/issues/20793</link>
-      <guid isPermaLink="true">https://github.com/FRRouting/frr/issues/20793</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A flaw in FRRouting's bgpd component allows improper validation of the data field length in a BGP NOTIFICATION Cease/Hard Reset message, existing in FRRouting releases 8.3 through 10.5.1. This causes a heap buffer over-read and an assertion failure, leading to a crash of the bgpd daemon and denial of service by terminating all BGP sessions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Affects operators running FRRouting as their BGP daemon; allows remote DoS via crafted NOTIFICATION messages from established BGP peers with Graceful Restart capability.&lt;/p&gt;&lt;p&gt;Source: NetDEF/FRRouting CNA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Check Point Gaia OS root flaw exploited in the wild</title>
-      <link>https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog</link>
-      <guid isPermaLink="true">https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CISA added CVE-2026-123039 to its Known Exploited Vulnerabilities catalog on November 13, 2026, confirming a Check Point Gaia OS flaw allowing local users to gain root access is under active exploitation. The CVSS 7.8 vulnerability affects the DynamicCLI service, escalating limited local access to full system control.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Affects Check Point Force Firewalls, Management Servers, and Maestro Orchestrator; active exploitation confirmed against appliances in production. Requires immediate patching on all perimeter security infrastructure.&lt;/p&gt;&lt;p&gt;Source: CISA Known Exploited Vulnerabilities Catalog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Barracuda email gateways attacked via pre-auth root chain</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/</link>
-      <guid isPermaLink="true">https://www.bleepingcomputer.com/news/security/hackers-exploit-barracuda-email-security-gateway-flaws-to-get-root-access/</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Barracuda confirmed on November 9, 2026, active exploitation of two chained Email Security Gateway flaws (CVE-2026-116606, CVE-2026-111560) that allow unauthenticated attackers to execute OS commands as root. PoC exploit code publicly available since November 3.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Any internet-facing ESG management interface is vulnerable to pre-authentication root compromise. Email teams must patch immediately—exploitation chain is public, confirmed active, and allows complete email infrastructure takeover.&lt;/p&gt;&lt;p&gt;Source: BleepingComputer · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenSSL discloses five low-severity QUIC and AES-GCM-SIV flaws</title>
-      <link>https://openssl-library.org/news/secadv/20261110.txt</link>
-      <guid isPermaLink="true">https://openssl-library.org/news/secadv/20261110.txt</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;OpenSSL published security advisory on November 10, 2026, documenting five low-severity vulnerabilities in QUIC (CVE-2026-95691, CVE-2026-88822), AES-GCM-SIV (CVE-2026-95692, CVE-2026-88823), and CMS (CVE-2026-107496). Fixes ready in GitHub; official releases scheduled December 1, 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; QUIC use-after-free and AES-GCM-SIV issues affect all supported OpenSSL versions; organizations using HTTP/3, QUIC proxies, or edge infrastructure must plan library upgrades by December 1 release.&lt;/p&gt;&lt;p&gt;Source: OpenSSL · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Traversal raises $120M for autonomous AI site reliability engineers</title>
-      <link>https://parsers.substack.com/p/funding-rounds-report-weekly-of-november-99c</link>
-      <guid isPermaLink="true">https://parsers.substack.com/p/funding-rounds-report-weekly-of-november-99c</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Traversal, which builds autonomous AI site reliability engineers to diagnose and resolve software outages, raised $120 million in Series B funding from Kleiner Perkins, Redpoint Ventures, Sequoia Capital, Battery Ventures, and Khosla Ventures at a $1 billion valuation. The round reflects investor confidence in autonomous incident response and outage resolution.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates market traction for autonomous incident response; offers practitioners an alternative to traditional runbook automation and manual triage during outages—reducing MTTR and operational toil.&lt;/p&gt;&lt;p&gt;Source: Parsers Substack / Tech Funding Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Q/C Technologies promotes Yossi Ehrlichman to CTO</title>
-      <link>https://globenewswire.com/news-release/2026/11/16/3403642/0/en/q-c-technologies-reports-over-10-million-in-cash-and-investments-to-fund-development-of-its-optical-processing-unit.html</link>
-      <guid isPermaLink="true">https://globenewswire.com/news-release/2026/11/16/3403642/0/en/q-c-technologies-reports-over-10-million-in-cash-and-investments-to-fund-development-of-its-optical-processing-unit.html</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Q/C Technologies appointed Yossi Ehrlichman, Ph.D., as CTO in September 2026, promoted from his role as Founding Manager of PIC Development. Ehrlichman leads the company's technology roadmap for its optical processing unit (OPU) designed to accelerate AI computations using light.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Optical processing architecture represents an emerging alternative to electrical AI infrastructure for reducing energy constraints in GPU clusters and large-scale AI deployments.&lt;/p&gt;&lt;p&gt;Source: Globe Newswire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Active MCP servers pass 118,000 as licensing gaps persist</title>
-      <link>https://dev.to/cakra_budiman/the-state-of-mcp-servers-and-agent-skills-november-2026-1lj0</link>
-      <guid isPermaLink="true">https://dev.to/cakra_budiman/the-state-of-mcp-servers-and-agent-skills-november-2026-1lj0</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Catalog snapshot on 14 November 2026 shows 118,434 active MCP servers, with 62,952 listed in the official MCP Registry. 15,380 servers and 7,500 skills had recent activity reports; 13.1% of skills carry no license.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The scale of available MCP infrastructure—118k servers—means ops teams must establish governance policies for which servers are trusted before deploying agents to interact with network, cloud, and observability systems.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft Defender now discovers local AI agents and MCP links</title>
-      <link>https://techcommunity.microsoft.com/blog/partnernews/whats-new-for-msps-november-2026/4565944</link>
-      <guid isPermaLink="true">https://techcommunity.microsoft.com/blog/partnernews/whats-new-for-msps-november-2026/4565944</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Microsoft Defender now discovers more than 50 supported local AI agents and their configured Model Context Protocol connections. Generally available for Windows and macOS, it brings agent, device, account, and MCP context together by observing activity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network and security ops teams can now use Microsoft Defender to discover which agents and MCP servers are running locally—essential visibility before scaling agents in production, especially for SOCs managing agent-to-infrastructure connections.&lt;/p&gt;&lt;p&gt;Source: Microsoft Tech Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Agentic pentest framework ARTEX found on 1,465 hosts</title>
-      <link>https://labs.cloudsecurityalliance.org/research/csa-research-note-artex-agentic-pentest-frameworks-in-the-wi/</link>
-      <guid isPermaLink="true">https://labs.cloudsecurityalliance.org/research/csa-research-note-artex-agentic-pentest-frameworks-in-the-wi/</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cloud Security Alliance documented ARTEX agentic pentest frameworks now deployed at 1,465 hosts (as of early November 2026), with 10.6% also hosting Cobalt Strike, Vshell, and Adaptix C2. ARTEX automates vulnerability discovery and exploitation using multi-agent frameworks with no human approval in the loop.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network defenders must shift from signature-based detection to behavioral telemetry: ARTEX and similar frameworks turn multi-step attacks into machine-speed intrusions requiring detection of timing patterns, chained requests, and rapid bursts across systems.&lt;/p&gt;&lt;p&gt;Source: Cloud Security Alliance · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nvidia CEO exits as Anthropic sets IPO date</title>
-      <link>https://joinaiweek.com/blog/ai-news-roundup-november-2026</link>
-      <guid isPermaLink="true">https://joinaiweek.com/blog/ai-news-roundup-november-2026</guid>
-      <pubDate>Mon, 16 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;In the first half of November 2026, Nvidia's CEO Jensen Huang resigned, Anthropic set its IPO for November 19, Anthropic and Google shipped new frontier models. Claude Fable 5.2 (November 9) is built for complex coding and research with 30% faster output at $8/$40 per million tokens; Gemini 4 Carbon (November 10) is Google's strongest model at $2/$10 introductory pricing.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Fable 5.2 scored 49.1% on FrontierCode 2.0 at half the cost per task of Opus 5.5, directly affecting model selection economics and infrastructure budgeting for teams building agentic coding workflows.&lt;/p&gt;&lt;p&gt;Source: AI Weekly · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-16.html&quot;&gt;Nov 16, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
