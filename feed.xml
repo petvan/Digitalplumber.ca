@@ -6,7 +6,127 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Sun, 22 Nov 2026 17:51:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 22:07:15 GMT</lastBuildDate>
+    <item>
+      <title>Nautobot patches REST API permission leak in connected device endpoint</title>
+      <link>https://github.com/nautobot/nautobot/releases/tag/v2.4.47</link>
+      <guid isPermaLink="true">https://github.com/nautobot/nautobot/releases/tag/v2.4.47</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Nautobot v2.4.47 fixes the connected-device REST API endpoint to properly render connected devices in brief form when the requesting user lacks permission to view full details. This security fix ensures proper permission boundaries in Nautobot's REST API.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; API permission handling is critical for multi-tenant and role-based access control in network source-of-truth platforms. Proper gating of sensitive device information based on user permissions is essential for enterprises using Nautobot as a shared inventory source.&lt;/p&gt;&lt;p&gt;Source: GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP mentions in DevOps job postings jump elevenfold in a year</title>
+      <link>https://prepare.sh/articles/what-separates-great-devops-engineers-2027</link>
+      <guid isPermaLink="true">https://prepare.sh/articles/what-separates-great-devops-engineers-2027</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;Survey data from DORA, Stack Overflow, CNCF, and FinOps shows Kubernetes, CI/CD, and AI tools are now baseline skills. MCP mentions in job postings jumped from one to eleven between 2025 and 2026, signaling rapid adoption of AI-augmented operations patterns as standard expectations.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Understanding systems fundamentals rather than chasing tools will differentiate practitioners. Linux, networking, Git, and CI/CD execution principles remain durable skills as AI and MCP become standard capabilities expected in infrastructure roles.&lt;/p&gt;&lt;p&gt;Source: Prepare.sh · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dynatrace adds causal AI root cause analysis and automated remediation</title>
+      <link>https://spyingbee.com/updates/dynatrace/2026-11</link>
+      <guid isPermaLink="true">https://spyingbee.com/updates/dynatrace/2026-11</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Dynatrace released an enhanced AIOps capability leveraging causal AI to deliver precise root cause analysis and automated remediation across complex IT environments, moving beyond threshold-based alerting.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Causal AI narrows false positives and accelerates MTTR by pinpointing actual fault chains rather than symptom correlations, reducing alert noise that plagues NOC operations in hybrid environments.&lt;/p&gt;&lt;p&gt;Source: Dynatrace · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lambda runs first production co-packaged optics cluster with 10,000 GPUs</title>
+      <link>https://www.servethehome.com/nvidia-and-lambda-disclose-first-production-co-packaged-optics-cluster-it-is-finally-real/</link>
+      <guid isPermaLink="true">https://www.servethehome.com/nvidia-and-lambda-disclose-first-production-co-packaged-optics-cluster-it-is-finally-real/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Lambda deployed co-packaged optics in production in a cluster with over 10,000 GPUs using NVIDIA's Quantum-X CPO switch with 144 ports at 800Gb/s each and 115.2Tbps full-duplex bandwidth. NVIDIA claims 5x better power efficiency, 15x higher reliability, and 10% lower latency versus pluggable optics.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Co-packaged optics moved from lab demo to production deployment—practitioners planning 10K+ GPU clusters can now evaluate CPO for power budgets and reliability, with CPO significantly lowering power consumption by eliminating long copper traces from switch chip to front-panel pluggables.&lt;/p&gt;&lt;p&gt;Source: ServeTheHome · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arista adds R4 routers with 800G coherent optics for distributed inference</title>
+      <link>https://convergedigest.com/arista-etherlink-r4-distributed-ai-inference-800g/</link>
+      <guid isPermaLink="true">https://convergedigest.com/arista-etherlink-r4-distributed-ai-inference-800g/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Arista announced Etherlink R4 routing platforms at SC26 for geographically distributed AI inference, with 7280R4 coherent transport supporting 400G and 800G ZR/ZR+ optics with MACsec encryption and pluggable optical line system with 25.6 Tbps full-C-band optical amplification.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; R4 addresses front-end networks linking inference clusters, storage and enterprise applications geographically, where network round-trip delays accumulate across sequential agent requests—a concrete architecture choice for multi-region inference at scale.&lt;/p&gt;&lt;p&gt;Source: Converge Digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BGP anomaly detectors miss up to 41% of anomalies elsewhere</title>
+      <link>https://labs.ripe.net/author/shadi-motaali/would-you-have-noticed-a-blind-test-of-bgp-anomaly-detection/</link>
+      <guid isPermaLink="true">https://labs.ripe.net/author/shadi-motaali/would-you-have-noticed-a-blind-test-of-bgp-anomaly-detection/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;RIPE NCC researchers built a BGP anomaly detector using public Routing Information Service data and tested it blind on a network for three days, raising four alerts within an hour on the second morning that correctly matched actual incidents. Benchmarking 13 synthetic BGP traffic generation methods found detectors with near-perfect scores on their home collector missed 35-41% of anomalies on different collectors.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Anomaly detector accuracy varies dramatically across collectors; operators need realistic expectations on cross-infrastructure effectiveness, especially with ASPA adoption at only ~4% of routed ASNs by November 2026.&lt;/p&gt;&lt;p&gt;Source: RIPE Labs · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SEA-ME-WE 5 cable fault cuts Pakistan capacity until December 6</title>
+      <link>https://pakistan.shafaqna.com/EN/342563</link>
+      <guid isPermaLink="true">https://pakistan.shafaqna.com/EN/342563</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Pakistan Telecommunication Authority reported a fault in SEA-ME-WE 5 submarine cable approximately 11 kilometers off Pakistan's coast on November 18, affecting international internet connectivity across the region. Repairs on the damaged undersea link are scheduled to conclude by December 6.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Until full restoration, Pakistan users face degraded speeds especially during peak hours; this underscores subsea cable fault impact on regional connectivity redundancy and validates need for distributed BGP traffic engineering around damaged links.&lt;/p&gt;&lt;p&gt;Source: News/Industry Reporting · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Attackers exploit hard-coded credentials in Cisco Expressway clusters</title>
+      <link>https://www.infosecurity-magazine.com/news/critical-cisco-expressway-flaw/</link>
+      <guid isPermaLink="true">https://www.infosecurity-magazine.com/news/critical-cisco-expressway-flaw/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added CVE-2026-76466 to its Known Exploited Vulnerabilities catalog on November 20 after active exploitation reports. The critical flaw allows unauthenticated remote attackers to execute OS commands as root in Cisco Expressway clustered deployments via hard-coded credentials and persistent cookies.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Internet-facing Expressway devices are compromised with root access enabling lateral movement into internal networks; federal agencies must patch by November 23 under BOD 22-01; immediate restriction of ports TCP/4371–4372 or upgrade to X15.5.20+ is required.&lt;/p&gt;&lt;p&gt;Source: Infosecurity Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CISA flags four exploited flaws in Cisco, VMware, SAP and Roller</title>
+      <link>https://www.scworld.com/brief/cisa-adds-four-critical-vulnerabilities-to-its-known-exploited-catalog</link>
+      <guid isPermaLink="true">https://www.scworld.com/brief/cisa-adds-four-critical-vulnerabilities-to-its-known-exploited-catalog</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added four actively exploited critical vulnerabilities to its Known Exploited Vulnerabilities catalog on November 20–22: CVE-2026-76466 (Cisco Expressway hard-coded credentials RCE), CVE-2026-123890 (VMware vCenter authentication bypass), CVE-2025-42884 (SAP NetWeaver unauthorized data access), and CVE-2026-129448 (Apache Roller deserialization RCE). Three carry CVSS 9.8 ratings.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Federal agencies must remediate all four by November 23 under BOD 22-01; enterprise network teams should prioritize these across infrastructure management platforms, virtualization, and messaging systems in the same critical window to prevent supply-chain and central-platform compromise.&lt;/p&gt;&lt;p&gt;Source: SC World · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Palo Alto patches unauthenticated RCE in PAN-OS and Panorama</title>
+      <link>https://gbhackers.com/critical-palo-alto-networks-pan-os-flaws</link>
+      <guid isPermaLink="true">https://gbhackers.com/critical-palo-alto-networks-pan-os-flaws</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;Palo Alto Networks disclosed two critical NGINX vulnerabilities (CVSS 9.2) in PAN-OS and Panorama that allow unauthenticated remote code execution or worker process crashes on affected deployments. No active exploitation reported; fixed builds available November 23 for PAN-OS 11.2.8 and later.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Internet-facing firewalls and Panorama management consoles require immediate version audit and patching; fixed builds are 11.2.10-h19, 11.2.13-h6, and 11.2.16-h3; versions earlier than 11.2.8 are unaffected; network teams should confirm patch availability and schedule upgrades on perimeter and central management platforms.&lt;/p&gt;&lt;p&gt;Source: GBHackers · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CrowdStrike to buy Zscaler for $43.9 billion in all-stock deal</title>
+      <link>https://www.sec.gov/Archives/edgar/data/0001535527/000110465926130785/tm2630454d1_ex99-1.htm</link>
+      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0001535527/000110465926130785/tm2630454d1_ex99-1.htm</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;CrowdStrike agreed to acquire Zscaler in a $43.9 billion all-stock deal, combining endpoint and zero-trust network security to protect AI agents. Falcon Guardian, which secures AI agents across the enterprise, crossed $100 million in ARR in its first year.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Device and network telemetry will converge into a single data set, allowing CrowdStrike's SafeMind frontier security models to train on the adversary's full attack path, reshaping how security operations teams correlate infrastructure and threat data at scale.&lt;/p&gt;&lt;p&gt;Source: CrowdStrike / SEC Filing · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deutsche Telekom puts €100 million into Mistral AI</title>
+      <link>https://www.mobileworldlive.com/ai-cloud/deutsche-telekom-unit-pumps-e100m-into-mistral-ai/</link>
+      <guid isPermaLink="true">https://www.mobileworldlive.com/ai-cloud/deutsche-telekom-unit-pumps-e100m-into-mistral-ai/</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Deutsche Telekom's T.Capital Tech Fund invested €100 million in Mistral AI's Series D as a first step toward strategic partnership combining telco infrastructure with frontier AI models for German enterprises and government.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Telcos are monetizing infrastructure as AI platforms; this signals network operators must compete on AI-integrated services, not just connectivity, changing capex priorities and enterprise sales motion.&lt;/p&gt;&lt;p&gt;Source: Mobile World Live · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bell Canada AI solutions revenue grows 41% in third quarter</title>
+      <link>https://uk.investing.com/news/stock-market-news/bell-at-desjardins-toronto-conference-growth-bets-gain-scale-93CH-4999859</link>
+      <guid isPermaLink="true">https://uk.investing.com/news/stock-market-news/bell-at-desjardins-toronto-conference-growth-bets-gain-scale-93CH-4999859</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Bell Canada Q3 2026 results show Bell Business Markets revenue up 9.2% with AI-powered solutions surging 41%, driven by Ateko and Bell Cyber demand, backed by Bell AI Fabric datacentre expansion in Canada and Saskatchewan.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Bell targets CAD 2.0 billion AI revenue by 2028 (7% of total, 40% annual growth); demonstrates concrete operator AI monetization beyond connectivity and validates datacentre-plus-network asset strategies.&lt;/p&gt;&lt;p&gt;Source: Investing.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI cuts API prices 20% with GPT-6.2 Astra and Sol</title>
+      <link>https://help.openai.com/en/articles/6825453-chatgpt-release-notes</link>
+      <guid isPermaLink="true">https://help.openai.com/en/articles/6825453-chatgpt-release-notes</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI released GPT-6.2 Astra and Sol on November 17, 2026, with Astra priced 20% lower than GPT-6 Astra and improved performance on image understanding (71.7% vs 47.4%) and instruction-following (78.1% vs 62.5%).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; API pricing reduction and measurable performance gains across image tasks and complex instructions directly affect operational costs and capability budgeting for teams building on GPT-6 models.&lt;/p&gt;&lt;p&gt;Source: OpenAI ChatGPT Release Notes · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Amazon buys Decart AI for $7.5 billion to port models across chips</title>
+      <link>https://www.amazon.com</link>
+      <guid isPermaLink="true">https://www.amazon.com</guid>
+      <pubDate>Mon, 23 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Amazon announced November 23, 2026 acquisition of Decart AI's Optimization Stack technology for $7.5 billion, bringing founders and engineering team into AWS. Decart's software enables seamless switching of AI models across heterogeneous chip hardware, addressing infrastructure portability in multi-accelerator deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals compute infrastructure competition now centers on inference optimization and hardware abstraction, not chip dominance; AWS gains tooling to reduce Nvidia lock-in and differentiate Trainium/Graviton chips—critical as enterprise AI spend shifts to inference-heavy workloads.&lt;/p&gt;&lt;p&gt;Source: Amazon News / Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-23.html&quot;&gt;Nov 23, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nornir 3.7 alpha adds async tasks and cancellable runs</title>
       <link>https://opsmill.com/blog/nornir-release-3-7-0a1-async-tasks/</link>
@@ -686,126 +806,6 @@
       <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
       <category>Research, Standards &amp; Industry</category>
       <description>&lt;p&gt;A new survey examines the transition from AIOps pipelines to agentic service operations through three coupled lenses: capability, operational authority, and evaluation evidence. The work audits 22 language-model-enabled systems according to their evaluated behavior rather than intended autonomy, finding most remain copilots or read-only investigators.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps and SRE leaders evaluating autonomous remediation claims need this framework to assess actual decision-making authority and evidence quality before deploying LLM-based operations tools in production.&lt;/p&gt;&lt;p&gt;Source: arXiv (cs.SE) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenAI ships GPT-6.2 Astra and Sol with cheaper input</title>
-      <link>https://forklog.com/en/openai-launches-gpt-6-2-astra-and-sol/</link>
-      <guid isPermaLink="true">https://forklog.com/en/openai-launches-gpt-6-2-astra-and-sol/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI introduced GPT-6.2 Astra and GPT-6.2 Sol on November 17, with Astra for complex professional tasks and Sol for everyday work. GPT-6.2 Astra is 20% cheaper on input and output and 60% cheaper on cached input, using 22% fewer output tokens than GPT-6 Astra.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; GPT-6.2 Astra replaces GPT-6 Astra as the flagship model with a 1,050,000-token context window, improved document/spreadsheet formatting, and 20–60% cost reductions—directly lowering per-task expenses for production deployment at scale.&lt;/p&gt;&lt;p&gt;Source: ForkLog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>European Commission proposes accountability rules for autonomous AI agents</title>
-      <link>https://emergent.sh/news/eu-proposes-new-rules-regulate-ai-agents-2026</link>
-      <guid isPermaLink="true">https://emergent.sh/news/eu-proposes-new-rules-regulate-ai-agents-2026</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;The European Commission released a regulatory framework on November 16, 2026, introducing mandatory accountability standards, safety requirements, and transparency obligations for AI systems capable of autonomous decision-making in commercial and public sector applications.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clear regulatory rules may accelerate enterprise adoption by reducing legal uncertainty, though compliance requires investment.&lt;/p&gt;&lt;p&gt;Source: Emergent.sh · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nearly half of firms deployed generative AI without governance policy</title>
-      <link>https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/</link>
-      <guid isPermaLink="true">https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Scaling AI beyond isolated pilots requires strong data foundation, clear business outcomes, and enterprise-scale governance. Infosys research found 48% of companies deployed generative AI without formal governance policy, with no documented framework or oversight.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Enterprise AI scaling is blocked by governance gaps, not technical capability; absence of policy creates compliance risk backlogs forcing disruptive audits.&lt;/p&gt;&lt;p&gt;Source: MIT Technology Review · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpsMill publishes 2026 Nornir roadmap for community feedback</title>
-      <link>https://opsmill.com/blog/where-nornir-napalm-netmiko-scrapli-fit-python-automation/</link>
-      <guid isPermaLink="true">https://opsmill.com/blog/where-nornir-napalm-netmiko-scrapli-fit-python-automation/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;OpsMill has published a 2026 roadmap for Nornir, the Python-first network automation framework, proposing additions for an upcoming release while maintaining backward compatibility with existing code.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Nornir practitioners should review the roadmap to plan migrations and understand future evolution of this Terraform/Ansible alternative.&lt;/p&gt;&lt;p&gt;Source: OpsMill · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Broadcom pitches disaggregated AI Ethernet fabric against Cisco Silicon One</title>
-      <link>https://techblog.comsoc.org/2026/11/16/broadcoms-open-ethernet-fabric-architectural-evolution-ai-tail-latency-proprietary-interconnects-and-cisco-silicon-one/</link>
-      <guid isPermaLink="true">https://techblog.comsoc.org/2026/11/16/broadcoms-open-ethernet-fabric-architectural-evolution-ai-tail-latency-proprietary-interconnects-and-cisco-silicon-one/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom presented its disaggregated AI fabric strategy at SC26 combining Tomahawk 6 (102.4 Tbps), Tomahawk Ultra (low-latency intra-rack), Jericho 4 (deep-buffer routing), and Thor Ultra 800G NIC with UEC compliance, contrasting with Cisco's unified Silicon One approach.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network architects must choose between Broadcom's specialized role-based ASICs (optimized per function) versus Cisco's unified programmable silicon; Broadcom's approach reduces switching latency and power per function, critical for 100k+ GPU clusters.&lt;/p&gt;&lt;p&gt;Source: TechBlog ComsOC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Arista EOS flaws let attackers bypass RPKI validation</title>
-      <link>https://www.arista.com/en/support/advisories-notices</link>
-      <guid isPermaLink="true">https://www.arista.com/en/support/advisories-notices</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Arista released four security advisories on November 10, 2026, covering vulnerabilities in EOS's RPKI client and RIPv2 authentication. The RPKI vulnerabilities allow attackers controlling the cache or router-to-cache traffic to send crafted messages causing incorrect validation results or RPKI agent reset.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; These CVEs expose operational risks for networks relying on RPKI validation and RIPv2 authentication; adjacent-network attackers can interrupt routing services or inject unauthorized routes, directly undermining BGP security posture and RPKI ROV deployment confidence.&lt;/p&gt;&lt;p&gt;Source: Arista · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Route leak hit Cloudflare 1.1.1.1 despite valid ROA</title>
-      <link>https://www.logicmonitor.com/blog/cloudflares-resolver-outage-more-than-just-dns</link>
-      <guid isPermaLink="true">https://www.logicmonitor.com/blog/cloudflares-resolver-outage-more-than-just-dns</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;On November 13–14 UTC, a route leak/hijack of Cloudflare's 1.1.1.0/24 DNS resolver prefix degraded Canadian resolver reachability. Despite Cloudflare holding a valid RPKI ROA for the prefix, the hijacked route originated by AS4755 was marked RPKI Invalid but still propagated and was accepted by networks including AS6453.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; This incident demonstrates that RPKI ROV validation alone is insufficient—networks must actively implement RPKI filtering on received routes; many operators accept RPKI-invalid announcements, undermining the security model and requiring defense-in-depth with prefix filtering and monitoring.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Windows networking bug caused 24-hour Microsoft 365 outage</title>
-      <link>https://en.wikipedia.org/wiki/2026_Microsoft_outage</link>
-      <guid isPermaLink="true">https://en.wikipedia.org/wiki/2026_Microsoft_outage</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;A hidden Windows bug overwhelmed servers handling cloud connections across Microsoft 365, lasting from 4:20 PM UTC on November 12 until 4:10 PM UTC on November 13. Exchange Online, Outlook, Teams, and Copilot were affected globally, with over 80% of affected gateway servers stopping responding at peak.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Around 430 million Microsoft 365 users across 70+ countries experienced service loss; demonstrates how cascading failover in converged infrastructure amplifies failures and requires network teams to audit automatic health-check and traffic-rerouting logic.&lt;/p&gt;&lt;p&gt;Source: Microsoft Status Page / Multiple postmortems · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>FRRouting bgpd crashes on dynamic neighbour disconnects</title>
-      <link>https://vulners.com/mend/MEND:CVE-2026-120221</link>
-      <guid isPermaLink="true">https://vulners.com/mend/MEND:CVE-2026-120221</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Double free in FRRouting bgpd (CVSS 8.2 High) when dynamic BGP neighbors disconnect causes denial of service. When a peer-group used by 'bgp listen range' has Site-of-Origin configured, dynamic neighbors share the SoO value but each frees it on disconnect, causing double-free and bgpd abort.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Any external host within the listen range can trigger total BGP session loss by opening and closing two TCP connections to the BGP port without authentication; core routing infrastructure operators must patch FRRouting immediately or reconfigure to avoid listen ranges with Site-of-Origin values.&lt;/p&gt;&lt;p&gt;Source: CVE.org / FRRouting Project · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cribl buys Tero and hires Vector creator Ben Johnson</title>
-      <link>https://cribl.io/news/cribl-acquires-tero-to-lead-observability-into-the-ai-era/</link>
-      <guid isPermaLink="true">https://cribl.io/news/cribl-acquires-tero-to-lead-observability-into-the-ai-era/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Cribl acquired Tero, an observability startup that identifies low-value telemetry data, bringing Tero's three co-founders including Vector creator Ben Johnson. The deal marks Cribl's third acquisition in four months, adding host monitoring, APM, and AI-native observability capabilities.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Consolidates observability and security on a single telemetry platform as enterprises shift toward agentic AI monitoring; extends Cribl's capability for cost-optimized observability critical to NetDevOps and SRE workflows.&lt;/p&gt;&lt;p&gt;Source: Cribl · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>LogicMonitor merges AI agent and MCP usage into one credit pool</title>
-      <link>https://www.logicmonitor.com/blog/autonomous-it-platform-packages</link>
-      <guid isPermaLink="true">https://www.logicmonitor.com/blog/autonomous-it-platform-packages</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;LogicMonitor consolidated its platform tiers to standardize AI as core operations. Diagnostics, remediation, agent usage, and MCP access now share one credit pool, eliminating fragmented pricing that previously blocked agentic operations adoption.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP access moves from point-solution to unified operational control plane; agents gain governed access to 30+ tool categories while respecting RBAC and resource groups—addressing the governance gap where 71% of orgs plan agentic AI but only 21% have governance.&lt;/p&gt;&lt;p&gt;Source: LogicMonitor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cisco MCP servers for Meraki and Catalyst Center reach GA</title>
-      <link>https://telecomreseller.com/2026/11/16/ciscos-austin-lin-agentic-ai-moves-network-operations-from-reactive-to-proactive-podcast/</link>
-      <guid isPermaLink="true">https://telecomreseller.com/2026/11/16/ciscos-austin-lin-agentic-ai-moves-network-operations-from-reactive-to-proactive-podcast/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cisco VP Austin Lin discusses AgenticOps strategy: agents detect anomalies and investigate root causes while humans retain transparent diagnostic records and approval controls. Cisco MCP servers for Meraki, Catalyst Center, ISE, ThousandEyes, and IOS XE reach general availability November 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cisco's open MCP servers standardize agent access to network telemetry and configuration across vendors; MSPs already building on this layer means agents (Claude, OpenAI, etc.) can interact with infrastructure consistently without bespoke integrations.&lt;/p&gt;&lt;p&gt;Source: Telecom Reseller · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cato Networks adds runtime guardrails for AI agents</title>
-      <link>https://finance.yahoo.com/technology/ai/articles/cato-networks-unveils-agentsense-patented-133000422.html</link>
-      <guid isPermaLink="true">https://finance.yahoo.com/technology/ai/articles/cato-networks-unveils-agentsense-patented-133000422.html</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Cato Networks announced AgentSense, a patented runtime verification system that continuously assesses AI agents to stop unsafe actions before execution. The guardrail addresses the governance gap: Gartner reports 71% of orgs plan agentic AI deployment but only 21% have governance capabilities.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Runtime agent action verification fills a critical gap in agentic NetOps; agents can hold valid privileges yet execute unsafe tasks outside their authorized scope. Governance must move beyond access control to behavioral guardrails at the network level.&lt;/p&gt;&lt;p&gt;Source: Cato Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Isolated telco AI agents make conflicting network decisions</title>
-      <link>https://rcrwireless.com/20261112/reader-forum/telecoms-next-ai-gains-will-come-from-agents-that-work-together-reader-forum/</link>
-      <guid isPermaLink="true">https://rcrwireless.com/20261112/reader-forum/telecoms-next-ai-gains-will-come-from-agents-that-work-together-reader-forum/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Telecom operators have deployed AI agents across network operations, customer care and planning, but isolated systems cause conflicting decisions—network operations agents reroute traffic while unaware customer care agents issue credits and book technicians. A shared data layer providing unified view of customers, services and networks is required.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; NetOps and AIOps practitioners must address orchestration across isolated AI agents—shared data layers and unified event correlation are becoming architectural requirements for production automation at scale.&lt;/p&gt;&lt;p&gt;Source: RCR Wireless News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AMD closes $8.2 billion World Labs acquisition</title>
-      <link>https://www.unite.ai/amd-closes-world-labs-acquisition-and-names-fei-fei-li-chief-scientist/</link>
-      <guid isPermaLink="true">https://www.unite.ai/amd-closes-world-labs-acquisition-and-names-fei-fei-li-chief-scientist/</guid>
-      <pubDate>Tue, 17 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;AMD completed its $8.2 billion all-stock acquisition of World Labs on November 16, 2026, with Fei-Fei Li joining as executive vice president and chief scientist reporting to CEO Lisa Su. World Labs released Atlas—a 3D world model for creating and reconstructing interactive environments with APIs for developers.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The acquisition integrates AI model researchers directly into AMD's chip design and software stack, shaping how enterprises architect compute infrastructure for spatial AI and robotics workloads.&lt;/p&gt;&lt;p&gt;Source: AMD / Unite.AI · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-17.html&quot;&gt;Nov 17, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
