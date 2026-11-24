@@ -6,7 +6,111 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Mon, 23 Nov 2026 22:07:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 20:43:13 GMT</lastBuildDate>
+    <item>
+      <title>AppNeta tracked user impact during November Microsoft outage</title>
+      <link>https://networkobservability.broadcom.com/blog/defending-against-ai-driven-disruption</link>
+      <guid isPermaLink="true">https://networkobservability.broadcom.com/blog/defending-against-ai-driven-disruption</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;AppNeta delivered real-time clarity during the November 2026 Microsoft outage by isolating root causes and user impact through continuous active monitoring and hop-by-hop performance tracking to validate security patches and detect outages faster.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-world outage detection capability—validating changes with continuous path monitoring cuts mean time to attribution during widespread cloud disruptions, critical for NOC teams managing hybrid infrastructure.&lt;/p&gt;&lt;p&gt;Source: Broadcom Network Observability Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AppNeta separated internal faults from upstream failure in Microsoft outage</title>
+      <link>https://networkobservability.broadcom.com/blog/navigating-complex-cloud-ecosystems</link>
+      <guid isPermaLink="true">https://networkobservability.broadcom.com/blog/navigating-complex-cloud-ecosystems</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;AppNeta isolated the November 2026 Microsoft outage root cause by providing real-time path performance metrics and step-by-step timeline showing how to separate internal network issues from upstream provider failures during widespread cloud service disruption.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Practical outage triage methodology for NOC teams: active path monitoring reveals whether degradation originates inside corporate networks, transit paths, or SaaS vendor infrastructure—reducing MTTA and eliminating cross-team finger-pointing.&lt;/p&gt;&lt;p&gt;Source: Broadcom Network Observability Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kentik adds agentic AI that investigates network problems autonomously</title>
+      <link>https://www.networkworld.com/article/4092276/kentik-bolsters-network-observability-platform-with-autonomous-investigation.html</link>
+      <guid isPermaLink="true">https://www.networkworld.com/article/4092276/kentik-bolsters-network-observability-platform-with-autonomous-investigation.html</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AIOps &amp; Network Observability</category>
+      <description>&lt;p&gt;Kentik launched AI Advisor on November 18 as an agentic AI system that formulates network investigation plans, executes queries across telemetry sources, and presents findings with supporting evidence to automate root cause analysis.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agentic autonomous network investigation reduces NOC triage time by replacing manual query iteration with AI-driven RCA: system formulates investigation plans, queries data, and validates findings—turning raw telemetry into structured JSON recommendations.&lt;/p&gt;&lt;p&gt;Source: Network World · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nscale puts first Vera Rubin NVL72 rack into production</title>
+      <link>https://www.datacenterdynamics.com/en/news/nscale-brings-nvidia-vera-rubin-nvl72-rack-online/</link>
+      <guid isPermaLink="true">https://www.datacenterdynamics.com/en/news/nscale-brings-nvidia-vera-rubin-nvl72-rack-online/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;Nscale deployed its first NVIDIA Vera Rubin NVL72 rack-scale system built on Dell PowerEdge XE9812 with factory-integrated liquid-cooled networking via Dell's PowerRack L11, marking the first production deployment of fully factory-validated multi-rack networking and cooling integration.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Factory-integrated networking, cooling, and power validation reduces on-site integration time from weeks to days and eliminates late-stage cabling errors and thermal surprises, accelerating time-to-revenue for neocloud operators scaling to hundreds of racks.&lt;/p&gt;&lt;p&gt;Source: Data Center Dynamics · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Latent gateway defect and capacity shortfall caused 24-hour Microsoft 365 outage</title>
+      <link>https://www.365fanatic.com/m365-outage-12-november-2026/</link>
+      <guid isPermaLink="true">https://www.365fanatic.com/m365-outage-12-november-2026/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Routing &amp; Internet</category>
+      <description>&lt;p&gt;Microsoft released final post-incident report for 12-13 November outage: latent defect in July gateway fix combined with Teams failover logic and 14% capacity shortage caused 24-hour global Exchange and 365 services loss.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Classic infrastructure cascade demonstrates how dormant code defects, failover behavior, and thin capacity margins align to cause global outage. Ops teams should audit gateway failover assumptions and capacity reserves.&lt;/p&gt;&lt;p&gt;Source: 365Fanatic · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Attackers exploit hard-coded credentials in Cisco Expressway</title>
+      <link>https://cybersecuritynews.com/cisco-expressway-vulnerability-exploited/</link>
+      <guid isPermaLink="true">https://cybersecuritynews.com/cisco-expressway-vulnerability-exploited/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added CVE-2026-76466, a critical CVSS 9.8 vulnerability in Cisco Expressway that allows unauthenticated remote code execution as root, to its Known Exploited Vulnerabilities catalog on November 20, 2026; attackers compromised four devices and attempted lateral movement in a Russian organization.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Expressway sits between internal collaboration systems and the internet, holding trust relationships and credentials that reach well past the device; exploitation enables full UC infrastructure compromise and lateral movement into internal networks.&lt;/p&gt;&lt;p&gt;Source: CISA Known Exploited Vulnerabilities catalog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dante Security launches with $10M to assign owners to AI agents</title>
+      <link>https://app.fundz.net/fundings/dante-security-funding-round-seed-947e3d</link>
+      <guid isPermaLink="true">https://app.fundz.net/fundings/dante-security-funding-round-seed-947e3d</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;Dante Security emerged from stealth with $10 million in seed funding to develop a platform that assigns human owners to AI agents operating within organizations. The startup develops a platform to establish human accountability for AI agents operating across corporate systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; As autonomous agents proliferate across infrastructure and security operations, enforcement of human oversight and agent ownership becomes a critical operational control—now a funded category with dedicated tooling.&lt;/p&gt;&lt;p&gt;Source: Fundz · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP SDK downloads reach 700 million a month</title>
+      <link>https://blog.modelcontextprotocol.io/posts/mcp-turns-two/</link>
+      <guid isPermaLink="true">https://blog.modelcontextprotocol.io/posts/mcp-turns-two/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;The Model Context Protocol reaches its second anniversary with 700+ million monthly SDK downloads as of late November 2026, up from 90 million a year earlier. Major conferences including AGNTCon and MCPCon occurred in September 2026.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; MCP is now the de facto integration layer for agentic AI, natively supported by Anthropic, OpenAI, Google, and Microsoft. Network and operations practitioners need MCP fluency for infrastructure-as-code and agent workflows.&lt;/p&gt;&lt;p&gt;Source: Model Context Protocol Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP adoption outpaces governance and ownership models</title>
+      <link>https://itbrief.asia/story/addressing-the-infrastructure-gap-when-mcp-goes-mainstream</link>
+      <guid isPermaLink="true">https://itbrief.asia/story/addressing-the-infrastructure-gap-when-mcp-goes-mainstream</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Model Context Protocol transitions from emerging technology to embedded operational infrastructure, requiring organizations to establish standards, ownership models, and governance frameworks as adoption spreads across teams.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure and operations teams deploying agentic AI must now establish governance frameworks and policy around MCP server discovery, access control, and audit logging—shifting from point solutions to standardized infrastructure practices.&lt;/p&gt;&lt;p&gt;Source: IT Brief Asia · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Telus drops two Vancouver AI data centre projects</title>
+      <link>https://www.cbc.ca/news/canada/british-columbia/ai-data-centre-telus-vancouver-9.7424536</link>
+      <guid isPermaLink="true">https://www.cbc.ca/news/canada/british-columbia/ai-data-centre-telus-vancouver-9.7424536</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Telus announced it will no longer co-develop two AI data centres with Westbank in Vancouver and will instead focus on expanding an existing data centre in Kamloops, B.C. The pullout comes amid uncertainty over Telus's future, including a pending C$31 billion takeover proposal from Quebecor.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; For infrastructure engineers: signals telco shifts in AI/compute strategy priorities—consolidated capex focus rather than multi-site expansion, and strategic uncertainty affecting infrastructure deployment planning.&lt;/p&gt;&lt;p&gt;Source: CBC · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Big US carriers build joint AI threat detection framework</title>
+      <link>https://tech.yahoo.com/cybersecurity/articles/telecom-giants-preparing-era-ai-cyberattacks-204748047.html</link>
+      <guid isPermaLink="true">https://tech.yahoo.com/cybersecurity/articles/telecom-giants-preparing-era-ai-cyberattacks-204748047.html</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AT&amp;amp;T, Verizon, and Comcast are using AI to coordinate real-time threat detection and response as part of a new joint defense framework. In May 2026, eight major American communications companies announced the formation of the Communications Cybersecurity Information Sharing and Analysis Center (C2 ISAC), with founding members including AT&amp;amp;T, Charter, Comcast, Cox, Lumen Technologies, T-Mobile, Verizon and Zayo.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network security operations: AI-driven collective defense at machine speed is shifting how telcos respond to coordinated attacks; implications for SOC playbooks, threat data sharing protocols, and automation thresholds across carrier networks.&lt;/p&gt;&lt;p&gt;Source: Yahoo Cybersecurity · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hong Kong regulator wants kill switches for banking AI agents</title>
+      <link>https://www.bloomberg.com/professional/insights/regulation/november-2026-global-regulatory-brief-agentic-ai-stablecoins-and-digital-money/</link>
+      <guid isPermaLink="true">https://www.bloomberg.com/professional/insights/regulation/november-2026-global-regulatory-brief-agentic-ai-stablecoins-and-digital-money/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The Hong Kong Monetary Authority launched the ART (Accountability, Resilience, and Trust) Framework establishing supervisory expectations for AI adoption and agentic AI workflows in banking. The HKMA will release a discussion paper proposing intent-anchored accountability, an industry registry for material AI agents, and intervention mechanisms such as automated kill switches.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Banks must designate clear business owners for each AI use case and maintain centralized inventories to prevent shadow AI, establishing board-level accountability for AI strategies.&lt;/p&gt;&lt;p&gt;Source: Bloomberg Professional · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Amazon buys Decart AI optimization stack for $7.5 billion</title>
+      <link>https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/</guid>
+      <pubDate>Tue, 24 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Amazon is acquiring Decart's AI optimization technology and research team for $7.5 billion. Decart's Optimization Stack (DOS) software enables AI models to run efficiently on Nvidia, Amazon, and Google hardware through compiler-level optimization.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; The acquisition strengthens AWS Trainium competitiveness by coupling custom silicon with software optimization, allowing customers to reduce inference costs and latency on non-Nvidia chips.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-24.html&quot;&gt;Nov 24, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nautobot patches REST API permission leak in connected device endpoint</title>
       <link>https://github.com/nautobot/nautobot/releases/tag/v2.4.47</link>
@@ -702,110 +806,6 @@
       <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
       <category>AI Industry &amp; Policy</category>
       <description>&lt;p&gt;Texas Responsible Artificial Intelligence Governance Act (TRAIGA) took effect this year, while the European Union's AI Act is moving into active enforcement. Despite federal policy retreat, state-level and international regulation is fragmenting compliance requirements for enterprises.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CIOs must navigate fragmented compliance regimes across jurisdictions instead of unified federal frameworks, increasing operational complexity and audit exposure.&lt;/p&gt;&lt;p&gt;Source: CIO.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>EU bans AI-generated deepfake abuse material from December</title>
-      <link>https://www.riskinfo.ai/post/ai-insights-key-global-developments-in-november-2026</link>
-      <guid isPermaLink="true">https://www.riskinfo.ai/post/ai-insights-key-global-developments-in-november-2026</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;From December 2, 2026, the EU will enforce bans on AI-generated non-consensual sexual deepfakes and child sexual abuse material. AI companies are introducing new safety measures to control how their models and agents are used, including limiting access to sensitive tools and improving information storage practices.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Organizations deploying generative AI must implement content control systems and access governance for agents by December, while vendors are tightening model/agent access restrictions as default industry practice.&lt;/p&gt;&lt;p&gt;Source: RiskInfo.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Oracle's OCCL plugin lifts NCCL collective bandwidth up to 14%</title>
-      <link>https://www.sdxcentral.com/news/oracle-bolsters-cloud-plumbing-for-distributed-ai-training/</link>
-      <guid isPermaLink="true">https://www.sdxcentral.com/news/oracle-bolsters-cloud-plumbing-for-distributed-ai-training/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Oracle released Oracle Cloud Infrastructure Collective Communications Library (OCCL), a network plugin that improved NCCL AllReduce bandwidth by up to 10% and AllToAll by 14% on 16–128 node GB300 clusters, deployed atop OCI's multiplanar RDMA architecture with in-transport congestion control and NIC failure recovery.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OCCL provides production-tested collective communications offload for OCI GPU clusters at scale, reducing network-induced delays in multi-node all-reduce patterns; multiplanar redundancy and transport-layer congestion control narrow the performance gap between OCI Spectrum-X Ethernet and proprietary NVIDIA Quantum InfiniBand on NCCL workloads.&lt;/p&gt;&lt;p&gt;Source: SDxCentral · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Broadcom pushes Scale-Up Ethernet Transport for multi-vendor AI fabrics</title>
-      <link>https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</link>
-      <guid isPermaLink="true">https://www.hpcwire.com/off-the-wire/broadcom-brings-open-high-performance-ai-networking-to-sc26/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom hosted SC26 workshop coverage of open AI and HPC fabric standards, emphasizing Scale-Up Ethernet Transport (SUE-T) under Open Compute Project and Ultra Ethernet Consortium specifications for deterministic, lossless transport, load balancing, congestion control, resilience, and telemetry across multi-vendor environments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; SUE-T standardization under Open Compute Project and UEC 1.0 certification enable practitioners to architect multi-vendor AI fabrics with deterministic transport guarantees and certified interoperability; vendors can now ship UEC-compliant fabric switches, NICs, and telemetry stacks without proprietary lock-in.&lt;/p&gt;&lt;p&gt;Source: HPCwire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Quad9 pulls DNS resolver out of France over blocking orders</title>
-      <link>https://blog.cloudflare.com/quad9-withdrawal-from-france/</link>
-      <guid isPermaLink="true">https://blog.cloudflare.com/quad9-withdrawal-from-france/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;Quad9 announced it will withdraw its free public DNS resolver from France on November 24, 2026, rather than comply with court orders to block domains for copyright infringement. A French court imposed daily financial penalties, forcing the Swiss non-profit to choose between penalties or service changes that would harm privacy and security.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Belgian courts have ordered Cloudflare, Google and Cisco to implement DNS blocking by January 2027 or face penalties. DNS operators globally must plan for multi-provider redundancy across jurisdictions as regulatory pressure on public resolvers intensifies.&lt;/p&gt;&lt;p&gt;Source: Cloudflare Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Microsoft 365 outage lasted 24 hours after gateway failover defect</title>
-      <link>https://office365itpros.com/2026/11/16/exchange-online-outage-nov26/</link>
-      <guid isPermaLink="true">https://office365itpros.com/2026/11/16/exchange-online-outage-nov26/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Routing &amp; Internet</category>
-      <description>&lt;p&gt;A major global Microsoft outage spanning November 12-14, 2026 lasted 23 hours 50 minutes, affecting Exchange Online, Teams, and downstream services. Three conditions combined: Teams automatically failed over to the primary gateway (also serving Exchange Online) ~15 hours before the incident, a latent defect in gateway code (deployed July 2026), and 14% of capacity already offline.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Understanding interactions between automatic failover logic, shared infrastructure, latent defects and partial capacity is critical for SRE teams designing multi-service systems. Single points of failure in shared gateway infrastructure require robust isolation and staged rollout controls.&lt;/p&gt;&lt;p&gt;Source: Office365itpros · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Browsers distrust eMudhra after intermediate CA keys found guessable</title>
-      <link>https://www.microsoft.com/en-us/msrc/blog/2026/10/microsoft-response-to-compromised-emudhra-certificate-authority-keys</link>
-      <guid isPermaLink="true">https://www.microsoft.com/en-us/msrc/blog/2026/10/microsoft-response-to-compromised-emudhra-certificate-authority-keys</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Microsoft is removing the remaining eMudhra root certificates across its products and services starting November 16, 2026. Eight eMudhra intermediate CA private keys—six for TLS, two for code signing—were compromised with trivially guessable values below 256, affecting approximately 30,800 live certificates primarily in higher education.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Compromised TLS intermediate CAs enable MITM attacks on encrypted channels; audit certificate chains for eMudhra roots, implement OCSP stapling monitoring, and ensure trust stores are updated before Nov 16 to prevent acceptance of forged certificates.&lt;/p&gt;&lt;p&gt;Source: Microsoft Security Response Center / Google Chrome Root Program · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenObserve raises $10M and adds autonomous AI SRE</title>
-      <link>https://openobserve.ai/blog/series-a-announcement/</link>
-      <guid isPermaLink="true">https://openobserve.ai/blog/series-a-announcement/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;OpenObserve announced a $10 million Series A led by Nexus Venture Partners and Dell Technologies Capital, alongside Observability 3.0 capabilities including an autonomous AI SRE, anomaly detection, and LLM observability. Over 7,000 organizations now run the platform, including companies ingesting petabytes of data daily.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI-native observability with autonomous AI SRE eliminates manual signal-from-noise sorting for teams managing petabyte-scale telemetry and LLM workloads.&lt;/p&gt;&lt;p&gt;Source: OpenObserve Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Vero Security raises $11M seed for AI agent runtime controls</title>
-      <link>https://venturebeat.com/security/vero-launches-free-ai-security-community-as-enterprises-confront-the-work-of-governing-agents/</link>
-      <guid isPermaLink="true">https://venturebeat.com/security/vero-launches-free-ai-security-community-as-enterprises-confront-the-work-of-governing-agents/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Vero Security raised an $11M seed round led by TLV Partners to enforce AI security policies as agents execute. Founded in 2025 by Israeli entrepreneurs Elad Tessler and Daniel Meirov, the startup says several Fortune 500 companies already use its AI Runtime Governor platform.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Runtime enforcement via AI Runtime Governor inspects prompts and agent actions at execution time rather than post-hoc review, automating the emerging discipline of AI Security Engineering at enterprise scale.&lt;/p&gt;&lt;p&gt;Source: VentureBeat · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Mirendil raises $1B for research agents with 10M token context</title>
-      <link>https://www.unite.ai/mirendil-raises-1b-series-a-to-bring-frontier-ai-r-and-d-to-more-teams/</link>
-      <guid isPermaLink="true">https://www.unite.ai/mirendil-raises-1b-series-a-to-bring-frontier-ai-r-and-d-to-more-teams/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Mirendil announced a $1 billion Series A led by Kleiner Perkins and Clearlake Capital to make frontier AI research accessible to scientists and engineers via AI agents. The platform supports a 10 million token context window (roughly 500,000 lines of code) enabling agents to retain days of work at once.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Integration with Google Cloud's AI Hypercomputer spanning NVIDIA and TPU infrastructure enables research-scale AI workloads with co-designed compute, storage, networking and control planes for larger training loops and agent-assisted model development.&lt;/p&gt;&lt;p&gt;Source: Unite.ai · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ExtraHop pitches AI agents for network root-cause analysis</title>
-      <link>https://www.extrahop.com/blog/agents-for-itops-how-agentic-ai-is-changing-network-operations</link>
-      <guid isPermaLink="true">https://www.extrahop.com/blog/agents-for-itops-how-agentic-ai-is-changing-network-operations</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;AI agents transform IT operations by enabling automated health checks, real-time troubleshooting, and decision-grade intelligence. Agents investigate transaction paths, evaluate dependencies, and present forensic root-cause analysis in seconds rather than hours.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Cuts MTTI from hours to seconds using wire-derived records; shifts network operations from reactive ticket-driven to proactive machine-speed orchestration, particularly valuable in multicloud architectures.&lt;/p&gt;&lt;p&gt;Source: ExtraHop · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Aviz adds conversational agent layer to Spectrum-X AI factory operations</title>
-      <link>https://aviznetworks.com/resources/blogs/agentic-operations-beyond-network-automation-ai-factories</link>
-      <guid isPermaLink="true">https://aviznetworks.com/resources/blogs/agentic-operations-beyond-network-automation-ai-factories</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Aviz Networks describes AI NOC as a conversational agentic layer on ONES network orchestration for NVIDIA Spectrum-X AI factories. Agents handle Day 1 tenant and GPU allocation, Day 2 monitoring, audits, and troubleshooting in real time.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates how agentic operations move beyond static provisioning to handle specialized AI fabric demands: GPU allocation, traffic prioritization, congestion detection, and PFC storm mitigation in high-performance computing require real-time agent-driven decisions.&lt;/p&gt;&lt;p&gt;Source: Aviz Networks · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Telus abandons two Vancouver AI data centres after local opposition</title>
-      <link>https://www.theglobeandmail.com/business/article-telus-pulls-out-of-two-planned-vancouver-ai-data-centres/</link>
-      <guid isPermaLink="true">https://www.theglobeandmail.com/business/article-telus-pulls-out-of-two-planned-vancouver-ai-data-centres/</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Telus pulled out of two planned Vancouver AI data centres expected to open by end of 2026 and 2029, after community protests over environmental, community and housing impacts. The facilities were to house 63,000 Nvidia GPUs and consume up to 163 megawatts of electricity.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Withdrawal signals real operational constraints on telco expansion into AI infrastructure amid competing local priorities, impacting Canada's sovereign AI infrastructure ambitions and requiring operators to navigate municipal permitting and community engagement.&lt;/p&gt;&lt;p&gt;Source: The Globe and Mail · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Most LLM ops agents remain copilots rather than autonomous operators</title>
-      <link>https://arxiv.org/abs/2611.21620</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.21620</guid>
-      <pubDate>Wed, 18 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;A new survey examines the transition from AIOps pipelines to agentic service operations through three coupled lenses: capability, operational authority, and evaluation evidence. The work audits 22 language-model-enabled systems according to their evaluated behavior rather than intended autonomy, finding most remain copilots or read-only investigators.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AIOps and SRE leaders evaluating autonomous remediation claims need this framework to assess actual decision-making authority and evidence quality before deploying LLM-based operations tools in production.&lt;/p&gt;&lt;p&gt;Source: arXiv (cs.SE) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-18.html&quot;&gt;Nov 18, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
