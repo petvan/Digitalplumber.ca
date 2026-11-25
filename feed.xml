@@ -6,7 +6,135 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Tue, 24 Nov 2026 20:43:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 20:00:22 GMT</lastBuildDate>
+    <item>
+      <title>Fidelity, Microsoft and NVIDIA to detail production Nautobot deployments</title>
+      <link>https://networktocode.com/resources/events/nautocon/tucson-2026/</link>
+      <guid isPermaLink="true">https://networktocode.com/resources/events/nautocon/tucson-2026/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Automation</category>
+      <description>&lt;p&gt;NautoCon (co-located with AutoCon 6, November 18, Tucson) brings network engineers from Fidelity Investments, Microsoft, ONEOK, and NVIDIA to discuss production Nautobot deployments, federation patterns, and integration with Ansible/AWX and AI factory networks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Direct practitioner testimony from enterprises operating Nautobot at scale: how to connect Nautobot as source of truth to Ansible inventory, implement dynamic groups and config contexts, trigger workflows from events, integrate with approval gating, and deploy NVIDIA's AI factory networks—patterns applicable to any team building governance into NetDevOps.&lt;/p&gt;&lt;p&gt;Source: Network to Code · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First co-packaged optics switches ship in volume</title>
+      <link>https://www.insidedeeptech.com/co-packaged-optics-cpo-full-guide/</link>
+      <guid isPermaLink="true">https://www.insidedeeptech.com/co-packaged-optics-cpo-full-guide/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Data Center &amp; AI Networking</category>
+      <description>&lt;p&gt;First production CPO switches are shipping: Broadcom Bailly 51.2T CPO Ethernet and NVIDIA Quantum-X Photonics Q3450-LD 144×800G InfiniBand deployed; TSMC Compact Universal Photonic Engine entering CoWoS-based production; LPO remains the 2026-2027 bridge technology for teams requiring field-replaceable modules.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CPO production ramp directly reduces data center power consumption by 30% at cluster level by eliminating 3-4x copper-to-optical conversions per link; LPO remains the mainstream 2026-2027 choice for teams wanting field-replaceable modules while CPO qualification catches up.&lt;/p&gt;&lt;p&gt;Source: InsideDeepTech · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chinese APT roots 25 Palo Alto firewalls via exploit chain</title>
+      <link>https://www.decryptiondigest.com/blog/pan-os-fragnesia-php2shell-chinese-apt-firewall-rootkit</link>
+      <guid isPermaLink="true">https://www.decryptiondigest.com/blog/pan-os-fragnesia-php2shell-chinese-apt-firewall-rootkit</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;A Chinese-linked threat actor has compromised 25 Palo Alto Networks PAN-OS firewalls by chaining PHP2Shell RCE with Fragnesia (CVE-2026-46300) kernel LPE to achieve unauthenticated root access on internet-exposed management interfaces. Twenty-four devices were perimeter firewalls.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Internet-exposed PAN-OS management interfaces are under active attack with no workaround; every organization must patch all five supported PAN-OS branches immediately to prevent root compromise of perimeter security infrastructure.&lt;/p&gt;&lt;p&gt;Source: SecurityWeek / Cyber Security News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenSSL patches critical heap overflow and QUIC memory exhaustion</title>
+      <link>https://cvebrief.com/archive/2026/11/22/</link>
+      <guid isPermaLink="true">https://cvebrief.com/archive/2026/11/22/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;OpenSSL published two critical vulnerabilities on November 24: CVE-2026-121481 (CVSS 9.8) is a heap buffer overflow in EVP_EncodeBlock() due to integer overflow on large inputs; CVE-2026-84785 (CVSS 9.1) enables memory exhaustion via unbounded QUIC stream fragment reassembly.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Both vulnerabilities affect OpenSSL embedded across TLS terminators, appliances, and applications; patch assessment and deployment planning required for base64 encoding and QUIC transport services.&lt;/p&gt;&lt;p&gt;Source: OpenSSL / CVE Brief · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cisco Expressway root flaw exploited through hard-coded Erlang cookie</title>
+      <link>https://www.theregister.com/security/2026/11/23/critical-cisco-remote_code_execution_bug_under_attack/5311722</link>
+      <guid isPermaLink="true">https://www.theregister.com/security/2026/11/23/critical-cisco-remote_code_execution_bug_under_attack/5311722</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added CVE-2026-76466 to Known Exploited Vulnerabilities catalog on November 20 after F6 security firm reported active exploitation. Russian cybersecurity firm F6 documented compromises of four clustered Cisco Expressway X15.5.3 devices via public proof-of-concept code released November 5.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clustered Cisco Expressway systems are under active attack with unauthenticated root RCE; organizations must patch immediately to X15.5.20 or migrate to fixed releases; no workaround exists.&lt;/p&gt;&lt;p&gt;Source: CISA / SecurityWeek / Infosecurity Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CrowdStrike to buy Zscaler for $43.9 billion</title>
+      <link>https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/</link>
+      <guid isPermaLink="true">https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Startups &amp; Funding</category>
+      <description>&lt;p&gt;CrowdStrike agreed to acquire cloud security company Zscaler in a $43.9 billion all-stock deal, combining endpoint protection with zero-trust network security. Combined entity projects $10B+ ARR at close; deal expected mid-FY2028 pending regulatory approval.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Creates single unified platform bridging endpoint and network security layers with integrated AI agent protection; fundamentally reshapes procurement and architecture patterns for enterprise security operations.&lt;/p&gt;&lt;p&gt;Source: TechCrunch · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NVIDIA board reinstates Jensen Huang as chief executive</title>
+      <link>https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm</link>
+      <guid isPermaLink="true">https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>People Moves</category>
+      <description>&lt;p&gt;NVIDIA's board voted unanimously on November 23 to reinstate Jensen Huang as President and CEO after a brief interim period led by CFO Colette Kress, following discussions with Huang. The board confirmed the reinstatement posed no national security risk based on input from senior U.S. government officials.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Huang's return stabilizes NVIDIA's AI infrastructure leadership; his prior support for AI developers and financing deals for companies like CoreWeave and partnerships with OpenAI and Anthropic resume.&lt;/p&gt;&lt;p&gt;Source: NVIDIA SEC Filing (8-K) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Attackers target agent config files, MCP servers and OAuth tokens</title>
+      <link>https://curieously.substack.com/p/tuesday-112426-environmental-scan</link>
+      <guid isPermaLink="true">https://curieously.substack.com/p/tuesday-112426-environmental-scan</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;Environmental scan of agent-driven security threats in November 2026. Attackers now target agent config files, MCP server injection, and OAuth token theft; ARTEX framework linked across government and finance intrusions involving rapid exploitation chains.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure and SRE teams must harden agent configuration storage, audit MCP server sources, and implement agent-specific identity governance before widespread deployment.&lt;/p&gt;&lt;p&gt;Source: Curiously (Christopher Wu) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AWS Bedrock AgentCore adds long-lived agents and identity tracing</title>
+      <link>https://dev.to/hiroki-ii-ai/ai-daily-digest-november-25-2026-jensen-huang-returns-to-lead-nvidia-walmart-opens-its-aisles-jgn</link>
+      <guid isPermaLink="true">https://dev.to/hiroki-ii-ai/ai-daily-digest-november-25-2026-jensen-huang-returns-to-lead-nvidia-walmart-opens-its-aisles-jgn</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;AWS upgraded Amazon Bedrock AgentCore runtime layer (Nov 24) to support long-lived agents; published Cognito token-exchange feature (launched Nov 12) enabling derived tokens that preserve identity while recording agent actions in an 'act' claim for audit and cost accountability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure and SRE practitioners can now run agents as persistent components with traceable delegated access, solving the cost-attribution and compliance gap that has blocked wide production agent adoption.&lt;/p&gt;&lt;p&gt;Source: AI Daily Digest / AWS · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VodafoneThree trials AI-RAN with Nokia and Nvidia</title>
+      <link>https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-14-20-nov-2026-56733/</link>
+      <guid isPermaLink="true">https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-14-20-nov-2026-56733/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;Week of Nov 14-20 saw operator announcements on sovereign AI platforms, AI-RAN trials, and aggressive AI infrastructure buildout. VodafoneThree began lab and field trials of AI-RAN technology with Nokia and Nvidia; du launched National HyperAI for regional sovereign AI inference.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operators are moving from vendor-specific AI solutions to open, interoperable AI-RAN platforms; trials signal near-term production deployments of AI-driven spectrum optimization and resource allocation in 2027.&lt;/p&gt;&lt;p&gt;Source: TelecomTV · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RFC 10057 standardises YANG model for traffic engineering tunnels</title>
+      <link>https://www.rfc-editor.org/info/rfc10057/</link>
+      <guid isPermaLink="true">https://www.rfc-editor.org/info/rfc10057/</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10057 defines a comprehensive YANG data model for provisioning and managing Traffic Engineering (TE) tunnels, Label Switched Paths (LSPs), and interfaces. This standardizes TE management across vendor implementations with common YANG types and device models.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides operators a standard method to automate TE provisioning and management across heterogeneous equipment, reducing configuration variance and enabling programmatic control via NETCONF/RESTCONF.&lt;/p&gt;&lt;p&gt;Source: IETF RFC Editor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RFC 10094 clarifies SRv6 segment identifier list processing</title>
+      <link>https://datatracker.ietf.org/doc/search?name=&amp;rfcs=on&amp;sort=ipr</link>
+      <guid isPermaLink="true">https://datatracker.ietf.org/doc/search?name=&amp;rfcs=on&amp;sort=ipr</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;RFC 10094 clarifies Segment Routing over IPv6 (SRv6) Segment Identifier (SID) List Processing, resolving ambiguities in how SRv6 implementations must interpret and process SID lists to address interoperability issues in multi-vendor deployments.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Eliminates implementation ambiguities in SRv6 that cause interoperability failures, reducing troubleshooting burden and enabling more reliable segment routing deployments across vendor boundaries.&lt;/p&gt;&lt;p&gt;Source: IETF RFC Editor · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLM-driven xApp turns natural language into 5G RAN configs</title>
+      <link>https://arxiv.org/abs/2611.25736</link>
+      <guid isPermaLink="true">https://arxiv.org/abs/2611.25736</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;LLM-driven xApp enables runtime deployment of traffic-control functions in programmable RANs by grounding free-form natural-language inputs in RAN configuration parameters. Approach uses LLMs to translate dynamic service intents into configurations without predefined action spaces.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Demonstrates practical path for intent-based RAN management via LLMs; operationally significant for telco operators building self-adaptive 5G systems that respond to changing traffic patterns and business requirements without manual intervention.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Anthropic guarantees one-year minimum lifespan for its models</title>
+      <link>https://dev.to/tokely/how-long-do-ai-models-live-release-to-shutdown-days-for-64-openai-anthropic-and-google-models-4m1a</link>
+      <guid isPermaLink="true">https://dev.to/tokely/how-long-do-ai-models-live-release-to-shutdown-days-for-64-openai-anthropic-and-google-models-4m1a</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;A data-driven study of 83 text-generation models from OpenAI, Anthropic and Google deprecation pages (read Nov 24, 2026) analyzing 64 retired models and 19 with announced future shutdowns. Finds Anthropic enforces a one-year minimum model lifespan with 60 days' notice; Claude Opus 4.5 was announced for retirement Jan 22, 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Understanding deprecation patterns—Anthropic mandates 60+ days' notice for public models—helps ops teams plan API migrations and versioning strategies.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EU delays high-risk AI Act compliance to December 2027</title>
+      <link>https://www.originbrief.app/en/reports/ai-regulation-policy/2026-11-23/weekly</link>
+      <guid isPermaLink="true">https://www.originbrief.app/en/reports/ai-regulation-policy/2026-11-23/weekly</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The EU Digital Omnibus amendments to the AI Act shifted the compliance deadline for high-risk AI systems in Annex III, including recruitment and HR tools, from August 2026 to December 2, 2027. Prohibitions, AI literacy obligations, and transparency rules remain in effect now.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Organizations using AI in recruitment and HR must now account for a 16-month extension, but cannot delay implementation of transparency and literacy requirements, reshaping compliance priorities for enterprise AI deployments.&lt;/p&gt;&lt;p&gt;Source: AI Regulation &amp;amp; Policy Weekly Report · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Autonomous weapons talks end without binding rules, UN chief warns</title>
+      <link>https://news.un.org/en/story/2026/11/1168866</link>
+      <guid isPermaLink="true">https://news.un.org/en/story/2026/11/1168866</guid>
+      <pubDate>Wed, 25 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;Artificial intelligence is already assisting in targeting and drones are reshaping warfare, fuelling record levels of conflict. The Security Council is weighing these changes, with UN chief António Guterres telling ambassadors that killer robots must have no place in the future.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Failed autonomous weapons negotiations and accelerating AI military deployment signal that geopolitical competition now outpaces governance frameworks, directly affecting enterprise AI supply chain security and regulatory fragmentation.&lt;/p&gt;&lt;p&gt;Source: UN News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-25.html&quot;&gt;Nov 25, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AppNeta tracked user impact during November Microsoft outage</title>
       <link>https://networkobservability.broadcom.com/blog/defending-against-ai-driven-disruption</link>
@@ -678,134 +806,6 @@
       <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
       <category>Routing &amp; Internet</category>
       <description>&lt;p&gt;Pakistan's telecommunications authority linked widespread slow internet speeds and connectivity outages to a fault in the SMW5 cable system approximately 11 kilometres from Pakistan's coastline. Cloudflare Radar confirmed HTTP data dropped by as much as 36 per cent following the submarine cable failure.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Real-time cable fault impact measurement shows measurement gaps in infrastructure resilience; SMW5 carries critical international capacity for the region.&lt;/p&gt;&lt;p&gt;Source: The National · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Puppet Enterprise RCE exploited one day after patch</title>
-      <link>https://dev.to/etairos/puppet-server-rce-cve-2026-115731-exploited-one-day-after-patch-now-in-cisa-kev-2ph4</link>
-      <guid isPermaLink="true">https://dev.to/etairos/puppet-server-rce-cve-2026-115731-exploited-one-day-after-patch-now-in-cisa-kev-2ph4</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;CISA added CVE-2026-115731 to its KEV catalog November 17, confirming active exploitation of a deserialization flaw in Perforce Puppet; Perforce released fixes November 3, 2026. First public exploitation signals appeared November 4, one day after the patch.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Puppet servers control certificate generation and infrastructure configuration across thousands of enterprises. Unpatched servers may have compromised CA signing keys, requiring immediate key rotation and audit trail review.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Attackers chain PAN-OS flaws with kernel exploit for root</title>
-      <link>https://thehackernews.com/2026/11/everything-is-web-application-including.html</link>
-      <guid isPermaLink="true">https://thehackernews.com/2026/11/everything-is-web-application-including.html</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Security</category>
-      <description>&lt;p&gt;Palo Alto Networks confirmed attackers exploiting CVE-2026-109618 and CVE-2026-109619 (PHP2Shell) against PAN-OS management interfaces exposed to the internet; both flaws allow unauthenticated code execution on the web server. An attacker chained PHP2Shell with a Linux kernel flaw to gain root on 25 systems.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network infrastructure teams must immediately restrict firewall and VPN appliance management interfaces to internal networks only. Attackers achieved root access on critical appliances across multiple countries.&lt;/p&gt;&lt;p&gt;Source: The Hacker News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Metano leaves stealth with $12 million for AI agent security</title>
-      <link>https://www.citybiz.co/article/936203/metano-emerges-from-stealth-with-12-million-seed-funding-for-ai-agent-security-platform/</link>
-      <guid isPermaLink="true">https://www.citybiz.co/article/936203/metano-emerges-from-stealth-with-12-million-seed-funding-for-ai-agent-security-platform/</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Metano, an AI security startup, emerged from stealth with $12M in seed funding led by Sierra Ventures to secure autonomous AI agents across endpoints, cloud, and SaaS. Founded by cybersecurity veterans from ServiceNow, Zscaler, Palo Alto Networks, and Microsoft, the platform provides real-time agent behavior analysis and enforcement controls designed for autonomous workflows.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; As AI agents proliferate across enterprise infrastructure, traditional network and endpoint security tools lack visibility into agent-specific threats like malicious skills, MCP vulnerabilities, and autonomous decision-making—making agent-native security controls a new operational requirement.&lt;/p&gt;&lt;p&gt;Source: CityBiz · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto Networks to buy Applied Compute for $4.5 billion</title>
-      <link>https://www.bloomberg.com/news/articles/2026-11-18/palo-alto-networks-to-buy-applied-compute-in-4-5-billion-deal</link>
-      <guid isPermaLink="true">https://www.bloomberg.com/news/articles/2026-11-18/palo-alto-networks-to-buy-applied-compute-in-4-5-billion-deal</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Palo Alto Networks agreed to acquire Applied Compute, an AI infrastructure startup founded by former OpenAI researchers, for $4.5B in an all-stock deal. Applied Compute provides post-training and inference platforms for open-weight models, including an autoscaling inference engine and model router; CEO Yash Patil will become co-chief AI officer post-close.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; As enterprises adopt open-weight models alongside proprietary frontier models, security controls must shift from application perimeter to the inference pipeline itself—making acquisition of infrastructure teams with model deployment expertise strategically critical for security vendors.&lt;/p&gt;&lt;p&gt;Source: Bloomberg · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Linq raises $90 million for AI agent messaging infrastructure</title>
-      <link>https://dealroom.co/news/174117-linq-raises-90m-to-put-ai-agents-inside-your-text-threads/</link>
-      <guid isPermaLink="true">https://dealroom.co/news/174117-linq-raises-90m-to-put-ai-agents-inside-your-text-threads/</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Startups &amp; Funding</category>
-      <description>&lt;p&gt;Linq raised $90M in Series B funding led by Andreessen Horowitz at a $1B valuation to scale messaging and computer-use infrastructure for AI agents. The company provides APIs connecting agents to customers over SMS, voice, Apple Messages for Business, RCS, and WhatsApp, with over 1 billion messages processed and 150M+ monthly growth.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Agent traffic now exceeds half of internet traffic (Cloudflare data); as agents move from chat to task completion across voice and software interfaces, the messaging and calling infrastructure layer becomes a strategic chokepoint for observability, control, and integration with enterprise systems.&lt;/p&gt;&lt;p&gt;Source: Dealroom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Krambu names Michael Winter CEO ahead of 2027 capacity</title>
-      <link>https://www.globenewswire.com/news-release/2026/11/17/2473891/0/en/Krambu-Expands-Leadership-Team-to-Accelerate-AI-Infrastructure-Growth-in-2027.html</link>
-      <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/11/17/2473891/0/en/Krambu-Expands-Leadership-Team-to-Accelerate-AI-Infrastructure-Growth-in-2027.html</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Krambu, an AI infrastructure developer, appointed Michael Winter as CEO and added six other leadership roles spanning operations, project development, finance and sales. The team is preparing to bring new data center capacity online in 2027.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Signals acceleration in AI infrastructure buildout capacity; direct indicator of enterprise data center expansion strategy for infrastructure operators planning GPU and power capacity.&lt;/p&gt;&lt;p&gt;Source: GlobeNewswire (Krambu press release) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cribl acquires AI observability startup Tero</title>
-      <link>https://thecyberwire.com/newsletters/business-briefing/8/46</link>
-      <guid isPermaLink="true">https://thecyberwire.com/newsletters/business-briefing/8/46</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>People Moves</category>
-      <description>&lt;p&gt;Cribl acquired Tero, an AI observability platform, and brought in Tero's three co-founders—CEO Ben Johnson, CTO Adam Cohen, and COO Nihar Singhal—to lead observability roadmap. The move signals Cribl's focus on AI-native observability.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Consolidation of AI observability talent into platform-centric vendors; offers AIOps practitioners a narrower set of integration points for telemetry and topology visibility.&lt;/p&gt;&lt;p&gt;Source: The Cyber Wire · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Azure SRE Agent gains native AWS and Google Cloud access</title>
-      <link>https://techcommunity.microsoft.com/blog/appsonazureblog/azure-sre-agent-now-natively-supports-aws-and-google-cloud/4569556</link>
-      <guid isPermaLink="true">https://techcommunity.microsoft.com/blog/appsonazureblog/azure-sre-agent-now-natively-supports-aws-and-google-cloud/4569556</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Microsoft announced Azure SRE Agent now natively supports AWS and Google Cloud via managed identity federation and MCP, eliminating credential management and custom connectors. The agent can investigate incidents across multicloud environments with unified access to audit logs (CloudTrail, Cloud Audit Logs).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Operations teams can run a single agentic SRE platform across Azure, AWS, and GCP without custom integrations—MCP and managed identities simplify multicloud incident investigation and reduce operational silos.&lt;/p&gt;&lt;p&gt;Source: Microsoft Azure · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Azure Resource Manager MCP server can now create resources</title>
-      <link>https://visualstudiomagazine.com/articles/2026/11/17/microsoft-gives-ai-agents-more-control-over-azure-infrastructure.aspx</link>
-      <guid isPermaLink="true">https://visualstudiomagazine.com/articles/2026/11/17/microsoft-gives-ai-agents-more-control-over-azure-infrastructure.aspx</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;Azure Resource Manager MCP Server now supports creating and updating Azure resources via PUT and POST operations. Azure SRE Agent adds customer-managed encryption keys, Entra Agent ID integration, cross-agent communication, and MCP firewall in preview to govern agent-to-server interactions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure operators can now use agents to provision and modify infrastructure via MCP without leaving the protocol; governance controls (MCP firewall, Entra Agent ID, audit trails) make autonomous infrastructure changes auditable and enterprise-safe.&lt;/p&gt;&lt;p&gt;Source: Visual Studio Magazine · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ExtraHop says agent zero trust needs network traffic analysis</title>
-      <link>https://www.extrahop.com/blog/zero-trust-for-ai-agents-starts-with-network-visibility</link>
-      <guid isPermaLink="true">https://www.extrahop.com/blog/zero-trust-for-ai-agents-starts-with-network-visibility</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;ExtraHop published guidance on Zero Trust architecture for autonomous agents: network traffic analysis is required to inventory agents, monitor MCP server connections, and prevent unauthorized lateral movement. Single prompt injections can steer agents into cross-segment access under valid credentials without triggering identity alarms.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators must add agent discovery and MCP connection monitoring to zero-trust implementations; network packets reveal agent behavior that endpoint and log-based telemetry miss, closing visibility gaps that allow rogue agents to pivot.&lt;/p&gt;&lt;p&gt;Source: ExtraHop · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Singtel cuts network fault resolution time by 80% using AI</title>
-      <link>https://www.mobileworldlive.com/singtel/singtel-slashes-network-fault-resolution-time-with-ai/</link>
-      <guid isPermaLink="true">https://www.mobileworldlive.com/singtel/singtel-slashes-network-fault-resolution-time-with-ai/</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Singtel reduced network problem resolution times by almost 80% over the past 12 months using AI to detect abnormalities and optimize fault management. AI is transforming operations by moving away from predefined rules toward systems that can learn, predict, adapt, and make autonomous decisions.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; AI enables engineers to move from hours spent correlating alarms toward higher-value engineering decisions that improve overall network experience, demonstrating ROI from AI automation in production NOC operations.&lt;/p&gt;&lt;p&gt;Source: Mobile World Live · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IETF updates DetNet TCQF and gLBF data plane drafts</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-detnet-glbf-04/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-detnet-glbf-04/</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;IETF Deterministic Networking working group updated draft-ietf-detnet-tcqf-03 and draft-ietf-detnet-glbf-04. TCQF targets low end-to-end jitter and hardware implementation ease; gLBF provides hop-by-hop forwarding with bounded latency without network-wide synchronization.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; DetNet latency guarantees are critical for mission-critical applications; these standards affect how you design real-time network paths for industrial automation and autonomous systems.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>OpenConfig fixes YANG validation warnings and licensing terms</title>
-      <link>https://github.com/openconfig/public/issues/1606</link>
-      <guid isPermaLink="true">https://github.com/openconfig/public/issues/1606</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;OpenConfig maintainers addressed YANG XPath and type validation warnings in libyang integration and updated licensing terms for IETF YANG model files within the OpenConfig repository for explicit copyright and redistribution compliance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; OpenConfig model validation issues and licensing clarity directly impact your NETCONF/YANG automation infrastructure; unresolved validation warnings can block deployments in production environments using libyang validators.&lt;/p&gt;&lt;p&gt;Source: OpenConfig GitHub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google's Gemini 4 Neon matches Carbon quality at half the cost</title>
-      <link>https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/</link>
-      <guid isPermaLink="true">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Google released Gemini 4 Neon on November 18 as the middle tier of its Gemini 4 family. It scores 61.4 on Artificial Analysis Intelligence Index at xhigh reasoning, delivering Carbon-class performance at Flash speeds. On long-context reasoning (GraphWalks), Neon achieves 95.2% accuracy versus 80.1% for GPT-6.2 Sol.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Neon delivers comparable capability to flagship Carbon at lower cost per task with 1M-token context—critical for cost-sensitive enterprise agentic workflows and reasoning-heavy tasks requiring long-context understanding.&lt;/p&gt;&lt;p&gt;Source: 9to5Google · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GPT-6.2 models stall on routine steps despite benchmark gains</title>
-      <link>https://deploymentsafety.openai.com/gpt-6-2-astra-sol/respecting-auto-review</link>
-      <guid isPermaLink="true">https://deploymentsafety.openai.com/gpt-6-2-astra-sol/respecting-auto-review</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;OpenAI released GPT-6.2 Astra and Sol on November 17 with improved benchmarks and 20% lower token pricing. On internal GDPval v2, Astra improves 6.2 percentage points over GPT-6 Astra. However, early testers reported severe autonomy issues—models ask permission on routine steps like file downloads that prior versions handle independently.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Early testers report Astra cannot handle autonomous workflows without constant hand-holding, asking permission on trivial technical decisions—a critical regression for agent-based production systems despite higher benchmark scores.&lt;/p&gt;&lt;p&gt;Source: OpenAI Deployment Safety Hub · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>State and EU rules leave enterprises facing more AI compliance</title>
-      <link>https://www.cio.com/article/4249209/the-ai-deregulation-illusion-why-cios-face-more-rules-not-fewer.html</link>
-      <guid isPermaLink="true">https://www.cio.com/article/4249209/the-ai-deregulation-illusion-why-cios-face-more-rules-not-fewer.html</guid>
-      <pubDate>Thu, 19 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Texas Responsible Artificial Intelligence Governance Act (TRAIGA) took effect this year, while the European Union's AI Act is moving into active enforcement. Despite federal policy retreat, state-level and international regulation is fragmenting compliance requirements for enterprises.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; CIOs must navigate fragmented compliance regimes across jurisdictions instead of unified federal frameworks, increasing operational complexity and audit exposure.&lt;/p&gt;&lt;p&gt;Source: CIO.com · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-19.html&quot;&gt;Nov 19, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
