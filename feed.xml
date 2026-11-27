@@ -6,7 +6,87 @@
     <atom:link href="https://digitalplumber.ca/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI-curated briefing for network engineers, NetDevOps and AIOps practitioners.</description>
     <language>en-ca</language>
-    <lastBuildDate>Thu, 26 Nov 2026 19:39:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 19:32:33 GMT</lastBuildDate>
+    <item>
+      <title>CISA flags exploited Mitel, Juniper and Xen Orchestra flaws</title>
+      <link>https://www.it-connect.tech/cisa-flags-10-exploited-flaws-in-danfoss-mitel-juniper-and-xen-orchestra/</link>
+      <guid isPermaLink="true">https://www.it-connect.tech/cisa-flags-10-exploited-flaws-in-danfoss-mitel-juniper-and-xen-orchestra/</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Network Security</category>
+      <description>&lt;p&gt;CISA added 10 flaws to its Known Exploited Vulnerabilities (KEV) Catalog on November 25, 2026, citing evidence of active exploitation. Five affect Mitel MiCollab's AWV conference component with CVSS scores up to 10.0 (OS command injection), plus critical flaws in HPE Juniper Session Smart and Vates Xen Orchestra.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Remediation deadline is November 28, 2026 for eight vulnerabilities, requiring emergency patching of Mitel, Juniper, and Vates infrastructure within days.&lt;/p&gt;&lt;p&gt;Source: IT-Connect / CISA · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ExtraHop users report 12x faster wire-level root-cause analysis</title>
+      <link>https://nhimg.org/articles/agentic-nocs-use-wire-level-ai-to-speed-root-cause-analysis</link>
+      <guid isPermaLink="true">https://nhimg.org/articles/agentic-nocs-use-wire-level-ai-to-speed-root-cause-analysis</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;AI-driven network operations can query wire-level telemetry, trace dependencies across L2 to L7, and produce evidence-backed root-cause verdicts in seconds. ExtraHop customers have validated a 12x improvement in network troubleshooting speed using the ExtraHop MCP Server and AI skills, transforming multi-hour investigations into one-hour fixes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Machine-speed investigation changes the control problem from alert handling to governed decision rights, approved remediation, and verifiable context. This operationalizes agentic NOCs by anchoring agent decisions in structured telemetry rather than dashboards.&lt;/p&gt;&lt;p&gt;Source: NHI Mgmt Group (independent analysis of ExtraHop) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Itential MCP server exposes 56 governed automation tools to LLMs</title>
+      <link>https://github.com/itential/itential-mcp</link>
+      <guid isPermaLink="true">https://github.com/itential/itential-mcp</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Agentic AI &amp; MCP</category>
+      <description>&lt;p&gt;The Itential MCP Server provides comprehensive tools for connecting LLMs to Itential Platform, enabling AI assistants to manage network automations, orchestrate workflows, monitor platform health, and perform advanced network operations. The server includes 56+ automation tools across 10 tag categories, supports stdio, SSE, and HTTP transports.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Itential's MCP server provides governance around AI-triggered production changes; the server launched in May 2025 with 65+ governed tools, allowing agents to drive real infrastructure automation while maintaining compliance and audit trails.&lt;/p&gt;&lt;p&gt;Source: Itential and NetPilot · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>T-Mobile tests AI-RAN economics with Nokia, Nvidia and Ericsson</title>
+      <link>https://www.telecomstechnews.com/news/t-mobile-ai-ran-deployment-economics-6g/</link>
+      <guid isPermaLink="true">https://www.telecomstechnews.com/news/t-mobile-ai-ran-deployment-economics-6g/</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;T-Mobile is testing AI-RAN architectures to assess deployment costs and improve 5G performance, working with Nokia and Nvidia on GPU-based infrastructure while testing AI software on Ericsson's existing RAN hardware. Laboratory tests recorded 10–15% uplink throughput improvements using AI-based channel estimation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; RAN engineers need field validation data on AI performance gains and must evaluate mixed-vendor AI-RAN strategies. This establishes ROI thresholds for AI-RAN rollout decisions.&lt;/p&gt;&lt;p&gt;Source: Telecoms Tech News · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI demand pushes fiber capacity into metro edges, not hubs</title>
+      <link>https://www.itpro.com/artificial-intelligence/how-ai-is-affecting-network-infrastructure</link>
+      <guid isPermaLink="true">https://www.itpro.com/artificial-intelligence/how-ai-is-affecting-network-infrastructure</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Telco &amp; Cable AI</category>
+      <description>&lt;p&gt;AI demand has materially changed network infrastructure requirements and is reshaping where operators deploy fiber and edge capacity. Rather than consolidating into mega-hubs, AI workloads drive expansion across metro areas, with London seeing 91% of incremental capacity in Greater London rather than Central London.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Network operators and facility planners must shift capex strategy toward dense metro fiber and distributed edge compute rather than core-centric architectures. This directly impacts interconnection strategy and intra-metro latency design.&lt;/p&gt;&lt;p&gt;Source: ITPro · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF last call extends BGP OTC checks to route-server clients</title>
+      <link>https://freenode.net/digest/1081</link>
+      <guid isPermaLink="true">https://freenode.net/digest/1081</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;IETF IDR working group entered last call (Nov 20–Dec 4, 2026) on draft-ietf-idr-otc-rs-verification, a minor update to RFC 9234 that extends Only-to-Customer (OTC) BGP attribute verification to route-server clients to prevent route leaks.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends route-leak detection to route-server topologies; implementations already exist with positive community support, reducing deployment friction for operators running route servers.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker / freenode digest · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IETF revisits operator network management requirements 20 years on</title>
+      <link>https://datatracker.ietf.org/doc/draft-ietf-nmop-rfc3535-20years-later/</link>
+      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-nmop-rfc3535-20years-later/</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>Research, Standards &amp; Industry</category>
+      <description>&lt;p&gt;IETF NMOP working group published draft-ietf-nmop-rfc3535-20years-later-06 on November 20, 2026, revisiting operator requirements for network management protocols and data models two decades after RFC 3535, identifying gaps in IETF solutions and new requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides authoritative guidance on what IETF network management standards still lack and where new work is needed; directly shapes priorities for NETCONF, YANG, and management API standardization that operators depend on.&lt;/p&gt;&lt;p&gt;Source: IETF Datatracker · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI merges ChatGPT and Codex into one usage meter</title>
+      <link>https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o</link>
+      <guid isPermaLink="true">https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Model Providers</category>
+      <description>&lt;p&gt;OpenAI is merging ChatGPT and Codex into a single usage meter; Cognition released SWE-2.1 on November 24, the new coding model behind Devin, with vendor-reported benchmarks roughly doubling the previous generation.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; API consolidation simplifies billing and usage tracking for practitioners; improved coding model performance affects DevOps automation and infrastructure-as-code tooling capabilities.&lt;/p&gt;&lt;p&gt;Source: DEV Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FCC clears SpaceX to launch million-satellite AI constellation</title>
+      <link>https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure</link>
+      <guid isPermaLink="true">https://riorundown.substack.com/p/ai-news-nov-27-2026-ai-infrastructure</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;The FCC authorized SpaceX to deploy one million satellites for a space-based AI data center constellation named Starmind to process AI workloads using solar energy. Google announced AI agents must access Workspace tools via new secure interfaces starting February 2027 with built-in permission checks and data loss prevention, replacing traditional REST APIs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Space-based AI infrastructure addresses energy constraints but faces feasibility and debris concerns; mandatory secure APIs shift how autonomous agents interact with enterprise systems, enforcing governance at the platform level.&lt;/p&gt;&lt;p&gt;Source: Rio Rundown · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>US export rules on remote AI access halt Nvidia shipments</title>
+      <link>https://www.weforum.org/stories/artificial-intelligence/us-china-ai-competition-superintelligence-geopolitics</link>
+      <guid isPermaLink="true">https://www.weforum.org/stories/artificial-intelligence/us-china-ai-competition-superintelligence-geopolitics</guid>
+      <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+      <category>AI Industry &amp; Policy</category>
+      <description>&lt;p&gt;In November 2026, the US issued new export rules addressing remote access to American AI technology through third-country data centers, triggering Nvidia to suspend chip shipments to Southeast Asia. Nvidia established a board-level National Security and Export Control Oversight Committee, signaling how geopolitical competition is restructuring AI infrastructure access and company governance.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Export controls and enforcement now target infrastructure access patterns, not just chips; enterprises and cloud providers with cross-border operations face compliance complexity as AI compute becomes a national security asset with bilateral negotiation replacing tiered rules.&lt;/p&gt;&lt;p&gt;Source: The Neuron &amp;amp; WeForum · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-27.html&quot;&gt;Nov 27, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LLM use doubles but network automation stays stuck at a third</title>
       <link>https://raymota1.substack.com/p/llm-adoption-doubled-in-a-year-the</link>
@@ -726,86 +806,6 @@
       <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
       <category>Agentic AI &amp; MCP</category>
       <description>&lt;p&gt;Azure SRE Agent joins Microsoft Teams with its own Entra Agent ID and now works across clouds with AWS and Google Cloud connectors and agent collaboration. Cross-cloud and cross-team agent communication now available.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; 11,000+ agents deployed across Microsoft (7x increase since March GA); root cause analysis 60% faster; Azure Copilot observability agent saves 30 minutes per alert.&lt;/p&gt;&lt;p&gt;Source: Microsoft Tech Community · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>MCP agent protocol stack reaches completion across 200 repositories</title>
-      <link>https://www.coddykit.com/blog/the-state-of-ai-agents-november-2026-what-30-days-and-200-repositories-reveal-ab-5130034</link>
-      <guid isPermaLink="true">https://www.coddykit.com/blog/the-state-of-ai-agents-november-2026-what-30-days-and-200-repositories-reveal-ab-5130034</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Agentic AI &amp; MCP</category>
-      <description>&lt;p&gt;November 18, 2026 marks completion of AI agent infrastructure build-out; ecosystem shifted from 'can agents work?' to 'can agents ship finished deliverables at scale?'; MCP protocol stack now complete with tools and agent-to-agent communication.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Infrastructure is production-ready; skills marketplace becoming standardized way to discover and compose agent expertise; operations teams can now focus on application and deployment, not plumbing.&lt;/p&gt;&lt;p&gt;Source: Coddykit · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Charter builds 1,500 edge sites as LLM traffic grows</title>
-      <link>https://www.fierce-network.com/broadband/charter-bets-wi-fi-edge-will-carry-it-through-ai-era</link>
-      <guid isPermaLink="true">https://www.fierce-network.com/broadband/charter-bets-wi-fi-edge-will-carry-it-through-ai-era</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Telco &amp; Cable AI</category>
-      <description>&lt;p&gt;Large language model traffic on Charter's network rose from 0.02% to 0.09% of downstream and 0.05% to 0.32% of upstream year-over-year, while Charter's roughly 1,500 hub sites sit within 20–40 kilometers of 70 million homes. Partners use them for CDN, video and revenue-generating inference, with GPUs within 10 milliseconds of users vital to physical AI.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Charter's high-split plan of symmetrical 5–10 Gbps upstream and downstream is validated by measured LLM traffic growth, directly informing edge compute infrastructure sizing decisions for cable operators.&lt;/p&gt;&lt;p&gt;Source: Fierce Network · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Paper maps open problems in scale-up accelerator fabrics</title>
-      <link>https://arxiv.org/abs/2611.26156</link>
-      <guid isPermaLink="true">https://arxiv.org/abs/2611.26156</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;Paper analyzing networking challenges for AI accelerator interconnects. Authors assess topology, protocol mechanisms, and system integration requirements for high-bandwidth, low-latency scale-up fabrics used in distributed training and inference workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Scale-up networking directly impacts cluster performance for large AI training jobs; this paper provides architectural foundation for evaluating and designing next-gen interconnects.&lt;/p&gt;&lt;p&gt;Source: arXiv · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IETF draft adds post-quantum forward secrecy to EAP-AKA'</title>
-      <link>https://datatracker.ietf.org/doc/draft-ietf-emu-fs-reauth/00/</link>
-      <guid isPermaLink="true">https://datatracker.ietf.org/doc/draft-ietf-emu-fs-reauth/00/</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Research, Standards &amp; Industry</category>
-      <description>&lt;p&gt;New IETF draft specifies post-quantum key encapsulation updates to RFC 9678 for EAP-AKA' reauthentication. Addresses forward secrecy and hybrid post-quantum cryptography in mobile and wireless authentication protocols.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Mobile and cellular networks need post-quantum-resistant authentication; this draft guides operators on upgrading EAP-AKA' implementations before quantum computers threaten current cryptography.&lt;/p&gt;&lt;p&gt;Source: IETF · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Google launches cheaper mid-tier Gemini 4 Neon model</title>
-      <link>https://deepmind.google/models/gemini/</link>
-      <guid isPermaLink="true">https://deepmind.google/models/gemini/</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Model Providers</category>
-      <description>&lt;p&gt;Gemini 4 Neon launched November 18, 2026 as mid-tier model between Hydrogen and Carbon, delivering near-Carbon reasoning quality with faster task completion and lower cost. Priced at $3 input / $15 output per 1M tokens (25% lower than Carbon) with 1M-token context window and four reasoning levels.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Neon generates ~110 output tokens per second versus Carbon's ~57 tokens/sec, and reduced token pricing allows cost-per-task optimization for high-volume enterprise knowledge work. Direct multimodal file input support (Word, PowerPoint, Excel) with page/range slicing reduces API calls for document processing workloads.&lt;/p&gt;&lt;p&gt;Source: Google DeepMind · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Palo Alto Networks buys Applied Compute for $4.5 billion</title>
-      <link>https://csoonline.com/article/4250669/palo-alto-networks-bets-4-5b-on-enterprise-ai-with-applied-compute-acquisition.html</link>
-      <guid isPermaLink="true">https://csoonline.com/article/4250669/palo-alto-networks-bets-4-5b-on-enterprise-ai-with-applied-compute-acquisition.html</guid>
-      <pubDate>Sat, 21 Nov 2026 10:00:00 GMT</pubDate>
-      <category>AI Industry &amp; Policy</category>
-      <description>&lt;p&gt;Palo Alto Networks agreed to buy Applied Compute in an all-stock deal valued at $4.5 billion to help enterprises adopt AI securely through a post-training and inference platform for open-weight models that keeps proprietary data on-premise.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Security vendors consolidating inference and post-training stacks signals enterprise AI adoption moving from chat toward data-sensitive automation; impacts architecture decisions for private model deployment.&lt;/p&gt;&lt;p&gt;Source: CSO Online · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-21.html&quot;&gt;Nov 21, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Itential open-sources AI skills library for agentic NetOps</title>
-      <link>https://www.futuriom.com/articles/news/itential-launches-open-source-skills-for-agentic-netops/2026/11</link>
-      <guid isPermaLink="true">https://www.futuriom.com/articles/news/itential-launches-open-source-skills-for-agentic-netops/2026/11</guid>
-      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Itential released open-source AI Skills library providing integrations with AI platforms, permissions controls, execution safeguards, and visibility for agentic network operations. Release enables teams to move faster on network automation while introducing governance and controls around AI-driven changes.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Provides NetDevOps practitioners with vendor-backed skills framework to safely incorporate AI agents into operations; shifts from monolithic automation to governed, AI-augmented workflows with built-in audit trails.&lt;/p&gt;&lt;p&gt;Source: Futuriom · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-20.html&quot;&gt;Nov 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nautobot alpha loosens primary IP interface assignment requirement</title>
-      <link>https://github.com/nautobot/nautobot/releases/tag/v3.3.0a2</link>
-      <guid isPermaLink="true">https://github.com/nautobot/nautobot/releases/tag/v3.3.0a2</guid>
-      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Network Automation</category>
-      <description>&lt;p&gt;Nautobot released v3.3.0a2 alpha on Nov 13, 2026, adding PRIMARY_IP_REQUIRES_INTERFACE_ASSIGNMENT configuration setting. When disabled, allows IP addresses not assigned to any interface to be designated as primary IP for Devices, Virtual Machines, or VDCs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Configuration flexibility enables automation of overlay and virtual infrastructure models where primary IPs can float independent of physical interface state; reduces constraints on intent-based network automation patterns.&lt;/p&gt;&lt;p&gt;Source: Nautobot (GitHub/PyPI) · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-20.html&quot;&gt;Nov 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Broadcom pitches disaggregated Ethernet fabric against Cisco Silicon One</title>
-      <link>https://techblog.comsoc.org/2026/11/16/broadcoms-sc26-open-ethernet-fabric-ai-tail-latency-vs-proprietary-interconnects-and-cisco-silicon-one/</link>
-      <guid isPermaLink="true">https://techblog.comsoc.org/2026/11/16/broadcoms-sc26-open-ethernet-fabric-ai-tail-latency-vs-proprietary-interconnects-and-cisco-silicon-one/</guid>
-      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Broadcom unveiled its open Ethernet fabric portfolio at SC26, contrasting its disaggregated ASIC strategy (Tomahawk Ultra, Tomahawk 6, Jericho 4 paired with Thor Ultra NICs) against Cisco's unified P4-programmable Silicon One architecture for AI workloads.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Clarifies architectural divergence in 102.4T switching: disaggregated ASICs versus unified silicon affects tail-latency behavior, fabric programmability, and multi-vendor interoperability for large AI clusters.&lt;/p&gt;&lt;p&gt;Source: IEEE ComSoc Blog · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-20.html&quot;&gt;Nov 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Arista launches R4 routers for edge AI inferencing</title>
-      <link>https://www.communicationstoday.co.in/arista-unveils-r4-routers-to-support-distributed-ai-inferencing/</link>
-      <guid isPermaLink="true">https://www.communicationstoday.co.in/arista-unveils-r4-routers-to-support-distributed-ai-inferencing/</guid>
-      <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
-      <category>Data Center &amp; AI Networking</category>
-      <description>&lt;p&gt;Arista unveiled R4 routers—compact, hardened access routers, coherent transport router, and 25.6-Tbps pluggable optical line system—designed for distributed AI inferencing at hyperscalers and neocloud operators needing 1.6T links with liquid cooling.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; Extends AI networking from data-center spine-leaf to metro/edge; enables neoclouds and hyperscalers to link 100k-1M accelerator clusters across multiple facilities with native 1.6T interconnect.&lt;/p&gt;&lt;p&gt;Source: Communications Today · &lt;a href=&quot;https://digitalplumber.ca/archives/2026-11-20.html&quot;&gt;Nov 20, 2026 briefing&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
